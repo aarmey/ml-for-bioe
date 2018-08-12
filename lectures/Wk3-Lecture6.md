@@ -1,7 +1,6 @@
 ---
 title: Week 3, Lecture 6 - Reproducible Computational Workflows
 author: Aaron Meyer
-date: January 25, 2018
 ---
 
 # Outline
