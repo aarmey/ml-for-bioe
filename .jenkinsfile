@@ -1,0 +1,37 @@
+pipeline {
+  agent any
+  stages {
+    stage('Setup') {
+      steps { sh 'git clean -ffdx' }
+    }
+    stage('Build') {
+      steps { sh 'make -j 33 -s' }
+    }
+    stage('Report') {
+      steps {
+        archiveArtifacts artifacts: 'lectures/*.pdf', onlyIfSuccessful: true
+        archiveArtifacts artifacts: 'lectures/slides/*.pdf', onlyIfSuccessful: true
+
+        step([
+          $class: 'TasksPublisher',
+          canComputeNew: false,
+          defaultEncoding: '', 
+          excludePattern: '',
+          healthy: '',
+          high: 'TODO,FIXME,XXX', low: '', normal: 'CITE',
+          pattern: '**/*.py, **/*.md',
+          unHealthy: ''])
+      }
+    }
+    stage('Deploy') {
+      when { expression { env.BRANCH_NAME == 'master' } }
+      steps {
+        sh 'mkdir -p _site'
+        sh 'cp lectures/slides/*.pdf _site/'
+        sh 'cd _site; git init; git config user.name "Jenkins CI"; git config user.email "jenkins@asmlab.org"'
+        sh 'cd _site; git remote add upstream "git@github.com:aarmey/ml-for-bioe.git"; git fetch upstream; git reset upstream/gh-pages; touch .; git add .'
+        sh 'cd _site; git commit -m "Jenkins $BUILD_ID auto-pushed"; git push --force -q upstream HEAD:gh-pages'
+      }
+    }
+  }
+}
