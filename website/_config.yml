@@ -1,0 +1,18 @@
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Bioengr 188
+tagline:          'ML in BE'
+description:      Machine learning & data-driven modeling in bioengineering
+url:              https://aarmey.github.io/ml-for-bioe/
+baseurl:          /
+
+author:
+  name:           'Aaron Meyer'
+  url:            http://asmlab.org
+
+paginate:         5
+
+github:
+  repo:           https://github.com/aarmey/ml-for-bioe
