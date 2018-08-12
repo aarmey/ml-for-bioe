@@ -22,19 +22,12 @@ lectures/slides/.touch:
 	mkdir -p lectures/slides
 	touch lectures/slides/.touch
 
-labs/Midterm.pdf: labs/Midterm.md
-	pandoc --pdf-engine=xelatex labs/Midterm.md -o labs/Midterm.pdf
-
 $(notes_pdf): lectures/%.pdf: $(NOTES)/%.md
 	$(PANDOC) -V beamer-notes=true -V fontsize=10pt -V scuro="" -o $@ $<
 	pdfjam -q --nup 2x2 --landscape $@ -o $@
 
 $(slides_pdf): lectures/slides/%.pdf: $(NOTES)/%.md lectures/slides/.touch
 	$(PANDOC) -o $@ $< # -V scuro=true   for dark on light theme
-
-slide_report.csv: $(slides_pdf)
-	find lectures/slides -maxdepth 1 -type f -iname "*.pdf" -exec pdfinfo {} \; > $@
-	sed -Eni '/Pages|Title/p' $@
 
 phony_pdfs := $(if $(always_latexmk),$(pdfs) $(notes_pdf))
 
@@ -49,7 +42,7 @@ all: $(pdfs) $(notes_pdf)
 
 # clean up everything
 clean:
-	rm -f $(pdfs) $(notes_pdf) slide_report.csv labs/Midterm.pdf
+	rm -f $(pdfs) $(notes_pdf)
 	rm -rf lectures/slides
 
 .DEFAULT_GOAL := all
