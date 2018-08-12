@@ -5,7 +5,7 @@ pipeline {
       steps { sh 'git clean -ffdx' }
     }
     stage('Build') {
-      steps { sh 'make -j 33 -s' }
+      steps { sh 'make -s' }
     }
     stage('Report') {
       steps {
