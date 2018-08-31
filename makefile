@@ -18,15 +18,15 @@ slides_pdf := $(patsubst $(NOTES)/%.md,lectures/slides/%.pdf,$(notes_md))
 # notes_pdf is handled separately
 pdfs := $(slides_pdf)
 
-lectures/slides/.touch: 
-	mkdir -p lectures/slides
-	touch lectures/slides/.touch
+website/slides/.touch: 
+	mkdir -p website/slides
+	touch website/slides/.touch
 
 $(notes_pdf): lectures/%.pdf: $(NOTES)/%.md
 	$(PANDOC) -V beamer-notes=true -V fontsize=10pt -V scuro="" -o $@ $<
 	pdfjam -q --nup 2x2 --landscape $@ -o $@
 
-$(slides_pdf): lectures/slides/%.pdf: $(NOTES)/%.md lectures/slides/.touch
+$(slides_pdf): website/slides/%.pdf: $(NOTES)/%.md website/slides/.touch
 	$(PANDOC) -o $@ $< # -V scuro=true   for dark on light theme
 
 phony_pdfs := $(if $(always_latexmk),$(pdfs) $(notes_pdf))
@@ -34,7 +34,7 @@ phony_pdfs := $(if $(always_latexmk),$(pdfs) $(notes_pdf))
 # phony targets to make all three PDFS for a single source
 pdfsets := $(notdir $(basename $(notes_md)))
 
-$(pdfsets): %:lectures/%.pdf lectures/slides/%.pdf
+$(pdfsets): %:lectures/%.pdf website/slides/%.pdf
 
 .PHONY: $(phony_pdfs) $(pdfsets) all clean deploy
 
@@ -43,6 +43,6 @@ all: $(pdfs) $(notes_pdf)
 # clean up everything
 clean:
 	rm -f $(pdfs) $(notes_pdf)
-	rm -rf lectures/slides
+	rm -rf website/slides
 
 .DEFAULT_GOAL := all
