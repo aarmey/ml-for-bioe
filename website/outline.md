@@ -9,7 +9,7 @@ layout: page
 - Reading: [Can a biologist fix a radio?](http://www.cell.com/cancer-cell/abstract/S1535-6108(02)00133-2)
 - [Lecture 1: Statistics review](/public/Wk1-Lecture1.pdf)
 - [Lecture 2: Fitting & Regression](/public/Wk1-Lecture2.pdf)
-- [Lab: Programming and Git Primer](https://classroom.github.com/a/I9mAoL3K)
+- [Lab: Programming and Git Primer](https://ccle.ucla.edu)
 
 ### Week 2, Jan 15 – 19
 
@@ -22,47 +22,47 @@ layout: page
 
 - [Lecture 5: Bayesian vs. frequentist approaches](/public/Wk3-Lecture5.pdf)
 - [Lecture 6: Reproducible computational workflows](/public/Wk3-Lecture6.pdf)
-- [Lab: Implementation](https://classroom.github.com/a/1yu6BPm5) of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997)
+- [Lab: Implementation](https://ccle.ucla.edu) of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997)
 
 ### Week 4, Jan 29 – Feb 2
 
 - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 7: Dimentionality reduction - PCA and NMF](/public/Wk4-Lecture7.pdf)
 - [Lecture 8: Partial Least Squares Regression](/public/Wk4-Lecture8.pdf)
-- [Lab: Implementation](https://classroom.github.com/a/PMDkKXBG) of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c)
+- [Lab: Implementation](https://ccle.ucla.edu) of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c)
 
 ### Week 5, Feb 5 – 9
 
 - Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
 - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - [Lecture 9: Dynamical models](/public/Wk5-Lecture09.pdf)
-- [Lecture 10: Hidden Markov Models](/public/Wk5-Lecture10.pdf) ([Example Notebook](https://github.com/bioe-ml-w18/bioe-ml-winter2018/blob/master/homeworks/HMMs-example.ipynb))
-- Lab: Midterm review, finish selecting project ([submission link](https://classroom.github.com/a/7FBVwBkI))
+- [Lecture 10: Hidden Markov Models](/public/Wk5-Lecture10.pdf) ([Example Notebook](/public/examples/HMMs-example.ipynb))
+- Lab: Midterm review, finish selecting project
 
 ### Week 6, Feb 12 – 16
 
 - [Lecture 11: Midterm review](/public/Wk6-Lecture11.pdf)
-- Lecture 12: Midterm exam ([answers](https://github.com/bioe-ml-w18/bioe-ml-winter2018/blob/master/homeworks/Midterm.pdf))
-- [Lab: Implementation](https://classroom.github.com/a/ajf6V2o1) of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582)
+- Lecture 12: Midterm exam
+- [Lab: Implementation](https://ccle.ucla.edu) of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582)
 - Deadline to choose project subject 
 
 ### Week 7, Feb 19 – 23
 
-- [Lecture 13: Clustering](/public/Wk7-Lecture13.pdf) ([Example Notebook](https://github.com/bioe-ml-w18/bioe-ml-winter2018/blob/master/homeworks/K-Means.ipynb))
-- [Lecture 14: Autodiff and Clustering Cont'd](/public/Wk7-Lecture14.pdf) ([Example Notebook](https://github.com/bioe-ml-w18/bioe-ml-winter2018/blob/master/homeworks/Gaussian-Mixtures.ipynb))
-- [Lab: Implementation](https://classroom.github.com/a/ieTKwxuj) of HMMs for heart rate monitor wearable (Due March 9)
+- [Lecture 13: Clustering](/public/Wk7-Lecture13.pdf) ([Example Notebook](/public/examples/K-Means.ipynb))
+- [Lecture 14: Autodiff and Clustering Cont'd](/public/Wk7-Lecture14.pdf) ([Example Notebook](/public/examples/Gaussian-Mixtures.ipynb))
+- [Lab: Implementation](https://ccle.ucla.edu) of HMMs for heart rate monitor wearable
 
 ### Week 8, Feb 26 – Mar 2
 
 - Reading: [Points of Significance: Classification and regression trees](https://www.nature.com/nmeth/journal/v14/n8/full/nmeth.4370.html)
 - [Lecture 15: Decision trees](/public/Wk8-Lecture15.pdf)
-- [Lecture 16: Support vector machines](/public/Wk8-Lecture16.pdf) ([Example Notebook](https://github.com/bioe-ml-w18/bioe-ml-winter2018/blob/master/homeworks/SVMs-example.ipynb))
+- [Lecture 16: Support vector machines](/public/Wk8-Lecture16.pdf) ([Example Notebook](/public/examples/SVMs-example.ipynb))
 
 ### Week 9, Mar 5 – 9
 
 - [Lecture 17: Regression forests, boosting, and bagging](/public/Wk9-Lecture17.pdf)
 - [Lecture 18: Creating the future: Neural networks, and t-SNE](/public/Wk9-Lecture18.pdf)
-- [Lab: Implementation](https://classroom.github.com/a/lYxpYYdS) of [Masaeli et al.](https://www.nature.com/articles/srep37863) <!-- SVM -->
+- [Lab: Implementation](https://ccle.ucla.edu) of [Masaeli et al.](https://www.nature.com/articles/srep37863) <!-- SVM -->
 
 ### Week 10, Mar 12 – 16
 
