@@ -6,7 +6,7 @@ title:            Bioengr 188
 tagline:          'ML in BE'
 description:      Machine learning & data-driven modeling in bioengineering
 url:              https://aarmey.github.io/ml-for-bioe/
-baseurl:          /
+baseurl:          /ml-for-bioe/
 
 author:
   name:           'Aaron Meyer'
