@@ -12,8 +12,6 @@ author:
   name:           'Aaron Meyer'
   url:            http://asmlab.org
 
-paginate:         5
-
 github:
   repo:           https://github.com/aarmey/ml-for-bioe
 
