@@ -18,7 +18,7 @@ Office Hours:
 - Prof. Meyer - Friday 2:00 – 3:00 pm in Eng V 4129 or by appointment
 - TA – Wednesday 12:00 – 1:00pm in Eng V 4129 or by appointment
 
-Website: <https://aarmey.github.io/ml-for-bioe/>  
+Website: `https://aarmey.github.io/ml-for-bioe/`  
 Piazza: <https://piazza.com/ucla/winter2018/bioengr188/home>
 
 ## Text:
