@@ -16,3 +16,7 @@ paginate:         5
 
 github:
   repo:           https://github.com/aarmey/ml-for-bioe
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
