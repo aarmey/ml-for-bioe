@@ -5,6 +5,10 @@ layout: page
 
 These are some packages that may be of use to you during the course.
 
+## General
+
+- [Google Colaboratory](https://colab.research.google.com/)
+
 ## Plotting
 
 - [Matplotlib](https://matplotlib.org)
