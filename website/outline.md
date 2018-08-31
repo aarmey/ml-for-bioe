@@ -16,7 +16,7 @@ layout: page
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 3: Fitting & Regression Redux, Regularization](/public/Wk2-Lecture3.pdf)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](/public/Wk2-Lecture4.pdf)
-- [Lab: Implementation](https://classroom.github.com/a/7RBnmweg) of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html) ([Solution](https://github.com/bioe-ml-w18/bioe-ml-winter2018/blob/master/homeworks/Week2-Statistics.ipynb))
+- [Lab: Implementation](https://ccle.ucla.edu) of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html)
 
 ### Week 3, Jan 22 – 26
 
@@ -60,8 +60,6 @@ layout: page
 
 ### Week 9, Mar 5 – 9
 
-- [Lecture 17: Regression forests, boosting, and bagging](/public/Wk9-Lecture17.pdf)
-- [Lecture 18: Creating the future: Neural networks, and t-SNE](/public/Wk9-Lecture18.pdf)
 - [Lab: Implementation](https://ccle.ucla.edu) of [Masaeli et al.](https://www.nature.com/articles/srep37863) <!-- SVM -->
 
 ### Week 10, Mar 12 – 16
