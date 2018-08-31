@@ -2,7 +2,13 @@ pipeline {
   agent any
   stages {
     stage('Setup') {
-      steps { sh 'git clean -ffdx' }
+      steps {
+        sh 'git clean -ffdx'
+        sh 'git status'
+        dir('website') {
+          sh 'bundle install --path ~/.gem'
+        }
+      }
     }
     stage('Build') {
       steps { sh 'make -s' }
@@ -10,7 +16,6 @@ pipeline {
     stage('Report') {
       steps {
         archiveArtifacts artifacts: 'lectures/*.pdf', onlyIfSuccessful: true
-        archiveArtifacts artifacts: 'lectures/slides/*.pdf', onlyIfSuccessful: true
 
         step([
           $class: 'TasksPublisher',
