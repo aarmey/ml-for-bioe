@@ -10,7 +10,7 @@ pdfs := $(patsubst lectures/%.md, website/public/%.pdf,$(notes_md))
 
 $(notes_pdf): lectures/%.pdf: lectures/%.md
 	$(PANDOC) -V beamer-notes=true -V fontsize=10pt -V scuro="" -o $@ $<
-	pdfjam -q --nup 2x2 --landscape $@ -o $@
+	#pdfjam -q --nup 2x2 --landscape $@ -o $@
 
 $(pdfs): website/public/%.pdf: lectures/%.md
 	$(PANDOC) -o $@ $< # -V scuro=true   for dark on light theme
