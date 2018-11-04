@@ -12,7 +12,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'make -j 20'
+        sh 'make'
         dir('website') {
           sh 'bundle exec jekyll build'
         }
