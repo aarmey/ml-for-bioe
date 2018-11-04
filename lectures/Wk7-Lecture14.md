@@ -26,7 +26,7 @@ Scientific code often uses both functions *and* their derivatives:
 - E.g. example Newtons method for solving (nonlinear) equations
 - find $x$ such that $f(x)=0$
 
-The Newton iteration is $$x_{n+1} = x_n − \frac{f(x_n)}{f′(x_n)}$$
+The Newton iteration is $$x_{n+1} = x_n - \frac{f(x_n)}{f′(x_n)}$$
 
 But how to compute $f'(x_n)$ when we only know $f(x)$?
 
@@ -412,7 +412,7 @@ Especially useful when the E and M steps have closed form solutions!!!
 
 # What if we do hard assignments?
 
-**Iterate:** On the t’th iteration let our estimates be $$\lambda_t = [\mu_{1}^{(t)}, \mu_{2}^{(t)}, \ldots \mu_{3}^{(t)}]$$
+**Iterate:** On the t'th iteration let our estimates be $$\lambda_t = [\mu_{1}^{(t)}, \mu_{2}^{(t)}, \ldots \mu_{3}^{(t)}]$$
 
 ![ ](./lectures/figs/lec14/gm37.pdf)
 
