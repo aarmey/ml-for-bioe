@@ -7,8 +7,8 @@ layout: page
 
 - Reading: [Points of Significance: Simple linear regression](http://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
 - Reading: [Can a biologist fix a radio?](http://www.cell.com/cancer-cell/abstract/S1535-6108(02)00133-2)
-- [Lecture 1: Statistics review](/public/Wk1-Lecture1.pdf)
-- [Lecture 2: Fitting & Regression](/public/Wk1-Lecture2.pdf)
+- [Lecture 1: Statistics review](public/Wk1-Lecture1.pdf)
+- [Lecture 2: Fitting & Regression](public/Wk1-Lecture2.pdf)
 - [Lab: Programming and Git Primer](https://ccle.ucla.edu)
 
 ### Week 2, Jan 15 – 19
