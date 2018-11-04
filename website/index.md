@@ -8,18 +8,18 @@ BIOENGR 188: Machine learning & data-driven modeling in bioengineering
 
 Instructor: Prof. Aaron Meyer (<ameyer@ucla.edu>), 4121G Engineering V
 
-Class Hours: Lecture: Tuesdays/Thursdays 2:00 – 3:50pm (Public Affairs 1256)  
-Lab Section: Fridays 10:00 – 11:50 am (3760 Boelter Hall)
+Class Hours: Lecture: Tuesdays/Thursdays, 2:00 – 3:50pm (Boelter Hall 5420)  
+Lab Section: Fridays, 2:00 – 3:50 pm (Bunche Hall 3153)
 
-Teaching Assistant: Alex Wickstrom (<awickstrom@ucla.edu>)
+Teaching Assistant: TBD (<TBD@ucla.edu>)
 
 Office Hours:
 
-- Prof. Meyer - Friday 2:00 – 3:00 pm in Eng V 4129 or by appointment
-- TA – Wednesday 12:00 – 1:00pm in Eng V 4129 or by appointment
+- Prof. Meyer - TBD in Eng V 4129 or by appointment
+- TA – TBD or by appointment
 
 Website: `https://aarmey.github.io/ml-for-bioe/`  
-Piazza: <https://piazza.com/ucla/winter2018/bioengr188/home>
+Piazza: <TBD>
 
 ## Text:
 
@@ -33,8 +33,6 @@ Optional/Helpful Other Resources:
 - Hastie *et al*. (2009). [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/Papers/ESLII.pdf).
 
 - MacKaye (2005). [Information Theory, Inference and Learning Algorithms](http://www.inference.org.uk/itprnn/book.pdf).
-
-- Gelman. [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/).
 
 ## Course Description:
 
@@ -73,13 +71,10 @@ In our classroom, we will rely on each student being engaged in the conversation
 40%
 ~ Final Project
 
-10%
-~ Implementation Files
-
-10%
+15%
 ~ Midterm
 
-30%
+35%
 ~ Homework Assignments
 
 10%
