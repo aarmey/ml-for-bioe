@@ -68,16 +68,16 @@ Come, think critically, challenge yourself, and you will do well.
 In our classroom, we will rely on each student being engaged in the conversation. To minimize distractions, please silence all phones. Computers are an extremely valuable research and learning tool and are encouraged in class. Please minimize use of your computer for unrelated activities, however, to avoid distractions.
 
 ## Grading:
-40%
+30%
 ~ Final Project
 
-15%
+30%
 ~ Midterm
 
-35%
+20%
 ~ Homework Assignments
 
-10%
+20%
 ~ Class Participation
 
 ## Feedback
