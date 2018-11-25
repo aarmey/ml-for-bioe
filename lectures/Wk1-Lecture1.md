@@ -110,7 +110,7 @@ By the end of the course you will learn how to:
 
 # Exams
 
-- We will have a midterm exam on week 5.
+- We will have a midterm exam on week 6.
 - You will have a final project in lieu of a final exam.
 
 # Keys to Success
