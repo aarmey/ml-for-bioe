@@ -398,6 +398,8 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 
 ![ ](./lectures/figs/lec1/ks.pdf)
 
+\note{No t-distribution available here.}
+
 # Kolmogorov-Smirnov Test
 
 #### Test statistic:
