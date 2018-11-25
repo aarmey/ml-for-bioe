@@ -60,6 +60,8 @@ By the end of the course you will learn how to:
 3. Implement a number of different modeling methods to answer specific questions.
 4. Critically assess modeling results.
 
+\note{Notice I don't say deriving a proof or writing some software package.}
+
 # Grade Breakdown
 
 40%
