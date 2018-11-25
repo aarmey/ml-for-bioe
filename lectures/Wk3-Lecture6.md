@@ -32,6 +32,11 @@ author: Aaron Meyer
 	- You probably don't need to test this
 - You're assembling a machine learning model to identify heart attacks
 	- Not testing this could be considered professional malpractice
+	
+\note[item]{\item Talk about software bug in radiation treatment
+\item Therac-25
+\item Had two options: direct beam, or 100X greater through filter
+\item FDA now requires code review}
 
 # Difficulties of testing
 
