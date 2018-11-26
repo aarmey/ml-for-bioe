@@ -189,6 +189,8 @@ A graphical illustration of the bootstrap approach on a small sample containing 
 - For example, if the data is a time series, we can’t simply sample the observations with replacement (*why not?*).
 - We can instead create blocks of consecutive observations, and sample those with replacements. Then we paste together sampled blocks to obtain a bootstrap dataset.
 
+\note{Go over example of color blindness with replacement by gender.}
+
 # Other uses of the bootstrap
 
 - Primarily used to obtain standard errors of an estimate.
