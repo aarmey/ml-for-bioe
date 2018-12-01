@@ -41,10 +41,11 @@ layout: page
 
 ### Week 6, Feb 11 – 15
 
+- [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=2218783)
 - [Lecture 11: Midterm review](/public/Wk6-Lecture11.pdf)
 - Lecture 12: Midterm exam
 - [Lab: Implementation](https://ccle.ucla.edu) of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/21 at noon
-- Deadline to choose project subject 
+
 
 ### Week 7, Feb 18 – 22
 
