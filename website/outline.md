@@ -22,14 +22,14 @@ layout: page
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
-- [Lab: Implementation](https://ccle.ucla.edu) of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997)
+- [Lab: Implementation](https://ccle.ucla.edu) of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/31 at noon
 
 ### Week 4, Jan 28 – Feb 1
 
 - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 7: Dimentionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
-- [Lab: Implementation](https://ccle.ucla.edu) of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c)
+- [Lab: Implementation](https://ccle.ucla.edu) of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/7 at noon
 
 ### Week 5, Feb 4 – 8
 
@@ -43,14 +43,14 @@ layout: page
 
 - [Lecture 11: Midterm review](/public/Wk6-Lecture11.pdf)
 - Lecture 12: Midterm exam
-- [Lab: Implementation](https://ccle.ucla.edu) of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582)
+- [Lab: Implementation](https://ccle.ucla.edu) of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/21 at noon
 - Deadline to choose project subject 
 
 ### Week 7, Feb 18 – 22
 
 - [Lecture 13: Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](/public/examples/K-Means.ipynb))
 - [Lecture 14: Autodiff and Clustering Cont'd](../public/Wk7-Lecture14.pdf) ([Example Notebook](/public/examples/Gaussian-Mixtures.ipynb))
-- [Lab: Implementation](https://ccle.ucla.edu) of HMMs for heart rate monitor wearable
+- [Lab: Implementation](https://ccle.ucla.edu) of HMMs for heart rate monitor wearable, due 2/28 at noon
 
 ### Week 8, Feb 25 – Mar 1
 
