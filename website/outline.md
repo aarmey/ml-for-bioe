@@ -22,14 +22,14 @@ layout: page
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
-- [Lab: Implementation](https://ccle.ucla.edu) of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/31 at noon
+- [Lab: Implementation](https://classroom.github.com/a/CEtk4XMz) of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/31 at noon
 
 ### Week 4, Jan 28 – Feb 1
 
 - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 7: Dimentionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
-- [Lab: Implementation](https://ccle.ucla.edu) of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/7 at noon
+- [Lab: Implementation](https://classroom.github.com/a/aGxf6iKl) of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/7 at noon
 
 ### Week 5, Feb 4 – 8
 
