@@ -11,12 +11,12 @@ Instructor: Prof. Aaron Meyer (<ameyer@ucla.edu>), 4121G Engineering V
 Class Hours: Lecture: Tuesdays/Thursdays, 2:00 – 3:50pm (Boelter Hall 5420)  
 Lab Section: Fridays, 2:00 – 3:50 pm (Bunche Hall 3153)
 
-Teaching Assistant: TBD (<TBD@ucla.edu>)
+Teaching Assistant: Yi Luo (<yluo2016@ucla.edu>)
 
 Office Hours:
 
 - Prof. Meyer - Wednesdays, 11:00 am in Eng V 4129
-- TA – By appointment
+- Yi Luo – By appointment
 
 Website: `https://aarmey.github.io/ml-for-bioe/`  
 Piazza: `https://piazza.com/ucla/winter2019/bioengr188/`
