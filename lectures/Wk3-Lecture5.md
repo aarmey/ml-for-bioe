@@ -1,7 +1,6 @@
 ---
 title: Week 3, Lecture 5 - Bayesian vs. frequentist approaches
 author: Aaron Meyer
-date: January 23, 2018
 ---
 
 # Outline

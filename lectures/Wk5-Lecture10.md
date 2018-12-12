@@ -1,7 +1,6 @@
 ---
 title: Week 5, Lecture 10 - Hidden Markov Models
 author: Aaron Meyer
-date: February 8, 2018
 ---
 
 # Outline
