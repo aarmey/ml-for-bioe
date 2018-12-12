@@ -67,4 +67,4 @@ layout: page
 
 - Lecture: Project presentations
 - Lab: Further project implementation
-- [Final Project Repository](https://classroom.github.com/a/80tGoLPR)
+- [Final Project](https://classroom.github.com/g/bJ3h6eRT), due 3/20 at noon
