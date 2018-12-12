@@ -5,14 +5,6 @@
 \usepackage[mathletters]{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage{mathspec}
-%\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-%\setmainfont{Helvetica Neue}
-%\setsansfont{Helvetica Neue}
-%\setmonofont[Mapping=tex-ansi]{Anonymous Pro}
-%$if(mathfont)$
-%    \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-%$endif$
 
 $if(scuro)$
 % light-on-dark slides: white text on 90% black background
