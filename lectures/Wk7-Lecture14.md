@@ -1,7 +1,6 @@
 ---
 title: Week 7, Lecture 14 - Autodiff and Clustering Redux
 author: Aaron Meyer
-date: February 22, 2018
 ---
 
 # Outline
