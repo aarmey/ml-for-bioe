@@ -12,7 +12,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'make -j 20'
+        sh 'make -j 24'
         dir('website') {
           sh 'bundle exec jekyll build'
         }
@@ -21,8 +21,7 @@ pipeline {
     stage('Test'){
       steps {
         dir('website') {
-          //sh 'bundle exec htmlproofer --check-html --http-status-ignore "412" --timeframe 24w --assume-extension ./_site'
-          sh 'echo Tested'
+          sh 'bundle exec htmlproofer --check-html --http-status-ignore "412" --timeframe 24w --assume-extension ./_site'
         }
       }
     }
