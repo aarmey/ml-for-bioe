@@ -26,7 +26,7 @@ Scientific code often uses both functions *and* their derivatives:
 - E.g. example Newtons method for solving (nonlinear) equations
 - find $x$ such that $f(x)=0$
 
-The Newton iteration is $$x_{n+1} = x_n - \frac{f(x_n)}{f′(x_n)}$$
+The Newton iteration is $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
 
 But how to compute $f'(x_n)$ when we only know $f(x)$?
 
