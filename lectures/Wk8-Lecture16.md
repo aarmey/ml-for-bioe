@@ -1,7 +1,6 @@
 ---
 title: Week 8, Lecture 16 - Support Vector Machines
 author: Aaron Meyer
-date: March 1, 2018
 ---
 
 # Outline
@@ -329,54 +328,6 @@ sklearn has implementations for a variety of SVM methods:
 		- For example can provide l1 or l2 regularization
 		- Scales better for many samples
 - Similar implementation in TensorFlow (`tf.contrib.learn.SVM`)
-
-# Implementation - Example
-
-```python
-import numpy as np, matplotlib.pyplot as plt
-from sklearn import datasets, svm
-
-iris = datasets.load_iris()
-X, y = iris.data[:, :2], iris.target
-
-clf = svm.SVC(kernel='rbf').fit(X, y)
-
-# create a mesh to plot in
-xx,yy = np.meshgrid(np.arange(X[:,0].min()-1,X[:,0].max()+1,.02),
-                    np.arange(X[:,1].min()-1,X[:,1].max()+1,.02))
-color_map = {-1:(1,1,1), 0:(0,0,.9), 1:(1,0,0), 2:(.8,.6,0)}
-
-# Plot the decision boundary. For that, we will assign a color to each mesh point.
-Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
-# ...
-```
-
-# Implementation - Example
-
-```python
-# ...
-# create a mesh to plot in
-xx,yy = np.meshgrid(np.arange(X[:,0].min()-1,X[:,0].max()+1,.02),
-                    np.arange(X[:,1].min()-1,X[:,1].max()+1,.02))
-color_map = {-1:(1,1,1), 0:(0,0,.9), 1:(1,0,0), 2:(.8,.6,0)}
-
-# Plot the decision boundary. For that, we will assign a color to each mesh point.
-Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
-
-# Put the result into a color plot
-Z = Z.reshape(xx.shape)
-plt.contourf(xx, yy, Z, cmap=plt.cm.Paired)
-plt.axis('off')
-
-# Plot also the training points
-colors = [color_map[zz] for zz in y]
-plt.scatter(X[:, 0], X[:, 1], c=colors, edgecolors='black')
-plt.show()
-```
-
-# Implementation - Example
-
-![ ](./lectures/figs/lec16/Figure_1.png){width=80%}
 
 # Further Reading
 

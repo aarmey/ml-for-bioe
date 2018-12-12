@@ -1,7 +1,6 @@
 ---
 title: Week 7, Lecture 13 - Clustering
 author: Aaron Meyer
-date: February 20, 2018
 ---
 
 # Outline
@@ -32,6 +31,8 @@ date: February 20, 2018
 - Example: 2D point patterns
 
 ![ ](./lectures/figs/lec13/clust1.png)
+
+\note{Go over what is the data input and output (discrete).}
 
 # Clustering
 
@@ -183,7 +184,6 @@ Repeat until convergence
 
 ![Step 7](./lectures/figs/lec13/slides2-7.pdf)
 
-
 # Properties of K-means algorithm
 
 - Guaranteed to converge in a finite number of iterations
@@ -192,7 +192,6 @@ Repeat until convergence
 		- **O(KN) time**
 	2. Change the cluster center to the average of its assigned points:
 		- **O(N) time**
-
 
 # What properties should a distance measure have?
 
@@ -241,12 +240,9 @@ Local optima dependent on how the problem was specified:
 
 ![ ](./lectures/figs/lec13/localopt.png)
 
-
 # K-means not able to properly cluster
 
-
 ![ ](./lectures/figs/lec13/circle.png)
-
 
 # Changing the features (distance function) can help
 
@@ -402,7 +398,7 @@ How should we define “closest” for clusters with multiple elements?
 
 ```python
 import numpy as np
-import matplotlib.pyplot.figure
+from matplotlib.pyplot import figure
 from mpl_toolkits.mplot3d import Axes3D
 
 from sklearn.cluster import KMeans
