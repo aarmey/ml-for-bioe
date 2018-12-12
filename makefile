@@ -1,6 +1,6 @@
 # Change these only to really change the behavior of the whole setup
 
-PANDOC := pandoc -t beamer --pdf-engine=xelatex --filter .support-files/overlay_filter --filter .support-files/columnfilter --slide-level 1 --highlight-style pygments --template .support-files/elsmd-slides.latex
+PANDOC := pandoc -t beamer --pdf-engine=pdflatex --filter .support-files/overlay_filter --filter .support-files/columnfilter --slide-level 1 --highlight-style pygments --template .support-files/elsmd-slides.latex
 
 ## ---- build rules ----
 
