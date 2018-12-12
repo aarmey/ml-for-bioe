@@ -1,7 +1,6 @@
 ---
 title: Week 7, Lecture 13 - Clustering
 author: Aaron Meyer
-date: February 20, 2018
 ---
 
 # Outline
