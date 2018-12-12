@@ -36,7 +36,7 @@ layout: page
 - Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
 - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
-- [Lecture 10: Hidden Markov Models](../public/Wk5-Lecture10.pdf) ([Example Notebook](/public/examples/HMMs-example.ipynb))
+- [Lecture 10: Hidden Markov Models](../public/Wk5-Lecture10.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/HMMs-example.ipynb))
 - Lab: Midterm review, finish selecting project
 
 ### Week 6, Feb 11 – 15
@@ -49,15 +49,15 @@ layout: page
 
 ### Week 7, Feb 18 – 22
 
-- [Lecture 13: Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](/public/examples/K-Means.ipynb))
-- [Lecture 14: Autodiff and Clustering Cont'd](../public/Wk7-Lecture14.pdf) ([Example Notebook](/public/examples/Gaussian-Mixtures.ipynb))
+- [Lecture 13: Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb))
+- [Lecture 14: Autodiff and Clustering Cont'd](../public/Wk7-Lecture14.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb))
 - [Lab: Implementation](https://ccle.ucla.edu) of HMMs for heart rate monitor wearable, due 2/28 at noon
 
 ### Week 8, Feb 25 – Mar 1
 
 - Reading: [Points of Significance: Classification and regression trees](https://www.nature.com/nmeth/journal/v14/n8/full/nmeth.4370.html)
 - [Lecture 15: Decision trees](../public/Wk8-Lecture15.pdf)
-- [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) ([Example Notebook](/public/examples/SVMs-example.ipynb))
+- [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/SVMs-example.ipynb))
 
 ### Week 9, Mar 4 – 8
 
