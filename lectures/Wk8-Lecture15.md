@@ -1,7 +1,6 @@
 ---
 title: Week 8, Lecture 15 - Decision Trees
 author: Aaron Meyer
-date: February 27, 2018
 ---
 
 # Outline
