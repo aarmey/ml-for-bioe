@@ -175,7 +175,7 @@ A graphical illustration of the bootstrap approach on a small sample containing 
 # Example With Just 3 Observations
 
 - Denoting the first bootstrap data set by $Z^{*1}$, we use $Z^{*1}$ to produce a new bootstrap estimate for $\alpha$, which we call $\hat{\alpha}^{*1}$
-- This procedure is repeated $B$ times for some large value of $B$ (say 100 or 1000), in order to produce $B$ different bootstrap data sets, $Z^{*1},Z^{*2},\ldots ,Z^{*B}$, and $B$ corresponding $\alpha$ estimates, $αˆ∗1,αˆ∗2,...,αˆ∗B$.
+- This procedure is repeated $B$ times for some large value of $B$ (say 100 or 1000), in order to produce $B$ different bootstrap data sets, $Z^{*1},Z^{*2},\ldots ,Z^{*B}$, and $B$ corresponding $\alpha$ estimates, $\alpha^{*1},\alpha^{*2},\ldots,\alpha^{*B}$.
 - We estimate the standard error of these bootstrap estimates using the formula $$\mathrm{SE}_B (\hat{\alpha}) = \sqrt{\frac{1}{B-1}\sum^{B}_{r=1}\left(\hat{\alpha}^{*r}-\bar{\hat{\alpha}}^{*r}\right)}.$$
 - This serves as an estimate of the standard error of $\hat{\alpha}$ estimated from the original data set.
 
