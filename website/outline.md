@@ -51,7 +51,7 @@ layout: page
 
 - [Lecture 13: Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb))
 - [Lecture 14: Autodiff and Clustering Cont'd](../public/Wk7-Lecture14.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb))
-- [Lab: Implementation](https://ccle.ucla.edu) of HMMs for heart rate monitor wearable, due 2/28 at noon
+- [Lab: Implementation](https://classroom.github.com/a/weOPkKwv) of HMMs for heart rate monitor wearable, due 2/28 at noon
 
 ### Week 8, Feb 25 – Mar 1
 
@@ -61,7 +61,7 @@ layout: page
 
 ### Week 9, Mar 4 – 8
 
-- [Lab: Implementation](https://ccle.ucla.edu) of [Masaeli et al.](https://www.nature.com/articles/srep37863) <!-- SVM -->
+- [Lab: Implementation](https://classroom.github.com/a/gXwxl42s) of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/14 at noon <!-- SVM -->
 
 ### Week 10, Mar 11 – 15
 
