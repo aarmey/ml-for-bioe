@@ -8,14 +8,14 @@ author: Aaron Meyer
 ## Lecture:
 
 - Tuesdays/Thursdays 2:00–3:50pm
-- Public Affairs 1256
+- Boelter Hall 5420
 
 ## Lab
 
-- Fridays, 10:00 - 11:50am
-- 3760 Boelter Hall
+- Fridays, 2:00–3:50pm
+- Bunche Hall 3153
 
-<https://bioe-ml-w18.github.io/bioe-ml-winter2018/>
+<https://aarmey.github.io/ml-for-bioe/>
 
 # Lecture Slides
 
@@ -34,7 +34,7 @@ author: Aaron Meyer
 
 ## Prof. Meyer
 
-- Friday 2:00-3:00 pm or by appointment (ameyer@ucla.edu)
+- Wednesday 11:00-11:50am in Eng V 4129 or by appointment
 - I will usually also stick around after class and am happy to answer questions.
 
 ## TAs
@@ -64,27 +64,24 @@ By the end of the course you will learn how to:
 
 # Grade Breakdown
 
-40%
+30%
 ~ Final Project
 
-30%
+20%
 ~ Homework Assignments
 
-10%
-~ Implementation Files
-
-10%
+30%
 ~ Midterm
 
-10%
+20%
 ~ Class Participation
 
 # Labs
 
 ## Where
 
-- Fridays, 10:00 - 11:50am
-- 3760 Boelter Hall
+- Fridays, 2:00-3:50pm
+- Bunche Hall 3153
 
 ## What
 
@@ -121,7 +118,7 @@ By the end of the course you will learn how to:
 
 If you do these three things, you will do well.
 
-\note[item]{\item First time with class, so interested in calibration
+\note[item]{\item Only second time through, so interested in calibration
 \item If you aren't famiilar with a term, guaranteed we should review}
 
 # Introduction
@@ -211,7 +208,7 @@ FILL IN
 
 # Probability
 
-\note[item]{\item Probability indicates the chance of an event given a set of constraints.
+\note[item]{\item Probability indicates the chance of an event within a wider set of outcomes
 \item Also talk about if something is conditionally dependent/independent
 \item What is integral?
 \item What is limit as dx goes to 0?
@@ -362,7 +359,7 @@ In hypothesis testing we state a null hypothesis that we will test and if it’s
 
 For example:
 
-- Ho: A particular point comes from a normal distribution with mean mu and sigma.
+- Ho: A particular point comes from a normal distribution with mean $\mu$ (and variance $\sigma$).
 - Ho: Two sets of observations were sampled from distributions with different means.
 
 Relative likelihood of the null hypothesis is the *p-value*.
