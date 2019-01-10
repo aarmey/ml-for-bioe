@@ -119,7 +119,7 @@ The values of $m$ and $b$ that minimize the distance from $y$ are optimal, and t
 
 # Ordinary Least Squares
 
-Gauss and Legendre in the early 1800s identified that the least squares estimate of $\beta$, $\hat{\beta}$, is:
+Gauss and Markov in the early 1800s identified that the least squares estimate of $\beta$, $\hat{\beta}$, is:
 
 $$ \hat{\mathbf{\beta}} = \arg\min_{\beta}{\left\Vert \mathbf{y} - \mathbf{X} \beta \right\Vert^{2}} $$ <!-- Eq 7.31 -->
 
