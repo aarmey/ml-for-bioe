@@ -22,7 +22,7 @@ In this project, you have two options for the general route you can take:
 
 More details at:
 
-<https://bioe-ml-w18.github.io/bioe-ml-winter2018/final-project/>
+<https://aarmey.github.io/ml-for-bioe/final-project/>
 
 # Project Proposals
 
