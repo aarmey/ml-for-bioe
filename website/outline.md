@@ -22,7 +22,7 @@ layout: page
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
-- [Lab: Implementation](https://classroom.github.com/a/CEtk4XMz) of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/31 at noon
+- [Lab: Implementation](https://classroom.github.com/a/CEtk4XMz) of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 2/2 at 11:59 pm
 
 ### Week 4, Jan 28 – Feb 1
 
