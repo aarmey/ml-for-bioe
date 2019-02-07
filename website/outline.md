@@ -9,14 +9,14 @@ layout: page
 - Reading: [Can a biologist fix a radio?](http://www.cell.com/cancer-cell/abstract/S1535-6108(02)00133-2)
 - [Lecture 1: Statistics review](../public/Wk1-Lecture1.pdf)
 - [Lecture 2: Fitting & Regression](../public/Wk1-Lecture2.pdf)
-- [Lab: Programming and Git Primer](https://classroom.github.com/a/4cbjj0J3), due 1/17 at noon
+- Lab: Programming and Git Primer, due 1/17 at noon
 
 ### Week 2, Jan 14 – 18
 
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
-- [Lab: Implementation](https://classroom.github.com/a/cRp-1WKV) of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/24 at noon
+- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/24 at noon
 
 ### Week 3, Jan 21 – 25
 
