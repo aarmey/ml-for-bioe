@@ -24,6 +24,12 @@ These are some packages that may be of use to you during the course.
 - [NumPy](http://www.numpy.org)
 - [SciPy](https://www.scipy.org)
 
+## Autodifferentiation
+
+- [Autograd](https://github.com/HIPS/autograd)
+- [Theano](http://deeplearning.net/software/theano/)
+- [Tensorflow](https://www.tensorflow.org)
+
 ## Testing
 
 - [unittest](https://docs.python.org/3/library/unittest.html#) (built in)
