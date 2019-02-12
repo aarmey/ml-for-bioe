@@ -60,6 +60,8 @@ layout: page
 - Reading: [Points of Significance: Classification and regression trees](https://www.nature.com/nmeth/journal/v14/n8/full/nmeth.4370.html)
 - [Lecture 15: Decision trees](../public/Wk8-Lecture15.pdf)
 - [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/SVMs-example.ipynb))
+  - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
+  - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 
 ### Week 9, Mar 4 – 8
 
