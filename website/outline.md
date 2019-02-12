@@ -5,10 +5,11 @@ layout: page
 
 ### Week 1, Jan 7 – 11
 
-- Reading: [Points of Significance: Simple linear regression](http://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
-- Reading: [Can a biologist fix a radio?](http://www.cell.com/cancer-cell/abstract/S1535-6108(02)00133-2)
 - [Lecture 1: Statistics review](../public/Wk1-Lecture1.pdf)
+  - Reading: [Can a biologist fix a radio?](http://www.cell.com/cancer-cell/abstract/S1535-6108(02)00133-2)
 - [Lecture 2: Fitting & Regression](../public/Wk1-Lecture2.pdf)
+  - Listening: [Linear Digressions: The assumptions of ordinary least squares](http://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
+  - Reading: [Points of Significance: Simple linear regression](http://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
 - Lab: Programming and Git Primer, due 1/17 at noon
 
 ### Week 2, Jan 14 – 18
