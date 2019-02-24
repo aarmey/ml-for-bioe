@@ -108,9 +108,7 @@ Casino player switches back & forth between fair and loaded die once every 20 tu
 
 **Given:** A sequence of rolls by the casino player:
 
-4352**6**1**6**25434**6**1**6**52**6**53421**6**515243**6**1**6**1524324131514
-
-322515432**6**3**6**43**6**2**6**541415145312
+4352**6**1**6**25434**6**1**6**52**6**53421**6**515243**6**1**6**15243241322515432**6**
 
 Questions:
 
