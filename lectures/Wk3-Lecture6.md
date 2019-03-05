@@ -34,7 +34,7 @@ author: Aaron Meyer
 	- Not testing this could be considered professional malpractice
 	
 \note[item]{\item Talk about software bug in radiation treatment
-\item Therac-25
+\item Therac-25, introduced in 1982
 \item Had two options: direct beam, or 100X greater through filter
 \item FDA now requires code review}
 
