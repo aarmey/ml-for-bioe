@@ -66,7 +66,7 @@ layout: page
 
 ### Week 9, Mar 4 – 8
 
-- [Lab: Implementation](https://classroom.github.com/a/gXwxl42s) of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/14 at noon <!-- SVM -->
+- [Lab: Implementation](https://classroom.github.com/a/gXwxl42s) of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/21 at noon <!-- SVM -->
 
 ### Week 10, Mar 11 – 15
 
