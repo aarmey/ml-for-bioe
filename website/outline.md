@@ -47,14 +47,14 @@ layout: page
 - [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=2218783)
 - Lecture 11: Midterm review
 - Lecture 12: Midterm exam
-- [Lab: Implementation](https://classroom.github.com/a/2k6IvB6q) of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/21 at noon
+- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/21 at noon
 
 
 ### Week 7, Feb 18 – 22
 
 - [Lecture 13: Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb))
 - [Lecture 14: Autodiff and Clustering Cont'd](../public/Wk7-Lecture14.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb))
-- [Lab: Implementation](https://classroom.github.com/a/weOPkKwv) of HMMs for heart rate monitor wearable, due 3/7 at noon
+- Lab: Implementation of HMMs for heart rate monitor wearable, due 3/7 at noon
 
 ### Week 8, Feb 25 – Mar 1
 
