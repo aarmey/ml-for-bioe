@@ -6,7 +6,7 @@ layout: page
 ### Week 1, Jan 7 – 11
 
 - [Lecture 1: Statistics review](../public/Wk1-Lecture1.pdf)
-  - Reading: [Can a biologist fix a radio?](http://www.cell.com/cancer-cell/abstract/S1535-6108(02)00133-2)
+  - Reading: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
   - Listening: [Linear Digressions: The Normal Distribution and the Central Limit Theorem](http://lineardigressions.com/episodes/2018/12/9/the-normal-distribution-and-the-central-limit-theorem)
 - [Lecture 2: Fitting & Regression](../public/Wk1-Lecture2.pdf)
   - Listening: [Linear Digressions: The assumptions of ordinary least squares](http://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
