@@ -28,16 +28,7 @@ pipeline {
     stage('Report') {
       steps {
         archiveArtifacts artifacts: 'lectures/*.pdf', onlyIfSuccessful: true
-
-        step([
-          $class: 'TasksPublisher',
-          canComputeNew: false,
-          defaultEncoding: '', 
-          excludePattern: '',
-          healthy: '',
-          high: 'TODO,FIXME,XXX', low: '', normal: 'CITE',
-          pattern: '**/*.py, **/*.md',
-          unHealthy: ''])
+        recordIssues(tools: [taskScanner(highTags: 'TODO,FIXME,XXX', includePattern: '**/*.py, **/*.md', normalTags: 'CITE')])
       }
     }
     stage('Deploy') {
