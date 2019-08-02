@@ -76,5 +76,4 @@ Your project will be evaluated
 - Jensen, K. J., Moyer, C. B., & Janes, K. A. (2016). [Network Architecture Predisposes an Enzyme to Either Pharmacologic or Genetic Targeting](http://doi.org/10.1016/j.cels.2016.01.012). Cell Systems, 2(2), 112–121. 
 - Tsherniak et al. (2017). [Defining a Cancer Dependency Map](http://www.sciencedirect.com/science/article/pii/S0092867417306517). Cell, 170(3), 564-576.
 - McMillan et al. (2018). [Chemistry-First Approach for Nomination of Personalized Treatment in Lung Cancer](http://www.sciencedirect.com/science/article/pii/S0092867418303088). Cell, 173(4), 864-878.
-- Horlbeck et al. (2018). [Mapping the Genetic Landscape of Human Cells](http://www.sciencedirect.com/science/article/pii/S0092867418307359). Cell, 174(4), 953-967.
 - Hill et al. (2017). [Context Specificity in Causal Signaling Networks Revealed by Phosphoprotein Profiling](http://www.sciencedirect.com/science/article/pii/S2405471216304082). Cell Systems, 4(1), 73-83.
