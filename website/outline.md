@@ -37,6 +37,7 @@ layout: page
 ### Week 5, Feb 4 – 8
 
 - Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
+- Reading: [Markov models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
 - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
 - [Lecture 10: Hidden Markov Models](../public/Wk5-Lecture10.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/HMMs-example.ipynb))
