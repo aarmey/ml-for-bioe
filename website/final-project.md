@@ -41,14 +41,14 @@ Your final report should be less than 1500 words and describe the following item
 - Introduction/Motivation: Why the topic you choose is interesting, and whether similar work has been done by others (novelty will not affect your grade, but it is always good to know if other people are doing the same thing)
 - Problem definition: How to formulate your topic/question into a data analytics problem, and how does it relate to a broader challenge engineering a biological system
 - Methods
-    – Description of the algorithm you employed or designed
-    – The software package you chose or your own implementation of the algorithm
-    – How to use the software package or your own code
-    – (Optional) Charting and/or visualization that help make decisions in your analysis
+    - Description of the algorithm you employed or designed
+    - The software package you chose or your own implementation of the algorithm
+    - How to use the software package or your own code
+    - (Optional) Charting and/or visualization that help make decisions in your analysis
 - Results
-    – Quantitative evaluation of your method
-    – Charting and/or visualization of your results
-    – How your proposed approach has solved your question
+    - Quantitative evaluation of your method
+    - Charting and/or visualization of your results
+    - How your proposed approach has solved your question
 
 Accompanying your final report should be a git repository of your analysis.
 
