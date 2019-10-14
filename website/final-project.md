@@ -76,3 +76,4 @@ Your project will be evaluated
 - Jensen, K. J., Moyer, C. B., & Janes, K. A. (2016). [Network Architecture Predisposes an Enzyme to Either Pharmacologic or Genetic Targeting](http://doi.org/10.1016/j.cels.2016.01.012). Cell Systems, 2(2), 112–121. 
 - Tsherniak et al. (2017). [Defining a Cancer Dependency Map](http://www.sciencedirect.com/science/article/pii/S0092867417306517). Cell, 170(3), 564-576.
 - Hill et al. (2017). [Context Specificity in Causal Signaling Networks Revealed by Phosphoprotein Profiling](http://www.sciencedirect.com/science/article/pii/S2405471216304082). Cell Systems, 4(1), 73-83.
+- Lun et al. (2019). [Analysis of the Human Kinome and Phosphatome by Mass Cytometry Reveals Overexpression-Induced Effects on Cancer-Related Signaling](https://www.sciencedirect.com/science/article/pii/S1097276519303132). Molecular Cell, 74(5), 1086–1102.
