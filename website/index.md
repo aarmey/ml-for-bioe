@@ -15,7 +15,7 @@ Teaching Assistant: TBD (<TBD@ucla.edu>)
 
 Office Hours:
 
-- Prof. Meyer - Wednesdays, 11:00 am in Eng V 4129
+- Prof. Meyer - TBD
 - TA – By appointment
 
 Website: `https://aarmey.github.io/ml-for-bioe/`  
