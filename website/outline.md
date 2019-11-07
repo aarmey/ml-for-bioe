@@ -3,7 +3,7 @@ title: Course outline
 layout: page
 ---
 
-### Week 1, Jan 7 – 11
+### Week 1, Jan 6 – 10
 
 - [Lecture 1: Statistics review](../public/Wk1-Lecture1.pdf)
   - Reading: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
@@ -14,27 +14,27 @@ layout: page
   - Listening: [Linear Digressions: Convex (and non-convex) optimization](http://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
 - Lab: Programming and Git Primer, due 1/17 at noon
 
-### Week 2, Jan 14 – 18
+### Week 2, Jan 13 – 17
 
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/24 at noon
 
-### Week 3, Jan 21 – 25
+### Week 3, Jan 20 – 24
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
 - Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 2/2 at 11:59 pm
 
-### Week 4, Jan 28 – Feb 1
+### Week 4, Jan 27 – Jan 31
 
 - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 7: Dimentionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
 - Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/9 at 11:59 pm
 
-### Week 5, Feb 4 – 8
+### Week 5, Feb 3 – 7
 
 - Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
 - Reading: [Markov models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
@@ -44,7 +44,7 @@ layout: page
 - [Lecture 10: Hidden Markov Models](../public/Wk5-Lecture10.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/HMMs-example.ipynb))
 - Lab: Midterm review, finish selecting project
 
-### Week 6, Feb 11 – 15
+### Week 6, Feb 10 – 14
 
 - [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=2218783)
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W18.pdf))
@@ -52,13 +52,13 @@ layout: page
 - Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/21 at noon
 
 
-### Week 7, Feb 18 – 22
+### Week 7, Feb 17 – 21
 
 - [Lecture 13: Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb))
 - [Lecture 14: Autodiff and Clustering Cont'd](../public/Wk7-Lecture14.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb))
 - Lab: Implementation of HMMs for heart rate monitor wearable, due 3/7 at noon
 
-### Week 8, Feb 25 – Mar 1
+### Week 8, Feb 24 – Feb 28
 
 - Reading: [Points of Significance: Classification and regression trees](https://www.nature.com/nmeth/journal/v14/n8/full/nmeth.4370.html)
 - [Lecture 15: Decision trees](../public/Wk8-Lecture15.pdf)
@@ -66,11 +66,11 @@ layout: page
   - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 
-### Week 9, Mar 4 – 8
+### Week 9, Mar 2 – 6
 
 - Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/21 at noon <!-- SVM -->
 
-### Week 10, Mar 11 – 15
+### Week 10, Mar 9 – 13
 
 - Lecture: Project presentations
 - Lab: Further project implementation
