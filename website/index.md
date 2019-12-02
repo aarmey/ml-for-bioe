@@ -18,8 +18,8 @@ Office Hours:
 - Prof. Meyer - TBD
 - TA – By appointment
 
-Website: `https://aarmey.github.io/ml-for-bioe/`  
-Piazza: TBD <!--`https://piazza.com/ucla/winter2019/bioengr188/`-->
+Website: <https://aarmey.github.io/ml-for-bioe/>  
+Piazza: <https://piazza.com/ucla/winter2020/bec175275/home>
 
 ## Text:
 
