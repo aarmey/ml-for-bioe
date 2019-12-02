@@ -11,7 +11,7 @@ Instructor: Prof. Aaron Meyer (<ameyer@ucla.edu>), 4121G Engineering V
 Class Hours: Lecture: Tuesdays/Thursdays, 2:00 – 3:50pm (Boelter Hall 4283)  
 Lab Section: Fridays, 2:00 – 3:50 pm (Boelter Hall 4413)
 
-Teaching Assistant: TBD (<TBD@ucla.edu>)
+Teaching Assistant: Brian Orcutt-Jahns (<orcuttjahnsbrian@gmail.com>)
 
 Office Hours:
 
