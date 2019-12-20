@@ -42,12 +42,12 @@ layout: page
 - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
 - [Lecture 10: Hidden Markov Models](../public/Wk5-Lecture10.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/HMMs-example.ipynb))
-- Lab: Midterm review, finish selecting project ([setup project repository]())
+- Lab: Midterm review, finish selecting project ([setup project repository](https://classroom.github.com/g/Qo5Y8tjq))
 
 ### Week 6, Feb 10 – 14
 
-- [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=2218783)
-- Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W18.pdf))
+- [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=2701619)
+- Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf))
 - Lecture 12: Midterm exam
 - Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/19 at noon ([notebook](https://github.com/aarmey/ml-for-bioe/blob/master/homework/Week6-DynamicalModels.ipynb), [submission link](https://classroom.github.com/a/BjiGNFmn))
 
@@ -74,4 +74,4 @@ layout: page
 
 - Lecture: Project presentations
 - Lab: Further project implementation
-- Final Project, due 3/18 at noon
+- Final Project, due 3/18 at noon (submit through project Github repository)
