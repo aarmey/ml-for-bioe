@@ -19,13 +19,13 @@ layout: page
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
-- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/22 at noon
+- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/22 at noon ([notebook](https://github.com/aarmey/ml-for-bioe/blob/master/homework/Week2-Statistics.ipynb))
 
 ### Week 3, Jan 20 – 24
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
-- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/29 at noon
+- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/29 at noon ([notebook](https://github.com/aarmey/ml-for-bioe/blob/master/homework/Week3-Fitting.ipynb))
 
 ### Week 4, Jan 27 – Jan 31
 
