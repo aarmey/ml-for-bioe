@@ -12,27 +12,27 @@ layout: page
   - Listening: [Linear Digressions: The assumptions of ordinary least squares](http://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
   - Reading: [Points of Significance: Simple linear regression](http://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
   - Listening: [Linear Digressions: Convex (and non-convex) optimization](http://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
-- Lab: Programming and Git Primer, due 1/17 at noon
+- Lab: Programming and Git Primer, due 1/15 at noon
 
 ### Week 2, Jan 13 – 17
 
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
-- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/24 at noon
+- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/22 at noon
 
 ### Week 3, Jan 20 – 24
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
-- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 2/2 at 11:59 pm
+- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/29 at noon
 
 ### Week 4, Jan 27 – Jan 31
 
 - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 7: Dimentionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
-- Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/9 at 11:59 pm
+- Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/5 at noon
 
 ### Week 5, Feb 3 – 7
 
@@ -49,14 +49,14 @@ layout: page
 - [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=2218783)
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W18.pdf))
 - Lecture 12: Midterm exam
-- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/21 at noon
+- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/19 at noon
 
 
 ### Week 7, Feb 17 – 21
 
 - [Lecture 13: Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb))
 - [Lecture 14: Autodiff and Clustering Cont'd](../public/Wk7-Lecture14.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb))
-- Lab: Implementation of HMMs for heart rate monitor wearable, due 3/7 at noon
+- Lab: Implementation of HMMs for heart rate monitor wearable, due 2/26 at noon
 
 ### Week 8, Feb 24 – Feb 28
 
@@ -68,10 +68,10 @@ layout: page
 
 ### Week 9, Mar 2 – 6
 
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/21 at noon <!-- SVM -->
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/11 at noon <!-- SVM -->
 
 ### Week 10, Mar 9 – 13
 
 - Lecture: Project presentations
 - Lab: Further project implementation
-- Final Project, due 3/20 at noon
+- Final Project, due 3/18 at noon
