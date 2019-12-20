@@ -12,7 +12,7 @@ layout: page
   - Listening: [Linear Digressions: The assumptions of ordinary least squares](http://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
   - Reading: [Points of Significance: Simple linear regression](http://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
   - Listening: [Linear Digressions: Convex (and non-convex) optimization](http://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
-- Lab: Programming and Git Primer, due 1/15 at noon
+- Lab: Programming and Git Primer, due 1/15 at noon ([notebook](https://github.com/aarmey/ml-for-bioe/blob/master/homework/Week1-Introduction.ipynb), [submission link](https://classroom.github.com/a/iVGmdb1f))
 
 ### Week 2, Jan 13 – 17
 
