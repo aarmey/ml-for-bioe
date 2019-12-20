@@ -19,7 +19,7 @@ Office Hours:
 - TA – By appointment
 
 Website: <https://aarmey.github.io/ml-for-bioe/>  
-Piazza: <https://piazza.com/ucla/winter2020/bec175275/home>
+Piazza: <https://piazza.com/ucla/winter2020/bec175275/>
 
 ## Text:
 
