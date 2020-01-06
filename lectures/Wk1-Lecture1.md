@@ -8,7 +8,7 @@ author: Aaron Meyer
 ## Lecture:
 
 - Tuesdays/Thursdays 2:00–3:50pm
-- Boelter Hall 5420
+- Boelter Hall 4283
 
 ## Lab
 
@@ -34,7 +34,7 @@ author: Aaron Meyer
 
 ## Prof. Meyer
 
-- Wednesday 11:00-11:50am in Eng V 4129 or by appointment
+- Wednesday 11:00-11:50am in Eng V 4121G or by appointment
 - I will usually also stick around after class and am happy to answer questions.
 
 ## TAs
