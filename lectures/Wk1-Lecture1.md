@@ -13,7 +13,7 @@ author: Aaron Meyer
 ## Lab
 
 - Fridays, 2:00–3:50pm
-- Bunche Hall 3153
+- Boelter Hall 4413
 
 <https://aarmey.github.io/ml-for-bioe/>
 
@@ -81,7 +81,7 @@ By the end of the course you will learn how to:
 ## Where
 
 - Fridays, 2:00-3:50pm
-- Bunche Hall 3153
+- Boelter Hall 4413
 
 ## What
 
