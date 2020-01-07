@@ -151,7 +151,7 @@ What we will cover spans a range of fields:
 
 FILL IN
 
-\note[item]{\item It may not be feasible for humans to learn on the scale / in the time alloted.
+\note[item]{It may not be feasible for humans to learn on the scale / in the time alloted.
 \item Model construction serves as goal posts. I.e. a well-specified target we can compare, share, etc.
 \item For many tasks, machine learning can perform better than a human would.
 }
