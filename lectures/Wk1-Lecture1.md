@@ -422,8 +422,8 @@ How is this then converted to a p-value?
 
 # Testing errors
 
-- Type I error: error of rejecting Ho when it is true (false positive)
-- Type II error: not rejecting Ho when it is false (false negative)
+- Type I error: error of rejecting $H_0$ when it is true (false positive)
+- Type II error: not rejecting $H_0$ when it is false (false negative)
 - Alpha: significance level in the long run $H_0$ would be rejected this amount of the time falsely. (i.e. We are willing to accept $x$ in 100 false positives.)
 
 Beware of goodness-of-fit tests because they are unlikely to reject *any* distribution with little data, and are very sensitive to the smallest systematic error with lots of data.
