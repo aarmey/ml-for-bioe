@@ -118,7 +118,7 @@ By the end of the course you will learn how to:
 
 If you do these three things, you will do well.
 
-\note[item]{\item Only second time through, so interested in calibration
+\note[item]{Only second time through, so interested in calibration
 \item If you aren't famiilar with a term, guaranteed we should review}
 
 # Introduction
@@ -144,14 +144,14 @@ What we will cover spans a range of fields:
 - Computational techniques (the algorithms)
 - Statistics (the model)
 
-\note[item]{\item Makes this material challenging.
+\note[item]{Makes this material challenging.
 \item Also rewarding, frontier of methods.}
 
 # Why do we need these things to learn about the world?
 
 FILL IN
 
-\note[item]{\item It may not be feasible for humans to learn on the scale / in the time alloted.
+\note[item]{It may not be feasible for humans to learn on the scale / in the time alloted.
 \item Model construction serves as goal posts. I.e. a well-specified target we can compare, share, etc.
 \item For many tasks, machine learning can perform better than a human would.
 }
@@ -208,7 +208,7 @@ FILL IN
 
 # Probability
 
-\note[item]{\item Probability indicates the chance of an event within a wider set of outcomes
+\note[item]{Probability indicates the chance of an event within a wider set of outcomes
 \item Also talk about if something is conditionally dependent/independent
 \item What is integral?
 \item What is limit as dx goes to 0?
@@ -223,19 +223,18 @@ Two possibilities:
 - Fair coin
 - Biased (Heads 60%, Tails 40%)
 
-\note[item]{\item Run through example.
+\note[item]{Run through example.
 \item What is the data here?
 \item What is the model?
 \item What is the algorithm?
 \item Walk through each form of probability.
 }
-<!-- From here on using Kristen's Chapter Two -->
 
 # Distributions
 
 We've already been talking about these! Distributions describe the range of probabilities that exist for all possible outcomes.
 
-\note[item]{\item Can a distribution be categorical? Ordinal? Numerical?
+\note[item]{Can a distribution be categorical? Ordinal? Numerical?
 }
 
 # Other Probabilities
@@ -252,7 +251,7 @@ Joint probability
 Complementary event
 ~ The probability of an event not occuring.
 
-\note[item]{\item Plot out a joint probability
+\note[item]{Plot out a joint probability
 \item Also talk about if something is conditionally dependent/independent
 }
 
@@ -280,7 +279,7 @@ Area between:
 
 You can normalize any normal distribution to the standard normal.
 
-\note[item]{\item Walk through the equations for normal distribution.
+\note[item]{Walk through the equations for normal distribution.
 \item Walk through process of Z-scoring.
 }
 
@@ -362,7 +361,7 @@ For example:
 - $H_0$: A particular set of points come from a normal distribution with mean $\mu$ and variance $\sigma$.
 - $H_0$: Two sets of observations were sampled from distributions with different means.
 
-\note[item]{\item Go over this, drawing out distributions.
+\note[item]{Go over this, drawing out distributions.
 \item Go over one sided, two sided tests.
 }
 
@@ -442,5 +441,3 @@ What does this mean when it comes to hypothesis testing?
 
 - [Computer Age Statistical Inference, Chapters 1 and 2](https://web.stanford.edu/~hastie/CASI_files/PDF/casi.pdf)
 - [`scipy.stats`](https://docs.scipy.org/doc/scipy/reference/stats.html)
-
-\note{Neagle, Chapter 2}
