@@ -252,7 +252,7 @@ Joint probability
 Complementary event
 ~ The probability of an event not occuring.
 
-\note[item]{\item Plot out a joint probability
+\note[item]{Plot out a joint probability
 \item Also talk about if something is conditionally dependent/independent
 }
 
