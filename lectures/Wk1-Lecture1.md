@@ -359,10 +359,8 @@ In hypothesis testing we state a null hypothesis that we will test and if it’s
 
 For example:
 
-- Ho: A particular point comes from a normal distribution with mean $\mu$ (and variance $\sigma$).
-- Ho: Two sets of observations were sampled from distributions with different means.
-
-Relative likelihood of the null hypothesis is the *p-value*.
+- $H_0$: A particular set of points come from a normal distribution with mean $\mu$ and variance $\sigma$.
+- $H_0$: Two sets of observations were sampled from distributions with different means.
 
 \note[item]{\item Go over this, drawing out distributions.
 \item Go over one sided, two sided tests.
