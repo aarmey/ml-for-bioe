@@ -9,7 +9,7 @@ BIOENGR C175/C275: Machine learning & data-driven modeling in bioengineering
 Instructor: Prof. Aaron Meyer (<ameyer@ucla.edu>), 4121G Engineering V
 
 Class Hours: Lecture: Tuesdays/Thursdays, 2:00 – 3:50pm (Boelter Hall 4283)  
-Lab Section: Fridays, 2:00 – 3:50 pm (Boelter Hall 4413)
+Lab Section: Fridays, 2:00 – 3:50 pm (Boelter Hall 4283)
 
 Teaching Assistant: Brian Orcutt-Jahns (<orcuttjahnsbrian@gmail.com>)
 
