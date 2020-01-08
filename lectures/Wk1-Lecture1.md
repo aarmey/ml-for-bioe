@@ -13,7 +13,7 @@ author: Aaron Meyer
 ## Lab
 
 - Fridays, 2:00–3:50pm
-- Boelter Hall 4413
+- Boelter Hall 4283
 
 <https://aarmey.github.io/ml-for-bioe/>
 
@@ -34,7 +34,7 @@ author: Aaron Meyer
 
 ## Prof. Meyer
 
-- Wednesday 11:00-11:50am in Eng V 4121G or by appointment
+- Friday 11:00-11:50am in Eng V 4121G or by appointment
 - I will usually also stick around after class and am happy to answer questions.
 
 ## TAs
@@ -81,7 +81,7 @@ By the end of the course you will learn how to:
 ## Where
 
 - Fridays, 2:00-3:50pm
-- Boelter Hall 4413
+- Boelter Hall 4283
 
 ## What
 
