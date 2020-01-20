@@ -33,7 +33,7 @@ author: Aaron Meyer
 - You're assembling a machine learning model to identify heart attacks
 	- Not testing this could be considered professional malpractice
 	
-\note[item]{\item Talk about software bug in radiation treatment
+\note[item]{Talk about software bug in radiation treatment
 \item Therac-25, introduced in 1982
 \item Had two options: direct beam, or 100X greater through filter
 \item FDA now requires code review}
@@ -53,7 +53,7 @@ author: Aaron Meyer
 # Unit Testing
 
 **unit testing**: Looking for errors in a subsystem in isolation.
-	- Generally a "subsystem" means a particular class or object.
+	- Generally a "subsystem" means a particular class, object, or function.
 
 The basic idea:
 
@@ -316,3 +316,4 @@ Avoid:
 - [`hypothesis`](https://hypothesis.readthedocs.io/en/latest/index.html), a python package for property-based testing
 - [`datafuzz`](https://github.com/kjam/datafuzz), a python package for data fuzzing
 - [`pylint`](https://www.pylint.org), a python linter
+- [`pytest`](https://doc.pytest.org/en/latest/), a package to run your tests
