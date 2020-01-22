@@ -19,21 +19,21 @@ layout: page
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
-- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/22 at noon ([notebook & submission link](https://classroom.github.com/a/MNBoffaD))
+- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/23 at 11:59 pm ([notebook & submission link](https://classroom.github.com/a/MNBoffaD))
 
 ### Week 3, Jan 20 – 24
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
   - [Linear Digressions: Beware of simple metrics](http://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
-- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/29 at noon ([notebook & submission link](https://classroom.github.com/a/jb4_545N))
+- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/30 at 11:59 pm ([notebook & submission link](https://classroom.github.com/a/jb4_545N))
 
 ### Week 4, Jan 27 – Jan 31
 
 - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 7: Dimentionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
-- Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/5 at noon ([notebook & submission link](https://classroom.github.com/a/zIMw47vi))
+- Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/6 at 11:59 pm ([notebook & submission link](https://classroom.github.com/a/zIMw47vi))
 
 ### Week 5, Feb 3 – 7
 
@@ -50,14 +50,14 @@ layout: page
 - [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=2701619)
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf))
 - Lecture 12: Midterm exam
-- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/19 at noon ([notebook & submission link](https://classroom.github.com/a/BjiGNFmn))
+- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/20 at 11:59 pm ([notebook & submission link](https://classroom.github.com/a/BjiGNFmn))
 
 
 ### Week 7, Feb 17 – 21
 
 - [Lecture 13: Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb))
 - [Lecture 14: Autodiff and Clustering Cont'd](../public/Wk7-Lecture14.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb))
-- Lab: Implementation of HMMs for heart rate monitor wearable, due 2/26 at noon ([notebook & subission link](https://classroom.github.com/a/wpHe0iZd))
+- Lab: Implementation of HMMs for heart rate monitor wearable, due 2/27 at 11:59 pm ([notebook & subission link](https://classroom.github.com/a/wpHe0iZd))
 
 ### Week 8, Feb 24 – Feb 28
 
@@ -69,7 +69,7 @@ layout: page
 
 ### Week 9, Mar 2 – 6
 
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/11 at noon ([notebook & submission link](https://classroom.github.com/a/pO97IDpb))<!-- SVM -->
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/12 at 11:59 pm ([notebook & submission link](https://classroom.github.com/a/pO97IDpb))
 
 ### Week 10, Mar 9 – 13
 
