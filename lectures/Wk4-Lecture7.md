@@ -65,7 +65,7 @@ $$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^{T} $$
 
 where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N$.
 
-\note[item]{\item Reduced R simplifies the model substantially
+\note[item]{Reduced R simplifies the model substantially
 \item Also decreases fidelity of reconstruction
 \item Trade-off always
 }
