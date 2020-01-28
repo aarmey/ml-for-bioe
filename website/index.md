@@ -15,7 +15,7 @@ Teaching Assistant: Brian Orcutt-Jahns (<orcuttjahnsbrian@gmail.com>)
 
 Office Hours:
 
-- Prof. Meyer - Fridays, 11:00 – 11:50 am (4121G Engineering V)
+- Prof. Meyer - Fridays, 11:00 – 11:50 am (4129 Engineering V)
 - TA – By appointment
 
 Website: <https://aarmey.github.io/ml-for-bioe/>  
