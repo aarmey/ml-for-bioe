@@ -12,14 +12,14 @@ layout: page
   - Listening: [Linear Digressions: The assumptions of ordinary least squares](http://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
   - Reading: [Points of Significance: Simple linear regression](http://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
   - Listening: [Linear Digressions: Convex (and non-convex) optimization](http://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
-- Lab: Programming and Git Primer, due 1/15 at noon.
+- Lab: Programming and Git Primer, due 1/15 at noon
 
 ### Week 2, Jan 13 – 17
 
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
-- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/23 at 11:59 pm ([notebook & submission link](https://classroom.github.com/a/MNBoffaD))
+- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/23 at 11:59 pm
 
 ### Week 3, Jan 20 – 24
 
