@@ -37,10 +37,6 @@ layout: page
 
 ### Week 5, Feb 3 – 7
 
-- Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
-- Reading: [Markov models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
-- Reading: [Markov models — hidden Markov models](https://www.nature.com/articles/s41592-019-0532-6)
-- Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
 - Lecture 10: Finish dynamical models.
 - Lab: Midterm review, finish selecting project ([setup project repository](https://classroom.github.com/g/Qo5Y8tjq))
@@ -56,6 +52,10 @@ layout: page
 ### Week 7, Feb 17 – 21
 
 - [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/HMMs-example.ipynb))
+  - Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
+  - Reading: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
+  - Reading: [Markov Models—Hidden Markov Models](https://www.nature.com/articles/s41592-019-0532-6)
+  - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - Lecture: Finish hidden Markov models.
 - Lab: Implementation of HMMs for heart rate monitor wearable, due 2/27 at 11:59 pm ([notebook & subission link](https://classroom.github.com/a/wpHe0iZd))
 
