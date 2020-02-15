@@ -1,5 +1,5 @@
 ---
-title: Week 7, Lecture 14 - Autodiff and Clustering Redux
+title: Week 7, Lecture 14 - Gaussian Mixture Models
 author: Aaron Meyer
 ---
 
