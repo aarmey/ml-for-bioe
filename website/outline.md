@@ -42,7 +42,7 @@ layout: page
 - Reading: [Markov models — hidden Markov models](https://www.nature.com/articles/s41592-019-0532-6)
 - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
-- [Lecture 10: Hidden Markov Models](../public/Wk5-Lecture10.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/HMMs-example.ipynb))
+- Lecture 10: Finish dynamical models.
 - Lab: Midterm review, finish selecting project ([setup project repository](https://classroom.github.com/g/Qo5Y8tjq))
 
 ### Week 6, Feb 10 – 14
@@ -55,20 +55,20 @@ layout: page
 
 ### Week 7, Feb 17 – 21
 
-- [Lecture 13: Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb))
-- [Lecture 14: Autodiff and Clustering Cont'd](../public/Wk7-Lecture14.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb))
+- [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/HMMs-example.ipynb))
+- Lecture: Finish hidden Markov models.
 - Lab: Implementation of HMMs for heart rate monitor wearable, due 2/27 at 11:59 pm ([notebook & subission link](https://classroom.github.com/a/wpHe0iZd))
 
 ### Week 8, Feb 24 – Feb 28
 
-- Reading: [Points of Significance: Classification and regression trees](https://www.nature.com/nmeth/journal/v14/n8/full/nmeth.4370.html)
-- [Lecture 15: Decision trees](../public/Wk8-Lecture15.pdf)
-- [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/SVMs-example.ipynb))
-  - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
-  - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
+- [Lecture 13: K-Means Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb))
+- [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb))
 
 ### Week 9, Mar 2 – 6
 
+- [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/SVMs-example.ipynb))
+  - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
+  - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 - Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/12 at 11:59 pm ([notebook & submission link](https://classroom.github.com/a/pO97IDpb))
 
 ### Week 10, Mar 9 – 13
