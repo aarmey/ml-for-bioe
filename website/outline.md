@@ -69,7 +69,7 @@ layout: page
 - [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/SVMs-example.ipynb))
   - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/12 at 11:59 pm ([notebook & submission link](https://classroom.github.com/a/pO97IDpb))
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/19 at 11:59 pm ([notebook & submission link](https://classroom.github.com/a/pO97IDpb))
 
 ### Week 10, Mar 9 – 13
 
