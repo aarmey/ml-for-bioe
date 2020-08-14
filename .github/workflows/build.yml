@@ -15,7 +15,7 @@ jobs:
     # Build products
     - name: Build products
       run: |
-        sudo apt install pandoc ruby-bundler
+        sudo apt install pandoc ruby-bundler texlive-latex-extra texlive-latex-base
         make
         cd website && bundle exec jekyll build
         
