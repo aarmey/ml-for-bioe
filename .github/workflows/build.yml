@@ -15,6 +15,7 @@ jobs:
     # Build products
     - name: Build products
       run: |
+        apt install pandoc
         make
         cd website && bundle exec jekyll build
         
