@@ -7,7 +7,7 @@ on: [push]
 jobs:
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
     - uses: actions/checkout@v2
@@ -15,6 +15,7 @@ jobs:
     # Build products
     - name: Build products
       run: |
+        sudo apt update
         sudo apt install pandoc ruby-bundler texlive-latex-extra texlive-latex-base texlive-xetex
         make
         cd website && bundle exec jekyll build
