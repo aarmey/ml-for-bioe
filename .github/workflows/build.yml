@@ -21,7 +21,7 @@ jobs:
         bundle install --gemfile=./website/Gemfile
         make
         cd website && bundle exec jekyll build
-        cd website && bundle exec htmlproofer --check-html --url-ignore "/ml-for-bioe/" --http-status-ignore "412, 400" --assume-extension ./_site
+        bundle exec htmlproofer --check-html --url-ignore "/ml-for-bioe/" --http-status-ignore "412, 400" --assume-extension ./_site
         
     - name: Upload lecture notes
       uses: actions/upload-artifact@v2
