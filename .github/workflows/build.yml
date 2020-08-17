@@ -21,17 +21,17 @@ jobs:
         bundle install --gemfile=./website/Gemfile
         make
         cd website && bundle exec jekyll build
-        bundle exec htmlproofer --check-html --url-ignore "/ml-for-bioe/" --http-status-ignore "412, 400" --assume-extension ./_site
-        
+    - name: Proof HTML
+      run: cd website && bundle exec htmlproofer --check-html --url-ignore "/ml-for-bioe/" --http-status-ignore "412, 400" --assume-extension ./_site
     - name: Upload lecture notes
       uses: actions/upload-artifact@v2
       with:
         name: lectures
         path: lectures/*.pdf
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@master
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       if: github.ref == 'refs/heads/master'
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: website # The folder the action should deploy.
