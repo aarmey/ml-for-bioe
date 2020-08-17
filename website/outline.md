@@ -38,8 +38,8 @@ layout: page
 ### Week 5, Feb 3 – 7
 
 - [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
-- Lecture 10: Finish dynamical models.
-- Lab: Midterm review, finish selecting project ([setup project repository](https://classroom.github.com/g/Qo5Y8tjq))
+- Lecture 10: Finish dynamical models
+- Lab: Midterm review, finish selecting project
 
 ### Week 6, Feb 10 – 14
 
@@ -69,7 +69,7 @@ layout: page
 - [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/SVMs-example.ipynb))
   - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/19 at 11:59 pm ([notebook & submission link](https://classroom.github.com/a/pO97IDpb))
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/19 at 11:59 pm
 
 ### Week 10, Mar 9 – 13
 
