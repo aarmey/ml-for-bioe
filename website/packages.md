@@ -1,5 +1,5 @@
 ---
-title: Packages
+title: Packages / Resources
 layout: page
 ---
 
@@ -8,6 +8,7 @@ These are some packages that may be of use to you during the course.
 ## General
 
 - [Google Colaboratory](https://colab.research.google.com/)
+- [Linear Digressions: ROC Curves](http://lineardigressions.com/episodes/2020/6/21/rock-the-roc-curve)
 
 ## Plotting
 
