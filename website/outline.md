@@ -5,7 +5,7 @@ layout: page
 
 ### Week 1, Jan 6 – 10
 
-- [Lecture 1: Statistics review](../public/Wk1-Lecture1.pdf)
+- [Lecture 1: Statistics review](../public/Wk1-Lecture1.pdf) (Recording part [1](https://www.youtube.com/watch?v=9fXyIDgLiRU), [2](https://www.youtube.com/watch?v=jcLIxxLo5_A))
   - Reading: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
   - Listening: [Linear Digressions: The Normal Distribution and the Central Limit Theorem](http://lineardigressions.com/episodes/2018/12/9/the-normal-distribution-and-the-central-limit-theorem)
 - [Lecture 2: Fitting & Regression](../public/Wk1-Lecture2.pdf)
