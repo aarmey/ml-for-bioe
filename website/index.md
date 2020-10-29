@@ -8,15 +8,15 @@ BIOENGR C175/C275: Machine learning & data-driven modeling in bioengineering
 
 Instructor: Prof. Aaron Meyer (<ameyer@ucla.edu>), 4121G Engineering V
 
-Class Hours: Lecture: Tuesdays/Thursdays, 2:00 – 3:50pm (Boelter Hall 4283)  
-Lab Section: Fridays, 2:00 – 3:50 pm (Boelter Hall 4283)
+Class Hours: Lecture: Tuesdays/Thursdays, 2:00 – 3:50pm (Zoom link on CCLE)  
+Lab Section: Fridays, 2:00 – 3:50 pm (Zoom link on CCLE)
 
-Teaching Assistant: Brian Orcutt-Jahns (<orcuttjahnsbrian@gmail.com>)
+Teaching Assistant: TBD (<TBD@ucla.edu>)
 
 Office Hours:
 
-- Prof. Meyer - Tuesdays, 1:00 – 1:50 pm (4129 Engineering V)
-- TA – By appointment
+- Prof. Meyer: Available at the end of lecture, on Piazza, or by appointment
+- TA: By appointment
 
 Website: <https://aarmey.github.io/ml-for-bioe/>  
 Piazza: <https://piazza.com/ucla/winter2020/bec175275/>
@@ -26,9 +26,9 @@ Piazza: <https://piazza.com/ucla/winter2020/bec175275/>
 Required: None. Handouts will be provided as needed and posted on the website.
 Optional/Helpful Other Resources:
 
-- *Efron & Hastie (2016). [Computer Age Statistical Inference](https://web.stanford.edu/~hastie/CASI/).*
+- Efron & Hastie (2016). [Computer Age Statistical Inference](https://web.stanford.edu/~hastie/CASI/).
 
-- *VanderPlas (2016). [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook).*
+- VanderPlas (2016). [Python Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook).
 
 - Hastie *et al*. (2009). [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/Papers/ESLII.pdf).
 
@@ -37,7 +37,6 @@ Optional/Helpful Other Resources:
 ## Course Description:
 
 Manipulating biological systems requires techniques to interpret complex measurements. This project-based class will introduce techniques for inferring biological meaning from experimental measurements using computational and analytical techniques. The objectives of this course are (1) to give students a working knowledge of techniques for rigorously analyzing complex data sources, (2) to illustrate the frontier and open challenges in computational systems biology and bioengineering, and (3) to ensure familiarity with the necessary tools to effectively apply computation as part of an individual or group research effort. Lectures will introduce foundational applied machine learning and statistics techniques. Laboratory session will involve hands-on implementations from recent literature. Homework will be primarily project-based using recent literature-derived applications. There will be a midterm exam and final design project. The final projects will involve novel analysis of data derived from the literature using techniques from the course. Instructors will guide focus and development of the project.
-
 
 ## Learning Goals:
 
