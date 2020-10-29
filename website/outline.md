@@ -17,7 +17,7 @@ layout: page
 ### Week 2, Jan 13 – 17
 
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
-- [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf)
+- [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf) (Recording part [1](https://www.youtube.com/watch?v=J3rF6vP3tQY))
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/23 at 11:59 pm
 
