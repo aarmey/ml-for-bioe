@@ -52,8 +52,7 @@ author: Aaron Meyer
 
 # Unit Testing
 
-**unit testing**: Looking for errors in a subsystem in isolation.
-	- Generally a "subsystem" means a particular class, object, or function.
+**unit testing**: Looking for errors in a subsystem (class, object, or function) in isolation.
 
 The basic idea:
 
