@@ -19,21 +19,21 @@ layout: page
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf) (Recording part [1](https://www.youtube.com/watch?v=J3rF6vP3tQY), [2](https://youtu.be/-jRZ7POBsrQ), [3](https://youtu.be/TRLPmD4uQYE))
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
-- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/20 at 11:59 pm
+- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/20 at 11:59 pm ([clone link](https://classroom.github.com/a/c0BONuG4))
 
 ### Week 3, Jan 18 – 22
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
   - [Linear Digressions: Beware of simple metrics](http://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([Recording](https://youtu.be/Rh2SdM2_IIg))
-- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/27 at 11:59 pm
+- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/27 at 11:59 pm ([clone link](https://classroom.github.com/a/WCPoBrAR))
 
 ### Week 4, Jan 25 – Jan 29
 
 - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
-- Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/3 at 11:59 pm
+- Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/3 at 11:59 pm ([clone link](https://classroom.github.com/a/8VbhR-Af))
 
 ### Week 5, Feb 1 – 5
 
@@ -46,7 +46,7 @@ layout: page
 - [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=2701619)
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf))
 - Lecture 12: Midterm exam
-- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/17 at 11:59 pm
+- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/17 at 11:59 pm ([clone link](https://classroom.github.com/a/iCrCb3hv))
 
 
 ### Week 7, Feb 15 – 19
@@ -57,7 +57,7 @@ layout: page
   - Reading: [Markov Models—Hidden Markov Models](https://www.nature.com/articles/s41592-019-0532-6)
   - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - Lecture: Finish hidden Markov models.
-- Lab: Implementation of HMMs for heart rate monitor wearable, due 2/24 at 11:59 pm
+- Lab: Implementation of HMMs for heart rate monitor wearable, due 2/24 at 11:59 pm ([clone link](https://classroom.github.com/a/BmDiDEBQ))
 
 ### Week 8, Feb 22 – Feb 26
 
@@ -69,7 +69,7 @@ layout: page
 - [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/SVMs-example.ipynb))
   - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/16 at 11:59 pm
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/16 at 11:59 pm ([clone link](https://classroom.github.com/a/hbaBUaC2))
 
 ### Week 10, Mar 8 – 12
 
