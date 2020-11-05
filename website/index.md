@@ -1,5 +1,5 @@
 ---
-title: Syllabus - Winter 2020
+title: Syllabus - Winter 2021
 layout: page
 ---
 UCLA Department of Bioengineering
