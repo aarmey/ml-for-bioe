@@ -45,7 +45,7 @@ layout: page
 ### Week 6, Feb 8 – 12
 
 - [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=2701619)
-- Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf))
+- Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf))
 - Lecture 12: Midterm exam
 - Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/17 at 11:59 pm ([clone link](https://classroom.github.com/a/iCrCb3hv))
 
