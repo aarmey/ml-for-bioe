@@ -13,12 +13,14 @@ layout: page
   - Reading: [Points of Significance: Simple linear regression](http://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
   - Listening: [Linear Digressions: Convex (and non-convex) optimization](http://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
 - Lab: Programming and Git Primer, due 1/13 at 11:59 pm ([clone link](https://classroom.github.com/a/ATvG0Eqq))
+  - Listening: [Linear Digressions: Jupyter Notebooks, A Data Scientist's Best Friend](https://lineardigressions.com/episodes/2017/8/20/jupyter-notebooks-a-data-scientists-best-friend)
+  - Listening: [Linear Digressions: Git for Data Scientists](https://lineardigressions.com/episodes/2018/6/3/git-for-data-scientists)
 
 ### Week 2, Jan 11 – 15
 
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf) (Recording part [1](https://www.youtube.com/watch?v=J3rF6vP3tQY), [2](https://youtu.be/-jRZ7POBsrQ), [3](https://youtu.be/TRLPmD4uQYE))
-- [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
+- [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf) (Recording part [1](https://youtu.be/N4afdo1VQB0), [2](https://youtu.be/OdEGD35sO-8))
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/20 at 11:59 pm ([clone link](https://classroom.github.com/a/c0BONuG4))
 
 ### Week 3, Jan 18 – 22
@@ -31,7 +33,7 @@ layout: page
 ### Week 4, Jan 25 – Jan 29
 
 - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
-- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
+- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (Recording part [1](https://youtu.be/mPuV7y5ZRfo), 2)
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab).
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
 - Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/3 at 11:59 pm ([clone link](https://classroom.github.com/a/8VbhR-Af))
@@ -40,6 +42,7 @@ layout: page
 
 - [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
 - Lecture 10: Finish dynamical models
+  - Guest presentation: Dynamical models of the cell cycle
 - Lab: Midterm review, finish selecting project
 
 ### Week 6, Feb 8 – 12
@@ -64,6 +67,7 @@ layout: page
 
 - [Lecture 13: K-Means Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb))
 - [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb))
+  - Guest presentation: Using sequence information to improve clustering
 
 ### Week 9, Mar 1 – 5
 
@@ -76,4 +80,4 @@ layout: page
 
 - Lecture: Project presentations
 - Lab: Further project implementation
-- Final Project, due 3/18 at noon (submit through project Github repository)
+- Final Project, due 3/18 at noon (submit through project Github repository—[create here](https://classroom.github.com/g/VxOH30OF))
