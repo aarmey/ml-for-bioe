@@ -13,12 +13,14 @@ layout: page
   - Reading: [Points of Significance: Simple linear regression](http://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
   - Listening: [Linear Digressions: Convex (and non-convex) optimization](http://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
 - Lab: Programming and Git Primer, due 1/13 at 11:59 pm ([clone link](https://classroom.github.com/a/ATvG0Eqq))
+  - Listening: [Linear Digressions: Jupyter Notebooks, A Data Scientist's Best Friend](https://lineardigressions.com/episodes/2017/8/20/jupyter-notebooks-a-data-scientists-best-friend)
+  - Listening: [Linear Digressions: Git for Data Scientists](https://lineardigressions.com/episodes/2018/6/3/git-for-data-scientists)
 
 ### Week 2, Jan 11 – 15
 
-- Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf) (Recording part [1](https://www.youtube.com/watch?v=J3rF6vP3tQY), [2](https://youtu.be/-jRZ7POBsrQ), [3](https://youtu.be/TRLPmD4uQYE))
-- [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
+- [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf) (Recording part [1](https://youtu.be/N4afdo1VQB0), [2](https://youtu.be/OdEGD35sO-8))
+- Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/20 at 11:59 pm ([clone link](https://classroom.github.com/a/c0BONuG4))
 
 ### Week 3, Jan 18 – 22
@@ -40,6 +42,7 @@ layout: page
 
 - [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
 - Lecture 10: Finish dynamical models
+  - Guest presentation: Dynamical models of the cell cycle
 - Lab: Midterm review, finish selecting project
 
 ### Week 6, Feb 8 – 12
@@ -53,7 +56,7 @@ layout: page
 ### Week 7, Feb 15 – 19
 
 - [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf)
-  - [Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/HMMs-example.ipynb)
+  - [Example Notebook](../public/examples/HMMs-example.ipynb)
   - Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
   - Reading: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
   - Reading: [Markov Models—Hidden Markov Models](https://www.nature.com/articles/s41592-019-0532-6)
@@ -64,14 +67,15 @@ layout: page
 ### Week 8, Feb 22 – Feb 26
 
 - [Lecture 13: K-Means Clustering](../public/Wk7-Lecture13.pdf) (Recording part [1](https://youtu.be/uj8B-_fMluE), [2](https://youtu.be/yM3JOI_s5ws))
-  - [Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb)
+  - [Example Notebook](../public/examples/K-Means.ipynb)
 - [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf) (Recording part 1, 2)
-  - [Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb)
+  - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
+  - Guest presentation: Using sequence information to improve clustering
 
 ### Week 9, Mar 1 – 5
 
 - [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) (Recording part 1, 2)
-  - [Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/SVMs-example.ipynb)
+  - [Example Notebook](../public/examples/SVMs-example.ipynb)
   - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 - Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/16 at 11:59 pm ([clone link](https://classroom.github.com/a/hbaBUaC2))
@@ -80,4 +84,4 @@ layout: page
 
 - Lecture: Project presentations
 - Lab: Further project implementation
-- Final Project, due 3/18 at noon (submit through project Github repository)
+- Final Project, due 3/18 at noon (submit through project Github repository—[create here](https://classroom.github.com/g/VxOH30OF))
