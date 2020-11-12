@@ -31,7 +31,7 @@ layout: page
 ### Week 4, Jan 25 – Jan 29
 
 - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
-- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
+- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (Recording part [1](https://youtu.be/mPuV7y5ZRfo), [2](https://youtu.be/1_43nCptm44))
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab).
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
 - Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/3 at 11:59 pm ([clone link](https://classroom.github.com/a/8VbhR-Af))
@@ -62,8 +62,10 @@ layout: page
 
 ### Week 8, Feb 22 – Feb 26
 
-- [Lecture 13: K-Means Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb))
-- [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf) ([Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb))
+- [Lecture 13: K-Means Clustering](../public/Wk7-Lecture13.pdf) (Recording part [1](https://youtu.be/uj8B-_fMluE), [2](https://youtu.be/yM3JOI_s5ws))
+  - [Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/K-Means.ipynb)
+- [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf)
+  - [Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/Gaussian-Mixtures.ipynb)
 
 ### Week 9, Mar 1 – 5
 
