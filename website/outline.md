@@ -32,10 +32,10 @@ layout: page
 
 ### Week 4, Jan 25 – Jan 29
 
-- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (Recording part [1](https://youtu.be/mPuV7y5ZRfo), 2)
-  - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab).
+- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (Recording part [1](https://youtu.be/mPuV7y5ZRfo), [2](https://youtu.be/1_43nCptm44))
+  - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
-- [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
+- [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf) (Recording part 1, 2)
 - Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/3 at 11:59 pm ([clone link](https://classroom.github.com/a/8VbhR-Af))
 
 ### Week 5, Feb 1 – 5
@@ -55,7 +55,8 @@ layout: page
 
 ### Week 7, Feb 15 – 19
 
-- [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf) ([Example Notebook](../public/examples/HMMs-example.ipynb))
+- [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf)
+  - [Example Notebook](../public/examples/HMMs-example.ipynb)
   - Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
   - Reading: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
   - Reading: [Markov Models—Hidden Markov Models](https://www.nature.com/articles/s41592-019-0532-6)
@@ -65,13 +66,16 @@ layout: page
 
 ### Week 8, Feb 22 – Feb 26
 
-- [Lecture 13: K-Means Clustering](../public/Wk7-Lecture13.pdf) ([Example Notebook](../public/examples/K-Means.ipynb))
-- [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf) ([Example Notebook](../public/examples/Gaussian-Mixtures.ipynb))
+- [Lecture 13: K-Means Clustering](../public/Wk7-Lecture13.pdf) (Recording part [1](https://youtu.be/uj8B-_fMluE), [2](https://youtu.be/yM3JOI_s5ws))
+  - [Example Notebook](../public/examples/K-Means.ipynb)
+- [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf) (Recording part 1, 2)
+  - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
   - Guest presentation: Using sequence information to improve clustering
 
 ### Week 9, Mar 1 – 5
 
-- [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) ([Example Notebook](../public/examples/SVMs-example.ipynb))
+- [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) (Recording part 1, 2)
+  - [Example Notebook](../public/examples/SVMs-example.ipynb)
   - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 - Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/16 at 11:59 pm ([clone link](https://classroom.github.com/a/hbaBUaC2))
