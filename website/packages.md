@@ -18,7 +18,7 @@ These are some packages that may be of use to you during the course.
 ## Machine Learning
 
 - [Scikit-learn](http://scikit-learn.org/stable/)
-- [TensorFlow](https://www.tensorflow.org)
+- [pomegranate](https://pomegranate.readthedocs.io/en/latest/)
 
 ## Numerical Manipulations
 
@@ -27,13 +27,16 @@ These are some packages that may be of use to you during the course.
 
 ## Autodifferentiation
 
-- [Autograd](https://github.com/HIPS/autograd)
+- [JAX](https://jax.readthedocs.io/en/latest/index.html)
 - [Theano](http://deeplearning.net/software/theano/)
 - [Tensorflow](https://www.tensorflow.org)
 
 ## Testing
 
 - [unittest](https://docs.python.org/3/library/unittest.html#) (built in)
+- [pytest](https://docs.pytest.org/en/stable/contents.html)
+- [hypothesis](https://hypothesis.readthedocs.io/en/latest/)
+- [datafuzz](https://datafuzz.readthedocs.io/en/latest/)
 
 ## Other
 
