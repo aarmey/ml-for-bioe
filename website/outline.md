@@ -30,9 +30,9 @@ layout: page
 
 ### Week 4, Jan 25 – Jan 29
 
-- Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (Recording part [1](https://youtu.be/mPuV7y5ZRfo), [2](https://youtu.be/1_43nCptm44))
-  - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab).
+  - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+  - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf) (Recording part 1, 2)
 - Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/3 at 11:59 pm ([clone link](https://classroom.github.com/a/8VbhR-Af))
 
@@ -71,7 +71,7 @@ layout: page
 ### Week 9, Mar 1 – 5
 
 - [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) (Recording part 1, 2)
-  - [Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/SVMs-example.ipynb))
+  - [Example Notebook](https://github.com/aarmey/ml-for-bioe/blob/master/website/public/examples/SVMs-example.ipynb)
   - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 - Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/16 at 11:59 pm ([clone link](https://classroom.github.com/a/hbaBUaC2))
