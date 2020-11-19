@@ -28,7 +28,6 @@ These are some packages that may be of use to you during the course.
 ## Autodifferentiation
 
 - [JAX](https://jax.readthedocs.io/en/latest/index.html)
-- [Theano](http://deeplearning.net/software/theano/)
 - [Tensorflow](https://www.tensorflow.org)
 
 ## Testing
