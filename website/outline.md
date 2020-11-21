@@ -36,7 +36,7 @@ layout: page
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
-- [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf) (Recording part 1, 2)
+- [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf) (Recording part [1](https://youtu.be/C8lb1vnr8OQ), [2](https://youtu.be/kfDwh_elvC8), 3)
 - Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/3 at 11:59 pm ([clone link](https://classroom.github.com/a/8VbhR-Af))
 
 ### Week 5, Feb 1 – 5
