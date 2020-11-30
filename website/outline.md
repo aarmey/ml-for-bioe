@@ -9,6 +9,7 @@ layout: page
   - Reading: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
   - Listening: [Linear Digressions: The Normal Distribution and the Central Limit Theorem](http://lineardigressions.com/episodes/2018/12/9/the-normal-distribution-and-the-central-limit-theorem)
 - [Lecture 2: Fitting & Regression](../public/Wk1-Lecture2.pdf) (Recording part [1](https://www.youtube.com/watch?v=-lG53OEl1-s), [2](https://www.youtube.com/watch?v=k0xUp8DPNIA))
+  - [Example Notebook](../public/examples/OLS-Example.ipynb)
   - Listening: [Linear Digressions: The assumptions of ordinary least squares](http://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
   - Reading: [Points of Significance: Simple linear regression](http://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
   - Listening: [Linear Digressions: Convex (and non-convex) optimization](http://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
