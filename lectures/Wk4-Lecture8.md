@@ -151,10 +151,6 @@ $$Y = TB + E$$
 
 ![ ](./lectures/figs/lec8/PC-10.pdf)
 
-# Utilizing PLSR for Predictions
-
-![ ](./lectures/figs/lec8/PC-11.pdf)
-
 # Variants of PLSR
 
 #### Discriminant PLSR
