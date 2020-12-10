@@ -27,7 +27,7 @@ layout: page
 
 ### Week 3, Jan 18 – 22
 
-- [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf) (Recording part [1](https://youtu.be/8lOjdH_ZfVc), 2)
+- [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf) (Recording part [1](https://youtu.be/8lOjdH_ZfVc), [2](https://youtu.be/Cu3kkOu9juY))
   - [Linear Digressions: Beware of simple metrics](http://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([Recording](https://youtu.be/Rh2SdM2_IIg))
 - Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/27 at 11:59 pm ([clone link](https://classroom.github.com/a/WCPoBrAR))
