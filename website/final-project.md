@@ -10,15 +10,13 @@ In this project, you have two options for the general route you can take:
 1. As a first option, you may select a bioengineering paper that implements a computational analysis we have learned about from the literature. You will reimplement this analysis with thorough testing and documentation. In your final report, you should include a discussion about any elements that presented a challenge during your reimplementation, or discrepancies you found. Lastly, you should identify a creative extension of the analysis and implement it.
 2. Alternatively, you may identify a set of data and corresponding analysis that has not yet been performed. This can be more exploratory in nature. You will implement this analysis with testing and documentation. In your final report, you should discuss whether/how the type of data influenced the analysis that was possible, the findings and limitations of your analysis, and what might be ways to validate your findings.
 
-Some papers with material of potential interest are listed [here](#final-project-source-ideas). For example, a few project ideas:
+Some repositories with potential datasets are listed [below](#final-project-source-ideas). Here are also a few project ideas from the literature:
 
-Exploratory:
-- Using the kinetic binding measurements and activities measured in [Jaks et al](http://doi.org/10.1016/j.jmb.2006.11.053), use PCA to describe the differences between interferons, and PLSR to predict how binding relates to activity.
-- Using the kinetic binding measurements and activities measured in [Jaks et al](http://doi.org/10.1016/j.jmb.2006.11.053), build an ODE model of receptor-ligand interaction. Based on the conclusions of the authors, predict how cells with different amounts of receptor would respond.
-
-Reimplementation:
-- Reimplement the quantitation for mutation rate from the number of stop codons in [Cuevas et al](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002251#pbio.1002251.s011). Using either a Bayesian or frequentest approach, estimate the specificity of each mutation rate estimate.
-- Reimplement the ODE model from [Kellogg et al](http://www.sciencedirect.com/science/article/pii/S2211124717303595?via%3Dihub). Propose an approach to fit the model to data, given the high degree of cell-cell variation.
+- Reimplement analysis in [Sanford et al](https://elifesciences.org/articles/59388), or explore using PCA with (favoring multiplicative effects) or without (favoring additive effects) log-transformed data.
+- Build a model predicting latent or active Tb infection from antibody measurements in [Lu et al](https://dx.doi.org/10.1016%2Fj.cell.2016.08.072).
+- Explore the measurements in [Boudreau et al](https://www.jci.org/articles/view/129520) by PCA.
+- Build a model that predicts antibody effectiveness against Ebola from measurements in [Saphire et al](https://www.nature.com/articles/s41590-018-0233-9).
+- Build and interpret a model predicting vaccine effectiveness from [Chung et al](https://stm.sciencemag.org/content/6/228/228ra38.full).
 
 There are no restrictions on the programming language or packages you use. While this is expected to be an individual project by default, we will consider up to four person teams so long as this is reflected by the scope of the project. If in a team, your proposal, final project, and final presentation should cover how the project was divided.
 
@@ -73,7 +71,3 @@ Your project will be evaluated
 
 - Many interesting datasets are listed in the [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/).
 - Machine learning competitions, such as the [DREAM Challenges](http://dreamchallenges.org), [Kaggle](https://www.kaggle.com), and [DrivenData](https://www.drivendata.org), may have relevant challenges and pre-assembled datasets.
-- Jensen, K. J., Moyer, C. B., & Janes, K. A. (2016). [Network Architecture Predisposes an Enzyme to Either Pharmacologic or Genetic Targeting](http://doi.org/10.1016/j.cels.2016.01.012). Cell Systems, 2(2), 112–121. 
-- Tsherniak et al. (2017). [Defining a Cancer Dependency Map](http://www.sciencedirect.com/science/article/pii/S0092867417306517). Cell, 170(3), 564-576.
-- Hill et al. (2017). [Context Specificity in Causal Signaling Networks Revealed by Phosphoprotein Profiling](http://www.sciencedirect.com/science/article/pii/S2405471216304082). Cell Systems, 4(1), 73-83.
-- Lun et al. (2019). [Analysis of the Human Kinome and Phosphatome by Mass Cytometry Reveals Overexpression-Induced Effects on Cancer-Related Signaling](https://www.sciencedirect.com/science/article/pii/S1097276519303132). Molecular Cell, 74(5), 1086–1102.
