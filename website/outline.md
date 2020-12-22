@@ -20,6 +20,7 @@ layout: page
 ### Week 2, Jan 11 – 15
 
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf) (Recording part [1](https://www.youtube.com/watch?v=J3rF6vP3tQY), [2](https://youtu.be/-jRZ7POBsrQ), [3](https://youtu.be/TRLPmD4uQYE))
+  - [Example Notebook](../public/examples/Regularization-Example.ipynb)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf) (Recording part [1](https://youtu.be/N4afdo1VQB0), [2](https://youtu.be/OdEGD35sO-8))
   - [Example Notebook](../public/examples/CrossVal-Example.ipynb)
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
