@@ -118,8 +118,11 @@ By the end of the course you will learn how to:
 
 If you do these three things, you will do well.
 
-\note[item]{Only second time through, so interested in calibration
-\item If you aren't famiilar with a term, guaranteed we should review}
+::: notes
+
+If you aren't famiilar with a term, guaranteed we should review.
+
+:::
 
 # Introduction
 
@@ -208,11 +211,14 @@ FILL IN
 
 # Probability
 
-\note[item]{Probability indicates the chance of an event within a wider set of outcomes
-\item Also talk about if something is conditionally dependent/independent
-\item What is integral?
-\item What is limit as dx goes to 0?
-}
+::: notes
+
+- Probability indicates the chance of an event within a wider set of outcomes
+- Also talk about if something is conditionally dependent/independent
+- What is integral?
+- What is limit as dx goes to 0?
+
+:::
 
 # Coin toss example
 
