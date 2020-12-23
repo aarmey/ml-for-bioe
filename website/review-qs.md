@@ -6,7 +6,7 @@ layout: page
 ### Lecture 1
 
 1. What are 4 reasons to build a model?
-2. $p(x) = a/x$ for $1 < x < 10$ describes a distribution pdf. What is a? What is the average of this distribution?
+2. $$p(x) = a/x$$ for $$1 < x < 10$$ describes a distribution pdf. What is a? What is the average of this distribution?
 3. What are the three kinds of variables? Give an example of each.
 4. You are interested in the sample distribution of the mean for an exponential distribution (N=8). What can you say about it relative to the original one?
 5. What can you say about the sample distribution for the N=1 case?
@@ -43,7 +43,7 @@ layout: page
 4. List **two** ways in which cross-validation and bootstrap are similar.
 5. List **two** ways in which cross-validation and bootstrap are different.
 6. Why is performing variable selection outside of your cross-validation loop bad, but it’s OK to decide what you are going to measure in the first place?
-7. You want to determine whether the first parameter in your ordinary least squares model, beta_1, is significantly non-zero. How can you apply bootstrap to accomplish this?
+7. You want to determine whether the first parameter in your ordinary least squares model, $$\beta_1$$, is significantly non-zero. How can you apply bootstrap to accomplish this?
 
 ### Lecture 6
 
@@ -51,7 +51,7 @@ layout: page
 2. Can a prior be based on data? If so, how is this data related to the experiment being modeled (the observed)?
 3. What are three differences between a Bayesian and maximum likelihood (frequentist) approach?
 4. When will a Bayesian and maximum likelihood approach agree?
-5. You are asked to provide up-to-date estimates of the 6 month failure rate for a stent going to market. A previous device had 3 devices out of 100 fail within 6 months, and you strongly suspect this device is similar. Provide the Bayesian estimate of the failure rate (i.e. $P(FR | N,m))$ given N devices have made it to 6 months, and m have failed. (Hint: Devices **either** pass or fail here. This follows a Binomial distribution.)
+5. You are asked to provide up-to-date estimates of the 6 month failure rate for a stent going to market. A previous device had 3 devices out of 100 fail within 6 months, and you strongly suspect this device is similar. Provide the Bayesian estimate of the failure rate (i.e. $$P(FR | N,m))$$ given N devices have made it to 6 months, and m have failed. (Hint: Devices **either** pass or fail here. This follows a Binomial distribution.)
 6. What would be a reasonable estimate if you had no previous device's data?
 7. What do you expect to happen to a posterior distribution as you add more and more data?
 
