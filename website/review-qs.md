@@ -35,7 +35,7 @@ layout: page
 8. What does regularization do to the degrees of freedom (p) of a model? How about the number of measurements (n)?
 9. A colleague tells you about a new form of regularization they've come up with (e.g. maximize the weighting for the variables most correlated with the output). How would this influence the variance of the model? Might this improve the prediction error?
 
-### Lecture 5
+### Lecture 4
 
 1. Why does cross-validation need to be performed across multiple folds?
 2. How will the process of cross-validation influence the model fit error we observe? How does it affect the model prediction error?
@@ -45,7 +45,7 @@ layout: page
 6. Why is performing variable selection outside of your cross-validation loop bad, but it’s OK to decide what you are going to measure in the first place?
 7. You want to determine whether the first parameter in your ordinary least squares model, $$\beta_1$$, is significantly non-zero. How can you apply bootstrap to accomplish this?
 
-### Lecture 6
+### Lecture 5
 
 1. What is a prior? How does one go about making one?
 2. Can a prior be based on data? If so, how is this data related to the experiment being modeled (the observed)?
@@ -55,7 +55,7 @@ layout: page
 6. What would be a reasonable estimate if you had no previous device's data?
 7. What do you expect to happen to a posterior distribution as you add more and more data?
 
-### Lecture 7
+### Lecture 6
 
 1. Who/what sort of people need to test their code?
 2. What is the difference between unit tests and integration tests?
@@ -64,7 +64,7 @@ layout: page
 5. What is linting?
 6. You and a colleague are putting together a model. What are some factors that could influence the results besides the code that you write?
 
-### Lecture 8
+### Lecture 7
 
 1. What do dimensionality reduction methods reduce? What is the tradeoff?
 2. What are three benefits of dimensionality reduction?
@@ -77,7 +77,7 @@ layout: page
 9. By definition, what is the direction of PC1?
 10. See board. How does movement of the indicated point represent changes in the original data?
 
-### Lecture 9
+### Lecture 8
 
 1. What are three differences between PCA and PLSR in implementation and application?
 2. What is the difference between PCR and PLSR? When does this different matter more/less?
