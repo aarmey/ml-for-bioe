@@ -25,66 +25,66 @@ layout: page
 
 ### Lecture 3
 
-What is the bias-variance tradeoff? Why might we want to introduce bias into a model?
-What is regularization? What are some reasons to use it?
-What is the difference between ridge regression and LASSO? How should you choose between them?
-Are you guaranteed to find the global optimal answer for ridge regression? What about LASSO?
-What is variable selection? Which method(s) perform it? What can you say about the answers?
-What does it mean when one says ridge regression and LASSO give a family of answers?
-What can we say about the relationship between fitting error and prediction error?
-What does regularization do to the degrees of freedom (p) of a model? How about the number of measurements (n)?
-A colleague tells you about a new form of regularization they've come up with (e.g. maximize the weighting for the variables most correlated with the output). How would this influence the variance of the model? Might this improve the prediction error?
+1. What is the bias-variance tradeoff? Why might we want to introduce bias into a model?
+2. What is regularization? What are some reasons to use it?
+3. What is the difference between ridge regression and LASSO? How should you choose between them?
+4. Are you guaranteed to find the global optimal answer for ridge regression? What about LASSO?
+5. What is variable selection? Which method(s) perform it? What can you say about the answers?
+6. What does it mean when one says ridge regression and LASSO give a family of answers?
+7. What can we say about the relationship between fitting error and prediction error?
+8. What does regularization do to the degrees of freedom (p) of a model? How about the number of measurements (n)?
+9. A colleague tells you about a new form of regularization they've come up with (e.g. maximize the weighting for the variables most correlated with the output). How would this influence the variance of the model? Might this improve the prediction error?
 
-Review questions from lecture 5
+### Lecture 5
 
-Why does cross-validation need to be performed across multiple folds?
-How will the process of cross-validation influence the model fit error we observe? How does it affect the model prediction error?
-We want to demonstrate that we can predict the time until failure for an artificial heart from a set of clinical measurements. We plan to utilize LASSO regression to develop this prediction model, and are interested in the variables selected by LASSO. Walk through the steps to implement cross-validation here. How can you ensure you select only one set of variables?
-List [two] ways in which cross-validation and bootstrap are similar.
-List [two] ways in which cross-validation and bootstrap are different.
-Why is performing variable selection outside of your cross-validation loop bad, but it’s OK to decide what you are going to measure in the first place?
-You want to determine whether the first parameter in your ordinary least squares model, beta_1, is significantly non-zero. How can you apply bootstrap to accomplish this?
+1. Why does cross-validation need to be performed across multiple folds?
+2. How will the process of cross-validation influence the model fit error we observe? How does it affect the model prediction error?
+3. We want to demonstrate that we can predict the time until failure for an artificial heart from a set of clinical measurements. We plan to utilize LASSO regression to develop this prediction model, and are interested in the variables selected by LASSO. Walk through the steps to implement cross-validation here. How can you ensure you select only one set of variables?
+4. List **two** ways in which cross-validation and bootstrap are similar.
+5. List **two** ways in which cross-validation and bootstrap are different.
+6. Why is performing variable selection outside of your cross-validation loop bad, but it’s OK to decide what you are going to measure in the first place?
+7. You want to determine whether the first parameter in your ordinary least squares model, beta_1, is significantly non-zero. How can you apply bootstrap to accomplish this?
 
-Review questions lecture 6
+### Lecture 6
 
-What is a prior? How does one go about making one?
-Can a prior be based on data? If so, how is this data related to the experiment being modeled (the observed)?
-What are three differences between a Bayesian and maximum likelihood (frequentist) approach?
-When will a Bayesian and maximum likelihood approach agree?
-You are asked to provide up-to-date estimates of the 6 month failure rate for a stent going to market. A previous device had 3 devices out of 100 fail within 6 months, and you strongly suspect this device is similar. Provide the Bayesian estimate of the failure rate (i.e. `P(FR | N,m))` given N devices have made it to 6 months, and m have failed. (Hint: Devices EITHER pass or fail here. This follows a Binomial distribution.)
-What would be a reasonable estimate if you had no previous device's data?
-What do you expect to happen to a posterior distribution as you add more and more data?
+1. What is a prior? How does one go about making one?
+2. Can a prior be based on data? If so, how is this data related to the experiment being modeled (the observed)?
+3. What are three differences between a Bayesian and maximum likelihood (frequentist) approach?
+4. When will a Bayesian and maximum likelihood approach agree?
+5. You are asked to provide up-to-date estimates of the 6 month failure rate for a stent going to market. A previous device had 3 devices out of 100 fail within 6 months, and you strongly suspect this device is similar. Provide the Bayesian estimate of the failure rate (i.e. $P(FR | N,m))$ given N devices have made it to 6 months, and m have failed. (Hint: Devices **either** pass or fail here. This follows a Binomial distribution.)
+6. What would be a reasonable estimate if you had no previous device's data?
+7. What do you expect to happen to a posterior distribution as you add more and more data?
 
-Review questions lecture 7
+### Lecture 7
 
-Who/what sort of people need to test their code?
-What is the difference between unit tests and integration tests?
-What does testing guarantee?
-What is the difference between testing and fuzzing?
-What is linting?
-You and a colleague are putting together a model. What are some factors that could influence the results besides the code that you write?
+1. Who/what sort of people need to test their code?
+2. What is the difference between unit tests and integration tests?
+3. What does testing guarantee?
+4. What is the difference between testing and fuzzing?
+5. What is linting?
+6. You and a colleague are putting together a model. What are some factors that could influence the results besides the code that you write?
 
-Review questions lecture 8
+### Lecture 8
 
-What do dimensionality reduction methods reduce? What is the tradeoff?
-What are three benefits of dimensionality reduction?
-Does matrix factorization have one answer? If not, what are two choices you could make?
-What does principal components analysis aim to preserve?
-What are the minimum and maximum number of principal components one can have for a dataset of 300 observations and 10 variables?
-How can you determine the "right" number of PCs to use?
-What is a loading matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
-What is a scores matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
-By definition, what is the direction of PC1?
-See board. How does movement of the indicated point represent changes in the original data?
+1. What do dimensionality reduction methods reduce? What is the tradeoff?
+2. What are three benefits of dimensionality reduction?
+3. Does matrix factorization have one answer? If not, what are two choices you could make?
+4. What does principal components analysis aim to preserve?
+5. What are the minimum and maximum number of principal components one can have for a dataset of 300 observations and 10 variables?
+6. How can you determine the "right" number of PCs to use?
+7. What is a loading matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
+8. What is a scores matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
+9. By definition, what is the direction of PC1?
+10. See board. How does movement of the indicated point represent changes in the original data?
 
-Review questions lecture 9
+### Lecture 9
 
-What are three differences between PCA and PLSR in implementation and application?
-What is the difference between PCR and PLSR? When does this different matter more/less?
-How might you need to prepare your data before using PLSR?
-How can you determine the right number of components for a model?
-What feature of biological data make PLSR/PCR superior to direct regularization approaches (LASSO/ridge)?
-What benefit does a two component model have over those with 3+ components?
-Can you apply K-fold cross-validation to a PLSR model? If so, when do you scale your data?
-Can you apply bootstrapping to a PLSR model? Describe what this would look like.
-You use the same X data but want to predict a different Y variable. Do your X loadings change in your new model?
+1. What are three differences between PCA and PLSR in implementation and application?
+2. What is the difference between PCR and PLSR? When does this different matter more/less?
+3. How might you need to prepare your data before using PLSR?
+4. How can you determine the right number of components for a model?
+5. What feature of biological data make PLSR/PCR superior to direct regularization approaches (LASSO/ridge)?
+6. What benefit does a two component model have over those with 3+ components?
+7. Can you apply K-fold cross-validation to a PLSR model? If so, when do you scale your data?
+8. Can you apply bootstrapping to a PLSR model? Describe what this would look like.
+9. You use the same X data but want to predict a different Y variable. Do your X loadings change in your new model?
