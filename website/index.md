@@ -11,7 +11,7 @@ Instructor: Prof. Aaron Meyer (<ameyer@ucla.edu>), 4121G Engineering V
 Class Hours: Lecture: Tuesdays/Thursdays, 2:00 – 3:50pm (Zoom link on CCLE)  
 Lab Section: Fridays, 2:00 – 3:50 pm (Zoom link on CCLE)
 
-Teaching Assistant: TBD (<TBD@ucla.edu>)
+Teaching Assistant: Cyrillus Tan (<cytan@g.ucla.edu>)
 
 Office Hours:
 
