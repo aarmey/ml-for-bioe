@@ -15,11 +15,11 @@ Teaching Assistant: TBD (<TBD@ucla.edu>)
 
 Office Hours:
 
-- Prof. Meyer: Available at the end of lecture, [on Piazza](https://piazza.com/ucla/winter2021/bec175275/home), or [by appointment](https://calendly.com/asmlab/office-hours)
+- Prof. Meyer: Available at the end of lecture, [on Slack](https://be175.slack.com), or [by appointment](https://calendly.com/asmlab/office-hours)
 - TA: By appointment
 
 Website: <https://aarmey.github.io/ml-for-bioe/>  
-Piazza: <https://piazza.com/ucla/winter2021/bec175275>
+Slack: <https://be175.slack.com>
 
 ## Text:
 
