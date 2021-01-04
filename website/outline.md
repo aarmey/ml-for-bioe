@@ -72,7 +72,7 @@ layout: page
 
 - [Lecture 13: K-Means Clustering](../public/Wk7-Lecture13.pdf) (Recording part [1](https://youtu.be/uj8B-_fMluE), [2](https://youtu.be/yM3JOI_s5ws))
   - [Example Notebook](../public/examples/K-Means.ipynb)
-- [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf) (Recording part 1, 2)
+- [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf) (Recording part [1](https://youtu.be/pCjYiQRhcpE), [2](https://youtu.be/ZNLnQ_7AMc0))
   - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
   - Guest presentation: Using sequence information to improve clustering
 
