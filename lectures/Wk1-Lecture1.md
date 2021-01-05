@@ -8,12 +8,12 @@ author: Aaron Meyer
 ## Lecture:
 
 - Tuesdays/Thursdays 2:00–3:50pm
-- Boelter Hall 4283
+- Zoom
 
 ## Lab
 
 - Fridays, 2:00–3:50pm
-- Boelter Hall 4283
+- Zoom
 
 <https://aarmey.github.io/ml-for-bioe/>
 
@@ -81,7 +81,7 @@ By the end of the course you will learn how to:
 ## Where
 
 - Fridays, 2:00-3:50pm
-- Boelter Hall 4283
+- Zoom
 
 ## What
 
