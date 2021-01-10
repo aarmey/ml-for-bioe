@@ -22,7 +22,7 @@ author: Aaron Meyer
 - SVM became popular because of its success in handwritten digit recognition
 	- 1.1% test error rate for SVM. This is the same as the error rates of a carefully constructed neural network, LeNet 4.
 	- Also used in very first self-driving cars (of 90's, not current)
-	- Bested by deep learning
+	- Later bested by deep learning
 methods”, one of the key area in machine learning
 - Note: the meaning of “kernel” is different from other methods
 
@@ -84,13 +84,9 @@ methods”, one of the key area in machine learning
 	- Classify **z** as class 1 if the sum is positive, and class 2 otherwise
 	- Note: **w** need not be formed explicitly
 
-<!-- Martin Law slide 14 -->
-
 # A Geometrical Interpretation
 
 ![ ](./lectures/figs/lec16/ageomint.png){ width=70% }
-
-<!-- Martin Law slide 16 -->
 
 # Non-Linearly Separable Problems
 
@@ -99,13 +95,11 @@ methods”, one of the key area in machine learning
 
 ![ ](./lectures/figs/lec16/nonsep.png){ width=70% }
 
-<!-- Martin Law slide 17 -->
-
 # Soft Margin Hyperplane
 
 - If we minimize $\sum_i \xi_i$, $\xi_i$ can be computed by
 	- $(\mathbf{w}^T \mathbf{x}_i + b) \geq 1 - \xi_i \quad y_i = 1$
-	- $(\mathbf{w}^T \mathbf{x}_i + b) \leq -1 + \xi_i \quad y_i = 1$
+	- $(\mathbf{w}^T \mathbf{x}_i + b) \leq -1 + \xi_i \quad y_i = -1$
 	- $\xi_i \geq 0$
 	- $\xi_i$ are “slack variables” in optimization
 	- Note that $\xi_i = 0$ if there is no error for $\mathbf{x}_i$
@@ -117,8 +111,6 @@ methods”, one of the key area in machine learning
 	- Minimize $\tfrac{1}{2} \norm{\mathbf{w}}^2 + C \sum_{i=1}^{n} \xi_i$
 	- subject to $y_i (\mathbf{w}^T \mathbf{x}_i + b) \geq 1 - \xi_i, \quad \xi_i \geq 0$
 
-<!-- Martin Law slide 18 -->
-
 # The Optimization Problem
 
 - The dual of this new constrained optimization problem is:
@@ -127,8 +119,6 @@ methods”, one of the key area in machine learning
 - **w** is recovered as $\mathbf{w} = \sum_{j=1}^s \alpha_{t_j} y_{t_j} \mathbf{x}_{t_j}$
 - This is very similar to the optimization problem in the linear separable case, except that there is an upper bound $C$ on $\alpha_i$ now
 - Once again, a QP solver can be used to find $\alpha_i$
-
-<!-- Martin Law slide 19 -->
 
 # Extension To Non-linear Decision Boundary
 
@@ -141,8 +131,6 @@ methods”, one of the key area in machine learning
 	- Linear operation in the feature space is equivalent to non-linear operation in input space
 	- Classification can become easier with a proper transformation.
 
-<!-- Martin Law slide 20 -->
-
 \note{Go over circle inside circle with transformation to polar coordinates.}
 
 
@@ -153,8 +141,6 @@ methods”, one of the key area in machine learning
 - Computation in the feature space can be costly because it is high dimensional
 	- The feature space is typically infinite-dimensional!
 - The kernel trick comes to rescue
-
-<!-- Martin Law slide 21 -->
 
 # The Kernel Trick
 
@@ -167,8 +153,6 @@ methods”, one of the key area in machine learning
 - Many common geometric operations (angles, distances) can be expressed by inner products
 - Define the kernel function $K$ by: $$K(x_i, x_j) = \phi \left(x_i\right)^T \phi \left(x_j\right)$$
 
-<!-- Martin Law slide 22 -->
-
 # Kernel Functions
 
 - In practical use of SVM, the user specifies the kernel function; the transformation φ(.) is not explicitly stated
@@ -176,8 +160,6 @@ methods”, one of the key area in machine learning
 	- Eigenfunctions can be difficult to construct explicitly
 	- This is why people only specify the kernel function without worrying about the exact transformation
 - Another view: kernel function, being an inner product, is really a similarity measure between the objects
-
-<!-- Martin Law slide 24 -->
 
 # Examples of Kernel Functions
 
@@ -190,8 +172,6 @@ methods”, one of the key area in machine learning
 - Sigmoid with parameter $\kappa$ and $\theta$
 	- $K(\mathbf{x},\mathbf{y}) = \tanh (\kappa \mathbf{x}^T \mathbf{y} + \theta)$
 
-<!-- Martin Law slide 25 -->
-
 # Modification Due to Kernel Function
 
 - Change all inner products to kernel functions
@@ -199,8 +179,6 @@ methods”, one of the key area in machine learning
 	- Original: max. $W(\alpha) = \sum_{i=1}^n \alpha_i - \frac{1}{2} \sum_{i=1,j=1}^n \alpha_i \alpha_j y_i y_j \mathbf{x}_i^T \mathbf{x}_j$
 	- With kernel function: max. $W(\alpha) = \sum_{i=1}^n \alpha_i - \frac{1}{2} \sum_{i=1,j=1}^n \alpha_i \alpha_j y_i y_j \mathbf{x}_i^T \mathbf{x}_j$
 	- Both: subject to $C \geq \alpha_i \geq 0, \sum_{i=1}^n \alpha_i y_i = 0$
-
-<!-- Martin Law slide 26 -->
 
 # Modification Due to Kernel Function
 
@@ -212,8 +190,6 @@ methods”, one of the key area in machine learning
 	- $\mathbf{w} = \sum_{j=1}^{s} \alpha_{t_{j}}y_{t_{j}} \phi\left(\mathbf{x}_{t_{j}}\right)$
 	- $f = \langle \mathbf{w}, \phi\left(\mathbf{z}\right) \rangle + b = \sum_{j=1}^{s} \alpha_{t_{j}}y_{t_{j}}K\left( \mathbf{x}_{t_{j}}^T, \mathbf{z} \right) + b$
 
-<!-- Martin Law slide 27 -->
-
 # More on Kernel Functions
 
 - Since the training of SVM only requires the value of $K(\mathbf{x}_i, \mathbf{x}_j)$, there is no restriction of the form of $\mathbf{x}_i$ and $\mathbf{x}_j$
@@ -222,9 +198,6 @@ methods”, one of the key area in machine learning
 - For a test object **z**, the discrimination function essentially is a weighted sum of the similarity between **z** and a pre-selected set of objects (the support vectors):
 	- $f(\mathbf{z}) = \sum_{\mathbf{x}_i \in S}\alpha_i y_i K(\mathbf{z}, \mathbf{x}_i) + b$
 	- S: the set of support vectors
-
-<!-- Martin Law slide 28 -->
-
 
 # Example of Non-Linear Transformation
 
@@ -236,7 +209,6 @@ methods”, one of the key area in machine learning
 - Ridge regression: the term $\tfrac{1}{2}\norm{w}^2$ “shrinks” the parameters towards zero to avoid overfitting
 - The term the term $\tfrac{1}{2}\norm{w}^2$ can also be viewed as imposing a weight-decay prior on the weight vector
 
-
 # Choosing the Kernel Function
 
 - Probably the most tricky part of using SVM
@@ -244,7 +216,6 @@ methods”, one of the key area in machine learning
 - In practice, a low degree polynomial kernel or RBF kernel with a reasonable width is a good initial try
 
 \note{Go over how to pick an appropriate kernel, and floppiness.}
-
 
 # Other Aspects of SVM
 
@@ -254,7 +225,6 @@ methods”, one of the key area in machine learning
 	- One can train multiple one-versus-all classifiers, or combine multiple pairwise classifiers “intelligently”
 - How to interpret the SVM discriminant function value as probability?
 	- By performing logistic regression on the SVM output of a set of data (validation set) that is not used for training
-
 
 # Summary: Steps For Classification
 
@@ -327,7 +297,6 @@ sklearn has implementations for a variety of SVM methods:
 		- Only support for linear kernel, with better scaling/options
 		- For example can provide l1 or l2 regularization
 		- Scales better for many samples
-- Similar implementation in TensorFlow (`tf.contrib.learn.SVM`)
 
 # Further Reading
 
