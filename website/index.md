@@ -50,7 +50,7 @@ By the end of the course you will have an increased understanding of:
 
 ## Important to know
 
-The best way to contact me outside of class is by email. Students should be aware that I will not answer emails arriving after 10:30 PM or before 8:30 AM, and should not be counted on to answer emails immediately. I am happy to meet with students outside of class time to discuss questions or concerns. Please see me after class or contact me by email to set up an appointment.
+The best way to contact me outside of class is by email. Students should be aware that I will not answer emails arriving after 7:00 PM or before 8:00 AM, and should not be counted on to answer emails immediately. I am happy to meet with students outside of class time to discuss questions or concerns. Please see me after class or contact me by email to set up an appointment.
 
 ## Expectations
 
@@ -67,17 +67,16 @@ Come, think critically, challenge yourself, and you will do well.
 In our classroom, we will rely on each student being engaged in the conversation. To minimize distractions, please silence all phones. Computers are an extremely valuable research and learning tool and are encouraged in class. Please minimize use of your computer for unrelated activities, however, to avoid distractions.
 
 ## Grading:
-30%
-~ Final Project
 
-30%
-~ Midterm
-
-20%
-~ Homework Assignments
-
-20%
-~ Class Participation
+- Final Project (30%)
+- Midterm (30%)
+- Homework Assignments (20%)
+- Class Participation (20%)
+    - Review session activity
+    - Review questions in class
+    - Questions/engagement during final project presentations
+    - Getting feedback on project proposals before submitting
+    - General class participation
 
 ## Feedback
 
