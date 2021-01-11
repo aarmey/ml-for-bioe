@@ -152,7 +152,7 @@ In the normal case (when our assumptions hold), $\hat{\beta}$ is an *unbiased es
 
 $$ \frac{-n}{2} \log(\sigma^{2}) - \frac{1}{2 \sigma^{2}} \sum_{i=1}^{n} (y_{i}-x_{i} \beta)^{2} $$
 
-therefore, only considering $\beta$ (the only factor that influences predictions), we need to maximize:
+therefore, only considering $\beta$ (the only factor that influences predictions), we need to minimize:
 
 $$ \sum_{i=1}^{n} (y_{i}-x_{i} \beta)^{2} $$
 
