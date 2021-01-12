@@ -18,10 +18,11 @@ layout: page
 1. Are ordinary least squares or non-linear least squares guaranteed to find the solution?
 2. How are new points predicted to be distributed in ordinary least squares?
 3. How are new points predicted to be distributed in non-linear least squares?
-4. How might you determine whether the assumptions you made when running OLS are valid? (Hint: think about the tests from lec 1)
-5. What is a situation in which the assumptions of OLS can be valid but calculating a solution fails?
-6. You're not sure a function you wrote to calculate the OLS estimator is working correctly. What could you check to ensure you have the right answer? (Hint: Lecture 2, slide 17)
+4. How might you determine whether the assumptions you made when running OLS are valid? (Hint: Think about the tests from lecture 1.)
+5. What is a situation in which the statistical assumptions of OLS can be valid but calculating a solution fails?
+6. You're not sure a function you wrote to calculate the OLS estimator is working correctly. What could you check to ensure you have the right answer? (Hint: Slide 17)
 7. You've made a monitor that you know provides a voltage proportional to blood glucose. Design a scheme for a model to convert from voltage to blood glucose, using some set of calibration points. What is the absolute minimum number of calibration points you'd need? How would you expect new calibration points to be distributed?
+8. A team member suggests that the voltage-glucose relationship from (7) is log-linear instead of linear, and so suggests using log(V) with OLS instead. When would this be alright? What is an alternative approach?
 
 ### Lecture 3
 
