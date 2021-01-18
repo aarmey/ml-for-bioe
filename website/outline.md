@@ -59,7 +59,7 @@ layout: page
 
 ### Week 7, Feb 15 – 19
 
-- [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf)
+- [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf) (Recording part 1, 2, 3, 4, 5)
   - [Example Notebook](../public/examples/HMMs-example.ipynb)
   - Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
   - Reading: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
