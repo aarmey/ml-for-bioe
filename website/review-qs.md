@@ -10,12 +10,12 @@ layout: page
 3. What are the three kinds of variables? Give an example of each.
 4. You are interested in the sample distribution of the mean for an exponential distribution (N=8). What can you say about it relative to the original one?
 5. What can you say about the sample distribution for the N=1 case?
-6. Studying an anti-tumor compound, you create 2 tumors in either flank (i.e. 1 mouse gets 2 tumors) of 5 mice, then treat the animals with compound measuring tumor growth. What is N? Justify your answer.
+6. Studying an anti-tumor compound, you create 2 tumors in either flank (i.e. 1 mouse gets 2 tumors) of 5 mice, then treat the animals with a compound, measuring tumor growth. What is N? Justify your answer.
 7. You want to model a process where each successive outcome is 1/3 as likely (i.e. getting 3 is 1/3 as likely as getting 2). What is the expression for this distribution?
 
 ### Lecture 2
 
-1. Are ordinary least squares or non-linear least squares guaranteed to find the solution?
+1. Are ordinary least squares or non-linear least-squares guaranteed to find the solution?
 2. How are new points predicted to be distributed in ordinary least squares?
 3. How are new points predicted to be distributed in non-linear least squares?
 4. How might you determine whether the assumptions you made when running OLS are valid? (Hint: Think about the tests from lecture 1.)
@@ -39,11 +39,11 @@ layout: page
 
 ### Lecture 4
 
-1. What does cross-validation aim to achieve? What does it pretend to do to acheive this?
-2. What does bootstrapping aim to acheive? What does it pretend to do to acheive this?
+1. What does cross-validation aim to achieve? What does it pretend to do to achieve this?
+2. What does bootstrapping aim to achieve? What does it pretend to do to achieve this?
 3. Why does cross-validation need to be performed across multiple folds?
 4. How will the process of cross-validation influence the model fit error we observe? How does it affect the model prediction error?
-5. We want to demonstrate that we can predict the time until failure for an artificial heart from a set of clinical measurements. We plan to utilize LASSO regression to develop this prediction model, and are interested in the variables selected by LASSO. Walk through the steps to implement cross-validation here. How can you ensure you select only one set of variables?
+5. We want to demonstrate that we can predict the time until failure for an artificial heart from a set of clinical measurements. We plan to utilize LASSO regression to develop this prediction model and are interested in the variables selected by LASSO. Walk through the steps to implement cross-validation here. How can you ensure you select only one set of variables?
 6. List **two** ways in which cross-validation and bootstrap are similar.
 7. List **two** ways in which cross-validation and bootstrap are different.
 8. Why is performing variable selection outside of your cross-validation loop bad, but it’s OK to decide what you are going to measure in the first place?
@@ -57,7 +57,7 @@ layout: page
 2. Can a prior be based on data? If so, how is this data related to the experiment being modeled (the observed)?
 3. What are three differences between a Bayesian and maximum likelihood (frequentist) approach?
 4. When will a Bayesian and maximum likelihood approach agree?
-5. You are asked to provide up-to-date estimates of the 6 month failure rate for a stent going to market. A previous device had 3 devices out of 100 fail within 6 months, and you strongly suspect this device is similar. Provide the Bayesian estimate of the failure rate (i.e. $$P(FR \vert N,m))$$ given N devices have made it to 6 months, and m have failed. (Hint: Devices **either** pass or fail here. This follows a Binomial distribution.)
+5. You are asked to provide up-to-date estimates of the 6-month failure rate for a stent going to market. A previous device had 3 devices out of 100 fails within 6 months, and you strongly suspect this device is similar. Provide the Bayesian estimate of the failure rate (i.e. $$P(FR \vert N,m))$$ given N devices have made it to 6 months, and m have failed. (Hint: Devices **either** pass or fail here. This follows a Binomial distribution.)
 6. What would be a reasonable estimate if you had no previous device's data?
 7. What do you expect to happen to a posterior distribution as you add more and more data?
 
@@ -86,7 +86,7 @@ layout: page
 ### Lecture 8
 
 1. What are three differences between PCA and PLSR in implementation and application?
-2. What is the difference between PCR and PLSR? When does this different matter more/less?
+2. What is the difference between PCR and PLSR? When does this difference matter more/less?
 3. How might you need to prepare your data before using PLSR?
 4. How can you determine the right number of components for a model?
 5. What feature of biological data make PLSR/PCR superior to direct regularization approaches (LASSO/ridge)?
