@@ -60,6 +60,7 @@ layout: page
 5. You are asked to provide up-to-date estimates of the 6-month failure rate for a stent going to market. A previous device had 3 devices out of 100 fails within 6 months, and you strongly suspect this device is similar. Provide the Bayesian estimate of the failure rate (i.e. $$P(FR \vert N,m))$$ given N devices have made it to 6 months, and m have failed. (Hint: Devices **either** pass or fail here. This follows a Binomial distribution.)
 6. What would be a reasonable estimate if you had no previous device's data?
 7. What do you expect to happen to a posterior distribution as you add more and more data?
+8. What does the integral of $$p(a \vert b) p(b \vert c) \delta b$$ give you? Why is this useful?
 
 ### Lecture 6
 
