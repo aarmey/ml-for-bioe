@@ -63,7 +63,8 @@ layout: page
   - [Example Notebook](../public/examples/HMMs-example.ipynb)
   - Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
   - Reading: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
-  - Reading: [Markov Models—Hidden Markov Models](https://www.nature.com/articles/s41592-019-0532-6)
+  - Reading: [Markov Models—Hidden Markov models](https://www.nature.com/articles/s41592-019-0532-6)
+  - Reading: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
   - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - Lecture: Finish hidden Markov models.
 - Lab: Implementation of HMMs for heart rate monitor wearable, due 2/24 at 11:59 pm ([clone link](https://classroom.github.com/a/BmDiDEBQ))
