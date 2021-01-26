@@ -70,6 +70,7 @@ layout: page
 4. What is the difference between testing and fuzzing?
 5. What is linting?
 6. You and a colleague are putting together a model. What are some factors that could influence the results besides the code that you write?
+7. You write a function that takes in a voltage from a device and returns the inferred heart rate of the measured individual. What are three high-quality unit tests you could write to test this?
 
 ### Lecture 7
 
