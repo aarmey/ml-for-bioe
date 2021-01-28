@@ -83,7 +83,7 @@ layout: page
 7. What is a loading matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
 8. What is a scores matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
 9. By definition, what is the direction of PC1?
-10. See board. How does movement of the indicated point represent changes in the original data?
+10. [See question 5 on midterm W20](https://aarmey.github.io/ml-for-bioe///files/midterm-W20.pdf). How does movement of the siControl EGF point represent changes in the original data?
 
 ### Lecture 8
 
