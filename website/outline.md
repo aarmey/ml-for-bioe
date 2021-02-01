@@ -13,7 +13,7 @@ layout: page
   - Listening: [Linear Digressions: The assumptions of ordinary least squares](http://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
   - Reading: [Points of Significance: Simple linear regression](http://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
   - Listening: [Linear Digressions: Convex (and non-convex) optimization](http://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
-- Lab: Programming and Git Primer, due 1/13 at 11:59 pm ([clone link](https://classroom.github.com/a/ATvG0Eqq))
+- Lab: Programming and Git Primer, due 1/13 at 11:59 pm
   - Listening: [Linear Digressions: Jupyter Notebooks, A Data Scientist's Best Friend](https://lineardigressions.com/episodes/2017/8/20/jupyter-notebooks-a-data-scientists-best-friend)
   - Listening: [Linear Digressions: Git for Data Scientists](https://lineardigressions.com/episodes/2018/6/3/git-for-data-scientists)
 
@@ -24,7 +24,7 @@ layout: page
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf) (Recording part [1](https://youtu.be/N4afdo1VQB0), [2](https://youtu.be/OdEGD35sO-8))
   - [Example Notebook](../public/examples/CrossVal-Example.ipynb)
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
-- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/20 at 11:59 pm ([clone link](https://classroom.github.com/a/c0BONuG4))
+- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/20 at 11:59 pm
 
 ### Week 3, Jan 18 – 22
 
