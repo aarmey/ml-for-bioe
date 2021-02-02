@@ -91,8 +91,8 @@ layout: page
 2. What is the difference between PCR and PLSR? When does this difference matter more/less?
 3. How might you need to prepare your data before using PLSR?
 4. How can you determine the right number of components for a model?
-5. What feature of biological data make PLSR/PCR superior to direct regularization approaches (LASSO/ridge)?
+5. What feature of biological data makes PLSR/PCR superior to direct regularization approaches (LASSO/ridge)?
 6. What benefit does a two component model have over those with 3+ components?
 7. Can you apply K-fold cross-validation to a PLSR model? If so, when do you scale your data?
 8. Can you apply bootstrapping to a PLSR model? Describe what this would look like.
-9. You use the same X data but want to predict a different Y variable. Do your X loadings change in your new model?
+9. You use the same X data but want to predict a different Y variable. Do your X loadings change in your new model? What about for PCR?
