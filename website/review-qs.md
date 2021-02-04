@@ -96,3 +96,16 @@ layout: page
 7. Can you apply K-fold cross-validation to a PLSR model? If so, when do you scale your data?
 8. Can you apply bootstrapping to a PLSR model? Describe what this would look like.
 9. You use the same X data but want to predict a different Y variable. Do your X loadings change in your new model? What about for PCR?
+
+### Lecture 9
+
+1. What is the steady-state solution to an ODE model? How do you solve for them?
+2. What is a phase-space diagram?
+3. What property of ODE models ensures that solutions can never cross in phase space?
+4. What is a Jacobian matrix? How do you calculate it from an ODE model?
+5. What are the eigenvalues and eigenvectors of a matrix?
+6. What is the behavior of an ODE system if its eigenvalues are all positive and real? How about negative and real?
+7. What is the behavior of an ODE system if all its eigenvalues are imaginary and positive? How about imaginary and negative?
+8. What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and negative, the other is imaginary)?
+9. How can you fit an ODE model to a series of measurements over time?
+10. How could you constrain an ODE system so that you only fit parameters that have oscillation?
