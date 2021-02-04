@@ -54,7 +54,7 @@ layout: page
 - [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=3603289)
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf))
 - Lecture 12: Midterm exam
-- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/19 at 11:59 pm ([clone link](https://classroom.github.com/a/iCrCb3hv))
+- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/19 at 2:00 pm ([clone link](https://classroom.github.com/a/iCrCb3hv))
 
 
 ### Week 7, Feb 15 – 19
@@ -67,7 +67,7 @@ layout: page
   - Reading: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
   - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - Lecture: Finish hidden Markov models.
-- Lab: Implementation of HMMs for heart rate monitor wearable, due 2/26 at 11:59 pm ([clone link](https://classroom.github.com/a/BmDiDEBQ))
+- Lab: Implementation of HMMs for heart rate monitor wearable, due 2/26 at 2:00 pm pm ([clone link](https://classroom.github.com/a/BmDiDEBQ))
 
 ### Week 8, Feb 22 – Feb 26
 
