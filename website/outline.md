@@ -79,7 +79,7 @@ layout: page
 
 ### Week 9, Mar 1 – 5
 
-- [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) (Recording part [1](https://youtu.be/KHQ-5Dm55Tw), 2)
+- [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf) (Recording part [1](https://youtu.be/KHQ-5Dm55Tw), [2](https://youtu.be/zotZxSOyZHE), [3](https://youtu.be/MLFx4v9BHjM))
   - [Example Notebook](../public/examples/SVMs-example.ipynb)
   - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
