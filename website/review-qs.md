@@ -109,3 +109,17 @@ layout: page
 8. What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and negative, the other is imaginary)?
 9. How can you fit an ODE model to a series of measurements over time?
 10. How could you constrain an ODE system so that you only fit parameters that have oscillation?
+
+### HMM review
+
+1. What is a Markov assumption? Why is this assumption useful? What type of processes is it helpful for?
+2. What makes a hidden Markov model hidden? The hidden part takes what type of values (e.g., continuous, ordinal)?
+3. What are the three types of parameters in a hidden Markov model?
+4. What are three different types of questions we can ask of a hidden Markov model?
+5. What kind of data can be used with a hidden Markov model? How do we link the model to its observations?
+6. What is the forward algorithm? What do we need to have before using it? What does it tell us?
+7. What is the forward-backward algorithm? What do we need to have before using it? What does it tell us?
+8. What is the Baum-Welch algorithm? What do we need to have before using it? What does it tell us?
+9. What is the Viterbi algorithm? What do we need to have before using it? What does it tell us?
+10. [TMHMM](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0) is a HMM model that can be used to predict the transmembrane regions of proteins (there’s an example input you can use in the guide). Show us the output. Which algorithm is being used for each part of the output graphic?
+11. Markov models can be used to model sentences, as certain words tend to come after one another. Does your (or your group member’s) phone use a MM for predictive text? Justify your answer.
