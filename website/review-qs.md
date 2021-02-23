@@ -124,6 +124,18 @@ layout: page
 10. [TMHMM](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0) is a HMM model that can be used to predict the transmembrane regions of proteins (there’s an example input you can use in the guide). Show us the output. Which algorithm is being used for each part of the output graphic?
 11. Markov models can be used to model sentences, as certain words tend to come after one another. Does your (or your group member’s) phone use a MM for predictive text? Justify your answer.
 
+### K-Means clustering
+
+1. What is clustering? What does it seek to accomplish?
+2. What is agglomerative clustering? What does the resulting output look like?
+3. What is the difference between single-link, complete-link, and average clustering?
+4. What are three properties that are required of a distance metric? What kind of things can be compared with a distance metric?
+5. What decisions does one have to make before performing k-means clustering?
+6. Describe the process of fitting that k-means performs.
+7. You and your colleague each run k-means with the same settings, and arrive at different results. How could this happen?
+8. What are two cases in which k-means clustering can fail or provide bad results?
+9. How do you determine that your clustering is "good"?
+
 ### SVM review
 
 1. What is the core observation underlying SVMs?
