@@ -123,3 +123,12 @@ layout: page
 9. What is the Viterbi algorithm? What do we need to have before using it? What does it tell us?
 10. [TMHMM](https://services.healthtech.dtu.dk/service.php?TMHMM-2.0) is a HMM model that can be used to predict the transmembrane regions of proteins (there’s an example input you can use in the guide). Show us the output. Which algorithm is being used for each part of the output graphic?
 11. Markov models can be used to model sentences, as certain words tend to come after one another. Does your (or your group member’s) phone use a MM for predictive text? Justify your answer.
+
+### SVM review
+
+1. What is the core observation underlying SVMs?
+2. What is a kernel? What are three common kinds?
+3. Can you use SVMs for data that can’t be perfectly separated? What do you do if so?
+4. Does the answer for an SVM rely on the exact position of all points? If not, which are more important?
+5. What is a hyperparameter? How do you find the value of these?
+6. How is Y represented within an SVM model?
