@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Review questions &middot; Bioengr C175/C275
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/ml-for-bioe/public/css/poole.css">
+  <link rel="stylesheet" href="/ml-for-bioe/public/css/syntax.css">
+  <link rel="stylesheet" href="/ml-for-bioe/public/css/hyde.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ml-for-bioe/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/ml-for-bioe/public/favicon.ico">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/ml-for-bioe/">
+          Bioengr C175/C275
+        </a>
+      </h1>
+      <p class="lead">Machine learning & data-driven modeling in bioengineering</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/ml-for-bioe/">Home</a>
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/ml-for-bioe///final-project/">Final Project Guidelines</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/ml-for-bioe///">Syllabus - Winter 2021</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/ml-for-bioe///outline/">Course outline</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/ml-for-bioe///packages/">Packages / Resources</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item active" href="/ml-for-bioe///review-qs/">Review questions</a>
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="https://github.com/aarmey/ml-for-bioe">GitHub project</a>
+    </nav>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Review questions</h1>
+  <h3 id="lecture-1">Lecture 1</h3>
+
+<ol>
+  <li>What are 4 reasons to build a model?</li>
+  <li>\(p(x) = a/x\) for \(1 &lt; x &lt; 10\) describes a distribution pdf. What is a? What is the average of this distribution?</li>
+  <li>What are the three kinds of variables? Give an example of each.</li>
+  <li>You are interested in the sample distribution of the mean for an exponential distribution (N=8). What can you say about it relative to the original one?</li>
+  <li>What can you say about the sample distribution for the N=1 case?</li>
+  <li>Studying an anti-tumor compound, you create 2 tumors in either flank (i.e. 1 mouse gets 2 tumors) of 5 mice, then treat the animals with a compound, measuring tumor growth. What is N? Justify your answer.</li>
+  <li>You want to model a process where each successive outcome is 1/3 as likely (i.e. getting 3 is 1/3 as likely as getting 2). What is the expression for this distribution?</li>
+</ol>
+
+<h3 id="lecture-2">Lecture 2</h3>
+
+<ol>
+  <li>Are ordinary least squares or non-linear least-squares guaranteed to find the solution?</li>
+  <li>How are new points predicted to be distributed in ordinary least squares?</li>
+  <li>How are new points predicted to be distributed in non-linear least squares?</li>
+  <li>How might you determine whether the assumptions you made when running OLS are valid? (Hint: Think about the tests from lecture 1.)</li>
+  <li>What is a situation in which the statistical assumptions of OLS can be valid but calculating a solution fails?</li>
+  <li>You’re not sure a function you wrote to calculate the OLS estimator is working correctly. What could you check to ensure you have the right answer? (Hint: Slide 17)</li>
+  <li>You’ve made a monitor that you know provides a voltage proportional to blood glucose. Design a scheme for a model to convert from voltage to blood glucose, using some set of calibration points. What is the absolute minimum number of calibration points you’d need? How would you expect new calibration points to be distributed?</li>
+  <li>A team member suggests that the voltage-glucose relationship from (7) is log-linear instead of linear, and so suggests using log(V) with OLS instead. When would this be alright? What is an alternative approach?</li>
+</ol>
+
+<h3 id="lecture-3">Lecture 3</h3>
+
+<ol>
+  <li>What is the bias-variance tradeoff? Why might we want to introduce bias into a model?</li>
+  <li>What is regularization? What are some reasons to use it?</li>
+  <li>What is the difference between ridge regression and LASSO? How should you choose between them?</li>
+  <li>Are you guaranteed to find the global optimal answer for ridge regression? What about LASSO?</li>
+  <li>What is variable selection? Which method(s) perform it? What can you say about the answers?</li>
+  <li>What does it mean when one says ridge regression and LASSO give a family of answers?</li>
+  <li>What can we say about the relationship between fitting error and prediction error?</li>
+  <li>What does regularization do to the degrees of freedom (p) of a model? How about the number of measurements (n)?</li>
+  <li>A colleague tells you about a new form of regularization they’ve come up with (e.g. maximize the weighting for the variables most correlated with the output). How would this influence the variance of the model? Might this improve the prediction error?</li>
+  <li>What is a smoother matrix? What would a smoother matrix look like for a model that exactly fits the training points?</li>
+</ol>
+
+<h3 id="lecture-4">Lecture 4</h3>
+
+<ol>
+  <li>What does cross-validation aim to achieve? What does it pretend to do to achieve this?</li>
+  <li>What does bootstrapping aim to achieve? What does it pretend to do to achieve this?</li>
+  <li>Why does cross-validation need to be performed across multiple folds?</li>
+  <li>How will the process of cross-validation influence the model fit error we observe? How does it affect the model prediction error?</li>
+  <li>We want to demonstrate that we can predict the time until failure for an artificial heart from a set of clinical measurements. We plan to utilize LASSO regression to develop this prediction model and are interested in the variables selected by LASSO. Walk through the steps to implement cross-validation here. How can you ensure you select only one set of variables?</li>
+  <li>List <strong>two</strong> ways in which cross-validation and bootstrap are similar.</li>
+  <li>List <strong>two</strong> ways in which cross-validation and bootstrap are different.</li>
+  <li>Why is performing variable selection outside of your cross-validation loop bad, but it’s OK to decide what you are going to measure in the first place?</li>
+  <li>You want to determine whether the first parameter in your ordinary least squares model, \(\beta_1\), is significantly non-zero. How can you apply bootstrap to accomplish this?</li>
+  <li>Say you build a model with no unknown parameters and therefore no degrees of freedom. Do you need cross-validation to know the prediction error?</li>
+  <li>Is it alright to adjust your model to improve the cross-validation error? Why/why not? If not, what would you need to do to fix the situation?</li>
+</ol>
+
+<h3 id="lecture-5">Lecture 5</h3>
+
+<ol>
+  <li>What is a prior? How does one go about making one?</li>
+  <li>Can a prior be based on data? If so, how is this data related to the experiment being modeled (the observed)?</li>
+  <li>What are three differences between a Bayesian and maximum likelihood (frequentist) approach?</li>
+  <li>When will a Bayesian and maximum likelihood approach agree?</li>
+  <li>You are asked to provide up-to-date estimates of the 6-month failure rate for a stent going to market. A previous device had 3 devices out of 100 fails within 6 months, and you strongly suspect this device is similar. Provide the Bayesian estimate of the failure rate (i.e. \(P(FR \vert N,m))\) given N devices have made it to 6 months, and m have failed. (Hint: Devices <strong>either</strong> pass or fail here. This follows a Binomial distribution.)</li>
+  <li>What would be a reasonable estimate if you had no previous device’s data?</li>
+  <li>What do you expect to happen to a posterior distribution as you add more and more data?</li>
+  <li>What does the integral of \(p(a \vert b) p(b \vert c) \delta b\) give you? Why is this useful?</li>
+</ol>
+
+<h3 id="lecture-6">Lecture 6</h3>
+
+<ol>
+  <li>Who/what sort of people need to test their code?</li>
+  <li>What is the difference between unit tests and integration tests?</li>
+  <li>What does testing guarantee?</li>
+  <li>What is the difference between testing and fuzzing?</li>
+  <li>What is linting?</li>
+  <li>You and a colleague are putting together a model. What are some factors that could influence the results besides the code that you write?</li>
+  <li>You write a function that takes in a voltage from a device and returns the inferred heart rate of the measured individual. What are three high-quality unit tests you could write to test this?</li>
+</ol>
+
+<h3 id="lecture-7">Lecture 7</h3>
+
+<ol>
+  <li>What do dimensionality reduction methods reduce? What is the tradeoff?</li>
+  <li>What are three benefits of dimensionality reduction?</li>
+  <li>Does matrix factorization have one answer? If not, what are two choices you could make?</li>
+  <li>What does principal components analysis aim to preserve?</li>
+  <li>What are the minimum and maximum number of principal components one can have for a dataset of 300 observations and 10 variables?</li>
+  <li>How can you determine the “right” number of PCs to use?</li>
+  <li>What is a loading matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?</li>
+  <li>What is a scores matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?</li>
+  <li>By definition, what is the direction of PC1?</li>
+  <li><a href="https://aarmey.github.io/ml-for-bioe///files/midterm-W20.pdf">See question 5 on midterm W20</a>. How does movement of the siControl EGF point represent changes in the original data?</li>
+</ol>
+
+<h3 id="lecture-8">Lecture 8</h3>
+
+<ol>
+  <li>What are three differences between PCA and PLSR in implementation and application?</li>
+  <li>What is the difference between PCR and PLSR? When does this difference matter more/less?</li>
+  <li>How might you need to prepare your data before using PLSR?</li>
+  <li>How can you determine the right number of components for a model?</li>
+  <li>What feature of biological data makes PLSR/PCR superior to direct regularization approaches (LASSO/ridge)?</li>
+  <li>What benefit does a two component model have over those with 3+ components?</li>
+  <li>Can you apply K-fold cross-validation to a PLSR model? If so, when do you scale your data?</li>
+  <li>Can you apply bootstrapping to a PLSR model? Describe what this would look like.</li>
+  <li>You use the same X data but want to predict a different Y variable. Do your X loadings change in your new model? What about for PCR?</li>
+</ol>
+
+<h3 id="lecture-9">Lecture 9</h3>
+
+<ol>
+  <li>What is the steady-state solution to an ODE model? How do you solve for them?</li>
+  <li>What is a phase-space diagram?</li>
+  <li>What property of ODE models ensures that solutions can never cross in phase space?</li>
+  <li>What is a Jacobian matrix? How do you calculate it from an ODE model?</li>
+  <li>What are the eigenvalues and eigenvectors of a matrix?</li>
+  <li>What is the behavior of an ODE system if its eigenvalues are all positive and real? How about negative and real?</li>
+  <li>What is the behavior of an ODE system if all its eigenvalues are imaginary and positive? How about imaginary and negative?</li>
+  <li>What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and negative, the other is imaginary)?</li>
+  <li>How can you fit an ODE model to a series of measurements over time?</li>
+  <li>How could you constrain an ODE system so that you only fit parameters that have oscillation?</li>
+</ol>
+
+<h3 id="hmm-review">HMM review</h3>
+
+<ol>
+  <li>What is a Markov assumption? Why is this assumption useful? What type of processes is it helpful for?</li>
+  <li>What makes a hidden Markov model hidden? The hidden part takes what type of values (e.g., continuous, ordinal)?</li>
+  <li>What are the three types of parameters in a hidden Markov model?</li>
+  <li>What are three different types of questions we can ask of a hidden Markov model?</li>
+  <li>What kind of data can be used with a hidden Markov model? How do we link the model to its observations?</li>
+  <li>What is the forward algorithm? What do we need to have before using it? What does it tell us?</li>
+  <li>What is the forward-backward algorithm? What do we need to have before using it? What does it tell us?</li>
+  <li>What is the Baum-Welch algorithm? What do we need to have before using it? What does it tell us?</li>
+  <li>What is the Viterbi algorithm? What do we need to have before using it? What does it tell us?</li>
+  <li><a href="https://services.healthtech.dtu.dk/service.php?TMHMM-2.0">TMHMM</a> is a HMM model that can be used to predict the transmembrane regions of proteins (there’s an example input you can use in the guide). Show us the output. Which algorithm is being used for each part of the output graphic?</li>
+  <li>Markov models can be used to model sentences, as certain words tend to come after one another. Does your (or your group member’s) phone use a MM for predictive text? Justify your answer.</li>
+</ol>
+
+<h3 id="k-means-clustering">K-Means clustering</h3>
+
+<ol>
+  <li>What is clustering? What does it seek to accomplish?</li>
+  <li>What is agglomerative clustering? What does the resulting output look like?</li>
+  <li>What is the difference between single-link, complete-link, and average clustering?</li>
+  <li>What are three properties that are required of a distance metric? What kind of things can be compared with a distance metric?</li>
+  <li>What decisions does one have to make before performing k-means clustering?</li>
+  <li>Describe the process of fitting that k-means performs.</li>
+  <li>You and your colleague each run k-means with the same settings, and arrive at different results. How could this happen?</li>
+  <li>What are two cases in which k-means clustering can fail or provide bad results?</li>
+  <li>How do you determine that your clustering is “good”?</li>
+</ol>
+
+<h3 id="svm-review">SVM review</h3>
+
+<ol>
+  <li>What is the core observation underlying SVMs?</li>
+  <li>Does the answer for an SVM rely on the exact position of all points? If not, which points most influence the model?</li>
+  <li>Where can you find the support vectors in a dataset?</li>
+  <li>What is a kernel? What are three common kinds?</li>
+  <li>Can you use SVMs for data that can’t be perfectly separated? What do you do if so? What additional tradeoff does this create?</li>
+  <li>What is a hyperparameter? How do you find the value of these?</li>
+  <li>How is Y represented within an SVM model?</li>
+  <li>You use an SVM model with an RBF kernel and a high value for gamma. What does the value of gamma indicate?</li>
+  <li>When the C parameter is set to be infinite, which of the following is true?</li>
+  <li>Your colleague is using an SVM with poly kernel and notices that the fitting error improves with ever higher degree polynomials. What is happening here? What would you suggest they do?</li>
+  <li>Can an SVM model be used with more than two classes? If so, how?</li>
+</ol>
+
+</div>
+
+    </div>
+
+  </body>
+</html>

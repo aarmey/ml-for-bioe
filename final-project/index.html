@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Final Project Guidelines &middot; Bioengr C175/C275
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/ml-for-bioe/public/css/poole.css">
+  <link rel="stylesheet" href="/ml-for-bioe/public/css/syntax.css">
+  <link rel="stylesheet" href="/ml-for-bioe/public/css/hyde.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ml-for-bioe/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/ml-for-bioe/public/favicon.ico">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/ml-for-bioe/">
+          Bioengr C175/C275
+        </a>
+      </h1>
+      <p class="lead">Machine learning & data-driven modeling in bioengineering</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/ml-for-bioe/">Home</a>
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item active" href="/ml-for-bioe///final-project/">Final Project Guidelines</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/ml-for-bioe///">Syllabus - Winter 2021</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/ml-for-bioe///outline/">Course outline</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/ml-for-bioe///packages/">Packages / Resources</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/ml-for-bioe///review-qs/">Review questions</a>
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="https://github.com/aarmey/ml-for-bioe">GitHub project</a>
+    </nav>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Final Project Guidelines</h1>
+  <h2 id="choosing-a-topic">Choosing A Topic</h2>
+
+<p>In this project, you have two options for the general route you can take:</p>
+
+<ol>
+  <li>As a first option, you may select a bioengineering paper that implements a computational analysis we have learned about from the literature. You will reimplement this analysis with thorough testing and documentation. In your final report, you should include a discussion about any elements that presented a challenge during your reimplementation, or discrepancies you found. Lastly, you should identify a creative extension of the analysis and implement it.</li>
+  <li>Alternatively, you may identify a set of data and corresponding analysis that has not yet been performed. This can be more exploratory in nature. You will implement this analysis with testing and documentation. In your final report, you should discuss whether/how the type of data influenced the analysis that was possible, the findings and limitations of your analysis, and what might be ways to validate your findings.</li>
+</ol>
+
+<p>Some repositories with potential datasets are listed <a href="#final-project-source-ideas">below</a>. Here are also a few project ideas from the literature:</p>
+
+<ul>
+  <li>Reimplement analysis in <a href="https://elifesciences.org/articles/59388">Sanford et al</a>, or explore using PCA with (favoring multiplicative effects) or without (favoring additive effects) log-transformed data.</li>
+  <li>Build a model predicting latent or active Tb infection from antibody measurements in <a href="https://dx.doi.org/10.1016%2Fj.cell.2016.08.072">Lu et al</a>.</li>
+  <li>Explore the measurements in <a href="https://www.jci.org/articles/view/129520">Boudreau et al</a> by PCA.</li>
+  <li>Build a model that predicts antibody effectiveness against Ebola from measurements in <a href="https://www.nature.com/articles/s41590-018-0233-9">Saphire et al</a>.</li>
+  <li>Build and interpret a model predicting vaccine effectiveness from <a href="https://stm.sciencemag.org/content/6/228/228ra38.full">Chung et al</a>.</li>
+</ul>
+
+<p>There are no restrictions on the programming language or packages you use. While this is expected to be an individual project by default, we will consider up to four person teams so long as this is reflected by the scope of the project. If in a team, your proposal, final project, and final presentation should cover how the project was divided.</p>
+
+<h2 id="proposal">Proposal</h2>
+
+<p>The proposal should be less than two pages and describe the following items:</p>
+
+<ul>
+  <li>Why the topic you chose is interesting</li>
+  <li>Demonstrate that your project fits the criteria above</li>
+  <li>What overall approach do you plan to take for the project and why</li>
+  <li>Demonstrate that your project can be finished within a month</li>
+  <li>Estimate the difficulty of your project</li>
+</ul>
+
+<p><strong>We are available to discuss your ideas whenever you are ready, and you should discuss your idea with us prior to submitting your proposal.</strong> By the time you submit your proposal you should ensure that you have access to the requisite data. We are happy to help you with this.</p>
+
+<h2 id="final-report">Final Report</h2>
+
+<p>Your final report should be less than 1500 words and describe the following items:</p>
+
+<ul>
+  <li>Introduction/Motivation: Why the topic you choose is interesting, and whether similar work has been done by others (novelty will not affect your grade, but it is always good to know if other people are doing the same thing)</li>
+  <li>Problem definition: How to formulate your topic/question into a data analytics problem, and how does it relate to a broader challenge engineering a biological system</li>
+  <li>Methods
+    <ul>
+      <li>Description of the algorithm you employed or designed</li>
+      <li>The software package you chose or your own implementation of the algorithm</li>
+      <li>How to use the software package or your own code</li>
+      <li>(Optional) Charting and/or visualization that help make decisions in your analysis</li>
+    </ul>
+  </li>
+  <li>Results
+    <ul>
+      <li>Quantitative evaluation of your method</li>
+      <li>Charting and/or visualization of your results</li>
+      <li>How your proposed approach has solved your question</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Accompanying your final report should be a git repository of your analysis.</p>
+
+<h2 id="final-presentation">Final Presentation</h2>
+
+<p>Each presentation will have 8 minutes:</p>
+<ul>
+  <li>6 minutes for a presentation</li>
+  <li>2 minutes for questions, discussion, and transition to the next presenter</li>
+</ul>
+
+<p>Each team should prepare no more than 7 slides, including the title slide, and cover the sections listed in the final report.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Your project will be evaluated</p>
+
+<ul>
+  <li>Proposal (15%)</li>
+  <li>Final Report (40%)</li>
+  <li>Final Presentation (15%)</li>
+  <li>Code and Implementation (30%)</li>
+</ul>
+
+<h2 id="final-project-source-ideas">Final Project Source Ideas</h2>
+
+<ul>
+  <li>Many interesting datasets are listed in the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine Learning Repository</a>.</li>
+  <li>Machine learning competitions, such as the <a href="http://dreamchallenges.org">DREAM Challenges</a>, <a href="https://www.kaggle.com">Kaggle</a>, and <a href="https://www.drivendata.org">DrivenData</a>, may have relevant challenges and pre-assembled datasets.</li>
+</ul>
+
+</div>
+
+    </div>
+
+  </body>
+</html>
