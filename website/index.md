@@ -1,5 +1,5 @@
 ---
-title: Syllabus - Winter 2021
+title: Syllabus - Winter 2022
 layout: page
 ---
 UCLA Department of Bioengineering
@@ -8,18 +8,19 @@ BIOENGR 175: Machine learning & data-driven modeling in bioengineering
 
 Instructor: Prof. Aaron Meyer (<ameyer@ucla.edu>), 4121G Engineering V
 
-Class Hours: Lecture: Tuesdays/Thursdays, 2:00 – 3:50pm (Zoom link on CCLE)  
-Lab Section: Fridays, 2:00 – 3:50 pm (Zoom link on CCLE)
+Lecture: Tuesdays/Thursdays, 2:00 – 3:50pm, Public Affairs Building 2250  
+Lab Section 1A: Fridays, 2:00 – 3:50 pm, Public Affairs Building 1234  
+Lab Section 1B: Fridays, 2:00 – 3:50 pm, Engineering V 5101
 
-Teaching Assistant: Cyrillus Tan (<cytan@g.ucla.edu>)
+Teaching Assistants: Jackson Chin (1A, <jch1n@g.ucla.edu>), Farnaz Mohammadi (1B, <farnazmdi@g.ucla.edu>)
 
 Office Hours:
 
-- Prof. Meyer: Available at the end of lecture, [on Slack](https://be175.slack.com), or [by appointment](https://calendly.com/asmlab/office-hours)
+- Prof. Meyer: Available at the end of lecture, Tuesdays 4–5 pm in Eng V 4121G, or [on the Bruin Learn discussion board](https://bruinlearn.ucla.edu/courses/111529/discussion_topics)
 - TA: By appointment
 
 Website: <https://aarmey.github.io/ml-for-bioe/>  
-Slack: <https://be175.slack.com>
+Bruin Learn: <https://bruinlearn.ucla.edu/courses/111529>
 
 ## Text:
 
