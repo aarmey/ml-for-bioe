@@ -31,7 +31,7 @@ layout: page
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
   - [Linear Digressions: Beware of simple metrics](http://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([Recording](https://youtu.be/Rh2SdM2_IIg))
-- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/29 at 11:59 pm
+- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/27 at 11:59 pm
 
 ### Week 4, Jan 24 – 28
 
@@ -40,7 +40,7 @@ layout: page
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf) (Recording part [1](https://youtu.be/C8lb1vnr8OQ), [2](https://youtu.be/kfDwh_elvC8), [3](https://youtu.be/W49gD36Iga4))
-- Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/5 at 11:59 pm
+- Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/3 at 11:59 pm
 
 ### Week 5, Jan 31 – Feb 4
 
@@ -54,7 +54,7 @@ layout: page
 - [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=3603289)
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf))
 - Lecture 12: Midterm exam
-- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/19 at 2:00 pm
+- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/17 at 11:59 pm
 
 
 ### Week 7, Feb 14 – 18
@@ -67,7 +67,7 @@ layout: page
   - Reading: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
   - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - Lecture: Finish hidden Markov models.
-- Lab: Implementation of HMMs for heart rate monitor wearable, due 2/26 at 2:00 pm pm
+- Lab: Implementation of HMMs for heart rate monitor wearable, due 2/24 at 11:59 pm
 
 ### Week 8, Feb 21 – 25
 
@@ -83,7 +83,7 @@ layout: page
   - [Example Notebook](../public/examples/SVMs-example.ipynb)
   - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/16 at 11:59 pm
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/15 at 11:59 pm
 
 ### Week 10, Mar 7 – 11
 
