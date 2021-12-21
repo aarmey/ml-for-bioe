@@ -31,7 +31,7 @@ layout: page
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
   - [Linear Digressions: Beware of simple metrics](http://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([Recording](https://youtu.be/Rh2SdM2_IIg))
-- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/27 at 11:59 pm
+- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/27 at 11:59 pm ([starter link](https://classroom.github.com/a/1tG08HU3)
 
 ### Week 4, Jan 24 – 28
 
@@ -51,7 +51,7 @@ layout: page
 
 ### Week 6, Feb 7 – 11
 
-- [Final project proposals due 2/11 at 8 pm](https://ccle.ucla.edu/mod/assign/view.php?id=3603289)
+- [Final project proposals due 2/11 at 8 pm](https://bruinlearn.ucla.edu/courses/111529/assignments/947467)
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf))
 - Lecture 12: Midterm exam
 - Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/17 at 11:59 pm
