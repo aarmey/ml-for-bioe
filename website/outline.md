@@ -5,7 +5,7 @@ layout: page
 
 ### Week 1, Jan 3 – 7
 
-- [Lecture 1: Statistics review](../public/Wk1-Lecture1.pdf)
+- [Lecture 1: Statistics review](../public/Wk1-Lecture1.pdf) (Recording part [1](https://www.youtube.com/watch?v=9fXyIDgLiRU), [2](https://www.youtube.com/watch?v=jcLIxxLo5_A))
   - Reading: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
   - Listening: [Linear Digressions: The Normal Distribution and the Central Limit Theorem](http://lineardigressions.com/episodes/2018/12/9/the-normal-distribution-and-the-central-limit-theorem)
 - [Lecture 2: Fitting & Regression](../public/Wk1-Lecture2.pdf) (Recording part [1](https://www.youtube.com/watch?v=-lG53OEl1-s), [2](https://www.youtube.com/watch?v=k0xUp8DPNIA))
@@ -19,7 +19,7 @@ layout: page
 
 ### Week 2, Jan 10 – 14
 
-- [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf)
+- [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf) (Recording part [1](https://www.youtube.com/watch?v=J3rF6vP3tQY), [2](https://youtu.be/-jRZ7POBsrQ), [3](https://youtu.be/TRLPmD4uQYE))
   - [Example Notebook](../public/examples/Regularization-Example.ipynb)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf) (Recording part [1](https://youtu.be/N4afdo1VQB0), [2](https://youtu.be/OdEGD35sO-8))
   - [Example Notebook](../public/examples/CrossVal-Example.ipynb)
@@ -30,7 +30,7 @@ layout: page
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
   - [Linear Digressions: Beware of simple metrics](http://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
-- [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([Recording](https://youtu.be/Rh2SdM2_IIg))
+- [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
 - Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/27 at 11:59 pm ([starter link](https://classroom.github.com/a/1tG08HU3))
 
 ### Week 4, Jan 24 – 28
@@ -39,7 +39,7 @@ layout: page
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
-- [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf) (Recording part [1](https://youtu.be/C8lb1vnr8OQ), [2](https://youtu.be/kfDwh_elvC8), [3](https://youtu.be/W49gD36Iga4))
+- [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
 - Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/3 at 11:59 pm ([starter link](https://classroom.github.com/a/7x_NtH4i))
 
 ### Week 5, Jan 31 – Feb 4
