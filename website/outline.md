@@ -28,18 +28,18 @@ layout: page
 
 ### Week 3, Jan 17 – 21
 
-- [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
+- [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf) (Recording part [1](https://youtu.be/8lOjdH_ZfVc), [2](https://youtu.be/Cu3kkOu9juY))
   - [Linear Digressions: Beware of simple metrics](http://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
-- [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
+- [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([Recording](https://youtu.be/Rh2SdM2_IIg))
 - Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/27 at 11:59 pm ([starter link](https://classroom.github.com/a/1tG08HU3))
 
 ### Week 4, Jan 24 – 28
 
-- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
+- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (Recording part [1](https://youtu.be/mPuV7y5ZRfo), [2](https://youtu.be/1_43nCptm44))
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
-- [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
+- [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf) (Recording part [1](https://youtu.be/C8lb1vnr8OQ), [2](https://youtu.be/kfDwh_elvC8), [3](https://youtu.be/W49gD36Iga4))
 - Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/3 at 11:59 pm ([starter link](https://classroom.github.com/a/7x_NtH4i))
 
 ### Week 5, Jan 31 – Feb 4
