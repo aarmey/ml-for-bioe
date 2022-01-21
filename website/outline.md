@@ -53,7 +53,7 @@ layout: page
 
 - [Final project proposals due 2/11 at 8 pm](https://bruinlearn.ucla.edu/courses/111529/assignments/947467)
 - [Create project repository](https://classroom.github.com/a/An4Bf0du)
-- Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf))
+- Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf))
 - Lecture 12: Midterm exam
 - Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/17 at 11:59 pm ([starter link](https://classroom.github.com/a/weG03uDz))
 
