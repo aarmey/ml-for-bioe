@@ -24,7 +24,7 @@ layout: page
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf) (Recording part [1](https://youtu.be/N4afdo1VQB0), [2](https://youtu.be/OdEGD35sO-8))
   - [Example Notebook](../public/examples/CrossVal-Example.ipynb)
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
-- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/20 at 11:59 pm ([starter link](https://classroom.github.com/a/AEQurBHX))
+- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due 1/20 at 11:59 pm
 
 ### Week 3, Jan 17 – 21
 
@@ -40,7 +40,7 @@ layout: page
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf) (Recording part [1](https://youtu.be/C8lb1vnr8OQ), [2](https://youtu.be/kfDwh_elvC8), [3](https://youtu.be/W49gD36Iga4))
-- Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/3 at 11:59 pm ([starter link](https://classroom.github.com/a/7x_NtH4i))
+- Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/7 at 11:59 pm ([starter link](https://classroom.github.com/a/7x_NtH4i))
 
 ### Week 5, Jan 31 – Feb 4
 
