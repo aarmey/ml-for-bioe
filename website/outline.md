@@ -44,7 +44,7 @@ layout: page
 
 ### Week 5, Jan 31 – Feb 4
 
-- [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
+- [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf) (Recording part [1](https://youtu.be/Vzh3qAsBLBo), [2](https://youtu.be/QC32PvWk418))
 - Lecture 10: Finish dynamical models
   - Guest presentation: Dynamical models of the cell cycle
 - Lab: Midterm review, finish selecting project
