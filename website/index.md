@@ -17,7 +17,8 @@ Teaching Assistants: Jackson Chin (1A, <jch1n@g.ucla.edu>), Farnaz Mohammadi (1B
 Office Hours:
 
 - Prof. Meyer: Available at the end of lecture, Tuesdays 4–5 pm in Eng V 4121G, or [on the Bruin Learn discussion board](https://bruinlearn.ucla.edu/courses/111529/discussion_topics)
-- TA: By appointment
+- Farnaz: Mondays, 11 am – 1 pm
+- Jackson: Wednesdays, 4 pm - 6 pm
 
 Website: <https://aarmey.github.io/ml-for-bioe/>  
 Bruin Learn: <https://bruinlearn.ucla.edu/courses/111529>
