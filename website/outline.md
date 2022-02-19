@@ -67,7 +67,7 @@ layout: page
   - Reading: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
   - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - Lecture: Finish hidden Markov models.
-- Lab: Implementation of HMMs for heart rate monitor wearable, due 2/24 at 11:59 pm ([starter link](https://classroom.github.com/a/kK-E9fUb))
+- Lab: Implementation of HMMs for heart rate monitor wearable, due 3/3 at 11:59 pm ([starter link](https://classroom.github.com/a/kK-E9fUb))
 
 ### Week 8, Feb 21 – 25
 
