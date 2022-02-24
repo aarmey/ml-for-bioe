@@ -75,7 +75,6 @@ layout: page
   - [Example Notebook](../public/examples/K-Means.ipynb)
 - [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf)
   - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
-  - Guest presentation: Using sequence information to improve clustering
 
 ### Week 9, Feb 28 – Mar 4
 
