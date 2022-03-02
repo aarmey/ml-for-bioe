@@ -136,7 +136,18 @@ layout: page
 8. What are two cases in which k-means clustering can fail or provide bad results?
 9. How do you determine that your clustering is "good"?
 
-### SVM review
+### Gaussian mixture models
+
+1. What are two ways in which GMMs give different results from K-means?
+2. What does it mean to say GMMs produce “soft assignment”?
+3. What can you say about a multivariate normal distribution with only diagonal elements?
+4. What does it mean to say a GMM is a generative model?
+5. Can mixture models be produced from distributions other than a Gaussian? If so, how is the distribution defined within the model? If not, why?
+6. Can GMMs describe clusters of non-Gaussian shapes? (Think of the moon example from lecture.) Describe.
+7. Can a GMM identify overlapping clusters? If so, what “signal” does it use in the data to distinguish these? If not, why not?
+8. A point lies equidistant between two clusters in a dataset. How do you expect this point to be clustered when using a GMM? How about with K-means?
+
+### Support vector machines
 
 1. What is the core observation underlying SVMs?
 2. Does the answer for an SVM rely on the exact position of all points? If not, which points most influence the model?
