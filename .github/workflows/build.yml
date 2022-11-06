@@ -16,7 +16,7 @@ jobs:
     - name: Build products
       run: |
         sudo apt update
-        sudo apt install pandoc ruby-bundler texlive-latex-extra texlive-latex-base texlive-xetex texlive-extra-utils
+        sudo apt install pandoc ruby-bundler texlive-latex-extra texlive-latex-base texlive-xetex texlive-extra-utils texlive-luatex texlive-latex-base
         pip3 install pandocfilters
         bundle install --gemfile=./website/Gemfile
         make
