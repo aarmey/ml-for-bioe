@@ -6,6 +6,14 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 
+\ifluatex
+  \usepackage[luamode]{tagpdf}
+  \tagpdfsetup{
+      activate-all=true,
+      interwordspace=true
+   }
+\fi
+
 $if(scuro)$
 % light-on-dark slides: white text on 90% black background
 \setbeamercolor{normal text}{fg=white,bg=black!90}
