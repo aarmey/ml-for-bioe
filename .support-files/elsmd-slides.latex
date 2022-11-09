@@ -1,3 +1,6 @@
+\RequirePackage{pdfmanagement-testphase}
+\DeclareDocumentMetadata{pdfversion=2.0,lang=en-US}
+
 \documentclass[14pt$if(handout)$handout,$endif$$if(beamer)$ignorenonframetext,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 
 \usepackage{lmodern}
