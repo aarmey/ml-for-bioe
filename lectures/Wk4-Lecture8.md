@@ -11,6 +11,10 @@ author: Aaron Meyer
 - Some Examples
 - Implementation
 
+\note[item]{Explain unsupervised/supervised.
+\item Can you bootstrap a PLSR/PCR/PCA model?
+}
+
 **Adapted from slides by Pam Kreeger.**
 
 # Common Challenge: Cue/Signal/Response Relationships
@@ -95,8 +99,8 @@ First step: **Simply apply PCA!**
 
 Dimensionality goes from $m$ to $N_{comp}$.
 
-\note[item]{What might be a concern as a consequence of this? (How do we determine how many components to keep?)
-\item What are the bounds on the number of components we can have?}
+\note[item]{What are the bounds on the number of components we can have?
+\item What might be a concern as a consequence of this? (How do we determine how many components to keep?)}
 
 # Principal Components Regression (PCR)
 
@@ -129,11 +133,19 @@ $$Y = TB + E$$
 
 ![ ](./lectures/figs/lec8/PC-5.pdf)
 
-\note{Go over definition of covariance.}
+\note[item]{Go over definition of covariance.
+\item cov(X, X) = var(X)
+\item var(Y) = cov(X, Y) + variance in Y independent of X
+\item A factorization occurs to find max covar with Y
+\item Forces direction of components}
 
 # PLSR - NIPALs with Scores Exchanged
 
 ![ ](./lectures/figs/lec8/PC-6.pdf)
+
+\note[item]{$B$ is $T (P^T T)^{-1} Q^T
+\item $P^T T$ is the approximation of $X$
+\item PLSR components are not orthogonal in data space, but are orthogonal in O-PLS.}
 
 # PLSR - NIPALs with Scores Exchanged
 
@@ -146,6 +158,8 @@ $$Y = TB + E$$
 # Determining the Number of Components
 
 ![ ](./lectures/figs/lec8/PC-9.pdf)
+
+\note{Go over each.}
 
 # Determining the Number of Components
 
