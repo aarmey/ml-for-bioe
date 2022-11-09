@@ -143,7 +143,7 @@ $$Y = TB + E$$
 
 ![ ](./lectures/figs/lec8/PC-6.pdf)
 
-\note[item]{$B$ is $T (P^T T)^{-1} Q^T
+\note[item]{$B$ is $T (P^T T)^{-1} Q^T$
 \item $P^T T$ is the approximation of $X$
 \item PLSR components are not orthogonal in data space, but are orthogonal in O-PLS.}
 
