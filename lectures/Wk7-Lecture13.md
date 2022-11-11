@@ -48,7 +48,6 @@ author: Aaron Meyer
 
 ![ ](./lectures/figs/lec13/clust3.png)
 
-
 # What could "similar" mean?
 
 - One option: Euclidean distance
@@ -57,6 +56,17 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \norm{\mathbf{x} - \mathbf{y}} $$
 
 - Clustering results are **completely** dependent on the measure of similarity (or distance) between "points" to be clustered
 
+# What properties should a distance measure have?
+
+- Symmetric
+	- $D(A, B) = D(B, A)$
+	- Otherwise we can say A looks like B but not vice-versa
+- Positivity and self-similarity
+	- $D(A,B) > 0$, and $D(A,B)=0$ iff $A=B$
+	- Otherwise there will be objects that we can't tell apart
+- Triangle inequality
+	- $D(A, B) + D(B, C) \geq D(A,C)$
+	- Otherwise one can say "A is like B, B is like C, but A is not like C at all"
 
 # Clustering algorithms
 
@@ -141,6 +151,10 @@ Change the cluster center to the average of the assigned points
 
 ![ ](./lectures/figs/lec13/k3.png){ width=50% }
 
+\note[item]{Can be slow for very large numbers of data points.
+\item Can use stochastic sampling in some cases.
+}
+
 # K-means clustering: Example
 
 Repeat until convergence
@@ -193,18 +207,6 @@ Repeat until convergence
 	2. Change the cluster center to the average of its assigned points:
 		- **O(N) time**
 
-# What properties should a distance measure have?
-
-- Symmetric
-	- $D(A, B) = D(B, A)$
-	- Otherwise we can say A looks like B but not vice-versa
-- Positivity and self-similarity
-	- $D(A,B) > 0$, and $D(A,B)=0$ iff $A=B$
-	- Otherwise there will be objects that we can't tell apart
-- Triangle inequality
-	- $D(A, B) + D(B, C) \geq D(A,C)$
-	- Otherwise one can say "A is like B, B is like C, but A is not like C at all"
-
 # K-Means Convergence
 
 **Objective:** $\min_{\mu}\min_{C}\sum_{i=1}^k \sum_{x\in C_i} \norm{x - \mu_i}^2$
@@ -244,9 +246,18 @@ Local optima dependent on how the problem was specified:
 
 ![ ](./lectures/figs/lec13/circle.png)
 
+\note[item]{Go over # of clusters.
+\item Show example data.
+\item What would within-cluster distance look like in the ideal case?
+}
+
 # Changing the features (distance function) can help
 
 ![ ](./lectures/figs/lec13/circletrans.png)
+
+\note[item]{This is the kernel method.
+\item Will use again with SVMs!
+}
 
 # Agglomerative Clustering
 
@@ -334,6 +345,10 @@ How should we define “closest” for clusters with multiple elements?
 
 ![ ](./lectures/figs/lec13/BCclusters.pdf)
 
+\note[item]{We use clusters because they (hopefully) translate to meaningful differences.
+\item What if you cluster based on different measurements?
+}
+
 # Clustering molecular signals
 
 ![ ](./lectures/figs/lec13/kristenTitle.pdf)
@@ -392,7 +407,6 @@ How should we define “closest” for clusters with multiple elements?
 ## Agglomerative
 
 `sklearn.cluster.AgglomerativeClustering`
-
 
 # Implementation - K-means
 
