@@ -246,7 +246,7 @@ Local optima dependent on how the problem was specified:
 
 ![ ](./lectures/figs/lec13/circle.png)
 
-\note[item]{Go over # of clusters.
+\note[item]{Go over number of clusters.
 \item Show example data.
 \item What would within-cluster distance look like in the ideal case?
 }
