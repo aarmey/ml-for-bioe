@@ -443,5 +443,5 @@ ax.scatter(X[:, 3], X[:, 0], X[:, 2],
 
 # Further Reading
 
-- [sklearn: Clustering](http://scikit-learn.org/stable/modules/clustering.html)
-- [Avoiding common pitfalls when clustering biological data](http://stke.sciencemag.org/content/9/432/re6)
+- [sklearn: Clustering](https://scikit-learn.org/stable/modules/clustering.html)
+- [Avoiding common pitfalls when clustering biological data](https://stke.sciencemag.org/content/9/432/re6)
