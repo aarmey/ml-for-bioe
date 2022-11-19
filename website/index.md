@@ -34,7 +34,7 @@ Optional/Helpful Other Resources:
 
 - Hastie *et al*. (2009). [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/Papers/ESLII.pdf).
 
-- MacKaye (2005). [Information Theory, Inference and Learning Algorithms](http://www.inference.org.uk/itprnn/book.pdf).
+- MacKaye (2005). [Information Theory, Inference and Learning Algorithms](https://www.inference.org.uk/itprnn/book.pdf).
 
 ## Course Description:
 
