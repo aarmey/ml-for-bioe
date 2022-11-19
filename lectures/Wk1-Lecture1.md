@@ -3,19 +3,17 @@ title: Week 1, Lecture 1 - Introduction, statistics review
 author: Aaron Meyer
 ---
 
-# BIOENGR 175: Machine learning & data-driven modeling in bioengineering
+# Machine learning & data-driven modeling in bioengineering
 
 ## Lecture:
 
 - Tuesdays/Thursdays 2:00–3:50pm
-- Zoom
+- Boelter Hall 5273
 
 ## Lab
 
 - Fridays, 2:00–3:50pm
-- Zoom
-
-<https://aarmey.github.io/ml-for-bioe/>
+- Boelter Hall 4413
 
 # Lecture Slides
 
@@ -34,12 +32,13 @@ author: Aaron Meyer
 
 ## Prof. Meyer
 
-- Friday 11:00-11:50am in Eng V 4121G or by appointment
+- 9–9:45 am Friday: <https://ucla.zoom.us/my/aarmey>
 - I will usually also stick around after class and am happy to answer questions.
 
 ## TAs
 
-- TBD or by appointment
+- By appointment
+- Brian will have a regular time setup soon
 
 # Learning Goals:
 
@@ -81,7 +80,7 @@ By the end of the course you will learn how to:
 ## Where
 
 - Fridays, 2:00-3:50pm
-- Zoom
+- Boelter Hall 4413
 
 ## What
 
