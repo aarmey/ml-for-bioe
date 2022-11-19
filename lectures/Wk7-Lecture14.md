@@ -116,7 +116,7 @@ Combine simple models into a complex model:
 
 ![ ](./lectures/figs/lec14/gm13.pdf)
 
-\note{$p(x is k) = \frac{\pi_k N(x|\mu_k, \Sigma_k)}{\sum_{k=1}^{N}}$}
+\note{$p(x\; is\; k) = \frac{\pi_k N(x|\mu_k, \Sigma_k)}{\sum_{k=1}^{N}}$}
 
 # Mixtures of Gaussians (3)
 
