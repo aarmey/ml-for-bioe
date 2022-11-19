@@ -280,5 +280,5 @@ Equivalent to k-means clustering algorithm!!!
 
 # Further Reading
 
-- [`sklearn.mixture.GaussianMixture`](http://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html#sklearn.mixture.GaussianMixture)
+- [`sklearn.mixture.GaussianMixture`](https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html#sklearn.mixture.GaussianMixture)
 - [Python Data Science Handbook: GMMs](https://jakevdp.github.io/PythonDataScienceHandbook/05.12-gaussian-mixtures.html)
