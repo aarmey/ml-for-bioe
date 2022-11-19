@@ -300,9 +300,9 @@ sklearn has implementations for a variety of SVM methods:
 
 # Further Reading
 
-- [MIT 6.034: Support Vector Machines](http://web.mit.edu/6.034/wwwbob/svm.pdf)
+- [MIT 6.034: Support Vector Machines](https://web.mit.edu/6.034/wwwbob/svm.pdf)
 - [Computer Age Statistical Inference: Chapter 19](https://web.stanford.edu/~hastie/CASI_files/PDF/casi.pdf)
-- [sklearn: Support Vector Machines](http://scikit-learn.org/stable/modules/svm.html)
+- [sklearn: Support Vector Machines](https://scikit-learn.org/stable/modules/svm.html)
 - Linear Digressions Podcast
-	- [Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
-	- [The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
+	- [Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
+	- [The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
