@@ -249,5 +249,5 @@ samples = sampler.chain
 - [PyMC3](https://github.com/pymc-devs/pymc3) (python)
 - [emcee](https://github.com/dfm/emcee) (python)
 - [Stan](https://github.com/stan-dev/stan) (C++, python, R)
-- [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/)
+- [Bayesian Data Analysis](https://www.stat.columbia.edu/~gelman/books/)
 - [Probabilistic Programming & Bayesian Methods for Hackers](https://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
