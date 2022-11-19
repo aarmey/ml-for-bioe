@@ -8,7 +8,7 @@ These are some packages that may be of use to you during the course.
 ## General
 
 - [Google Colaboratory](https://colab.research.google.com/)
-- [Linear Digressions: ROC Curves](http://lineardigressions.com/episodes/2020/6/21/rock-the-roc-curve)
+- [Linear Digressions: ROC Curves](https://lineardigressions.com/episodes/2020/6/21/rock-the-roc-curve)
 
 ## Plotting
 
@@ -17,12 +17,12 @@ These are some packages that may be of use to you during the course.
 
 ## Machine Learning
 
-- [Scikit-learn](http://scikit-learn.org/stable/)
+- [Scikit-learn](https://scikit-learn.org/stable/)
 - [pomegranate](https://pomegranate.readthedocs.io/en/latest/)
 
 ## Numerical Manipulations
 
-- [NumPy](http://www.numpy.org)
+- [NumPy](https://www.numpy.org)
 - [SciPy](https://www.scipy.org)
 
 ## Autodifferentiation
@@ -39,4 +39,4 @@ These are some packages that may be of use to you during the course.
 
 ## Other
 
-- [jupyter](http://jupyter.org)
+- [jupyter](https://jupyter.org)

@@ -212,7 +212,7 @@ author: Aaron Meyer
 - But Efron et al. (Annals of Statistics 2004) proposed LARS (least angle regression), which computes the LASSO path efficiently
 	- Interesting modification called is called forward stagewise
 	- In many cases it is the same as the LASSO solution
-	- Forward stagewise is easy to implement: <http://www-stat.stanford.edu/~hastie/TALKS/nips2005.pdf>
+	- Forward stagewise is easy to implement: <https://www-stat.stanford.edu/~hastie/TALKS/nips2005.pdf>
 
 # Forward stagewise algorithm
 
@@ -385,5 +385,5 @@ plt.show()
 # Further Reading
 
 - [Computer Age Statistical Inference, Chapter 16](https://web.stanford.edu/~hastie/CASI_files/PDF/casi.pdf)
-- sklearn: [Generalized Linear Models](http://scikit-learn.org/stable/modules/linear_model.html)
-- Candès E. and Tao T. [The Dantzig selector: statistical estimation when p is much larger than n](http://www.acm.caltech.edu/~emmanuel/papers/DantzigSelector.pdf).
+- sklearn: [Generalized Linear Models](https://scikit-learn.org/stable/modules/linear_model.html)
+- Candès E. and Tao T. [The Dantzig selector: statistical estimation when p is much larger than n](https://www.acm.caltech.edu/~emmanuel/papers/DantzigSelector.pdf).

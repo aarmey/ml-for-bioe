@@ -7,12 +7,12 @@ layout: page
 
 - [Lecture 1: Statistics review](../public/Wk1-Lecture1.pdf) (Recording part [1](https://www.youtube.com/watch?v=9fXyIDgLiRU), [2](https://www.youtube.com/watch?v=jcLIxxLo5_A))
   - Reading: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
-  - Listening: [Linear Digressions: The Normal Distribution and the Central Limit Theorem](http://lineardigressions.com/episodes/2018/12/9/the-normal-distribution-and-the-central-limit-theorem)
+  - Listening: [Linear Digressions: The Normal Distribution and the Central Limit Theorem](https://lineardigressions.com/episodes/2018/12/9/the-normal-distribution-and-the-central-limit-theorem)
 - [Lecture 2: Fitting & Regression](../public/Wk1-Lecture2.pdf) (Recording part [1](https://www.youtube.com/watch?v=-lG53OEl1-s), [2](https://www.youtube.com/watch?v=k0xUp8DPNIA))
   - [Example Notebook](../public/examples/OLS-Example.ipynb)
-  - Listening: [Linear Digressions: The assumptions of ordinary least squares](http://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
-  - Reading: [Points of Significance: Simple linear regression](http://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
-  - Listening: [Linear Digressions: Convex (and non-convex) optimization](http://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
+  - Listening: [Linear Digressions: The assumptions of ordinary least squares](https://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
+  - Reading: [Points of Significance: Simple linear regression](https://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
+  - Listening: [Linear Digressions: Convex (and non-convex) optimization](https://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
 - Lab: Programming and Git Primer, due 1/13 at 11:59 pm
   - Listening: [Linear Digressions: Jupyter Notebooks, A Data Scientist's Best Friend](https://lineardigressions.com/episodes/2017/8/20/jupyter-notebooks-a-data-scientists-best-friend)
   - Listening: [Linear Digressions: Git for Data Scientists](https://lineardigressions.com/episodes/2018/6/3/git-for-data-scientists)
@@ -29,9 +29,9 @@ layout: page
 ### Week 3, Jan 17 – 21
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf) (Recording part [1](https://youtu.be/8lOjdH_ZfVc), [2](https://youtu.be/Cu3kkOu9juY))
-  - [Linear Digressions: Beware of simple metrics](http://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
+  - [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([Recording](https://youtu.be/Rh2SdM2_IIg))
-- Lab: Implementation of [Stone et al.](http://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/27 at 11:59 pm ([starter link](https://classroom.github.com/a/1tG08HU3))
+- Lab: Implementation of [Stone et al.](https://www.sciencedirect.com/science/article/pii/S0006349501758997), due 1/27 at 11:59 pm ([starter link](https://classroom.github.com/a/1tG08HU3))
 
 ### Week 4, Jan 24 – 28
 
@@ -40,7 +40,7 @@ layout: page
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf) (Recording part [1](https://youtu.be/C8lb1vnr8OQ), [2](https://youtu.be/kfDwh_elvC8), [3](https://youtu.be/W49gD36Iga4))
-- Lab: Implementation of [Cosgrove et al.](http://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/7 at 11:59 pm ([starter link](https://classroom.github.com/a/7x_NtH4i))
+- Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/7 at 11:59 pm ([starter link](https://classroom.github.com/a/7x_NtH4i))
 
 ### Week 5, Jan 31 – Feb 4
 
@@ -54,7 +54,7 @@ layout: page
 - [Create project repository](https://classroom.github.com/a/An4Bf0du)
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf))
 - Lecture 12: Midterm exam
-- Lab: Implementation of [Perelson et al.](http://science.sciencemag.org/content/271/5255/1582), due 2/17 at 11:59 pm ([starter link](https://classroom.github.com/a/weG03uDz))
+- Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due 2/17 at 11:59 pm ([starter link](https://classroom.github.com/a/weG03uDz))
 
 
 ### Week 7, Feb 14 – 18
@@ -65,7 +65,7 @@ layout: page
   - Reading: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
   - Reading: [Markov Models—Hidden Markov models](https://www.nature.com/articles/s41592-019-0532-6)
   - Reading: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
-  - Listening: [Linear Digressions - Hidden Markov Models](http://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](http://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
+  - Listening: [Linear Digressions - Hidden Markov Models](https://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](https://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - Lecture: Finish hidden Markov models.
 - Lab: Implementation of HMMs for heart rate monitor wearable, due 3/3 at 11:59 pm ([starter link](https://classroom.github.com/a/kK-E9fUb))
 
@@ -80,8 +80,8 @@ layout: page
 
 - [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf)
   - [Example Notebook](../public/examples/SVMs-example.ipynb)
-  - Listening: [Linear Digressions: Maximal Margin Classifiers](http://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
-  - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](http://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
+  - Listening: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
+  - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 - Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/17 at 11:59 pm ([starter link](https://classroom.github.com/a/-i7dn1tU))
 
 ### Week 10, Mar 7 – 11
