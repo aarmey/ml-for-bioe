@@ -74,19 +74,19 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 
 #### Matrix factorization is also compression
 
-![http://www.aaronschlegel.com/image-compression-principal-component-analysis/](./lectures/figs/lec7/cat.jpg){width=80%}
+![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./lectures/figs/lec7/cat.jpg){width=80%}
 
 # Factor Analysis
 
 #### Matrix factorization is also compression
 
-![http://www.aaronschlegel.com/image-compression-principal-component-analysis/](./lectures/figs/lec7/cat-3comp.jpg){width=80%}
+![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./lectures/figs/lec7/cat-3comp.jpg){width=80%}
 
 # Factor Analysis
 
 #### Matrix factorization is also compression
 
-![http://www.aaronschlegel.com/image-compression-principal-component-analysis/](./lectures/figs/lec7/cat-46comp.jpg){width=80%}
+![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./lectures/figs/lec7/cat-46comp.jpg){width=80%}
 
 \note[item]{There is always information lost
 \item We just hope for it to be information that doesn't matter

@@ -69,5 +69,5 @@ Your project will be evaluated
 
 ## Final Project Source Ideas
 
-- Many interesting datasets are listed in the [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/).
-- Machine learning competitions, such as the [DREAM Challenges](http://dreamchallenges.org), [Kaggle](https://www.kaggle.com), and [DrivenData](https://www.drivendata.org), may have relevant challenges and pre-assembled datasets.
+- Many interesting datasets are listed in the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/).
+- Machine learning competitions, such as the [DREAM Challenges](https://dreamchallenges.org), [Kaggle](https://www.kaggle.com), and [DrivenData](https://www.drivendata.org), may have relevant challenges and pre-assembled datasets.

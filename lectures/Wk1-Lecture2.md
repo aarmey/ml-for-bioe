@@ -20,9 +20,7 @@ In this project, you have two options for the general route you can take:
 1. Reimplement analysis from the literature.
 2. New, exploratory analysis of existing data.
 
-More details at:
-
-<https://aarmey.github.io/ml-for-bioe/final-project/>
+More details in final project guidelines.
 
 # Project Proposals
 
@@ -413,4 +411,4 @@ sp.optimize.least_squares(ls_obj_k1, 1., args=(X,Y))
 # Further Reading
 
 - [Computer Age Statistical Inference, Chapter 8](https://web.stanford.edu/~hastie/CASI_files/PDF/casi.pdf)
-- [sklearn: Linear Models](http://scikit-learn.org/stable/modules/linear_model.html)
+- [sklearn: Linear Models](https://scikit-learn.org/stable/modules/linear_model.html)
