@@ -11,9 +11,6 @@ author: Aaron Meyer
 
 **Based on slides from David Sontag.**
 
-# Gaussian mixtures
-
-
 # The Evils of “Hard Assignments”?
 
 - Clusters may overlap
@@ -21,6 +18,8 @@ author: Aaron Meyer
 - Distances can be deceiving!
 
 ![ ](./lectures/figs/lec14/gm2.pdf){height=60%}
+
+\note{If we know which points are in each cluster, the answer is easy! (mu, sigma)}
 
 # Probabilistic Clustering
 
@@ -116,6 +115,8 @@ Old Faithful Data Set
 Combine simple models into a complex model:
 
 ![ ](./lectures/figs/lec14/gm13.pdf)
+
+\note{$p(x is k) = \frac{\pi_k N(x|\mu_k, \Sigma_k)}{\sum_{k=1}^{N}}$}
 
 # Mixtures of Gaussians (3)
 
@@ -259,6 +260,8 @@ Especially useful when the E and M steps have closed form solutions!!!
 ![ ](./lectures/figs/lec14/gm37.pdf)
 
 Equivalent to k-means clustering algorithm!!!
+
+\note{Can you make a mixture model of Gamma distributions? Poisson?}
 
 # Implementation
 
