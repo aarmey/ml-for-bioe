@@ -18,13 +18,12 @@ author: Aaron Meyer
 # History Of SVM
 
 - SVM is related to statistical learning theory
-- SVM was first introduced in 1992
-- SVM became popular because of its success in handwritten digit recognition
-	- 1.1% test error rate for SVM. This is the same as the error rates of a carefully constructed neural network, LeNet 4.
-	- Also used in very first self-driving cars (of 90's, not current)
-	- Later bested by deep learning
-methods”, one of the key area in machine learning
-- Note: the meaning of “kernel” is different from other methods
+- First introduced in 1992
+- Became popular because of its success in handwritten digit recognition
+	- 1.1% test error rate for SVM. Same error as a perceptron model.
+	- Also used in very first self-driving cars
+	- Later bested by deep learning methods
+- Note: the meaning of "kernel" is different from other methods
 
 # What Is A Good Decision Boundary?
 
@@ -35,9 +34,13 @@ methods”, one of the key area in machine learning
 
 ![ ](./lectures/figs/lec16/goodboundary.png){ width=50% }
 
+\note{Let's say we have this data. How do we draw the decision boundaries?}
+
 # Examples Of Bad Decision Boundaries
 
 ![ ](./lectures/figs/lec16/badboundary.png)
+
+\note{Which points most define where we should draw a boundary?}
 
 # Large-Margin Decision Boundary
 
@@ -132,7 +135,6 @@ methods”, one of the key area in machine learning
 	- Classification can become easier with a proper transformation.
 
 \note{Go over circle inside circle with transformation to polar coordinates.}
-
 
 # Transforming The Data
 
@@ -245,6 +247,9 @@ methods”, one of the key area in machine learning
 	- Non-traditional data like strings and trees can be used as input to SVM, instead of feature vectors
 - Weaknesses
 	- Need to choose a “good” kernel function.
+	- Not generative
+	- Difficult to interpret
+	- Need fully labelled data
 
 # Other Types Of Kernel Methods
 
