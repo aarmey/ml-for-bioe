@@ -53,7 +53,7 @@ layout: page
 - [Final project proposals due 2/11 at 8 pm](https://bruinlearn.ucla.edu/courses/111529/assignments/947467)
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf))
 - Lecture 12: Midterm exam
-- Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due 2/17 at 11:59 pm
+- Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 23rd at 11:59 pm
 
 
 ### Week 7, Feb 14 – 18
@@ -66,7 +66,7 @@ layout: page
   - Reading: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
   - Listening: [Linear Digressions - Hidden Markov Models](https://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](https://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - Lecture: Finish hidden Markov models.
-- Lab: Implementation of HMMs for heart rate monitor wearable, due 3/3 at 11:59 pm
+- Lab: Implementation of HMMs for heart rate monitor wearable, due March 9th at 11:59 pm
 
 ### Week 8, Feb 21 – 25
 
@@ -81,10 +81,11 @@ layout: page
   - [Example Notebook](../public/examples/SVMs-example.ipynb)
   - Listening: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due 3/17 at 11:59 pm
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 23rd at 11:59 pm
 
 ### Week 10, Mar 7 – 11
 
-- Lecture: Project presentations
-- Lab: Further project implementation
-- Final Project, due 3/17 at noon (submit through project Github repository)
+- Lecture: 17: Equity issues in model building and evaluation
+- No lecture on Thursday
+- Lab: Project presentations
+- Final Project, due March 23rd at 11:59 pm (submit through project Github repository)
