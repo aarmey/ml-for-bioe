@@ -29,6 +29,7 @@ The proposal should be less than two pages and describe the following items:
 - What overall approach do you plan to take for the project and why
 - Demonstrate that your project can be finished within a month
 - Estimate the difficulty of your project
+- If in a group, provide a rough plan for how the project will be split up among members
 
 **We are available to discuss your ideas whenever you are ready, and you should discuss your idea with us prior to submitting your proposal.** By the time you submit your proposal you should ensure that you have access to the requisite data. We are happy to help you with this.
 
