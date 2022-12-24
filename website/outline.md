@@ -48,14 +48,14 @@ layout: page
 - Lecture 10: Finish dynamical models
 - Lab: Midterm review, finish selecting project
 
-### Week 6, Feb 7 – 11
+### Week 6, Feb 13 – 17
 
 - [Final project proposals due 2/11 at 8 pm](https://bruinlearn.ucla.edu/courses/111529/assignments/947467)
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf))
 - Lecture 12: Midterm exam
-- Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 23rd at 11:59 pm
+- Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 23rd at 11:59 pm ([repository](https://classroom.github.com/a/7rdchwTD))
 
-### Week 7, Feb 14 – 18
+### Week 7, Feb 20 – 24
 
 - [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf)
   - [Example Notebook](../public/examples/HMMs-example.ipynb)
@@ -65,7 +65,7 @@ layout: page
   - Reading: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
   - Listening: [Linear Digressions - Hidden Markov Models](https://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](https://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - Lecture: Finish hidden Markov models.
-- Lab: Implementation of HMMs for heart rate monitor wearable, due March 9th at 11:59 pm
+- Lab: Implementation of HMMs for heart rate monitor wearable, due March 9th at 11:59 pm ([repository](https://classroom.github.com/a/Dq1vXx0B))
 
 ### Week 8, Feb 27 – Mar 3
 
