@@ -21,7 +21,7 @@ layout: page
 
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf)
   - [Example Notebook](../public/examples/Regularization-Example.ipynb)
-- [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf) (Recording part [1](https://youtu.be/N4afdo1VQB0), [2](https://youtu.be/OdEGD35sO-8))
+- [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
   - [Example Notebook](../public/examples/CrossVal-Example.ipynb)
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Jan 26th at 11:59 pm ([repository](https://classroom.github.com/a/w8FUJ65J))
@@ -30,16 +30,16 @@ layout: page
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
   - [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
-- [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([Recording](https://youtu.be/Rh2SdM2_IIg))
+- [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
 - Lab: Implementation of [Stone et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1301723/), due Feb 2nd at 11:59 pm ([repository](https://classroom.github.com/a/mBMfxykD))
 
 ### Week 4, Jan 30 – Feb 3
 
-- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (Recording part [1](https://youtu.be/mPuV7y5ZRfo), [2](https://youtu.be/1_43nCptm44))
+- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
-- [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf) (Recording part [1](https://youtu.be/C8lb1vnr8OQ), [2](https://youtu.be/kfDwh_elvC8), [3](https://youtu.be/W49gD36Iga4))
+- [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
 - Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/7 at 11:59 pm
 
 ### Week 5, Feb 6 – 10
