@@ -40,11 +40,11 @@ layout: page
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
-- Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due 2/7 at 11:59 pm
+- Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 9th at 11:59 pm ([repository](https://classroom.github.com/a/kjjoAETT))
 
 ### Week 5, Feb 6 – 10
 
-- [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf) (Recording part [1](https://youtu.be/Vzh3qAsBLBo), [2](https://youtu.be/QC32PvWk418))
+- [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
 - Lecture 10: Finish dynamical models
 - Lab: Midterm review, finish selecting project
 
@@ -54,7 +54,6 @@ layout: page
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf))
 - Lecture 12: Midterm exam
 - Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 23rd at 11:59 pm
-
 
 ### Week 7, Feb 14 – 18
 
@@ -68,22 +67,22 @@ layout: page
 - Lecture: Finish hidden Markov models.
 - Lab: Implementation of HMMs for heart rate monitor wearable, due March 9th at 11:59 pm
 
-### Week 8, Feb 21 – 25
+### Week 8, Feb 27 – Mar 3
 
 - [Lecture 13: K-Means Clustering](../public/Wk7-Lecture13.pdf)
   - [Example Notebook](../public/examples/K-Means.ipynb)
 - [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf)
   - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
 
-### Week 9, Feb 28 – Mar 4
+### Week 9, Mar 6 – Mar 10
 
 - [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf)
   - [Example Notebook](../public/examples/SVMs-example.ipynb)
   - Listening: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 23rd at 11:59 pm
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 23rd at 11:59 pm ([repository](https://classroom.github.com/a/X97DHjVz))
 
-### Week 10, Mar 7 – 11
+### Week 10, Mar 13 – 17
 
 - Lecture: 17: Equity issues in model building and evaluation
 - No lecture on Thursday
