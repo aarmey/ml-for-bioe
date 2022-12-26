@@ -47,15 +47,15 @@ layout: page
 - [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
 - Lecture 10: Finish dynamical models
 - Lab: Midterm review, finish selecting project
-- [Link for setting up final project repositories](https://classroom.github.com/a/XZnSBZOL)
-  - Be sure to make your repository as a group!
 
 ### Week 6, Feb 13 – 17
 
-- [Final project proposals due 2/11 at 8 pm](https://bruinlearn.ucla.edu/courses/111529/assignments/947467)
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf))
 - Lecture 12: Midterm exam
 - Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 23rd at 11:59 pm ([repository](https://classroom.github.com/a/7rdchwTD))
+- [Final project proposals due Feb 17th at 5 pm](https://bruinlearn.ucla.edu/courses/153398/assignments/1339392)
+- [Link for setting up final project repositories](https://classroom.github.com/a/XZnSBZOL)
+  - Be sure to make your repository as a group!
 
 ### Week 7, Feb 20 – 24
 
