@@ -47,6 +47,8 @@ layout: page
 - [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
 - Lecture 10: Finish dynamical models
 - Lab: Midterm review, finish selecting project
+- [Link for setting up final project repositories](https://classroom.github.com/a/XZnSBZOL)
+  - Be sure to make your repository as a group!
 
 ### Week 6, Feb 13 – 17
 
