@@ -1,5 +1,5 @@
 ---
-title: Week 1, Lecture 1 - Introduction, statistics review
+title: Introduction, statistics review
 author: Aaron Meyer
 ---
 
@@ -291,10 +291,10 @@ Exponential Distribution
 ~ Describes the time between events in Poisson Processes
 
 Poisson
-~ Stochastic process that counts # of events in some deltaT time frame
+~ Stochastic process that counts events in some time frame
 
 Rayleigh
-~ Measure of vector magnitude within orthogonal direction is independent
+~ Measure of vector magnitude when orthogonal directions are independent
 
 Gamma
 ~ Used in Bayesian statistics, often for modeling waiting times
@@ -309,7 +309,7 @@ Binomial
 ~ Extension of the bernoulli trial, describes the # of successes in a sequence of n-independent binary trials
 
 Multinomial
-~ Extension of binomial when variable can take on more than two states.
+~ Generalization of Binomial for more than two states.
 
 # Distribution moments
 
@@ -335,7 +335,7 @@ Fourth
 
 # Sample statistics
 
-If we sampled a number of times ($n=3$, say) many times, we could build a **sampling** distribution of the statistics (e.g. one for the **sample** mean and one for the **sample** standard deviation).
+If we sampled a number of times ($n=3$, say) many times, we could build a **sampling** distribution of the statistics (e.g., one for the **sample** mean and one for the **sample** standard deviation).
 
 General properties of sampling distributions:
 
@@ -349,11 +349,11 @@ General properties of sampling distributions:
 	- Sample standard deviation is the standard deviation of the mean.
 - When a population distribution is normal, the sampling distribution of the sample statistic is also normal, regardless of $n$.
 - And the central limit theorem states that the sampling distribution can be approximated by a normal distribution when the sample size, $n$, is sufficiently large.
-- Rule of thumb is that $n=30$ is sufficiently large, but there are times when smaller $n$ will suffice. More $n$ is required with the higher the skew.
+- Rule of thumb is that $n=30$ is sufficiently large, but there are times when smaller $n$ will suffice. Greater $n$ is required with higher skew.
 
 # Hypothesis Testing
 
-In hypothesis testing we state a null hypothesis that we will test and if it’s likelihood is less than some value, then we reject it.
+In hypothesis testing, we state a null hypothesis that we will test; if its likelihood is less than some value, then we reject it.
 
 For example:
 
@@ -368,8 +368,8 @@ For example:
 
 When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 
-- Ho: Assume $\mu=\mu_0$ then calculate t. $$t = \frac{\overline{x} - \mu_0}{s/\sqrt{n}}$$
-	- Can think of t designed to be $z/s$, where it’s sensitive to the magnitude of the difference to the alternate hypothesis and scaled to control for the spread.
+- $H_0$: Assume $\mu=\mu_0$ then calculate t. $$t = \frac{\overline{x} - \mu_0}{s/\sqrt{n}}$$
+	- Can think of $t$ designed to be $z/s$, where it’s sensitive to the magnitude of the difference to the alternate hypothesis and scaled to control for the spread.
 - When comparing the differences between two means: (null hypothesis the means are the same, variances/sizes assumed equal). $$t=\frac{{\bar{X}}_1-{\bar{X}}_2}{\sqrt{\frac{s_{X_1}^2+s_{X_2}^2}{n}}}$$
 
 # Effect size
@@ -378,7 +378,7 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 	- If using a direct guassian, the estimation of the mean scales with $1 / \sqrt{n}$
 	- Then p-values become significant even though the differences in means is small
 - Exercise caution and report the effect size
-	- For example a 1% difference or a 50% difference in the means
+	- For example, a 1% or 50% difference in the means
 
 # Kolmogorov-Smirnov Test
 
