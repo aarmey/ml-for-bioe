@@ -7,13 +7,12 @@ author: Aaron Meyer
 
 ## Lecture:
 
-- Tuesdays/Thursdays 2:00–3:50pm
-- Boelter Hall 5273
+- Tuesdays/Thursdays 4:00–5:50 pm
+- Dodd Hall 161
 
 ## Lab
 
-- Fridays, 2:00–3:50pm
-- Boelter Hall 4413
+- Varies by section—check the course schedule.
 
 # Lecture Slides
 
@@ -32,13 +31,13 @@ author: Aaron Meyer
 
 ## Prof. Meyer
 
-- 9–9:45 am Friday: <https://ucla.zoom.us/my/aarmey>
+- Thursday, 2:45–3:30 pm in Eng V 4121G
 - I will usually also stick around after class and am happy to answer questions.
 
 ## TAs
 
 - By appointment
-- Brian will have a regular time setup soon
+- Will have a regular time setup soon
 
 # Learning Goals:
 
@@ -76,13 +75,6 @@ By the end of the course you will learn how to:
 ~ Class Participation
 
 # Labs
-
-## Where
-
-- Fridays, 2:00-3:50pm
-- Boelter Hall 4413
-
-## What
 
 - These are mandatory sessions.
 - You will have an opportunity to get started on each week's implementation and/or work on your project.
