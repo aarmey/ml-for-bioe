@@ -100,7 +100,7 @@ By the end of the course you will learn how to:
 
 - You will take data from a scientific paper, and implement a machine learning method using best practices.
 - A list of papers with is provided on the website as suggestions.
-- You may also search out options that would be of interest to you.
+- Absolutely go find ideas that interest you!
 - More details to come.
 - First deadline will be to pick a project topic.
 
@@ -177,19 +177,19 @@ FILL IN
 	- Only provides basic characterization
 	- Leads to "context-dependent" function
 
-# For many tasks, machine learning can perform better than a human would
+# Machine learning can outperform a human for some tasks
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig1.png){height=100%}
 
-# For many tasks, machine learning can perform better than a human would
+# Machine learning can outperform a human for some tasks
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig2.png){height=60%}
 
-# For many tasks, machine learning can perform better than a human would
+# Machine learning can outperform a human for some tasks
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig3.pdf)
 
-# For many tasks, machine learning can perform better than a human would
+# Machine learning can outperform a human for some tasks
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig4.png){height=60%}
 
@@ -219,8 +219,8 @@ A set of trials: HTHHHTTHHTT
 
 Two possibilities:
 
-- Fair coin
-- Biased (Heads 60%, Tails 40%)
+- Fair coin (heads 50%, tails 50%)
+- Biased (heads 60%, tails 40%)
 
 \note[item]{Run through example.
 \item What is the data here?
@@ -331,7 +331,7 @@ Fourth
 	- How might your measurements need to change with changes in variance?
 	- What are these values for a normal distribution?
 
-<https://www.che.utah.edu/~tony/course/material/Statistics/12_descriptive.php>
+<https://gregorygundersen.com/blog/2020/04/11/moments/>
 
 # Sample statistics
 
