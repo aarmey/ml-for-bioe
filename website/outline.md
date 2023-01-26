@@ -31,7 +31,7 @@ layout: page
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
   - [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
-- [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
+- [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([recorded lecture](https://youtu.be/Rh2SdM2_IIg))
 - Lab: Implementation of [Stone et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1301723/), due Feb 2nd at 11:59 pm ([repository](https://classroom.github.com/a/mBMfxykD))
 
 ### Week 4, Jan 30 – Feb 3
