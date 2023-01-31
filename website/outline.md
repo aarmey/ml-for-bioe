@@ -36,7 +36,7 @@ layout: page
 
 ### Week 4, Jan 30 – Feb 3
 
-- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
+- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (recorded lecture: [1](https://youtu.be/mPuV7y5ZRfo), [2](https://youtu.be/1_43nCptm44))
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
