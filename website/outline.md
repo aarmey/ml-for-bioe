@@ -32,7 +32,7 @@ layout: page
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
   - [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([recorded lecture](https://youtu.be/Rh2SdM2_IIg))
-- Lab: Implementation of [Stone et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1301723/), due Feb 2nd at 11:59 pm ([repository](https://classroom.github.com/a/mBMfxykD))
+- Lab: Implementation of [Stone et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1301723/), due Feb 7th at 11:59 pm ([repository](https://classroom.github.com/a/mBMfxykD))
 
 ### Week 4, Jan 30 – Feb 3
 
@@ -41,7 +41,7 @@ layout: page
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
-- Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 9th at 11:59 pm ([repository](https://classroom.github.com/a/kjjoAETT))
+- Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 14th at 11:59 pm ([repository](https://classroom.github.com/a/kjjoAETT))
 
 ### Week 5, Feb 6 – 10
 
