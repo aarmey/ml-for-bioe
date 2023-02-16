@@ -8,15 +8,7 @@ layout: page
 In this project, you have two options for the general route you can take:
 
 1. As a first option, you may select a bioengineering paper that implements a computational analysis we have learned about from the literature. You will reimplement this analysis with thorough testing and documentation. In your final report, you should include a discussion about any elements that presented a challenge during your reimplementation, or discrepancies you found. Lastly, you should identify a creative extension of the analysis and implement it.
-2. Alternatively, you may identify a set of data and corresponding analysis that has not yet been performed. This can be more exploratory in nature. You will implement this analysis with testing and documentation. In your final report, you should discuss whether/how the type of data influenced the analysis that was possible, the findings and limitations of your analysis, and what might be ways to validate your findings.
-
-Some repositories with potential datasets are listed [below](#final-project-source-ideas). Here are also a few project ideas from the literature:
-
-- Reimplement analysis in [Sanford et al](https://elifesciences.org/articles/59388), or explore using PCA with (favoring multiplicative effects) or without (favoring additive effects) log-transformed data.
-- Build a model predicting latent or active Tb infection from antibody measurements in [Lu et al](https://dx.doi.org/10.1016%2Fj.cell.2016.08.072).
-- Explore the measurements in [Boudreau et al](https://www.jci.org/articles/view/129520) by PCA.
-- Build a model that predicts antibody effectiveness against Ebola from measurements in [Saphire et al](https://www.nature.com/articles/s41590-018-0233-9).
-- Build and interpret a model predicting vaccine effectiveness from [Chung et al](https://stm.sciencemag.org/content/6/228/228ra38.full).
+2. Alternatively, you may identify a set of data and corresponding analysis that has not yet been performed. This can be more exploratory in nature. You will implement this analysis with testing and documentation. In your final report, you should discuss whether/how the type of data influenced the analysis that was possible, the findings and limitations of your analysis, and what might be ways to validate your findings. Some repositories with potential datasets are listed [below](#final-project-source-ideas).
 
 There are no restrictions on the programming language or packages you use. While this is expected to be an individual project by default, we will consider up to four person teams so long as this is reflected by the scope of the project. If in a team, your proposal, final project, and final presentation should cover how the project was divided.
 
