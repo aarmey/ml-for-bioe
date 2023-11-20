@@ -34,8 +34,6 @@ layout: page
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([recorded lecture](https://youtu.be/Rh2SdM2_IIg))
 - Lab: Implementation of [Stone et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1301723/), due Feb 1st at 11:59 pm ([repository](https://classroom.github.com/a/vDNzClZ4))
 
-<!-- DONE TO HERE -->
-
 ### Week 4, Jan 29 – Feb 2
 
 - [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (recorded lecture: [1](https://youtu.be/mPuV7y5ZRfo), [2](https://youtu.be/1_43nCptm44))
@@ -43,7 +41,7 @@ layout: page
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
-- Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 14th at 11:59 pm ([repository](https://classroom.github.com/a/kjjoAETT))
+- Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 8th at 11:59 pm ([repository](https://classroom.github.com/a/mL8L54Co))
 
 ### Week 5, Feb 5 – 9
 
@@ -55,12 +53,29 @@ layout: page
 
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf), [W22](../files/midterm-W22.pdf))
 - Lecture 12: Midterm exam
-- Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 23rd at 11:59 pm ([repository](https://classroom.github.com/a/7rdchwTD))
-- [Final project proposals due Feb 17th at 5 pm](https://bruinlearn.ucla.edu/courses/153398/assignments/1339392)
-- [Link for setting up final project repositories](https://classroom.github.com/a/XZnSBZOL)
+- Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 22nd at 11:59 pm ([repository](https://classroom.github.com/a/2ivewdFc))
+- [Final project proposals due Feb 16th at 11:59 pm *update link*](https://bruinlearn.ucla.edu/courses/153398/assignments/1339392)
+- [Link for setting up final project repositories](https://classroom.github.com/a/3b2CrihQ)
   - Be sure to make your repository as a group!
 
+<!-- DONE TO HERE -->
+
 ### Week 7, Feb 19 – 23
+
+- [Lecture 13: Equitable application of models, K-Means clustering](../public/Wk7-Lecture13.pdf)
+  - [Example Notebook](../public/examples/K-Means.ipynb)
+- [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf)
+  - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
+
+### Week 8, Feb 26 – Mar 1
+
+- [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf)
+  - [Example Notebook](../public/examples/SVMs-example.ipynb)
+  - Listening: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
+  - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 7th at 11:59 pm (repository link to be added)
+
+### Week 9, Mar 4 – Mar 8
 
 - [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf)
   - [Example Notebook](../public/examples/HMMs-example.ipynb)
@@ -70,26 +85,12 @@ layout: page
   - Reading: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
   - Listening: [Linear Digressions - Hidden Markov Models](https://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](https://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - Lecture: Finish hidden Markov models.
-- Lab: Implementation of HMMs for heart rate monitor wearable, due March 9th at 11:59 pm ([repository](https://classroom.github.com/a/Dq1vXx0B))
-
-### Week 8, Feb 26 – Mar 1
-
-- [Lecture 13: K-Means Clustering](../public/Wk7-Lecture13.pdf)
-  - [Example Notebook](../public/examples/K-Means.ipynb)
-- [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf)
-  - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
-
-### Week 9, Mar 4 – Mar 8
-
-- [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf)
-  - [Example Notebook](../public/examples/SVMs-example.ipynb)
-  - Listening: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
-  - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 23rd at 11:59 pm ([repository](https://classroom.github.com/a/X97DHjVz))
 
 ### Week 10, Mar 11 – 15
 
-- Lecture: 17: Equity issues in model building and evaluation
-- No lecture on Thursday
+- Lecture 19: Future directions, neural networks, and more
+- Lecture 20: Selected project presentations
 - Lab: Project presentations
-- Final Project, due March 23rd at 11:59 pm (submit through project Github repository)
+- Final Project, due March 21st at 11:59 pm
+  - Please submit everything through the project Github repository.
+  - The link for setting up this repository is up in week 6.
