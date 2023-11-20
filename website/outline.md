@@ -45,13 +45,13 @@ layout: page
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
 - Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 14th at 11:59 pm ([repository](https://classroom.github.com/a/kjjoAETT))
 
-### Week 5, Feb 6 – 10
+### Week 5, Feb 5 – 9
 
 - [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
 - Lecture 10: Finish dynamical models
 - Lab: Midterm review, finish selecting project
 
-### Week 6, Feb 13 – 17
+### Week 6, Feb 12 – 16
 
 - Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf), [W22](../files/midterm-W22.pdf))
 - Lecture 12: Midterm exam
@@ -60,7 +60,7 @@ layout: page
 - [Link for setting up final project repositories](https://classroom.github.com/a/XZnSBZOL)
   - Be sure to make your repository as a group!
 
-### Week 7, Feb 20 – 24
+### Week 7, Feb 19 – 23
 
 - [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf)
   - [Example Notebook](../public/examples/HMMs-example.ipynb)
@@ -72,14 +72,14 @@ layout: page
 - Lecture: Finish hidden Markov models.
 - Lab: Implementation of HMMs for heart rate monitor wearable, due March 9th at 11:59 pm ([repository](https://classroom.github.com/a/Dq1vXx0B))
 
-### Week 8, Feb 27 – Mar 3
+### Week 8, Feb 26 – Mar 1
 
 - [Lecture 13: K-Means Clustering](../public/Wk7-Lecture13.pdf)
   - [Example Notebook](../public/examples/K-Means.ipynb)
 - [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf)
   - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
 
-### Week 9, Mar 6 – Mar 10
+### Week 9, Mar 4 – Mar 8
 
 - [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf)
   - [Example Notebook](../public/examples/SVMs-example.ipynb)
@@ -87,7 +87,7 @@ layout: page
   - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 - Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 23rd at 11:59 pm ([repository](https://classroom.github.com/a/X97DHjVz))
 
-### Week 10, Mar 13 – 17
+### Week 10, Mar 11 – 15
 
 - Lecture: 17: Equity issues in model building and evaluation
 - No lecture on Thursday
