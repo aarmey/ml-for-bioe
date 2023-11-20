@@ -6,17 +6,18 @@ layout: page
 ### Week 1, Jan 8 – 12
 
 - [Lecture 1: Statistics review](../public/Wk1-Lecture1.pdf)
-  - Reading: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
-  - Listening: [Linear Digressions: The Normal Distribution and the Central Limit Theorem](https://lineardigressions.com/episodes/2018/12/9/the-normal-distribution-and-the-central-limit-theorem)
+  - 📖: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
+  - 👂: [Linear Digressions: The Normal Distribution and the Central Limit Theorem](https://lineardigressions.com/episodes/2018/12/9/the-normal-distribution-and-the-central-limit-theorem)
+  - 📺: [But what is the Central Limit Theorem?](https://www.youtube.com/watch?v=zeJD6dqJ5lo)
 - [Lecture 2: Fitting & Regression](../public/Wk1-Lecture2.pdf)
   - [Example Notebook](../public/examples/OLS-Example.ipynb)
-  - Listening: [Linear Digressions: The assumptions of ordinary least squares](https://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
-  - Reading: [Points of Significance: Simple linear regression](https://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
-  - Listening: [Linear Digressions: Convex (and non-convex) optimization](https://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
+  - 👂: [Linear Digressions: The assumptions of ordinary least squares](https://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
+  - 📖: [Points of Significance: Simple linear regression](https://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
+  - 👂: [Linear Digressions: Convex (and non-convex) optimization](https://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
 - Lab: Programming and Git Primer, due Jan 18th at 11:59 pm ([repository](https://classroom.github.com/a/aw_Sfcs9))
   - Recommended: [Git & Github Fundamentals Tutorial](https://classroom.github.com/a/un0wW6AK)
-  - Listening: [Linear Digressions: Jupyter Notebooks, A Data Scientist's Best Friend](https://lineardigressions.com/episodes/2017/8/20/jupyter-notebooks-a-data-scientists-best-friend)
-  - Listening: [Linear Digressions: Git for Data Scientists](https://lineardigressions.com/episodes/2018/6/3/git-for-data-scientists)
+  - 👂: [Linear Digressions: Jupyter Notebooks, A Data Scientist's Best Friend](https://lineardigressions.com/episodes/2017/8/20/jupyter-notebooks-a-data-scientists-best-friend)
+  - 👂: [Linear Digressions: Git for Data Scientists](https://lineardigressions.com/episodes/2018/6/3/git-for-data-scientists)
 
 ### Week 2, Jan 15 – 19
 
@@ -24,7 +25,7 @@ layout: page
   - [Example Notebook](../public/examples/Regularization-Example.ipynb)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
   - [Example Notebook](../public/examples/CrossVal-Example.ipynb)
-- Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
+- 📖: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Jan 26th at 11:59 pm ([repository](https://classroom.github.com/a/6QVOpFUh))
 
 ### Week 3, Jan 22 – 26
@@ -39,7 +40,7 @@ layout: page
 - [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (recorded lecture: [1](https://youtu.be/mPuV7y5ZRfo), [2](https://youtu.be/1_43nCptm44))
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
   - If you would like a visual refresh of linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-  - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
+  - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
 - Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 8th at 11:59 pm ([repository](https://classroom.github.com/a/mL8L54Co))
 
@@ -71,19 +72,19 @@ layout: page
 
 - [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf)
   - [Example Notebook](../public/examples/SVMs-example.ipynb)
-  - Listening: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
-  - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
+  - 👂: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
+  - 👂: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 - Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 7th at 11:59 pm (repository link to be added)
 
 ### Week 9, Mar 4 – Mar 8
 
 - [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf)
   - [Example Notebook](../public/examples/HMMs-example.ipynb)
-  - Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
-  - Reading: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
-  - Reading: [Markov Models—Hidden Markov models](https://www.nature.com/articles/s41592-019-0532-6)
-  - Reading: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
-  - Listening: [Linear Digressions - Hidden Markov Models](https://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](https://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
+  - 📖: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
+  - 📖: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
+  - 📖: [Markov Models—Hidden Markov models](https://www.nature.com/articles/s41592-019-0532-6)
+  - 📖: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
+  - 👂: [Linear Digressions - Hidden Markov Models](https://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](https://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
 - Lecture: Finish hidden Markov models.
 
 ### Week 10, Mar 11 – 15
