@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     # Build products
     - name: Build products
@@ -28,10 +28,10 @@ jobs:
       with:
         name: lectures
         path: lectures/*.pdf
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      if: github.ref == 'refs/heads/master'
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
       with:
-        branch: gh-pages # The branch the action should deploy to.
-        folder: website/_site # The folder the action should deploy.
-        single-commit: true
+        path: 'website/_site'
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
