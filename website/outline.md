@@ -3,7 +3,7 @@ title: Course outline
 layout: page
 ---
 
-### Week 1, Jan 9 – 13
+### Week 1, Jan 8 – 12
 
 - [Lecture 1: Statistics review](../public/Wk1-Lecture1.pdf)
   - Reading: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
@@ -13,28 +13,30 @@ layout: page
   - Listening: [Linear Digressions: The assumptions of ordinary least squares](https://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
   - Reading: [Points of Significance: Simple linear regression](https://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
   - Listening: [Linear Digressions: Convex (and non-convex) optimization](https://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
-- Lab: Programming and Git Primer, due Jan 19th at 11:59 pm ([repository](https://classroom.github.com/a/0OOeWOaZ))
+- Lab: Programming and Git Primer, due Jan 18th at 11:59 pm ([repository](https://classroom.github.com/a/aw_Sfcs9))
   - Recommended: [Git & Github Fundamentals Tutorial](https://classroom.github.com/a/xwQwZuMX)
   - Listening: [Linear Digressions: Jupyter Notebooks, A Data Scientist's Best Friend](https://lineardigressions.com/episodes/2017/8/20/jupyter-notebooks-a-data-scientists-best-friend)
   - Listening: [Linear Digressions: Git for Data Scientists](https://lineardigressions.com/episodes/2018/6/3/git-for-data-scientists)
 
-### Week 2, Jan 16 – 20
+### Week 2, Jan 15 – 19
 
 - [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf)
   - [Example Notebook](../public/examples/Regularization-Example.ipynb)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
   - [Example Notebook](../public/examples/CrossVal-Example.ipynb)
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
-- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Jan 26th at 11:59 pm ([repository](https://classroom.github.com/a/w8FUJ65J))
+- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Jan 26th at 11:59 pm ([repository](https://classroom.github.com/a/6QVOpFUh))
 
-### Week 3, Jan 23 – 27
+### Week 3, Jan 22 – 26
 
 - [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
   - [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([recorded lecture](https://youtu.be/Rh2SdM2_IIg))
-- Lab: Implementation of [Stone et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1301723/), due Feb 7th at 11:59 pm ([repository](https://classroom.github.com/a/mBMfxykD))
+- Lab: Implementation of [Stone et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1301723/), due Feb 1st at 11:59 pm ([repository](https://classroom.github.com/a/vDNzClZ4))
 
-### Week 4, Jan 30 – Feb 3
+<!-- DONE TO HERE -->
+
+### Week 4, Jan 29 – Feb 2
 
 - [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (recorded lecture: [1](https://youtu.be/mPuV7y5ZRfo), [2](https://youtu.be/1_43nCptm44))
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
