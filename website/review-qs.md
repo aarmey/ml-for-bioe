@@ -106,7 +106,7 @@ layout: page
 5. What are the eigenvalues and eigenvectors of a matrix?
 6. What is the behavior of an ODE system if its eigenvalues are all positive and real? How about negative and real?
 7. What is the behavior of an ODE system if all its eigenvalues are imaginary and positive? How about imaginary and negative?
-8. What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and negative, the other is imaginary)?
+8. What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and positive, the other is real and negative)?
 9. How can you fit an ODE model to a series of measurements over time?
 10. How could you constrain an ODE system so that you only fit parameters that have oscillation?
 
