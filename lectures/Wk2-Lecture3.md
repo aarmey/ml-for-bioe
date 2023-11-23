@@ -126,43 +126,12 @@ author: Aaron Meyer
 	- No objective basis; heavily criticized by many
 - Standard practice now is to use cross-validation (next lecture!)
 
-<!--# Bayesian framework
+# A few notes on ridge regression
 
-- Suppose we imposed a multivariate Gaussian prior for β: $$\boldsymbol\beta \sim N \left( \mathbf{0}, \frac{1}{2p} \mathbf{I}_p \right)$$
-- Then the posterior mean (and also posterior mode) of β is: $$\boldsymbol\beta_\lambda^{ridge} = (\mathbf{Z}^T \mathbf{Z} + \lambda \mathbf{I}_p)^{-1} \mathbf{Z}^T \mathbf{y}$$
-
-# Computing the ridge solutions via the SVD
-
-- Recall $\hat{\boldsymbol\beta}_\lambda^{ridge} = (\mathbf{Z}^T \mathbf{Z} + \lambda \mathbf{I}_p)^{-1} \mathbf{Z}^T \mathbf{y}$
-- When computing $\hat{\boldsymbol\beta}_\lambda^{ridge}$ numerically, matrix inversion is avoided:
-	- Inverting $\mathbf{Z}^T \mathbf{Z}$ can be computationally expensive: $O(p^3)$
-- Rather, the *singular value decomposition* is utilized; that is, $$\mathbf{Z} = \mathbf{UDV}^T,$$ where:
-	- $\mathbf{U} = (\mathbf{u}_1,\mathbf{u}_2,\ldots,\mathbf{u}_p)$ is an $n\times p$ orthogonal matrix
-	- $\mathbf{D} = \mathrm{diag}(d_1,d_2,\ldots, \geq d_p)$ is a $p\times p$ diagonal matrix consisting of the singular values $d_1 \geq d_2 \geq \ldots d_p \geq 0$
-	- $\mathbf{V}^T =(\mathbf{v}_1^T,\mathbf{v}_2^T,\ldots,\mathbf{v}_p^T)$ is a $p\times p$ matrix orthogonal matrix-->
-
-# Orthonormal **Z** in ridge regression
-
-- If **Z** is orthonormal, then $\mathbf{Z}^T \mathbf{Z}=\mathbf{I}_p$, then a couple of closed form properties exist
-- Let $\hat{\boldsymbol\beta}^{ls}$ denote the LS solution for our orthonormal **Z**; then $$\hat{\boldsymbol\beta}_\lambda^{ridge} = \frac{1}{1 + \lambda} \hat{\boldsymbol\beta}^{ls}$$
-- The optimal choice of λ minimizing the expected prediction error is: $$\lambda^{*} = \frac{p\sigma^2}{\sum_{j=1}{p} \beta_j^2},$$ where $\boldsymbol\beta = (\beta_1,\beta_2,\ldots,\beta_p)$ is the true coefficient vector
-
-# Smoother matrices and effective degrees of freedom
-
-- A **smoother matrix S** is a linear operator satisfying: $$\mathbf{\hat{y}} = \mathbf{Sy}$$
-	- Smoothers put the "hats" on **y**
-	- So the fits are a linear combination of the $y_i$'s, $i = 1, \ldots, n$
-- **Example:** In ordinary least squares, recall the hat matrix $$\mathbf{H} = \mathbf{Z}(\mathbf{Z}^T \mathbf{Z})^{-1}\mathbf{Z}^T$$
-	- For rank(**Z**) = p, we know that tr(**Z**) = p, which is how many degrees of freedom are used in the model
-- By analogy, define the **effective degrees of freedom** (or effective number of parameters) for a smoother to be: $$df(\mathbf{S}) = tr(\mathbf{S})$$
-
-# Degrees of freedom for ridge regression
-
-- In ridge regression, the fits are given by: $$\hat{\mathbf{y}} = \mathbf{Z}(\mathbf{Z}^\intercal \mathbf{Z}+\lambda \mathbf{I}_p)^{-1} \mathbf{Z}^T\mathbf{y}$$
-- So the smoother or "hat" matrix in ridge takes the form: $$\mathbf{S}_\lambda = \mathbf{Z} (\mathbf{Z}^\intercal \mathbf{Z} + \lambda \mathbf{I}_p)^{-1} \mathbf{Z}^T$$
-- So the effective degrees of freedom in ridge regression are given by: $$df(\lambda) =tr(S_\lambda) = tr[\mathbf{Z}(\mathbf{Z}^\intercal \mathbf{Z}+\lambda \mathbf{I}_p)^{-1}\mathbf{Z}^T] = \sum_{j=1}^p \frac{d_j^2}{d_j^2 + \lambda}$$
-	- Note that $df(\lambda)$ is monotone decreasing in $\lambda$
-	- Question: What happens when $\lambda = 0$?
+- The regularization decreases the degrees of freedom of the model
+	- So you still cannot fit a model with more degrees of freedom than points
+- This can be shown by examination of the smoother matrix
+	- We won't do this—it's a complicated argument
 
 # How do we choose λ?
 
@@ -235,16 +204,6 @@ author: Aaron Meyer
 	- But both ridge regression and the LASSO have solutions
 	- Regularization tends to reduce prediction error
 
-<!--# Variable selection
-
-- The ridge and LASSO solutions are indexed by the continuous parameter λ:
-- Variable selection in least squares is “discrete”:
-	- Perhaps consider “best” subsets, which is of order O(2p) (combinatorial explosion – compare to ridge and LASSO)
-	- Stepwise selection
-		- In stepwise procedures, a new variable may be added into the model even with a miniscule improvement in R2
-		- When applying stepwise to a perturbation of the data, probably have different set of variables enter into the model at each stage
-- Many model selection techniques based on Mallow’s Cp, AIC, and BIC-->
-
 <!-- 48 -->
 
 # More comments on variable selection
@@ -275,21 +234,15 @@ author: Aaron Meyer
 
 <!-- 51 -->
 
-# S-sparsity and Oracles
+# But do these methods pick the right/true variables?
 
 - Suppose that only $S$ elements of $\beta$ are non-zero
-	- Candès and Tao call this $S$-sparsity
 - Now suppose we had an "Oracle" that told us which components of the $\beta = (\beta_1,\beta_2,\ldots,\beta_p)$ are truly non-zero
 - Let $\beta^{*}$ be the least squares estimate of this "ideal" estimator:
 	- So $\beta^{*}$ is 0 in every component that $\beta$ is 0
 	- The non-zero elements of $\beta^{*}$ are computed by regressing $\mathbf{y}$ on only the $S$ important covariates
-
-# The Danzig Selector
-
-- Candès and Tao developed the Dantzig selector $\hat{\beta}^{Dantzig}$: $$\min \norm{\beta}_{l_1} \mathrm{s.t.} \norm{\mathbf{Z}_j^\intercal \mathbf{r}}_{l_{\infty}} \leq (1 + t^{-1})\sqrt{2 \log p} \cdot \sigma$$
-	- Here, $\mathbf{r}$ is the residual vector and $t>0$ is a scalar
-- They showed that with high probability, $$\norm{\hat{\beta}^{Dantzig} - \beta}^2 = O(\log p) \mathop{\mathbb{E}}(\norm{\beta^{*} - \beta}^2)$$
-- So the Dantzig selector does comparably well as someone who was told which $S$ variables to regress on
+- It turns out we get *really* close to this cheating solution without cheating!
+	- Candes & Tao. Ann. Statist. 35 (6) 2313–2351, December 2007.
 
 # Example - Predicting Drug Response
 
@@ -309,78 +262,7 @@ author: Aaron Meyer
 
 # Implementation
 
-```python
-import numpy as np, matplotlib.pyplot as plt
-from sklearn.metrics import r2_score
-from sklearn.linear_model import Lasso, ElasticNet
-
-# Generate some sparse data to play with
-n_samples, n_features = 50, 200
-X = np.random.randn(n_samples, n_features)
-coef = 3 * np.random.randn(n_features)
-inds = np.arange(n_features)
-np.random.shuffle(inds)
-coef[inds[10:]] = 0  # sparsify coef
-y = np.dot(X, coef)
-
-# add noise
-y += 0.01 * np.random.normal(size=n_samples)
-
-# Split data in train set and test set
-n_samples = X.shape[0]
-X_train, y_train = X[:n_samples // 2], y[:n_samples // 2]
-X_test, y_test = X[n_samples // 2:], y[n_samples // 2:]
-#...
-```
-
-# Implementation
-
-```python
-#...
-# Split data in train set and test set
-n_samples = X.shape[0]
-X_train, y_train = X[:n_samples // 2], y[:n_samples // 2]
-X_test, y_test = X[n_samples // 2:], y[n_samples // 2:]
-
-# Lasso
-alpha = 0.1
-lasso = Lasso(alpha=alpha)
-
-y_pred_lasso = lasso.fit(X_train, y_train).predict(X_test)
-r2_score_lasso = r2_score(y_test, y_pred_lasso)
-
-# ElasticNet
-enet = ElasticNet(alpha=alpha, l1_ratio=0.7)
-
-y_pred_enet = enet.fit(X_train, y_train).predict(X_test)
-r2_score_enet = r2_score(y_test, y_pred_enet)
-#...
-```
-
-# Implementation
-
-```python
-#...
-# ElasticNet
-enet = ElasticNet(alpha=alpha, l1_ratio=0.7)
-
-y_pred_enet = enet.fit(X_train, y_train).predict(X_test)
-r2_score_enet = r2_score(y_test, y_pred_enet)
-
-plt.plot(enet.coef_, color='lightgreen', linewidth=2,
-         label='Elastic net coefficients')
-plt.plot(lasso.coef_, color='gold', linewidth=2,
-         label='Lasso coefficients')
-plt.plot(coef, '--', color='navy', label='original coefficients')
-plt.legend(loc='best')
-plt.title("Lasso R^2: %f, Elastic Net R^2: %f"
-          % (r2_score_lasso, r2_score_enet))
-plt.show()
-```
-
-# Implementation
-
-![ ](./lectures/figs/lec3/sklearn.png){width=70%}
+- The notebook can be found on the course website.
 
 # Further Reading
 
