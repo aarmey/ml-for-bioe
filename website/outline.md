@@ -54,7 +54,9 @@ layout: page
 
 ### Week 6, Feb 12 – 16
 
-- Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf), [W22](../files/midterm-W22.pdf))
+- Lecture 11: Midterm review
+  - Previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf), [W22](../files/midterm-W22.pdf)
+  - 📺: [Pre-recorded versions of lectures from 2020](https://www.youtube.com/playlist?list=PLIo39hxQkqRbqu-wwSNQ_v7BjlyTw3eUw)
 - Lecture 12: Midterm exam
 - Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 22nd at 11:59 pm ([repository](https://classroom.github.com/a/2ivewdFc))
 - [Final project proposals due Feb 16th at 11:59 pm](https://bruinlearn.ucla.edu/courses/176183/assignments/1510658)
