@@ -8,7 +8,7 @@ author: Aaron Meyer
 ## Lecture:
 
 - Tuesdays/Thursdays 4:00–5:50 pm
-- Dodd Hall 161
+- Boelter Hall 161
 
 ## Lab
 
@@ -17,27 +17,32 @@ author: Aaron Meyer
 # Lecture Slides
 
 - Lecture slides will be posted on the course website.
-- I'll try to finalize them by the night before, so you can print them out if you want.
-- The slides posted the night before will *not* be everything, but will include space to fill out missing elements during class.
+- They will be finalized by the night before so you can print them out if you want.
+- The slides are *not* everything, but will include space to fill out missing elements during class.
 
 # Textbook / Other Course Materials
 
 - There is no textbook for this course.
 - I will post related readings prior to each lecture.
 - These will either broaden the scope of material covered in class, or provide critical background.
-- I'll make it clear which is the case.
+- I will make it clear if the material is more than optional.
 
 # Support / Office Hours
 
 ## Prof. Meyer
 
-- Thursday, 2:45–3:30 pm in Eng V 4121G
-- I will usually also stick around after class and am happy to answer questions.
+- Thursday, 1–1:55 pm in Eng V 4121G
+- I will usually also stick around after class and am happy to answer questions
 
 ## TAs
 
 - By appointment
-- Will have a regular time setup soon
+- Will have regular times setup soon
+
+## Other
+
+- Slack channels allow for quick help from both myself and the TAs
+- Please use public/shared channels if possible, so others can see the questions
 
 # Learning Goals:
 
@@ -71,8 +76,11 @@ By the end of the course you will learn how to:
 30%
 ~ Midterm
 
-20%
+10%
 ~ Class Participation
+
+10%
+~ Lab Participation
 
 # Labs
 
@@ -86,15 +94,15 @@ By the end of the course you will learn how to:
 - These are meant to challenge you to become comfortable applying the material.
 	- Document your effort
 	- Get started early
-	- Seek answers to your questions in office hours and lab
+	- Seek answers to your questions in office hours, in lab, or on Slack!
 
 # Project
 
 - You will take data from a scientific paper, and implement a machine learning method using best practices.
-- A list of papers with is provided on the website as suggestions.
+- A list of papers and data repositories is provided on the website as suggestions.
 - Absolutely go find ideas that interest you!
 - More details to come.
-- First deadline will be to pick a project topic.
+- First deadline will be in week 6 to pick a project topic.
 
 # Exams
 
@@ -103,13 +111,13 @@ By the end of the course you will learn how to:
 
 # Keys to Success
 
-- Participate in an engaged manner with all in-class and take-home activities.
+- Participate in an engaged manner with in-class and take-home activities.
 - Turn in assignments on time.
 - Work through activities, reading, and problems to ensure your understanding of the material.
 
 If you do these three things, you will do well.
 
-\note[item]{Only second time through, so interested in calibration
+\note[item]{Extensive changes this year, so I am interested in your feedback
 \item If you aren't famiilar with a term, guaranteed we should review}
 
 # Introduction
@@ -136,7 +144,10 @@ What we will cover spans a range of fields:
 - Statistics (the model)
 
 \note[item]{Makes this material challenging.
-\item Also rewarding, frontier of methods.}
+\item Also rewarding, frontier of methods.
+\item Stop and talk about why statistics can be hard.
+\item One, students haven't seen it before.
+\item Two, it has both a mathematical and philosophical element.}
 
 # Why do we need these things to learn about the world?
 
