@@ -7,8 +7,8 @@ author: Aaron Meyer
 
 ## Lecture:
 
-- Tuesdays/Thursdays 4:00–5:50 pm
-- Boelter Hall 161
+- Tuesdays/Thursdays, 10–11:50 am
+- Boelter Hall 5249
 
 ## Lab
 
