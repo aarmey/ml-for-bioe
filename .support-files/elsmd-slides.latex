@@ -41,7 +41,7 @@ $endif$
 \setbeamerfont{quote}{shape=\upshape}
 
 \setsansfont{CMU Sans Serif}
-\setmonofont{CMU Typewriter}
+\setmonofont{CMU Typewriter Text}
 
 % eliminate silly beamer navigation line at bottom of slides
 % optionally replace with 3 / 25 little number
