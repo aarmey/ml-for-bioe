@@ -18,7 +18,7 @@ concurrency:
 jobs:
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-23.04
 
     steps:
     - uses: actions/checkout@v4
@@ -40,9 +40,11 @@ jobs:
         name: lectures
         path: lectures/*.pdf
     - name: Upload artifact
+      if: github.ref == 'refs/heads/master'
       uses: actions/upload-pages-artifact@v2
       with:
         path: 'website/_site'
     - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/master'
       id: deployment
       uses: actions/deploy-pages@v2
