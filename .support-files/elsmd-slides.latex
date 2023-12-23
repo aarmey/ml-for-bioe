@@ -4,6 +4,7 @@
 \documentclass[14pt$if(handout)$handout,$endif$$if(beamer)$ignorenonframetext,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 
 \usepackage{amssymb,amsmath,microtype}
+\usepackage{fontspec}
 \usepackage[mathletters]{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
@@ -38,6 +39,9 @@ $endif$
 % use system fonts. The sans font will be used
 \usefonttheme{professionalfonts}
 \setbeamerfont{quote}{shape=\upshape}
+
+\setsansfont{New Computer Modern Sans Serif}
+\setmonofont{New Computer Modern Typewriter}
 
 % eliminate silly beamer navigation line at bottom of slides
 % optionally replace with 3 / 25 little number
