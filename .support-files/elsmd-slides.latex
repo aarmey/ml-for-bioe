@@ -40,8 +40,8 @@ $endif$
 \usefonttheme{professionalfonts}
 \setbeamerfont{quote}{shape=\upshape}
 
-\setsansfont{New Computer Modern Sans Serif}
-\setmonofont{New Computer Modern Typewriter}
+\setsansfont{Computer Modern Sans Serif}
+\setmonofont{Computer Modern Typewriter}
 
 % eliminate silly beamer navigation line at bottom of slides
 % optionally replace with 3 / 25 little number
