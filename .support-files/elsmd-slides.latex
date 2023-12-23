@@ -3,12 +3,10 @@
 
 \documentclass[14pt$if(handout)$handout,$endif$$if(beamer)$ignorenonframetext,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 
-\usepackage{lmodern}
-\usepackage{amssymb,amsmath}
+\usepackage{amssymb,amsmath,microtype}
 \usepackage[mathletters]{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fontsetup}
 
 \ifluatex
   \usepackage[luamode]{tagpdf}
@@ -38,7 +36,7 @@ $if(scuro)$
 $endif$
 
 % use system fonts. The sans font will be used
-\usefonttheme{default}
+\usefonttheme{professionalfonts}
 \setbeamerfont{quote}{shape=\upshape}
 
 % eliminate silly beamer navigation line at bottom of slides
