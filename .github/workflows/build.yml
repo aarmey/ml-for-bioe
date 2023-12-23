@@ -29,10 +29,8 @@ jobs:
         sudo apt update
         sudo apt install pandoc ruby-bundler texlive-latex-extra texlive-latex-base texlive-xetex texlive-extra-utils texlive-luatex texlive-latex-base
         pip3 install pandocfilters
-        tlmgr init-usertree
-        tlmgr update --all
         bundle install --gemfile=./website/Gemfile
-        make
+        make -j 4
         cd website && bundle exec jekyll build
     - name: Proof HTML
       run: cd website/_site && bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --ignore_status_codes "412, 503, 403" --assume-extension .
