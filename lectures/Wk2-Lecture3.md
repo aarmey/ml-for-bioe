@@ -38,7 +38,7 @@ author: Aaron Meyer
 
 - To answer this question, we might consider the **mean squared error** of our estimate $\hat{\boldsymbol\beta}$:
 	- i.e., consider squared distance of $\hat{\boldsymbol\beta}$ to the true $\boldsymbol\beta$: $$MSE(\hat{\boldsymbol\beta}) = \mathop{\mathbb{E}}\left[\norm{\hat{\boldsymbol\beta} - \boldsymbol\beta}^2\right] = \mathop{\mathbb{E}}[(\hat{\boldsymbol\beta} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta} - \boldsymbol\beta)]$$
-- **Example:** In least squares (LS), we now that: $$\mathop{\mathbb{E}}[(\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)] = \sigma^2 \mathrm{tr}[(\mathbf{Z}^T \mathbf{Z})^{-1}]$$
+- **Example:** In least squares (LS), we know that: $$\mathop{\mathbb{E}}[(\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)] = \sigma^2 \mathrm{tr}[(\mathbf{Z}^T \mathbf{Z})^{-1}]$$
 
 # Will $\hat{f}(z)$ fit future observations well?
 
@@ -47,6 +47,8 @@ author: Aaron Meyer
 - So if $\hat{f}(\cdot)$ is a good model, then $\hat{f}(\mathbf{z}_i)$ should also be close to the new target $y_i'$
 - This is the notion of **prediction error** (PE)
 
+\note{Have students draw lines for smoking vs. heart attack risk over data. Make two datasets to explain variance.}
+
 # Prediction error and the bias-variance tradeoff
 
 - So good estimators should, on average have, small prediction errors
@@ -54,9 +56,9 @@ author: Aaron Meyer
 	- $PE(\mathbf{z}_0) = \sigma_{\epsilon}^2 + Bias^2(\hat{f}(\mathbf{z}_0)) + Var(\hat{f}(\mathbf{z}_0))$
 	- Not going to derive, but comes directly from previous definitions
 - Such a decomposition is known as the **bias-variance tradeoff**
-	- As model becomes more complex (more terms included), local structure/curvature can be picked up
+	- As model becomes more complex (more terms included), local structure/curvature is picked up
 	- But coefficient estimates suffer from high variance as more terms are included in the model
-- So introducing a little bias in our estimate for **β** might lead to a substantial decrease in variance, and hence to a substantial decrease in PE
+- So introducing a little bias in our estimate for **β** might lead to a large decrease in variance, and hence a substantial decrease in PE
 
 # Depicting the bias-variance tradeoff
 
@@ -172,13 +174,13 @@ author: Aaron Meyer
 - Often, we believe that many of the $\beta_j$’s should be 0
 - Hence, we seek a set of **sparse solutions**
 - Large enough $\lambda$ (or small enough t) will set some coefficients exactly equal to 0!
-	- So the LASSO will perform model selection for us!
+	- So LASSO will perform model selection for us!
 
 # Computing the LASSO solution
 
 - Unlike ridge regression, $\hat{\beta}^{lasso}_{\lambda}$ has no closed form $\lambda$
 - Original implementation involves quadratic programming techniques from convex optimization
-- But Efron et al. (Annals of Statistics 2004) proposed LARS (least angle regression), which computes the LASSO path efficiently
+- But Efron _et al_, _Ann Statist_, 2004 proposed LARS (least angle regression), which computes the LASSO path efficiently
 	- Interesting modification called is called forward stagewise
 	- In many cases it is the same as the LASSO solution
 	- Forward stagewise is easy to implement: <https://www-stat.stanford.edu/~hastie/TALKS/nips2005.pdf>
@@ -242,7 +244,7 @@ author: Aaron Meyer
 	- So $\beta^{*}$ is 0 in every component that $\beta$ is 0
 	- The non-zero elements of $\beta^{*}$ are computed by regressing $\mathbf{y}$ on only the $S$ important covariates
 - It turns out we get *really* close to this cheating solution without cheating!
-	- Candes & Tao. Ann. Statist. 35 (6) 2313–2351, December 2007.
+	- Candes & Tao. _Ann Statist_. 2007.
 
 # Example - Predicting Drug Response
 

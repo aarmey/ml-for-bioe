@@ -24,13 +24,15 @@ jobs:
     - uses: actions/checkout@v4
 
     # Build products
-    - name: Build products
+    - name: Install packages
       run: |
         sudo apt update
-        sudo apt install pandoc ruby-bundler texlive-latex-extra texlive-latex-base texlive-xetex texlive-extra-utils texlive-luatex texlive-latex-base
+        sudo apt install pandoc ruby-bundler texlive-latex-extra texlive-latex-base texlive-xetex texlive-extra-utils texlive-luatex texlive-latex-base fonts-cmu
         pip3 install pandocfilters
         bundle install --gemfile=./website/Gemfile
-        make
+    - name: Build products
+      run: |
+        make -j 4
         cd website && bundle exec jekyll build
     - name: Proof HTML
       run: cd website/_site && bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --ignore_status_codes "412, 503, 403" --assume-extension .
@@ -40,9 +42,11 @@ jobs:
         name: lectures
         path: lectures/*.pdf
     - name: Upload artifact
+      if: github.ref == 'refs/heads/master'
       uses: actions/upload-pages-artifact@v2
       with:
         path: 'website/_site'
     - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/master'
       id: deployment
       uses: actions/deploy-pages@v2
