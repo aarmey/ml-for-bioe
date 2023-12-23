@@ -3,8 +3,8 @@
 
 \documentclass[14pt$if(handout)$handout,$endif$$if(beamer)$ignorenonframetext,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 
-\usepackage{lmodern}
-\usepackage{amssymb,amsmath}
+\usepackage{amssymb,amsmath,microtype}
+\usepackage{fontspec}
 \usepackage[mathletters]{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
@@ -17,28 +17,12 @@
    }
 \fi
 
-$if(scuro)$
-% light-on-dark slides: white text on 90% black background
-\setbeamercolor{normal text}{fg=white,bg=black!90}
-
-% light blue as a highlight color
-\setbeamercolor*{structure}{fg=blue!33!white}
-\setbeamercolor{alerted text}{use=structure,fg=structure.fg}
-\setbeamercolor*{palette primary}{use=structure,fg=structure.fg}
-\setbeamercolor*{palette secondary}{use=structure,fg=structure.fg!95!black}
-\setbeamercolor*{palette tertiary}{use=structure,fg=structure.fg!90!black}
-\setbeamercolor*{palette quaternary}{use=structure,fg=structure.fg!95!black,bg=black!80}
-
-\setbeamercolor*{framesubtitle}{fg=white}
-% N.B. we also skip pandoc's default adjustment to figure captions:
-% \setbeamertemplate{caption}[numbered]
-% \setbeamertemplate{caption label separator}{: }
-\setbeamercolor{caption name}{fg=normal text.fg}
-$endif$
-
 % use system fonts. The sans font will be used
 \usefonttheme{professionalfonts}
 \setbeamerfont{quote}{shape=\upshape}
+
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
 
 % eliminate silly beamer navigation line at bottom of slides
 % optionally replace with 3 / 25 little number
