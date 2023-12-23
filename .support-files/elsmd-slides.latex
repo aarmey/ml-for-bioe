@@ -38,7 +38,7 @@ $if(scuro)$
 $endif$
 
 % use system fonts. The sans font will be used
-\usefonttheme{professionalfonts}
+\usefonttheme{default}
 \setbeamerfont{quote}{shape=\upshape}
 
 % eliminate silly beamer navigation line at bottom of slides
