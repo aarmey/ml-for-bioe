@@ -34,12 +34,12 @@ layout: page
   - 📺: [Bayes theorem, the geometry of changing beliefs](https://www.youtube.com/watch?v=HZGCoVF3YvM)
   - 👂: [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
   - 📺: [The medical test paradox, and redesigning Bayes' rule](https://www.youtube.com/watch?v=lG4VkPoG3ko)
-- [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) ([recorded lecture](https://youtu.be/Rh2SdM2_IIg))
+- [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
 - Lab: Implementation of [Stone et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1301723/), due Feb 1st at 11:59 pm ([repository](https://classroom.github.com/a/vDNzClZ4))
 
 ### Week 4, Jan 29 – Feb 2
 
-- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf) (recorded lecture: [1](https://youtu.be/mPuV7y5ZRfo), [2](https://youtu.be/1_43nCptm44))
+- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
   - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
