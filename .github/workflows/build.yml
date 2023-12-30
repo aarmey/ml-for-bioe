@@ -27,8 +27,7 @@ jobs:
     - name: Install packages
       run: |
         sudo apt update
-        sudo apt install pandoc ruby-bundler texlive-latex-recommended texlive-pictures texlive-extra-utils texlive-latex-base texlive-luatex texlive-latex-base fonts-cmu
-        pip3 install pandocfilters
+        sudo apt install pandoc ruby-bundler texlive-latex-extra texlive-extra-utils texlive-luatex fonts-cmu
         bundle install --gemfile=./website/Gemfile
     - name: Build products
       run: |
