@@ -32,6 +32,12 @@ jobs:
           scheme-basic
           pdfmanagement-testphase
           beamer
+          tagpdf
+          microtype
+          amsmath
+          amssymb
+          fancyvrb
+          pdfjam
     - name: Build slides and handouts
       run: make -j 4
     - name: Install ruby and jekyll
