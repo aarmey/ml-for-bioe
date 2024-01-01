@@ -39,6 +39,7 @@ jobs:
           pdfjam
           fontspec
           ragged2e
+          booktabs
     - name: Build slides and handouts
       run: make -j 4
     - name: Install ruby and jekyll
