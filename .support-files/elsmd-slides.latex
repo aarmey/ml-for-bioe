@@ -5,7 +5,6 @@
 
 \usepackage{amssymb,amsmath,microtype}
 \usepackage{fontspec}
-\usepackage[mathletters]{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 
