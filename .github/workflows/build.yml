@@ -14,6 +14,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-22.04
+    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
+      BUNDLE_GEMFILE: ./website/Gemfile
 
     steps:
     - uses: actions/checkout@v4
@@ -22,7 +24,7 @@ jobs:
     - name: Install TeX packages
       run: |
         sudo apt update
-        sudo apt install pandoc ruby-bundler fonts-cmu
+        sudo apt install pandoc fonts-cmu
     - name: Setup TeX Live
       uses: teatimeguest/setup-texlive-action@v3
       with:
@@ -31,6 +33,11 @@ jobs:
           pdfmanagement-testphase
     - name: Build slides and handouts
       run: make -j 4
+    - name: Install ruby and jekyll
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3'
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Install jekyll
       run: bundle install --gemfile=./website/Gemfile
     - name: Build jekyll
