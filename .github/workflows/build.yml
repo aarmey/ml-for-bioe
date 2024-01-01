@@ -40,6 +40,8 @@ jobs:
           fontspec
           ragged2e
           booktabs
+          caption
+          ulem
     - name: Build slides and handouts
       run: make -j 4
     - name: Install ruby and jekyll
