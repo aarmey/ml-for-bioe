@@ -15,6 +15,9 @@ author:
 github:
   repo:           https://github.com/aarmey/ml-for-bioe
 
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - Gemfile
   - Gemfile.lock
