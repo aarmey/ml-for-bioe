@@ -42,6 +42,7 @@ jobs:
           booktabs
           caption
           ulem
+          textpos
     - name: Build slides and handouts
       run: make -j 4
     - name: Install ruby and jekyll
