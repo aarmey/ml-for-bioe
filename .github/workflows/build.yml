@@ -43,6 +43,7 @@ jobs:
           caption
           ulem
           textpos
+          pdfpages
     - name: Build slides and handouts
       run: make -j 4
     - name: Install ruby and jekyll
@@ -50,8 +51,6 @@ jobs:
       with:
         ruby-version: '3.3'
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Install jekyll
-      run: bundle install --gemfile=./website/Gemfile
     - name: Build jekyll
       run: cd website && bundle exec jekyll build
     - name: Proof HTML
