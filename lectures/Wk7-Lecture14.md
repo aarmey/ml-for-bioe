@@ -23,21 +23,21 @@ author: Aaron Meyer
 
 # Probabilistic Clustering
 
-[columns]
+::: columns
 
-[column=0.5]
-
+:::: column
 - Try a probabilistic model!
 	- Allows overlaps, clusters of different size, etc.
 - Can tell a *generative story* for data
 	- $P(X\mid Y) P(Y)$
 - Challenge: we need to estimate model parameters without labeled Ys
+::::
 
-[column=0.5]
-
+:::: column
 ![ ](./lectures/figs/lec14/gm3.pdf)
+::::
 
-[/columns]
+:::
 
 # The General GMM assumption
 
@@ -64,10 +64,9 @@ $$P(X_i = x \mid Y = y_k) = N(x \mid \mu_{ik}, \sigma_{ik})$$
 
 # Could we make fewer assumptions?
 
-[columns]
+::: columns
 
-[column=0.5]
-
+:::: {.column width=50%}
 - What if the $X_i$ co-vary?
 - What if there are multiple peaks?
 - **Gaussian Mixture Models!**
@@ -75,12 +74,13 @@ $$P(X_i = x \mid Y = y_k) = N(x \mid \mu_{ik}, \sigma_{ik})$$
 	- $P(\mathbf{X}\mid Y)$ is a *multivariate* Gaussian distribution:
 
 $$P(X = x_j \mid Y = i) = N(x_j, \mu_i, \Sigma_i)$$
+::::
 
-[column=0.5]
-
+:::: {.column width=50%}
 ![ ](./lectures/figs/lec14/gm6.pdf)
+::::
 
-[/columns]
+:::
 
 # Multivariate Gaussians
 

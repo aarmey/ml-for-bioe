@@ -70,10 +70,9 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \norm{\mathbf{x} - \mathbf{y}} $$
 
 # Clustering algorithms
 
-[columns]
+::: columns
 
-[column=0.5]
-
+:::: column
 - Partition algorithms (flat)
 	- K-means
 	- Gaussian mixtures
@@ -81,50 +80,47 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \norm{\mathbf{x} - \mathbf{y}} $$
 - Heirarchical algorithms
 	- Bottom up - agglomerative
 	- Top down - divisive
+::::
 
-[column=0.5]
-
+:::: column
 ![ ](./lectures/figs/lec13/simpsons.png)
+::::
 
-[/columns]
+:::
 
 # K-means
 
-[columns]
+::: columns
 
-[column=0.5]
-
+:::: column
 - An iterative partitioning clustering algorithm
 	- Initialize: Pick K random points as cluster centers
 	- Alternate:
 		1. Assign data points to closest cluster center
 		2. Change the cluster center to the average of its assigned points
 	– Stop when no points’ assignments change
-
-[column=0.5]
+::::
 
 ![ ](./lectures/figs/lec13/kmeans1.png)
 
-[/columns]
+:::
 
 # K-means
 
-[columns]
+::: columns
 
-[column=0.5]
-
+:::: column
 - An iterative partitioning clustering algorithm
 	- Initialize: Pick K random points as cluster centers
 	- Alternate:
 		1. Assign data points to closest cluster center
 		2. Change the cluster center to the average of its assigned points
 	– Stop when no points’ assignments change
-
-[column=0.5]
+::::
 
 ![ ](./lectures/figs/lec13/kmeans2.png)
 
-[/columns]
+:::
 
 # K-means clustering: Example
 
@@ -219,22 +215,20 @@ Kmeans takes an alternating optimization approach. Each step is guaranteed to de
 
 # Initialization
 
-[columns]
+::: columns
 
-[column=0.5]
-
+:::: column
 K-means algorithm is a heuristic:
 
 - Requires initial means
 - It does matter what you pick!
 - What can go wrong?
 - **Various schemes for preventing this kind of thing:** variance-based split / merge, initialization heuristics
-
-[column=0.5]
+::::
 
 ![ ](./lectures/figs/lec13/init.png){ width=40% }
 
-[/columns]
+:::
 
 # K-Means Getting Stuck
 
@@ -261,10 +255,9 @@ Local optima dependent on how the problem was specified:
 
 # Agglomerative Clustering
 
-[columns]
+::: columns
 
-[column=0.6]
-
+:::: {.column width=60%}
 - Agglomerative clustering:
 	- First merge very similar instances
 	- Incrementally build larger clusters out of smaller clusters
@@ -276,12 +269,13 @@ Local optima dependent on how the problem was specified:
 		- Merge them into a new cluster
 		- Stop when there’s only one cluster left
 - Produces not one clustering, but a family of clusterings represented by a dendrogram
+::::
 
-[column=0.4]
-
+:::: {.column width=40%}
 ![ ](./lectures/figs/lec13/agg1.png){ width=100% }
+::::
 
-[/columns]
+:::
 
 # Agglomerative Clustering
 
