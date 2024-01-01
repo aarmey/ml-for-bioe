@@ -35,7 +35,6 @@ jobs:
           tagpdf
           microtype
           amsmath
-          amssymb
           fancyvrb
           pdfjam
     - name: Build slides and handouts
