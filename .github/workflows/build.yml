@@ -45,7 +45,7 @@ jobs:
           textpos
           pdfpages
     - name: Build slides and handouts
-      run: make -j 4
+      run: make -j 2
     - name: Install ruby and jekyll
       uses: ruby/setup-ruby@v1
       with:
