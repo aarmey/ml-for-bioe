@@ -24,15 +24,16 @@ jobs:
     - uses: actions/checkout@v4
 
     # Build products
-    - name: Install packages
+    - name: Install TeX packages
       run: |
         sudo apt update
         sudo apt install pandoc ruby-bundler texlive-latex-extra texlive-extra-utils texlive-luatex fonts-cmu
-        bundle install --gemfile=./website/Gemfile
-    - name: Build products
-      run: |
-        make -j 4
-        cd website && bundle exec jekyll build
+    - name: Build slides and handouts
+      run: make -j 4
+    - name: Install jekyll
+      run: bundle install --gemfile=./website/Gemfile
+    - name: Build jekyll
+      run: cd website && bundle exec jekyll build
     - name: Proof HTML
       run: cd website/_site && bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --ignore_status_codes "412, 503, 403" --assume-extension .
     - name: Upload lecture notes
