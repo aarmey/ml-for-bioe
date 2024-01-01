@@ -26,7 +26,9 @@ jobs:
     - name: Setup TeX Live
       uses: teatimeguest/setup-texlive-action@v3
       with:
-        packages: scheme-basic
+        packages: >-
+          scheme-basic
+          pdfmanagement-testphase
     - name: Build slides and handouts
       run: make -j 4
     - name: Install jekyll
