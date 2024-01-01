@@ -24,7 +24,7 @@ jobs:
     - name: Install TeX packages
       run: |
         sudo apt update
-        sudo apt install pandoc fonts-cmu
+        sudo apt install pandoc fonts-cmu ruby-bundler
     - name: Setup TeX Live
       uses: teatimeguest/setup-texlive-action@v3
       with:
@@ -46,11 +46,8 @@ jobs:
           pdfpages
     - name: Build slides and handouts
       run: make -j 2
-    - name: Install ruby and jekyll
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '2.7'
-        bundler-cache: true # runs and caches 'bundle install'
+    - name: Install jekyll
+      run: bundle install --gemfile=./website/Gemfile
     - name: Build jekyll
       run: cd website && bundle exec jekyll build
     - name: Proof HTML

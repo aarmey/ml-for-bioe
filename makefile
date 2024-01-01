@@ -1,6 +1,7 @@
 # Change these only to really change the behavior of the whole setup
 
 PANDOC := pandoc -t beamer --pdf-engine=lualatex --slide-level 1 --highlight-style pygments --template .support-files/elsmd-slides.latex
+LUA_PATH := $(shell which lualatex)
 
 ## ---- build rules ----
 
@@ -10,8 +11,7 @@ pdfs := $(patsubst lectures/%.md, website/public/%.pdf,$(notes_md))
 
 $(notes_pdf): lectures/%.pdf: lectures/%.md
 	$(PANDOC) -V beamer-notes=true -V fontsize=10pt -o $@ $<
-	which lualatex
-	# pdfjam -q --nup 2x2 --latex lualatex --landscape $@ -o $@
+	pdfjam -q --nup 2x2 --latex $(LUA_PATH) --landscape $@ -o $@
 
 $(pdfs): website/public/%.pdf: lectures/%.md
 	$(PANDOC) -o $@ $<
