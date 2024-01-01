@@ -10,11 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
   build:
     # The type of runner that the job will run on
@@ -27,7 +22,11 @@ jobs:
     - name: Install TeX packages
       run: |
         sudo apt update
-        sudo apt install pandoc ruby-bundler texlive-latex-extra texlive-extra-utils texlive-luatex fonts-cmu
+        sudo apt install pandoc ruby-bundler fonts-cmu
+    - name: Setup TeX Live
+      uses: teatimeguest/setup-texlive-action@v3
+      with:
+        packages: scheme-basic
     - name: Build slides and handouts
       run: make -j 4
     - name: Install jekyll
