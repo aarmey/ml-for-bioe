@@ -49,8 +49,8 @@ jobs:
     - name: Install ruby and jekyll
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.3'
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+        ruby-version: '2.3'
+        bundler-cache: true # runs and caches 'bundle install'
     - name: Build jekyll
       run: cd website && bundle exec jekyll build
     - name: Proof HTML
