@@ -45,11 +45,12 @@ jobs:
           pdfpages
     - name: Build slides and handouts
       run: make -j 2
-    - name: Install ruby and jekyll
+    - name: Install ruby
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '2.7'
-        bundler-cache: true # runs and caches 'bundle install'
+    - name: Install jekyll
+      run: bundle install --gemfile=./website/Gemfile
     - name: Build jekyll
       run: cd website && bundle exec jekyll build
     - name: Proof HTML
