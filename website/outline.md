@@ -9,6 +9,7 @@ layout: page
   - 📖: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
   - 👂: [Linear Digressions: The Normal Distribution and the Central Limit Theorem](https://lineardigressions.com/episodes/2018/12/9/the-normal-distribution-and-the-central-limit-theorem)
   - 📺: [But what is the Central Limit Theorem?](https://www.youtube.com/watch?v=zeJD6dqJ5lo)
+  - 📖: [Understanding Moments](https://gregorygundersen.com/blog/2020/04/11/moments/)
 - [Lecture 2: Fitting & Regression](../public/Wk1-Lecture2.pdf)
   - [Example Notebook](../public/examples/OLS-Example.ipynb)
   - 👂: [Linear Digressions: The assumptions of ordinary least squares](https://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
