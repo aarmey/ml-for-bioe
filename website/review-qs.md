@@ -34,8 +34,7 @@ layout: page
 6. What does it mean when one says ridge regression and LASSO give a family of answers?
 7. What can we say about the relationship between fitting error and prediction error?
 8. What does regularization do to the degrees of freedom (p) of a model? How about the number of measurements (n)?
-9. A colleague tells you about a new form of regularization they've come up with (e.g. maximize the weighting for the variables most correlated with the output). How would this influence the variance of the model? Might this improve the prediction error?
-10. What is a smoother matrix? What would a smoother matrix look like for a model that exactly fits the training points?
+9. A colleague tells you about a new form of regularization they've come up with (e.g., remove X% of variables least correlated with Y). How would this influence the variance of the model? Might this improve the prediction error?
 
 ### Lecture 4
 
