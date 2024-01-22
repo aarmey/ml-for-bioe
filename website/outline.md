@@ -27,7 +27,7 @@ layout: page
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
   - [Example Notebook](../public/examples/CrossVal-Example.ipynb)
 - 📖: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
-- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Jan 26th at 11:59 pm ([repository](https://classroom.github.com/a/6QVOpFUh))
+- Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Jan 26th at 11:59 pm (submit through Bruin Learn!)
 
 ### Week 3, Jan 22 – 26
 
@@ -36,7 +36,7 @@ layout: page
   - 👂: [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
   - 📺: [The medical test paradox, and redesigning Bayes' rule](https://www.youtube.com/watch?v=lG4VkPoG3ko)
 - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
-- Lab: Implementation of [Stone et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1301723/), due Feb 1st at 11:59 pm ([repository](https://classroom.github.com/a/vDNzClZ4))
+- Lab: Implementation of [Stone et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1301723/), due Feb 1st at 11:59 pm (on Bruin Learn)
 
 ### Week 4, Jan 29 – Feb 2
 
@@ -45,7 +45,7 @@ layout: page
   - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
-- Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 8th at 11:59 pm ([repository](https://classroom.github.com/a/mL8L54Co))
+- Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 8th at 11:59 pm (on Bruin Learn)
 
 ### Week 5, Feb 5 – 9
 
@@ -77,7 +77,7 @@ layout: page
   - [Example Notebook](../public/examples/SVMs-example.ipynb)
   - 👂: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - 👂: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 7th at 11:59 pm ([repository](https://classroom.github.com/a/zLViK7tV))
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 7th at 11:59 pm (on Bruin Learn)
 
 ### Week 9, Mar 4 – Mar 8
 
