@@ -81,7 +81,7 @@ layout: page
 
 ### Week 9, Mar 4 – Mar 8
 
-- [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf)
+- [Lecture: Hidden Markov Models](../public/hmm.pdf)
   - [Example Notebook](../public/examples/HMMs-example.ipynb)
   - 📖: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
   - 📖: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)

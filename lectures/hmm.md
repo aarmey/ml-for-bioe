@@ -1,5 +1,5 @@
 ---
-title: Week 5, Lecture 10 - Hidden Markov Models
+title: Hidden Markov Models
 author: Aaron Meyer
 ---
 
