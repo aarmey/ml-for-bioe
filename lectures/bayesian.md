@@ -1,5 +1,5 @@
 ---
-title: Week 3, Lecture 5 - Bayesian vs. frequentist approaches
+title: Bayesian vs. frequentist approaches
 author: Aaron Meyer
 ---
 
