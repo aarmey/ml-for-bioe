@@ -1,5 +1,5 @@
 ---
-title: Week 5, Lecture 9 - Dynamical models
+title: Dynamical models
 author: Aaron Meyer
 ---
 

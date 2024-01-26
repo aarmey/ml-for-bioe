@@ -1,5 +1,5 @@
 ---
-title: "Week 4, Lecture 7 - Dimensionality Reduction: PCA and NMF"
+title: "Dimensionality Reduction: PCA and NMF"
 author: Aaron Meyer
 ---
 
