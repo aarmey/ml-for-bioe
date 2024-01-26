@@ -1,5 +1,5 @@
 ---
-title: Week 4, Lecture 8 - Partial Least Squares Regression
+title: Partial Least Squares Regression
 author: Aaron Meyer
 ---
 

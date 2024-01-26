@@ -31,26 +31,25 @@ layout: page
 
 ### Week 3, Jan 22 – 26
 
-- [Lecture 5: Bayesian vs. frequentist approaches](../public/Wk3-Lecture5.pdf)
-  - 📺: [Bayes theorem, the geometry of changing beliefs](https://www.youtube.com/watch?v=HZGCoVF3YvM)
-  - 👂: [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
-  - 📺: [The medical test paradox, and redesigning Bayes' rule](https://www.youtube.com/watch?v=lG4VkPoG3ko)
-- [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf)
+- Blank due to updating lecture schedule.
 - Lab: Implementation of [Stone et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1301723/), due Feb 1st at 11:59 pm (on Bruin Learn)
 
 ### Week 4, Jan 29 – Feb 2
 
-- [Lecture 7: Dimensionality reduction - PCA and NMF](../public/Wk4-Lecture7.pdf)
+- [Lecture 7: Bayesian vs. frequentist approaches](../public/bayesian.pdf)
+  - 📺: [Bayes theorem, the geometry of changing beliefs](https://www.youtube.com/watch?v=HZGCoVF3YvM)
+  - 👂: [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
+  - 📺: [The medical test paradox, and redesigning Bayes' rule](https://www.youtube.com/watch?v=lG4VkPoG3ko)
+- [Lecture 8: Dimensionality reduction - PCA and NMF](../public/dimensionality-reduction.pdf)
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
   - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
-- [Lecture 8: Partial Least Squares Regression](../public/Wk4-Lecture8.pdf)
-- Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 8th at 11:59 pm (on Bruin Learn)
 
 ### Week 5, Feb 5 – 9
 
-- [Lecture 9: Dynamical models](../public/Wk5-Lecture09.pdf)
-- Lecture 10: Finish dynamical models
+- [Lecture 9: Partial Least Squares Regression](../public/plsr.pdf)
+- [Lecture 10: Dynamical models](../public/dynamics.pdf)
+<!-- - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) -->
 - Lab: Midterm review, finish selecting project
 
 ### Week 6, Feb 12 – 16
@@ -59,7 +58,7 @@ layout: page
   - Previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf), [W22](../files/midterm-W22.pdf)
   - 📺: [Pre-recorded versions of lectures from 2020](https://www.youtube.com/playlist?list=PLIo39hxQkqRbqu-wwSNQ_v7BjlyTw3eUw)
 - Lecture 12: Midterm exam
-- Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 22nd at 11:59 pm ([repository](https://classroom.github.com/a/2ivewdFc))
+- Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 22th at 11:59 pm (on Bruin Learn)
 - [Final project proposals due Feb 16th at 11:59 pm](https://bruinlearn.ucla.edu/courses/176183/assignments/1510658)
 - [Link for setting up final project repositories](https://classroom.github.com/a/3b2CrihQ)
   - Be sure to make your repository as a group!
@@ -70,6 +69,7 @@ layout: page
   - [Example Notebook](../public/examples/K-Means.ipynb)
 - [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf)
   - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
+- Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 29nd at 11:59 pm (on Bruin Learn)
 
 ### Week 8, Feb 26 – Mar 1
 
@@ -81,7 +81,7 @@ layout: page
 
 ### Week 9, Mar 4 – Mar 8
 
-- [Lecture: Hidden Markov Models](../public/Wk5-Lecture10.pdf)
+- [Lecture: Hidden Markov Models](../public/hmm.pdf)
   - [Example Notebook](../public/examples/HMMs-example.ipynb)
   - 📖: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
   - 📖: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
