@@ -44,6 +44,7 @@ layout: page
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
   - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
+- Lab: Lecture review, project selection check-in
 
 ### Week 5, Feb 5 – 9
 
