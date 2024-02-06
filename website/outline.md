@@ -49,7 +49,6 @@ layout: page
 ### Week 5, Feb 5 – 9
 
 - [Lecture 9: Partial Least Squares Regression](../public/plsr.pdf)
-- [Lecture 10: Dynamical models](../public/dynamics.pdf)
 <!-- - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) -->
 - Lab: Midterm review, finish selecting project
 
@@ -66,30 +65,23 @@ layout: page
 
 ### Week 7, Feb 19 – 23
 
-- [Lecture 13: Equitable application of models, K-Means clustering](../public/Wk7-Lecture13.pdf)
+- [Lecture 13: Equitable application of models, dynamical models](../public/dynamics.pdf)
+- [Lecture 14: K-Means clustering](../public/Wk7-Lecture13.pdf)
   - [Example Notebook](../public/examples/K-Means.ipynb)
-- [Lecture 14: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf)
-  - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
 - Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 29nd at 11:59 pm (on Bruin Learn)
 
 ### Week 8, Feb 26 – Mar 1
 
-- [Lecture 16: Support vector machines](../public/Wk8-Lecture16.pdf)
-  - [Example Notebook](../public/examples/SVMs-example.ipynb)
-  - 👂: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
-  - 👂: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 7th at 11:59 pm (on Bruin Learn)
+- [Lecture 15/16: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf)
+  - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
 
 ### Week 9, Mar 4 – Mar 8
 
-- [Lecture: Hidden Markov Models](../public/hmm.pdf)
-  - [Example Notebook](../public/examples/HMMs-example.ipynb)
-  - 📖: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
-  - 📖: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
-  - 📖: [Markov Models—Hidden Markov models](https://www.nature.com/articles/s41592-019-0532-6)
-  - 📖: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
-  - 👂: [Linear Digressions - Hidden Markov Models](https://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](https://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
-- Lecture: Finish hidden Markov models.
+- [Lecture 17/18: Support vector machines](../public/Wk8-Lecture16.pdf)
+  - [Example Notebook](../public/examples/SVMs-example.ipynb)
+  - 👂: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
+  - 👂: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 14th at 11:59 pm (on Bruin Learn)
 
 ### Week 10, Mar 11 – 15
 
