@@ -105,7 +105,7 @@ Dimensionality goes from $m$ to $N_{comp}$.
 # Principal Components Regression (PCR)
 
 1)  Decompose X matrix (scores T, loadings P, residuals E)
-$$X = TPt + E$$
+$$X = TP^T + E$$
 
 2) Regress Y against the scores (Scores describe observations – by using them we link X and Y for each observation)
 
