@@ -88,34 +88,30 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \norm{\mathbf{x} - \mathbf{y}} $$
 
 :::
 
-# K-means
+# K-means, an iterative clustering algorithm
 
 ::: columns
 
 :::: column
-- An iterative partitioning clustering algorithm
-	- Initialize: Pick K random points as cluster centers
-	- Alternate:
-		1. Assign data points to closest cluster center
-		2. Change the cluster center to the average of its assigned points
-	– Stop when no points’ assignments change
+- Initialize: Pick K random points as cluster centers
+- Alternate until no assignments change:
+	1. Assign data points to closest cluster center
+	2. Change the cluster center to the average of its assigned points
 ::::
 
 ![ ](./lectures/figs/lec13/kmeans1.png){ width=30% }
 
 :::
 
-# K-means
+# K-means, an iterative clustering algorithm
 
 ::: columns
 
 :::: column
-- An iterative partitioning clustering algorithm
-	- Initialize: Pick K random points as cluster centers
-	- Alternate:
-		1. Assign data points to closest cluster center
-		2. Change the cluster center to the average of its assigned points
-	– Stop when no points’ assignments change
+- Initialize: Pick K random points as cluster centers
+- Alternate until no assignments change:
+	1. Assign data points to closest cluster center
+	2. Change the cluster center to the average of its assigned points
 ::::
 
 ![ ](./lectures/figs/lec13/kmeans2.png){ width=30% }
