@@ -66,7 +66,7 @@ layout: page
 ### Week 7, Feb 19 – 23
 
 - [Lecture 13: Equitable application of models, dynamical models](../public/dynamics.pdf)
-- [Lecture 14: K-Means clustering](../public/Wk7-Lecture13.pdf)
+- [Lecture 14: K-Means clustering](../public/clustering.pdf)
   - [Example Notebook](../public/examples/K-Means.ipynb)
 - Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due Feb 29nd at 11:59 pm (on Bruin Learn)
 

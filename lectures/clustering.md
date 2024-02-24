@@ -1,5 +1,5 @@
 ---
-title: Week 7, Lecture 13 - Clustering
+title: Clustering
 author: Aaron Meyer
 ---
 
@@ -101,7 +101,7 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \norm{\mathbf{x} - \mathbf{y}} $$
 	– Stop when no points’ assignments change
 ::::
 
-![ ](./lectures/figs/lec13/kmeans1.png)
+![ ](./lectures/figs/lec13/kmeans1.png){ width=50% }
 
 :::
 
@@ -118,7 +118,7 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \norm{\mathbf{x} - \mathbf{y}} $$
 	– Stop when no points’ assignments change
 ::::
 
-![ ](./lectures/figs/lec13/kmeans2.png)
+![ ](./lectures/figs/lec13/kmeans2.png){ width=50% }
 
 :::
 
