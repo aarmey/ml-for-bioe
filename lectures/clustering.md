@@ -99,7 +99,9 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \norm{\mathbf{x} - \mathbf{y}} $$
 	2. Change the cluster center to the average of its assigned points
 ::::
 
-![ ](./lectures/figs/lec13/kmeans1.png){ width=30% }
+:::: column
+![ ](./lectures/figs/lec13/kmeans1.png)
+::::
 
 :::
 
@@ -114,7 +116,9 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \norm{\mathbf{x} - \mathbf{y}} $$
 	2. Change the cluster center to the average of its assigned points
 ::::
 
-![ ](./lectures/figs/lec13/kmeans2.png){ width=30% }
+:::: column
+![ ](./lectures/figs/lec13/kmeans2.png)
+::::
 
 :::
 
