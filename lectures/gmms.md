@@ -1,5 +1,5 @@
 ---
-title: Week 7, Lecture 14 - Gaussian Mixture Models
+title: Gaussian Mixture Models
 author: Aaron Meyer
 ---
 

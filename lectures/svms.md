@@ -1,5 +1,5 @@
 ---
-title: Week 8, Lecture 16 - Support Vector Machines
+title: Support Vector Machines
 author: Aaron Meyer
 ---
 

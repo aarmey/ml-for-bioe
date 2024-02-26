@@ -72,12 +72,12 @@ layout: page
 
 ### Week 8, Feb 26 – Mar 1
 
-- [Lecture 15/16: Gaussian Mixture Models](../public/Wk7-Lecture14.pdf)
+- [Lecture 15/16: Gaussian Mixture Models](../public/gmms.pdf)
   - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
 
 ### Week 9, Mar 4 – Mar 8
 
-- [Lecture 17/18: Support vector machines](../public/Wk8-Lecture16.pdf)
+- [Lecture 17/18: Support vector machines](../public/svms.pdf)
   - [Example Notebook](../public/examples/SVMs-example.ipynb)
   - 👂: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - 👂: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
