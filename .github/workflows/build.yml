@@ -54,16 +54,16 @@ jobs:
     - name: Proof HTML
       run: cd website/_site && bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --ignore_status_codes "412, 503, 403" --assume-extension .
     - name: Upload lecture notes
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: lectures
         path: lectures/*.pdf
     - name: Upload artifact
       if: github.ref == 'refs/heads/master'
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-pages-artifact@v3
       with:
         path: 'website/_site'
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/master'
       id: deployment
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
