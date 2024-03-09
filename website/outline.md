@@ -81,7 +81,7 @@ layout: page
   - [Example Notebook](../public/examples/SVMs-example.ipynb)
   - 👂: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - 👂: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
-- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 14th at 11:59 pm (on Bruin Learn)
+- Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 21st at 11:59 pm (on Bruin Learn)
 
 ### Week 10, Mar 11 – 15
 
