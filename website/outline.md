@@ -89,5 +89,5 @@ layout: page
 - Lecture 20: Selected project presentations
 - Lab: Project presentations
 - Final Project, due March 21st at 11:59 pm
-  - Please submit everything through the project Github repository.
+  - Please submit your code through the project Github repository, and your final report on Bruin Learn.
   - The link for setting up this repository is up in week 6.
