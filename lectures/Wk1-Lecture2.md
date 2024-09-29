@@ -1,5 +1,5 @@
 ---
-title: "Week 2, Lecture 2 - Fitting And Regression"
+title: "Lecture 2 - Fitting And Regression"
 author: Aaron Meyer
 ---
 
