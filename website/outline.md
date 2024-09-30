@@ -60,7 +60,7 @@ layout: page
 - Lecture 12: Midterm exam
 - Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 22th at 11:59 pm (on Bruin Learn)
 - [Final project proposals due Feb 16th at 11:59 pm](https://bruinlearn.ucla.edu/courses/176183/assignments/1510658)
-- [Link for setting up final project repositories](https://classroom.github.com/a/3b2CrihQ)
+- Link for setting up final project repositories
   - Be sure to make your repository as a group!
 
 ### Week 7, Feb 19 – 23
