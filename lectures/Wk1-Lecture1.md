@@ -403,7 +403,7 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 #### Test statistic:
 
 $$D_n^{+} = \max_{1\leq i\leq n} \left(\frac{i}{n} - \hat{F}(X_{(i)})\right)$$
-$$D_n^{-} = \max_{1\leq i\leq n} \left(\hat{F}(X_{(i)} - \frac{i - 1}{n})\right)$$
+$$D_n^{-} = \max_{1\leq i\leq n} \left(\hat{F}(X_{(i)}) - \frac{i - 1}{n}\right)$$
 $$D_n = \max \left( D_n^{+}, D_n^{-} \right)$$
 
 Not expressed in one equation with absolute value because distance is assessed from opposite ends for each.
