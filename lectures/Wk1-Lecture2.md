@@ -222,22 +222,22 @@ Or there's an even more bare function in numpy `numpy.linalg.lstsq`.
 # Implementation
 
 ~~~python
-import sklearn as sk, matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.datasets import load_diabetes
+from matplotlib import pyplot as plt
 
-lr = sk.linear_model.LinearRegression()
-boston = sk.datasets.load_boston()
-y = boston.target
+lr = LinearRegression()
+data = load_diabetes()
 
-lr.fit(boston.data, y)
+lr.fit(data.data, data.target) # X, y
 
-predicted = lr.predict(boston.data)
+predicted = lr.predict(data.data)
 
 fig, ax = plt.subplots()
 ax.scatter(y, predicted, edgecolors=(0, 0, 0))
 ax.plot([y.min(), y.max()], [y.min(), y.max()], 'k--', lw=4)
 ax.set_xlabel('Measured')
 ax.set_ylabel('Predicted')
-plt.show()
 ~~~
 
 # Implementation
