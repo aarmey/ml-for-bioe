@@ -1,5 +1,5 @@
 ---
-title: "Week 2, Lecture 3 - Fitting & Regression Redux, Regularization"
+title: "Fitting & Regression Redux, Regularization"
 author: Aaron Meyer
 ---
 

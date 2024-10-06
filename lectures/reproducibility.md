@@ -1,5 +1,5 @@
 ---
-title: Week 3, Lecture 6 - Reproducible Computational Workflows
+title: Reproducible Computational Workflows
 author: Aaron Meyer
 ---
 

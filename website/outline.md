@@ -49,7 +49,7 @@ layout: page
 ### Week 5, Feb 5 – 9
 
 - [Lecture 9: Partial Least Squares Regression](../public/plsr.pdf)
-<!-- - [Lecture 6: Reproducible computational workflows](../public/Wk3-Lecture6.pdf) -->
+<!-- - [Lecture 6: Reproducible computational workflows](../public/reproducibility.pdf) -->
 - Lab: Midterm review, finish selecting project
 
 ### Week 6, Feb 12 – 16
