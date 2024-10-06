@@ -1,5 +1,5 @@
 ---
-title: Week 2, Lecture 4 - Does my model work? Crossvalidation, bootstrap, and friends.
+title: Does my model work? Crossvalidation, bootstrap, and friends.
 author: Aaron Meyer
 ---
 
