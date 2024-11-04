@@ -55,7 +55,6 @@ layout: page
 ### Week 6, Feb 12 – 16
 
 - Lecture 11: Midterm review
-  - Previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf), [F21](../files/midterm-F21.pdf), [W22](../files/midterm-W22.pdf)
   - 📺: [Pre-recorded versions of lectures from 2020](https://www.youtube.com/playlist?list=PLIo39hxQkqRbqu-wwSNQ_v7BjlyTw3eUw)
 - Lecture 12: Midterm exam
 - Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 22th at 11:59 pm (on Bruin Learn)
