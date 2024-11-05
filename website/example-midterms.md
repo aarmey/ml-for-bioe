@@ -5,7 +5,8 @@ layout: page
 
 ## BE 175
 
-To be added.
+- Winter 2020: [blank](../ex-midterm-files/20W.pdf), [answer key](../ex-midterm-files/20W-key.pdf)
+- Winter 2023: [blank](../ex-midterm-files/23W.pdf), [answer key](../ex-midterm-files/23W-key.pdf)
 
 ## BE 275
 
