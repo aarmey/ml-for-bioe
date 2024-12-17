@@ -33,9 +33,6 @@ layout: page
 ### Week 4, Jan 29 – Feb 2
 
 - [Lecture 7: Bayesian vs. frequentist approaches](../public/bayesian.pdf)
-  - 📺: [Bayes theorem, the geometry of changing beliefs](https://www.youtube.com/watch?v=HZGCoVF3YvM)
-  - 👂: [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
-  - 📺: [The medical test paradox, and redesigning Bayes' rule](https://www.youtube.com/watch?v=lG4VkPoG3ko)
 - [Lecture 8: Dimensionality reduction - PCA and NMF](../public/dimensionality-reduction.pdf)
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
   - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)

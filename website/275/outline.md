@@ -19,7 +19,7 @@ layout: page
   - Listening: [Linear Digressions: The assumptions of ordinary least squares](https://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
   - Reading: [Points of Significance: Simple linear regression](https://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
   - Listening: [Linear Digressions: Convex (and non-convex) optimization](https://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
-- [Lecture 3: Fitting & Regression Redux, Regularization](../public/Wk2-Lecture3.pdf)
+- [Lecture 3: Fitting & Regression Redux, Regularization](/public/Wk2-Lecture3.pdf)
   - [Example Notebook](../public/examples/Regularization-Example.ipynb)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Oct 10 at 11:59 pm
   - Repository link
@@ -35,8 +35,7 @@ layout: page
 
 ### Week 3, Oct 14 – 18
 
-- [Lecture 6: Bayesian vs. frequentist approaches](../public/bayesian.pdf)
-  - [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
+- [Lecture 6: Bayesian vs. frequentist approaches](/public/bayesian.pdf)
 - [Lecture 7: Dimensionality reduction - PCA and NMF](../public/dimensionality-reduction.pdf)
   - [Example Notebook](../public/examples/PCA-NNMF.ipynb)
   - For a visual refresh of some linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
@@ -44,7 +43,7 @@ layout: page
 
 ### Week 4, Oct 21 – 25
 
-- [Lecture 8: Partial Least Squares Regression](../public/plsr.pdf)
+- [Lecture 8: Partial Least Squares Regression](/public/plsr.pdf)
 - [Lecture 9: Dynamical models](../public/dynamics.pdf)
 - Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Oct 31 at 11:59 pm
   - Repository link
@@ -68,7 +67,7 @@ layout: page
 
 ### Week 7, Nov 11 – 15
 
-- [Lecture 14: Gaussian Mixture Models](../public/gmms.pdf)
+- [Lecture 14: Gaussian Mixture Models](/public/gmms.pdf)
   - [Understanding Gaussians](https://gestalt.ink/gaussians)
   - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
 - [Lecture 15: Support vector machines](../public/svms.pdf)
@@ -96,9 +95,4 @@ layout: page
 - Final Project, due Dec 11 at 11:59 pm (submit through project Github repository)
 
 <!-- - [Lecture 13: Hidden Markov Models](../public/hmm.pdf)
-  - [Example Notebook](../public/examples/HMMs-example.ipynb)
-  - Reading: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
-  - Reading: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
-  - Reading: [Markov Models—Hidden Markov models](https://www.nature.com/articles/s41592-019-0532-6)
-  - Reading: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
-  - Listening: [Linear Digressions - Hidden Markov Models](https://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](https://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))-->
+-->
