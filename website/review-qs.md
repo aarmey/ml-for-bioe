@@ -34,7 +34,8 @@ layout: page
 6. What does it mean when one says ridge regression and LASSO give a family of answers?
 7. What can we say about the relationship between fitting error and prediction error?
 8. What does regularization do to the degrees of freedom (p) of a model? How about the number of measurements (n)?
-9. A colleague tells you about a new form of regularization they've come up with (e.g., remove X% of variables least correlated with Y). How would this influence the variance of the model? Might this improve the prediction error?
+9. A colleague tells you about a new form of regularization they've come up with (e.g. maximize the weighting for the variables most correlated with the output). How would this influence the variance of the model? Might this improve the prediction error?
+10. What is a smoother matrix? What would a smoother matrix look like for a model that exactly fits the training points?
 
 ### Lecture 4
 
@@ -82,7 +83,7 @@ layout: page
 7. What is a loading matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
 8. What is a scores matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
 9. By definition, what is the direction of PC1?
-10. [See question 5 on midterm W20](https://aarmey.github.io/ml-for-bioe///files/midterm-W20.pdf). How does movement of the siControl EGF point represent changes in the original data?
+10. [See question 5 on midterm W20](https://aarmey.github.io/BE275/files/midterm-W20.pdf). How does movement of the siControl EGF point represent changes in the original data?
 
 ### Lecture 8
 
@@ -105,7 +106,7 @@ layout: page
 5. What are the eigenvalues and eigenvectors of a matrix?
 6. What is the behavior of an ODE system if its eigenvalues are all positive and real? How about negative and real?
 7. What is the behavior of an ODE system if all its eigenvalues are imaginary and positive? How about imaginary and negative?
-8. What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and positive, the other is real and negative)?
+8. What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and negative, the other is imaginary)?
 9. How can you fit an ODE model to a series of measurements over time?
 10. How could you constrain an ODE system so that you only fit parameters that have oscillation?
 
@@ -135,18 +136,7 @@ layout: page
 8. What are two cases in which k-means clustering can fail or provide bad results?
 9. How do you determine that your clustering is "good"?
 
-### Gaussian mixture models
-
-1. What are two ways in which GMMs give different results from K-means?
-2. What does it mean to say GMMs produce “soft assignment”?
-3. What can you say about a multivariate normal distribution with only diagonal elements?
-4. What does it mean to say a GMM is a generative model?
-5. Can mixture models be produced from distributions other than a Gaussian? If so, how is the distribution defined within the model? If not, why?
-6. Can GMMs describe clusters of non-Gaussian shapes? (Think of the moon example from lecture.) Describe.
-7. Can a GMM identify overlapping clusters? If so, what “signal” does it use in the data to distinguish these? If not, why not?
-8. A point lies equidistant between two clusters in a dataset. How do you expect this point to be clustered when using a GMM? How about with K-means?
-
-### Support vector machines
+### SVM review
 
 1. What is the core observation underlying SVMs?
 2. Does the answer for an SVM rely on the exact position of all points? If not, which points most influence the model?
