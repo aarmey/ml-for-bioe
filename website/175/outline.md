@@ -8,9 +8,6 @@ layout: page
 - [Lecture 1: Statistics review]({{ site.baseurl }}/public/Wk1-Lecture1.pdf)
 - [Lecture 2: Fitting & Regression]({{ site.baseurl }}/public/Wk1-Lecture2.pdf)
   - [Example Notebook]({{ site.baseurl }}/public/examples/OLS-Example.ipynb)
-  - 👂: [Linear Digressions: The assumptions of ordinary least squares](https://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
-  - 📖: [Points of Significance: Simple linear regression](https://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
-  - 👂: [Linear Digressions: Convex (and non-convex) optimization](https://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
 - Lab: Programming and Git Primer, due Jan 18th at 11:59 pm
   - Recommended: Git & Github Fundamentals Tutorial
   - 👂: [Linear Digressions: Jupyter Notebooks, A Data Scientist's Best Friend](https://lineardigressions.com/episodes/2017/8/20/jupyter-notebooks-a-data-scientists-best-friend)
