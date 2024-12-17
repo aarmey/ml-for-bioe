@@ -19,9 +19,9 @@ layout: page
 ### Week 2, Jan 15 – 19
 
 - [Lecture 3: Fitting & Regression Redux, Regularization]({{ site.baseurl }}/public/Wk2-Lecture3.pdf)
-  - [Example Notebook](../public/examples/Regularization-Example.ipynb)
-- [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../public/Wk2-Lecture4.pdf)
-  - [Example Notebook](../public/examples/CrossVal-Example.ipynb)
+  - [Example Notebook]({{ site.baseurl }}/public/examples/Regularization-Example.ipynb)
+- [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends]({{ site.baseurl }}/public/Wk2-Lecture4.pdf)
+  - [Example Notebook]({{ site.baseurl }}/public/examples/CrossVal-Example.ipynb)
 - 📖: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Jan 26th at 11:59 pm (submit through Bruin Learn!)
 
@@ -42,7 +42,7 @@ layout: page
 ### Week 5, Feb 5 – 9
 
 - [Lecture 9: Partial Least Squares Regression]({{ site.baseurl }}/public/plsr.pdf)
-<!-- - [Lecture 6: Reproducible computational workflows](../public/reproducibility.pdf) -->
+<!-- - [Lecture 6: Reproducible computational workflows]({{ site.baseurl }}/public/reproducibility.pdf) -->
 - Lab: Midterm review, finish selecting project
 
 ### Week 6, Feb 12 – 16
@@ -57,20 +57,20 @@ layout: page
 
 ### Week 7, Feb 19 – 23
 
-- [Lecture 13: Equitable application of models, dynamical models](../public/dynamics.pdf)
+- [Lecture 13: Equitable application of models, dynamical models]({{ site.baseurl }}/public/dynamics.pdf)
 - [Lecture 14: K-Means clustering]({{ site.baseurl }}/public/clustering.pdf)
-  - [Example Notebook](../public/examples/K-Means.ipynb)
+  - [Example Notebook]({{ site.baseurl }}/public/examples/K-Means.ipynb)
 - Lab: Implementation of [Perelson et al.](https://science.sciencemag.org/content/271/5255/1582), due March 7th at 11:59 pm (on Bruin Learn)
 
 ### Week 8, Feb 26 – Mar 1
 
-- [Lecture 15/16: Gaussian Mixture Models](../public/gmms.pdf)
-  - [Example Notebook](../public/examples/Gaussian-Mixtures.ipynb)
+- [Lecture 15/16: Gaussian Mixture Models]({{ site.baseurl }}/public/gmms.pdf)
+  - [Example Notebook]({{ site.baseurl }}/public/examples/Gaussian-Mixtures.ipynb)
 
 ### Week 9, Mar 4 – Mar 8
 
 - [Lecture 17/18: Support vector machines]({{ site.baseurl }}/public/svms.pdf)
-  - [Example Notebook](../public/examples/SVMs-example.ipynb)
+  - [Example Notebook]({{ site.baseurl }}/public/examples/SVMs-example.ipynb)
   - 👂: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
   - 👂: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 - Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due March 21st at 11:59 pm (on Bruin Learn)

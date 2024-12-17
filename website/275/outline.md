@@ -35,7 +35,7 @@ layout: page
 
 ### Week 3, Oct 14 – 18
 
-- [Lecture 6: Bayesian vs. frequentist approaches](/public/bayesian.pdf)
+- [Lecture 6: Bayesian vs. frequentist approaches]({{ site.baseurl }}/public/bayesian.pdf)
 - [Lecture 7: Dimensionality reduction - PCA and NMF]({{ site.baseurl }}/public/dimensionality-reduction.pdf)
   - [Example Notebook]({{ site.baseurl }}/public/examples/PCA-NNMF.ipynb)
   - For a visual refresh of some linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
@@ -43,7 +43,7 @@ layout: page
 
 ### Week 4, Oct 21 – 25
 
-- [Lecture 8: Partial Least Squares Regression](/public/plsr.pdf)
+- [Lecture 8: Partial Least Squares Regression]({{ site.baseurl }}/public/plsr.pdf)
 - [Lecture 9: Dynamical models]({{ site.baseurl }}/public/dynamics.pdf)
 - Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Oct 31 at 11:59 pm
   - Repository link
@@ -51,7 +51,7 @@ layout: page
 ### Week 5, Oct 28 – Nov 1
 
 - Lecture 10: Finish dynamical models, midterm review
-- Lecture 11: Midterm review (previous midterms: [W18](../files/midterm-W18.pdf), [W19](../files/midterm-W19.pdf), [W20](../files/midterm-W20.pdf))
+- Lecture 11: Midterm review
 - Lab: Midterm review, finish selecting project
 
 ### Week 6, Nov 4 – Nov 8
@@ -67,7 +67,7 @@ layout: page
 
 ### Week 7, Nov 11 – 15
 
-- [Lecture 14: Gaussian Mixture Models](/public/gmms.pdf)
+- [Lecture 14: Gaussian Mixture Models]({{ site.baseurl }}/public/gmms.pdf)
   - [Understanding Gaussians](https://gestalt.ink/gaussians)
   - [Example Notebook]({{ site.baseurl }}/public/examples/Gaussian-Mixtures.ipynb)
 - [Lecture 15: Support vector machines]({{ site.baseurl }}/public/svms.pdf)
