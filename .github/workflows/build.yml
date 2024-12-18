@@ -49,7 +49,7 @@ jobs:
         ruby-version: '3.3'
         bundler-cache: true
     - name: Build jekyll
-      run: bundle exec jekyll -s website -d website/_site build
+      run: bundle exec jekyll build -s website -d website/_site
     - name: Proof HTML
       run: bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --ignore_status_codes "412, 503, 403, 406" --assume-extension website/_site
     - name: Upload lecture notes
