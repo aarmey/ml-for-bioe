@@ -303,11 +303,10 @@ sklearn has implementations for a variety of SVM methods:
 		- For example can provide l1 or l2 regularization
 		- Scales better for many samples
 
-# Further Reading
+# Reading & Resources
 
-- [MIT 6.034: Support Vector Machines](https://web.mit.edu/6.034/wwwbob/svm.pdf)
-- [Computer Age Statistical Inference: Chapter 19](https://web.stanford.edu/~hastie/CASI_files/PDF/casi.pdf)
-- [sklearn: Support Vector Machines](https://scikit-learn.org/stable/modules/svm.html)
-- Linear Digressions Podcast
-	- [Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
-	- [The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
+- 📖: [MIT 6.034: Support Vector Machines](https://web.mit.edu/6.034/wwwbob/svm.pdf)
+- 📖: [Computer Age Statistical Inference: Chapter 19](https://web.stanford.edu/~hastie/CASI_files/PDF/casi.pdf)
+- 💾: [sklearn: Support Vector Machines](https://scikit-learn.org/stable/modules/svm.html)
+- 👂: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
+- 👂: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
