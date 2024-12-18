@@ -405,8 +405,9 @@ sp.optimize.least_squares(ls_obj_k1, 1., args=(X,Y))
 - Given the binding data presented here, do you think a least squares model is most appropriate?
 - How might you test whether your data fits the model you've specified?
 
-\note[item]{Talking about Chi-Squared test in point 3.
-}
+::: notes
+Talking about Chi-Squared test in point 3.
+:::
 
 # Reading & Resources
 

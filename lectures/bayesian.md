@@ -41,13 +41,14 @@ $$P(B\cap A) = P(A\cap B)$$
 $$\Rightarrow P(A\cap B)=P(A\mid B)\,P(B)=P(B\mid A)\,P(A)$$
 $$\Rightarrow P(A\mid B)={\frac {P(B\mid A)\,P(A)}{P(B)}},\;\text{if}\; P(B)\neq 0$$
 
-\note[item]{Older than frequentist statistics
-\item Presbyterian minister Thomas Bayes 1701-1761
-\item Left unpublished
-\item Posthumously recognized, edited, and published by Richard Price in 1770's
-\item Elected to Royal Society based on the work
-\item Philisophical extensions by Pierre-Simon Laplace
-}
+::: notes
+- Older than frequentist statistics
+- Presbyterian minister Thomas Bayes 1701-1761
+- Left unpublished
+- Posthumously recognized, edited, and published by Richard Price in 1770's
+- Elected to Royal Society based on the work
+- Philisophical extensions by Pierre-Simon Laplace
+:::
 
 # Classic example: Binomial experiment
 
