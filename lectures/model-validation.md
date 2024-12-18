@@ -39,9 +39,11 @@ Walk through this in detail.
 - Some methods make a *mathematical adjustment* to the training error rate to estimate the test error rate. These include the *Cp statistic*, *AIC* and *BIC*.
 - Here we instead consider a class of methods that estimate the test error by *holding out* a subset of the training observations from the fitting process, and then applying the statistical learning method to those held out observations
 
-\note[item]{What happens when the first bullet is true?
-\item PE = FE
-\item $PE = \sigma^2 + Bias^2 + Var$}
+::: notes
+- What happens when the first bullet is true?
+- PE = FE
+- $PE = \sigma^2 + Bias^2 + Var$
+:::
 
 # Validation-set approach
 
@@ -145,8 +147,10 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 
 ![ ](./lectures/figs/lec4/sfd-32.pdf)
 
-\note[item]{Go through the hospital example.
-\item Cross-validation within/between.}
+::: notes
+- Go through the hospital example.
+- Cross-validation within/between.
+:::
 
 # The bootstrap
 

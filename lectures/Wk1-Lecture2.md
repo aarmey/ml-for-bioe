@@ -106,9 +106,10 @@ would be:
 
 $$ \mathbf{y} = m_1 \mathbf{x_1} + m_2 \mathbf{x_2} \ldots + b + \mathbf{\epsilon} $$
 
-\note[item]{Go through why you would need to transform the data
-	\item Write out on the board how this corresponds to shifted distributions
-}
+::: notes
+- Go through why you would need to transform the data
+- Write out on the board how this corresponds to shifted distributions
+:::
 
 # Ordinary Least Squares
 
@@ -170,14 +171,15 @@ Go through where this arises from.
 
 What might be some advantages of a method such as this?
 
-\note[item]{Only has p parameters.
-	\item Can be directly calculated from data (without optimization procedure. Fit and uncertainty can be directly calculated.)
-  \item Fast
-  \item Easily quantify error
-  \item Scalable
-  \item Clear assumptions
-  \item Clearly interpretable
-}
+::: notes
+- Only has p parameters.
+- Can be directly calculated from data (without optimization procedure. Fit and uncertainty can be directly calculated.)
+- Fast
+- Easily quantify error
+- Scalable
+- Clear assumptions
+- Clearly interpretable
+:::
 
 # Ordinary Least Squares
 
@@ -187,9 +189,10 @@ What are the implications of these assumptions not holding?
 
 What are some downsides?
 
-\note[item]{Very sensitive to outliers.
-\item Fails for p > n.
-}
+::: notes
+- Very sensitive to outliers.
+- Fails for p > n.
+:::
 
 # Application: Paternal *de novo* mutations
 
@@ -276,9 +279,10 @@ This is now considered **bad practice**.
 
 **Why?**
 
-\note[item]{Distorts error term.
-\item But made it easier to calculate.
-}
+::: notes
+- Distorts error term.
+- But made it easier to calculate.
+:::
 
 # Non-Linear Least Squares
 

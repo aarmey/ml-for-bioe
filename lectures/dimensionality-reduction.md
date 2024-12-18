@@ -67,10 +67,11 @@ $$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^{T} $$
 
 where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N$.
 
-\note[item]{Reduced R simplifies the model substantially
-\item Also decreases fidelity of reconstruction
-\item Trade-off always
-}
+::: notes
+- Reduced R simplifies the model substantially
+- Also decreases fidelity of reconstruction
+- Trade-off always
+:::
 
 # Matrix Factorization
 
@@ -90,9 +91,10 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 
 ![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./lectures/figs/lec7/cat-46comp.jpg){width=80%}
 
-\note[item]{There is always information lost
-\item We just hope for it to be information that doesn't matter
-}
+::: notes
+- There is always information lost
+- We just hope for it to be information that doesn't matter
+:::
 
 # Examples from bioengineering
 
@@ -128,14 +130,15 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 
 BOARD
 
-\note[item]{Go through example
-\item Mention normalization
-\item Construct scores and loadings plot
-\item Walk through interpretation of plots
-\item Go through selection of component numbers
-\item Talk about plotting higher components
-\item Talk about relationship going back to data from PCA
-}
+::: notes
+- Go through example
+- Mention normalization
+- Construct scores and loadings plot
+- Walk through interpretation of plots
+- Go through selection of component numbers
+- Talk about plotting higher components
+- Talk about relationship going back to data from PCA
+:::
 
 # Methods to calculate PCA
 
@@ -248,7 +251,9 @@ BOARD
 
 ![Alexandrov et al, Cell Rep, 2013](./lectures/figs/lec7/sigB.jpg)
 
-\note[item]{Also used in interpreting medical health records}
+::: notes
+- Also used in interpreting medical health records
+:::
 
 # Practical Notes - NMF
 
