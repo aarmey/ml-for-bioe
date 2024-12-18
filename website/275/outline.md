@@ -57,9 +57,9 @@ layout: page
 - [Lecture 13: K-Means Clustering]({{ site.baseurl }}/public/clustering.pdf)
   - [Example Notebook]({{ site.baseurl }}/public/examples/K-Means.ipynb)
 - Lab: Implementation of [Perelson et al.](https://www.science.org/doi/10.1126/science.271.5255.1582), due Nov 28 at 11:59 pm
-  - [Repository link](https://classroom.github.com/a/7hqH3A8l)
+  - Repository link
 - [Final project proposals due Nov 7 at 11:59 pm](https://bruinlearn.ucla.edu/courses/139668/assignments/1247677?module_item_id=5340857)
-  - [Link to set up final project repository](https://classroom.github.com/a/ZLlRq10u)
+  - Link to set up final project repository
     - Be sure to add any team members.
 
 ### Week 7, Nov 11 – 15
@@ -69,8 +69,6 @@ layout: page
   - [Example Notebook]({{ site.baseurl }}/public/examples/Gaussian-Mixtures.ipynb)
 - [Lecture 15: Support vector machines]({{ site.baseurl }}/public/svms.pdf)
   - [Example Notebook]({{ site.baseurl }}/public/examples/SVMs-example.ipynb)
-  - Listening: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
-  - Listening: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 - Lab: Attend Research Day!
 
 ### Week 8, Nov 18 – 22
@@ -78,7 +76,7 @@ layout: page
 - Lecture 16: Finish support vector machines
 - Lecture 17: Building larger models, meta discussion
 - Lab: Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863), due Dec 12 at 11:59 pm
-  - [Repository link](https://classroom.github.com/a/dzTdyGBq)
+  - Repository link
 
 ### Week 9, Nov 25 – 29
 
