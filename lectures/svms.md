@@ -45,8 +45,8 @@ author: Aaron Meyer
 # Large-Margin Decision Boundary
 
 - The decision boundary should be as far away from the data of both classes as possible
-- We should maximize the margin, $m = 2 / \norm{\mathbf{w}}$
-- Distance between the origin and the line $\mathbf{w}^t\mathbf{x}=k$ is $k / \norm{\mathbf{w}}$
+- We should maximize the margin, $m = 2 / \lVert \mathbf{w}\rVert$
+- Distance between the origin and the line $\mathbf{w}^t\mathbf{x}=k$ is $k / \lVert \mathbf{w}\rVert$
 
 ![ ](./lectures/figs/lec16/findboundary.png){ width=60% }
 
