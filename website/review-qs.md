@@ -82,7 +82,7 @@ layout: page
 7. What is a loading matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
 8. What is a scores matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
 9. By definition, what is the direction of PC1?
-10. [See question 5 on midterm W20](https://aarmey.github.io/ml-for-bioe///files/midterm-W20.pdf). How does movement of the siControl EGF point represent changes in the original data?
+10. [See question 5 on midterm W20](https://aarmey.github.io/ml-for-bioe/ex-midterm-files/20W.pdf). How does movement of the siControl EGF point represent changes in the original data?
 
 ### Lecture 8
 
@@ -105,7 +105,7 @@ layout: page
 5. What are the eigenvalues and eigenvectors of a matrix?
 6. What is the behavior of an ODE system if its eigenvalues are all positive and real? How about negative and real?
 7. What is the behavior of an ODE system if all its eigenvalues are imaginary and positive? How about imaginary and negative?
-8. What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and positive, the other is real and negative)?
+8. What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and negative, the other is imaginary)?
 9. How can you fit an ODE model to a series of measurements over time?
 10. How could you constrain an ODE system so that you only fit parameters that have oscillation?
 
