@@ -37,7 +37,7 @@ author: Aaron Meyer
 # Is $\hat{\boldsymbol\beta}$ close to the true β?
 
 - To answer this question, we might consider the **mean squared error** of our estimate $\hat{\boldsymbol\beta}$:
-	- i.e., consider squared distance of $\hat{\boldsymbol\beta}$ to the true $\boldsymbol\beta$: $$MSE(\hat{\boldsymbol\beta}) = \mathop{\mathbb{E}}\left[\norm{\hat{\boldsymbol\beta} - \boldsymbol\beta}^2\right] = \mathop{\mathbb{E}}[(\hat{\boldsymbol\beta} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta} - \boldsymbol\beta)]$$
+	- i.e., consider squared distance of $\hat{\boldsymbol\beta}$ to the true $\boldsymbol\beta$: $$MSE(\hat{\boldsymbol\beta}) = \mathop{\mathbb{E}}\left[\lVert \hat{\boldsymbol\beta} - \boldsymbol\beta \rVert^2\right] = \mathop{\mathbb{E}}[(\hat{\boldsymbol\beta} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta} - \boldsymbol\beta)]$$
 - **Example:** In least squares (LS), we know that: $$\mathop{\mathbb{E}}[(\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)] = \sigma^2 \mathrm{tr}[(\mathbf{Z}^T \mathbf{Z})^{-1}]$$
 
 # Will $\hat{f}(z)$ fit future observations well?
@@ -47,7 +47,9 @@ author: Aaron Meyer
 - So if $\hat{f}(\cdot)$ is a good model, then $\hat{f}(\mathbf{z}_i)$ should also be close to the new target $y_i'$
 - This is the notion of **prediction error** (PE)
 
-\note{Have students draw lines for smoking vs. heart attack risk over data. Make two datasets to explain variance.}
+::: notes
+Have students draw lines for smoking vs. heart attack risk over data. Make two datasets to explain variance.
+:::
 
 # Prediction error and the bias-variance tradeoff
 
@@ -157,16 +159,16 @@ author: Aaron Meyer
 # The LASSO: $l_1$ penalty
 
 - Tibshirani (*J of the Royal Stat Soc* 1996) introduced the **LASSO**: *least absolute shrinkage and selection operator*
-- LASSO coefficients are the solutions to the $l_1$ optimization problem: $$\mathrm{minimize}\: (\mathbf{y}-\mathbf{Z}\boldsymbol\beta)^T (\mathbf{y}-\mathbf{Z}\boldsymbol\beta)\: \mathrm{s.t.} \sum_{j=1}^p \norm{\beta_j} \leq t$$
-- This is equivalent to loss function: $$PRSS(\boldsymbol\beta)_{l_1} = \sum_{i=1}^n (y_i - \mathbf{z}_i^T \boldsymbol\beta)^2 + \lambda \sum_{j=1}^p \norm{\beta_j}$$ $$\quad = (\mathbf{y}-\mathbf{Z}\boldsymbol\beta)^T (\mathbf{y}-\mathbf{Z}\boldsymbol\beta) + \lambda\norm{\boldsymbol\beta}_1$$
+- LASSO coefficients are the solutions to the $l_1$ optimization problem: $$\mathrm{minimize}\: (\mathbf{y}-\mathbf{Z}\boldsymbol\beta)^T (\mathbf{y}-\mathbf{Z}\boldsymbol\beta)\: \mathrm{s.t.} \sum_{j=1}^p \lVert \beta_j \rVert \leq t$$
+- This is equivalent to loss function: $$PRSS(\boldsymbol\beta)_{l_1} = \sum_{i=1}^n (y_i - \mathbf{z}_i^T \boldsymbol\beta)^2 + \lambda \sum_{j=1}^p \lVert \beta_j \rVert$$ $$\quad = (\mathbf{y}-\mathbf{Z}\boldsymbol\beta)^T (\mathbf{y}-\mathbf{Z}\boldsymbol\beta) + \lambda\lVert \boldsymbol\beta \rVert_1$$
 
 # λ (or t) as a tuning parameter
 
 - Again, we have a tuning parameter λ that controls the amount of regularization
 - One-to-one correspondence with the threshhold t:
-	- recall the constraint: $$\sum_{j=1}^p = \norm{\beta_j} \leq t$$
+	- recall the constraint: $$\sum_{j=1}^p = \lVert \beta_j \rVert \leq t$$
 	- Hence, have a "path" of solutions indexed by $t$
-	- If $t_0 = \sum_{j=1}^p \norm{\hat{\beta}_j^{ls}}$ (equivalently, λ = 0), we obtain no shrinkage (and hence obtain the LS solutions as our solution)
+	- If $t_0 = \sum_{j=1}^p \lVert \hat{\beta}_j^{ls} \rVert$ (equivalently, λ = 0), we obtain no shrinkage (and hence obtain the LS solutions as our solution)
 	- Often, the path of solutions is indexed by a fraction of shrinkage factor of $t_0$
 
 # Sparsity and exact zeros

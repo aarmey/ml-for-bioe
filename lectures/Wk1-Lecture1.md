@@ -137,7 +137,9 @@ If you do these three things, you will do well.
 - Models (inference)
 - Algorithms
 
-\note{Distinguish each of these.}
+::: notes
+Distinguish each of these.
+:::
 
 # Area of Focus
 
@@ -148,7 +150,7 @@ What we will cover spans a range of fields:
 - Statistics (the model)
 
 ::: notes
-- akes this material challenging.
+- Makes this material challenging.
 - Also rewarding, frontier of methods.
 - Stop and talk about why statistics can be hard.
 - One, students haven't seen it before.
@@ -159,10 +161,11 @@ What we will cover spans a range of fields:
 
 FILL IN
 
-\note[item]{It may not be feasible for humans to learn on the scale / in the time alloted.
-\item Model construction serves as goal posts. I.e. a well-specified target we can compare, share, etc.
-\item For many tasks, machine learning can perform better than a human would.
-}
+::: notes
+- It may not be feasible for humans to learn on the scale / in the time alloted.
+- Model construction serves as goal posts. I.e. a well-specified target we can compare, share, etc.
+- For many tasks, machine learning can perform better than a human would.
+:::
 
 # Why we need models - Can a biologist fix a radio?
 
@@ -216,11 +219,12 @@ FILL IN
 
 # Probability
 
-\note[item]{Probability indicates the chance of an event within a wider set of outcomes
-\item Also talk about if something is conditionally dependent/independent
-\item What is integral?
-\item What is limit as dx goes to 0?
-}
+::: notes
+- Probability indicates the chance of an event within a wider set of outcomes
+- Also talk about if something is conditionally dependent/independent
+- What is integral?
+- What is limit as dx goes to 0?
+:::
 
 # Coin toss example
 
@@ -231,19 +235,21 @@ Two possibilities:
 - Fair coin (heads 50%, tails 50%)
 - Biased (heads 60%, tails 40%)
 
-\note[item]{Run through example.
-\item What is the data here?
-\item What is the model?
-\item What is the algorithm?
-\item Walk through each form of probability.
-}
+::: notes
+- Run through example.
+- What is the data here?
+- What is the model?
+- What is the algorithm?
+- Walk through each form of probability.
+:::
 
 # Distributions
 
 We've already been talking about these! Distributions describe the range of probabilities that exist for all possible outcomes.
 
-\note[item]{Can a distribution be categorical? Ordinal? Numerical?
-}
+::: notes
+- Can a distribution be categorical? Ordinal? Numerical?
+:::
 
 # Other Probabilities
 
@@ -259,9 +265,10 @@ Joint probability
 Complementary event
 ~ The probability of an event not occuring.
 
-\note[item]{Plot out a joint probability
-\item Also talk about if something is conditionally dependent/independent
-}
+::: notes
+- Plot out a joint probability
+- Also talk about if something is conditionally dependent/independent
+:::
 
 # Normal Distributions
 
@@ -287,9 +294,10 @@ Area between:
 
 You can normalize any normal distribution to the standard normal.
 
-\note[item]{Walk through the equations for normal distribution.
-\item Walk through process of Z-scoring.
-}
+::: notes
+- Walk through the equations for normal distribution.
+- Walk through process of Z-scoring.
+:::
 
 # Other Distributions
 

@@ -11,9 +11,10 @@ author: Aaron Meyer
 - Some Examples
 - Implementation
 
-\note[item]{Explain unsupervised/supervised.
-\item Can you bootstrap a PLSR/PCR/PCA model?
-}
+::: notes
+- Explain unsupervised/supervised.
+- Can you bootstrap a PLSR/PCR/PCA model?
+:::
 
 **Adapted from slides by Pam Kreeger.**
 
@@ -21,10 +22,11 @@ author: Aaron Meyer
 
 ![ ](./lectures/figs/lec8/CSR-figure.pdf)
 
-\note[item]{Number of components enough to make PCA/lasso useful
-\item But how do we deal with components moving together?
-\item And what we care about is some outcome
-}
+::: notes
+- Number of components enough to make PCA/lasso useful
+- But how do we deal with components moving together?
+- And what we care about is some outcome
+:::
 
 # Many Methods for Relating a Signal to Response
 
@@ -39,7 +41,9 @@ From the variation we can see that:
 
 If we can find a quantitative correlation between the input and output, we can predict new outcomes for measurements we haven't yet seen.
 
-\note{Draw out correlation and then include new point.}
+::: notes
+Draw out correlation and then include new point.
+:::
 
 # Challenges with Univariate Relationships
 
@@ -99,8 +103,10 @@ First step: **Simply apply PCA!**
 
 Dimensionality goes from $m$ to $N_{comp}$.
 
-\note[item]{What are the bounds on the number of components we can have?
-\item What might be a concern as a consequence of this? (How do we determine how many components to keep?)}
+::: notes
+- What are the bounds on the number of components we can have?
+- What might be a concern as a consequence of this? (How do we determine how many components to keep?)
+:::
 
 # Principal Components Regression (PCR)
 
@@ -111,15 +117,19 @@ $$X = TP^T + E$$
 
 $$Y = TB + E$$
 
-\note[item]{What is the residual against here?
-\item How do we invert the direction of the regression? }
+::: notes
+- What is the residual against here?
+- How do we invert the direction of the regression?
+:::
 
 # Challenge
 
 **How might we determine the number of components using our prediction?**
 
-\note[item]{Cross-validation with varying numbers of components
-\item Metrics like AIC or BIC}
+::: notes
+- Cross-validation with varying numbers of components
+- Metrics like AIC or BIC
+:::
 
 # Potential Problem
 
@@ -133,19 +143,23 @@ $$Y = TB + E$$
 
 ![ ](./lectures/figs/lec8/PC-5.pdf)
 
-\note[item]{Go over definition of covariance.
-\item cov(X, X) = var(X)
-\item var(Y) = cov(X, Y) + variance in Y independent of X
-\item A factorization occurs to find max covar with Y
-\item Forces direction of components}
+::: notes
+- Go over definition of covariance.
+- cov(X, X) = var(X)
+- var(Y) = cov(X, Y) + variance in Y independent of X
+- A factorization occurs to find max covar with Y
+- Forces direction of components
+:::
 
 # PLSR - NIPALs with Scores Exchanged
 
 ![ ](./lectures/figs/lec8/PC-6.pdf)
 
-\note[item]{$B$ is $T (P^T T)^{-1} Q^T$
-\item $P^T T$ is the approximation of $X$
-\item PLSR components are not orthogonal in data space, but are orthogonal in O-PLS.}
+::: notes
+- $B$ is $T (P^T T)^{-1} Q^T$
+- $P^T T$ is the approximation of $X$
+- PLSR components are not orthogonal in data space, but are orthogonal in O-PLS.
+:::
 
 # PLSR - NIPALs with Scores Exchanged
 
@@ -159,7 +173,9 @@ $$Y = TB + E$$
 
 ![ ](./lectures/figs/lec8/PC-9.pdf)
 
-\note{Go over each.}
+::: notes
+Go over each.
+:::
 
 # Determining the Number of Components
 

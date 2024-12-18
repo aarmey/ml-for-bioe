@@ -32,7 +32,9 @@ author: Aaron Meyer
 
 ![ ](./lectures/figs/lec13/clust1.png)
 
-\note{Go over what is the data input and output (discrete).}
+::: notes
+Go over what is the data input and output (discrete).
+:::
 
 # Clustering
 
@@ -52,7 +54,7 @@ author: Aaron Meyer
 
 - One option: Euclidean distance
 
-$$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \norm{\mathbf{x} - \mathbf{y}} $$
+$$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert $$
 
 - Clustering results are **completely** dependent on the measure of similarity (or distance) between "points" to be clustered
 
@@ -137,7 +139,9 @@ Assign data points to closest cluster center
 
 ![ ](./lectures/figs/lec13/k2.png){ width=50% }
 
-\note{Critical step is right here. How do we pick what is close? Which is closer?}
+::: notes
+Critical step is right here. How do we pick what is close? Which is closer?
+:::
 
 # K-means clustering: Example
 
@@ -147,9 +151,10 @@ Change the cluster center to the average of the assigned points
 
 ![ ](./lectures/figs/lec13/k3.png){ width=50% }
 
-\note[item]{Can be slow for very large numbers of data points.
-\item Can use stochastic sampling in some cases.
-}
+::: notes
+- Can be slow for very large numbers of data points.
+- Can use stochastic sampling in some cases.
+:::
 
 # K-means clustering: Example
 
@@ -205,11 +210,11 @@ Repeat until convergence
 
 # K-Means Convergence
 
-**Objective:** $\min_{\mu}\min_{C}\sum_{i=1}^k \sum_{x\in C_i} \norm{x - \mu_i}^2$
+**Objective:** $\min_{\mu}\min_{C}\sum_{i=1}^k \sum_{x\in C_i} \lVert x - \mu_i \rVert^2$
 
-1. Fix $\mu$, optimize $C$: $$\min_C \sum_{i=1}^k \sum_{x\in C_i} \norm{x - \mu_i}^2 = \min_C \sum_{i}^n \norm{x_i - \mu_{x_i}}^2$$
-2. Fix $C$, optimize $\mu$: $$\min_{\mu}\sum_{i=1}^k \sum_{x\in C_i} \norm{x - \mu_i}^2$$
-	- Take partial derivative of $\mu_i$ and set to zero, we have $$\mu_i = \frac{1}{\norm{C_i}} \sum_{x \in C_i} x$$
+1. Fix $\mu$, optimize $C$: $$\min_C \sum_{i=1}^k \sum_{x\in C_i} \lVert x - \mu_i \rVert^2 = \min_C \sum_{i}^n \lVert x_i - \mu_{x_i} \rVert^2$$
+2. Fix $C$, optimize $\mu$: $$\min_{\mu}\sum_{i=1}^k \sum_{x\in C_i} \lVert x - \mu_i \rVert^2$$
+	- Take partial derivative of $\mu_i$ and set to zero, we have $$\mu_i = \frac{1}{\lVert C_i \rVert} \sum_{x \in C_i} x$$
 
 Kmeans takes an alternating optimization approach. Each step is guaranteed to decrease the objective—thus guaranteed to converge.
 
@@ -240,18 +245,20 @@ Local optima dependent on how the problem was specified:
 
 ![ ](./lectures/figs/lec13/circle.png)
 
-\note[item]{Go over number of clusters.
-\item Show example data.
-\item What would within-cluster distance look like in the ideal case?
-}
+::: notes
+- Go over number of clusters.
+- Show example data.
+- What would within-cluster distance look like in the ideal case?
+:::
 
 # Changing the features (distance function) can help
 
 ![ ](./lectures/figs/lec13/circletrans.png)
 
-\note[item]{This is the kernel method.
-\item Will use again with SVMs!
-}
+::: notes
+- This is the kernel method.
+- Will use again with SVMs!
+:::
 
 # Agglomerative Clustering
 
@@ -339,9 +346,10 @@ How should we define “closest” for clusters with multiple elements?
 
 ![ ](./lectures/figs/lec13/BCclusters.pdf)
 
-\note[item]{We use clusters because they (hopefully) translate to meaningful differences.
-\item What if you cluster based on different measurements?
-}
+::: notes
+- We use clusters because they (hopefully) translate to meaningful differences.
+- What if you cluster based on different measurements?
+:::
 
 # Clustering molecular signals
 

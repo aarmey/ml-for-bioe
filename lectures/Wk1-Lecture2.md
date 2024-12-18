@@ -62,7 +62,9 @@ The key factor is how one defines the problem—i.e. how the distribution is des
 
 Fitting does not happen in a vacuum!
 
-\note{Walk through model, what the model is, etc.}
+::: notes
+Walk through model, what the model is, etc.
+:::
 
 <!-- Page 97 of Computer Age Statistical Inference -->
 
@@ -88,7 +90,9 @@ $\mathbf{\epsilon}$ is usually handled to be uncorrelated random components with
 
 $$ \mathbf{\epsilon} \sim \left( \mathbf{0}, \sigma^2 \mathbf{I} \right) $$
 
-\note{Graph this}
+::: notes
+Graph this
+:::
 
 # Ordinary Least Squares
 
@@ -102,9 +106,10 @@ would be:
 
 $$ \mathbf{y} = m_1 \mathbf{x_1} + m_2 \mathbf{x_2} \ldots + b + \mathbf{\epsilon} $$
 
-\note[item]{Go through why you would need to transform the data
-	\item Write out on the board how this corresponds to shifted distributions
-}
+::: notes
+- Go through why you would need to transform the data
+- Write out on the board how this corresponds to shifted distributions
+:::
 
 # Ordinary Least Squares
 
@@ -134,7 +139,9 @@ where
 
 $$ \mathbf{S} = \mathbf{X}'\mathbf{X} $$ <!-- Eq 7.33 -->
 
-\note{Prove this?}
+::: notes
+Prove this?
+:::
 
 # Ordinary Least Squares
 
@@ -156,20 +163,23 @@ $$ \sum_{i=1}^{n} (y_{i}-x_{i} \beta)^{2} $$
 
 *Exactly how we calculate $\beta$!*
 
-\note{Go through where this arises from.}
+::: notes
+Go through where this arises from.
+:::
 
 # Ordinary Least Squares
 
 What might be some advantages of a method such as this?
 
-\note[item]{Only has p parameters.
-	\item Can be directly calculated from data (without optimization procedure. Fit and uncertainty can be directly calculated.)
-  \item Fast
-  \item Easily quantify error
-  \item Scalable
-  \item Clear assumptions
-  \item Clearly interpretable
-}
+::: notes
+- Only has p parameters.
+- Can be directly calculated from data (without optimization procedure. Fit and uncertainty can be directly calculated.)
+- Fast
+- Easily quantify error
+- Scalable
+- Clear assumptions
+- Clearly interpretable
+:::
 
 # Ordinary Least Squares
 
@@ -179,9 +189,10 @@ What are the implications of these assumptions not holding?
 
 What are some downsides?
 
-\note[item]{Very sensitive to outliers.
-\item Fails for p > n.
-}
+::: notes
+- Very sensitive to outliers.
+- Fails for p > n.
+:::
 
 # Application: Paternal *de novo* mutations
 
@@ -194,7 +205,9 @@ What are some downsides?
 
 ![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./lectures/figs/lec2/decode0.pdf)
 
-\note{What is different about paternal vs. maternal meiosis?}
+::: notes
+What is different about paternal vs. maternal meiosis?
+:::
 
 # Application: Paternal *de novo* mutations
 
@@ -217,7 +230,7 @@ sklearn provides a very basic function for ordinary least squares.
 Or there's an even more bare function in numpy `numpy.linalg.lstsq`.
 
 - Takes input variables `a` and `b`.
-- Solves the equation $ax=b$ by computing a vector $x$ that minimizes the Euclidean 2-norm $\norm{b-ax}^2$.
+- Solves the equation $ax=b$ by computing a vector $x$ that minimizes the Euclidean 2-norm $\lVert b-ax \rVert^2$.
 
 # Implementation
 
@@ -266,9 +279,10 @@ This is now considered **bad practice**.
 
 **Why?**
 
-\note[item]{Distorts error term.
-\item But made it easier to calculate.
-}
+::: notes
+- Distorts error term.
+- But made it easier to calculate.
+:::
 
 # Non-Linear Least Squares
 
@@ -405,8 +419,9 @@ sp.optimize.least_squares(ls_obj_k1, 1., args=(X,Y))
 - Given the binding data presented here, do you think a least squares model is most appropriate?
 - How might you test whether your data fits the model you've specified?
 
-\note[item]{Talking about Chi-Squared test in point 3.
-}
+::: notes
+Talking about Chi-Squared test in point 3.
+:::
 
 # Reading & Resources
 

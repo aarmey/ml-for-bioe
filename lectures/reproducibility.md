@@ -33,10 +33,12 @@ author: Aaron Meyer
 - You're assembling a machine learning model to identify heart attacks
 	- Not testing this could be considered professional malpractice
 	
-\note[item]{Talk about software bug in radiation treatment
-\item Therac-25, introduced in 1982
-\item Had two options: direct beam, or 100X greater through filter
-\item FDA now requires code review}
+::: notes
+- Talk about software bug in radiation treatment
+- Therac-25, introduced in 1982
+- Had two options: direct beam, or 100X greater through filter
+- FDA now requires code review
+:::
 
 # Difficulties of testing
 

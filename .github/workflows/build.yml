@@ -24,17 +24,16 @@ jobs:
         sudo apt update
         sudo apt install pandoc fonts-cmu
     - name: Build slides and handouts
-      run: make -j 2
-    - name: Install ruby
+      run: make -j 3
+    - name: Install ruby & jekyll
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.3'
-    - name: Install jekyll
-      run: bundle install --gemfile=./website/Gemfile
+        bundler-cache: true
     - name: Build jekyll
-      run: cd website && bundle exec jekyll build
+      run: bundle exec jekyll build -s website -d website/_site
     - name: Proof HTML
-      run: cd website/_site && bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --ignore_status_codes "412, 503, 403, 406" --assume-extension .
+      run: bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --ignore_status_codes "412, 503, 403, 406" --assume-extension . website/_site
     - name: Upload lecture notes
       uses: actions/upload-artifact@v4
       with:
