@@ -41,13 +41,14 @@ $$P(B\cap A) = P(A\cap B)$$
 $$\Rightarrow P(A\cap B)=P(A\mid B)\,P(B)=P(B\mid A)\,P(A)$$
 $$\Rightarrow P(A\mid B)={\frac {P(B\mid A)\,P(A)}{P(B)}},\;\text{if}\; P(B)\neq 0$$
 
-\note[item]{Older than frequentist statistics
-\item Presbyterian minister Thomas Bayes 1701-1761
-\item Left unpublished
-\item Posthumously recognized, edited, and published by Richard Price in 1770's
-\item Elected to Royal Society based on the work
-\item Philisophical extensions by Pierre-Simon Laplace
-}
+::: notes
+- Older than frequentist statistics
+- Presbyterian minister Thomas Bayes 1701-1761
+- Left unpublished
+- Posthumously recognized, edited, and published by Richard Price in 1770's
+- Elected to Royal Society based on the work
+- Philisophical extensions by Pierre-Simon Laplace
+:::
 
 # Classic example: Binomial experiment
 
@@ -79,7 +80,9 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 	- How certain are you that the true parameter value is 0.7?
 	- Were there enough samples for you to be certain?
 
-\note{Can look at sampling distribution of parameter.}
+::: notes
+Can look at sampling distribution of parameter.
+:::
 
 # Bayesian approach
 - Formulate knowledge about situation probabilistically
@@ -112,7 +115,9 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 	- **If** prior is well-behaved (i.e., does not assign 0 density to any “feasible” parameter value)
 	- **Then** both the MLE and Bayesian predictions converge to the same value as the training data becomes infinitely large
 
-\note{Only gives same answer if our prior distribution is the same as the posterior.}
+::: notes
+Only gives same answer if our prior distribution is the same as the posterior.
+:::
 
 # Features of the Bayesian approach
 

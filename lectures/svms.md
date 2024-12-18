@@ -34,13 +34,17 @@ author: Aaron Meyer
 
 ![ ](./lectures/figs/lec16/goodboundary.png){ width=50% }
 
-\note{Let's say we have this data. How do we draw the decision boundaries?}
+::: notes
+Let's say we have this data. How do we draw the decision boundaries?
+:::
 
 # Examples Of Bad Decision Boundaries
 
 ![ ](./lectures/figs/lec16/badboundary.png)
 
-\note{Which points most define where we should draw a boundary?}
+::: notes
+Which points most define where we should draw a boundary?
+:::
 
 # Large-Margin Decision Boundary
 
@@ -134,7 +138,9 @@ author: Aaron Meyer
 	- Linear operation in the feature space is equivalent to non-linear operation in input space
 	- Classification can become easier with a proper transformation.
 
-\note{Go over circle inside circle with transformation to polar coordinates.}
+::: notes
+Go over circle inside circle with transformation to polar coordinates.
+:::
 
 # Transforming The Data
 
@@ -217,7 +223,9 @@ author: Aaron Meyer
 - The kernel function is important because it creates the kernel matrix, which summarizes all the data
 - In practice, a low degree polynomial kernel or RBF kernel with a reasonable width is a good initial try
 
-\note{Go over how to pick an appropriate kernel, and floppiness.}
+::: notes
+Go over how to pick an appropriate kernel, and floppiness.
+:::
 
 # Other Aspects of SVM
 

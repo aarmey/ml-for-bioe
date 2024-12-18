@@ -47,7 +47,9 @@ author: Aaron Meyer
 - So if $\hat{f}(\cdot)$ is a good model, then $\hat{f}(\mathbf{z}_i)$ should also be close to the new target $y_i'$
 - This is the notion of **prediction error** (PE)
 
-\note{Have students draw lines for smoking vs. heart attack risk over data. Make two datasets to explain variance.}
+::: notes
+Have students draw lines for smoking vs. heart attack risk over data. Make two datasets to explain variance.
+:::
 
 # Prediction error and the bias-variance tradeoff
 
