@@ -20,19 +20,6 @@ Here are a few ideas. These may serve as an examples, or you are also welcome to
 
 There are no restrictions on the programming language or packages you use. You may work alone or as a pair on the project. If in a team, your proposal, final project, and final presentation should cover how the project was divided.
 
-## Proposal
-
-The proposal should be one page and describe the following items:
-
-- Why the topic you chose is interesting
-- Demonstrate that your project fits the criteria above
-- What overall approach do you plan to take for the project and why
-- Demonstrate that your project can be finished within a month
-- Estimate the difficulty of your project
-- Describe the expected outcomes of your analysis
-
-**We are available to discuss your ideas whenever you are ready, and you should discuss your idea with us prior to submitting your proposal.** By the time you submit your proposal you should ensure that you have access to the requisite data. We are happy to help you with this.
-
 ## Final Report
 
 Your final report should be less than 1500 words and describe the following items:

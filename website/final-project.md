@@ -14,14 +14,15 @@ There are no restrictions on the programming language or packages you use. Proje
 
 ## Proposal
 
-The proposal should be less than two pages and describe the following items:
+The proposal should be one page in length and explain the following:
 
-- Why the topic you chose is interesting
-- Demonstrate that your project fits the criteria above
+- Why the topic you chose is interesting and solves a bioengineering-related challenge
+- How your project fits one of the two topic criteria listed above
 - What overall approach do you plan to take for the project and why
-- Demonstrate that your project can be finished within a month
-- Estimate the difficulty of your project
-- If in a group, provide a rough plan for how the project will be split up among members
+- How your project can be finished within a month
+- The difficulty of your project
+- The expected outcomes of your analysis
+- If in a group, how the project will be split up among members
 
 **We are available to discuss your ideas whenever you are ready, and you should discuss your idea with us prior to submitting your proposal.** By the time you submit your proposal you should ensure that you have access to the requisite data. We are happy to help you with this.
 
