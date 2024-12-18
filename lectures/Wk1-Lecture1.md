@@ -191,19 +191,19 @@ FILL IN
 
 # Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig1.png){height=100%}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig1.png)
 
 # Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig2.png){height=60%}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig2.png)
 
 # Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig3.pdf)
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig3.webp)
 
 # Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig4.png){height=60%}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig4.png)
 
 # Data
 
@@ -409,7 +409,7 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 - K-S test is most useful when the sample size is small
 - Geometric meaning of the test statistic:
 
-![ ](./lectures/figs/lec1/ks.pdf)
+![ ](./lectures/figs/lec1/ks.webp)
 
 ::: notes
 No t-distribution available here.
