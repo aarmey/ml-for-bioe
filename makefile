@@ -1,7 +1,7 @@
 # Change these only to really change the behavior of the whole setup
-PANDOCCOMMON := --standalone --embed-resources --mathjax --highlight-style pygments
+PANDOCCOMMON := --standalone --embed-resources --mathml --highlight-style pygments
 PANDOCHTML := pandoc -t revealjs $(PANDOCCOMMON) --slide-level 1 --include-in-header=.support-files/style.html -V theme=white -V transition=none -V revealjs-url=https://unpkg.com/reveal.js@5.1.0/
-PANDOCNOTESHTML := pandoc -t html --lua-filter=.support-files/speakernotes.lua --metadata-file=.support-files/notes.yml $(PANDOCCOMMON)
+PANDOCNOTESHTML := pandoc -t html $(PANDOCCOMMON) --lua-filter=.support-files/speakernotes.lua --metadata-file=.support-files/notes.yml
 
 ## ---- build rules ----
 notes_md := $(wildcard lectures/*.md)
