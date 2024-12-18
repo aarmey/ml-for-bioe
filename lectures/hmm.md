@@ -338,6 +338,10 @@ Provides `logprob` and `state_sequence`.
 
 # Further Reading
 
+- [Example Notebook](../public/examples/HMMs-example.ipynb)
 - [`hmmlearn`](https://hmmlearn.readthedocs.io/en/latest/index.html)
-- [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
-- [Linear Digressions - Hidden Markov Models](https://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](https://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))
+- 📖: [What is a hidden Markov model?](https://www.nature.com/articles/nbt1004-1315)
+- 📖: [Markov Models—Markov chains](https://www.nature.com/articles/s41592-019-0476-x)
+- 📖: [Markov Models—Hidden Markov models](https://www.nature.com/articles/s41592-019-0532-6)
+- 📖: [Markov models—Training and evaluation of hidden Markov models](https://www.nature.com/articles/s41592-019-0702-6)
+- 👂: [Linear Digressions - Hidden Markov Models](https://lineardigressions.com/episodes/2016/2/23/introducing-hidden-markov-models-hmm-part-1) ([part 2](https://lineardigressions.com/episodes/2016/2/23/genetics-and-um-detection-hmms-part-2))

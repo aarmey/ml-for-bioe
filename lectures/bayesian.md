@@ -193,10 +193,13 @@ Questions:
 - A US resident receives a positive test. What is the chance they have HIV?
 - How would this change if 5% of the population were infected?
 
-# Further reading
+# Reading & Resources
 
-- [Bayesian Data Analysis](https://www.stat.columbia.edu/~gelman/books/)
-- [Probabilistic Programming & Bayesian Methods for Hackers](https://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
+- 📖: [Bayesian Data Analysis](https://www.stat.columbia.edu/~gelman/books/)
+- 📖: [Probabilistic Programming & Bayesian Methods for Hackers](https://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
+- 📺: [Bayes theorem, the geometry of changing beliefs](https://www.youtube.com/watch?v=HZGCoVF3YvM)
+- 📺: [The medical test paradox, and redesigning Bayes' rule](https://www.youtube.com/watch?v=lG4VkPoG3ko)
+- 👂: [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
 - Software packages for Bayesian analysis:
 	- [PyMC](https://github.com/pymc-devs/pymc) (python)
 	- [emcee](https://github.com/dfm/emcee) (python)

@@ -448,7 +448,11 @@ What about false negatives?
 What does this mean when it comes to hypothesis testing?
 
 
-# Further Reading
+# Reading & Resources
 
-- [Computer Age Statistical Inference, Chapters 1 and 2](https://web.stanford.edu/~hastie/CASI_files/PDF/casi.pdf)
-- [`scipy.stats`](https://docs.scipy.org/doc/scipy/reference/stats.html)
+- 📖: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
+- 👂: [Linear Digressions: The Normal Distribution and the Central Limit Theorem](https://lineardigressions.com/episodes/2018/12/9/the-normal-distribution-and-the-central-limit-theorem)
+- 📺: [But what is the Central Limit Theorem?](https://www.youtube.com/watch?v=zeJD6dqJ5lo)
+- 📖: [Understanding Moments](https://gregorygundersen.com/blog/2020/04/11/moments/)
+- 📖: [Computer Age Statistical Inference, Chapters 1 and 2](https://web.stanford.edu/~hastie/CASI_files/PDF/casi.pdf)
+- 💾: [`scipy.stats`](https://docs.scipy.org/doc/scipy/reference/stats.html)
