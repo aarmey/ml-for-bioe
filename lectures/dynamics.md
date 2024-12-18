@@ -41,20 +41,22 @@ $$ L_D + R_f \leftrightarrow R_b $$
 
 If we want to know about how these species interact, we can model their behavior with the rate equations that describe this process.
 
-\note[item]{$ \frac{dL_f}{dt} = -k_1 L_f^2 + k_{-1}L_D $
-\item $ \frac{dL_D}{dt} = k_1 L_f^2 - k_2 L_D R_f + k_{-2} R_b $
-\item $ \frac{dR_b}{dt} = k_2 L_D R_f - k_{-2} R_b $
-\item $ \frac{dR_f}{dt} = k_{-2} R_b - k_2 L_D R_f $
-}
+::: notes
+- $\frac{dL_f}{dt} = -k_1 L_f^2 + k_{-1}L_D$
+- $\frac{dL_D}{dt} = k_1 L_f^2 - k_2 L_D R_f + k_{-2} R_b$
+- $\frac{dR_b}{dt} = k_2 L_D R_f - k_{-2} R_b$
+- $\frac{dR_f}{dt} = k_{-2} R_b - k_2 L_D R_f$
+:::
 
 # Applications of ODE models: Pharmacokinetics
 
 
 ![ ](./lectures/figs/lec9/twoComp.pdf)
 
-\note[item]{Copy to board
-\item What does each compartment represent?
-}
+::: notes
+- Copy to board
+- What does each compartment represent?
+:::
 
 # Applications of ODE models: Pharmacokinetics
 
@@ -85,13 +87,19 @@ If we want to know about how these species interact, we can model their behavior
 		- Concentration in central compartment at $t=0$ is D μg/mL
 - No chemical reactions in the compartment
 
-\note{Work out equations above. Going to learn a mathematical trick to solve!}
+::: notes
+Work out equations above. Going to learn a mathematical trick to solve!
+:::
 
 # Applications of ODE models: Population kinetics
 
 #### Lotka-Volterra Equations
 
-\note{$$\dot{x} = \alpha x - \beta x y$$ $$\dot{y} = \delta x y - \gamma y$$ maybe come back at the end to these}
+::: notes
+- maybe come back to these at the end
+- $\dot{x} = \alpha x - \beta x y$
+- $\dot{y} = \delta x y - \gamma y$
+::: 
 
 # Note about difference from other models we've covered
 
@@ -132,7 +140,9 @@ Reality often requires handling in between:
 	- NNLSQ can solve for points
 	- Only simulating system ensures they are accessible
 
-\note{Walk through 1D case of stability.}
+::: notes
+Walk through 1D case of stability.
+:::
 
 # Generalization
 
@@ -145,8 +155,10 @@ Reality often requires handling in between:
 
 ![ ](./lectures/figs/lec9/nonlin-2a.pdf)
 
-\note[item]{Note how linear systems come to a solution
-\item Combined with above relationship, this means we can solve linear systems as a special case}
+::: notes
+- Note how linear systems come to a solution
+- Combined with above relationship, this means we can solve linear systems as a special case
+:::
 
 # Phase Portraits
 
@@ -161,10 +173,12 @@ Non-linear systems
 
 ![ ](./lectures/figs/lec9/nonlin-3a.pdf)
 
-\note[item]{Fixed Points (A, B, C). Steady states
-\item Closed Orbits (D). Periodic solutions
-\item Flow patterns in trajectory (A and C are similar to each other, different from B)
-\item Stability of fixed points and closed orbits (A, B, and C are unstable, D is stable)}
+::: notes
+- Fixed Points (A, B, C). Steady states
+- Closed Orbits (D). Periodic solutions
+- Flow patterns in trajectory (A and C are similar to each other, different from B)
+- Stability of fixed points and closed orbits (A, B, and C are unstable, D is stable)
+:::
 
 # Solving a Set of Equations for Phase Portrait
 
@@ -272,10 +286,12 @@ Biochemical version of a bistable switch:
 
 ![ ](./lectures/figs/lec9/nonlin-12.pdf)
 
-\note[item]{How could we compare this to data?
-\item Measure steady-state
-\item Start at points and see bifurcation
-\item Measure over time}
+::: notes
+- How could we compare this to data?
+- Measure steady-state
+- Start at points and see bifurcation
+- Measure over time
+:::
 
 # Implementation - Testing
 
@@ -284,7 +300,9 @@ Biochemical version of a bistable switch:
 	- Changes upon parameter adjustment
 - Good to test these before and after integration
 
-\note{Go through example of mass balance at deriv and solution.}
+::: notes
+Go through example of mass balance at deriv and solution.
+:::
 
 # Implementation
 
