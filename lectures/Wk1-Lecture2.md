@@ -62,7 +62,9 @@ The key factor is how one defines the problem—i.e. how the distribution is des
 
 Fitting does not happen in a vacuum!
 
-\note{Walk through model, what the model is, etc.}
+::: notes
+Walk through model, what the model is, etc.
+:::
 
 <!-- Page 97 of Computer Age Statistical Inference -->
 
@@ -88,7 +90,9 @@ $\mathbf{\epsilon}$ is usually handled to be uncorrelated random components with
 
 $$ \mathbf{\epsilon} \sim \left( \mathbf{0}, \sigma^2 \mathbf{I} \right) $$
 
-\note{Graph this}
+::: notes
+Graph this
+:::
 
 # Ordinary Least Squares
 
@@ -134,7 +138,9 @@ where
 
 $$ \mathbf{S} = \mathbf{X}'\mathbf{X} $$ <!-- Eq 7.33 -->
 
-\note{Prove this?}
+::: notes
+Prove this?
+:::
 
 # Ordinary Least Squares
 
@@ -156,7 +162,9 @@ $$ \sum_{i=1}^{n} (y_{i}-x_{i} \beta)^{2} $$
 
 *Exactly how we calculate $\beta$!*
 
-\note{Go through where this arises from.}
+::: notes
+Go through where this arises from.
+:::
 
 # Ordinary Least Squares
 
@@ -194,7 +202,9 @@ What are some downsides?
 
 ![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./lectures/figs/lec2/decode0.pdf)
 
-\note{What is different about paternal vs. maternal meiosis?}
+::: notes
+What is different about paternal vs. maternal meiosis?
+:::
 
 # Application: Paternal *de novo* mutations
 

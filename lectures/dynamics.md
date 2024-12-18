@@ -85,13 +85,17 @@ If we want to know about how these species interact, we can model their behavior
 		- Concentration in central compartment at $t=0$ is D μg/mL
 - No chemical reactions in the compartment
 
-\note{Work out equations above. Going to learn a mathematical trick to solve!}
+::: notes
+Work out equations above. Going to learn a mathematical trick to solve!
+:::
 
 # Applications of ODE models: Population kinetics
 
 #### Lotka-Volterra Equations
 
-\note{$$\dot{x} = \alpha x - \beta x y$$ $$\dot{y} = \delta x y - \gamma y$$ maybe come back at the end to these}
+::: notes
+$$\dot{x} = \alpha x - \beta x y$$ $$\dot{y} = \delta x y - \gamma y$$ maybe come back at the end to these
+::: 
 
 # Note about difference from other models we've covered
 
@@ -132,7 +136,9 @@ Reality often requires handling in between:
 	- NNLSQ can solve for points
 	- Only simulating system ensures they are accessible
 
-\note{Walk through 1D case of stability.}
+::: notes
+Walk through 1D case of stability.
+:::
 
 # Generalization
 
@@ -284,7 +290,9 @@ Biochemical version of a bistable switch:
 	- Changes upon parameter adjustment
 - Good to test these before and after integration
 
-\note{Go through example of mass balance at deriv and solution.}
+::: notes
+Go through example of mass balance at deriv and solution.
+:::
 
 # Implementation
 

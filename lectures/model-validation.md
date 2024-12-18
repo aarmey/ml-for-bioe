@@ -29,7 +29,9 @@ author: Aaron Meyer
 
 ![ ](./lectures/figs/lec4/sfd-5.pdf)
 
-\note{Walk through this in detail.}
+::: notes
+Walk through this in detail.
+:::
 
 # More on prediction-error estimates
 
@@ -47,7 +49,9 @@ author: Aaron Meyer
 - The model is fit on the training set, and the fitted model is used to predict the responses for the observations in the validation set.
 - The resulting validation-set error provides an **estimate** of the test error. This is typically assessed using MSE in the case of a quantitative response and misclassification rate in the case of a qualitative (discrete) response.
 
-\note{Move to board. Setup example with students up front. Predict height from arm length?}
+::: notes
+Move to board. Setup example with students up front. Predict height from arm length?
+:::
 
 # The validation process
 
@@ -55,7 +59,9 @@ author: Aaron Meyer
 
 A random splitting into two halves: left part is training set, right part is validation set
 
-\note{First just leaving one set out.}
+::: notes
+First just leaving one set out.
+:::
 
 # Example: automobile data
 
@@ -147,7 +153,9 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 - The *bootstrap* is a flexible and powerful statistical tool that can be used to quantify the uncertainty associated with a given estimator or statistical learning method.
 - For example, it can provide an estimate of the standard error of a coefficient, or a confidence interval for that coefficient.
 
-\note{Talk about imagining pulling data out from the data universe.}
+::: notes
+Talk about imagining pulling data out from the data universe.
+:::
 
 # Where does the name come from?
 
@@ -187,7 +195,9 @@ A graphical illustration of the bootstrap approach on a small sample containing 
 - For example, if the data is a time series, we can’t simply sample the observations with replacement (*why not?*).
 - We can instead create blocks of consecutive observations, and sample those with replacements. Then we paste together sampled blocks to obtain a bootstrap dataset.
 
-\note{Go over example of color blindness with replacement by gender.}
+::: notes
+Go over example of color blindness with replacement by gender.
+:::
 
 # Other uses of the bootstrap
 
@@ -203,7 +213,9 @@ A graphical illustration of the bootstrap approach on a small sample containing 
 - This will cause the bootstrap to seriously underestimate the true prediction error. *Why?*
 - The other way around—with original sample = training sample, bootstrap dataset = validation sample—is worse!
 
-\note{For example, we can just find exactly matching data points.}
+::: notes
+For example, we can just find exactly matching data points.
+:::
 
 # Removing the overlap
 
@@ -216,7 +228,9 @@ A graphical illustration of the bootstrap approach on a small sample containing 
 - Permutation methods sample from an estimated *null* distribution for the data, and use this to estimate p-values and False Discovery Rates for hypothesis tests.
 - The bootstrap can be used to test a null hypothesis in simple situations. For example, if $\theta = 0$ is the null hypothesis, we check whether the confidence interval for $\theta$ contains zero.
 
-\note{Go through dataset randomization.}
+::: notes
+Go through dataset randomization.
+:::
 
 # Example - gene expression signatures
 
@@ -254,7 +268,9 @@ A graphical illustration of the bootstrap approach on a small sample containing 
 - `cv`: int, cross-validation generator or an iterable, optional
 - `n_jobs`: integer, optional
 
-\note{Go through a notebook here.}
+::: notes
+Go through a notebook here.
+:::
 
 # Implementation - Iterators
 

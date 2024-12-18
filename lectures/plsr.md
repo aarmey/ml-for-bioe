@@ -39,7 +39,9 @@ From the variation we can see that:
 
 If we can find a quantitative correlation between the input and output, we can predict new outcomes for measurements we haven't yet seen.
 
-\note{Draw out correlation and then include new point.}
+::: notes
+Draw out correlation and then include new point.
+:::
 
 # Challenges with Univariate Relationships
 
@@ -159,7 +161,9 @@ $$Y = TB + E$$
 
 ![ ](./lectures/figs/lec8/PC-9.pdf)
 
-\note{Go over each.}
+::: notes
+Go over each.
+:::
 
 # Determining the Number of Components
 

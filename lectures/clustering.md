@@ -32,7 +32,9 @@ author: Aaron Meyer
 
 ![ ](./lectures/figs/lec13/clust1.png)
 
-\note{Go over what is the data input and output (discrete).}
+::: notes
+Go over what is the data input and output (discrete).
+:::
 
 # Clustering
 
@@ -137,7 +139,9 @@ Assign data points to closest cluster center
 
 ![ ](./lectures/figs/lec13/k2.png){ width=50% }
 
-\note{Critical step is right here. How do we pick what is close? Which is closer?}
+::: notes
+Critical step is right here. How do we pick what is close? Which is closer?
+:::
 
 # K-means clustering: Example
 

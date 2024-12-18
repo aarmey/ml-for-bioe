@@ -80,7 +80,9 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 	- How certain are you that the true parameter value is 0.7?
 	- Were there enough samples for you to be certain?
 
-\note{Can look at sampling distribution of parameter.}
+::: notes
+Can look at sampling distribution of parameter.
+:::
 
 # Bayesian approach
 - Formulate knowledge about situation probabilistically
@@ -113,7 +115,9 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 	- **If** prior is well-behaved (i.e., does not assign 0 density to any “feasible” parameter value)
 	- **Then** both the MLE and Bayesian predictions converge to the same value as the training data becomes infinitely large
 
-\note{Only gives same answer if our prior distribution is the same as the posterior.}
+::: notes
+Only gives same answer if our prior distribution is the same as the posterior.
+:::
 
 # Features of the Bayesian approach
 

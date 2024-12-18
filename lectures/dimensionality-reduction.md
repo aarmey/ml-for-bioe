@@ -51,7 +51,9 @@ $$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^{T} $$
 
 where $\mathbf{W}$ is $N\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N$.
 
-\note{What is the implicit assumption here?}
+::: notes
+What is the implicit assumption here?
+:::
 
 # Matrix Factorization
 
@@ -153,7 +155,9 @@ BOARD
 	- `PCA.components_` provides the "loadings matrix", or directions of maximum variance
 	- `PCA.explained_variance_` provides the amount of variance explained by each component
 
-\note{Go over explained variance.}
+::: notes
+Go over explained variance.
+:::
 
 # PCA
 

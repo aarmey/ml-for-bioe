@@ -135,7 +135,9 @@ If you do these three things, you will do well.
 - Models (inference)
 - Algorithms
 
-\note{Distinguish each of these.}
+::: notes
+Distinguish each of these.
+:::
 
 # Area of Focus
 
