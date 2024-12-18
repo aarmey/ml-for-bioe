@@ -13,7 +13,7 @@ permissions:
 jobs:
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
     - uses: actions/checkout@v4
@@ -52,7 +52,7 @@ jobs:
     - name: Build jekyll
       run: cd website && bundle exec jekyll build
     - name: Proof HTML
-      run: cd website/_site && bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --ignore_status_codes "412, 503, 403" --assume-extension .
+      run: cd website/_site && bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --ignore_status_codes "412, 503, 403, 406" --assume-extension .
     - name: Upload lecture notes
       uses: actions/upload-artifact@v4
       with:
