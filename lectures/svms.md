@@ -49,8 +49,8 @@ Which points most define where we should draw a boundary?
 # Large-Margin Decision Boundary
 
 - The decision boundary should be as far away from the data of both classes as possible
-- We should maximize the margin, $m = 2 / \norm{\mathbf{w}}$
-- Distance between the origin and the line $\mathbf{w}^t\mathbf{x}=k$ is $k / \norm{\mathbf{w}}$
+- We should maximize the margin, $m = 2 / \lVert \mathbf{w} \rVert$
+- Distance between the origin and the line $\mathbf{w}^t\mathbf{x}=k$ is $k / \lVert \mathbf{w} \rVert$
 
 ![ ](./lectures/figs/lec16/findboundary.png){ width=60% }
 
@@ -60,7 +60,7 @@ Which points most define where we should draw a boundary?
 - The decision boundary should classify all points correctly
 	- $y_i \left(\mathbf{w}^T \mathbf{x}_i + b\right) \ge 1, \quad \forall i$
 - The decision boundary can be found by solving the following constrained optimization problem:
-	- Minimize $\frac{1}{2}\norm{\mathbf{w}}^2$
+	- Minimize $\frac{1}{2}\lVert \mathbf{w} \rVert^2$
 	- subject to $y_i \left(\mathbf{w}^T \mathbf{x}_i + b\right) \ge 1$
 - This is a constrained optimization problem
 - Quick methods to find the global optimum by quadratic programming
@@ -112,10 +112,10 @@ Which points most define where we should draw a boundary?
 	- Note that $\xi_i = 0$ if there is no error for $\mathbf{x}_i$
 	- $\xi_i$ is an upper bound of the number of errors
 - We want to minimize:
-	- $\tfrac{1}{2} \norm{\mathbf{w}}^2 + C \sum_{i=1}^{n} \xi_i$
+	- $\tfrac{1}{2} \lVert \mathbf{w} \rVert^2 + C \sum_{i=1}^{n} \xi_i$
 	- $C$: tradeoff parameter between error and margin
 - The optimization problem becomes:
-	- Minimize $\tfrac{1}{2} \norm{\mathbf{w}}^2 + C \sum_{i=1}^{n} \xi_i$
+	- Minimize $\tfrac{1}{2} \lVert \mathbf{w} \rVert^2 + C \sum_{i=1}^{n} \xi_i$
 	- subject to $y_i (\mathbf{w}^T \mathbf{x}_i + b) \geq 1 - \xi_i, \quad \xi_i \geq 0$
 
 # The Optimization Problem
@@ -174,7 +174,7 @@ Go over circle inside circle with transformation to polar coordinates.
 - Polynomial kernel with degree $d$
 	- $K(\mathbf{x},\mathbf{y}) = \left( \mathbf{x}^T \mathbf{y} + 1 \right)^d$
 - Radial basis function kernel with width $\sigma$
-	- $K(\mathbf{x},\mathbf{y}) = \exp (-\norm{\mathbf{x} - \mathbf{y}}^2 / (2\sigma^2))$
+	- $K(\mathbf{x},\mathbf{y}) = \exp (-\lVert \mathbf{x} - \mathbf{y} \rVert^2 / (2\sigma^2))$
 	- Closely related to radial basis function neural networks
 	- The feature space is infinite-dimensional
 - Sigmoid with parameter $\kappa$ and $\theta$
@@ -214,8 +214,8 @@ Go over circle inside circle with transformation to polar coordinates.
 # Justification of SVM
 
 - Large margin classifier
-- Ridge regression: the term $\tfrac{1}{2}\norm{w}^2$ “shrinks” the parameters towards zero to avoid overfitting
-- The term the term $\tfrac{1}{2}\norm{w}^2$ can also be viewed as imposing a weight-decay prior on the weight vector
+- Ridge regression: the term $\tfrac{1}{2}\lVert w \rVert^2$ “shrinks” the parameters towards zero to avoid overfitting
+- The term the term $\tfrac{1}{2}\lVert w \rVert^2$ can also be viewed as imposing a weight-decay prior on the weight vector
 
 # Choosing the Kernel Function
 

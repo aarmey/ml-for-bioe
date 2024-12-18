@@ -54,7 +54,7 @@ Go over what is the data input and output (discrete).
 
 - One option: Euclidean distance
 
-$$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \norm{\mathbf{x} - \mathbf{y}} $$
+$$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert $$
 
 - Clustering results are **completely** dependent on the measure of similarity (or distance) between "points" to be clustered
 
@@ -210,11 +210,11 @@ Repeat until convergence
 
 # K-Means Convergence
 
-**Objective:** $\min_{\mu}\min_{C}\sum_{i=1}^k \sum_{x\in C_i} \norm{x - \mu_i}^2$
+**Objective:** $\min_{\mu}\min_{C}\sum_{i=1}^k \sum_{x\in C_i} \lVert x - \mu_i \rVert^2$
 
-1. Fix $\mu$, optimize $C$: $$\min_C \sum_{i=1}^k \sum_{x\in C_i} \norm{x - \mu_i}^2 = \min_C \sum_{i}^n \norm{x_i - \mu_{x_i}}^2$$
-2. Fix $C$, optimize $\mu$: $$\min_{\mu}\sum_{i=1}^k \sum_{x\in C_i} \norm{x - \mu_i}^2$$
-	- Take partial derivative of $\mu_i$ and set to zero, we have $$\mu_i = \frac{1}{\norm{C_i}} \sum_{x \in C_i} x$$
+1. Fix $\mu$, optimize $C$: $$\min_C \sum_{i=1}^k \sum_{x\in C_i} \lVert x - \mu_i \rVert^2 = \min_C \sum_{i}^n \lVert x_i - \mu_{x_i} \rVert^2$$
+2. Fix $C$, optimize $\mu$: $$\min_{\mu}\sum_{i=1}^k \sum_{x\in C_i} \lVert x - \mu_i \rVert^2$$
+	- Take partial derivative of $\mu_i$ and set to zero, we have $$\mu_i = \frac{1}{\lVert C_i \rVert} \sum_{x \in C_i} x$$
 
 Kmeans takes an alternating optimization approach. Each step is guaranteed to decrease the objective—thus guaranteed to converge.
 

@@ -230,7 +230,7 @@ sklearn provides a very basic function for ordinary least squares.
 Or there's an even more bare function in numpy `numpy.linalg.lstsq`.
 
 - Takes input variables `a` and `b`.
-- Solves the equation $ax=b$ by computing a vector $x$ that minimizes the Euclidean 2-norm $\norm{b-ax}^2$.
+- Solves the equation $ax=b$ by computing a vector $x$ that minimizes the Euclidean 2-norm $\lVert b-ax \rVert^2$.
 
 # Implementation
 
