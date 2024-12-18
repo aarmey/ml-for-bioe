@@ -96,7 +96,9 @@ Work out equations above. Going to learn a mathematical trick to solve!
 #### Lotka-Volterra Equations
 
 ::: notes
-$$\dot{x} = \alpha x - \beta x y$$ $$\dot{y} = \delta x y - \gamma y$$ maybe come back at the end to these
+- maybe come back to these at the end
+- $\dot{x} = \alpha x - \beta x y$
+- $\dot{y} = \delta x y - \gamma y$
 ::: 
 
 # Note about difference from other models we've covered
