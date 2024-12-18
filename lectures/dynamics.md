@@ -42,10 +42,10 @@ $$ L_D + R_f \leftrightarrow R_b $$
 If we want to know about how these species interact, we can model their behavior with the rate equations that describe this process.
 
 ::: notes
-- $ \frac{dL_f}{dt} = -k_1 L_f^2 + k_{-1}L_D $
-- $ \frac{dL_D}{dt} = k_1 L_f^2 - k_2 L_D R_f + k_{-2} R_b $
-- $ \frac{dR_b}{dt} = k_2 L_D R_f - k_{-2} R_b $
-- $ \frac{dR_f}{dt} = k_{-2} R_b - k_2 L_D R_f $
+- $\frac{dL_f}{dt} = -k_1 L_f^2 + k_{-1}L_D$
+- $\frac{dL_D}{dt} = k_1 L_f^2 - k_2 L_D R_f + k_{-2} R_b$
+- $\frac{dR_b}{dt} = k_2 L_D R_f - k_{-2} R_b$
+- $\frac{dR_f}{dt} = k_{-2} R_b - k_2 L_D R_f$
 :::
 
 # Applications of ODE models: Pharmacokinetics
