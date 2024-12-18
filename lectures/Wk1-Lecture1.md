@@ -63,7 +63,9 @@ By the end of the course you will learn how to:
 3. Implement a number of different modeling methods to answer specific questions.
 4. Critically assess modeling results.
 
-\note{Notice I don't say deriving a proof or writing some software package.}
+::: notes
+Notice I don't say deriving a proof or writing some software package.
+:::
 
 # Grade Breakdown
 
@@ -363,9 +365,10 @@ For example:
 - $H_0$: A particular set of points come from a normal distribution with mean $\mu$ and variance $\sigma$.
 - $H_0$: Two sets of observations were sampled from distributions with different means.
 
-\note[item]{Go over this, drawing out distributions.
-\item Go over one sided, two sided tests.
-}
+::: notes
+- Go over this, drawing out distributions.
+- Go over one sided, two sided tests.
+:::
 
 # T-distribution
 
@@ -396,7 +399,9 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 
 ![ ](./lectures/figs/lec1/ks.pdf)
 
-\note{No t-distribution available here.}
+::: notes
+No t-distribution available here.
+:::
 
 # Kolmogorov-Smirnov Test
 
