@@ -23,24 +23,6 @@ jobs:
       run: |
         sudo apt update
         sudo apt install pandoc fonts-cmu
-    - name: Setup TeX Live
-      uses: teatimeguest/setup-texlive-action@v3
-      with:
-        packages: >-
-          scheme-basic
-          pdfmanagement-testphase
-          beamer
-          tagpdf
-          microtype
-          amsmath
-          fancyvrb
-          fontspec
-          ragged2e
-          booktabs
-          caption
-          ulem
-          textpos
-          pdfpages
     - name: Build slides and handouts
       run: make -j 2
     - name: Install ruby
@@ -57,7 +39,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: lectures
-        path: lectures/*.pdf
+        path: lectures/*.html
     - name: Upload artifact
       if: github.ref == 'refs/heads/master'
       uses: actions/upload-pages-artifact@v3
