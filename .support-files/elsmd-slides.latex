@@ -116,8 +116,6 @@ $if(beamer-notes)$
 \setbeameroption{show notes on second screen=right}
 $endif$
 
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
-
 \usepackage[overlay,absolute]{textpos}
 \TPGrid[10 mm,8 mm]{9}{8} % 9x8 grid with units of 12 mm and 10 mm
 
