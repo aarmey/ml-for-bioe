@@ -1,6 +1,16 @@
 ---
-title: Introduction, statistics review
-author: Aaron Meyer
+title: "Introduction, statistics review"
+author: "Aaron Meyer"
+format:
+  html: 
+    embed-resources: true
+  revealjs:
+    theme: [default, clean.scss]
+    menu:
+      side: left
+    slide-number: true
+    date-format: long
+    embed-resources: true
 ---
 
 # Machine learning & data-driven modeling in bioengineering
@@ -14,13 +24,13 @@ author: Aaron Meyer
 
 - Varies by section—check the course schedule.
 
-# Lecture Slides
+## Lecture Slides
 
 - Lecture slides will be posted on the course website.
 - They will be finalized by the night before so you can print them out if you want.
 - The slides are *not* everything, but will include space to fill out missing elements during class.
 
-# Textbook / Other Course Materials
+## Textbook / Other Course Materials
 
 - There is no textbook for this course.
 - I will post related readings prior to each lecture.
@@ -84,12 +94,12 @@ Notice I don't say deriving a proof or writing some software package.
 10%
 ~ Lab Participation
 
-# Labs
+## Labs
 
 - These are mandatory sessions.
 - You will have an opportunity to get started on each week's implementation and/or work on your project.
 
-# Homework
+## Homework
 
 - These will be a combination of a computational implementation and other problems.
 - Each will help reinforce the material and provide hands-on experience by implementing what we learn in class.
@@ -98,7 +108,7 @@ Notice I don't say deriving a proof or writing some software package.
 	- Get started early
 	- Seek answers to your questions in office hours, in lab, or on Slack!
 
-# Project
+## Project
 
 - You will take data from a scientific paper, and implement a machine learning method using best practices.
 - A list of papers and data repositories is provided on the website as suggestions.
@@ -106,12 +116,12 @@ Notice I don't say deriving a proof or writing some software package.
 - More details to come.
 - First deadline will be in week 6 to pick a project topic.
 
-# Exams
+## Exams
 
 - We will have a midterm exam on week 6.
 - You will have a final project in lieu of a final exam.
 
-# Keys to Success
+## Keys to Success
 
 - Participate in an engaged manner with in-class and take-home activities.
 - Turn in assignments on time.
@@ -382,7 +392,7 @@ For example:
 - Go over one sided, two sided tests.
 :::
 
-# T-distribution
+## T-distribution
 
 When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 
@@ -390,7 +400,7 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 	- Can think of $t$ designed to be $z/s$, where it’s sensitive to the magnitude of the difference to the alternate hypothesis and scaled to control for the spread.
 - When comparing the differences between two means: (null hypothesis the means are the same, variances/sizes assumed equal). $$t=\frac{{\bar{X}}_1-{\bar{X}}_2}{\sqrt{\frac{s_{X_1}^2+s_{X_2}^2}{n}}}$$
 
-# Effect size
+## Effect size
 
 - The scalar factor scales the t-value
 	- If using a direct guassian, the estimation of the mean scales with $1 / \sqrt{n}$
@@ -398,13 +408,13 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 - Exercise caution and report the effect size
 	- For example, a 1% or 50% difference in the means
 
-# Kolmogorov-Smirnov Test
+## Kolmogorov-Smirnov Test
 
 - Comparison of an empirical distribution function with the distribution function of the hypothesized distribution.
 - Does not depend on the grouping of data.
 - Relatively insensitive to outlier points (i.e., distribution tails).
 
-# Kolmogorov-Smirnov Test
+## Kolmogorov-Smirnov Test
 
 - K-S test is most useful when the sample size is small
 - Geometric meaning of the test statistic:
@@ -415,7 +425,7 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 No t-distribution available here.
 :::
 
-# Kolmogorov-Smirnov Test
+## Kolmogorov-Smirnov Test
 
 #### Test statistic:
 
@@ -427,7 +437,7 @@ Not expressed in one equation with absolute value because distance is assessed f
 
 How is this then converted to a p-value?
 
-# Graphical Analysis
+## Graphical Analysis
 
 - Plotting a distribution is often more informative than a goodness-of-fit test.
 - Not only assesses deviation, but can explain where it occurs.
@@ -436,7 +446,7 @@ How is this then converted to a p-value?
 	- P-P plot
 	- Histogram with fitted distribution
 
-# Testing errors
+## Testing errors
 
 - Type I error: error of rejecting $H_0$ when it is true (false positive)
 - Type II error: not rejecting $H_0$ when it is false (false negative)
@@ -444,7 +454,7 @@ How is this then converted to a p-value?
 
 Beware of goodness-of-fit tests because they are unlikely to reject *any* distribution with little data, and are very sensitive to the smallest systematic error with lots of data.
 
-# Multiple hypotheses
+## Multiple hypotheses
 
 We want to test whether the gene expression between two cells differs greater than chance alone. We test the two samples with a p-value cutoff of 0.05:
 
@@ -454,7 +464,6 @@ We want to test whether the gene expression between two cells differs greater th
 What about false negatives?
 
 What does this mean when it comes to hypothesis testing?
-
 
 # Reading & Resources
 
