@@ -90,6 +90,15 @@ local p = {
           table.insert(
           el.content,
           pandoc.RawBlock("latex", "\\end{notes}"))
+        elseif FORMAT == "typst" then
+          -- For typst, wrap it in a box.
+          table.insert(
+          el.content, 1,
+          pandoc.RawBlock("typst", "#box(stroke: 1pt + red, outset: 2pt, ["))
+          -- insert element at the back
+          table.insert(
+          el.content,
+          pandoc.RawBlock("typst", "])"))
         elseif FORMAT == "odt" or FORMAT == "docx" then -- These outputs don’t take classes into account, only custom-style attribute. So set them to Notes (Cap intended for consistency with other style names of the reference doc).
           el.attributes['custom-style'] = "Notes"
           if p.notesTitle:len() ~= 0 then -- If there is a notesTitle defined in the YAML header (default ok), add it before the notes div.

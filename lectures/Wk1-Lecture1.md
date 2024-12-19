@@ -199,7 +199,7 @@ FILL IN
 
 # Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig3.webp)
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig3.png)
 
 # Machine learning can outperform a human for some tasks
 
@@ -409,7 +409,7 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 - K-S test is most useful when the sample size is small
 - Geometric meaning of the test statistic:
 
-![ ](./lectures/figs/lec1/ks.webp)
+![ ](./lectures/figs/lec1/ks.png)
 
 ::: notes
 No t-distribution available here.

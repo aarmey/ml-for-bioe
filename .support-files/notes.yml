@@ -1,2 +1,7 @@
 speakernotes:
   displayNotes: true
+margin:
+  left: 0.5in
+  right: 4in
+  top: 0.5in
+  bottom: 0.5in
