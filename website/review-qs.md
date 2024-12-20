@@ -3,20 +3,6 @@ title: Review questions
 layout: page
 ---
 
-### Lecture 4
-
-1. What does cross-validation aim to achieve? What does it pretend to do to achieve this?
-2. What does bootstrapping aim to achieve? What does it pretend to do to achieve this?
-3. Why does cross-validation need to be performed across multiple folds?
-4. How will the process of cross-validation influence the model fit error we observe? How does it affect the model prediction error?
-5. We want to demonstrate that we can predict the time until failure for an artificial heart from a set of clinical measurements. We plan to utilize LASSO regression to develop this prediction model and are interested in the variables selected by LASSO. Walk through the steps to implement cross-validation here. How can you ensure you select only one set of variables?
-6. List **two** ways in which cross-validation and bootstrap are similar.
-7. List **two** ways in which cross-validation and bootstrap are different.
-8. Why is performing variable selection outside of your cross-validation loop bad, but it’s OK to decide what you are going to measure in the first place?
-9. You want to determine whether the first parameter in your ordinary least squares model, $$\beta_1$$, is significantly non-zero. How can you apply bootstrap to accomplish this?
-10. Say you build a model with no unknown parameters and therefore no degrees of freedom. Do you need cross-validation to know the prediction error?
-11. Is it alright to adjust your model to improve the cross-validation error? Why/why not? If not, what would you need to do to fix the situation?
-
 ### Lecture 5
 
 1. What is a prior? How does one go about making one?

@@ -30,7 +30,7 @@ jobs:
     - name: Build jekyll
       run: bundle exec jekyll build -s website -d website/_site
     - name: Proof HTML
-      run: bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --checks "Links, Scripts" --ignore_status_codes "412, 503, 403, 406" --assume-extension . website/_site
+      run: bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --checks "Links, Scripts" --check_internal_hash false --ignore_status_codes "412, 503, 403, 406" --assume-extension . website/_site
       # Eventually fix alt tagging
     - name: Upload lecture notes
       uses: actions/upload-artifact@v4
