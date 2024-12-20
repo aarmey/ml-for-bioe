@@ -1,5 +1,6 @@
 format:
-  typst: default
+  html: 
+    embed-resources: true
   revealjs:
     theme: [default, clean.scss]
     menu:
