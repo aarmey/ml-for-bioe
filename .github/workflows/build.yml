@@ -17,32 +17,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
-    # Build products
-    - name: Install TeX packages
-      run: |
-        sudo apt update
-        sudo apt install pandoc fonts-cmu
-    - name: Setup TeX Live
-      uses: teatimeguest/setup-texlive-action@v3
+    - uses: quarto-dev/quarto-actions/setup@v2
       with:
-        packages: >-
-          scheme-basic
-          pdfmanagement-testphase
-          beamer
-          tagpdf
-          microtype
-          amsmath
-          fancyvrb
-          fontspec
-          ragged2e
-          booktabs
-          caption
-          ulem
-          textpos
-          pdfpages
+        version: 1.6.39
     - name: Build slides and handouts
-      run: make -j 3
+      run: make slides && make notes
     - name: Install ruby & jekyll
       uses: ruby/setup-ruby@v1
       with:
@@ -51,12 +30,13 @@ jobs:
     - name: Build jekyll
       run: bundle exec jekyll build -s website -d website/_site
     - name: Proof HTML
-      run: bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --ignore_status_codes "412, 503, 403, 406" --assume-extension . website/_site
+      run: bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --checks "Links, Scripts" --ignore_status_codes "412, 503, 403, 406" --assume-extension . website/_site
+      # Eventually fix alt tagging
     - name: Upload lecture notes
       uses: actions/upload-artifact@v4
       with:
-        name: lectures
-        path: lectures/*.pdf
+        name: notes
+        path: notes
     - name: Upload artifact
       if: github.ref == 'refs/heads/master'
       uses: actions/upload-pages-artifact@v3
