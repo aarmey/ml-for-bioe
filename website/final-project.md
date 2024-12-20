@@ -8,7 +8,7 @@ layout: page
 In this project, you have two options for the general route you can take:
 
 1. As a first option, you may select a bioengineering paper that implements a computational analysis we have learned about from the literature. You will reimplement this analysis with thorough testing and documentation. In your final report, you should include a discussion about any elements that presented a challenge during your reimplementation, or discrepancies you found. Lastly, you should identify a creative extension of the analysis and implement it.
-2. Alternatively, you may identify a set of data and corresponding analysis that has not yet been performed. This can be more exploratory in nature. You will implement this analysis with testing and documentation. In your final report, you should discuss whether/how the type of data influenced the analysis that was possible, the findings and limitations of your analysis, and what might be ways to validate your findings. Some repositories with potential datasets are listed [below](#final-project-source-ideas).
+2. Alternatively, you may identify a dataset and corresponding analysis that has not yet been performed. This can be more exploratory in nature. You will implement this analysis with testing and documentation. In your final report, you should discuss whether/how the type of data influenced the analysis that was possible, the findings and limitations of your analysis, and what might be ways to validate your findings. Some repositories with potential datasets are listed [below](#final-project-source-ideas).
 
 There are no restrictions on the programming language or packages you use. Projects can be individual or in teams of two with the scope of the project adjusted accordingly. If in a team, your proposal, final project, and final presentation will be jointly submitted and should cover how the project was divided.
 
@@ -65,3 +65,4 @@ Your project will be evaluated
 
 - Many interesting datasets are listed in the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/).
 - Machine learning competitions, such as the [DREAM Challenges](https://dreamchallenges.org), [Kaggle](https://www.kaggle.com), and [DrivenData](https://www.drivendata.org), may have relevant challenges and pre-assembled datasets.
+- You are welcome to use a dataset from your own research. There is no problem keeping the data confidential, and this does not create any issues related to authorship. If you chose to do so, you should chose a new analysis approach that has not yet been performed.
