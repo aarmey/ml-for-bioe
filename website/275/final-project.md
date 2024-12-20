@@ -41,20 +41,3 @@ Your final report should be less than 1500 words and describe the following item
     - How your proposed approach has solved your question
 
 Your analysis code should accompany your final report in the git repository.
-
-## Final Presentation
-
-Each presentation will have 14 minutes:
-- 12 minutes for a presentation
-- 2 minutes for questions, discussion, and transition to the next presenter
-
-Each team should prepare no more than 12 slides, including the title slide, and cover the sections listed in the final report.
-
-## Grading
-
-Your project will be evaluated 
-
-- Proposal (15%)
-- Final Report (40%)
-- Final Presentation (15%)
-- Code and Implementation (30%)

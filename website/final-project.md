@@ -47,7 +47,7 @@ Accompanying your final report should be a git repository of your analysis.
 ## Final Presentation
 
 Each presentation will have 10 minutes:
-- 9–10 minutes for a presentation
+- 8 minutes for a presentation
 - 2 minutes for questions, discussion, and transition to the next presenter
 
 Each team should prepare no more than 8 slides, excluding the title slide, and cover the sections listed in the final report.
