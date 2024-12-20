@@ -427,7 +427,7 @@ Talking about Chi-Squared test in point 3.
 
 ## Reading & Resources
 
-- 📖: [Computer Age Statistical Inference, Chapter 8](https://web.stanford.edu/~hastie/CASI_files/PDF/casi.pdf)
+- 📖: [Computer Age Statistical Inference, Chapter 8](https://hastie.su.domains/CASI/order.html)
 - 📖: [Points of Significance: Simple linear regression](https://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
 - 💾: [sklearn: Linear Models](https://scikit-learn.org/stable/modules/linear_model.html)
 - 👂: [Linear Digressions: The assumptions of ordinary least squares](https://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)

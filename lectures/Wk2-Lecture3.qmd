@@ -270,6 +270,6 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 
 # Further Reading
 
-- [Computer Age Statistical Inference, Chapter 16](https://web.stanford.edu/~hastie/CASI_files/PDF/casi.pdf)
+- [Computer Age Statistical Inference, Chapter 16](https://hastie.su.domains/CASI/order.html)
 - sklearn: [Generalized Linear Models](https://scikit-learn.org/stable/modules/linear_model.html)
 - Candès E. and Tao T. [The Dantzig selector: statistical estimation when p is much larger than n](https://www.acm.caltech.edu/~emmanuel/papers/DantzigSelector.pdf).
