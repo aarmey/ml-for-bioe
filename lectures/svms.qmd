@@ -32,7 +32,7 @@ author: Aaron Meyer
 - Many decision boundaries!
 - Are all decision boundaries equally good?
 
-![ ](./figs/lec16/goodboundary.png){ width=50% }
+![ ](./figs/svms/goodboundary.png){ width=50% }
 
 ::: notes
 Let's say we have this data. How do we draw the decision boundaries?
@@ -40,7 +40,7 @@ Let's say we have this data. How do we draw the decision boundaries?
 
 # Examples Of Bad Decision Boundaries
 
-![ ](./figs/lec16/badboundary.png)
+![ ](./figs/svms/badboundary.png)
 
 ::: notes
 Which points most define where we should draw a boundary?
@@ -52,7 +52,7 @@ Which points most define where we should draw a boundary?
 - We should maximize the margin, $m = 2 / \lVert \mathbf{w} \rVert$
 - Distance between the origin and the line $\mathbf{w}^t\mathbf{x}=k$ is $k / \lVert \mathbf{w} \rVert$
 
-![ ](./figs/lec16/findboundary.png){ width=60% }
+![ ](./figs/svms/findboundary.png){ width=60% }
 
 # Finding The Decision Boundary
 
@@ -93,14 +93,14 @@ Which points most define where we should draw a boundary?
 
 # A Geometrical Interpretation
 
-![ ](./figs/lec16/ageomint.png){ width=70% }
+![ ](./figs/svms/ageomint.png){ width=70% }
 
 # Non-Linearly Separable Problems
 
 - We allow “error” $\xi_i$ in classification; it is based on the output of the discriminant function $\mathbf{w}^T\mathbf{x} + b$
 - ξi approximates the number of misclassified samples
 
-![ ](./figs/lec16/nonsep.png){ width=70% }
+![ ](./figs/svms/nonsep.png){ width=70% }
 
 # Soft Margin Hyperplane
 
@@ -144,7 +144,7 @@ Go over circle inside circle with transformation to polar coordinates.
 
 # Transforming The Data
 
-![ ](./figs/lec16/transdata.png)
+![ ](./figs/svms/transdata.png)
 
 - Computation in the feature space can be costly because it is high dimensional
 	- The feature space is typically infinite-dimensional!
@@ -209,7 +209,7 @@ Go over circle inside circle with transformation to polar coordinates.
 
 # Example of Non-Linear Transformation
 
-![ ](./figs/lec16/discfun.png){width=70%}
+![ ](./figs/svms/discfun.png){width=70%}
 
 # Justification of SVM
 
@@ -277,19 +277,19 @@ Go over how to pick an appropriate kernel, and floppiness.
 
 # Application - Circulating Tumor Cells
 
-![ ](./figs/lec16/dicarlo-title.pdf)
+![ ](./figs/svms/dicarlo-title.png)
 
 # CTCs Are A Useful Resource for Cancer Analysis
 
-![ ](./figs/lec16/ctcs.jpg)
+![ ](./figs/svms/ctcs.jpg)
 
 # Application - Separating CTCs From Other Blood Cells
 
-![ ](./figs/lec16/dicarlo-fig1.pdf)
+![ ](./figs/svms/dicarlo-fig1.png)
 
 # Application - Separating CTCs From Other Blood Cells
 
-![ ](./figs/lec16/dicarlo-fig5.pdf)
+![ ](./figs/svms/dicarlo-fig5.png)
 
 # Implementation
 
