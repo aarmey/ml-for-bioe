@@ -58,7 +58,7 @@ The key factor is how one defines the problem—i.e. how the distribution is des
 
 # Any Fitting Is Dependent On The Correctness Of The Model
 
-![ ](./lectures/figs/lec2/fig1.pdf)
+![ ](./figs/lec2/fig1.pdf)
 
 Fitting does not happen in a vacuum!
 
@@ -203,7 +203,7 @@ What are some downsides?
 
 # Application: Paternal *de novo* mutations
 
-![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./lectures/figs/lec2/decode0.pdf)
+![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./figs/lec2/decode0.pdf)
 
 ::: notes
 What is different about paternal vs. maternal meiosis?
@@ -211,11 +211,11 @@ What is different about paternal vs. maternal meiosis?
 
 # Application: Paternal *de novo* mutations
 
-![Kong *et al*, *Nature*, 2012](./lectures/figs/lec2/decode1.jpg)
+![Kong *et al*, *Nature*, 2012](./figs/lec2/decode1.jpg)
 
 # Application: Paternal *de novo* mutations
 
-![Kong *et al*, *Nature*, 2012](./lectures/figs/lec2/decode2.jpg)
+![Kong *et al*, *Nature*, 2012](./figs/lec2/decode2.jpg)
 
 # Implementation
 
@@ -255,7 +255,7 @@ ax.set_ylabel('Predicted')
 
 # Implementation
 
-![ ](./lectures/figs/lec2/olsplot.png)
+![ ](./figs/lec2/olsplot.png)
 
 # Non-Linear Least Squares
 
@@ -346,7 +346,7 @@ plt.xlabel('Concentration [nM]')
 plt.ylabel('Binding')
 ~~~
 
-![ ](./lectures/figs/lec2/bindingdata.png){ width=70% }
+![ ](./figs/lec2/bindingdata.png){ width=70% }
 
 # NNLSQ Example - Binding Data
 
@@ -365,7 +365,7 @@ plt.xlabel('Concentration [nM]')
 plt.ylabel('Binding')
 ~~~
 
-![ ](./lectures/figs/lec2/bindingpred.png){ width=70% }
+![ ](./figs/lec2/bindingpred.png){ width=70% }
 
 # NNLSQ Example - Binding Data
 

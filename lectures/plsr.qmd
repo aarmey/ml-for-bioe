@@ -20,7 +20,7 @@ author: Aaron Meyer
 
 # Common Challenge: Cue/Signal/Response Relationships
 
-![ ](./lectures/figs/lec8/CSR-figure.pdf)
+![ ](./figs/lec8/CSR-figure.pdf)
 
 ::: notes
 - Number of components enough to make PCA/lasso useful
@@ -47,7 +47,7 @@ Draw out correlation and then include new point.
 
 # Challenges with Univariate Relationships
 
-![Janes, et al. Science, 2005](./lectures/figs/lec8/Janes-fig.jpg)
+![Janes, et al. Science, 2005](./figs/lec8/Janes-fig.jpg)
 
 - The relationship between JNK activation and apoptosis appears to be highly context-dependent
 	- Univariate relationships are often insufficient
@@ -99,7 +99,7 @@ One solution - use the concepts from PCA to reduce dimensionality.
 
 First step: **Simply apply PCA!**
 
-![Geladi *Analytica Chimica Acta* 1986](./lectures/figs/lec8/PCR2.png){width=60%}
+![Geladi *Analytica Chimica Acta* 1986](./figs/lec8/PCR2.png){width=60%}
 
 Dimensionality goes from $m$ to $N_{comp}$.
 
@@ -141,7 +141,7 @@ $$Y = TB + E$$
 
 # PLSR
 
-![ ](./lectures/figs/lec8/PC-5.pdf)
+![ ](./figs/lec8/PC-5.pdf)
 
 ::: notes
 - Go over definition of covariance.
@@ -153,7 +153,7 @@ $$Y = TB + E$$
 
 # PLSR - NIPALs with Scores Exchanged
 
-![ ](./lectures/figs/lec8/PC-6.pdf)
+![ ](./figs/lec8/PC-6.pdf)
 
 ::: notes
 - $B$ is $T (P^T T)^{-1} Q^T$
@@ -163,15 +163,15 @@ $$Y = TB + E$$
 
 # PLSR - NIPALs with Scores Exchanged
 
-![ ](./lectures/figs/lec8/PC-7.pdf)
+![ ](./figs/lec8/PC-7.pdf)
 
 # Components in PLSR and PCA Differ
 
-![ ](./lectures/figs/lec8/PC-8.pdf)
+![ ](./figs/lec8/PC-8.pdf)
 
 # Determining the Number of Components
 
-![ ](./lectures/figs/lec8/PC-9.pdf)
+![ ](./figs/lec8/PC-9.pdf)
 
 ::: notes
 Go over each.
@@ -179,7 +179,7 @@ Go over each.
 
 # Determining the Number of Components
 
-![ ](./lectures/figs/lec8/PC-10.pdf)
+![ ](./figs/lec8/PC-10.pdf)
 
 # Variants of PLSR
 
@@ -189,31 +189,31 @@ Go over each.
 
 # Application
 
-![ ](./lectures/figs/lec8/lee-1.pdf)
+![ ](./figs/lec8/lee-1.pdf)
 
 # Application
 
-![ ](./lectures/figs/lec8/lee-2.pdf)
+![ ](./figs/lec8/lee-2.pdf)
 
 # Application
 
-![ ](./lectures/figs/lec8/lee-3.pdf)
+![ ](./figs/lec8/lee-3.pdf)
 
 # Application
 
-![ ](./lectures/figs/lec8/lee-4.pdf)
+![ ](./figs/lec8/lee-4.pdf)
 
 # Application
 
-![ ](./lectures/figs/lec8/lee-5.pdf)
+![ ](./figs/lec8/lee-5.pdf)
 
 # Application
 
-![ ](./lectures/figs/lec8/lee-6.pdf)
+![ ](./figs/lec8/lee-6.pdf)
 
 # Application
 
-![ ](./lectures/figs/lec8/lee-7.pdf)
+![ ](./figs/lec8/lee-7.pdf)
 
 # Practical Notes
 

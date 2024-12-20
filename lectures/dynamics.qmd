@@ -51,7 +51,7 @@ If we want to know about how these species interact, we can model their behavior
 # Applications of ODE models: Pharmacokinetics
 
 
-![ ](./lectures/figs/lec9/twoComp.pdf)
+![ ](./figs/lec9/twoComp.pdf)
 
 ::: notes
 - Copy to board
@@ -153,7 +153,7 @@ Walk through 1D case of stability.
 
 # Linearity & Separability
 
-![ ](./lectures/figs/lec9/nonlin-2a.pdf)
+![ ](./figs/lec9/nonlin-2a.pdf)
 
 ::: notes
 - Note how linear systems come to a solution
@@ -162,7 +162,7 @@ Walk through 1D case of stability.
 
 # Phase Portraits
 
-![ ](./lectures/figs/lec9/nonlin-3.pdf)
+![ ](./figs/lec9/nonlin-3.pdf)
 
 Non-linear systems
 
@@ -171,7 +171,7 @@ Non-linear systems
 
 # Features in Phase Portraits
 
-![ ](./lectures/figs/lec9/nonlin-3a.pdf)
+![ ](./figs/lec9/nonlin-3a.pdf)
 
 ::: notes
 - Fixed Points (A, B, C). Steady states
@@ -191,7 +191,7 @@ Non-linear systems
 
 # Example – fixed points
 
-![ ](./lectures/figs/lec9/nonlin-4a.pdf)
+![ ](./figs/lec9/nonlin-4a.pdf)
 
 # Example – stability
 
@@ -214,13 +214,13 @@ Non-linear systems
 
 Nullclines are the sets of points for which $\dot{x} = 0$ or $\dot{y} = 0$, so flow is either horizontal or vertical.
 
-![ ](./lectures/figs/lec9/nonlin-5a.pdf)
+![ ](./figs/lec9/nonlin-5a.pdf)
 
 # Example – computed
 
 #### Step 4: Plot flow lines
 
-![ ](./lectures/figs/lec9/nonlin-6.pdf)
+![ ](./figs/lec9/nonlin-6.pdf)
 
 # Existence & Uniqueness
 
@@ -231,23 +231,23 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 # Linearization About Fixed Points
 
-![ ](./lectures/figs/lec9/nonlin-7.pdf)
+![ ](./figs/lec9/nonlin-7.pdf)
 
 # Solving Linearized Systems
 
-![ ](./lectures/figs/lec9/nonlin-7a.pdf)
+![ ](./figs/lec9/nonlin-7a.pdf)
 
 # Example
 
-![ ](./lectures/figs/lec9/nonlin-8.pdf)
+![ ](./figs/lec9/nonlin-8.pdf)
 
 # More Examples
 
-![ ](./lectures/figs/lec9/nonlin-8a.pdf)
+![ ](./figs/lec9/nonlin-8a.pdf)
 
 # Classification of Fixed Points
 
-![ ](./lectures/figs/lec9/nonlin-9.pdf)
+![ ](./figs/lec9/nonlin-9.pdf)
 
 # Relevance for Nonlinear Dynamics
 
@@ -266,7 +266,7 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 # Saddle-Node Bifurcation
 
-![ ](./lectures/figs/lec9/nonlin-10a.pdf)
+![ ](./figs/lec9/nonlin-10a.pdf)
 
 # Genetic Control Network
 
@@ -275,7 +275,7 @@ Griffith (1971) model of genetic control:
 - x = protein concentration
 - y = mRNA concentration
 
-![ ](./lectures/figs/lec9/nonlin-11.pdf)
+![ ](./figs/lec9/nonlin-11.pdf)
 
 # Genetic Control Network
 
@@ -284,7 +284,7 @@ Biochemical version of a bistable switch:
 1. Only stable points are no protein and mRNA or a fixed composition
 2. If degradation rates too great, only stable point is origin
 
-![ ](./lectures/figs/lec9/nonlin-12.pdf)
+![ ](./figs/lec9/nonlin-12.pdf)
 
 ::: notes
 - How could we compare this to data?
@@ -384,7 +384,7 @@ plt.show()
 
 # Implementation - Example
 
-![ ](./lectures/figs/lec9/scipy-integrate-odeint-1.png){width=80%}
+![ ](./figs/lec9/scipy-integrate-odeint-1.png){width=80%}
 
 # Implementation - Stiff Systems
 

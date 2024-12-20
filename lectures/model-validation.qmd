@@ -27,7 +27,7 @@ author: Aaron Meyer
 
 # Training- vs. test-set performance
 
-![ ](./lectures/figs/lec4/sfd-5.pdf)
+![ ](./figs/lec4/sfd-5.pdf)
 
 ::: notes
 Walk through this in detail.
@@ -57,7 +57,7 @@ Move to board. Setup example with students up front. Predict height from arm len
 
 # The validation process
 
-![ ](./lectures/figs/lec4/sfd-8.pdf)
+![ ](./figs/lec4/sfd-8.pdf)
 
 A random splitting into two halves: left part is training set, right part is validation set
 
@@ -70,7 +70,7 @@ First just leaving one set out.
 - Want to compare linear vs higher-order polynomial terms in a linear regression
 - We randomly split the 392 observations into two sets, a training set containing 196 of the data points, and a validation set containing the remaining 196 observations.
 
-![ ](./lectures/figs/lec4/sfd-9.pdf)
+![ ](./figs/lec4/sfd-9.pdf)
 
 *Left panel shows single split; right panel shows multiple splits*
 
@@ -108,11 +108,11 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 
 # Auto data revisited
 
-![ ](./lectures/figs/lec4/sfd-18.pdf)
+![ ](./figs/lec4/sfd-18.pdf)
 
 # True and estimated test MSE for the simulated data
 
-![ ](./lectures/figs/lec4/sfd-19.pdf)
+![ ](./figs/lec4/sfd-19.pdf)
 
 # Other issues with cross-validation
 
@@ -141,11 +141,11 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 
 # The wrong way
 
-![ ](./lectures/figs/lec4/sfd-31.pdf)
+![ ](./figs/lec4/sfd-31.pdf)
 
 # The right way
 
-![ ](./lectures/figs/lec4/sfd-32.pdf)
+![ ](./figs/lec4/sfd-32.pdf)
 
 ::: notes
 - Go through the hospital example.
@@ -178,7 +178,7 @@ The Baron had fallen to the bottom of a deep lake. Just when it looked like all 
 
 # Example with just 3 observations
 
-![ ](./lectures/figs/lec4/sfd-43.pdf)
+![ ](./figs/lec4/sfd-43.pdf)
 
 A graphical illustration of the bootstrap approach on a small sample containing $n = 3$ observations. Each bootstrap data set contains $n$ observations, sampled with replacement from the original data set. Each bootstrap data set is used to obtain an estimate of $\alpha$.
 
@@ -191,7 +191,7 @@ A graphical illustration of the bootstrap approach on a small sample containing 
 
 # A general picture for the bootstrap
 
-![ ](./lectures/figs/lec4/sfd-45.pdf)
+![ ](./figs/lec4/sfd-45.pdf)
 
 # The bootstrap in general
 
@@ -238,27 +238,27 @@ Go through dataset randomization.
 
 # Example - gene expression signatures
 
-![ ](./lectures/figs/lec4/example-1.pdf)
+![ ](./figs/lec4/example-1.pdf)
 
 # Example - gene expression signatures
 
-![ ](./lectures/figs/lec4/example-2.pdf)
+![ ](./figs/lec4/example-2.pdf)
 
 # Example - gene expression signatures
 
-![ ](./lectures/figs/lec4/example-3.pdf)
+![ ](./figs/lec4/example-3.pdf)
 
 # Example - gene expression signatures
 
-![**Meta-PCNA adjustment decreases the prognostic abilities of published signatures.** Hazard ratios for overall survival association of 48 signatures in the original dataset (blue) and the meta-analysis (red).](./lectures/figs/lec4/example-4.pdf)
+![**Meta-PCNA adjustment decreases the prognostic abilities of published signatures.** Hazard ratios for overall survival association of 48 signatures in the original dataset (blue) and the meta-analysis (red).](./figs/lec4/example-4.pdf)
 
 # Example - gene expression signatures
 
-![ ](./lectures/figs/lec4/example-4b.pdf)
+![ ](./figs/lec4/example-4b.pdf)
 
 # Example - gene expression signatures
 
-![ ](./lectures/figs/lec4/example-5.pdf)
+![ ](./figs/lec4/example-5.pdf)
 
 # Implementation - Easiest
 

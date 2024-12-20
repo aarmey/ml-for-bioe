@@ -64,7 +64,7 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 
 # Depicting the bias-variance tradeoff
 
-![A graph depicting the bias-variance tradeoff.](./lectures/figs/lec3/9.pdf)
+![A graph depicting the bias-variance tradeoff.](./figs/lec3/9.pdf)
 
 # Ridge Regression
 
@@ -88,7 +88,7 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 
 - Can write the ridge constraint as the following **penalized** residual sum of squares (PRSS):
 
-![ ](./lectures/figs/lec3/12.pdf)
+![ ](./figs/lec3/12.pdf)
 
 - Its solution may have smaller average PE than $\hat{\boldsymbol\beta}^{ls}$
 - $PRSS(\boldsymbol\beta)_{l_2}$ is convex, and hence has a unique solution
@@ -118,7 +118,7 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 
 - The λ’s trace out a set of ridge solutions, as illustrated below
 
-![Ridge coefficient path for the diabetes data set found in the `lars` library in R.](./lectures/figs/lec3/15.pdf)
+![Ridge coefficient path for the diabetes data set found in the `lars` library in R.](./figs/lec3/15.pdf)
 
 # Choosing λ
 
@@ -150,7 +150,7 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 
 # Plot of CV errors and standard error bands
 
-![Cross validation errors from a ridge regression example on spam data.](./lectures/figs/lec3/34.pdf)
+![Cross validation errors from a ridge regression example on spam data.](./figs/lec3/34.pdf)
 
 # The LASSO
 
@@ -199,7 +199,7 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 
 # The LASSO, LARS, and Forward Stagewise paths
 
-![Comparison of the LASSO, LARS, and Forward Stagewise coefficient paths for the diabetes data set.](./lectures/figs/lec3/45.pdf)
+![Comparison of the LASSO, LARS, and Forward Stagewise coefficient paths for the diabetes data set.](./figs/lec3/45.pdf)
 
 # Comparing LS, Ridge, and the LASSO
 
@@ -250,19 +250,19 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 
 # Example - Predicting Drug Response
 
-![ ](./lectures/figs/lec3/ccle-title.pdf)
+![ ](./figs/lec3/ccle-title.pdf)
 
 # Example - Predicting Drug Response
 
-![ ](./lectures/figs/lec3/ccle-fig2.pdf)
+![ ](./figs/lec3/ccle-fig2.pdf)
 
 # Example - Predicting Drug Response
 
-![ ](./lectures/figs/lec3/ccle-fig3.pdf)
+![ ](./figs/lec3/ccle-fig3.pdf)
 
 # Example - Predicting Drug Response
 
-![ ](./lectures/figs/lec3/ccle-fig4.pdf)
+![ ](./figs/lec3/ccle-fig4.pdf)
 
 # Implementation
 

@@ -57,7 +57,7 @@ What is the implicit assumption here?
 
 # Matrix Factorization
 
-![ ](./lectures/figs/lec7/mflayout.png)
+![ ](./figs/lec7/mflayout.png)
 
 Generalization of many methods (e.g., SVD, QR, CUR, Truncated SVD, etc.)
 
@@ -77,19 +77,19 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 
 #### Matrix factorization is also compression
 
-![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./lectures/figs/lec7/cat.jpg){width=80%}
+![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/lec7/cat.jpg){width=80%}
 
 # Factor Analysis
 
 #### Matrix factorization is also compression
 
-![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./lectures/figs/lec7/cat-3comp.jpg){width=80%}
+![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/lec7/cat-3comp.jpg){width=80%}
 
 # Factor Analysis
 
 #### Matrix factorization is also compression
 
-![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./lectures/figs/lec7/cat-46comp.jpg){width=80%}
+![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/lec7/cat-46comp.jpg){width=80%}
 
 ::: notes
 - There is always information lost
@@ -124,7 +124,7 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 - $k$th PC is orthogonal to all previous PCs
 - Reduce dimensionality while maintaining maximal variance
 
-![ ](./lectures/figs/lec7/pca.png){width=40%}
+![ ](./figs/lec7/pca.png){width=40%}
 
 # Principal Components Analysis
 
@@ -203,7 +203,7 @@ print(pca.explained_variance_ratio_)
 
 # PCA
 
-![ ](./lectures/figs/lec7/iris_pca.png){width=90%}
+![ ](./figs/lec7/iris_pca.png){width=90%}
 
 # Non-negative matrix factorization
 
@@ -237,19 +237,19 @@ BOARD
 
 # NMF application: Mutational Processes in Cancer
 
-![Helleday et al, Nat Rev Gen, 2014](./lectures/figs/lec7/mutgen.jpg)
+![Helleday et al, Nat Rev Gen, 2014](./figs/lec7/mutgen.jpg)
 
 # NMF application: Mutational Processes in Cancer
 
-![Helleday et al, Nat Rev Gen, 2014](./lectures/figs/lec7/mutproc.jpg)
+![Helleday et al, Nat Rev Gen, 2014](./figs/lec7/mutproc.jpg)
 
 # NMF application: Mutational Processes in Cancer
 
-![Alexandrov et al, Cell Rep, 2013](./lectures/figs/lec7/sigA.jpg)
+![Alexandrov et al, Cell Rep, 2013](./figs/lec7/sigA.jpg)
 
 # NMF application: Mutational Processes in Cancer
 
-![Alexandrov et al, Cell Rep, 2013](./lectures/figs/lec7/sigB.jpg)
+![Alexandrov et al, Cell Rep, 2013](./figs/lec7/sigB.jpg)
 
 ::: notes
 - Also used in interpreting medical health records

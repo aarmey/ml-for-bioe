@@ -1,0 +1,9 @@
+format:
+  typst: default
+  revealjs:
+    theme: [default, clean.scss]
+    menu:
+      side: left
+    slide-number: true
+    date-format: long
+    embed-resources: true

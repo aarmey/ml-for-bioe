@@ -81,11 +81,11 @@ if __name__ == '__main__':
 
 # Assertions
 
-![ ](./lectures/figs/lec6/assert1.png)
+![ ](./figs/lec6/assert1.png)
 
 # Assertions
 
-![ ](./lectures/figs/lec6/assert2.png)
+![ ](./figs/lec6/assert2.png)
 
 # Setup and Teardown
 
@@ -258,23 +258,23 @@ Avoid:
 
 # Example - Genomics Annotations
 
-![ ](./lectures/figs/lec6/title.pdf)
+![ ](./figs/lec6/title.pdf)
 
 # Example - Genomics Annotations
 
-![ ](./lectures/figs/lec6/fig1.pdf)
+![ ](./figs/lec6/fig1.pdf)
 
 # Example - Genomics Annotations
 
-![ ](./lectures/figs/lec6/fig2.pdf)
+![ ](./figs/lec6/fig2.pdf)
 
 # Example - Genomics Annotations
 
-![ ](./lectures/figs/lec6/fig3.pdf)
+![ ](./figs/lec6/fig3.pdf)
 
 # Example - Genomics Annotations
 
-![ ](./lectures/figs/lec6/fig4.pdf)
+![ ](./figs/lec6/fig4.pdf)
 
 # Associated topics - Property-based testing
 

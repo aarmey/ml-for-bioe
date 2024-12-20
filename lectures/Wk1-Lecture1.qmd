@@ -1,16 +1,6 @@
 ---
 title: "Introduction, statistics review"
 author: "Aaron Meyer"
-format:
-  html: 
-    embed-resources: true
-  revealjs:
-    theme: [default, clean.scss]
-    menu:
-      side: left
-    slide-number: true
-    date-format: long
-    embed-resources: true
 ---
 
 # Machine learning & data-driven modeling in bioengineering
@@ -179,15 +169,15 @@ FILL IN
 
 # Why we need models - Can a biologist fix a radio?
 
-![Lazebnik et al, Cancer Cell, 2002](./lectures/figs/lec1/laz1.jpg)
+![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz1.jpg)
 
 # Why we need models - Can a biologist fix a radio?
 
-![Lazebnik et al, Cancer Cell, 2002](./lectures/figs/lec1/laz2.jpg)
+![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz2.jpg)
 
 # Why we need models - Can a biologist fix a radio?
 
-![Lazebnik et al, Cancer Cell, 2002](./lectures/figs/lec1/laz3.png)
+![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz3.png)
 
 # Comparisons
 
@@ -199,35 +189,37 @@ FILL IN
 	- Only provides basic characterization
 	- Leads to "context-dependent" function
 
-# Machine learning can outperform a human for some tasks
+## Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig1.png){height=100%}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig1.png){height=3in}
 
-# Machine learning can outperform a human for some tasks
+## Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig2.png){height=60%}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig2.png){height=3in}
 
-# Machine learning can outperform a human for some tasks
+## Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig3.pdf)
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig3.png){height=3in}
 
-# Machine learning can outperform a human for some tasks
+## Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./lectures/figs/lec1/fig4.png){height=60%}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig4.png){height=3in}
 
-# Data
+# Basic Concepts
+
+## Data
 
 - What is a variable?
 - What is an observation?
 - What is N?
 
-# Types of variables
+## Types of variables
 
 - Categorical
 - Numerical/continuous
 - Ordinal
 
-# Probability
+## Probability
 
 ::: notes
 - Probability indicates the chance of an event within a wider set of outcomes
@@ -236,7 +228,7 @@ FILL IN
 - What is limit as dx goes to 0?
 :::
 
-# Coin toss example
+## Coin toss example
 
 A set of trials: HTHHHTTHHTT
 
@@ -253,7 +245,7 @@ Two possibilities:
 - Walk through each form of probability.
 :::
 
-# Distributions
+## Distributions
 
 We've already been talking about these! Distributions describe the range of probabilities that exist for all possible outcomes.
 
@@ -261,7 +253,7 @@ We've already been talking about these! Distributions describe the range of prob
 - Can a distribution be categorical? Ordinal? Numerical?
 :::
 
-# Other Probabilities
+## Other Probabilities
 
 Conditional probability
 ~ The measure of an event given that another event has occured.
@@ -280,7 +272,7 @@ Complementary event
 - Also talk about if something is conditionally dependent/independent
 :::
 
-# Normal Distributions
+## Normal Distributions
 
 - $\mu$: center of the distribution
 - $\sigma$: standard deviation
@@ -288,9 +280,9 @@ Complementary event
 
 $$f(x)=\frac{1}{\sqrt{2\pi}}\; e^{-\frac{x^2}{2}}$$
 
-![ ](./lectures/figs/lec1/normal_pdf.png){width=60%}
+![ ](./figs/lec1/normal_pdf.png){width=60%}
 
-# Normal Distributions
+## Normal Distributions
 
 For a *standard* normal distribution ($\mu = 0$, $\sigma = 1$):
 
@@ -309,7 +301,7 @@ You can normalize any normal distribution to the standard normal.
 - Walk through process of Z-scoring.
 :::
 
-# Other Distributions
+## Other Distributions
 
 Normal Distribution
 ~ Describes many naturally observed variables and has statistics mean and standard deviation
@@ -338,7 +330,7 @@ Binomial
 Multinomial
 ~ Generalization of Binomial for more than two states.
 
-# Distribution moments
+## Distribution moments
 
 The moments of a distribution describe its shape: $$\mu_{n}=\int_{-\infty}^{\infty}(x-c)^{n}\,f(x)\,\mathrm{d} x$$
 
@@ -362,6 +354,8 @@ Fourth
 
 # Sample statistics
 
+## Sample statistics
+
 If we sampled a number of times ($n=3$, say) many times, we could build a **sampling** distribution of the statistics (e.g., one for the **sample** mean and one for the **sample** standard deviation).
 
 General properties of sampling distributions:
@@ -370,7 +364,7 @@ General properties of sampling distributions:
 2. The spread of the sampling distributions of many statistics *tends* to grow smaller as sample size $n$ increases
 3. As $n$ increases, sampling distributions tends towards normality. If a process has mean $\mu$ and standard deviation $\sigma$, them the sample mean = $\mu$ and the sample standard deviation = $\sigma / \sqrt{n}$
 
-# Sample statistics
+## Sample statistics
 
 - This means that as $n$ increases, the better estimate $\mu_x$ is of $\mu$.
 	- Sample standard deviation is the standard deviation of the mean.
@@ -378,7 +372,7 @@ General properties of sampling distributions:
 - And the central limit theorem states that the sampling distribution can be approximated by a normal distribution when the sample size, $n$, is sufficiently large.
 - Rule of thumb is that $n=30$ is sufficiently large, but there are times when smaller $n$ will suffice. Greater $n$ is required with higher skew.
 
-# Hypothesis Testing
+## Hypothesis Testing
 
 In hypothesis testing, we state a null hypothesis that we will test; if its likelihood is less than some value, then we reject it.
 
@@ -419,7 +413,7 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 - K-S test is most useful when the sample size is small
 - Geometric meaning of the test statistic:
 
-![ ](./lectures/figs/lec1/ks.pdf)
+![ ](./figs/lec1/ks.jpg)
 
 ::: notes
 No t-distribution available here.

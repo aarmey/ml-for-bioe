@@ -29,7 +29,7 @@ author: Aaron Meyer
 
 # Two views on how we interpret the world
 
-![https://xkcd.com/1132/](./lectures/figs/lec5/frequentists_vs_bayesians.png)
+![https://xkcd.com/1132/](./figs/lec5/frequentists_vs_bayesians.png)
 
 # Bayesian statistics derivation
 
@@ -64,7 +64,7 @@ $$L(\theta; D) = P(D\mid\theta) = \sum_m P(x_m \mid\theta)$$
 - Example: Likelihood for the sequence: H, T, T, H, H
 $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$$
 
-![ ](./lectures/figs/lec5/ho5.pdf){width=40%}
+![ ](./figs/lec5/ho5.pdf){width=40%}
 
 # Maximum Likelihood Estimate (MLE)
 
@@ -106,7 +106,7 @@ Can look at sampling distribution of parameter.
 - Example: 5 coin tosses with 4 heads, 1 tail
 	- MLE estimate: $$P(\theta) = \tfrac{4}{5} = 0.8$$
 	- Bayesian prediction: $$P(x_{M+1}=H\mid D) = \int\theta P(\theta\mid D)\; d\theta = \tfrac{5}{7}$$
-![ ](./lectures/figs/lec5/ho10.png){width=30%}
+![ ](./figs/lec5/ho10.png){width=30%}
 
 # Bayesian inference and MLE
 
@@ -151,7 +151,7 @@ Only gives same answer if our prior distribution is the same as the posterior.
 
 Exactly what we did in lecture 2!
 
-![ ](./lectures/figs/lec5/ho15.pdf){width=70%}
+![ ](./figs/lec5/ho15.pdf){width=70%}
 
 # Bayesian linear regression
 
