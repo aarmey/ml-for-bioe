@@ -221,7 +221,7 @@ Go over each.
 
 - sklearn does not implement PCR directly
 - Can be applied by chaining `sklearn.decomposition.PCA` and `sklearn.linear_model.LinearRegression`
-- See: <https://scikit-learn.org/stable/auto_examples/plot_digits_pipe.html>
+- See: <https://scikit-learn.sourceforge.net/dev/auto_examples/plot_digits_pipe.html>
 
 ## PLSR
 
