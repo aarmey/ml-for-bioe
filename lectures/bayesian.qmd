@@ -1,37 +1,31 @@
 ---
 title: Bayesian vs. frequentist approaches
-author: Aaron Meyer
+author: Aaron Meyer (based on slides from Joyce Ho)
 ---
-
-# Outline
-
-- Administrative Issues
-- Bayesian Statistics
-- A Couple Examples
-
-**Based on slides from Joyce Ho.**
 
 # Frequentist versus Bayesian
 
-## Frequentist
+## Frequentist versus Bayesian
+
+### Frequentist
 
 - Data are a repeatable random sample (there is a frequency)
 - Underlying parameters remain constant during repeatable process
 - Parameters are fixed
 - Prediction via the estimated parameter value
 
-## Bayesian
+### Bayesian
 
 - Data are observed from the realized sample
 - Parameters are unknown and described probabilistically (random variables)
 - Data are fixed
 - Prediction is expectation over unknown parameters
 
-# Two views on how we interpret the world
+## Two views on how we interpret the world
 
 ![https://xkcd.com/1132/](./figs/lec5/frequentists_vs_bayesians.png)
 
-# Bayesian statistics derivation
+## Bayesian statistics derivation
 
 Bayes’ theorem may be derived from the definition of conditional probability:
 $$P(A\mid B)={\frac {P(A\cap B)}{P(B)}},{\text{ if }}P(B)\neq 0$$
@@ -198,7 +192,9 @@ Questions:
 - A US resident receives a positive test. What is the chance they have HIV?
 - How would this change if 5% of the population were infected?
 
-# Reading & Resources
+# Review
+
+## Reading & Resources
 
 - 📖: [Bayesian Data Analysis](https://stat.columbia.edu/~gelman/books/)
 - 📖: [Probabilistic Programming & Bayesian Methods for Hackers](https://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
@@ -209,3 +205,14 @@ Questions:
 	- [PyMC](https://github.com/pymc-devs/pymc) (python)
 	- [emcee](https://github.com/dfm/emcee) (python)
 	- [Stan](https://github.com/stan-dev/stan) (C++, python, R)
+
+## Review Questions
+
+1. What is a prior? How does one go about making one?
+2. Can a prior be based on data? If so, how is this data related to the experiment being modeled (the observed)?
+3. What are three differences between a Bayesian and maximum likelihood (frequentist) approach?
+4. When will a Bayesian and maximum likelihood approach agree?
+5. You are asked to provide up-to-date estimates of the 6-month failure rate for a stent going to market. A previous device had 3 devices out of 100 fails within 6 months, and you strongly suspect this device is similar. Provide the Bayesian estimate of the failure rate (i.e. $$P(FR \vert N,m))$$ given N devices have made it to 6 months, and m have failed. (Hint: Devices **either** pass or fail here. This follows a Binomial distribution.)
+6. What would be a reasonable estimate if you had no previous device's data?
+7. What do you expect to happen to a posterior distribution as you add more and more data?
+8. What does the integral of $$p(a \vert b) p(b \vert c) \delta b$$ give you? Why is this useful?

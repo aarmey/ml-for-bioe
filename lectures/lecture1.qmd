@@ -372,6 +372,8 @@ General properties of sampling distributions:
 - And the central limit theorem states that the sampling distribution can be approximated by a normal distribution when the sample size, $n$, is sufficiently large.
 - Rule of thumb is that $n=30$ is sufficiently large, but there are times when smaller $n$ will suffice. Greater $n$ is required with higher skew.
 
+# Hypothesis Testing
+
 ## Hypothesis Testing
 
 In hypothesis testing, we state a null hypothesis that we will test; if its likelihood is less than some value, then we reject it.
