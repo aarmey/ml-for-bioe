@@ -289,7 +289,7 @@ Go over how to pick an appropriate kernel, and floppiness.
 
 # Application - Separating CTCs From Other Blood Cells
 
-![ ](./figs/svms/dicarlo-fig5.png)
+![ ](./figs/svms/dicarlo-fig5.webp)
 
 # Implementation
 
