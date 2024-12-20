@@ -289,3 +289,16 @@ BOARD
 # Closing
 
 **As always, selection of the appropriate method depends upon the question being asked.**
+
+## Review Questions
+
+1. What do dimensionality reduction methods reduce? What is the tradeoff?
+2. What are three benefits of dimensionality reduction?
+3. Does matrix factorization have one answer? If not, what are two choices you could make?
+4. What does principal components analysis aim to preserve?
+5. What are the minimum and maximum number of principal components one can have for a dataset of 300 observations and 10 variables?
+6. How can you determine the "right" number of PCs to use?
+7. What is a loading matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
+8. What is a scores matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
+9. By definition, what is the direction of PC1?
+10. [See question 5 on midterm W20](https://aarmey.github.io/ml-for-bioe/ex-midterm-files/20W.pdf). How does movement of the siControl EGF point represent changes in the original data?

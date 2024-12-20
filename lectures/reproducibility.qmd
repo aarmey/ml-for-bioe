@@ -318,3 +318,13 @@ Avoid:
 - [`datafuzz`](https://github.com/kjam/datafuzz), a python package for data fuzzing
 - [`pylint`](https://www.pylint.org), a python linter
 - [`pytest`](https://doc.pytest.org/en/latest/), a package to run your tests
+
+## Review Questions
+
+1. Who/what sort of people need to test their code?
+2. What is the difference between unit tests and integration tests?
+3. What does testing guarantee?
+4. What is the difference between testing and fuzzing?
+5. What is linting?
+6. You and a colleague are putting together a model. What are some factors that could influence the results besides the code that you write?
+7. You write a function that takes in a voltage from a device and returns the inferred heart rate of the measured individual. What are three high-quality unit tests you could write to test this?

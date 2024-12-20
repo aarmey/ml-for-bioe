@@ -447,3 +447,15 @@ ax.scatter(X[:, 3], X[:, 0], X[:, 2],
 
 - [sklearn: Clustering](https://scikit-learn.org/stable/modules/clustering.html)
 - [Avoiding common pitfalls when clustering biological data](https://stke.sciencemag.org/content/9/432/re6)
+
+## Review Questions
+
+1. What is clustering? What does it seek to accomplish?
+2. What is agglomerative clustering? What does the resulting output look like?
+3. What is the difference between single-link, complete-link, and average clustering?
+4. What are three properties that are required of a distance metric? What kind of things can be compared with a distance metric?
+5. What decisions does one have to make before performing k-means clustering?
+6. Describe the process of fitting that k-means performs.
+7. You and your colleague each run k-means with the same settings, and arrive at different results. How could this happen?
+8. What are two cases in which k-means clustering can fail or provide bad results?
+9. How do you determine that your clustering is "good"?

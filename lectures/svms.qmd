@@ -308,3 +308,17 @@ sklearn has implementations for a variety of SVM methods:
 - 💾: [sklearn: Support Vector Machines](https://scikit-learn.org/stable/modules/svm.html)
 - 👂: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
 - 👂: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
+
+## Review Questions
+
+1. What is the core observation underlying SVMs?
+2. Does the answer for an SVM rely on the exact position of all points? If not, which points most influence the model?
+3. Where can you find the support vectors in a dataset?
+4. What is a kernel? What are three common kinds?
+5. Can you use SVMs for data that can’t be perfectly separated? What do you do if so? What additional tradeoff does this create?
+6. What is a hyperparameter? How do you find the value of these?
+7. How is Y represented within an SVM model?
+8. You use an SVM model with an RBF kernel and a high value for gamma. What does the value of gamma indicate?
+9. When the C parameter is set to be infinite, which of the following is true?
+10. Your colleague is using an SVM with poly kernel and notices that the fitting error improves with ever higher degree polynomials. What is happening here? What would you suggest they do?
+11. Can an SVM model be used with more than two classes? If so, how?
