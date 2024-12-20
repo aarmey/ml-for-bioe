@@ -17,4 +17,4 @@ layout: page
 
 ### BE 188
 
-To be added.
+- Winter 2018: [questions & answers](../ex-midterm-files/18W.pdf)
