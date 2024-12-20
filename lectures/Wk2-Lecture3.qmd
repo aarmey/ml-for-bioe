@@ -268,8 +268,22 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 
 - The notebook can be found on the course website.
 
-# Further Reading
+# Review
+
+## Further Reading
 
 - [Computer Age Statistical Inference, Chapter 16](https://hastie.su.domains/CASI/order.html)
 - sklearn: [Generalized Linear Models](https://scikit-learn.org/stable/modules/linear_model.html)
 - Candès E. and Tao T. [The Dantzig selector: statistical estimation when p is much larger than n](https://projecteuclid.org/journals/annals-of-statistics/volume-35/issue-6/The-Dantzig-selector--Statistical-estimation-when-p-is-much/10.1214/009053606000001523.full).
+
+## Review Questions
+
+1. What is the bias-variance tradeoff? Why might we want to introduce bias into a model?
+2. What is regularization? What are some reasons to use it?
+3. What is the difference between ridge regression and LASSO? How should you choose between them?
+4. Are you guaranteed to find the global optimal answer for ridge regression? What about LASSO?
+5. What is variable selection? Which method(s) perform it? What can you say about the answers?
+6. What does it mean when one says ridge regression and LASSO give a family of answers?
+7. What can we say about the relationship between fitting error and prediction error?
+8. What does regularization do to the degrees of freedom (p) of a model? How about the number of measurements (n)?
+9. A colleague tells you about a new form of regularization they've come up with (e.g., remove X% of variables least correlated with Y). How would this influence the variance of the model? Might this improve the prediction error?

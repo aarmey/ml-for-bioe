@@ -14,7 +14,7 @@ layout: page
 
 ### Week 1, Sept 30 – Oct 4
 
-- [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/Wk1-Lecture2.html)
+- [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/regression.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/OLS-Example.ipynb)
 - [Lecture 3: Fitting & Regression Redux, Regularization](/lectures/Wk2-Lecture3.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/Regularization-Example.ipynb)
@@ -34,9 +34,6 @@ layout: page
 
 - [Lecture 6: Bayesian vs. frequentist approaches]({{ site.baseurl }}/lectures/bayesian.html)
 - [Lecture 7: Dimensionality reduction - PCA and NMF]({{ site.baseurl }}/lectures/dimensionality-reduction.html)
-  - [Example Notebook]({{ site.baseurl }}/lectures/examples/PCA-NNMF.ipynb)
-  - For a visual refresh of some linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-  - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 
 ### Week 4, Oct 21 – 25
 

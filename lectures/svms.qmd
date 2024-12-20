@@ -1,21 +1,11 @@
 ---
 title: Support Vector Machines
-author: Aaron Meyer
+author: Aaron Meyer (adapted from slides by Martin Law)
 ---
 
-# Outline
+# Motivation
 
-- Administrative Issues
-- Support Vector Machines
-	- Linear separable
-	- Nonlinear separable
-	- Soft margin adjustment
-- Application
-- Implementation
-
-**Adapted from slides by Martin Law.**
-
-# History Of SVM
+## History Of SVM
 
 - SVM is related to statistical learning theory
 - First introduced in 1992
@@ -25,7 +15,7 @@ author: Aaron Meyer
 	- Later bested by deep learning methods
 - Note: the meaning of "kernel" is different from other methods
 
-# What Is A Good Decision Boundary?
+## What Is A Good Decision Boundary?
 
 #### Consider a two-class, linearly separable classification problem
 
@@ -38,7 +28,7 @@ author: Aaron Meyer
 Let's say we have this data. How do we draw the decision boundaries?
 :::
 
-# Examples Of Bad Decision Boundaries
+## Examples Of Bad Decision Boundaries
 
 ![ ](./figs/svms/badboundary.png)
 
@@ -46,7 +36,7 @@ Let's say we have this data. How do we draw the decision boundaries?
 Which points most define where we should draw a boundary?
 :::
 
-# Large-Margin Decision Boundary
+## Large-Margin Decision Boundary
 
 - The decision boundary should be as far away from the data of both classes as possible
 - We should maximize the margin, $m = 2 / \lVert \mathbf{w} \rVert$
@@ -54,7 +44,7 @@ Which points most define where we should draw a boundary?
 
 ![ ](./figs/svms/findboundary.png){ width=60% }
 
-# Finding The Decision Boundary
+## Finding The Decision Boundary
 
 - Let $\{x_1, \ldots, x_n\}$ be our data set and let $y_i \in \{1, -1\}$ be the class label of $x_i$
 - The decision boundary should classify all points correctly
@@ -65,7 +55,7 @@ Which points most define where we should draw a boundary?
 - This is a constrained optimization problem
 - Quick methods to find the global optimum by quadratic programming
 
-# The Quadratic Programming Problem
+## The Quadratic Programming Problem
 
 #### Many approaches have been proposed
 
@@ -77,7 +67,7 @@ Which points most define where we should draw a boundary?
 	- Each iteration of SMO picks a pair of ($\alpha_i, \alpha_j$) and solve the QP with these two variables; repeat until convergence
 - In practice, we can just regard the QP solver as a "black-box" without bothering how it works
 
-# Characteristics Of The Solution
+## Characteristics Of The Solution
 
 - Many of the $\alpha_i$ are zero
 	- **w** is a linear combination of a small number of data points
@@ -91,11 +81,11 @@ Which points most define where we should draw a boundary?
 	- Classify **z** as class 1 if the sum is positive, and class 2 otherwise
 	- Note: **w** need not be formed explicitly
 
-# A Geometrical Interpretation
+## A Geometrical Interpretation
 
 ![ ](./figs/svms/ageomint.png){ width=70% }
 
-# Non-Linearly Separable Problems
+## Non-Linearly Separable Problems
 
 - We allow “error” $\xi_i$ in classification; it is based on the output of the discriminant function $\mathbf{w}^T\mathbf{x} + b$
 - ξi approximates the number of misclassified samples

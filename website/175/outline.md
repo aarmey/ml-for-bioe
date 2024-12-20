@@ -6,7 +6,7 @@ layout: page
 ### Week 1, Jan 8 – 12
 
 - [Lecture 1: Statistics review]({{ site.baseurl }}/lectures/Wk1-Lecture1.html)
-- [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/Wk1-Lecture2.html)
+- [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/regression.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/OLS-Example.ipynb)
 - Lab: Programming and Git Primer, due Jan 18th at 11:59 pm
   - Recommended: Git & Github Fundamentals Tutorial
@@ -32,8 +32,6 @@ layout: page
 - [Lecture 7: Bayesian vs. frequentist approaches]({{ site.baseurl }}/lectures/bayesian.html)
 - [Lecture 8: Dimensionality reduction - PCA and NMF]({{ site.baseurl }}/lectures/dimensionality-reduction.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/PCA-NNMF.ipynb)
-  - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-  - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - Lab: Lecture review, project selection check-in
 
 ### Week 5, Feb 5 – 9
