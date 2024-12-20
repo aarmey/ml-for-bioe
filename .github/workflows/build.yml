@@ -21,7 +21,7 @@ jobs:
       with:
         version: 1.6.39
     - name: Build slides and handouts
-      run: make -j 3
+      run: make slides && make notes
     - name: Install ruby & jekyll
       uses: ruby/setup-ruby@v1
       with:
@@ -34,8 +34,8 @@ jobs:
     - name: Upload lecture notes
       uses: actions/upload-artifact@v4
       with:
-        name: lectures
-        path: lectures/*.pdf
+        name: notes
+        path: notes
     - name: Upload artifact
       if: github.ref == 'refs/heads/master'
       uses: actions/upload-pages-artifact@v3
