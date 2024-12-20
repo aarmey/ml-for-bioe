@@ -427,6 +427,7 @@ Talking about Chi-Squared test in point 3.
 
 - 📖: [Computer Age Statistical Inference, Chapter 8](https://hastie.su.domains/CASI/order.html)
 - 📖: [Points of Significance: Simple linear regression](https://www.nature.com/nmeth/journal/v12/n11/full/nmeth.3627.html)
+- 📖: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - 💾: [sklearn: Linear Models](https://scikit-learn.org/stable/modules/linear_model.html)
 - 👂: [Linear Digressions: The assumptions of ordinary least squares](https://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
 - 👂: [Linear Digressions: Convex (and non-convex) optimization](https://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)

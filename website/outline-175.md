@@ -15,11 +15,10 @@ layout: page
 
 ### Week 2, Jan 15 – 19
 
-- [Lecture 3: Fitting & Regression Redux, Regularization]({{ site.baseurl }}/lectures/Wk2-Lecture3.html)
+- [Lecture 3: Fitting & Regression Redux, Regularization]({{ site.baseurl }}/lectures/regularization.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/Regularization-Example.ipynb)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends]({{ site.baseurl }}/lectures/Wk2-Lecture4.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/CrossVal-Example.ipynb)
-- 📖: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Jan 26th at 11:59 pm (submit through Bruin Learn!)
 
 ### Week 3, Jan 22 – 26
@@ -46,9 +45,7 @@ layout: page
   - 📺: [Pre-recorded versions of lectures from 2020](https://www.youtube.com/playlist?list=PLIo39hxQkqRbqu-wwSNQ_v7BjlyTw3eUw)
 - Lecture 12: Midterm exam
 - Lab: Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c), due Feb 22th at 11:59 pm (on Bruin Learn)
-- [Final project proposals due Feb 16th at 11:59 pm](https://bruinlearn.ucla.edu/courses/176183/assignments/1510658)
-- Link for setting up final project repositories
-  - Be sure to make your repository as a group!
+- Final project proposals due Feb 16th at 11:59 pm
 
 ### Week 7, Feb 19 – 23
 
@@ -74,5 +71,4 @@ layout: page
 - Lecture 20: Selected project presentations
 - Lab: Project presentations
 - Final Project, due March 21st at 11:59 pm
-  - Please submit your code through the project Github repository, and your final report on Bruin Learn.
   - The link for setting up this repository is up in week 6.

@@ -1,15 +1,7 @@
 ---
 title: Gaussian Mixture Models
-author: Aaron Meyer
+author: Aaron Meyer (based on slides from David Sontag)
 ---
-
-# Outline
-
-- Administrative Issues
-- Gaussian mixtures
-- Implementation
-
-**Based on slides from David Sontag.**
 
 # The Evils of “Hard Assignments”?
 
@@ -291,6 +283,7 @@ Can you make a mixture model of Gamma distributions? Poisson?
 
 - [`sklearn.mixture.GaussianMixture`](https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html#sklearn.mixture.GaussianMixture)
 - [Python Data Science Handbook: GMMs](https://jakevdp.github.io/PythonDataScienceHandbook/05.12-gaussian-mixtures.html)
+- [Understanding Gaussians](https://gestalt.ink/gaussians)
 
 ## Review Questions
 

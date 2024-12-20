@@ -1,23 +1,7 @@
 ---
 title: Dynamical models
-author: Aaron Meyer
+author: Aaron Meyer (partly adapted from slides by Bruce Tidor)
 ---
-
-
-# Outline
-
-- Administrative Issues
-- Review ODE models
-	- Some common constructions
-- Classic analysis:
-	- Stability analysis
-	- Pseudo-steady-state
-- Implementation:
-	- Numerical integration
-	- Stiff systems
-	- Matrix exponentials
-
-**Slides partly adapted from those by Bruce Tidor.**
 
 # Ordinary Differential Equations
 

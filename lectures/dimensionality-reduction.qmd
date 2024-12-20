@@ -3,14 +3,6 @@ title: "Dimensionality Reduction: PCA and NMF"
 author: Aaron Meyer
 ---
 
-# Outline
-
-- Administrative Issues
-- Decomposition methods
-	- Factor analysis
-	- Principal components analysis
-	- Non-negative matrix factorization
-
 ## Reading & Resources
 
 - 📓: [Example Notebook](https://aarmey.github.io/ml-for-bioe/public/examples/PCA-NNMF.ipynb)

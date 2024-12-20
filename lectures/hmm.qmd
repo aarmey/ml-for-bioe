@@ -3,13 +3,6 @@ title: Hidden Markov Models
 author: Aaron Meyer
 ---
 
-# Outline
-
-- Administrative Issues
-- Review
-- Hidden Markov Models
-- Applications
-
 **Based on slides from Aarti Singh.**
 
 # Sequential Data

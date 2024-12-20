@@ -16,7 +16,7 @@ layout: page
 
 - [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/regression.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/OLS-Example.ipynb)
-- [Lecture 3: Fitting & Regression Redux, Regularization](/lectures/Wk2-Lecture3.html)
+- [Lecture 3: Fitting & Regression Redux, Regularization](/lectures/regularization.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/Regularization-Example.ipynb)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Oct 10 at 11:59 pm
   - Repository link
@@ -25,7 +25,6 @@ layout: page
 
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends]({{ site.baseurl }}/lectures/model-validation.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/CrossVal-Example.ipynb)
-- Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 5: Reproducible computational workflows]({{ site.baseurl }}/lectures/reproducibility.html)
 - Lab: Implementation of [Stone et al.](https://doi.org/10.1016/j.cels.2018.05.018), due Oct 17 at 11:59 pm
   - Repository link
@@ -55,14 +54,13 @@ layout: page
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/K-Means.ipynb)
 - Lab: Implementation of [Perelson et al.](https://www.science.org/doi/10.1126/science.271.5255.1582), due Nov 28 at 11:59 pm
   - Repository link
-- [Final project proposals due Nov 7 at 11:59 pm](https://bruinlearn.ucla.edu/courses/139668/assignments/1247677?module_item_id=5340857)
+- Final project proposals due Nov 7 at 11:59 pm
   - Link to set up final project repository
     - Be sure to add any team members.
 
 ### Week 7, Nov 11 – 15
 
 - [Lecture 14: Gaussian Mixture Models]({{ site.baseurl }}/lectures/gmms.html)
-  - [Understanding Gaussians](https://gestalt.ink/gaussians)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/Gaussian-Mixtures.ipynb)
 - [Lecture 15: Support vector machines]({{ site.baseurl }}/lectures/svms.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/SVMs-example.ipynb)
