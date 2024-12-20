@@ -30,8 +30,12 @@ The proposal should be one page in length and explain the following:
 
 Your final report should be less than 1500 words and describe the following items:
 
-- Introduction/Motivation: Why the topic you choose is interesting, and whether similar work has been done by others (novelty will not affect your grade, but it is always good to know if other people are doing the same thing)
-- Problem definition: How to formulate your topic/question into a data analytics problem, and how does it relate to a broader challenge engineering a biological system
+- Introduction/Motivation:
+    - Why the topic you choose is interesting
+    - Whether similar work has been done by others (novelty will not affect your grade, but it is always good to know if other people are doing the same thing)
+- Problem definition
+    - How to formulate your topic/question into a data analytics problem
+    - How does it relate to a broader biomedical challenge
 - Methods
     - Description of the algorithm you employed or designed
     - The software package you chose or your own implementation of the algorithm
@@ -42,7 +46,7 @@ Your final report should be less than 1500 words and describe the following item
     - Charting and/or visualization of your results
     - How your proposed approach has solved your question
 
-Accompanying your final report should be a git repository of your analysis.
+Your analysis code should accompany your final report.
 
 ## Final Presentation
 

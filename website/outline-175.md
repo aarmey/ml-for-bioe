@@ -1,5 +1,5 @@
 ---
-title: Course outline
+title: Course outline - BE 175
 layout: page
 ---
 
