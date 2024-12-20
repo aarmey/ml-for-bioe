@@ -200,7 +200,7 @@ Questions:
 
 # Reading & Resources
 
-- 📖: [Bayesian Data Analysis](https://www.stat.columbia.edu/~gelman/books/)
+- 📖: [Bayesian Data Analysis](https://stat.columbia.edu/~gelman/books/)
 - 📖: [Probabilistic Programming & Bayesian Methods for Hackers](https://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
 - 📺: [Bayes theorem, the geometry of changing beliefs](https://www.youtube.com/watch?v=HZGCoVF3YvM)
 - 📺: [The medical test paradox, and redesigning Bayes' rule](https://www.youtube.com/watch?v=lG4VkPoG3ko)
