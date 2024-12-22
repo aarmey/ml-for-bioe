@@ -20,6 +20,7 @@ In this project, you have two options for the general route you can take:
 1. Reimplement analysis from the literature.
 2. New, exploratory analysis of existing data.
 
+
 More details in final project guidelines.
 
 ## Project Proposals
@@ -58,7 +59,7 @@ The key factor is how one defines the problem—i.e. how the distribution is des
 
 ## Any Fitting Is Dependent On The Correctness Of The Model
 
-![ ](./figs/lec2/garbage.svg)
+![ ](./figs/regression/garbage.svg){fig-alt="A chart showing a spurious correlation between two random measurements over time."}
 
 Fitting does not happen in a vacuum!
 
@@ -205,7 +206,7 @@ What are some downsides?
 
 ## Application: Paternal *de novo* mutations
 
-![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./figs/lec2/decode0.webp)
+![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./figs/regression/meiosis.svg){fig-alt="Schematic of cells undergoing meiosis."}
 
 ::: notes
 What is different about paternal vs. maternal meiosis?
@@ -213,11 +214,11 @@ What is different about paternal vs. maternal meiosis?
 
 ## Application: Paternal *de novo* mutations
 
-![Kong *et al*, *Nature*, 2012](./figs/lec2/decode1.jpg)
+![Kong *et al*, *Nature*, 2012](./figs/regression/decode1.jpg){fig-alt="Figure from Kong et al showing the family tree of several sample collections."}
 
 ## Application: Paternal *de novo* mutations
 
-![Kong *et al*, *Nature*, 2012](./figs/lec2/decode2.jpg)
+![Kong *et al*, *Nature*, 2012](./figs/regression/decode2.jpg){fig-alt="Figure from Kong et al showing a significant correlation between father age and number of de novo mutations."}
 
 ## Implementation
 
@@ -244,7 +245,8 @@ from matplotlib import pyplot as plt
 lr = LinearRegression()
 data = load_diabetes()
 
-lr.fit(data.data, data.target) # X, y
+y = data.target
+lr.fit(data.data, y) # X, y
 
 predicted = lr.predict(data.data)
 
@@ -257,7 +259,7 @@ ax.set_ylabel('Predicted')
 
 ## Implementation
 
-![ ](./figs/lec2/olsplot.png)
+![ ](./figs/regression/olsplot.svg)
 
 ## Non-Linear Least Squares
 
@@ -322,7 +324,7 @@ $$ {\frac {\partial S}{\partial \beta_j}}=2\sum_i r_i{\frac {\partial r_i}{\part
 
 ## Non-Linear Least Squares
 
-### Algorithms - Key Takaways
+### Algorithms - Key Takeaways
 
 - Unlike ordinary least squares, no guarantee about finding the optimal solution.
 - Depending upon the data and model, there may be many local minima.
@@ -348,7 +350,7 @@ plt.xlabel('Concentration [nM]')
 plt.ylabel('Binding')
 ~~~
 
-![ ](./figs/lec2/bindingdata.png){ width=70% }
+![ ](./figs/regression/bindingdata.png){ width=70% }
 
 ## NNLSQ Example - Binding Data
 
@@ -367,7 +369,7 @@ plt.xlabel('Concentration [nM]')
 plt.ylabel('Binding')
 ~~~
 
-![ ](./figs/lec2/bindingpred.png){ width=70% }
+![ ](./figs/regression/bindingpred.png){ width=70% }
 
 ## NNLSQ Example - Binding Data
 

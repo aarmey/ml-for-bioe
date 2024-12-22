@@ -14,7 +14,7 @@ layout: page
 
 ### Week 1, Sept 30 – Oct 4
 
-- [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/Wk1-Lecture2.html)
+- [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/regression.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/OLS-Example.ipynb)
 - [Lecture 3: Fitting & Regression Redux, Regularization](/lectures/Wk2-Lecture3.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/Regularization-Example.ipynb)
