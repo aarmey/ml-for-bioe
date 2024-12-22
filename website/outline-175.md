@@ -6,7 +6,7 @@ layout: page
 ### Week 1, Jan 8 – 12
 
 - [Lecture 1: Statistics review]({{ site.baseurl }}/lectures/Wk1-Lecture1.html)
-- [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/Wk1-Lecture2.html)
+- [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/regression.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/OLS-Example.ipynb)
 - Lab: Programming and Git Primer, due Jan 18th at 11:59 pm
   - Recommended: Git & Github Fundamentals Tutorial
