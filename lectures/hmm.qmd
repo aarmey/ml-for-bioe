@@ -11,7 +11,6 @@ author: Aaron Meyer (based on notes from Aarti Singh)
 	- Then our measurements are co-dependent
 	- Assumption of independence often gives nonsensical results
 
-
 # Markov Models
 
 - Joint Distribution
