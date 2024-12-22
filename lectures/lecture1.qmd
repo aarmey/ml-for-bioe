@@ -467,3 +467,13 @@ What does this mean when it comes to hypothesis testing?
 - 📖: [Understanding Moments](https://gregorygundersen.com/blog/2020/04/11/moments/)
 - 📖: [Computer Age Statistical Inference, Chapters 1 and 2](https://hastie.su.domains/CASI/order.html)
 - 💾: [`scipy.stats`](https://docs.scipy.org/doc/scipy/reference/stats.html)
+
+## Review Questions
+
+1. What are 4 reasons to build a model?
+2. $$p(x) = a/x$$ for $$1 < x < 10$$ describes a distribution pdf. What is a? What is the average of this distribution?
+3. What are the three kinds of variables? Give an example of each.
+4. You are interested in the sample distribution of the mean for an exponential distribution (N=8). What can you say about it relative to the original one?
+5. What can you say about the sample distribution for the N=1 case?
+6. Studying an anti-tumor compound, you create 2 tumors in either flank (i.e. 1 mouse gets 2 tumors) of 5 mice, then treat the animals with a compound, measuring tumor growth. What is N? Justify your answer.
+7. You want to model a process where each successive outcome is 1/3 as likely (i.e. getting 3 is 1/3 as likely as getting 2). What is the expression for this distribution?
