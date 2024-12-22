@@ -3,14 +3,6 @@ title: Reproducible Computational Workflows
 author: Aaron Meyer
 ---
 
-# Outline
-
-- Administrative Issues
-- Testing
-	- Unit testing
-	- Integration testing
-- Example
-
 # Bugs and Testing
 
 - **software reliability**: Probability that a software system will not cause failure under specified conditions.

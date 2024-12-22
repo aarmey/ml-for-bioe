@@ -1,18 +1,7 @@
 ---
 title: "Fitting & Regression Redux, Regularization"
-author: Aaron Meyer
+author: Aaron Meyer (based on slides from Rob Tibshirani)
 ---
-
-# Outline
-
-- Administrative Issues
-- Fitting Regularization
-	- Lasso
-	- Ridge regression
-	- Elastic net
-- Some Examples
-
-**Based on slides from Rob Tibshirani.**
 
 # The Bias-Variance Tradeoff
 

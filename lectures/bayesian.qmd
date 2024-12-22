@@ -1,15 +1,7 @@
 ---
 title: Bayesian vs. frequentist approaches
-author: Aaron Meyer
+author: Aaron Meyer (based on slides from Joyce Ho)
 ---
-
-# Outline
-
-- Administrative Issues
-- Bayesian Statistics
-- A Couple Examples
-
-**Based on slides from Joyce Ho.**
 
 # Frequentist versus Bayesian
 

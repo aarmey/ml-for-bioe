@@ -1,15 +1,7 @@
 ---
 title: Gaussian Mixture Models
-author: Aaron Meyer
+author: Aaron Meyer (based on slides from David Sontag)
 ---
-
-# Outline
-
-- Administrative Issues
-- Gaussian mixtures
-- Implementation
-
-**Based on slides from David Sontag.**
 
 # The Evils of “Hard Assignments”?
 

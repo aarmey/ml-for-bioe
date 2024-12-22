@@ -1,22 +1,12 @@
 ---
 title: Partial Least Squares Regression
-author: Aaron Meyer
+author: Aaron Meyer (based on slides from Pam Kreeger)
 ---
-
-# Outline
-
-- Administrative Issues
-- Principal Components Regression
-- Partial Least Squares Regression
-- Some Examples
-- Implementation
 
 ::: notes
 - Explain unsupervised/supervised.
 - Can you bootstrap a PLSR/PCR/PCA model?
 :::
-
-**Adapted from slides by Pam Kreeger.**
 
 # Common Challenge: Cue/Signal/Response Relationships
 

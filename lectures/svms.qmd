@@ -1,19 +1,7 @@
 ---
 title: Support Vector Machines
-author: Aaron Meyer
+author: Aaron Meyer (adapted from slides by Martin Law)
 ---
-
-# Outline
-
-- Administrative Issues
-- Support Vector Machines
-	- Linear separable
-	- Nonlinear separable
-	- Soft margin adjustment
-- Application
-- Implementation
-
-**Adapted from slides by Martin Law.**
 
 # History Of SVM
 

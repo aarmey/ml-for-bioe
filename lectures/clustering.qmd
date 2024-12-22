@@ -1,18 +1,7 @@
 ---
 title: Clustering
-author: Aaron Meyer
+author: Aaron Meyer (based on slides from David Sontag)
 ---
-
-# Outline
-
-- Administrative Issues
-- Clustering
-	- K-Means
-	- Agglomerative
-- Clustering examples
-- Implementation
-
-**Slides adapted from David Sontag.**
 
 # Clustering
 

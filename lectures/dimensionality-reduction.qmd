@@ -3,14 +3,6 @@ title: "Dimensionality Reduction: PCA and NMF"
 author: Aaron Meyer
 ---
 
-# Outline
-
-- Administrative Issues
-- Decomposition methods
-	- Factor analysis
-	- Principal components analysis
-	- Non-negative matrix factorization
-
 # Dealing with many variables
 
 - So far we've largely concentrated on cases in which we have relatively large numbers of measurements for a few variables

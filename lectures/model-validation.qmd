@@ -3,14 +3,6 @@ title: Does my model work? Crossvalidation, bootstrap, and friends.
 author: Aaron Meyer
 ---
 
-# Outline
-
-- Administrative Issues
-- Model Evaluation
-	- Crossvalidation
-	- Bootstrap
-- Example: Cancer survival gene signatures
-
 # Cross-validation and the bootstrap
 
 - In the section we discuss two *resampling* methods: cross-validation and the bootstrap.
