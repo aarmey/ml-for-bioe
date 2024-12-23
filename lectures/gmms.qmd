@@ -217,37 +217,9 @@ Especially useful when the E and M steps have closed form solutions!!!
 
 ![ ](./figs/lec14/gm28.pdf)
 
-# Gaussian Mixture Example: Start
+# Gaussian Mixture Example: Animation of Fitting
 
-![ ](./figs/lec14/gm29.pdf)
-
-# After First Iteration
-
-![ ](./figs/lec14/gm30.pdf)
-
-# After 2nd Iteration
-
-![ ](./figs/lec14/gm31.pdf)
-
-# After 3rd iteration
-
-![ ](./figs/lec14/gm32.pdf)
-
-# After 4th iteration
-
-![ ](./figs/lec14/gm33.pdf)
-
-# After 5th iteration
-
-![ ](./figs/lec14/gm34.pdf)
-
-# After 6th iteration
-
-![ ](./figs/lec14/gm35.pdf)
-
-# After 20th iteration
-
-![ ](./figs/lec14/gm36.pdf)
+![ ](./figs/lec14/animation.gif)
 
 # What if we do hard assignments?
 

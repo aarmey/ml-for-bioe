@@ -31,12 +31,12 @@ jobs:
       run: bundle exec jekyll build -s website -d website/_site
     - name: Cache HTMLProofer
       id: cache-htmlproofer
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: tmp/.htmlproofer
         key: ${{ runner.os }}-htmlproofer
     - name: Proof HTML
-      run: bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --checks "Links, Scripts" --check-internal-hash=false --ignore_status_codes "412, 503, 403, 406" website/_site
+      run: bundle exec htmlproofer --ignore_urls "/ml-for-bioe/" --checks "Links, Scripts" --no-check-internal-hash --ignore_status_codes "412, 503, 403, 406" website/_site
       # Eventually fix alt tagging
     - name: Upload lecture notes
       uses: actions/upload-artifact@v4
