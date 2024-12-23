@@ -132,8 +132,9 @@ Go over circle inside circle with transformation to polar coordinates.
 
 # Transforming The Data
 
-![ ](./figs/svms/transdata.png)
+![ ](./figs/svms/transdata.svg)
 
+- Note that feature space is usually of higher dimensions in practice
 - Computation in the feature space can be costly because it is high dimensional
 	- The feature space is typically infinite-dimensional!
 - The kernel trick comes to rescue
@@ -265,15 +266,30 @@ Go over how to pick an appropriate kernel, and floppiness.
 
 # Application - Circulating Tumor Cells
 
-![ ](./figs/svms/dicarlo-title.png)
+![ ](./figs/svms/dicarlo-title.webp)
 
-# CTCs Are A Useful Resource for Cancer Analysis
+## Capture of circulating tumor cells enables assessment of patient metastatic state and chemotherapeutic response
 
-![ ](./figs/svms/ctcs.jpg)
+:::: {.columns}
+
+::: {.column width="50%"}
+- Found in the blood of metastatic cancer patients
+- Approximately 1 CTC per billion blood cells
+- CTs have great clinical value
+	- Liquid biopsy
+	- Genetic information
+	- Prognostic
+:::
+
+::: {.column width="50%"}
+![Circulating tumor cells. Created by Fabi Fuu 76, Wikimedia Commons.](./figs/svms/ctcs.webp)
+:::
+
+::::
 
 # Application - Separating CTCs From Other Blood Cells
 
-![ ](./figs/svms/dicarlo-fig1.png)
+![ ](./figs/svms/dicarlo-fig1.webp)
 
 # Application - Separating CTCs From Other Blood Cells
 
