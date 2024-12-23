@@ -16,7 +16,7 @@ layout: page
 
 - [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/regression.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/OLS-Example.ipynb)
-- [Lecture 3: Fitting & Regression Redux, Regularization](/lectures/Wk2-Lecture3.html)
+- [Lecture 3: Fitting & Regression Redux, Regularization](/lectures/regularization.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/Regularization-Example.ipynb)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Oct 10 at 11:59 pm
   - Repository link

@@ -15,7 +15,7 @@ layout: page
 
 ### Week 2, Jan 15 – 19
 
-- [Lecture 3: Fitting & Regression Redux, Regularization]({{ site.baseurl }}/lectures/Wk2-Lecture3.html)
+- [Lecture 3: Fitting & Regression Redux, Regularization]({{ site.baseurl }}/lectures/regularization.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/Regularization-Example.ipynb)
 - [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends]({{ site.baseurl }}/lectures/Wk2-Lecture4.html)
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/CrossVal-Example.ipynb)
