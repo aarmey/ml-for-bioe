@@ -22,7 +22,7 @@ author: Aaron Meyer (based on notes from Aarti Singh)
 	- $\prod_{i=1}^{n} p(X_n \mid X_{n-1}, \ldots , X_{n-m})$
 		- Current observation only depends on past m observations
 
-::: notes
+::: {.notes}
 Joint distribution makes no assumptions. "Memory" will often be just m = 1.
 :::
 
@@ -61,7 +61,7 @@ Observation space: $O_t \in \{y_1, \ldots, y_k \}$
 
 Hidden states: $S_t \in \{1, \ldots, I\}$
 
-::: notes
+::: {.notes}
 Emmissions are *on top of* the markov chain. If we could directly see the state of the chain, we wouldn't need a model in the first place!
 :::
 
@@ -113,7 +113,7 @@ Questions:
 - How biased is the loaded die? How fair is the fair die? How often does the casino player change from fair to loaded and back?
 	- This is the **learning** question in HMMs
 
-::: notes
+::: {.notes}
 Outcome of evaluation is a likelihood. Of decoding, hidden states. Of learning, parameters.
 :::
 

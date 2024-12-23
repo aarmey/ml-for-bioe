@@ -9,9 +9,9 @@ author: Aaron Meyer (based on slides from David Sontag)
 - Some clusters may be “wider” than others
 - Distances can be deceiving!
 
-![ ](./figs/lec14/gm2.pdf){height=60%}
+![ ](./figs/lec14/gm2.svg)
 
-::: notes
+::: {.notes}
 If we know which points are in each cluster, the answer is easy! (mu, sigma)
 :::
 
@@ -43,7 +43,7 @@ Each data point is sampled from a **generative process**:
 1. Choose component i with probability $P(y=i)$
 2. Generate datapoint $N(m_i, \Sigma_i)$
 
-![ ](./figs/lec14/gm4.pdf){width=50%}
+![ ](./figs/lec14/gm4.pdf)
 
 # What Model Should We Use?
 
@@ -110,7 +110,7 @@ Combine simple models into a complex model:
 
 ![ ](./figs/lec14/gm13.pdf)
 
-::: notes
+::: {.notes}
 $p(x\; is\; k) = \frac{\pi_k N(x|\mu_k, \Sigma_k)}{\sum_{k=1}^{N}}$
 :::
 
@@ -229,7 +229,7 @@ Especially useful when the E and M steps have closed form solutions!!!
 
 Equivalent to k-means clustering algorithm!!!
 
-::: notes
+::: {.notes}
 Can you make a mixture model of Gamma distributions? Poisson?
 :::
 

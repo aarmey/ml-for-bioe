@@ -21,7 +21,7 @@ author: Aaron Meyer (based on slides from David Sontag)
 
 ![ ](./figs/lec13/clust1.png)
 
-::: notes
+::: {.notes}
 Go over what is the data input and output (discrete).
 :::
 
@@ -128,7 +128,7 @@ Assign data points to closest cluster center
 
 ![ ](./figs/lec13/k2.png){ width=50% }
 
-::: notes
+::: {.notes}
 Critical step is right here. How do we pick what is close? Which is closer?
 :::
 
@@ -140,7 +140,7 @@ Change the cluster center to the average of the assigned points
 
 ![ ](./figs/lec13/k3.png){ width=50% }
 
-::: notes
+::: {.notes}
 - Can be slow for very large numbers of data points.
 - Can use stochastic sampling in some cases.
 :::
@@ -234,7 +234,7 @@ Local optima dependent on how the problem was specified:
 
 ![ ](./figs/lec13/circle.png)
 
-::: notes
+::: {.notes}
 - Go over number of clusters.
 - Show example data.
 - What would within-cluster distance look like in the ideal case?
@@ -244,7 +244,7 @@ Local optima dependent on how the problem was specified:
 
 ![ ](./figs/lec13/circletrans.png)
 
-::: notes
+::: {.notes}
 - This is the kernel method.
 - Will use again with SVMs!
 :::
@@ -335,7 +335,7 @@ How should we define “closest” for clusters with multiple elements?
 
 ![ ](./figs/lec13/BCclusters.pdf)
 
-::: notes
+::: {.notes}
 - We use clusters because they (hopefully) translate to meaningful differences.
 - What if you cluster based on different measurements?
 :::

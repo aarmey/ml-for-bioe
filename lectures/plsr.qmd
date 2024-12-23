@@ -3,7 +3,7 @@ title: Partial Least Squares Regression
 author: Aaron Meyer (based on slides from Pam Kreeger)
 ---
 
-::: notes
+::: {.notes}
 - Explain unsupervised/supervised.
 - Can you bootstrap a PLSR/PCR/PCA model?
 :::
@@ -12,7 +12,7 @@ author: Aaron Meyer (based on slides from Pam Kreeger)
 
 ![ ](./figs/plsr/CSR-figure.pdf)
 
-::: notes
+::: {.notes}
 - Number of components enough to make PCA/lasso useful
 - But how do we deal with components moving together?
 - And what we care about is some outcome
@@ -31,7 +31,7 @@ From the variation we can see that:
 
 If we can find a quantitative correlation between the input and output, we can predict new outcomes for measurements we haven't yet seen.
 
-::: notes
+::: {.notes}
 Draw out correlation and then include new point.
 :::
 
@@ -93,7 +93,7 @@ First step: **Simply apply PCA!**
 
 Dimensionality goes from $m$ to $N_{comp}$.
 
-::: notes
+::: {.notes}
 - What are the bounds on the number of components we can have?
 - What might be a concern as a consequence of this? (How do we determine how many components to keep?)
 :::
@@ -107,7 +107,7 @@ $$X = TP^T + E$$
 
 $$Y = TB + E$$
 
-::: notes
+::: {.notes}
 - What is the residual against here?
 - How do we invert the direction of the regression?
 :::
@@ -116,7 +116,7 @@ $$Y = TB + E$$
 
 **How might we determine the number of components using our prediction?**
 
-::: notes
+::: {.notes}
 - Cross-validation with varying numbers of components
 - Metrics like AIC or BIC
 :::
@@ -133,7 +133,7 @@ $$Y = TB + E$$
 
 ![ ](./figs/plsr/PC-5.pdf)
 
-::: notes
+::: {.notes}
 - Go over definition of covariance.
 - cov(X, X) = var(X)
 - var(Y) = cov(X, Y) + variance in Y independent of X
@@ -145,7 +145,7 @@ $$Y = TB + E$$
 
 ![ ](./figs/plsr/PC-6.pdf)
 
-::: notes
+::: {.notes}
 - $B$ is $T (P^T T)^{-1} Q^T$
 - $P^T T$ is the approximation of $X$
 - PLSR components are not orthogonal in data space, but are orthogonal in O-PLS.
@@ -163,7 +163,7 @@ $$Y = TB + E$$
 
 ![ ](./figs/plsr/PC-9.pdf)
 
-::: notes
+::: {.notes}
 Go over each.
 :::
 

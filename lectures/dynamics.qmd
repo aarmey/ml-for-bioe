@@ -25,7 +25,7 @@ $$ L_D + R_f \leftrightarrow R_b $$
 
 If we want to know about how these species interact, we can model their behavior with the rate equations that describe this process.
 
-::: notes
+::: {.notes}
 - $\frac{dL_f}{dt} = -k_1 L_f^2 + k_{-1}L_D$
 - $\frac{dL_D}{dt} = k_1 L_f^2 - k_2 L_D R_f + k_{-2} R_b$
 - $\frac{dR_b}{dt} = k_2 L_D R_f - k_{-2} R_b$
@@ -37,7 +37,7 @@ If we want to know about how these species interact, we can model their behavior
 
 ![ ](./figs/lec9/twoComp.pdf)
 
-::: notes
+::: {.notes}
 - Copy to board
 - What does each compartment represent?
 :::
@@ -71,7 +71,7 @@ If we want to know about how these species interact, we can model their behavior
 		- Concentration in central compartment at $t=0$ is D μg/mL
 - No chemical reactions in the compartment
 
-::: notes
+::: {.notes}
 Work out equations above. Going to learn a mathematical trick to solve!
 :::
 
@@ -79,7 +79,7 @@ Work out equations above. Going to learn a mathematical trick to solve!
 
 #### Lotka-Volterra Equations
 
-::: notes
+::: {.notes}
 - maybe come back to these at the end
 - $\dot{x} = \alpha x - \beta x y$
 - $\dot{y} = \delta x y - \gamma y$
@@ -124,7 +124,7 @@ Reality often requires handling in between:
 	- NNLSQ can solve for points
 	- Only simulating system ensures they are accessible
 
-::: notes
+::: {.notes}
 Walk through 1D case of stability.
 :::
 
@@ -139,7 +139,7 @@ Walk through 1D case of stability.
 
 ![ ](./figs/lec9/nonlin-2a.pdf)
 
-::: notes
+::: {.notes}
 - Note how linear systems come to a solution
 - Combined with above relationship, this means we can solve linear systems as a special case
 :::
@@ -157,7 +157,7 @@ Non-linear systems
 
 ![ ](./figs/lec9/nonlin-3a.pdf)
 
-::: notes
+::: {.notes}
 - Fixed Points (A, B, C). Steady states
 - Closed Orbits (D). Periodic solutions
 - Flow patterns in trajectory (A and C are similar to each other, different from B)
@@ -270,7 +270,7 @@ Biochemical version of a bistable switch:
 
 ![ ](./figs/lec9/nonlin-12.pdf)
 
-::: notes
+::: {.notes}
 - How could we compare this to data?
 - Measure steady-state
 - Start at points and see bifurcation
@@ -284,7 +284,7 @@ Biochemical version of a bistable switch:
 	- Changes upon parameter adjustment
 - Good to test these before and after integration
 
-::: notes
+::: {.notes}
 Go through example of mass balance at deriv and solution.
 :::
 

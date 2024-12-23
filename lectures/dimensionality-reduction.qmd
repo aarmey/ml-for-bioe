@@ -43,7 +43,7 @@ $$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^{T} $$
 
 where $\mathbf{W}$ is $N\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N$.
 
-::: notes
+::: {.notes}
 What is the implicit assumption here?
 :::
 
@@ -59,7 +59,7 @@ $$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^{T} $$
 
 where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N$.
 
-::: notes
+::: {.notes}
 - Reduced R simplifies the model substantially
 - Also decreases fidelity of reconstruction
 - Trade-off always
@@ -83,7 +83,7 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 
 ![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/lec7/cat-46comp.jpg){width=80%}
 
-::: notes
+::: {.notes}
 - There is always information lost
 - We just hope for it to be information that doesn't matter
 :::
@@ -122,7 +122,7 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 
 BOARD
 
-::: notes
+::: {.notes}
 - Go through example
 - Mention normalization
 - Construct scores and loadings plot
@@ -150,7 +150,7 @@ BOARD
 	- `PCA.components_` provides the "loadings matrix", or directions of maximum variance
 	- `PCA.explained_variance_` provides the amount of variance explained by each component
 
-::: notes
+::: {.notes}
 Go over explained variance.
 :::
 
@@ -243,7 +243,7 @@ BOARD
 
 ![Alexandrov et al, Cell Rep, 2013](./figs/lec7/sigB.jpg)
 
-::: notes
+::: {.notes}
 - Also used in interpreting medical health records
 :::
 

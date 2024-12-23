@@ -1,0 +1,13 @@
+/*-- scss:mixins --*/
+
+div.notes {
+  border: solid;
+  padding: 0.5em;
+  background-color: white;
+  border-color: red;
+}
+
+div.notes::before {
+  content: "Notes";
+  font-weight: bold;
+}

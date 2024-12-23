@@ -63,7 +63,7 @@ By the end of the course you will learn how to:
 3. Implement a number of different modeling methods to answer specific questions.
 4. Critically assess modeling results.
 
-::: notes
+::: {.notes}
 Notice I don't say deriving a proof or writing some software package.
 :::
 
@@ -119,7 +119,7 @@ Notice I don't say deriving a proof or writing some software package.
 
 If you do these three things, you will do well.
 
-::: notes
+::: {.notes}
 - Extensive changes this year, so I am interested in your feedback
 - If you aren't famiilar with a term, guaranteed we should review
 :::
@@ -137,7 +137,7 @@ If you do these three things, you will do well.
 - Models (inference)
 - Algorithms
 
-::: notes
+::: {.notes}
 Distinguish each of these.
 :::
 
@@ -149,7 +149,7 @@ What we will cover spans a range of fields:
 - Computational techniques (the algorithms)
 - Statistics (the model)
 
-::: notes
+::: {.notes}
 - Makes this material challenging.
 - Also rewarding, frontier of methods.
 - Stop and talk about why statistics can be hard.
@@ -161,7 +161,7 @@ What we will cover spans a range of fields:
 
 FILL IN
 
-::: notes
+::: {.notes}
 - It may not be feasible for humans to learn on the scale / in the time alloted.
 - Model construction serves as goal posts. I.e. a well-specified target we can compare, share, etc.
 - For many tasks, machine learning can perform better than a human would.
@@ -221,7 +221,7 @@ FILL IN
 
 ## Probability
 
-::: notes
+::: {.notes}
 - Probability indicates the chance of an event within a wider set of outcomes
 - Also talk about if something is conditionally dependent/independent
 - What is integral?
@@ -237,7 +237,7 @@ Two possibilities:
 - Fair coin (heads 50%, tails 50%)
 - Biased (heads 60%, tails 40%)
 
-::: notes
+::: {.notes}
 - Run through example.
 - What is the data here?
 - What is the model?
@@ -249,7 +249,7 @@ Two possibilities:
 
 We've already been talking about these! Distributions describe the range of probabilities that exist for all possible outcomes.
 
-::: notes
+::: {.notes}
 - Can a distribution be categorical? Ordinal? Numerical?
 :::
 
@@ -267,7 +267,7 @@ Joint probability
 Complementary event
 ~ The probability of an event not occuring.
 
-::: notes
+::: {.notes}
 - Plot out a joint probability
 - Also talk about if something is conditionally dependent/independent
 :::
@@ -296,7 +296,7 @@ Area between:
 
 You can normalize any normal distribution to the standard normal.
 
-::: notes
+::: {.notes}
 - Walk through the equations for normal distribution.
 - Walk through process of Z-scoring.
 :::
@@ -381,7 +381,7 @@ For example:
 - $H_0$: A particular set of points come from a normal distribution with mean $\mu$ and variance $\sigma$.
 - $H_0$: Two sets of observations were sampled from distributions with different means.
 
-::: notes
+::: {.notes}
 - Go over this, drawing out distributions.
 - Go over one sided, two sided tests.
 :::
@@ -415,7 +415,7 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 
 ![ ](./figs/lec1/ks.jpg)
 
-::: notes
+::: {.notes}
 No t-distribution available here.
 :::
 

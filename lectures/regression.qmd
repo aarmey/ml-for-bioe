@@ -57,7 +57,7 @@ The key factor is how one defines the problem—i.e. how the distribution is des
 
 Fitting does not happen in a vacuum!
 
-::: notes
+::: {.notes}
 Walk through model, what the model is, etc.
 :::
 
@@ -87,7 +87,7 @@ $\mathbf{\epsilon}$ is usually handled to be uncorrelated random components with
 
 $$ \mathbf{\epsilon} \sim \left( \mathbf{0}, \sigma^2 \mathbf{I} \right) $$
 
-::: notes
+::: {.notes}
 Graph this
 :::
 
@@ -103,7 +103,7 @@ would be:
 
 $$ \mathbf{y} = m_1 \mathbf{x_1} + m_2 \mathbf{x_2} \ldots + b + \mathbf{\epsilon} $$
 
-::: notes
+::: {.notes}
 - Go through why you would need to transform the data
 - Write out on the board how this corresponds to shifted distributions
 :::
@@ -136,7 +136,7 @@ where
 
 $$ \mathbf{S} = \mathbf{X}'\mathbf{X} $$ <!-- Eq 7.33 -->
 
-::: notes
+::: {.notes}
 Prove this?
 :::
 
@@ -160,7 +160,7 @@ $$ \sum_{i=1}^{n} (y_{i}-x_{i} \beta)^{2} $$
 
 *Exactly how we calculate $\beta$!*
 
-::: notes
+::: {.notes}
 Go through where this arises from.
 :::
 
@@ -168,7 +168,7 @@ Go through where this arises from.
 
 What might be some advantages of a method such as this?
 
-::: notes
+::: {.notes}
 - Only has p parameters.
 - Can be directly calculated from data (without optimization procedure. Fit and uncertainty can be directly calculated.)
 - Fast
@@ -186,7 +186,7 @@ What are the implications of these assumptions not holding?
 
 What are some downsides?
 
-::: notes
+::: {.notes}
 - Very sensitive to outliers.
 - Fails for p > n.
 :::
@@ -202,7 +202,7 @@ What are some downsides?
 
 ![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./figs/regression/meiosis.svg){fig-alt="Schematic of cells undergoing meiosis."}
 
-::: notes
+::: {.notes}
 What is different about paternal vs. maternal meiosis?
 :::
 
@@ -279,7 +279,7 @@ This is now considered **bad practice**.
 
 **Why?**
 
-::: notes
+::: {.notes}
 - Distorts error term.
 - But made it easier to calculate.
 :::
@@ -431,7 +431,7 @@ sp.optimize.least_squares(ls_obj_k1, 1., args=(X,Y))
 - Given the binding data presented here, do you think a least squares model is most appropriate?
 - How might you test whether your data fits the model you've specified?
 
-::: notes
+::: {.notes}
 Talking about Chi-Squared test in point 3.
 :::
 

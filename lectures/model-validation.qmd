@@ -21,7 +21,7 @@ author: Aaron Meyer
 
 ![ ](./figs/lec4/sfd-5.pdf)
 
-::: notes
+::: {.notes}
 Walk through this in detail.
 :::
 
@@ -31,7 +31,7 @@ Walk through this in detail.
 - Some methods make a *mathematical adjustment* to the training error rate to estimate the test error rate. These include the *Cp statistic*, *AIC* and *BIC*.
 - Here we instead consider a class of methods that estimate the test error by *holding out* a subset of the training observations from the fitting process, and then applying the statistical learning method to those held out observations
 
-::: notes
+::: {.notes}
 - What happens when the first bullet is true?
 - PE = FE
 - $PE = \sigma^2 + Bias^2 + Var$
@@ -43,7 +43,7 @@ Walk through this in detail.
 - The model is fit on the training set, and the fitted model is used to predict the responses for the observations in the validation set.
 - The resulting validation-set error provides an **estimate** of the test error. This is typically assessed using MSE in the case of a quantitative response and misclassification rate in the case of a qualitative (discrete) response.
 
-::: notes
+::: {.notes}
 Move to board. Setup example with students up front. Predict height from arm length?
 :::
 
@@ -53,7 +53,7 @@ Move to board. Setup example with students up front. Predict height from arm len
 
 A random splitting into two halves: left part is training set, right part is validation set
 
-::: notes
+::: {.notes}
 First just leaving one set out.
 :::
 
@@ -139,7 +139,7 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 
 ![ ](./figs/lec4/sfd-32.pdf)
 
-::: notes
+::: {.notes}
 - Go through the hospital example.
 - Cross-validation within/between.
 :::
@@ -149,7 +149,7 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 - The *bootstrap* is a flexible and powerful statistical tool that can be used to quantify the uncertainty associated with a given estimator or statistical learning method.
 - For example, it can provide an estimate of the standard error of a coefficient, or a confidence interval for that coefficient.
 
-::: notes
+::: {.notes}
 Talk about imagining pulling data out from the data universe.
 :::
 
@@ -191,7 +191,7 @@ A graphical illustration of the bootstrap approach on a small sample containing 
 - For example, if the data is a time series, we can’t simply sample the observations with replacement (*why not?*).
 - We can instead create blocks of consecutive observations, and sample those with replacements. Then we paste together sampled blocks to obtain a bootstrap dataset.
 
-::: notes
+::: {.notes}
 Go over example of color blindness with replacement by gender.
 :::
 
@@ -209,7 +209,7 @@ Go over example of color blindness with replacement by gender.
 - This will cause the bootstrap to seriously underestimate the true prediction error. *Why?*
 - The other way around—with original sample = training sample, bootstrap dataset = validation sample—is worse!
 
-::: notes
+::: {.notes}
 For example, we can just find exactly matching data points.
 :::
 
@@ -224,7 +224,7 @@ For example, we can just find exactly matching data points.
 - Permutation methods sample from an estimated *null* distribution for the data, and use this to estimate p-values and False Discovery Rates for hypothesis tests.
 - The bootstrap can be used to test a null hypothesis in simple situations. For example, if $\theta = 0$ is the null hypothesis, we check whether the confidence interval for $\theta$ contains zero.
 
-::: notes
+::: {.notes}
 Go through dataset randomization.
 :::
 
@@ -264,7 +264,7 @@ Go through dataset randomization.
 - `cv`: int, cross-validation generator or an iterable, optional
 - `n_jobs`: integer, optional
 
-::: notes
+::: {.notes}
 Go through a notebook here.
 :::
 

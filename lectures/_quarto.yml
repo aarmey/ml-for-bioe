@@ -6,6 +6,7 @@ format-links: false
 format:
   html: 
     embed-resources: true
+    theme: [default, notes.scss]
   revealjs:
     theme: [default, clean.scss]
     menu:

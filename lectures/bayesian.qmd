@@ -33,7 +33,7 @@ $$P(B\cap A) = P(A\cap B)$$
 $$\Rightarrow P(A\cap B)=P(A\mid B)\,P(B)=P(B\mid A)\,P(A)$$
 $$\Rightarrow P(A\mid B)={\frac {P(B\mid A)\,P(A)}{P(B)}},\;\text{if}\; P(B)\neq 0$$
 
-::: notes
+::: {.notes}
 - Older than frequentist statistics
 - Presbyterian minister Thomas Bayes 1701-1761
 - Left unpublished
@@ -56,7 +56,7 @@ $$L(\theta; D) = P(D\mid\theta) = \sum_m P(x_m \mid\theta)$$
 - Example: Likelihood for the sequence: H, T, T, H, H
 $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$$
 
-![ ](./figs/lec5/ho5.pdf){width=40%}
+![ ](./figs/lec5/ho5.svg)
 
 # Maximum Likelihood Estimate (MLE)
 
@@ -72,7 +72,7 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 	- How certain are you that the true parameter value is 0.7?
 	- Were there enough samples for you to be certain?
 
-::: notes
+::: {.notes}
 Can look at sampling distribution of parameter.
 :::
 
@@ -107,7 +107,7 @@ Can look at sampling distribution of parameter.
 	- **If** prior is well-behaved (i.e., does not assign 0 density to any “feasible” parameter value)
 	- **Then** both the MLE and Bayesian predictions converge to the same value as the training data becomes infinitely large
 
-::: notes
+::: {.notes}
 Only gives same answer if our prior distribution is the same as the posterior.
 :::
 
