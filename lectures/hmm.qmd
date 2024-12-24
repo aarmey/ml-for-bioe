@@ -30,7 +30,7 @@ Joint distribution makes no assumptions. "Memory" will often be just m = 1.
 
 #### Markov Assumption
 
-![ ](./figs/lec10/2.pdf){width=80%}
+![ ](./figs/hmm/2.pdf){width=80%}
 
 # Markov Models
 
@@ -55,7 +55,7 @@ The number of parameters in a stationary model with K-ary variables
 
 Distributions that characterize sequential data with few parameters but are not limited by strong Markov assumptions.
 
-![ ](./figs/lec10/4.pdf){width=60%}
+![ ](./figs/hmm/4.svg)
 
 Observation space: $O_t \in \{y_1, \ldots, y_k \}$
 
@@ -68,7 +68,7 @@ Emmissions are *on top of* the markov chain. If we could directly see the state 
 
 # Hidden Markov Models
 
-![ ](./figs/lec10/4.pdf){width=60%}
+![ ](./figs/hmm/4.svg)
 
 $$p(S_1,\ldots,S_T,O_1,\ldots,O_T) = \prod_{t=1}^T p(O_t\mid S_t)\prod_{t=1}^T p(S_t\mid S_{t-1})$$
 
@@ -85,7 +85,7 @@ Parameters for stationary/homogeneous Markov model
 - Transition probabilities: $p(S_t = j \mid S_{t-1} = i) = p_{ij}$
 - Emission probabilities: $p(O_t = y \mid S_t = i) = q_i^y$
 
-![ ](./figs/lec10/6.pdf){width=40%}
+![ ](./figs/hmm/6.pdf)
 
 # HMM Example
 
@@ -119,13 +119,13 @@ Outcome of evaluation is a likelihood. Of decoding, hidden states. Of learning, 
 
 # HMM Example
 
-![ ](./figs/lec10/9.pdf)
+![ ](./figs/hmm/9.pdf)
 
 # State Space Representation
 
 Switch between **F** and **L** once every 20 turns (1/20 = 0.05)
 
-![ ](./figs/lec10/10.pdf)
+![ ](./figs/hmm/10.pdf)
 
 # Three main problems in HMMs
 
@@ -150,11 +150,11 @@ Switch between **F** and **L** once every 20 turns (1/20 = 0.05)
 
 Given HMM parameters $p(S_1), p(S_t\mid S_{t-1}), p(O_t\mid S_t)$ & observation sequence $\{O_t\}_{t=1}^T$
 
-![ ](./figs/lec10/13.pdf)
+![ ](./figs/hmm/13.pdf)
 
 # Forward Probability
 
-![ ](./figs/lec10/14.pdf)
+![ ](./figs/hmm/14.pdf)
 
 # Forward Algorithm
 
@@ -166,11 +166,11 @@ Can compute $\alpha_t^k$ for all $k$, $t$ using dynamic programming:
 
 # Decoding Problem 1
 
-![ ](./figs/lec10/16.pdf)
+![ ](./figs/hmm/16.pdf)
 
 # Backward Probability
 
-![ ](./figs/lec10/17.pdf)
+![ ](./figs/hmm/17.pdf)
 
 # Backward Algorithm
 
@@ -194,17 +194,17 @@ observed sequence?
 
 # Decoding Problem 2
 
-![ ](./figs/lec10/20.pdf)
+![ ](./figs/hmm/20.pdf)
 
 # Viterbi Decoding
 
-![ ](./figs/lec10/21.pdf)
+![ ](./figs/hmm/21.pdf)
 
 # Viterbi Algorithm
 
 Can compute $V_t^k\;\;\forall k, t$ using dynamic programming:
 
-![ ](./figs/lec10/22.pdf)
+![ ](./figs/hmm/22.pdf)
 
 # Computational complexity
 
@@ -233,13 +233,13 @@ $O(K^2T)$ linear in T instead of $O(K^T)$ exponential in T!
 
 # Baum-Welch (EM) Algorithm
 
-![ ](./figs/lec10/25.pdf)
+![ ](./figs/hmm/25.pdf)
 
 # Baum-Welch (EM) Algorithm
 
 - Start with random initialization of parameters
 
-![ ](./figs/lec10/26.pdf)
+![ ](./figs/hmm/26.pdf)
 
 # Some connections
 
@@ -247,7 +247,7 @@ $O(K^2T)$ linear in T instead of $O(K^T)$ exponential in T!
 	- $p(O_t) = \sum_{S_t} p(O_t \mid S_t) p(S_t)$
 - Choice of mixture component depends on choice of components for previous observations
 
-![ ](./figs/lec10/27.pdf)
+![ ](./figs/hmm/27.pdf)
 
 # Connections to Other Models
 
@@ -275,27 +275,27 @@ $O(K^2T)$ linear in T instead of $O(K^T)$ exponential in T!
 
 # Example: Cancer Stem Cells
 
-![ ](./figs/lec10/gupta1.pdf)
+![ ](./figs/hmm/gupta1.pdf)
 
 # Example: Cancer Stem Cells
 
-![ ](./figs/lec10/gupta3.pdf)
+![ ](./figs/hmm/gupta3.pdf)
 
 # Example: Cancer Stem Cells
 
-![ ](./figs/lec10/gupta4.pdf)
+![ ](./figs/hmm/gupta4.pdf)
 
 # Example: Cancer Stem Cells
 
-![ ](./figs/lec10/gupta5.pdf)
+![ ](./figs/hmm/gupta5.pdf)
 
 # Example: Cancer Stem Cells
 
-![ ](./figs/lec10/gupta6.pdf)
+![ ](./figs/hmm/gupta6.webp)
 
 # Example 2: Sequence Prediction
 
-![AXL prediction](./figs/lec10/AXL-THMM.pdf){width=90%}
+![AXL prediction](./figs/hmm/AXL-THMM.svg)
 
 # Implementation
 
