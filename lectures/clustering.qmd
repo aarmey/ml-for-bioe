@@ -19,7 +19,8 @@ author: Aaron Meyer (based on slides from David Sontag)
 - Basic idea: group together similar instances
 - Example: 2D point patterns
 
-![ ](./figs/lec13/clust1.png)
+![ ](./figs/clustering/clust1.png){fig-alt="Groups of points, circled to be placed within two clusters."}
+
 
 ::: {.notes}
 Go over what is the data input and output (discrete).
@@ -30,14 +31,14 @@ Go over what is the data input and output (discrete).
 - Basic idea: group together similar instances
 - Example: 2D point patterns
 
-![ ](./figs/lec13/clust2.png)
+![ ](./figs/clustering/clust2.png)
 
 # Clustering
 
 - Basic idea: group together similar instances
 - Example: 2D point patterns
 
-![ ](./figs/lec13/clust3.png)
+![ ](./figs/clustering/clust3.png)
 
 # What could "similar" mean?
 
@@ -51,7 +52,7 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 
 - Symmetric
 	- $D(A, B) = D(B, A)$
-	- Otherwise we can say A looks like B but not vice-versa
+	- Otherwise we can say A looks like B but not vice versa
 - Positivity and self-similarity
 	- $D(A,B) > 0$, and $D(A,B)=0$ iff $A=B$
 	- Otherwise there will be objects that we can't tell apart
@@ -68,13 +69,13 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 	- K-means
 	- Gaussian mixtures
 
-- Heirarchical algorithms
+- Hierarchical algorithms
 	- Bottom up - agglomerative
 	- Top down - divisive
 ::::
 
 :::: column
-![ ](./figs/lec13/simpsons.png)
+![ ](./figs/clustering/simpsons.webp){fig-alt="Characters from the Simpsons, clustered according to partitioning or agglomerative clustering."}
 ::::
 
 :::
@@ -86,12 +87,12 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 :::: column
 - Initialize: Pick K random points as cluster centers
 - Alternate until no assignments change:
-	1. Assign data points to closest cluster center
+	1. Assign data points to the closest cluster center
 	2. Change the cluster center to the average of its assigned points
 ::::
 
 :::: column
-![ ](./figs/lec13/kmeans1.png)
+![ ](./figs/clustering/kmeans1.png)
 ::::
 
 :::
@@ -103,12 +104,12 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 :::: column
 - Initialize: Pick K random points as cluster centers
 - Alternate until no assignments change:
-	1. Assign data points to closest cluster center
+	1. Assign data points to the closest cluster center
 	2. Change the cluster center to the average of its assigned points
 ::::
 
 :::: column
-![ ](./figs/lec13/kmeans2.png)
+![ ](./figs/clustering/kmeans2.png)
 ::::
 
 :::
@@ -118,15 +119,15 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 - Pick K random points as cluster centers (means)
 	- Shown here for K=2
 
-![ ](./figs/lec13/k1.png){ width=50% }
+![ ](./figs/clustering/k1.png)
 
 # K-means clustering: Example
 
 ## Iterative Step 1
 
-Assign data points to closest cluster center
+Assign data points to the closest cluster center
 
-![ ](./figs/lec13/k2.png){ width=50% }
+![ ](./figs/clustering/k2.png)
 
 ::: {.notes}
 Critical step is right here. How do we pick what is close? Which is closer?
@@ -138,7 +139,7 @@ Critical step is right here. How do we pick what is close? Which is closer?
 
 Change the cluster center to the average of the assigned points
 
-![ ](./figs/lec13/k3.png){ width=50% }
+![ ](./figs/clustering/k3.png)
 
 ::: {.notes}
 - Can be slow for very large numbers of data points.
@@ -149,50 +150,50 @@ Change the cluster center to the average of the assigned points
 
 Repeat until convergence
 
-![ ](./figs/lec13/k4.png){ width=50% }
+![ ](./figs/clustering/k4.png)
 
 # K-means clustering: Example
 
-![ ](./figs/lec13/k5.png){ width=50% }
+![ ](./figs/clustering/k5.png)
 
 # K-means clustering: Example
 
-![ ](./figs/lec13/k6.png){ width=50% }
+![ ](./figs/clustering/k6.png)
 
 
 # Another Example
 
-![Step 1](./figs/lec13/slides2-1.pdf)
+![Step 1](./figs/clustering/slides2-1.pdf)
 
 # Another Example
 
-![Step 2](./figs/lec13/slides2-2.pdf)
+![Step 2](./figs/clustering/slides2-2.pdf)
 
 # Another Example
 
-![Step 3](./figs/lec13/slides2-3.pdf)
+![Step 3](./figs/clustering/slides2-3.pdf)
 
 # Another Example
 
-![Step 4](./figs/lec13/slides2-4.pdf)
+![Step 4](./figs/clustering/slides2-4.pdf)
 
 # Another Example
 
-![Step 5](./figs/lec13/slides2-5.pdf)
+![Step 5](./figs/clustering/slides2-5.pdf)
 
 # Another Example
 
-![Step 6](./figs/lec13/slides2-6.pdf)
+![Step 6](./figs/clustering/slides2-6.pdf)
 
 # Another Example
 
-![Step 7](./figs/lec13/slides2-7.pdf)
+![Step 7](./figs/clustering/slides2-7.pdf)
 
 # Properties of K-means algorithm
 
 - Guaranteed to converge in a finite number of iterations
 - Running time per iteration:
-	1. Assign data points to closest cluster center:
+	1. Assign data points to the closest cluster center:
 		- **O(KN) time**
 	2. Change the cluster center to the average of its assigned points:
 		- **O(N) time**
@@ -220,7 +221,7 @@ K-means algorithm is a heuristic:
 - **Various schemes for preventing this kind of thing:** variance-based split / merge, initialization heuristics
 ::::
 
-![ ](./figs/lec13/init.png){ width=40% }
+![ ](./figs/clustering/init.png)
 
 :::
 
@@ -228,11 +229,11 @@ K-means algorithm is a heuristic:
 
 Local optima dependent on how the problem was specified:
 
-![ ](./figs/lec13/localopt.png)
+![ ](./figs/clustering/localopt.png)
 
 # K-means not able to properly cluster
 
-![ ](./figs/lec13/circle.png)
+![ ](./figs/clustering/circle.png)
 
 ::: {.notes}
 - Go over number of clusters.
@@ -242,7 +243,7 @@ Local optima dependent on how the problem was specified:
 
 # Changing the features (distance function) can help
 
-![ ](./figs/lec13/circletrans.png)
+![ ](./figs/clustering/circletrans.png)
 
 ::: {.notes}
 - This is the kernel method.
@@ -268,7 +269,7 @@ Local optima dependent on how the problem was specified:
 ::::
 
 :::: {.column width=40%}
-![ ](./figs/lec13/agg1.png){ width=100% }
+![ ](./figs/clustering/agg1.png)
 ::::
 
 :::
@@ -277,7 +278,7 @@ Local optima dependent on how the problem was specified:
 
 How should we define “closest” for clusters with multiple elements?
 
-![ ](./figs/lec13/agg2.png){ width=50% }
+![ ](./figs/clustering/agg2.png)
 
 # Agglomerative Clustering
 
@@ -288,7 +289,7 @@ How should we define “closest” for clusters with multiple elements?
 	- Average of all pairs
 - Different choices create different clustering behaviors
 
-![ ](./figs/lec13/agg3.png){ width=40% }
+![ ](./figs/clustering/agg3.png)
 
 # Agglomerative Clustering
 
@@ -299,11 +300,11 @@ How should we define “closest” for clusters with multiple elements?
 	- Average of all pairs
 - Different choices create different clustering behaviors
 
-![ ](./figs/lec13/agglo.png){ width=90% }
+![ ](./figs/clustering/agglo.png)
 
 # Clustering Behavior
 
-![Mouse tumor data from Hastie et al.](./figs/lec13/clustbeh.png)
+![Mouse tumor data from Hastie et al.](./figs/clustering/clustbeh.png)
 
 # Agglomerative Clustering Questions
 
@@ -319,70 +320,54 @@ How should we define “closest” for clusters with multiple elements?
 - Some clusters may be “wider” than others
 - Distances can be deceiving!
 
-![ ](./figs/lec13/olap.pdf){ height=60% }
+![ ](./figs/clustering/olap.svg)
 
 # Applications
 
-- Clustering patients into groups based on molecular or eitiological measurements
+- Clustering patients into groups based on molecular or etiological measurements
 - Cells into groups based on molecular measurements
 - Neuronal signals 
 
 # Clustering Patients
 
-![ ](./figs/lec13/BCclustersTitle.pdf)
+![ ](./figs/clustering/BCclustersTitle.pdf)
 
 # Clustering Patients
 
-![ ](./figs/lec13/BCclusters.pdf)
+![ ](./figs/clustering/BCclusters.pdf)
 
 ::: {.notes}
 - We use clusters because they (hopefully) translate to meaningful differences.
 - What if you cluster based on different measurements?
 :::
 
-# Clustering molecular signals
+# Review
 
-![ ](./figs/lec13/kristenTitle.pdf)
-
-# Clustering molecular signals
-
-![ ](./figs/lec13/KristenMethods.pdf)
-
-# Clustering molecular signals
-
-![ ](./figs/lec13/KristenClustClust.pdf)
-
-# Clustering molecular signals
-
-![ ](./figs/lec13/kristen-clusters.pdf)
+![ ](./figs/clustering/review-title.pdf)
 
 # Review
 
-![ ](./figs/lec13/review-title.pdf)
+![ ](./figs/clustering/review-fig1.pdf)
 
 # Review
 
-![ ](./figs/lec13/review-fig1.pdf)
+![ ](./figs/clustering/review-fig2.pdf)
 
 # Review
 
-![ ](./figs/lec13/review-fig2.pdf)
+![ ](./figs/clustering/review-fig3.pdf)
 
 # Review
 
-![ ](./figs/lec13/review-fig3.pdf)
+![ ](./figs/clustering/review-fig4.pdf)
 
 # Review
 
-![ ](./figs/lec13/review-fig4.pdf)
+![ ](./figs/clustering/review-fig5.pdf)
 
 # Review
 
-![ ](./figs/lec13/review-fig5.pdf)
-
-# Review
-
-![ ](./figs/lec13/review-fig6.pdf)
+![ ](./figs/clustering/review-fig6.pdf)
 
 # Implementation
 
@@ -420,17 +405,16 @@ labels = est.labels_
 
 ax.scatter(X[:, 3], X[:, 0], X[:, 2],
            c=labels.astype(np.float), edgecolor='k')
-
 # ...
 ```
 
 # Implementation - K-means
 
-![ ](./figs/lec13/iris1.png){ width=70% }
+![ ](./figs/clustering/iris1.png)
 
 # Implementation - K-means
 
-![ ](./figs/lec13/iris2.png){ width=70% }
+![ ](./figs/clustering/iris2.png)
 
 # Further Reading
 
