@@ -9,7 +9,7 @@ notes:
 slides:
 	quarto render lectures --output-dir=../website/lectures/ --to revealjs
 
-.PHONY: all clean slides test-htmlproofer
+.PHONY: all clean slides
 
 # clean up everything
 clean:
