@@ -1,0 +1,8 @@
+baseURL = 'https://aarmey.github.io/ml-for-bioe/'
+languageCode = 'en-us'
+title = 'Bioengr 175/275'
+
+theme = "hyde"
+
+[params]
+  description = "Machine learning & data-driven modeling in bioengineering"
