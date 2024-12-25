@@ -7,13 +7,13 @@ notes:
 	quarto render lectures --output-dir=../notes/ --to html
 
 slides:
-	quarto render lectures --output-dir=../website/lectures/ --to revealjs
+	quarto render lectures --output-dir=../site/lectures/ --to revealjs
 
 .PHONY: all clean slides test-htmlproofer
 
 # clean up everything
 clean:
-	rm -rf notes website/lectures
+	rm -rf notes site/lectures
 
 .DEFAULT_GOAL := all
 
@@ -25,7 +25,7 @@ HTML_PROOFER_ARGS += --checks=Links,Scripts
 HTML_PROOFER_ARGS += --no-check-internal-hash
 HTML_PROOFER_ARGS += --ignore_status_codes "412, 503, 403, 406"
 HTML_PROOFER_ARGS += --cache='{"timeframe":{"external":"2w"}}'
-HTML_PROOFER_ARGS += website/_site
+HTML_PROOFER_ARGS += site/_site
 
 test-htmlproofer:
 	@echo "Checking HTML with HTMLProofer..."

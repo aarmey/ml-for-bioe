@@ -22,11 +22,6 @@ jobs:
         version: 1.6.39
     - name: Build slides and handouts
       run: make slides && make notes
-    - name: Install ruby & jekyll
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.3'
-        bundler-cache: true
     - name: Build jekyll
       run: bundle exec jekyll build -s website -d website/_site
     - name: Cache HTMLProofer
