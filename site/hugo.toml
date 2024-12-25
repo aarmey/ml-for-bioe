@@ -4,5 +4,16 @@ title = 'Bioengr 175/275'
 
 theme = "hyde"
 
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[Menus]
+  main = [
+      {Name = "Example midterms", URL = "example-midterms/"},
+      {Name = "Final Project Guidelines", URL = "final-project/"},
+      {Name = "Course outline - BE 175", URL = "outline-175/"},
+      {Name = "Course outline - BE 275", URL = "outline-275/"},
+      {Name = "Packages / Resources", URL = "packages/"},
+  ]
+
 [params]
   description = "Machine learning & data-driven modeling in bioengineering"

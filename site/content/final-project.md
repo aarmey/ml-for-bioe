@@ -1,6 +1,5 @@
 ---
-title: Final Project Guidelines
-layout: page
+title: 'Final Project Guidelines'
 ---
 
 ## Choosing A Topic

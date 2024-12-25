@@ -1,7 +1,6 @@
----
-title: Example midterms
-layout: page
----
++++
+title = 'Example midterms'
++++
 
 ## BE 175
 

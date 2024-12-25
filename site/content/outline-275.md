@@ -1,12 +1,10 @@
 ---
-title: Course outline - BE 275
-layout: page
+title: "Course outline - BE 275"
 ---
 
 ### Week 0, Sept 23 – 27
 
 - [Lecture 1: Statistics review](lectures/lecture1.html) (pre-recorded)
-
 - Lab: Programming and Git Primer, due Oct 3 at 11:59 pm
   - Repository link
   - 👂: [Linear Digressions: Jupyter Notebooks, A Data Scientist's Best Friend](https://lineardigressions.com/episodes/2017/8/20/jupyter-notebooks-a-data-scientists-best-friend)

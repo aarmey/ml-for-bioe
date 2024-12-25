@@ -1,6 +1,5 @@
 ---
-title: Course outline - BE 175
-layout: page
+title: "Course outline - BE 175"
 ---
 
 ### Week 1, Jan 8 – 12
