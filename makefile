@@ -16,9 +16,3 @@ clean:
 	rm -rf notes website/lectures
 
 .DEFAULT_GOAL := all
-
-
-# HTMLProofer
-HTML_PROOFER ?= bundle exec htmlproofer
-HTML_PROOFER_ARGS += --no-check-internal-hash
-HTML_PROOFER_ARGS += --ignore_status_codes "412, 503, 403, 406"
