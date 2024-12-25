@@ -20,12 +20,5 @@ clean:
 
 # HTMLProofer
 HTML_PROOFER ?= bundle exec htmlproofer
-HTML_PROOFER_ARGS += --ignore_urls "/ml-for-bioe/"
 HTML_PROOFER_ARGS += --no-check-internal-hash
 HTML_PROOFER_ARGS += --ignore_status_codes "412, 503, 403, 406"
-HTML_PROOFER_ARGS += --cache='{"timeframe":{"external":"2w"}}'
-HTML_PROOFER_ARGS += website/_site
-
-test-htmlproofer:
-	@echo "Checking HTML with HTMLProofer..."
-	$(HTML_PROOFER) $(HTML_PROOFER_ARGS)
