@@ -5,7 +5,7 @@ layout: page
 
 ### Week 0, Sept 23 – 27
 
-- [Lecture 1: Statistics review]({{ site.baseurl }}/lectures/lecture1.html) (pre-recorded)
+- [Lecture 1: Statistics review](lectures/lecture1.html) (pre-recorded)
 
 - Lab: Programming and Git Primer, due Oct 3 at 11:59 pm
   - Repository link
@@ -14,10 +14,10 @@ layout: page
 
 ### Week 1, Sept 30 – Oct 4
 
-- [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/regression.html)
-  - [Example Notebook]({{ site.baseurl }}/lectures/examples/OLS-Example.ipynb)
-- [Lecture 3: Fitting & Regression Redux, Regularization](/lectures/regularization.html)
-  - [Example Notebook]({{ site.baseurl }}/lectures/examples/Regularization-Example.ipynb)
+- [Lecture 2: Fitting & Regression](lectures/regression.html)
+  - [Example Notebook](public/examples/OLS-Example.ipynb)
+- [Lecture 3: Fitting & Regression Redux, Regularization](lectures/regularization.html)
+  - [Example Notebook](public/examples/Regularization-Example.ipynb)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Oct 10 at 11:59 pm
   - Repository link
 
@@ -58,7 +58,7 @@ layout: page
   - [Example Notebook]({{ site.baseurl }}/lectures/examples/K-Means.ipynb)
 - Lab: Implementation of [Perelson et al.](https://www.science.org/doi/10.1126/science.271.5255.1582), due Nov 28 at 11:59 pm
   - Repository link
-- [Final project proposals due Nov 7 at 11:59 pm](https://bruinlearn.ucla.edu/courses/139668/assignments/1247677?module_item_id=5340857)
+- Final project proposals due Nov 7 at 11:59 pm
   - Link to set up final project repository
     - Be sure to add any team members.
 

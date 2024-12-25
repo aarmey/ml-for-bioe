@@ -5,9 +5,9 @@ layout: page
 
 ### Week 1, Jan 8 – 12
 
-- [Lecture 1: Statistics review]({{ site.baseurl }}/lectures/Wk1-Lecture1.html)
-- [Lecture 2: Fitting & Regression]({{ site.baseurl }}/lectures/regression.html)
-  - [Example Notebook]({{ site.baseurl }}/lectures/examples/OLS-Example.ipynb)
+- [Lecture 1: Statistics review](lectures/Wk1-Lecture1.html)
+- [Lecture 2: Fitting & Regression](lectures/regression.html)
+  - [Example Notebook](lectures/examples/OLS-Example.ipynb)
 - Lab: Programming and Git Primer, due Jan 18th at 11:59 pm
   - Recommended: Git & Github Fundamentals Tutorial
   - 👂: [Linear Digressions: Jupyter Notebooks, A Data Scientist's Best Friend](https://lineardigressions.com/episodes/2017/8/20/jupyter-notebooks-a-data-scientists-best-friend)
