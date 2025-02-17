@@ -131,7 +131,7 @@ If you do these three things, you will do well.
 - What is a measurement?
 - What is a model?
 
-# Three things we need to learn about the world
+## Three things we need to learn about the world
 
 - Measurements (data)
 - Models (inference)
@@ -141,7 +141,7 @@ If you do these three things, you will do well.
 Distinguish each of these.
 :::
 
-# Area of Focus
+## Area of Focus
 
 What we will cover spans a range of fields:
 
@@ -157,7 +157,7 @@ What we will cover spans a range of fields:
 - Two, it has both a mathematical and philosophical element.
 :::
 
-# Why do we need these things to learn about the world?
+## Why do we need these things to learn about the world?
 
 FILL IN
 
@@ -167,19 +167,19 @@ FILL IN
 - For many tasks, machine learning can perform better than a human would.
 :::
 
-# Why we need models - Can a biologist fix a radio?
+## Why we need models - Can a biologist fix a radio?
 
 ![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz1.jpg)
 
-# Why we need models - Can a biologist fix a radio?
+## Why we need models - Can a biologist fix a radio?
 
 ![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz2.jpg)
 
-# Why we need models - Can a biologist fix a radio?
+## Why we need models - Can a biologist fix a radio?
 
 ![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz3.png)
 
-# Comparisons
+## Comparisons
 
 - Multiscale nature
 	- Biology operates on many scales
