@@ -4,8 +4,8 @@ title: "Course outline - BE 175"
 
 ### Week 1, Jan 8 – 12
 
-- [Lecture 1: Statistics review](lectures/Wk1-Lecture1.html)
-- [Lecture 2: Fitting & Regression](lectures/regression.html)
+- [Lecture 1: Statistics review](lectures/lecture1.html)
+- [Lecture 2: Bayesian vs. frequentist approaches](lectures/bayesian.html) (pre-recorded)
   - [Example Notebook](lectures/examples/OLS-Example.ipynb)
 - Lab: Programming and Git Primer, due Jan 18th at 11:59 pm
   - Recommended: Git & Github Fundamentals Tutorial
