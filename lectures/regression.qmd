@@ -53,7 +53,7 @@ The key factor is how one defines the problem—i.e. how the distribution is des
 
 ## Any Fitting Is Dependent On The Correctness Of The Model
 
-![ ](./figs/regression/garbage.svg){fig-alt="A chart showing a spurious correlation between two random measurements over time."}
+![ ](./figs/regression/garbage.svg){fig-alt="A chart showing a spurious correlation between two random measurements over time." width=2in}
 
 Fitting does not happen in a vacuum!
 
@@ -200,7 +200,7 @@ What are some downsides?
 
 ## Application: Paternal *de novo* mutations
 
-![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./figs/regression/meiosis.svg){fig-alt="Schematic of cells undergoing meiosis."}
+![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./figs/regression/meiosis.svg){fig-alt="Schematic of cells undergoing meiosis." width=2in}
 
 ::: {.notes}
 What is different about paternal vs. maternal meiosis?
@@ -208,11 +208,11 @@ What is different about paternal vs. maternal meiosis?
 
 ## Application: Paternal *de novo* mutations
 
-![Kong *et al*, *Nature*, 2012](./figs/regression/decode1.jpg){fig-alt="Figure from Kong et al showing the family tree of several sample collections."}
+![Kong *et al*, *Nature*, 2012](./figs/regression/decode1.jpg){fig-alt="Figure from Kong et al showing the family tree of several sample collections." width=2in}
 
 ## Application: Paternal *de novo* mutations
 
-![Kong *et al*, *Nature*, 2012](./figs/regression/decode2.jpg){fig-alt="Figure from Kong et al showing a significant correlation between father age and number of de novo mutations."}
+![Kong *et al*, *Nature*, 2012](./figs/regression/decode2.jpg){fig-alt="Figure from Kong et al showing a significant correlation between father age and number of de novo mutations." width=2in}
 
 ## Implementation
 
@@ -253,7 +253,7 @@ ax.set_ylabel('Predicted')
 
 ## Implementation
 
-![ ](./figs/regression/olsplot.svg){fig-alt="Plot of measured vs. predicted values of scikit-learn's diabetes dataset."}
+![ ](./figs/regression/olsplot.svg){fig-alt="Plot of measured vs. predicted values of scikit-learn's diabetes dataset." width=2in}
 
 # Non-Linear Least Squares
 
@@ -348,7 +348,7 @@ plt.xlabel('Concentration [nM]')
 plt.ylabel('Binding')
 ~~~
 
-![ ](./figs/regression/bindingdata.png)
+![ ](./figs/regression/bindingdata.png){width=2in}
 
 ## NNLS Example
 
@@ -371,7 +371,7 @@ plt.xlabel('Concentration [nM]')
 plt.ylabel('Binding')
 ~~~
 
-![ ](./figs/regression/bindingpred.png)
+![ ](./figs/regression/bindingpred.png){width=2in}
 
 ## NNLS Example
 
