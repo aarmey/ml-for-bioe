@@ -4,6 +4,13 @@ toc-depth: 1
 format-links: false
 
 format:
+  typst:
+    mainfont: "Helvetica"
+    fontsize: 9pt
+    margin:
+      left: 0.5in
+      right: 4in
+      y: 0.5in
   html: 
     embed-resources: true
     theme: [default, notes.scss]

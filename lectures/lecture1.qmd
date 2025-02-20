@@ -169,15 +169,15 @@ FILL IN
 
 ## Why we need models - Can a biologist fix a radio?
 
-![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz1.jpg)
+![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz1.jpg){width=2in}
 
 ## Why we need models - Can a biologist fix a radio?
 
-![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz2.jpg)
+![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz2.jpg){width=2in}
 
 ## Why we need models - Can a biologist fix a radio?
 
-![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz3.png)
+![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz3.png){width=2in}
 
 ## Comparisons
 
@@ -191,19 +191,19 @@ FILL IN
 
 ## Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig1.png){height=3in}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig1.png){width=2in}
 
 ## Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig2.png){height=3in}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig2.png){width=2in}
 
 ## Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig3.png){height=3in}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig3.png){width=2in}
 
 ## Machine learning can outperform a human for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig4.png){height=3in}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig4.png){width=2in}
 
 # Basic Concepts
 
@@ -280,7 +280,7 @@ Complementary event
 
 $$f(x)=\frac{1}{\sqrt{2\pi}}\; e^{-\frac{x^2}{2}}$$
 
-![ ](./figs/lec1/normal_pdf.png){width=60%}
+![ ](./figs/lec1/normal_pdf.png){width=2in}
 
 ## Normal Distributions
 
@@ -413,7 +413,7 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 - K-S test is most useful when the sample size is small
 - Geometric meaning of the test statistic:
 
-![ ](./figs/lec1/ks.jpg)
+![ ](./figs/lec1/ks.jpg){width=2in}
 
 ::: {.notes}
 No t-distribution available here.
@@ -471,7 +471,7 @@ What does this mean when it comes to hypothesis testing?
 ## Review Questions
 
 1. What are 4 reasons to build a model?
-2. $$p(x) = a/x$$ for $$1 < x < 10$$ describes a distribution pdf. What is a? What is the average of this distribution?
+2. $p(x) = a/x$ for $1 < x < 10$ describes a distribution pdf. What is a? What is the average of this distribution?
 3. What are the three kinds of variables? Give an example of each.
 4. You are interested in the sample distribution of the mean for an exponential distribution (N=8). What can you say about it relative to the original one?
 5. What can you say about the sample distribution for the N=1 case?
