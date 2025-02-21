@@ -3,21 +3,23 @@ title: "Introduction, statistics review"
 author: "Aaron Meyer"
 ---
 
-# Machine learning & data-driven modeling in bioengineering
+# Class overview
 
-## Lecture:
+## Machine learning & data-driven modeling in bioengineering
 
-- Tuesdays/Thursdays, 10–11:50 am
-- Boelter Hall 5249
+### Lecture:
 
-## Lab
+- Mondays/Wednesdays, 10–11:50 am
+- Mong Learning Center
+
+### Lab
 
 - Varies by section—check the course schedule.
 
 ## Lecture Slides
 
 - Lecture slides will be posted on the course website.
-- They will be finalized by the night before so you can print them out if you want.
+- Finalized by the night before so you can print them out if you want.
 - The slides are *not* everything, but will include space to fill out missing elements during class.
 
 ## Textbook / Other Course Materials
@@ -27,76 +29,73 @@ author: "Aaron Meyer"
 - These will either broaden the scope of material covered in class, or provide critical background.
 - I will make it clear if the material is more than optional.
 
-# Support / Office Hours
+## Support / Office Hours
 
-## Prof. Meyer
+### Prof. Meyer
 
 - Thursday, 1–1:55 pm in Eng V 4121G
-- I will usually also stick around after class and am happy to answer questions
+- I will usually stick around after class and am happy to answer questions
 
-## TAs
+### TAs
 
 - By appointment
 - Will have regular times setup soon
 
-## Other
+### Campuswire
 
-- Slack channels allow for quick help from both myself and the TAs
-- Please use public/shared channels if possible, so others can see the questions
+- Allows for quick help from me & the TAs
 
-# Learning Goals:
+## Learning Goals:
 
 By the end of the course you will have an increased understanding of:
 
-1. Critical Thinking and Analysis: Understand the process of identifying critical problems, analyzing current solutions, and determining alternative successful solutions.
-2. Engineering Design: Apply mathematical and scientific knowledge to identify, formulate, and solve problems in the chosen design area.
-3. Computational Modeling: Apply computational tools to solve and optimize engineering problems.
-4. Communicate Effectively: Learn how to give an effective presentation. Understand how to communicate progress orally and in written reports.
-5. Manage and Work in Teams: Learn to work and communicate effectively with peers to attain a common goal.
+1. _Critical Thinking and Analysis:_ Understand the process of identifying critical problems, analyzing current solutions, and determining alternative successful solutions.
+2. _Engineering Design:_ Apply mathematical and scientific knowledge to identify, formulate, and solve problems in the chosen design area.
+3. _Computational Modeling:_ Apply computational tools to solve and optimize engineering problems.
+4. _Communicate Effectively:_ Learn how to give an effective presentation. Understand how to communicate progress orally and in written reports.
+5. _Manage and Work in Teams:_ Learn to work and communicate effectively with peers to attain a common goal.
 
-# Practical Learning Objectives
+## Practical Learning Objectives
 
 By the end of the course you will learn how to:
 
-1. Identify a question that can or cannot be solved by a modeling approach.
-2. Determine the prerequisites to applying a modeling method.
-3. Implement a number of different modeling methods to answer specific questions.
-4. Critically assess modeling results.
+1. Identify whether and how a problem can be solved by machine learning.
+2. Determine the prerequisites to applying the method.
+3. Implement different techniques to solve the scientific/engineering task.
+4. Critically assess machine learning results.
 
 ::: {.notes}
 Notice I don't say deriving a proof or writing some software package.
 :::
 
-# Grade Breakdown
+## Grade Breakdown
 
-30%
+25%
 ~ Final Project
 
-20%
-~ Homework Assignments
+25%
+~ Lab Assignments.
 
-30%
-~ Midterm
+40%
+~ Midterms 1 & 2
 
 10%
 ~ Class Participation
 
-10%
-~ Lab Participation
-
 ## Labs
+
+### Sessions
 
 - These are mandatory sessions.
 - You will have an opportunity to get started on each week's implementation and/or work on your project.
 
-## Homework
+### Computational Labs
 
-- These will be a combination of a computational implementation and other problems.
-- Each will help reinforce the material and provide hands-on experience by implementing what we learn in class.
+- You will implement what we have learned using _real_ data from studies.
+- Reinforces the material with hands-on experience by implementing what we learn in class.
 - These are meant to challenge you to become comfortable applying the material.
-	- Document your effort
-	- Get started early
-	- Seek answers to your questions in office hours, in lab, or on Slack!
+	- Document your effort. Get started early. Seek answers to your questions in office hours, in lab, or on Campuswire!
+	- Your lowest grade will be automatically dropped.
 
 ## Project
 
@@ -108,13 +107,13 @@ Notice I don't say deriving a proof or writing some software package.
 
 ## Exams
 
-- We will have a midterm exam on week 6.
+- We will have midterm exams on week 6 and 10.
 - You will have a final project in lieu of a final exam.
 
 ## Keys to Success
 
 - Participate in an engaged manner with in-class and take-home activities.
-- Turn in assignments on time.
+- Turn assignments in on time.
 - Work through activities, reading, and problems to ensure your understanding of the material.
 
 If you do these three things, you will do well.
@@ -157,9 +156,7 @@ What we will cover spans a range of fields:
 - Two, it has both a mathematical and philosophical element.
 :::
 
-## Why do we need these things to learn about the world?
-
-FILL IN
+## Why do we need models to learn about the world?
 
 ::: {.notes}
 - It may not be feasible for humans to learn on the scale / in the time alloted.
@@ -184,28 +181,28 @@ FILL IN
 - Multiscale nature
 	- Biology operates on many scales
 	- Same is true for electronics
-	- BUT electronics employ compartmentalization/abstraction to make understandable
+	- **But** electronics employ compartmentalization/abstraction to make understandable
 - Component-wise understanding
 	- Only provides basic characterization
 	- Leads to "context-dependent" function
 
-## Machine learning can outperform a human for some tasks
+## Machine learning outperforms humans for some tasks
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig1.png){width=2in}
 
-## Machine learning can outperform a human for some tasks
+## Machine learning outperforms humans for some tasks
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig2.png){width=2in}
 
-## Machine learning can outperform a human for some tasks
+## Machine learning outperforms humans for some tasks
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig3.png){width=2in}
 
-## Machine learning can outperform a human for some tasks
+## Machine learning outperforms humans for some tasks
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig4.png){width=2in}
 
-# Basic Concepts
+# Basic Statistical Concepts
 
 ## Data
 
@@ -304,28 +301,22 @@ You can normalize any normal distribution to the standard normal.
 ## Other Distributions
 
 Normal Distribution
-~ Describes many naturally observed variables and has statistics mean and standard deviation
+~ Describes many naturally observed variables and has statistics mean and standard deviation.
 
 Exponential Distribution
-~ Describes the time between events in Poisson Processes
+~ Describes the time between events in Poisson processes.
 
 Poisson
-~ Stochastic process that counts events in some time frame
-
-Rayleigh
-~ Measure of vector magnitude when orthogonal directions are independent
+~ Stochastic process that counts events in some time frame.
 
 Gamma
-~ Used in Bayesian statistics, often for modeling waiting times
-
-Beta
-~ Random variables limited to intervals of finite length (e.g. Allele frequency in population genetics)
+~ Used in Bayesian statistics, often for modeling waiting times.
 
 Bernoulli
-~ From binary Bernoulli trial, like a coin flip, describes the probability of observing a single event on next flip
+~ Like a coin flip. Binary outcome.
 
 Binomial
-~ Extension of the bernoulli trial, describes the # of successes in a sequence of n-independent binary trials
+~ Describes the number of successes in a sequence of Bernoulli trials.
 
 Multinomial
 ~ Generalization of Binomial for more than two states.
@@ -334,19 +325,8 @@ Multinomial
 
 The moments of a distribution describe its shape: $$\mu_{n}=\int_{-\infty}^{\infty}(x-c)^{n}\,f(x)\,\mathrm{d} x$$
 
-First
-~ Mean
-
-Second
-~ Variance
-
-Third
-~ Skewness
-
-Fourth
-~ Kurtosis
-
-- Essential properties to determining how a set of data will behave during analysis
+- Mean ($n=1$), variance ($n=2$), skewness ($n=3$), kertosis ($n=4$)
+- Essential properties to determining how data will behave during analysis:
 	- How might your measurements need to change with changes in variance?
 	- What are these values for a normal distribution?
 
@@ -362,7 +342,7 @@ General properties of sampling distributions:
 
 1. The sampling distribution of a statistic often tends to be centered at the value of the population parameter estimated by the statistics
 2. The spread of the sampling distributions of many statistics *tends* to grow smaller as sample size $n$ increases
-3. As $n$ increases, sampling distributions tends towards normality. If a process has mean $\mu$ and standard deviation $\sigma$, them the sample mean = $\mu$ and the sample standard deviation = $\sigma / \sqrt{n}$
+3. As $n$ increases, sampling distributions tends towards normality. If a process has mean $\mu$ and standard deviation $\sigma$, them the sample mean ($\mu$) and the sample standard deviation ($\sigma / \sqrt{n}$)
 
 ## Sample statistics
 
@@ -370,7 +350,7 @@ General properties of sampling distributions:
 	- Sample standard deviation is the standard deviation of the mean.
 - When a population distribution is normal, the sampling distribution of the sample statistic is also normal, regardless of $n$.
 - And the central limit theorem states that the sampling distribution can be approximated by a normal distribution when the sample size, $n$, is sufficiently large.
-- Rule of thumb is that $n=30$ is sufficiently large, but there are times when smaller $n$ will suffice. Greater $n$ is required with higher skew.
+- Rule of thumb is that $n=30$ is sufficiently large, but there are times when smaller $n$ will suffice. Greater $n$ is required with higher **skew**.
 
 ## Hypothesis Testing
 
@@ -380,6 +360,8 @@ For example:
 
 - $H_0$: A particular set of points come from a normal distribution with mean $\mu$ and variance $\sigma$.
 - $H_0$: Two sets of observations were sampled from distributions with different means.
+
+When we do an experiment, we typically take a **sampling** of several observations, to be more certain of the result.
 
 ::: {.notes}
 - Go over this, drawing out distributions.
@@ -397,8 +379,8 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 ## Effect size
 
 - The scalar factor scales the t-value
-	- If using a direct guassian, the estimation of the mean scales with $1 / \sqrt{n}$
-	- Then p-values become significant even though the differences in means is small
+	- If normal data, the sample distribution variance scales as $1 / \sqrt{n}$
+	- p-values become significant even with small difference in means
 - Exercise caution and report the effect size
 	- For example, a 1% or 50% difference in the means
 
@@ -419,9 +401,9 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 No t-distribution available here.
 :::
 
-## Kolmogorov-Smirnov Test
+## Kolmogorov-Smirnov Test Statistic
 
-#### Test statistic:
+This is the operation that creates the sample distribution.
 
 $$D_n^{+} = \max_{1\leq i\leq n} \left(\frac{i}{n} - \hat{F}(X_{(i)})\right)$$
 $$D_n^{-} = \max_{1\leq i\leq n} \left(\hat{F}(X_{(i)}) - \frac{i - 1}{n}\right)$$
@@ -433,11 +415,11 @@ How is this then converted to a p-value?
 
 ## Graphical Analysis
 
-- Plotting a distribution is often more informative than a goodness-of-fit test.
+- Plotting a distribution is often more informative than a test.
 - Not only assesses deviation, but can explain where it occurs.
 - Many variants:
-	- Q-Q plot
-	- P-P plot
+	- [Q-Q plot](https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot)
+	- [P-P plot](https://en.wikipedia.org/wiki/P%E2%80%93P_plot)
 	- Histogram with fitted distribution
 
 ## Testing errors
@@ -471,9 +453,9 @@ What does this mean when it comes to hypothesis testing?
 ## Review Questions
 
 1. What are 4 reasons to build a model?
-2. $p(x) = a/x$ for $1 < x < 10$ describes a distribution pdf. What is a? What is the average of this distribution?
+2. $p(x) = a/x$ for $1 < x < 10$ describes a distribution pdf. What is $a$? What is the expression for the distribution mean?
 3. What are the three kinds of variables? Give an example of each.
 4. You are interested in the sample distribution of the mean for an exponential distribution (N=8). What can you say about it relative to the original one?
 5. What can you say about the sample distribution for the N=1 case?
 6. Studying an anti-tumor compound, you create 2 tumors in either flank (i.e. 1 mouse gets 2 tumors) of 5 mice, then treat the animals with a compound, measuring tumor growth. What is N? Justify your answer.
-7. You want to model a process where each successive outcome is 1/3 as likely (i.e. getting 3 is 1/3 as likely as getting 2). What is the expression for this distribution?
+7. You want to model a process where each successive outcome is 1/5 as likely (e.g., getting 3 is 1/5 as likely as getting 2). What is the expression for this distribution?
