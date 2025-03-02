@@ -9,6 +9,11 @@ author: Aaron Meyer
 - These methods refit a model with samples from the training set to obtain additional information about the fitted model.
 - For example, they provide estimates of test-set prediction error, or the standard deviation and bias of our parameter estimates.
 
+::: {.notes}
+- Start with: How would you test that someone has learned a _concept_?
+- You wouldn't test on exactly the same thing.
+:::
+
 # Training error vs. test error
 
 - Recall the distinction between the *test error* and the *training error*:
@@ -17,7 +22,7 @@ author: Aaron Meyer
 - The training error rate often is quite different from the test error rate.
 - The former can *dramatically underestimate* the latter.
 
-# Training- vs. test-set performance
+## Training- vs. test-set performance
 
 ![ ](./figs/lec4/sfd-5.pdf)
 
@@ -25,7 +30,7 @@ author: Aaron Meyer
 Walk through this in detail.
 :::
 
-# More on prediction-error estimates
+## More on prediction-error estimates
 
 - Best solution: An infinitely large designated test set. Not feasible.
 - Some methods make a *mathematical adjustment* to the training error rate to estimate the test error rate. These include the *Cp statistic*, *AIC* and *BIC*.
@@ -37,7 +42,7 @@ Walk through this in detail.
 - $PE = \sigma^2 + Bias^2 + Var$
 :::
 
-# Validation-set approach
+## Validation-set approach
 
 - Here we randomly divide the available set of samples into two parts: a *training set* and a *validation* or *hold-out set*.
 - The model is fit on the training set, and the fitted model is used to predict the responses for the observations in the validation set.
@@ -47,7 +52,7 @@ Walk through this in detail.
 Move to board. Setup example with students up front. Predict height from arm length?
 :::
 
-# The validation process
+## The validation process
 
 ![ ](./figs/lec4/sfd-8.pdf)
 
@@ -57,7 +62,7 @@ A random splitting into two halves: left part is training set, right part is val
 First just leaving one set out.
 :::
 
-# Example: automobile data
+## Example: automobile data
 
 - Want to compare linear vs higher-order polynomial terms in a linear regression
 - We randomly split the 392 observations into two sets, a training set containing 196 of the data points, and a validation set containing the remaining 196 observations.
@@ -66,14 +71,14 @@ First just leaving one set out.
 
 *Left panel shows single split; right panel shows multiple splits*
 
-# Drawbacks of validation set approach
+## Drawbacks of validation set approach
 
 - The validation estimate of the test error can be highly variable, depending on precisely which observations are included in each set.
 - In the validation approach, only a subset of the observations — those that are included in the training set rather than in the validation set — are used to fit the model.
 - This suggests that the validation set error may tend to *overestimate* the test error for the model fit on the entire data set.
 	- *Why?*
 
-# K-fold cross-validation
+## K-fold cross-validation
 
 - *Widely* used approach for estimating test error.
 - Estimates can be used to select best model, and to give an
@@ -81,7 +86,7 @@ idea of the test error of the final chosen model.
 - Idea is to randomly divide the data into $K$ equal-sized parts. We leave out part $k$, fit the model to the other $K-1$ parts (combined), and then obtain predictions for the left-out $k$th part.
 - This is done in turn for each part $k = 1,2,\ldots K$, and then the results are combined.
 
-# K-fold cross-validation in detail
+## K-fold cross-validation in detail
 
    **1**            2       3       4       5
 ---------------- ------- ------- ------- -------
@@ -89,7 +94,7 @@ idea of the test error of the final chosen model.
 
 Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 
-# The details
+## The details
 
 - Let the $K$ parts be $C_1,C_2,\ldots C_K$, where $C_k$ denotes the indices of the observations in part $k$. There are $n_k$ observations in part $k$: if $N$ is a multiple of $K$, then $n_k = n/K$.
 - Compute:
@@ -98,21 +103,21 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 	- $\hat{y}_i$ is the prediction for observation $i$ when it was in the removed fold.
 - Setting $K = n$ yields *leave-one out cross-validation* (LOOCV).
 
-# Auto data revisited
+## Auto data revisited
 
 ![ ](./figs/lec4/sfd-18.pdf)
 
-# True and estimated test MSE for the simulated data
+## True and estimated test MSE for the simulated data
 
 ![ ](./figs/lec4/sfd-19.pdf)
 
-# Other issues with cross-validation
+## Other issues with cross-validation
 
 - Since each training set is only $(K - 1)/K$ as big as the original training set, the estimates of prediction error will typically be biased upward. ***Why?***
 - This bias is minimized when $K = n_{(LOOCV)}$, but this estimate has high variance, as noted earlier.
 - $K = 5--10$ provides a good compromise.
 
-# Cross-validation: right and wrong
+## Cross-validation: right and wrong
 
 - Consider a simple classifier applied to some two-class data:
 	1. Starting with 5000 predictors and 50 samples, find the 100 predictors having the largest correlation with the class labels.
@@ -120,7 +125,7 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 - How do we estimate the test set performance of this classifier?
 - Can we apply CV in Step 2, forgetting about Step 1?
 
-# NO!
+## NO!
 
 - This would ignore the fact that in Step 1, the procedure *has already seen the labels of the training data*, and made use of them. This is a form of training and must be included in the validation process.
 - It is easy to simulate realistic data that is completely randomized, so that it is not possible to make any prediction, but the CV error estimate that ignores Step 1 is zero!
