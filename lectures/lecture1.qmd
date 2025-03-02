@@ -22,6 +22,10 @@ author: "Aaron Meyer"
 - Finalized by the night before so you can print them out if you want.
 - The slides are *not* everything, but will include space to fill out missing elements during class.
 
+::: {.notes}
+- Mention review questions at the start of lecture.
+:::
+
 ## Textbook / Other Course Materials
 
 - There is no textbook for this course.
@@ -45,6 +49,11 @@ author: "Aaron Meyer"
 
 - Allows for quick help from me & the TAs
 
+::: {.notes}
+- Go over TA availability.
+- Go over how to get help.
+:::
+
 ## Learning Goals:
 
 By the end of the course you will have an increased understanding of:
@@ -65,7 +74,10 @@ By the end of the course you will learn how to:
 4. Critically assess machine learning results.
 
 ::: {.notes}
-Notice I don't say deriving a proof or writing some software package.
+- Notice I don't say deriving a proof or writing some software package.
+	- This class is about the _process_ of analysis.
+	- More focused on developing your critical evaluation of statistical models.
+- Mention survey on Bruin Learn.
 :::
 
 ## Grade Breakdown
@@ -97,6 +109,10 @@ Notice I don't say deriving a proof or writing some software package.
 	- Document your effort. Get started early. Seek answers to your questions in office hours, in lab, or on Campuswire!
 	- Your lowest grade will be automatically dropped.
 
+::: {.notes}
+- Cover Python, notebooks.
+:::
+
 ## Project
 
 - You will take data from a scientific paper, and implement a machine learning method using best practices.
@@ -105,10 +121,18 @@ Notice I don't say deriving a proof or writing some software package.
 - More details to come.
 - First deadline will be in week 6 to pick a project topic.
 
+::: {.notes}
+- Think about this now!
+:::
+
 ## Exams
 
-- We will have midterm exams on week 6 and 10.
+- We will have midterm exams on weeks 5 and 10.
 - You will have a final project in lieu of a final exam.
+
+::: {.notes}
+- Go over class schedule.
+:::
 
 ## Keys to Success
 
@@ -129,6 +153,12 @@ If you do these three things, you will do well.
 
 - What is a measurement?
 - What is a model?
+
+::: {.notes}
+- Measurement: Observation about the world.
+- Model: Theoretical explanation of the world.
+- **Everything** is a model. Cover qualitative models.
+:::
 
 ## Three things we need to learn about the world
 
@@ -240,6 +270,7 @@ Two possibilities:
 - What is the model?
 - What is the algorithm?
 - Walk through each form of probability.
+- Probabilities are 0.00049 fair, 0.00048 biased.
 :::
 
 ## Distributions
@@ -247,6 +278,7 @@ Two possibilities:
 We've already been talking about these! Distributions describe the range of probabilities that exist for all possible outcomes.
 
 ::: {.notes}
+- Choice of distribution implies a specific underlying process.
 - Can a distribution be categorical? Ordinal? Numerical?
 :::
 
