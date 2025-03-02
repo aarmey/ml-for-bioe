@@ -58,14 +58,14 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 
 ![ ](./figs/lec5/ho5.svg)
 
-# Maximum Likelihood Estimate (MLE)
+## Maximum Likelihood Estimate (MLE)
 
 - Choose parameters that maximize the likelihood function
 	- Commonly used estimator in statistics
 	- Intuitively appealing
 - In the binomial experiment, MLE for probability of heads: $$\hat{\theta} = \frac{N_H}{N_H + N_T}$$
 
-# Is MLE the only option?
+## Is MLE the only option?
 
 - Suppose that after 10 observations, MLE estimates the probability of a heads is 0.7.
 	- Would you bet on heads for the next toss?
@@ -76,7 +76,7 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 Can look at sampling distribution of parameter.
 :::
 
-# Bayesian approach
+## Bayesian approach
 - Formulate knowledge about situation probabilistically
 	- Define a model that expresses qualitative aspects of our knowledge (e.g., distributions, independence assumptions)
 	- Specify a **prior** probability distribution for unknown parameters that expresses our beliefs
@@ -85,13 +85,13 @@ Can look at sampling distribution of parameter.
 	- Reaching conclusions while accounting for uncertainty
 	- Make predictions that account for our uncertainty
 
-# Posterior distribution
+## Posterior distribution
 
 - The posterior distribution combines the prior distribution with the likelihood function using Bayes' rule: $$P(\theta \mid D) = \frac{P(\theta) P(D\mid \theta)}{P(D)}$$
 - The denominator is just a normalizing constant so you can simplify: $$\mathrm{Posterior} \propto \mathrm{Prior} \times \mathrm{Likelihood}$$
 - Predictions can be made by integrating over the posterior: $$P(\mathrm{new data} \mid D) = \int_{\theta} P(\mathrm{new data} \mid \theta) P(\theta \mid D)$$
 
-# Revisiting the Binomial experiment
+## Revisiting the Binomial experiment
 
 - Prior distribution: uniform for $\theta$ in [0, 1]
 - Posterior distribution: $$P(\theta\mid x_1, \ldots ,x_M) \propto P(x_1, \ldots ,x_M\mid\theta)\times 1$$

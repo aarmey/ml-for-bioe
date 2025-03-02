@@ -1,5 +1,5 @@
 ---
-title: Syllabus - Winter 2024
+title: Home
 layout: page
 ---
 
