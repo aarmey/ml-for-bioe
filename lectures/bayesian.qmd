@@ -14,16 +14,21 @@ author: Aaron Meyer (based on slides from Joyce Ho)
 
 ## Bayesian
 
-- Data are observed from the realized sample
+- **Data are observed** from the realized sample
 - Parameters are unknown and described probabilistically (random variables)
-- Data are fixed
+- **Data are fixed**
 - Prediction is expectation over unknown parameters
 
-# Two views on how we interpret the world
+::: {.notes}
+- Go through the sample distribution process.
+- Answers a different question!
+:::
+
+## Two views on how we interpret the world
 
 ![https://xkcd.com/1132/](./figs/lec5/frequentists_vs_bayesians.png)
 
-# Bayesian statistics derivation
+## Bayesian statistics derivation
 
 Bayes’ theorem may be derived from the definition of conditional probability:
 $$P(A\mid B)={\frac {P(A\cap B)}{P(B)}},{\text{ if }}P(B)\neq 0$$
@@ -42,21 +47,25 @@ $$\Rightarrow P(A\mid B)={\frac {P(B\mid A)\,P(A)}{P(B)}},\;\text{if}\; P(B)\neq
 - Philisophical extensions by Pierre-Simon Laplace
 :::
 
-# Classic example: Binomial experiment
+## Classic example: Binomial experiment
 
 - Given a sequence of coin tosses $x_1, x_2, \ldots, x_M$, we want to estimate the (unknown) probability of heads: $$P(H) = \theta$$
 - The instances are independent and identically distributed samples
 
-# Likelihood function
+## Likelihood function
 
 - How good is a particular parameter? 
 	- Answer: Depends on how likely it is to generate the data
-$$L(\theta; D) = P(D\mid\theta) = \sum_m P(x_m \mid\theta)$$
+$$L(\theta; D) = P(D\mid\theta) = \prod_m P(x_m \mid\theta)$$
 
 - Example: Likelihood for the sequence: H, T, T, H, H
 $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$$
 
 ![ ](./figs/lec5/ho5.svg)
+
+::: {.notes}
+- Frequentist: for a fixed parameter, model the data generation process.
+:::
 
 ## Maximum Likelihood Estimate (MLE)
 
@@ -73,7 +82,9 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 	- Were there enough samples for you to be certain?
 
 ::: {.notes}
-Can look at sampling distribution of parameter.
+- Can look at sampling distribution of parameter.
+- BUT: Let's say we get heads 5 times in a row. When are we ready to declare a coin biased?
+- One way to look at this would be bootstrapping.
 :::
 
 ## Bayesian approach
@@ -108,7 +119,7 @@ Can look at sampling distribution of parameter.
 	- **Then** both the MLE and Bayesian predictions converge to the same value as the training data becomes infinitely large
 
 ::: {.notes}
-Only gives same answer if our prior distribution is the same as the posterior.
+- Only gives same answer if our prior distribution is the same as the posterior.
 :::
 
 # Features of the Bayesian approach
@@ -138,6 +149,9 @@ Only gives same answer if our prior distribution is the same as the posterior.
 | Multinomial     | Dirichlet                        | $\alpha$                 |      $\alpha + \sum x_i$                      |
 | Poisson         | Gamma                            | $\alpha, \beta$          |     $\alpha + \sum x_i, \beta + n$            |
 
+::: {.notes}
+- If we express a prior, observation with these, we will end up with a conjugate prior distribution out.
+:::
 
 # Linear regression
 
