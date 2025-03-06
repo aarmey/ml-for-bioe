@@ -3,6 +3,33 @@ title: "Fitting And Regression"
 author: Aaron Meyer
 ---
 
+# Application: Paternal *de novo* mutations
+
+### Questions:
+
+- Where do *de novo* mutations arise?
+- Are there factors that influence the rate of *de novo* mutations from one generation to another?
+
+::: {.notes}
+- Use David Q as an example of _de novo_ mutations.
+:::
+
+## Application: Paternal *de novo* mutations
+
+![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./figs/regression/meiosis.svg){fig-alt="Schematic of cells undergoing meiosis." width=2in}
+
+::: {.notes}
+What is different about paternal vs. maternal meiosis?
+:::
+
+## Application: Paternal *de novo* mutations
+
+![Kong *et al*, *Nature*, 2012](./figs/regression/decode1.jpg){fig-alt="Figure from Kong et al showing the family tree of several sample collections." width=2in}
+
+## Application: Paternal *de novo* mutations
+
+![Kong *et al*, *Nature*, 2012](./figs/regression/decode2.jpg){fig-alt="Figure from Kong et al showing a significant correlation between father age and number of de novo mutations." width=2in}
+
 # Project Proposals
 
 ## Overview
@@ -11,7 +38,6 @@ In this project, you have two options for the general route you can take:
 
 1. Reimplement analysis from the literature.
 2. New, exploratory analysis of existing data.
-
 
 More details in final project guidelines.
 
@@ -36,6 +62,11 @@ The proposal should be less than two pages and describe the following items:
 - Fitting is the process of comparing a model to a compendium of data
 - After fitting, we will have a model that explains existing data and can predict new data
 
+::: {.notes}
+- Use AlphaFold activity?
+- Method of the year in 2021.
+:::
+
 ## Process of Fitting
 
 The *process* of fitting is nothing more than finding the maximum likelihood distribution of models for a set of points.
@@ -50,6 +81,10 @@ The key factor is how one defines the problem—i.e. how the distribution is des
   - Unaccounted for variables can lead to systematic error
 
 > Since all models are wrong the scientist cannot obtain a "correct" one by excessive elaboration. On the contrary following William of Occam he should seek an economical description of natural phenomena. Just as the ability to devise simple but evocative models is the signature of the great scientist so overelaboration and overparameterization is often the mark of mediocrity. ~George Box, *J American Stat Assoc*, 1976
+
+::: {.notes}
+- Von Neumann: The truth is too complicated to allow anything but approximation.
+:::
 
 ## Any Fitting Is Dependent On The Correctness Of The Model
 
@@ -70,6 +105,13 @@ Walk through model, what the model is, etc.
 - Probably the most widely used estimation technique.
 - Based on extending the maximum likelihood estimate of a distribution.
 - Model assumes output quantity is linear combination of inputs.
+
+::: {.notes}
+- Every model will have:
+	- Mathematical definition
+	- Geometric interpretation
+	- Intuitive "feel"
+:::
 
 ## Ordinary Least Squares
 
@@ -123,7 +165,6 @@ Gauss and Markov in the early 1800s identified that the least squares estimate o
 
 $$ \hat{\mathbf{\beta}} = \arg\min_{\beta}{\left\Vert \mathbf{y} - \mathbf{X} \beta \right\Vert^{2}} $$ <!-- Eq 7.31 -->
 
-
 ## Ordinary Least Squares
 
 $$ \hat{\mathbf{\beta}} = \arg\min_{\beta}{\left\Vert \mathbf{y} - \mathbf{X} \beta \right\Vert^{2}} $$ <!-- Eq 7.31 -->
@@ -137,7 +178,10 @@ where
 $$ \mathbf{S} = \mathbf{X}'\mathbf{X} $$ <!-- Eq 7.33 -->
 
 ::: {.notes}
-Prove this?
+$$ \frac{\delta}{\delta \beta} \left(\left\Vert \mathbf{y} - \mathbf{X} \beta \right\Vert^{2}\right) = 0 $$
+$$ 2 X^T (y - X \beta ) = 0 $$
+$$ 2 X^T y = 2X^T X \beta $$
+$$ \beta = \left(X^T X \right)^{-1} X^T y $$
 :::
 
 ## Ordinary Least Squares
@@ -147,6 +191,12 @@ $\hat{\beta}$ is the maximum likelihood estimate of $\beta$, and has covariance 
 $$\hat{\beta}\sim\left(\beta,\sigma^2 \mathbf{S}^{-1}\right)$$
 
 In the normal case (when our assumptions hold), $\hat{\beta}$ is an *unbiased estimator* of $\beta$. Making these calculations tractable for larger data sets used to be a challenge but is now trivial.
+
+::: {.notes}
+- How do we know $\sigma$?
+	- Stdev is best estimate of $\sigma$
+	- So just stdev of residuals
+:::
 
 ## Ordinary Least Squares
 
@@ -161,7 +211,15 @@ $$ \sum_{i=1}^{n} (y_{i}-x_{i} \beta)^{2} $$
 *Exactly how we calculate $\beta$!*
 
 ::: {.notes}
-Go through where this arises from.
+Go through where this arises from. Leave this up for later.
+
+$$ f(x | \mu, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} $$
+
+$$ \ln f(x | \mu, \sigma^2) = -\frac{1}{2}\ln(2\pi\sigma^2) - \frac{(x-\mu)^2}{2\sigma^2} $$
+
+$$ \ln L(\mu, \sigma^2 | x_1, x_2, \ldots, x_n) = -\frac{n}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2}\sum_{i=1}^{n}(x_i-\mu)^2 $$
+
+$$ \ln L(\beta, \sigma^2 \mid y) = -\frac{n}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2} (y - X\beta)'(y - X\beta). $$
 :::
 
 ## Ordinary Least Squares
@@ -189,30 +247,9 @@ What are some downsides?
 ::: {.notes}
 - Very sensitive to outliers.
 - Fails for p > n.
+
+$$ \frac{\partial \ln L}{\partial \beta} = \frac{1}{\sigma^2}X^T(y-X\beta) $$
 :::
-
-## Application: Paternal *de novo* mutations
-
-### Questions:
-
-- Where do *de novo* mutations arise?
-- Are there factors that influence the rate of *de novo* mutations from one generation to another?
-
-## Application: Paternal *de novo* mutations
-
-![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./figs/regression/meiosis.svg){fig-alt="Schematic of cells undergoing meiosis." width=2in}
-
-::: {.notes}
-What is different about paternal vs. maternal meiosis?
-:::
-
-## Application: Paternal *de novo* mutations
-
-![Kong *et al*, *Nature*, 2012](./figs/regression/decode1.jpg){fig-alt="Figure from Kong et al showing the family tree of several sample collections." width=2in}
-
-## Application: Paternal *de novo* mutations
-
-![Kong *et al*, *Nature*, 2012](./figs/regression/decode2.jpg){fig-alt="Figure from Kong et al showing a significant correlation between father age and number of de novo mutations." width=2in}
 
 ## Implementation
 
@@ -251,6 +288,11 @@ ax.set_xlabel('Measured')
 ax.set_ylabel('Predicted')
 ~~~
 
+::: {.notes}
+- Run this as a notebook.
+- Play with options.
+:::
+
 ## Implementation
 
 ![ ](./figs/regression/olsplot.svg){fig-alt="Plot of measured vs. predicted values of scikit-learn's diabetes dataset." width=2in}
@@ -268,6 +310,12 @@ Our input-output relationship is:
 $$ \mathbf{y} = f(\mathbf{X}, \beta) + \mathbf{\epsilon} $$
 
 for the same construction of $\mathbf{\epsilon}$.
+
+::: {.notes}
+- Independent points
+- Normal error
+- $f(x)$ relationship
+:::
 
 ## Transformation
 
@@ -350,6 +398,10 @@ plt.ylabel('Binding')
 
 ![ ](./figs/regression/bindingdata.png){width=2in}
 
+::: {.notes}
+- Run this as a notebook.
+:::
+
 ## NNLS Example
 
 ### Binding Data
@@ -423,16 +475,19 @@ sp.optimize.least_squares(ls_obj_k1, 1., args=(X,Y))
 - In many cases linear regression can be inappropriate
 	- E.g. A measurement that is Poisson distributed
 
+::: {.notes}
+- CLT works to your benefit here.
+:::
+
 # Review
 
 ## Questions
 
-- Would you expect the confidence interval of your model to be larger or smaller than the confidence interval of prediction?
 - Given the binding data presented here, do you think a least squares model is most appropriate?
-- How might you test whether your data fits the model you've specified?
+- How might you test whether your data seems to follow the assumptions of your model?
 
 ::: {.notes}
-Talking about Chi-Squared test in point 3.
+- Can use ks-test in point 2.
 :::
 
 ## Reading & Resources
@@ -442,6 +497,14 @@ Talking about Chi-Squared test in point 3.
 - 💾: [sklearn: Linear Models](https://scikit-learn.org/stable/modules/linear_model.html)
 - 👂: [Linear Digressions: The assumptions of ordinary least squares](https://lineardigressions.com/episodes/2019/1/12/the-assumptions-of-ordinary-least-squares)
 - 👂: [Linear Digressions: Convex (and non-convex) optimization](https://lineardigressions.com/episodes/2018/12/16/convex-and-non-convex-optimization)
+
+::: {.notes}
+- In summary:
+	- Fitting is the process of optimizing the model.
+	- OLS is exceptional in that we can directly calculate the answer.
+	- OLS and NNLS shift normal distributions up and down around the line of prediction.
+	- GLM can handle other distributions.
+:::
 
 ## Review Questions
 
