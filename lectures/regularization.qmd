@@ -3,11 +3,17 @@ title: "Fitting & Regression Redux, Regularization"
 author: Aaron Meyer (based on slides from Rob Tibshirani)
 ---
 
+# Example - Predicting Drug Response
+
+![ ](./figs/lec3/ccle-title.pdf)
+
+## Example - Predicting Drug Response
+
+![ ](./figs/lec3/ccle-fig3.pdf)
+
 # The Bias-Variance Tradeoff
 
-## The Bias-Variance Tradeoff
-
-# Estimating β
+## Estimating β
 
 - As usual, we assume the model: $$y=f(\mathbf{z})+\epsilon, \epsilon\sim \mathcal{N}(0,\sigma^2)$$
 - In regression analysis, our major goal is to come up with some good regression function $$\hat{f}(\mathbf{z}) = \mathbf{z}^\intercal \hat{\beta}$$
@@ -15,7 +21,7 @@ author: Aaron Meyer (based on slides from Rob Tibshirani)
 	- $\hat{\beta}^{ls}$ has well known properties (e.g., Gauss-Markov, ML)
 - But can we do better?
 
-# Choosing a good regression function
+## Choosing a good regression function
 
 - Suppose we have an estimator $$\hat{f}(\mathbf{z}) = \mathbf{z}^\intercal \hat{\beta}$$
 - To see if this is a good candidate, we can ask ourselves two questions:
@@ -23,13 +29,13 @@ author: Aaron Meyer (based on slides from Rob Tibshirani)
 	2. Will $\hat{f}(\mathbf{z})$ fit future observations well?
 - These might have very different outcomes!!
 
-# Is $\hat{\boldsymbol\beta}$ close to the true β?
+## Is $\hat{\boldsymbol\beta}$ close to the true β?
 
 - To answer this question, we might consider the **mean squared error** of our estimate $\hat{\boldsymbol\beta}$:
 	- i.e., consider squared distance of $\hat{\boldsymbol\beta}$ to the true $\boldsymbol\beta$: $$MSE(\hat{\boldsymbol\beta}) = \mathop{\mathbb{E}}\left[\lVert \hat{\boldsymbol\beta} - \boldsymbol\beta \rVert^2\right] = \mathop{\mathbb{E}}[(\hat{\boldsymbol\beta} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta} - \boldsymbol\beta)]$$
 - **Example:** In least squares (LS), we know that: $$\mathop{\mathbb{E}}[(\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)] = \sigma^2 \mathrm{tr}[(\mathbf{Z}^T \mathbf{Z})^{-1}]$$
 
-# Will $\hat{f}(z)$ fit future observations well?
+## Will $\hat{f}(z)$ fit future observations well?
 
 - Just because $\hat{f}(z)$ fits our data well, this doesn't mean that it will be a good fit to new data
 - In fact, suppose that we take new measurements $y_i'$ at the same $\mathbf{z}_i$’s: $$(\mathbf{z}_1,\mathbf{y}_1'),(\mathbf{z}_2,\mathbf{y}_2'),...,(\mathbf{z}_n,\mathbf{y}_n')$$
@@ -40,7 +46,7 @@ author: Aaron Meyer (based on slides from Rob Tibshirani)
 Have students draw lines for smoking vs. heart attack risk over data. Make two datasets to explain variance.
 :::
 
-# Prediction error and the bias-variance tradeoff
+## Prediction error and the bias-variance tradeoff
 
 - So good estimators should, on average have, small prediction errors
 - Let’s consider the PE at a particular target point $\mathbf{z}_0$:
@@ -51,15 +57,13 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 	- But coefficient estimates suffer from high variance as more terms are included in the model
 - So introducing a little bias in our estimate for **β** might lead to a large decrease in variance, and hence a substantial decrease in PE
 
-# Depicting the bias-variance tradeoff
+## Depicting the bias-variance tradeoff
 
-![A graph depicting the bias-variance tradeoff.](./figs/lec3/9.pdf)
+![A graph depicting the bias-variance tradeoff.](./figs/lec3/bias-variance.svg)
 
 # Ridge Regression
 
-## Ridge Regression
-
-# Ridge regression as regularization
+## Ridge regression as regularization
 
 - If the $\beta_j$'s are unconstrained...
 	- They can explode
@@ -73,26 +77,37 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 	- **Z** is assumed to be standardized (mean 0, unit variance)
 	- **y** is assumed to be centered
 
-# Ridge regression: $l_2$-penalty
+## Ridge regression: $l_2$-penalty
 
 - Can write the ridge constraint as the following **penalized** residual sum of squares (PRSS):
 
-![ ](./figs/lec3/12.pdf)
+$$
+\begin{aligned}
+PRSS(\beta)_{\ell_2} &= \sum_{i=1}^{n}(y_i - \mathbf{z}_i^{\top}\beta)^2 + \lambda\sum_{j=1}^{p}\beta_j^2 \\
+&= (\mathbf{y} - \mathbf{Z}\beta)^{\top}(\mathbf{y} - \mathbf{Z}\beta) + \lambda\|\beta\|_2^2
+\end{aligned}
+$$
 
 - Its solution may have smaller average PE than $\hat{\boldsymbol\beta}^{ls}$
 - $PRSS(\boldsymbol\beta)_{l_2}$ is convex, and hence has a unique solution
 - Taking derivatives, we obtain: $$\frac{\delta PRSS(\beta)_{l_2}}{\delta \beta} = -2\mathbf{Z}^T (y-\mathbf{Z}\beta)+2\lambda\beta$$
 
-# The ridge solutions
+## The ridge solutions
 
 - The solution to $PRSS(\hat{\beta})_{l2}$ is now seen to be: $$\hat{\beta}_\lambda^{ridge} = (\mathbf{Z}^\intercal \mathbf{Z} + \lambda \mathbf{I}_p)^{-1} \mathbf{Z}^\intercal \mathbf{y}$$
 	- Remember that **Z** is standardized
 	- **y** is centered
-- Solution is indexed by the tuning parameter λ (more on this later)
-- Inclusion of λ makes problem non-singular even if $\mathbf{Z}^\intercal \mathbf{Z}$ is not invertible
-	- This was the original motivation for ridge regression (Hoerl and Kennard, 1970)
+- Solution is indexed by the tuning parameter λ
+- λ makes problem non-singular **even** if $\mathbf{Z}^\intercal \mathbf{Z}$ is not invertible
+	- Was the original motivation for ridge (Hoerl & Kennard, 1970)
 
-# Tuning parameter λ
+::: {.notes}
+- As simple to compute as OLS!
+- How do we figure out the tuning parameter?
+- What does the invertibility statement mean? We can solve even when p > n!
+:::
+
+## Tuning parameter λ
 
 - Notice that the solution is indexed by the parameter λ
 	- So for each λ, we have a solution
@@ -103,13 +118,13 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 	- As λ decreases, we obtain the least squares solutions
 	- As λ increases, we have $\hat{\beta}_{\lambda=0}^{ridge} = 0$ (intercept-only model)
 
-# Ridge coefficient paths
+## Ridge coefficient paths
 
 - The λ’s trace out a set of ridge solutions, as illustrated below
 
 ![Ridge coefficient path for the diabetes data set found in the `lars` library in R.](./figs/lec3/15.pdf)
 
-# Choosing λ
+## Choosing λ
 
 - Need disciplined way of selecting λ
 - That is, we need to "tune" the value of λ
@@ -119,39 +134,44 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 	- No objective basis; heavily criticized by many
 - Standard practice now is to use cross-validation (next lecture!)
 
-# A few notes on ridge regression
+## A few notes on ridge regression
 
 - The regularization decreases the degrees of freedom of the model
 	- So you still cannot fit a model with more degrees of freedom than points
 - This can be shown by examination of the smoother matrix
 	- We won't do this—it's a complicated argument
 
-# How do we choose λ?
+## How do we choose λ?
 
 - We need a disciplined way of choosing λ
 - Obviously want to choose λ that minimizes the mean squared error
 - Issue is part of the bigger problem of **model selection**
 
-# K-Fold Cross-Validation
+## K-Fold Cross-Validation
 
 - A common method to determine $\lambda$ is K-fold cross-validation.
 - **We will discuss this next lecture.**
 
-# Plot of CV errors and standard error bands
+## Plot of CV errors and standard error bands
 
 ![Cross validation errors from a ridge regression example on spam data.](./figs/lec3/34.pdf)
 
 # The LASSO
 
-**The LASSO**
-
-# The LASSO: $l_1$ penalty
+## The LASSO: $l_1$ penalty
 
 - Tibshirani (*J of the Royal Stat Soc* 1996) introduced the **LASSO**: *least absolute shrinkage and selection operator*
 - LASSO coefficients are the solutions to the $l_1$ optimization problem: $$\mathrm{minimize}\: (\mathbf{y}-\mathbf{Z}\boldsymbol\beta)^T (\mathbf{y}-\mathbf{Z}\boldsymbol\beta)\: \mathrm{s.t.} \sum_{j=1}^p \lVert \beta_j \rVert \leq t$$
 - This is equivalent to loss function: $$PRSS(\boldsymbol\beta)_{l_1} = \sum_{i=1}^n (y_i - \mathbf{z}_i^T \boldsymbol\beta)^2 + \lambda \sum_{j=1}^p \lVert \beta_j \rVert$$ $$\quad = (\mathbf{y}-\mathbf{Z}\boldsymbol\beta)^T (\mathbf{y}-\mathbf{Z}\boldsymbol\beta) + \lambda\lVert \boldsymbol\beta \rVert_1$$
 
-# λ (or t) as a tuning parameter
+::: {.notes}
+- Date shows the difficulty in solving.
+- $l_1$ indicates the sum of absolute values.
+- So $l_2 norm is more sensitive to large values. Here, sensitive to _all_ values.
+- What happens if $\hat{\beta}_j$ doesn't really affect the fitting quality?
+:::
+
+## λ (or t) as a tuning parameter
 
 - Again, we have a tuning parameter λ that controls the amount of regularization
 - One-to-one correspondence with the threshhold t:
@@ -160,14 +180,18 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 	- If $t_0 = \sum_{j=1}^p \lVert \hat{\beta}_j^{ls} \rVert$ (equivalently, λ = 0), we obtain no shrinkage (and hence obtain the LS solutions as our solution)
 	- Often, the path of solutions is indexed by a fraction of shrinkage factor of $t_0$
 
-# Sparsity and exact zeros
+::: {.notes}
+- Software will implement this in different ways.
+:::
+
+## Sparsity and exact zeros
 
 - Often, we believe that many of the $\beta_j$’s should be 0
 - Hence, we seek a set of **sparse solutions**
 - Large enough $\lambda$ (or small enough t) will set some coefficients exactly equal to 0!
 	- So LASSO will perform model selection for us!
 
-# Computing the LASSO solution
+## Computing the LASSO solution
 
 - Unlike ridge regression, $\hat{\beta}^{lasso}_{\lambda}$ has no closed form $\lambda$
 - Original implementation involves quadratic programming techniques from convex optimization
@@ -176,7 +200,7 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 	- In many cases it is the same as the LASSO solution
 	- Forward stagewise is easy to implement: <https://doi.org/10.1214/07-EJS004>
 
-# Forward stagewise algorithm
+## Forward stagewise algorithm
 
 - As usual, assume **Z** is standardized and **y** is centered
 - Choose a small $\epsilon$. The forward-stagewise algorithm then proceeds as follows:
@@ -186,10 +210,6 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 	4. Set $\mathbf{r}=\mathbf{r} - \delta_j \mathbf{Z}_j$
 	5. Repeat from step 2 many times
 
-# The LASSO, LARS, and Forward Stagewise paths
-
-![Comparison of the LASSO, LARS, and Forward Stagewise coefficient paths for the diabetes data set.](./figs/lec3/45.pdf)
-
 # Comparing LS, Ridge, and the LASSO
 
 - Even though $\mathbf{Z}^{T}\mathbf{Z}$ may not be of full rank, both ridge regression and the LASSO admit solutions
@@ -197,9 +217,11 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 	- But both ridge regression and the LASSO have solutions
 	- Regularization tends to reduce prediction error
 
-<!-- 48 -->
+## The LASSO, LARS, and Forward Stagewise paths
 
-# More comments on variable selection
+![Comparison of the LASSO, LARS, and Forward Stagewise coefficient paths for the diabetes data set.](./figs/lec3/45.pdf)
+
+## More comments on variable selection
 
 - Now suppose $p \gg n$
 - Of course, we would like a parsimonious model (Occam’s Razor)
@@ -209,13 +231,15 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 - So LASSO takes care of model selection for us
 	- And we can even see when variables jump into the model by looking at the LASSO path
 
-# Variants
+## Variants
 
 - Zou and Hastie (2005) propose the **elastic net**, which is a convex combination of ridge and the LASSO
 	- Paper asserts that the elastic net can improve error over LASSO
 	- Still produces sparse solutions
 
-<!-- 50 -->
+::: {.notes}
+- Write out penalized error with all three norms (error, $l_1$, $l_2$)
+:::
 
 # High-dimensional data and underdetermined systems
 
@@ -225,9 +249,7 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 	- i.e., our system is *underdetermined*
 - Reasonable to suppose that most of the coefficients are exactly equal to 0
 
-<!-- 51 -->
-
-# But do these methods pick the right/true variables?
+## But do these methods pick the right/true variables?
 
 - Suppose that only $S$ elements of $\beta$ are non-zero
 - Now suppose we had an "Oracle" that told us which components of the $\beta = (\beta_1,\beta_2,\ldots,\beta_p)$ are truly non-zero
@@ -236,22 +258,6 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 	- The non-zero elements of $\beta^{*}$ are computed by regressing $\mathbf{y}$ on only the $S$ important covariates
 - It turns out we get *really* close to this cheating solution without cheating!
 	- Candes & Tao. _Ann Statist_. 2007.
-
-# Example - Predicting Drug Response
-
-![ ](./figs/lec3/ccle-title.pdf)
-
-# Example - Predicting Drug Response
-
-![ ](./figs/lec3/ccle-fig2.pdf)
-
-# Example - Predicting Drug Response
-
-![ ](./figs/lec3/ccle-fig3.pdf)
-
-# Example - Predicting Drug Response
-
-![ ](./figs/lec3/ccle-fig4.pdf)
 
 # Implementation
 
@@ -263,7 +269,7 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 - sklearn: [Generalized Linear Models](https://scikit-learn.org/stable/modules/linear_model.html)
 - Candès E. and Tao T. [The Dantzig selector: statistical estimation when p is much larger than n](https://projecteuclid.org/journals/annals-of-statistics/volume-35/issue-6/The-Dantzig-selector--Statistical-estimation-when-p-is-much/10.1214/009053606000001523.full).
 
-## Review Questions
+# Review Questions
 
 1. What is the bias-variance tradeoff? Why might we want to introduce bias into a model?
 2. What is regularization? What are some reasons to use it?
@@ -274,3 +280,4 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 7. What can we say about the relationship between fitting error and prediction error?
 8. What does regularization do to the degrees of freedom (p) of a model? How about the number of measurements (n)?
 9. A colleague tells you about a new form of regularization they've come up with (e.g., remove X% of variables least correlated with Y). How would this influence the variance of the model? Might this improve the prediction error?
+10. Can you regularize NNLS? If so, how would this be implemented?
