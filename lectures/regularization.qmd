@@ -3,13 +3,17 @@ title: "Fitting & Regression Redux, Regularization"
 author: Aaron Meyer (based on slides from Rob Tibshirani)
 ---
 
-# Example - Predicting Drug Response
+# Example
 
-![ ](./figs/lec3/ccle-title.pdf)
+### Predicting Drug Response
 
-## Example - Predicting Drug Response
+---
 
-![ ](./figs/lec3/ccle-fig3.pdf)
+![ ](./figs/regularization/ccle-title.jpg)
+
+---
+
+![ ](./figs/regularization/ccle-fig3.jpg)
 
 # The Bias-Variance Tradeoff
 
@@ -55,11 +59,20 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 - Such a decomposition is known as the **bias-variance tradeoff**
 	- As model becomes more complex (more terms included), local structure/curvature is picked up
 	- But coefficient estimates suffer from high variance as more terms are included in the model
-- So introducing a little bias in our estimate for **β** might lead to a large decrease in variance, and hence a substantial decrease in PE
+- So introducing a little bias in our estimate for **β** ***might*** lead to a large decrease in variance, and hence a substantial decrease in PE
 
-## Depicting the bias-variance tradeoff
+::: {.notes}
+- Bias is squared, so a small amount is ok.
+:::
 
-![A graph depicting the bias-variance tradeoff.](./figs/lec3/bias-variance.svg)
+## Depicting the bias-variance tradeoff {.nostretch}
+
+![A graph depicting the bias-variance tradeoff.](./figs/regularization/bias-variance.svg){width=600}
+
+::: {.notes}
+- Regularization can be _anything_.
+- Today we'll see two/three examples.
+:::
 
 # Ridge Regression
 
@@ -73,7 +86,7 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 - Might impose the ridge constraint (both equivalent):
 	- minimize $\sum_{i=1}^n (y_i - \boldsymbol\beta^\intercal \mathbf{z}_i)^2\: \mathrm{s.t.} \sum_{j=1}^p \beta_j^2 \leq t$
 	- minimize $(y - \mathbf{Z}\boldsymbol\beta)^\intercal (y - \mathbf{Z}\boldsymbol\beta)\: \mathrm{s.t.} \sum_{j=1}^p \beta_j^2 \leq t$
-- By convention (very important!):
+- By convention (**very important**):
 	- **Z** is assumed to be standardized (mean 0, unit variance)
 	- **y** is assumed to be centered
 
@@ -91,6 +104,14 @@ $$
 - Its solution may have smaller average PE than $\hat{\boldsymbol\beta}^{ls}$
 - $PRSS(\boldsymbol\beta)_{l_2}$ is convex, and hence has a unique solution
 - Taking derivatives, we obtain: $$\frac{\delta PRSS(\beta)_{l_2}}{\delta \beta} = -2\mathbf{Z}^T (y-\mathbf{Z}\beta)+2\lambda\beta$$
+
+::: {.notes}
+- So this is just an added term to OLS!
+- Ask if folks have seen **convex** before.
+- What happens with $\lambda$ going to infinity?
+- How about $\lambda$ going to 0?
+- Often software might ask for $log(\lambda)$ or $1/\lambda$. Be sure to check.
+:::
 
 ## The ridge solutions
 
@@ -118,11 +139,11 @@ $$
 	- As λ decreases, we obtain the least squares solutions
 	- As λ increases, we have $\hat{\beta}_{\lambda=0}^{ridge} = 0$ (intercept-only model)
 
-## Ridge coefficient paths
+## Ridge coefficient paths {.nostretch}
 
 - The λ’s trace out a set of ridge solutions, as illustrated below
 
-![Ridge coefficient path for the diabetes data set found in the `lars` library in R.](./figs/lec3/15.pdf)
+![Ridge coefficient path for the diabetes data set found in the `lars` library in R.](./figs/regularization/ridge-path.svg){width=600}
 
 ## Choosing λ
 
@@ -152,9 +173,9 @@ $$
 - A common method to determine $\lambda$ is K-fold cross-validation.
 - **We will discuss this next lecture.**
 
-## Plot of CV errors and standard error bands
+## Plot of CV errors and standard error bands {.nostretch}
 
-![Cross validation errors from a ridge regression example on spam data.](./figs/lec3/34.pdf)
+![Cross validation errors from a ridge regression example on spam data.](./figs/regularization/ridge-CV.svg){width=600}
 
 # The LASSO
 
@@ -212,14 +233,16 @@ $$
 
 # Comparing LS, Ridge, and the LASSO
 
+## Comparing LS, Ridge, and the LASSO
+
 - Even though $\mathbf{Z}^{T}\mathbf{Z}$ may not be of full rank, both ridge regression and the LASSO admit solutions
 - We have a problem when $p \gg n$ (more predictor variables than observations)
 	- But both ridge regression and the LASSO have solutions
 	- Regularization tends to reduce prediction error
 
-## The LASSO, LARS, and Forward Stagewise paths
+## The LASSO, LARS, and Forward Stagewise paths {.nostretch}
 
-![Comparison of the LASSO, LARS, and Forward Stagewise coefficient paths for the diabetes data set.](./figs/lec3/45.pdf)
+![Comparison of the LASSO, LARS, and Forward Stagewise coefficient paths for the diabetes data set.](./figs/regularization/lasso-algos.svg){width=600}
 
 ## More comments on variable selection
 
@@ -242,6 +265,8 @@ $$
 :::
 
 # High-dimensional data and underdetermined systems
+
+## High-dimensional data and underdetermined systems
 
 - In many modern data analysis problems, we have $p \gg n$
 	- These comprise “high-dimensional” problems

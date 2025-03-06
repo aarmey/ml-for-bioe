@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 142.931229 134.849756">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2 {
+        fill: none;
+      }
+
+      .st1 {
+        stroke: red;
+      }
+
+      .st1, .st2 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .2625px;
+      }
+
+      .st3 {
+        font-family: Helvetica, Helvetica;
+        font-size: 4.2px;
+      }
+
+      .st2 {
+        stroke: #000;
+      }
+
+      .st4 {
+        letter-spacing: -.000233em;
+      }
+
+      .st5 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st6 {
+        letter-spacing: 3.44215em;
+      }
+
+      .st7 {
+        letter-spacing: 3.442034em;
+      }
+
+      .st8 {
+        letter-spacing: 3.441918em;
+      }
+
+      .st9 {
+        letter-spacing: 3.440988em;
+      }
+
+      .st10 {
+        letter-spacing: 3.683966em;
+      }
+
+      .st11 {
+        letter-spacing: 3.682803em;
+      }
+
+      .st12 {
+        letter-spacing: 3.68292em;
+      }
+
+      .st13 {
+        fill: red;
+      }
+
+      .st14 {
+        clip-path: url(#clippath);
+      }
+
+      .st15 {
+        font-family: Helvetica-Bold, Helvetica;
+        font-size: 4.9px;
+        font-weight: 700;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" x="18.058166" y="9.719158" width="121.785599" height="106.407692"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="st0" x="18.058166" y="9.719158" width="121.785599" height="106.407692"/>
+    </clipPath>
+  </defs>
+  <g class="st14">
+    <line class="st1" x1="134.345367" y1="31.805126" x2="105.512954" y2="99.396686"/>
+    <line class="st1" x1="102.026961" y1="102.067173" x2="87.042571" y2="104.191532"/>
+    <line class="st1" x1="82.132171" y1="103.824085" x2="71.380172" y2="100.632328"/>
+    <line class="st1" x1="66.568175" y1="99.137966" x2="58.730956" y2="96.582805"/>
+    <line class="st1" x1="54.576568" y1="93.996212" x2="47.587768" y2="86.81409"/>
+    <line class="st1" x1="43.842574" y1="83.457813" x2="38.906966" y2="79.615528"/>
+    <line class="st1" x1="35.484573" y1="75.996326" x2="30.685775" y2="69.086727"/>
+    <line class="st1" x1="27.661758" y1="65.05833" x2="24.155364" y2="60.74673"/>
+    <rect class="st13" x="134.39096" y="28.542324" width="1.889999" height="1.889999"/>
+    <rect class="st13" x="103.576171" y="100.772487" width="1.889999" height="1.889999"/>
+    <rect class="st13" x="83.602172" y="103.596683" width="1.889999" height="1.889999"/>
+    <rect class="st13" x="68.020171" y="98.96973" width="1.889999" height="1.889999"/>
+    <rect class="st13" x="55.388961" y="94.857326" width="1.889999" height="1.889999"/>
+    <rect class="st13" x="44.88536" y="84.063427" width="1.889999" height="1.889999"/>
+    <rect class="st13" x="35.974166" y="77.123127" width="1.889999" height="1.889999"/>
+    <rect class="st13" x="28.306167" y="66.069927" width="1.889999" height="1.889999"/>
+    <rect class="st13" x="21.620963" y="57.845134" width="1.889999" height="1.889999"/>
+  </g>
+  <g>
+    <line class="st2" x1="32.036971" y1="116.12685" x2="127.685363" y2="116.12685"/>
+    <line class="st2" x1="32.036971" y1="116.12685" x2="32.036971" y2="118.646846"/>
+    <line class="st2" x1="51.168563" y1="116.12685" x2="51.168563" y2="118.646846"/>
+    <line class="st2" x1="70.295364" y1="116.12685" x2="70.295364" y2="118.646846"/>
+    <line class="st2" x1="89.426971" y1="116.12685" x2="89.426971" y2="118.646846"/>
+    <line class="st2" x1="108.553756" y1="116.12685" x2="108.553756" y2="118.646846"/>
+    <line class="st2" x1="127.685363" y1="116.12685" x2="127.685363" y2="118.646846"/>
+    <text class="st3" transform="translate(29.702041 125.198986)"><tspan x="0" y="0">3</tspan><tspan class="st8" x="2.335938" y="0">0</tspan><tspan x="19.12793" y="0">3</tspan><tspan class="st9" x="21.463867" y="0">5</tspan><tspan x="38.251953" y="0">4</tspan><tspan class="st7" x="40.587891" y="0">0</tspan><tspan class="st4" x="57.380371" y="0">4</tspan><tspan class="st9" x="59.715332" y="0">5</tspan><tspan x="76.503418" y="0">5</tspan><tspan class="st6" x="78.839355" y="0">0</tspan><tspan class="st4" x="95.632324" y="0">55</tspan></text>
+    <line class="st2" x1="18.058166" y1="113.025569" x2="18.058166" y2="18.434734"/>
+    <line class="st2" x1="18.058166" y1="113.025569" x2="15.538047" y2="113.025569"/>
+    <line class="st2" x1="18.058166" y1="89.376209" x2="15.538047" y2="89.376209"/>
+    <line class="st2" x1="18.058166" y1="65.730342" x2="15.538047" y2="65.730342"/>
+    <line class="st2" x1="18.058166" y1="42.08073" x2="15.538047" y2="42.08073"/>
+    <line class="st2" x1="18.058166" y1="18.434734" x2="15.538047" y2="18.434734"/>
+    <text class="st3" transform="translate(12.010299 117.111095) rotate(-90)"><tspan x="0" y="0">0.1</tspan><tspan class="st10" x="5.838379" y="0">6</tspan><tspan x="23.646973" y="0">0.1</tspan><tspan class="st12" x="29.48584" y="0">8</tspan><tspan x="47.290039" y="0">0.2</tspan><tspan class="st10" x="53.128906" y="0">0</tspan><tspan x="70.9375" y="0">0.2</tspan><tspan class="st11" x="76.776367" y="0">2</tspan><tspan x="94.580078" y="0">0.24</tspan></text>
+    <polyline class="st2" points="18.058166 116.12685 139.843749 116.12685 139.843749 9.719142 18.058166 9.719142 18.058166 116.12685"/>
+    <text class="st15" transform="translate(21.686728 6.152205)"><tspan x="0" y="0">CV Bands from a Ridge Regression on Spam Data</tspan></text>
+    <text class="st3" transform="translate(77.199599 132.275687)"><tspan x="0" y="0">df</tspan></text>
+    <text class="st3" transform="translate(4.93238 76.109142) rotate(-90)"><tspan x="0" y="0">Squared Error</tspan></text>
+  </g>
+  <g class="st5">
+    <line class="st2" x1="135.336562" y1="45.311138" x2="135.336562" y2="13.661129"/>
+    <line class="st2" x1="104.521758" y1="110.215534" x2="104.521758" y2="93.215724"/>
+    <line class="st2" x1="84.547759" y1="112.185573" x2="84.547759" y2="96.901042"/>
+    <line class="st2" x1="68.965774" y1="110.054248" x2="68.965774" y2="89.778934"/>
+    <line class="st2" x1="56.333358" y1="105.283771" x2="56.333358" y2="86.324253"/>
+    <line class="st2" x1="45.830962" y1="95.326046" x2="45.830962" y2="74.690723"/>
+    <line class="st2" x1="36.919768" y1="89.635532" x2="36.919768" y2="66.500728"/>
+    <line class="st2" x1="29.250564" y1="79.307132" x2="29.250564" y2="54.722728"/>
+    <line class="st2" x1="22.566566" y1="73.629932" x2="22.566566" y2="43.949138"/>
+  </g>
+</svg>
