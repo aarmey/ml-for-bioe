@@ -1,34 +1,8 @@
 ---
 title: "Fitting And Regression"
 author: Aaron Meyer
+state: Done
 ---
-
-# Application: Paternal *de novo* mutations
-
-### Questions:
-
-- Where do *de novo* mutations arise?
-- Are there factors that influence the rate of *de novo* mutations from one generation to another?
-
-::: {.notes}
-- Use David Q as an example of _de novo_ mutations.
-:::
-
-## Application: Paternal *de novo* mutations
-
-![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./figs/regression/meiosis.svg){fig-alt="Schematic of cells undergoing meiosis." width=2in}
-
-::: {.notes}
-What is different about paternal vs. maternal meiosis?
-:::
-
-## Application: Paternal *de novo* mutations
-
-![Kong *et al*, *Nature*, 2012](./figs/regression/decode1.jpg){fig-alt="Figure from Kong et al showing the family tree of several sample collections." width=2in}
-
-## Application: Paternal *de novo* mutations
-
-![Kong *et al*, *Nature*, 2012](./figs/regression/decode2.jpg){fig-alt="Figure from Kong et al showing a significant correlation between father age and number of de novo mutations." width=2in}
 
 # Project Proposals
 
@@ -43,7 +17,7 @@ More details in final project guidelines.
 
 ## Project Proposals
 
-The proposal should be less than two pages and describe the following items:
+The proposal should be less than one page and describe the following items:
 
 - Why the topic you chose is interesting
 - Demonstrate that your project fits the criteria above
@@ -54,6 +28,35 @@ The proposal should be less than two pages and describe the following items:
 **We are available to discuss your ideas whenever you are ready, and you should discuss your idea with us prior to submitting your proposal.**
 
 *Recommend an early start—the earlier you finalize a proposal the sooner you can begin the project.*
+
+# Application
+
+## Paternal *de novo* mutations
+
+### Questions:
+
+- Where do *de novo* mutations arise?
+- Are there factors that influence the rate of *de novo* mutations from one generation to another?
+
+::: {.notes}
+- Use David Q as an example of _de novo_ mutations.
+:::
+
+## Application: Paternal *de novo* mutations
+
+![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./figs/regression/meiosis.svg){fig-alt="Schematic of cells undergoing meiosis." height=500}
+
+::: {.notes}
+What is different about paternal vs. maternal meiosis?
+:::
+
+## Application: Paternal *de novo* mutations
+
+![Kong *et al*, *Nature*, 2012](./figs/regression/decode1.jpg){fig-alt="Figure from Kong et al showing the family tree of several sample collections." width=2in}
+
+## Application: Paternal *de novo* mutations
+
+![Kong *et al*, *Nature*, 2012](./figs/regression/decode2.jpg){fig-alt="Figure from Kong et al showing a significant correlation between father age and number of de novo mutations." width=2in}
 
 # Fitting
 
@@ -71,7 +74,7 @@ The proposal should be less than two pages and describe the following items:
 
 The *process* of fitting is nothing more than finding the maximum likelihood distribution of models for a set of points.
 
-The key factor is how one defines the problem—i.e. how the distribution is described.
+The key factor is how one defines the problem—i.e., how the distribution is described.
 
 ## Caveats
 
@@ -86,7 +89,7 @@ The key factor is how one defines the problem—i.e. how the distribution is des
 - Von Neumann: The truth is too complicated to allow anything but approximation.
 :::
 
-## Any Fitting Is Dependent On The Correctness Of The Model
+## Any Fitting Depends on Model Correctness
 
 ![ ](./figs/regression/garbage.svg){fig-alt="A chart showing a spurious correlation between two random measurements over time." width=2in}
 
@@ -186,7 +189,7 @@ $$ \beta = \left(X^T X \right)^{-1} X^T y $$
 
 ## Ordinary Least Squares
 
-$\hat{\beta}$ is the maximum likelihood estimate of $\beta$, and has covariance matrix $\sigma^2 \mathbf{S}^{-1}$:
+$\hat{\beta}$ is the maximum likelihood estimate of $\beta$, and has covariance $\sigma^2 \mathbf{S}^{-1}$:
 
 $$\hat{\beta}\sim\left(\beta,\sigma^2 \mathbf{S}^{-1}\right)$$
 
@@ -253,7 +256,7 @@ $$ \frac{\partial \ln L}{\partial \beta} = \frac{1}{\sigma^2}X^T(y-X\beta) $$
 
 ## Implementation
 
-sklearn provides a very basic function for ordinary least squares.
+scikit-learn provides a very basic function for ordinary least squares.
 
 - `sklearn.linear_model.LinearRegression`
   - `fit_intercept`: Should an intercept value be fit?
@@ -261,10 +264,10 @@ sklearn provides a very basic function for ordinary least squares.
 - No tests for significance/model performance included.
 - We'll discuss evaluating the model in depth later.
 
-Or there's an even more bare function in numpy `numpy.linalg.lstsq`.
+Or there's an even more bare function in NumPy: `numpy.linalg.lstsq`.
 
-- Takes input variables `a` and `b`.
-- Solves the equation $ax=b$ by computing a vector $x$ that minimizes the Euclidean 2-norm $\lVert b-ax \rVert^2$.
+- Takes input variables `A` and `B`.
+- Solves the equation $Ax=B$ by computing a vector $x$ that minimizes the Euclidean 2-norm $\lVert B-Ax \rVert^2$.
 
 ## Implementation
 
@@ -321,7 +324,7 @@ for the same construction of $\mathbf{\epsilon}$.
 
 NNLSQ used to be mostly performed by transforming one's data into a linear model.
 
-E.g. taking the ratio of variables, or log-transforming them.
+For instance, by taking the ratio of variables, or log-transforming them.
 
 This is now considered **bad practice**.
 
@@ -345,7 +348,7 @@ We again need to solve for $\beta$ to minimize the sum of squared error:
 
 ### Algorithms
 
-One property we can take advantage of is that the gradient of the SSE w.r.t. $\beta$ at the minimum is zero ($r_i$ is the residual of the ith point):
+One property we can take advantage of is that the gradient of the SSE w.r.t. $\beta$ at the minimum is zero ($r_i$ is the residual of the $i$th point):
 
 $$ {\frac {\partial S}{\partial \beta_j}}=2\sum_i r_i{\frac {\partial r_i}{\partial \beta_j}}=0 $$
 
@@ -361,7 +364,7 @@ $$ {\frac {\partial S}{\partial \beta_j}}=2\sum_i r_i{\frac {\partial r_i}{\part
 
 - $\frac{\partial r_i}{\partial \beta_j}$ is a function of both the nonlinear function and the data.
 - This can be expanded out through a first-order Taylor approximation.
-- Doing so essentially performs ordinary least squares around the current point, for the linearized function.
+- Doing so essentially performs OLS around the current point.
 	- ${\frac{\partial r_i}{\partial \beta_j}}= -J_{ij}$, where $J$ is the Jacobian of the function.
 	- Many NNLSQ solvers require $J$ for this reason: can be approximated by finite differences.
 	- Probably the most common method, Gauss-Newton, uses this property with Newton's method.
@@ -433,7 +436,7 @@ SciPy asks for the residuals at each fitting point, so we need to convert a pred
 
 ~~~python
 def ls_obj_k1(k1, ligs, data):
-	return(data - klotz1(k1,ligs))
+	return data - klotz1(k1, ligs)
 ~~~
 
 ## NNLS Example
@@ -456,7 +459,6 @@ sp.optimize.least_squares(ls_obj_k1, 1., args=(X,Y))
 	   [-0.00199235],
 	   [-0.0039695 ],
 # ...
-	   [-0.03119024],
 	   [-0.01608763],
 	   [-0.00817133]])
 	 message: '`gtol` termination condition is satisfied.'
@@ -506,11 +508,11 @@ sp.optimize.least_squares(ls_obj_k1, 1., args=(X,Y))
 	- GLM can handle other distributions.
 :::
 
-## Review Questions
+## Review Questions {.smaller}
 
-1. Are ordinary least squares or non-linear least-squares guaranteed to find the solution?
-2. How are new points predicted to be distributed in ordinary least squares?
-3. How are new points predicted to be distributed in non-linear least squares?
+1. Are OLS or NNLS guaranteed to find the solution?
+2. How are new points predicted to be distributed in OLS?
+3. How are new points predicted to be distributed in NNLS?
 4. How might you determine whether the assumptions you made when running OLS are valid? (Hint: Think about the tests from lecture 1.)
 5. What is a situation in which the statistical assumptions of OLS can be valid but calculating a solution fails?
 6. You're not sure a function you wrote to calculate the OLS estimator is working correctly. What could you check to ensure you have the right answer? (Hint: Slide 17)
