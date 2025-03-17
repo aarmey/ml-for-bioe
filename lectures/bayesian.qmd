@@ -26,7 +26,7 @@ author: Aaron Meyer (based on slides from Joyce Ho)
 
 ## Two views on how we interpret the world
 
-![https://xkcd.com/1132/](./figs/lec5/frequentists_vs_bayesians.png)
+![https://xkcd.com/1132/](./figs/lec5/frequentists_vs_bayesians.png){width=2in}
 
 ## Bayesian statistics derivation
 
@@ -61,7 +61,7 @@ $$L(\theta; D) = P(D\mid\theta) = \prod_m P(x_m \mid\theta)$$
 - Example: Likelihood for the sequence: H, T, T, H, H
 $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$$
 
-![ ](./figs/lec5/ho5.svg)
+![ ](./figs/lec5/ho5.svg){width=2in}
 
 ::: {.notes}
 - Frequentist: for a fixed parameter, model the data generation process.
@@ -109,9 +109,9 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 - Example: 5 coin tosses with 4 heads, 1 tail
 	- MLE estimate: $$P(\theta) = \tfrac{4}{5} = 0.8$$
 	- Bayesian prediction: $$P(x_{M+1}=H\mid D) = \int\theta P(\theta\mid D)\; d\theta = \tfrac{5}{7}$$
-![ ](./figs/lec5/ho10.png){width=30%}
+![ ](./figs/lec5/ho10.png){width=2in}
 
-# Bayesian inference and MLE
+## Bayesian inference and MLE
 
 - The MLE and Bayesian prediction always differ in practice.
 - However...
@@ -122,13 +122,13 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 - Only gives same answer if our prior distribution is the same as the posterior.
 :::
 
-# Features of the Bayesian approach
+## Features of the Bayesian approach
 
 - Probability is used to describe “physical” randomness and uncertainty regarding the true values of the parameters.
 	- The prior and posterior probabilities represent degrees of belief, before and after seeing the data, respectively.
 - The model and prior are chosen based on the knowledge of the problem and not, in theory, by the amount of data collected or the question we are interested in answering.
 
-# How to choose a prior
+## How to choose a prior
 
 - Objective priors: Noninformative priors that attempt to capture ignorance.
 - Subjective priors: Priors that capture our beliefs as completely as possible. They are subjective but not arbitrary.
@@ -137,7 +137,7 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 	- Robust, able to overcome limitations of mis-specification of prior
 	- Double counting of evidence / overfitting
 
-# Conjugate prior
+## Conjugate prior
 
 - If the posterior distribution are in the same family as prior probability distribution, the prior and posterior are called conjugate distributions
 - All members of the exponential family of distributions have conjugate priors
@@ -153,24 +153,7 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 - If we express a prior, observation with these, we will end up with a conjugate prior distribution out.
 :::
 
-# Linear regression
-
-Exactly what we did in lecture 2!
-
-![ ](./figs/lec5/ho15.pdf){width=70%}
-
-# Bayesian linear regression
-
-- Prior is placed on either the weight, $w$, or the variance, $\sigma$
-- Conjugate prior for $w$ is a normal distribution
-$$P(w)\sim N(\mu_0,S_0)$$
-$$P(w\mid y)\sim N(\mu,S)$$
-$$S^{-1} = S^{-1}_0 + \frac{1}{\sigma^2} X^T X$$
-$$\mu = S\left( S^{-1}_0 \mu_0 + \frac{1}{\sigma^2} X^T y \right)$$
-
-- Mean is weighted average of OLS estimate and prior mean, where weights reflect relative strengths of prior and data information.
-
-# Computing the posterior distribution
+## Computing the posterior distribution
 
 Analytical integration
 ~ Works when “conjugate” prior distributions can be used, which combine nicely with the likelihood—usually not the case.
@@ -184,7 +167,7 @@ Markov chain Monte Carlo
 Variational approximation
 ~ Cleverer way to approximate the posterior and maybe faster than MCMC but not as general and exact.
 
-# Limitations and criticisms of Bayesian methods
+## Limitations and criticisms of Bayesian methods
 
 - It is hard to come up with a prior (subjective) and the assumptions may be wrong
 - Closed world assumption: need to consider all possible hypotheses for the data before observing the data
@@ -216,15 +199,15 @@ Questions:
 	- [emcee](https://github.com/dfm/emcee) (python)
 	- [Stan](https://github.com/stan-dev/stan) (C++, python, R)
 
-### Lecture 5
+## Review Questions
 
 1. What is a prior? How does one go about making one?
 2. Can a prior be based on data? If so, how is this data related to the experiment being modeled (the observed)?
 3. What are three differences between a Bayesian and maximum likelihood (frequentist) approach?
 4. When will a Bayesian and maximum likelihood approach agree?
-5. You are asked to provide up-to-date estimates of the 6-month failure rate for a stent going to market. A previous device had 3 devices out of 100 fails within 6 months, and you strongly suspect this device is similar. Provide the Bayesian estimate of the failure rate (i.e. $$P(FR \vert N,m))$$ given N devices have made it to 6 months, and m have failed. (Hint: Devices **either** pass or fail here. This follows a Binomial distribution.)
+5. You are asked to provide up-to-date estimates of the 6-month failure rate for a stent going to market. A previous device had 3 devices out of 100 fails within 6 months, and you strongly suspect this device is similar. Provide the Bayesian estimate of the failure rate (i.e. $P(FR \vert N,m))$ given N devices have made it to 6 months, and m have failed. (Hint: Devices **either** pass or fail here. This follows a Binomial distribution.)
 6. What would be a reasonable estimate if you had no previous device's data?
 7. What do you expect to happen to a posterior distribution as you add more and more data?
-8. What does the integral of $$p(a \vert b) p(b \vert c) \delta b$$ give you? Why is this useful?
+8. What does the integral of $p(a \vert b) p(b \vert c) \delta b$ give you? Why is this useful?
 
 
