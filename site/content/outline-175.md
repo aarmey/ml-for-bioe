@@ -4,7 +4,7 @@ title: "Course outline - BE 175"
 
 ### Week 1, March 31 – April 4
 
-- [Monday: Statistics review](../lectures/lecture1.html)
+- Monday: Statistics review ([slides](../lectures/lecture1.html), [notes](../notes/lecture1.html))
 - [Wednesday: Bayesian vs. frequentist approaches](../lectures/bayesian.html) (pre-recorded)
 - Lab: Programming primer
   - Due April 10th at 11:59 pm
@@ -14,7 +14,7 @@ title: "Course outline - BE 175"
 
 ### Week 2, April 7 – 11
 
-- [Monday: Fitting & Regression](../lectures/regression.html)
+- Monday: Fitting & Regression ([slides](../lectures/regression.html), [notes](../notes/regression.html))
   - [Example Notebook](public/examples/OLS-Example.ipynb)
 - [Wednesday: Dynamical models](../lectures/dynamics.html)
 - Lab: Statistics lab

@@ -13,7 +13,7 @@ format:
       y: 0.5in
   html:
     embed-resources: true
-    theme: [default, pubnotes.scss]
+    theme: [default, notes.scss]
   revealjs:
     theme: [default, clean.scss]
     menu:

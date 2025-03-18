@@ -21,7 +21,7 @@ jobs:
       with:
         version: 1.6.39
     - name: Build slides and handouts
-      run: make slides && make notes
+      run: make slides && make pubnotes
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
@@ -41,11 +41,6 @@ jobs:
       with:
         args: "--base . --exclude 'ml-for-bioe' --accept '100..=103,200..=299,403,409' --cache --max-cache-age 14d site/public"
 
-    - name: Upload lecture notes
-      uses: actions/upload-artifact@v4
-      with:
-        name: notes
-        path: notes
     - name: Upload artifact
       if: github.ref == 'refs/heads/main'
       uses: actions/upload-pages-artifact@v3

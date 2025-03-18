@@ -1,5 +1,9 @@
 notes:
-	quarto render lectures --output-dir=../notes/ --to html
+	quarto render lectures --output-dir=../notes/ --to html --profile self
+
+pubnotes:
+	@ mkdir -p site/public
+	quarto render lectures --output-dir=../site/public/notes/ --to html
 
 slides:
 	@ mkdir -p site/public
