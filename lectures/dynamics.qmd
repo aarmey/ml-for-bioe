@@ -3,7 +3,7 @@ title: Dynamical models
 author: Aaron Meyer (based on slides from Bruce Tidor)
 ---
 
-# Ordinary Differential Equations
+## Ordinary Differential Equations
 
 - ODE models are typically most useful when we already have an idea of the system components
 	- As opposed to *data-driven* approaches when we don't know how to connect the data
@@ -13,9 +13,14 @@ author: Aaron Meyer (based on slides from Bruce Tidor)
 	- Can quickly explode in complexity
 	- May rely on variables that are impossible to measure
 
-# Applications of ODE models: Molecular kinetics
+::: {.notes}
+- ODEs are extremely valuable
+- During fitting, ML models are essentially a dynamic process
+:::
 
-Remember BE100!
+## Applications of ODE models: Molecular kinetics
+
+Remember BE 110!
 
 Let's say we have to ligands that dimerize, then this dimer binds to a receptor as one unit:
 
@@ -30,19 +35,24 @@ If we want to know about how these species interact, we can model their behavior
 - $\frac{dL_D}{dt} = k_1 L_f^2 - k_2 L_D R_f + k_{-2} R_b$
 - $\frac{dR_b}{dt} = k_2 L_D R_f - k_{-2} R_b$
 - $\frac{dR_f}{dt} = k_{-2} R_b - k_2 L_D R_f$
+- What could we measure here?
+	- How would that be implemented?
+- Function-wise what do we need here?
 :::
 
-# Applications of ODE models: Pharmacokinetics
+## Applications of ODE models: Pharmacokinetics
 
 
-![ ](./figs/lec9/twoComp.pdf)
+![ ](./figs/dynamics/twoComp.pdf)
 
 ::: {.notes}
 - Copy to board
 - What does each compartment represent?
+- $V_1 \frac{dC_1}{dt} = k_e C_1 V_1 - k_1 C_1 V_1 + k_2 C_2 V_2$
+- $V_2 \frac{dC_2}{dt} = k_1 C_1 V_1 + k_2 C_2 V_2$
 :::
 
-# Applications of ODE models: Pharmacokinetics
+## Applications of ODE models: Pharmacokinetics
 
 - Central compartment corresponds to the plasma in the body.
 	- $V_1$ is the distribution volume of plasma in the body.
@@ -51,7 +61,7 @@ If we want to know about how these species interact, we can model their behavior
 	- $V_2$ is the volume of these group of organs.
 	- $C_2$ is the concentration of drug in the group of organs.
 
-# Applications of ODE models: Pharmacokinetics
+## Applications of ODE models: Pharmacokinetics
 
 - $k_e$ is the rate constant for clearance.
 	- $k_e C_1 V_1$ is the mass of drug/time that's cleared.
@@ -61,7 +71,7 @@ If we want to know about how these species interact, we can model their behavior
 	- $k_2 C_2 V_2$ is the mass of drug/time that transfers from the peripheral to the central compartment.
 
 
-# Applications of ODE models: Pharmacokinetics
+## Applications of ODE models: Pharmacokinetics
 
 - Have a bolus i.v. injection
 	- No drug in both compartments for t<0
@@ -75,7 +85,7 @@ If we want to know about how these species interact, we can model their behavior
 Work out equations above. Going to learn a mathematical trick to solve!
 :::
 
-# Applications of ODE models: Population kinetics
+## Applications of ODE models: Population kinetics
 
 #### Lotka-Volterra Equations
 
@@ -85,7 +95,7 @@ Work out equations above. Going to learn a mathematical trick to solve!
 - $\dot{y} = \delta x y - \gamma y$
 ::: 
 
-# Note about difference from other models we've covered
+## Note about difference from other models we've covered
 
 - ODE models can be part of inference techniques just as elsewhere
 	- If we have a symbolic integral, then fitting an ODE model to data is just non-linear least squares
@@ -94,7 +104,7 @@ Work out equations above. Going to learn a mathematical trick to solve!
 	- Can only focus on the input-output we get from the black box
 - In this respect, what we do with ODE models will be very similar to what you could do with any computational simulation
 
-# Analytic vs Numerical Modeling
+## Analytic vs Numerical Modeling
 
 - Analytic
 	- Wider range of parameters
@@ -112,7 +122,6 @@ Reality often requires handling in between:
 - Use analytic treatment to study entire parameter space
 - Use numerical treatment to study interesting regions
 - Use both to handle complex behavior
-
 
 # Stability Analysis
 
@@ -135,18 +144,25 @@ Walk through 1D case of stability.
 - Linear systems tend to be separable (effective decoupling)
 - Non-linear systems exhibit interesting properties
 
+::: {.notes}
+- Go through how linear systems come to a solution.
+- $\frac{dx'}{dt} = c_1 x$
+- What is this like if $c_1$ is negative? Positive? Imaginary?
+:::
+
 # Linearity & Separability
 
-![ ](./figs/lec9/nonlin-2a.pdf)
+![ ](./figs/dynamics/nonlin-2a.pdf)
 
 ::: {.notes}
-- Note how linear systems come to a solution
+- What is a Jacobian?
+- What is steady-state here?
 - Combined with above relationship, this means we can solve linear systems as a special case
 :::
 
 # Phase Portraits
 
-![ ](./figs/lec9/nonlin-3.pdf)
+![ ](./figs/dynamics/nonlin-3.pdf)
 
 Non-linear systems
 
@@ -155,7 +171,7 @@ Non-linear systems
 
 # Features in Phase Portraits
 
-![ ](./figs/lec9/nonlin-3a.pdf)
+![ ](./figs/dynamics/nonlin-3a.pdf)
 
 ::: {.notes}
 - Fixed Points (A, B, C). Steady states
@@ -175,7 +191,7 @@ Non-linear systems
 
 # Example – fixed points
 
-![ ](./figs/lec9/nonlin-4a.pdf)
+![ ](./figs/dynamics/nonlin-4a.pdf)
 
 # Example – stability
 
@@ -198,13 +214,13 @@ Non-linear systems
 
 Nullclines are the sets of points for which $\dot{x} = 0$ or $\dot{y} = 0$, so flow is either horizontal or vertical.
 
-![ ](./figs/lec9/nonlin-5a.pdf)
+![ ](./figs/dynamics/nonlin-5a.pdf)
 
 # Example – computed
 
 #### Step 4: Plot flow lines
 
-![ ](./figs/lec9/nonlin-6.pdf)
+![ ](./figs/dynamics/nonlin-6.pdf)
 
 # Existence & Uniqueness
 
@@ -215,23 +231,27 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 # Linearization About Fixed Points
 
-![ ](./figs/lec9/nonlin-7.pdf)
+![ ](./figs/dynamics/nonlin-7.pdf)
 
 # Solving Linearized Systems
 
-![ ](./figs/lec9/nonlin-7a.pdf)
+![ ](./figs/dynamics/nonlin-7a.pdf)
+
+::: {.notes}
+- So if we move in $\vec{v}$ (remember that this is delta), $\vec{A}$ has the same effect as $\lambda I$.
+:::
 
 # Example
 
-![ ](./figs/lec9/nonlin-8.pdf)
+![ ](./figs/dynamics/nonlin-8.pdf)
 
 # More Examples
 
-![ ](./figs/lec9/nonlin-8a.pdf)
+![ ](./figs/dynamics/nonlin-8a.pdf)
 
 # Classification of Fixed Points
 
-![ ](./figs/lec9/nonlin-9.pdf)
+![ ](./figs/dynamics/nonlin-9.pdf)
 
 # Relevance for Nonlinear Dynamics
 
@@ -250,7 +270,7 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 # Saddle-Node Bifurcation
 
-![ ](./figs/lec9/nonlin-10a.pdf)
+![ ](./figs/dynamics/nonlin-10a.pdf)
 
 # Genetic Control Network
 
@@ -259,7 +279,7 @@ Griffith (1971) model of genetic control:
 - x = protein concentration
 - y = mRNA concentration
 
-![ ](./figs/lec9/nonlin-11.pdf)
+![ ](./figs/dynamics/nonlin-11.pdf)
 
 # Genetic Control Network
 
@@ -268,7 +288,7 @@ Biochemical version of a bistable switch:
 1. Only stable points are no protein and mRNA or a fixed composition
 2. If degradation rates too great, only stable point is origin
 
-![ ](./figs/lec9/nonlin-12.pdf)
+![ ](./figs/dynamics/nonlin-12.pdf)
 
 ::: {.notes}
 - How could we compare this to data?
@@ -368,7 +388,7 @@ plt.show()
 
 # Implementation - Example
 
-![ ](./figs/lec9/scipy-integrate-odeint-1.png){width=80%}
+![ ](./figs/dynamics/scipy-integrate-odeint-1.png){width=80%}
 
 # Implementation - Stiff Systems
 
