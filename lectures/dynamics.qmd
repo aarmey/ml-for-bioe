@@ -3,7 +3,7 @@ title: Dynamical models
 author: Aaron Meyer (based on slides from Bruce Tidor)
 ---
 
-## Ordinary Differential Equations
+# Ordinary Differential Equations
 
 - ODE models are typically most useful when we already have an idea of the system components
 	- As opposed to *data-driven* approaches when we don't know how to connect the data
@@ -18,7 +18,9 @@ author: Aaron Meyer (based on slides from Bruce Tidor)
 - During fitting, ML models are essentially a dynamic process
 :::
 
-## Applications of ODE models: Molecular kinetics
+# Applications of ODE models
+
+## Molecular kinetics
 
 Remember BE 110!
 
@@ -40,10 +42,27 @@ If we want to know about how these species interact, we can model their behavior
 - Function-wise what do we need here?
 :::
 
-## Applications of ODE models: Pharmacokinetics
+## Pharmacokinetics
 
+```{mermaid}
+flowchart LR
+    drugInjection("drug injection") --> C1
+    
+    subgraph CentralCompartment["central compartment"]
+        C1["C<sub>1</sub><br/>V<sub>1</sub>"]
+    end
+    
+    subgraph PeripheralCompartment["peripheral compartment"]
+        C2["C<sub>2</sub><br/>V<sub>2</sub>"]
+    end
+    
+    C1 -->|k1| C2
+    C2 -->|k2| C1
+    C1 -->|ke| Elimination
 
-![ ](./figs/dynamics/twoComp.pdf)
+    style CentralCompartment rect
+    style PeripheralCompartment rect
+```
 
 ::: {.notes}
 - Copy to board
@@ -123,7 +142,7 @@ Reality often requires handling in between:
 - Use numerical treatment to study interesting regions
 - Use both to handle complex behavior
 
-# Stability Analysis
+## Stability Analysis
 
 - Can solve for steady-states of a system $$\frac{\delta F}{\delta t} = 0$$
 - Results of this can be both stable or unstable points
@@ -137,7 +156,7 @@ Reality often requires handling in between:
 Walk through 1D case of stability.
 :::
 
-# Generalization
+## Generalization
 
 - Linear models are easier to simulate and understand than non-linear
 	- Linearity: If $\mathbf{x}_1$ and $\mathbf{x}_2$ are both solutions, then $c_1 \mathbf{x}_1 + c_2 \mathbf{x}_2$ is also a solution
@@ -150,9 +169,9 @@ Walk through 1D case of stability.
 - What is this like if $c_1$ is negative? Positive? Imaginary?
 :::
 
-# Linearity & Separability
+## Linearity & Separability
 
-![ ](./figs/dynamics/nonlin-2a.pdf)
+![ ](./figs/dynamics/nonlin-2a.svg)
 
 ::: {.notes}
 - What is a Jacobian?
@@ -160,18 +179,22 @@ Walk through 1D case of stability.
 - Combined with above relationship, this means we can solve linear systems as a special case
 :::
 
-# Phase Portraits
+## Phase Portraits
 
-![ ](./figs/dynamics/nonlin-3.pdf)
+$$
+\dot{\vec{x}} = \vec{f}(\vec{x})
+$$
+
+![ ](./figs/dynamics/phase.svg)
 
 Non-linear systems
 
 - No general analytic approach to finding trajectory
 - So, goal is to understand qualitative trajectory behavior
 
-# Features in Phase Portraits
+## Features in Phase Portraits
 
-![ ](./figs/dynamics/nonlin-3a.pdf)
+![ ](./figs/dynamics/nonlin-3a.svg)
 
 ::: {.notes}
 - Fixed Points (A, B, C). Steady states
@@ -180,7 +203,7 @@ Non-linear systems
 - Stability of fixed points and closed orbits (A, B, and C are unstable, D is stable)
 :::
 
-# Solving a Set of Equations for Phase Portrait
+## Solving a Set of Equations for Phase Portrait
 
 - Numerical computation
 	- i.e., Runge-Kutta integration
@@ -189,11 +212,11 @@ Non-linear systems
 - Analytic
 	- Elegant, though not always tractable
 
-# Example – fixed points
+## Example – fixed points
 
-![ ](./figs/dynamics/nonlin-4a.pdf)
+![ ](./figs/dynamics/nonlin-4a.svg)
 
-# Example – stability
+## Example – stability
 
 #### Step 2: Determine stability of fixed points
 
@@ -208,52 +231,57 @@ Non-linear systems
 
 **Thus, overall solution grows exponentially in at least one dimension, and so is unstable.**
 
-# Example – nullclines
+## Example – nullclines
 
 #### Step 3: Sketch nullclines
 
 Nullclines are the sets of points for which $\dot{x} = 0$ or $\dot{y} = 0$, so flow is either horizontal or vertical.
 
-![ ](./figs/dynamics/nonlin-5a.pdf)
+![ ](./figs/dynamics/nonlin-5a.png)
 
-# Example – computed
+## Example – computed
 
 #### Step 4: Plot flow lines
 
-![ ](./figs/dynamics/nonlin-6.pdf)
+![ ](./figs/dynamics/nonlin-6.svg)
 
-# Existence & Uniqueness
+::: {.notes}
+- This is a non-linear version of a saddle point.
+- Can we identify saddle-like behavior in linearized version of system?
+:::
+
+## Existence & Uniqueness
 
 Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 - Existence and uniqueness of solution guaranteed if $f$ is continuously differentiable
 - Corollary: Trajectories **do not** intersect, because if they did, then there would be two solutions for the same initial condition at the crossing point
 
-# Linearization About Fixed Points
+## Linearization About Fixed Points
 
-![ ](./figs/dynamics/nonlin-7.pdf)
+![ ](./figs/dynamics/nonlin-7.svg)
 
-# Solving Linearized Systems
+## Solving Linearized Systems
 
-![ ](./figs/dynamics/nonlin-7a.pdf)
+![ ](./figs/dynamics/nonlin-7a.svg)
 
 ::: {.notes}
 - So if we move in $\vec{v}$ (remember that this is delta), $\vec{A}$ has the same effect as $\lambda I$.
 :::
 
-# Example
+## Example
 
-![ ](./figs/dynamics/nonlin-8.pdf)
+![ ](./figs/dynamics/nonlin-8.svg)
 
-# More Examples
+## More Examples
 
-![ ](./figs/dynamics/nonlin-8a.pdf)
+![ ](./figs/dynamics/types.svg)
 
-# Classification of Fixed Points
+## Classification of Fixed Points
 
-![ ](./figs/dynamics/nonlin-9.pdf)
+![ ](./figs/dynamics/nonlin-9.svg)
 
-# Relevance for Nonlinear Dynamics
+## Relevance for Nonlinear Dynamics
 
 - So, we have said that we can find fixed points of nonlinear dynamics, linearize about each fixed point, and characterize the dynamics about each fixed point in the non-linear model by the corresponding linear model.
 - Is this always true? Do the nonlinearities ever disturb this approach?
@@ -268,27 +296,27 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 - **Many** will be qualitatively similar. The interesting ones will be where a small change of parameters creates a qualitative change in the phase portrait (bifurcations).
 - What we will find is that fixed points & closed orbits can be created/destroyed and stabilized/destabilized.
 
-# Saddle-Node Bifurcation
+## Saddle-Node Bifurcation
 
-![ ](./figs/dynamics/nonlin-10a.pdf)
+![ ](./figs/dynamics/10a.svg)
 
-# Genetic Control Network
+# Example: Genetic Control Network
 
 Griffith (1971) model of genetic control:
 
 - x = protein concentration
 - y = mRNA concentration
 
-![ ](./figs/dynamics/nonlin-11.pdf)
+![ ](./figs/dynamics/gene-expr1.svg)
 
-# Genetic Control Network
+## Genetic Control Network
 
 Biochemical version of a bistable switch:
 
 1. Only stable points are no protein and mRNA or a fixed composition
 2. If degradation rates too great, only stable point is origin
 
-![ ](./figs/dynamics/nonlin-12.pdf)
+![ ](./figs/dynamics/gene-expr.svg)
 
 ::: {.notes}
 - How could we compare this to data?
@@ -297,7 +325,9 @@ Biochemical version of a bistable switch:
 - Measure over time
 :::
 
-# Implementation - Testing
+# Implementation
+
+## Testing
 
 - Many properties one can test
 	- Mass balance
@@ -308,7 +338,7 @@ Biochemical version of a bistable switch:
 Go through example of mass balance at deriv and solution.
 :::
 
-# Implementation
+## Python Packages
 
 SciPy provides two interfaces for ODE solving:
 
@@ -320,7 +350,7 @@ Notes:
 - Both can solve stiff and non-stiff equations.
 - ode has a number of different methods. Pay attention to the "set_integrator" option.
 
-# Implementation - Example
+## Code Example: Pendulum Oscillation
 
 The second order differential equation for the angle $\theta$ of a pendulum acted on by gravity with friction can be written:
 
@@ -332,7 +362,7 @@ $$\theta'(t) = \omega(t)$$
 
 $$\omega'(t) = -b*\omega(t) - c*\sin(\theta(t))$$
 
-# Implementation - Example
+## Pendulum Oscillation
 
 Let y be the vector $[\theta, \omega]$. We implement this system in python as:
 
@@ -349,7 +379,7 @@ We assume the constants are $b = 0.25$ and $c = 5.0$:
 b, c = 0.25, 5.0
 ```
 
-# Implementation - Example
+## Pendulum Oscillation
 
 For initial conditions, we assume the pendulum is nearly vertical with $\theta(0) = \pi - 0.1$, and it initially at rest, so $\omega(0) = 0$. Then the vector of initial conditions is
 
@@ -363,7 +393,7 @@ We generate a solution 101 evenly spaced samples in the interval $0 \leq t \leq 
 t = np.linspace(0, 10, 101)
 ```
 
-# Implementation - Example
+## Pendulum Oscillation
 
 Call odeint to generate the solution. To pass the parameters b and c to `pend`, we give them to `odeint` using the `args` argument.
 
@@ -374,7 +404,7 @@ sol = odeint(pend, y0, t, args=(b, c))
 
 The solution is an array with shape (101, 2). The first column is $\theta(t)$, and the second is $\omega(t)$. The following code plots both components.
 
-# Implementation - Example
+## Pendulum Oscillation
 
 ```python
 import matplotlib.pyplot as plt
@@ -386,11 +416,11 @@ plt.grid()
 plt.show()
 ```
 
-# Implementation - Example
+## Pendulum Oscillation
 
 ![ ](./figs/dynamics/scipy-integrate-odeint-1.png){width=80%}
 
-# Implementation - Stiff Systems
+## Implementation Note: Stiff Systems
 
 - Very roughly, most ODE solvers take steps inversely proportional to the rate at which the state is changing
 - For systems where there are two processes operating on differing timescales, this can be problematic
@@ -401,7 +431,7 @@ plt.show()
 - `odeint` can automatically find this for you
 	- Sometimes it's faster/better to provide this as parameter `Dfun`
 
-# Implementation - Matrix Exponential
+## Implementation Note: Matrix Exponential
 
 If $J$ is the Jacobian matrix of an ODE model, $y(t) = e^{Jt} y_0$.
 
@@ -413,13 +443,13 @@ Matrix exponential is also implemented.
 
 For linear systems, this can be >1000x faster.
 
-# Further Reading
+# Reading & Resources
 
-- [scipy.linalg.expm](https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.linalg.expm.html)
-- [scipy.integrate.odeint](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html)
-- [Steven Strogatz, Nonlinear Dynamics and Chaos](https://www.biodyn.ro/course/literatura/Nonlinear_Dynamics_and_Chaos_2018_Steven_H._Strogatz.pdf)
+- 💾: [scipy.linalg.expm](https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.linalg.expm.html)
+- 💾: [scipy.integrate.odeint](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html)
+- 📖: [Steven Strogatz, Nonlinear Dynamics and Chaos](https://www.biodyn.ro/course/literatura/Nonlinear_Dynamics_and_Chaos_2018_Steven_H._Strogatz.svg)
 
-### Lecture 9
+## Review Questions
 
 1. What is the steady-state solution to an ODE model? How do you solve for them?
 2. What is a phase-space diagram?

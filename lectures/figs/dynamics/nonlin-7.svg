@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 356 207">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st2, .st3, .st4 {
+        font-family: TimesNewRomanPS-ItalicMT, 'Times New Roman';
+        font-style: italic;
+      }
+
+      .st2, .st5 {
+        font-size: 12.15px;
+      }
+
+      .st3, .st6 {
+        font-size: 12.1399px;
+      }
+
+      .st7, .st8 {
+        fill: #33c;
+      }
+
+      .st9 {
+        font-size: 7.0875px;
+      }
+
+      .st9, .st10, .st11, .st12, .st13, .st5, .st6 {
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+      }
+
+      .st10 {
+        font-size: 7.0816px;
+      }
+
+      .st11 {
+        font-size: 5.9126px;
+      }
+
+      .st12, .st8, .st14 {
+        font-size: 9px;
+      }
+
+      .st15, .st14 {
+        fill: lime;
+      }
+
+      .st8, .st14 {
+        font-family: ArialNarrow, 'Arial Narrow';
+      }
+
+      .st1 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .42px;
+      }
+
+      .st16 {
+        clip-path: url(#clippath-17);
+      }
+
+      .st17 {
+        clip-path: url(#clippath-19);
+      }
+
+      .st18 {
+        clip-path: url(#clippath-11);
+      }
+
+      .st19 {
+        clip-path: url(#clippath-16);
+      }
+
+      .st20 {
+        clip-path: url(#clippath-18);
+      }
+
+      .st21 {
+        clip-path: url(#clippath-10);
+      }
+
+      .st22 {
+        clip-path: url(#clippath-15);
+      }
+
+      .st23 {
+        clip-path: url(#clippath-13);
+      }
+
+      .st24 {
+        clip-path: url(#clippath-14);
+      }
+
+      .st25 {
+        clip-path: url(#clippath-12);
+      }
+
+      .st26 {
+        clip-path: url(#clippath-27);
+      }
+
+      .st27 {
+        clip-path: url(#clippath-26);
+      }
+
+      .st28 {
+        clip-path: url(#clippath-20);
+      }
+
+      .st29 {
+        clip-path: url(#clippath-21);
+      }
+
+      .st30 {
+        clip-path: url(#clippath-22);
+      }
+
+      .st31 {
+        clip-path: url(#clippath-23);
+      }
+
+      .st32 {
+        clip-path: url(#clippath-24);
+      }
+
+      .st33 {
+        clip-path: url(#clippath-25);
+      }
+
+      .st34 {
+        letter-spacing: -.000109em;
+      }
+
+      .st35 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st36 {
+        clip-path: url(#clippath-3);
+      }
+
+      .st37 {
+        clip-path: url(#clippath-4);
+      }
+
+      .st38 {
+        clip-path: url(#clippath-2);
+      }
+
+      .st39 {
+        clip-path: url(#clippath-7);
+      }
+
+      .st40 {
+        clip-path: url(#clippath-6);
+      }
+
+      .st41 {
+        clip-path: url(#clippath-9);
+      }
+
+      .st42 {
+        clip-path: url(#clippath-8);
+      }
+
+      .st43 {
+        clip-path: url(#clippath-5);
+      }
+
+      .st13, .st4 {
+        font-size: 10.1358px;
+      }
+
+      .st44 {
+        letter-spacing: -.000054em;
+      }
+
+      .st45 {
+        letter-spacing: .001085em;
+      }
+
+      .st46 {
+        letter-spacing: .001031em;
+      }
+
+      .st47 {
+        letter-spacing: .000977em;
+      }
+
+      .st48 {
+        letter-spacing: -.009983em;
+      }
+
+      .st49 {
+        letter-spacing: -.003038em;
+      }
+
+      .st50 {
+        letter-spacing: -.002007em;
+      }
+
+      .st51 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" x="309.279999" y="36.119995" width="4.079987" height="3.359985"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="st0" x="276.160004" y="36.119995" width="4.079987" height="3.359985"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="st0" x="245.380005" y="36.119995" width="4.079987" height="3.359985"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="st0" x="212.26001" y="36.119995" width="4.079987" height="3.359985"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <rect class="st0" x="178.660004" y="36.119995" width="6.119995" height="3.359985"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="st0" x="304.720001" y="35.279968" width="3.540009" height="4.200012"/>
+    </clipPath>
+    <clipPath id="clippath-6">
+      <rect class="st0" x="286.779999" y="35.279968" width="3.540009" height="4.200012"/>
+    </clipPath>
+    <clipPath id="clippath-7">
+      <rect class="st0" x="240.820007" y="35.279968" width="3.540009" height="4.200012"/>
+    </clipPath>
+    <clipPath id="clippath-8">
+      <rect class="st0" x="222.940002" y="35.279968" width="3.540009" height="4.200012"/>
+    </clipPath>
+    <clipPath id="clippath-9">
+      <rect class="st0" x="203.980011" y="36.119995" width="7.859985" height="3.359985"/>
+    </clipPath>
+    <clipPath id="clippath-10">
+      <rect class="st0" x="309.279999" y="39.47998" width="4.079987" height="10.320007"/>
+    </clipPath>
+    <clipPath id="clippath-11">
+      <rect class="st0" x="276.160004" y="39.47998" width="4.079987" height="10.320007"/>
+    </clipPath>
+    <clipPath id="clippath-12">
+      <rect class="st0" x="245.380005" y="39.47998" width="4.079987" height="10.320007"/>
+    </clipPath>
+    <clipPath id="clippath-13">
+      <rect class="st0" x="212.26001" y="39.47998" width="4.079987" height="10.320007"/>
+    </clipPath>
+    <clipPath id="clippath-14">
+      <rect class="st0" x="178.660004" y="39.47998" width="6.119995" height="10.320007"/>
+    </clipPath>
+    <clipPath id="clippath-15">
+      <rect class="st0" x="304.720001" y="39.47998" width="3.540009" height="3.780029"/>
+    </clipPath>
+    <clipPath id="clippath-16">
+      <rect class="st0" x="286.779999" y="39.47998" width="3.540009" height="3.780029"/>
+    </clipPath>
+    <clipPath id="clippath-17">
+      <rect class="st0" x="240.820007" y="39.47998" width="3.540009" height="3.780029"/>
+    </clipPath>
+    <clipPath id="clippath-18">
+      <rect class="st0" x="222.940002" y="39.47998" width="3.540009" height="3.780029"/>
+    </clipPath>
+    <clipPath id="clippath-19">
+      <rect class="st0" x="280.720001" y="39.47998" width="5.76001" height="10.26001"/>
+    </clipPath>
+    <clipPath id="clippath-20">
+      <rect class="st0" x="216.820007" y="39.47998" width="5.76001" height="10.26001"/>
+    </clipPath>
+    <clipPath id="clippath-21">
+      <rect class="st0" x="203.980011" y="39.47998" width="7.859985" height="10.26001"/>
+    </clipPath>
+    <clipPath id="clippath-22">
+      <rect class="st0" x="255.640015" y="39.47998" width="6.660004" height="10.200012"/>
+    </clipPath>
+    <clipPath id="clippath-23">
+      <rect class="st0" x="190.839996" y="39.47998" width="6.660004" height="10.200012"/>
+    </clipPath>
+    <clipPath id="clippath-24">
+      <rect class="st0" x="99.279999" y="127.019958" width="3" height="2.460022"/>
+    </clipPath>
+    <clipPath id="clippath-25">
+      <rect class="st0" x="99.279999" y="129.47998" width="3" height="4.26001"/>
+    </clipPath>
+    <clipPath id="clippath-26">
+      <rect class="st0" x="94.179993" y="129.480042" width="4.800003" height="9.659973"/>
+    </clipPath>
+    <clipPath id="clippath-27">
+      <rect class="st0" x="75.940002" y="129.480042" width="4.800003" height="9.659973"/>
+    </clipPath>
+  </defs>
+  <g class="st51">
+    <text class="st5" transform="translate(309.280273 47.040039)"><tspan x="0" y="0">)</tspan></text>
+  </g>
+  <g class="st35">
+    <text class="st5" transform="translate(276.160156 47.040039)"><tspan x="0" y="0">(</tspan></text>
+  </g>
+  <g class="st38">
+    <text class="st5" transform="translate(245.379883 47.040039)"><tspan x="0" y="0">)</tspan></text>
+  </g>
+  <g class="st36">
+    <text class="st5" transform="translate(212.259766 47.040039)"><tspan x="0" y="0">(</tspan></text>
+  </g>
+  <g class="st37">
+    <text class="st5" transform="translate(178.660156 47.040039)"><tspan x="0" y="0">0</tspan></text>
+  </g>
+  <g>
+    <text class="st5" transform="translate(342.700195 24.180176)"><tspan x="0" y="0">)</tspan></text>
+    <text class="st5" transform="translate(324.579102 24.180176)"><tspan x="0" y="0">,</tspan></text>
+    <text class="st5" transform="translate(309.519531 24.180176)"><tspan x="0" y="0">(</tspan></text>
+    <text class="st5" transform="translate(281.860352 24.180176)"><tspan x="0" y="0">point </tspan></text>
+    <text class="st5" transform="translate(278.980469 24.180176)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st5" transform="translate(254.321289 24.180176)"><tspan x="0" y="0">fixed</tspan></text>
+    <text class="st5" transform="translate(227.021484 24.180176)"><tspan x="0" y="0" xml:space="preserve"> with </tspan></text>
+    <text class="st5" transform="translate(193.960938 24.180176)"><tspan x="0" y="0">system</tspan></text>
+    <text class="st5" transform="translate(164.200684 24.180176)"><tspan x="0" y="0">linear </tspan></text>
+    <text class="st5" transform="translate(155.86084 24.180176)"><tspan x="0" y="0">-</tspan></text>
+    <text class="st5" transform="translate(132.700684 24.180176)"><tspan x="0" y="0">non</tspan></text>
+    <text class="st5" transform="translate(129.880859 24.180176)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st5" transform="translate(124.36084 24.180176)"><tspan x="0" y="0">a</tspan></text>
+    <text class="st5" transform="translate(121.720703 24.180176)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st5" transform="translate(110.681152 24.180176)"><tspan x="0" y="0">be</tspan></text>
+    <text class="st5" transform="translate(107.861328 24.180176)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st5" transform="translate(97.240723 31.320801)"><tspan x="0" y="0">)</tspan></text>
+    <text class="st5" transform="translate(83.741211 31.320801)"><tspan x="0" y="0">,</tspan></text>
+    <text class="st5" transform="translate(73.300293 31.320801)"><tspan x="0" y="0">(</tspan></text>
+    <text class="st5" transform="translate(98.139648 17.460938)"><tspan x="0" y="0">)</tspan></text>
+    <text class="st5" transform="translate(84.699707 17.460938)"><tspan x="0" y="0">,</tspan></text>
+    <text class="st5" transform="translate(74.259277 17.460938)"><tspan x="0" y="0">(</tspan></text>
+    <text class="st5" transform="translate(11.858887 24.181152)"><tspan x="0" y="0" xml:space="preserve">Let  </tspan></text>
+  </g>
+  <g class="st43">
+    <text class="st9" transform="translate(304.719727 41.580078)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <g class="st40">
+    <text class="st9" transform="translate(286.780273 41.580078)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <g class="st39">
+    <text class="st9" transform="translate(240.820312 41.580078)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <g class="st42">
+    <text class="st9" transform="translate(222.94043 41.580078)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <g>
+    <text class="st9" transform="translate(338.080078 18.780273)"><tspan x="0" y="0">*</tspan></text>
+    <text class="st9" transform="translate(320.200195 18.780273)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <g class="st41">
+    <text class="st2" transform="translate(206.019531 47.040039)"><tspan x="0" y="0">f</tspan></text>
+  </g>
+  <g>
+    <text class="st2" transform="translate(332.200195 24.180176)"><tspan x="0" y="0">y</tspan></text>
+    <text class="st2" transform="translate(314.44043 24.180176)"><tspan x="0" y="0">x</tspan></text>
+    <text class="st2" transform="translate(91.360352 31.320801)"><tspan x="0" y="0">y</tspan></text>
+    <text class="st2" transform="translate(78.220215 31.320801)"><tspan x="0" y="0">x</tspan></text>
+    <text class="st2" transform="translate(66.280273 31.320801)"><tspan x="0" y="0">g</tspan></text>
+    <text class="st2" transform="translate(40.84082 31.320801)"><tspan x="0" y="0">y</tspan></text>
+    <text class="st2" transform="translate(92.260742 17.460938)"><tspan x="0" y="0">y</tspan></text>
+    <text class="st2" transform="translate(79.181152 17.460938)"><tspan x="0" y="0">x</tspan></text>
+    <text class="st2" transform="translate(68.021484 17.460938)"><tspan x="0" y="0">f</tspan></text>
+    <text class="st2" transform="translate(41.081055 17.460938)"><tspan x="0" y="0">x</tspan></text>
+    <path d="M102.687408,35.938538c.589279-.138489,1.061951-.363892,1.417908-.676331.355957-.312378.596222-.671265.72081-1.076721.124588-.405396.186874-1.074768.186874-2.00824v-8.210693h.58139v8.821777c0,1.075867-.233398,1.88269-.700043,2.420532-.466736.537781-1.202377.87207-2.20694,1.002563v-.272888Z"/>
+    <path d="M105.013,15.02655h.57547v2.50946c0,1.059998.177979,1.833191.533936,2.319641.355957.486511.955139.844482,1.797577,1.073853v.450867c-.842438.233398-1.44162.593262-1.797577,1.079712-.355957.486511-.533936,1.259766-.533936,2.319641v2.485779h-.57547v-2.59845c0-.573425.059326-1.073853.177979-1.500977s.281799-.763245.489441-1.008545c.207642-.245178.459778-.444946.756409-.599182s.701996-.288696,1.216187-.403442c-.518173-.114624-.936432-.255066-1.254745-.421204-.31842-.166138-.580475-.382629-.786072-.649597-.205704-.266968-.356979-.596252-.453842-.987793-.09697-.391541-.145355-.872131-.145355-1.44165v-2.628113Z"/>
+    <path d="M102.687408,6.359558v-.272888c1.004562.130493,1.740204.463745,2.20694.999634.466644.53595.700043,1.34375.700043,2.423462v8.821777h-.58139v-8.210693c0-.589294-.029663-1.094604-.088989-1.515808s-.180939-.774231-.364853-1.05896c-.183914-.28479-.43309-.528931-.747513-.732666-.314423-.203674-.689209-.35498-1.124237-.453857Z"/>
+    <path d="M39.040375,34.97876v.272888c-1.004654-.130493-1.740295-.463745-2.20694-.999634-.466721-.535889-.700043-1.34375-.700043-2.423462v-8.821777h.57547v8.210693c0,.589417.030579,1.094604.091949,1.515808.061279.421204.183914.774231.367828,1.05896.183899.28479.433075.528931.747498.732666.314438.203674.689117.35498,1.124237.453857Z"/>
+    <path d="M36.714783,27.265503h-.575455v-2.50354c0-1.059937-.177979-1.833191-.533936-2.319641-.355957-.486511-.955154-.844421-1.797592-1.073853v-.450867c.842438-.233276,1.441635-.593262,1.797592-1.079712.355957-.486511.533936-1.259644.533936-2.319641v-2.491699h.575455v2.60437c0,.573547-.059326,1.073853-.177979,1.500977s-.281799.763367-.489441,1.008545c-.207642.2453-.459778.444031-.756409.596252-.296631.152283-.702087.28772-1.216187.406372.518097.110779.93634.249146,1.254761.415283.318314.166077.580368.383667.786072.652588.205597.268982.356873.599182.453842.990723.096863.391541.14534.870178.14534,1.43573v2.628113Z"/>
+    <path d="M39.040375,7.380127c-.589371.138489-1.061935.363892-1.417892.676331s-.597244.671387-.723785,1.076721c-.126617.405457-.189835,1.074829-.189835,2.00824v8.210693h-.57547v-8.821777c0-1.075745.233322-1.882568.700043-2.420532.466644-.537781,1.202286-.87207,2.20694-1.002563v.272888Z"/>
+    <path d="M53.060608,26.818909h6.229248v.5755h-6.229248v-.5755ZM53.060608,29.031799h6.229248v.587341h-6.229248v-.587341Z"/>
+    <path d="M53.060608,12.959412h6.229248v.5755h-6.229248v-.5755ZM53.060608,15.172302h6.229248v.587341h-6.229248v-.587341Z"/>
+    <path d="M44.365311,23.760803c0,.405151-.202576.607544-.607498.607544-.405136,0-.607513-.202393-.607513-.607544,0-.194397.05658-.344177.170105-.449524.113342-.105164.25914-.157959.437408-.157959.17807,0,.323868.056763.437393.170105.113342.113525.170105.259338.170105.437378Z"/>
+    <path d="M44.785706,9.960815c0,.405151-.202576.607544-.607498.607544-.405136,0-.607513-.202393-.607513-.607544,0-.194397.05658-.344177.170105-.449524.113342-.105164.25914-.157959.437408-.157959.17807,0,.323868.056763.437393.170105.113342.113525.170105.259338.170105.437378Z"/>
+  </g>
+  <g>
+    <text class="st5" transform="translate(343.240234 47.040039)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st5" transform="translate(312.879883 47.040039)"><tspan x="0" y="0" xml:space="preserve">          </tspan></text>
+  </g>
+  <g class="st21">
+    <text class="st5" transform="translate(309.280273 47.040039)"><tspan x="0" y="0">)</tspan></text>
+  </g>
+  <text class="st5" transform="translate(291.219727 47.040039)"><tspan x="0" y="0">,</tspan></text>
+  <g class="st18">
+    <text class="st5" transform="translate(276.160156 47.040039)"><tspan x="0" y="0">(</tspan></text>
+  </g>
+  <g class="st25">
+    <text class="st5" transform="translate(245.379883 47.040039)"><tspan x="0" y="0">)</tspan></text>
+  </g>
+  <text class="st5" transform="translate(227.320312 47.040039)"><tspan x="0" y="0">,</tspan></text>
+  <g class="st23">
+    <text class="st5" transform="translate(212.259766 47.040039)"><tspan x="0" y="0">(</tspan></text>
+  </g>
+  <g class="st24">
+    <text class="st5" transform="translate(178.660156 47.040039)"><tspan x="0" y="0">0</tspan></text>
+  </g>
+  <g class="st22">
+    <text class="st9" transform="translate(304.719727 41.580078)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <g class="st19">
+    <text class="st9" transform="translate(286.780273 41.580078)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <g class="st16">
+    <text class="st9" transform="translate(240.820312 41.580078)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <g class="st20">
+    <text class="st9" transform="translate(222.94043 41.580078)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <text class="st2" transform="translate(298.780273 47.040039)"><tspan x="0" y="0">y</tspan></text>
+  <g class="st17">
+    <text class="st2" transform="translate(281.080078 47.040039)"><tspan x="0" y="0">x</tspan></text>
+  </g>
+  <g>
+    <text class="st2" transform="translate(269.139648 47.040039)"><tspan x="0" y="0">g</tspan></text>
+    <text class="st2" transform="translate(234.878906 47.040039)"><tspan x="0" y="0">y</tspan></text>
+  </g>
+  <g class="st28">
+    <text class="st2" transform="translate(217.179688 47.040039)"><tspan x="0" y="0">x</tspan></text>
+  </g>
+  <g class="st29">
+    <text class="st2" transform="translate(206.019531 47.040039)"><tspan x="0" y="0">f</tspan></text>
+  </g>
+  <g class="st30">
+    <path d="M255.859528,42.537109h6.229248v.5755h-6.229248v-.5755ZM255.859528,44.75h6.229248v.587341h-6.229248v-.587341Z"/>
+  </g>
+  <g class="st31">
+    <path d="M191.059509,42.537109h6.229248v.5755h-6.229248v-.5755ZM191.059509,44.75h6.229248v.587341h-6.229248v-.587341Z"/>
+  </g>
+  <g>
+    <text class="st6" transform="translate(273.94043 84.180176)"><tspan x="0" y="0">point</tspan></text>
+    <text class="st6" transform="translate(271.120117 84.180176)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st6" transform="translate(246.399414 84.180176)"><tspan x="0" y="0">fixed</tspan></text>
+    <text class="st6" transform="translate(243.758789 84.180176)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st6" transform="translate(220.598633 84.180176)"><tspan x="0" y="0">from</tspan></text>
+    <text class="st6" transform="translate(217.958008 84.180176)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st6" transform="translate(168.638672 84.180176)"><tspan x="0" y="0">deviations</tspan></text>
+    <text class="st6" transform="translate(165.938477 84.180176)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st6" transform="translate(154.958008 84.180176)"><tspan x="0" y="0">be</tspan></text>
+    <text class="st6" transform="translate(152.138184 84.180176)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st6" transform="translate(58.898926 84.180176)"><tspan x="0" y="0" xml:space="preserve">Let  </tspan></text>
+    <text class="st10" transform="translate(142 86.160156)"><tspan x="0" y="0">*</tspan></text>
+    <text class="st10" transform="translate(140.5 73.260254)"><tspan x="0" y="0">*</tspan></text>
+    <path d="M146.965973,96.237244c.588776-.138367,1.061035-.363586,1.416718-.67572.355652-.312134.595734-.670776.720215-1.075867.124481-.405029.186707-1.073853.186707-2.006531v-8.203918h.580902v8.814453c0,1.074951-.233215,1.881104-.699463,2.418518-.466339.537354-1.201355.871338-2.205078,1.00177v-.272705Z"/>
+    <path d="M149.289612,75.035461h.574982v2.507385c0,1.059143.177826,1.831665.533508,2.317749.355652.486084.954346.84375,1.796082,1.072876v.450562c-.841736.233215-1.44043.592712-1.796082,1.078796-.355682.486084-.533508,1.258728-.533508,2.317749v2.483704h-.574982v-2.596313c0-.572998.059296-1.072937.177826-1.499756.118561-.426758.281586-.762634.489044-1.00769.207458-.244995.459381-.44458.755768-.598694s.701416-.288391,1.215179-.403076c-.517731-.114563-.935638-.254883-1.253693-.420837-.318146-.166016-.579987-.382385-.785431-.649109-.205505-.266724-.356659-.595703-.453461-.986938-.096893-.391235-.145233-.871399-.145233-1.44043v-2.625977Z"/>
+    <path d="M146.965973,66.06842v-.272644c1.003723.130432,1.738739.463379,2.205078.998779.466248.535583.699463,1.342651.699463,2.421509v8.814453h-.580902v-8.203918c0-.588806-.029633-1.093689-.088898-1.514526-.059296-.420837-.180817-.77356-.364563-1.058105s-.432739-.528503-.746887-.732056c-.314178-.203491-.688629-.354614-1.123291-.453491Z"/>
+    <path d="M86.074188,95.217407v.272705c-1.003815-.130432-1.738846-.463379-2.205093-.99884-.466354-.5354-.699478-1.34259-.699478-2.421448v-8.814453h.574997v8.203918c0,.588867.030563,1.093628.091873,1.514526.061218.420837.183762.77356.367508,1.058105.183762.284485.432724.528442.746902.732056.314163.203491.688538.354614,1.123291.45343Z"/>
+    <path d="M83.750534,87.264282h-.574982v-2.501526c0-1.05896-.177841-1.831604-.533493-2.317688-.355667-.486084-.954361-.843689-1.796097-1.072937v-.4505c.841736-.233093,1.44043-.592773,1.796097-1.078796.355652-.486084.533493-1.258667.533493-2.317749v-2.489624h.574982v2.602234c0,.573059-.05928,1.072937-.177826,1.499695-.118561.426819-.28157.762756-.489044,1.007751-.207458.245056-.459396.443604-.755768.595703-.296387.152161-.701508.287476-1.215179.406067.517654.110657.935547.248962,1.253708.414917.318054.165955.579895.383362.785416.652039.205429.268799.356583.598694.453461.989929.096786.391235.145233.869446.145233,1.434509v2.625977Z"/>
+    <path d="M86.074188,67.028748c-.588882.138367-1.06105.363647-1.416718.675781-.355667.312195-.596756.670837-.723175,1.075867-.126526.405151-.189682,1.073914-.189682,2.006531v8.203918h-.574997v-8.814453c0-1.07489.233124-1.881042.699478-2.418518.466248-.537354,1.201279-.871338,2.205093-1.00177v.272644Z"/>
+    <rect x="123.799332" y="88.20636" width="6.224045" height=".586853"/>
+    <path d="M99.319229,87.121643h6.22406v.574951h-6.22406v-.574951ZM99.319229,89.332642h6.22406v.586853h-6.22406v-.586853Z"/>
+    <rect x="123.018723" y="75.245728" width="6.224075" height=".586853"/>
+    <path d="M99.319229,74.161011h6.22406v.574951h-6.22406v-.574951ZM99.319229,76.372009h6.22406v.586853h-6.22406v-.586853Z"/>
+    <text class="st3" transform="translate(136.119141 91.620605)"><tspan x="0" y="0">y</tspan></text>
+    <text class="st3" transform="translate(113.139648 91.620605)"><tspan x="0" y="0">y</tspan></text>
+    <text class="st3" transform="translate(87.339844 91.620605)"><tspan x="0" y="0">v</tspan></text>
+    <text class="st3" transform="translate(134.799805 78.660156)"><tspan x="0" y="0">x</tspan></text>
+    <text class="st3" transform="translate(112.599609 78.660156)"><tspan x="0" y="0">x</tspan></text>
+    <text class="st3" transform="translate(86.379883 78.660156)"><tspan x="0" y="0">u</tspan></text>
+    <path d="M122.979996,114.659973l-1.5,3-1.5-3M121.240005,99.659973h.479996v15.480042h-.479996v-15.480042Z"/>
+    <text class="st12" transform="translate(131.02002 112.97998)"><tspan x="0" y="0">Ch</tspan><tspan class="st47" x="10.50293" y="0">a</tspan><tspan x="14.506348" y="0">ng</tspan><tspan class="st46" x="23.506348" y="0">e</tspan><tspan class="st48" x="27.510254" y="0"> </tspan><tspan x="29.67041" y="0">of</tspan><tspan class="st49" x="37.16748" y="0"> </tspan><tspan class="st44" x="39.390137" y="0">v</tspan><tspan class="st45" x="43.890137" y="0">a</tspan><tspan x="47.894043" y="0">r</tspan><tspan class="st47" x="50.891113" y="0">ia</tspan><tspan x="57.403809" y="0">b</tspan><tspan class="st45" x="61.903809" y="0">l</tspan><tspan x="64.413574" y="0">e</tspan></text>
+  </g>
+  <g class="st32">
+    <text class="st11" transform="translate(99.279785 132.299805)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <g>
+    <line class="st1" x1="135.820007" y1="162.23999" x2="146.860016" y2="162.23999"/>
+    <line class="st1" x1="168.399994" y1="162.23999" x2="179.440002" y2="162.23999"/>
+    <line class="st1" x1="84.039993" y1="186.540009" x2="95.679993" y2="186.540009"/>
+    <line class="st1" x1="117.279999" y1="186.540009" x2="128.920013" y2="186.540009"/>
+    <text class="st13" transform="translate(195.580078 189.060059)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st13" transform="translate(192.580078 189.060059)"><tspan x="0" y="0">)</tspan></text>
+    <text class="st13" transform="translate(177.699219 189.060059)"><tspan x="0" y="0">,</tspan></text>
+    <text class="st13" transform="translate(163.359375 189.060059)"><tspan x="0" y="0">,</tspan></text>
+    <text class="st13" transform="translate(150.159668 189.060059)"><tspan x="0" y="0">(</tspan></text>
+    <text class="st13" transform="translate(52.958984 189.060059)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st13" transform="translate(14.019531 189.060059)"><tspan x="0" y="0">Likewise,</tspan></text>
+    <text class="st13" transform="translate(306.939453 164.760254)"><tspan x="0" y="0">expansion</tspan></text>
+    <text class="st13" transform="translate(304.719727 164.760254)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st13" transform="translate(282.039062 164.760254)"><tspan x="0" y="0">series</tspan></text>
+    <text class="st13" transform="translate(253.359375 164.760254)"><tspan x="0" y="0">Taylor </tspan></text>
+    <text class="st13" transform="translate(246.098633 164.760254)"><tspan x="0" y="0" xml:space="preserve">   </tspan></text>
+    <text class="st13" transform="translate(243.098633 164.760254)"><tspan x="0" y="0">)</tspan></text>
+    <text class="st13" transform="translate(228.158203 164.760254)"><tspan x="0" y="0">,</tspan></text>
+    <text class="st13" transform="translate(213.87793 164.760254)"><tspan x="0" y="0">,</tspan></text>
+    <text class="st13" transform="translate(200.678711 164.760254)"><tspan x="0" y="0">(</tspan></text>
+    <text class="st13" transform="translate(110.618652 164.760254)"><tspan x="0" y="0">)</tspan></text>
+    <text class="st13" transform="translate(95.499023 164.760254)"><tspan x="0" y="0">,</tspan></text>
+    <text class="st13" transform="translate(82.899414 164.760254)"><tspan x="0" y="0">(</tspan></text>
+    <text class="st13" transform="translate(114.21875 148.260254)"><tspan x="0" y="0">,</tspan></text>
+    <text class="st13" transform="translate(82.899414 148.260254)"><tspan x="0" y="0">(</tspan></text>
+    <text class="st13" transform="translate(113.379883 136.800781)"><tspan x="0" y="0">constant)</tspan></text>
+    <text class="st13" transform="translate(111.159668 136.800781)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st13" transform="translate(104.680176 136.800781)"><tspan x="0" y="0">is</tspan></text>
+    <text class="st13" transform="translate(102.639648 136.800781)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st13" transform="translate(90.399902 136.800781)"><tspan x="0" y="0">(</tspan></text>
+    <text class="st13" transform="translate(80.560059 136.800781)"><tspan x="0" y="0" xml:space="preserve">    </tspan></text>
+    <text class="st11" transform="translate(173.740234 184.5)"><tspan x="0" y="0">2</tspan></text>
+    <text class="st11" transform="translate(159.459961 184.5)"><tspan x="0" y="0">2</tspan></text>
+    <text class="st11" transform="translate(224.259766 160.199707)"><tspan x="0" y="0">2</tspan></text>
+    <text class="st11" transform="translate(209.919922 160.199707)"><tspan x="0" y="0">2</tspan></text>
+    <text class="st11" transform="translate(106.779785 160.199707)"><tspan x="0" y="0">*</tspan></text>
+    <text class="st11" transform="translate(91.839844 160.199707)"><tspan x="0" y="0">*</tspan></text>
+    <text class="st11" transform="translate(143.55957 143.699707)"><tspan x="0" y="0">*)</tspan></text>
+    <text class="st11" transform="translate(110.499512 143.699707)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <g class="st33">
+    <text class="st11" transform="translate(99.279785 132.299805)"><tspan x="0" y="0">*</tspan></text>
+  </g>
+  <g>
+    <text class="st4" transform="translate(182.740234 189.060059)"><tspan x="0" y="0">uv</tspan></text>
+    <text class="st4" transform="translate(168.580078 189.060059)"><tspan x="0" y="0">v</tspan></text>
+    <text class="st4" transform="translate(153.520508 189.060059)"><tspan x="0" y="0">u</tspan></text>
+    <text class="st4" transform="translate(142.540527 189.060059)"><tspan x="0" y="0">O</tspan></text>
+    <text class="st4" transform="translate(123.160645 196.97998)"><tspan x="0" y="0">y</tspan></text>
+    <text class="st4" transform="translate(122.680176 182.640137)"><tspan x="0" y="0">g</tspan></text>
+    <text class="st4" transform="translate(109.480469 189.060059)"><tspan x="0" y="0">v</tspan></text>
+    <text class="st4" transform="translate(90.040039 196.97998)"><tspan x="0" y="0">x</tspan></text>
+    <text class="st4" transform="translate(89.5 182.640137)"><tspan x="0" y="0">g</tspan></text>
+    <text class="st4" transform="translate(75.459473 189.060059)"><tspan x="0" y="0">u</tspan></text>
+    <text class="st4" transform="translate(55.179687 189.060059)"><tspan x="0" y="0">v</tspan></text>
+    <text class="st4" transform="translate(233.259766 164.760254)"><tspan x="0" y="0">uv</tspan></text>
+    <text class="st4" transform="translate(219.100586 164.760254)"><tspan x="0" y="0">v</tspan></text>
+    <text class="st4" transform="translate(203.980469 164.760254)"><tspan x="0" y="0">u</tspan></text>
+    <text class="st4" transform="translate(193.060547 164.760254)"><tspan x="0" y="0">O</tspan></text>
+    <text class="st4" transform="translate(173.980469 172.680664)"><tspan x="0" y="0">y</tspan></text>
+    <text class="st4" transform="translate(173.800293 158.400391)"><tspan x="0" y="0">f</tspan></text>
+    <text class="st4" transform="translate(160.600586 164.760254)"><tspan x="0" y="0">v</tspan></text>
+    <text class="st4" transform="translate(141.459961 172.680664)"><tspan x="0" y="0">x</tspan></text>
+    <text class="st4" transform="translate(141.219727 158.400391)"><tspan x="0" y="0">f</tspan></text>
+    <text class="st4" transform="translate(127.239258 164.760254)"><tspan x="0" y="0">u</tspan></text>
+    <text class="st4" transform="translate(101.859375 164.760254)"><tspan x="0" y="0">y</tspan></text>
+    <text class="st4" transform="translate(87.040039 164.760254)"><tspan x="0" y="0">x</tspan></text>
+    <text class="st4" transform="translate(77.679199 164.760254)"><tspan x="0" y="0">f</tspan></text>
+    <text class="st4" transform="translate(138.579102 148.260254)"><tspan x="0" y="0">y</tspan></text>
+    <text class="st4" transform="translate(119.438965 148.260254)"><tspan x="0" y="0">v</tspan></text>
+    <text class="st4" transform="translate(105.758789 148.260254)"><tspan x="0" y="0">x</tspan></text>
+    <text class="st4" transform="translate(86.258301 148.260254)"><tspan x="0" y="0">u</tspan></text>
+    <text class="st4" transform="translate(77.678223 148.260254)"><tspan x="0" y="0">f</tspan></text>
+  </g>
+  <g class="st27">
+    <text class="st4" transform="translate(94.47998 136.799805)"><tspan x="0" y="0">x</tspan></text>
+  </g>
+  <g class="st26">
+    <text class="st4" transform="translate(76.240234 136.799805)"><tspan x="0" y="0">x</tspan></text>
+  </g>
+  <g>
+    <text class="st4" transform="translate(54.399902 136.799805)"><tspan x="0" y="0">u</tspan></text>
+    <polygon points="135.723358 183.863647 136.208374 183.863647 136.208374 186.229309 138.559204 186.229309 138.559204 186.709381 136.208374 186.709381 136.208374 189.060211 135.723358 189.060211 135.723358 186.709381 133.36261 186.709381 133.36261 186.229309 135.723358 186.229309 135.723358 183.863647"/>
+    <path d="M122.569778,193.020996c.089096.092407.179794.22934.272202.410767.039597-.372803.059402-.67804.059402-.915588,0-.593903-.155899-1.054169-.467697-1.380798s-.726746-.48996-1.244705-.48996c-.349762,0-.640137.06604-.871048.197968-.230988.131989-.437225.328339-.618637.588928h-.227661c.254028-.521271.527863-.899872.821548-1.135803.293625-.23587.648346-.353882,1.064072-.353882.296936,0,.586472.080902.868561.242523.282104.161682.509766.422363.682983.781952.173218.35965.259827.847992.259827,1.464935,0,1.164764-.254105,2.210632-.762161,3.137756-.56752,1.042633-1.2901,1.563904-2.167709,1.563904-.514709,0-.923019-.148468-1.224915-.445404-.301895-.296967-.45285-.70108-.45285-1.212555,0-.339783.064346-.687073.193024-1.041779.128677-.354645.297714-.658234.507278-.910645.209488-.252411.427261-.451996.65329-.598846.225952-.146759.455322-.2565.687927-.329102.232605-.07254.461044-.108887.685455-.108887.273819,0,.519653.051208.737411.153412.217773.102325.399185.22937.544403.381104h0ZM121.604706,196.208221c.53775-.547638.922165-1.326355,1.153152-2.335999-.128677-.366211-.320923-.643372-.576584-.831451-.255722-.188049-.536972-.282074-.843826-.282074-.296936,0-.589798.103149-.878464.309296-.288757.206238-.537827.565918-.747314,1.078918-.209564.513092-.31427,1.020386-.31427,1.521851,0,.382782.090714.675568.272202.878479.181412.202911.412399.304382.692871.304382.405838,0,.819855-.214447,1.242233-.643402h0Z"/>
+    <path d="M122.089371,178.680908c.089096.092407.179794.22934.272202.410767.039597-.372803.059402-.67804.059402-.915588,0-.593903-.155899-1.054169-.467697-1.380798s-.726746-.48996-1.244705-.48996c-.349762,0-.640137.06604-.871048.197968-.230988.131989-.437225.328339-.618637.588928h-.227661c.254028-.521271.527863-.899872.821548-1.135803.293625-.23587.648346-.353882,1.064072-.353882.296936,0,.586472.080902.868561.242523.282104.161682.509766.422363.682983.781952.173218.35965.259827.847992.259827,1.464935,0,1.164764-.254105,2.210632-.762161,3.137756-.56752,1.042633-1.2901,1.563904-2.167709,1.563904-.514709,0-.923019-.148468-1.224915-.445404-.301895-.296967-.45285-.70108-.45285-1.212555,0-.339783.064346-.687073.193024-1.041779.128677-.354645.297714-.658234.507278-.910645.209488-.252411.427261-.451996.65329-.598846.225952-.146759.455322-.2565.687927-.329102.232605-.07254.461044-.108887.685455-.108887.273819,0,.519653.051208.737411.153412.217773.102325.399185.22937.544403.381104h0ZM121.124298,181.868134c.53775-.547638.922165-1.326355,1.153152-2.335999-.128677-.366211-.320923-.643372-.576584-.831451-.255722-.188049-.536972-.282074-.843826-.282074-.296936,0-.589798.103149-.878464.309296-.288757.206238-.537827.565918-.747314,1.078918-.209564.513092-.31427,1.020386-.31427,1.521851,0,.382782.090714.675568.272202.878479.181412.202911.412399.304382.692871.304382.405838,0,.819855-.214447,1.242233-.643402h0Z"/>
+    <polygon points="102.542755 183.863647 103.027771 183.863647 103.027771 186.229309 105.378601 186.229309 105.378601 186.709381 103.027771 186.709381 103.027771 189.060211 102.542755 189.060211 102.542755 186.709381 100.182022 186.709381 100.182022 186.229309 102.542755 186.229309 102.542755 183.863647"/>
+    <path d="M89.449081,193.020996c.089096.092407.179794.22934.272202.410767.039597-.372803.059402-.67804.059402-.915588,0-.593903-.155899-1.054169-.467697-1.380798s-.726746-.48996-1.244705-.48996c-.349762,0-.640137.06604-.871048.197968-.230988.131989-.437225.328339-.618637.588928h-.227661c.254028-.521271.527863-.899872.821548-1.135803.293625-.23587.648346-.353882,1.064072-.353882.296936,0,.586472.080902.868561.242523.282104.161682.509766.422363.682983.781952.173218.35965.259827.847992.259827,1.464935,0,1.164764-.254105,2.210632-.762161,3.137756-.56752,1.042633-1.2901,1.563904-2.167709,1.563904-.514709,0-.923019-.148468-1.224915-.445404-.301895-.296967-.45285-.70108-.45285-1.212555,0-.339783.064346-.687073.193024-1.041779.128677-.354645.297714-.658234.507278-.910645.209488-.252411.427261-.451996.65329-.598846.225952-.146759.455322-.2565.687927-.329102.232605-.07254.461044-.108887.685455-.108887.273819,0,.519653.051208.737411.153412.217773.102325.399185.22937.544403.381104h0ZM88.484009,196.208221c.53775-.547638.922165-1.326355,1.153152-2.335999-.128677-.366211-.320923-.643372-.576584-.831451-.255722-.188049-.536972-.282074-.843826-.282074-.296936,0-.589798.103149-.878464.309296-.288757.206238-.537827.565918-.747314,1.078918-.209564.513092-.31427,1.020386-.31427,1.521851,0,.382782.090714.675568.272202.878479.181412.202911.412399.304382.692871.304382.405838,0,.819855-.214447,1.242233-.643402h0Z"/>
+    <path d="M88.908768,178.680908c.089096.092407.179794.22934.272202.410767.039597-.372803.059402-.67804.059402-.915588,0-.593903-.155899-1.054169-.467697-1.380798s-.726746-.48996-1.244705-.48996c-.349762,0-.640137.06604-.871048.197968-.230988.131989-.437225.328339-.618637.588928h-.227661c.254028-.521271.527863-.899872.821548-1.135803.293625-.23587.648346-.353882,1.064072-.353882.296936,0,.586472.080902.868561.242523.282104.161682.509766.422363.682983.781952.173218.35965.259827.847992.259827,1.464935,0,1.164764-.254105,2.210632-.762161,3.137756-.56752,1.042633-1.2901,1.563904-2.167709,1.563904-.514709,0-.923019-.148468-1.224915-.445404-.301895-.296967-.45285-.70108-.45285-1.212555,0-.339783.064346-.687073.193024-1.041779.128677-.354645.297714-.658234.507278-.910645.209488-.252411.427261-.451996.65329-.598846.225952-.146759.455322-.2565.687927-.329102.232605-.07254.461044-.108887.685455-.108887.273819,0,.519653.051208.737411.153412.217773.102325.399185.22937.544403.381104h0ZM87.943695,181.868134c.53775-.547638.922165-1.326355,1.153152-2.335999-.128677-.366211-.320923-.643372-.576584-.831451-.255722-.188049-.536972-.282074-.843826-.282074-.296936,0-.589798.103149-.878464.309296-.288757.206238-.537827.565918-.747314,1.078918-.209564.513092-.31427,1.020386-.31427,1.521851,0,.382782.090714.675568.272202.878479.181412.202911.412399.304382.692871.304382.405838,0,.819855-.214447,1.242233-.643402h0Z"/>
+    <path d="M65.201416,185.303833h5.196579v.480072h-5.196579v-.480072ZM65.201416,187.149841h5.196579v.48996h-5.196579v-.48996Z"/>
+    <polygon points="186.242157 159.564026 186.727173 159.564026 186.727173 161.929688 189.078003 161.929688 189.078003 162.40976 186.727173 162.40976 186.727173 164.76059 186.242157 164.76059 186.242157 162.40976 183.881409 162.40976 183.881409 161.929688 186.242157 161.929688 186.242157 159.564026"/>
+    <path d="M173.388672,168.721405c.089081.092407.17981.22934.272217.410767.039581-.372803.059387-.67804.059387-.915588,0-.593903-.155914-1.054169-.467712-1.380798-.311768-.32663-.726746-.48996-1.24469-.48996-.349762,0-.640137.06604-.871033.197968-.230988.131989-.437225.328339-.618652.588928h-.227661c.254028-.521271.527863-.899872.821564-1.135803.29361-.23587.648315-.353882,1.064056-.353882.296936,0,.586456.080902.868561.242523.282104.161682.509766.422363.682983.781952.173218.35965.259827.847992.259827,1.464935,0,1.164764-.254089,2.210632-.762146,3.137756-.567535,1.042633-1.2901,1.563904-2.167725,1.563904-.514709,0-.923004-.148468-1.224915-.445404-.30188-.296967-.45285-.70108-.45285-1.212555,0-.339783.064331-.687073.193024-1.041779.128662-.354645.297729-.658234.507294-.910645.209473-.252411.427246-.451996.653259-.598846.225983-.146759.455322-.2565.687958-.329102.232605-.07254.461029-.108887.685425-.108887.273834,0,.519684.051208.737427.153412.217773.102325.39917.22937.544403.381104h0ZM172.423615,171.90863c.53775-.547638.92215-1.326355,1.153137-2.335999-.128693-.366211-.320923-.643372-.576569-.831451-.255737-.188049-.536987-.282074-.843842-.282074-.296936,0-.589783.103149-.878479.309296-.288727.206238-.537811.565918-.747314,1.078918-.209564.513092-.31427,1.020386-.31427,1.521851,0,.382782.090729.675568.272217.878479.181427.202911.412384.304382.692871.304382.405823,0,.819855-.214447,1.242249-.643402h0Z"/>
+    <path d="M173.269073,154.441101c.089081.092407.17981.22934.272217.410767.039581-.372803.059387-.67804.059387-.915588,0-.593903-.155914-1.054169-.467712-1.380798-.311768-.32663-.726746-.48996-1.24469-.48996-.349762,0-.640137.06604-.871033.197968-.230988.131989-.437225.328339-.618652.588928h-.227661c.254028-.521271.527863-.899872.821564-1.135803.29361-.23587.648315-.353882,1.064056-.353882.296936,0,.586456.080902.868561.242523.282104.161682.509766.422363.682983.781952.173218.35965.259827.847992.259827,1.464935,0,1.164764-.254089,2.210632-.762146,3.137756-.567535,1.042633-1.2901,1.563904-2.167725,1.563904-.514709,0-.923004-.148468-1.224915-.445404-.30188-.296967-.45285-.70108-.45285-1.212555,0-.339783.064331-.687073.193024-1.041779.128662-.354645.297729-.658234.507294-.910645.209473-.252411.427246-.451996.653259-.598846.225983-.146759.455322-.2565.687958-.329102.232605-.07254.461029-.108887.685425-.108887.273834,0,.519684.051208.737427.153412.217773.102325.39917.22937.544403.381104h0ZM172.304016,157.628326c.53775-.547638.92215-1.326355,1.153137-2.335999-.128693-.366211-.320923-.643372-.576569-.831451-.255737-.188049-.536987-.282074-.843842-.282074-.296936,0-.589783.103149-.878479.309296-.288727.206238-.537811.565918-.747314,1.078918-.209564.513092-.31427,1.020386-.31427,1.521851,0,.382782.090729.675568.272217.878479.181427.202911.412384.304382.692871.304382.405823,0,.819855-.214447,1.242249-.643402h0Z"/>
+    <polygon points="153.662659 159.564026 154.147675 159.564026 154.147675 161.929688 156.498505 161.929688 156.498505 162.40976 154.147675 162.40976 154.147675 164.76059 153.662659 164.76059 153.662659 162.40976 151.30191 162.40976 151.30191 161.929688 153.662659 161.929688 153.662659 159.564026"/>
+    <path d="M140.868988,168.721405c.089081.092407.17981.22934.272217.410767.039581-.372803.059387-.67804.059387-.915588,0-.593903-.155914-1.054169-.467712-1.380798-.311768-.32663-.726746-.48996-1.24469-.48996-.349762,0-.640137.06604-.871033.197968-.230988.131989-.437225.328339-.618652.588928h-.227661c.254028-.521271.527863-.899872.821564-1.135803.29361-.23587.648315-.353882,1.064056-.353882.296936,0,.586456.080902.868561.242523.282104.161682.509766.422363.682983.781952.173218.35965.259827.847992.259827,1.464935,0,1.164764-.254089,2.210632-.762146,3.137756-.567535,1.042633-1.2901,1.563904-2.167725,1.563904-.514709,0-.923004-.148468-1.224915-.445404-.30188-.296967-.45285-.70108-.45285-1.212555,0-.339783.064331-.687073.193024-1.041779.128662-.354645.297729-.658234.507294-.910645.209473-.252411.427246-.451996.653259-.598846.225983-.146759.455322-.2565.687958-.329102.232605-.07254.461029-.108887.685425-.108887.273834,0,.519684.051208.737427.153412.217773.102325.39917.22937.544403.381104h0ZM139.903931,171.90863c.53775-.547638.92215-1.326355,1.153137-2.335999-.128693-.366211-.320923-.643372-.576569-.831451-.255737-.188049-.536987-.282074-.843842-.282074-.296936,0-.589783.103149-.878479.309296-.288727.206238-.537811.565918-.747314,1.078918-.209564.513092-.31427,1.020386-.31427,1.521851,0,.382782.090729.675568.272217.878479.181427.202911.412384.304382.692871.304382.405823,0,.819855-.214447,1.242249-.643402h0Z"/>
+    <path d="M140.628784,154.441101c.089081.092407.17981.22934.272217.410767.039581-.372803.059387-.67804.059387-.915588,0-.593903-.155914-1.054169-.467712-1.380798-.311768-.32663-.726746-.48996-1.24469-.48996-.349762,0-.640137.06604-.871033.197968-.230988.131989-.437225.328339-.618652.588928h-.227661c.254028-.521271.527863-.899872.821564-1.135803.29361-.23587.648315-.353882,1.064056-.353882.296936,0,.586456.080902.868561.242523.282104.161682.509766.422363.682983.781952.173218.35965.259827.847992.259827,1.464935,0,1.164764-.254089,2.210632-.762146,3.137756-.567535,1.042633-1.2901,1.563904-2.167725,1.563904-.514709,0-.923004-.148468-1.224915-.445404-.30188-.296967-.45285-.70108-.45285-1.212555,0-.339783.064331-.687073.193024-1.041779.128662-.354645.297729-.658234.507294-.910645.209473-.252411.427246-.451996.653259-.598846.225983-.146759.455322-.2565.687958-.329102.232605-.07254.461029-.108887.685425-.108887.273834,0,.519684.051208.737427.153412.217773.102325.39917.22937.544403.381104h0ZM139.663727,157.628326c.53775-.547638.92215-1.326355,1.153137-2.335999-.128693-.366211-.320923-.643372-.576569-.831451-.255737-.188049-.536987-.282074-.843842-.282074-.296936,0-.589783.103149-.878479.309296-.288727.206238-.537811.565918-.747314,1.078918-.209564.513092-.31427,1.020386-.31427,1.521851,0,.382782.090729.675568.272217.878479.181427.202911.412384.304382.692871.304382.405823,0,.819855-.214447,1.242249-.643402h0Z"/>
+    <polygon points="120.422348 159.564026 120.907364 159.564026 120.907364 161.929688 123.258194 161.929688 123.258194 162.40976 120.907364 162.40976 120.907364 164.76059 120.422348 164.76059 120.422348 162.40976 118.061615 162.40976 118.061615 161.929688 120.422348 161.929688 120.422348 159.564026"/>
+    <path d="M65.201416,161.004211h5.196579v.480072h-5.196579v-.480072ZM65.201416,162.85022h5.196579v.48996h-5.196579v-.48996Z"/>
+    <polygon points="130.50235 143.063934 130.987366 143.063934 130.987366 145.429596 133.338196 145.429596 133.338196 145.909668 130.987366 145.909668 130.987366 148.260498 130.50235 148.260498 130.50235 145.909668 128.141602 145.909668 128.141602 145.429596 130.50235 145.429596 130.50235 143.063934"/>
+    <polygon points="98.162048 143.063934 98.647064 143.063934 98.647064 145.429596 100.997894 145.429596 100.997894 145.909668 98.647064 145.909668 98.647064 148.260498 98.162048 148.260498 98.162048 145.909668 95.801315 145.909668 95.801315 145.429596 98.162048 145.429596 98.162048 143.063934"/>
+    <path d="M65.201416,144.50412h5.196579v.480072h-5.196579v-.480072ZM65.201416,146.350128h5.196579v.48996h-5.196579v-.48996Z"/>
+    <path d="M65.201416,133.044617h5.196579v.480072h-5.196579v-.480072ZM65.201416,134.890625h5.196579v.48996h-5.196579v-.48996Z"/>
+    <path d="M58.567825,182.77301c0,.337952-.168976.506775-.50679.506775-.337967,0-.50679-.168823-.50679-.506775,0-.162201.047195-.28714.141907-.375031.094543-.087738.216171-.131775.364883-.131775.14856,0,.270187.047363.364883.141907.094559.094696.141907.216339.141907.364899Z"/>
+    <path d="M79.328033,130.512817c0,.337891-.168976.506714-.50679.506714-.337967,0-.50679-.168823-.50679-.506714,0-.162231.047195-.287231.141907-.375122.094543-.087646.216171-.131714.364883-.131714.14856,0,.270187.047363.364883.141846.094559.094727.141907.216431.141907.36499Z"/>
+    <path d="M58.267838,130.512817c0,.337891-.168976.506714-.50679.506714-.337967,0-.50679-.168823-.50679-.506714,0-.162231.047195-.287231.141907-.375122.094543-.087646.216171-.131714.364883-.131714.14856,0,.270187.047363.364883.141846.094559.094727.141907.216431.141907.36499Z"/>
+    <path class="st15" d="M126.279999,163.859985l.119995.720001.179993.779999.240021.720001c4.001984,9.231018,19.789001,12.291016,28.679993,12.120026h1.5l1.5-.059998c8.339996-.333008,23.742004-3.938019,26.100006-13.5l.059998-.720001.059998-.779999-.059998-.720001-.059998-.720001c-2.169006-9.559021-17.83902-13.282013-26.100006-13.559998l-1.5-.060028h-1.5c-8.904999-.237-25.501007,3.057007-28.920013,12.779999l-.179993.780029-.059998.719971-.059998.720001M125.140015,163.140015l.059998-.840027.119995-.839996c4.858978-19.290985,55.369995-19.307983,60.359985-.059998l.119995.839996.059998.839996-.059998.900024c-1.340973,10.388977-17.109985,14.609985-25.73999,15.179993l-3,.119995c-9.705994.487-26.932007-2.643005-31.26001-12.779999l-.299988-.779999-.179993-.839996-.119995-.839996-.059998-.899994Z"/>
+    <text class="st14" transform="translate(163 146.879883)"><tspan class="st50" x="0" y="0">linea</tspan><tspan class="st34" x="15.501953" y="0">r</tspan></text>
+    <path class="st7" d="M105.279999,153.540009l3.720001-.059998-2.220001,3.059998M73.539993,171l32.700012-16.73999.539993,1.019989-32.759995,16.73999-.480011-1.019989Z"/>
+    <text class="st8" transform="translate(109.779785 156.299805)"><tspan x="0" y="0">0</tspan></text>
+    <path class="st7" d="M228.700012,153.299988l3.779999-.059998-2.279999,3.059998M196.959991,170.76001l32.76001-16.740021.480011,1.02002-32.700012,16.73999-.540009-1.019989Z"/>
+    <text class="st8" transform="translate(233.200195 156.060059)"><tspan x="0" y="0">0</tspan></text>
+  </g>
+</svg>
