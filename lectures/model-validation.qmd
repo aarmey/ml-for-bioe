@@ -24,7 +24,7 @@ author: Aaron Meyer
 
 ## Training- vs. test-set performance
 
-![ ](./figs/lec4/sfd-5.pdf)
+![ ](./figs/crossval/sfd-5.png)
 
 ::: {.notes}
 Walk through this in detail.
@@ -54,7 +54,7 @@ Move to board. Setup example with students up front. Predict height from arm len
 
 ## The validation process
 
-![ ](./figs/lec4/sfd-8.pdf)
+![ ](./figs/crossval/sfd-8.png)
 
 A random splitting into two halves: left part is training set, right part is validation set
 
@@ -67,7 +67,7 @@ First just leaving one set out.
 - Want to compare linear vs higher-order polynomial terms in a linear regression
 - We randomly split the 392 observations into two sets, a training set containing 196 of the data points, and a validation set containing the remaining 196 observations.
 
-![ ](./figs/lec4/sfd-9.pdf)
+![ ](./figs/crossval/sfd-9.png)
 
 *Left panel shows single split; right panel shows multiple splits*
 
@@ -105,11 +105,11 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 
 ## Auto data revisited
 
-![ ](./figs/lec4/sfd-18.pdf)
+![ ](./figs/crossval/sfd-18.png)
 
 ## True and estimated test MSE for the simulated data
 
-![ ](./figs/lec4/sfd-19.pdf)
+![ ](./figs/crossval/sfd-19.png)
 
 ## Other issues with cross-validation
 
@@ -138,11 +138,11 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 
 # The wrong way
 
-![ ](./figs/lec4/sfd-31.pdf)
+![ ](./figs/crossval/sfd-31.png)
 
 # The right way
 
-![ ](./figs/lec4/sfd-32.pdf)
+![ ](./figs/crossval/sfd-32.png)
 
 ::: {.notes}
 - Go through the hospital example.
@@ -175,7 +175,7 @@ The Baron had fallen to the bottom of a deep lake. Just when it looked like all 
 
 # Example with just 3 observations
 
-![ ](./figs/lec4/sfd-43.pdf)
+![ ](./figs/crossval/sfd-43.png)
 
 A graphical illustration of the bootstrap approach on a small sample containing $n = 3$ observations. Each bootstrap data set contains $n$ observations, sampled with replacement from the original data set. Each bootstrap data set is used to obtain an estimate of $\alpha$.
 
@@ -188,7 +188,7 @@ A graphical illustration of the bootstrap approach on a small sample containing 
 
 # A general picture for the bootstrap
 
-![ ](./figs/lec4/sfd-45.pdf)
+![ ](./figs/crossval/sfd-45.png)
 
 # The bootstrap in general
 
@@ -233,29 +233,21 @@ For example, we can just find exactly matching data points.
 Go through dataset randomization.
 :::
 
-# Example - gene expression signatures
+# Example: Prognostic gene expression signatures
 
-![ ](./figs/lec4/example-1.pdf)
+![ ](./figs/crossval/example-1.png)
 
-# Example - gene expression signatures
+# Random gene expression signatures are associated with survival
 
-![ ](./figs/lec4/example-2.pdf)
+![**Figure 1. Association of negative control signatures with overall survival.** In plots A-C the NKI cohort was split into two groups using a signature of post-prandial laughter (panel A), localization of skin fibroblasts (panel B), social defeat in mice (panel C). In panels A-C, the fraction of patients alive (overall survival, OS) is shown as a function of time for both groups. Hazard ratios (HR) between groups and their associated p-values are given in bottom-left corners. Panel D depicts p-values for association with outcome for all MSigDB c2 signatures and random signatures of identical size as MSigDB c2 signatures.](./figs/crossval/pcbi.1002240.g001.png)
 
-# Example - gene expression signatures
+# Random signatures often do better than the published ones
 
-![ ](./figs/lec4/example-3.pdf)
+![**Figure 2. Most published signatures are not significantly better outcome predictors than random signatures of identical size.** The x-axis denotes the p-value of association with overall survival. Red dots stand for published signatures, yellow shapes depict the distribution of p-values for 1000 random signatures of identical size, with the lower 5% quantiles shaded in green and the median shown as black line. Signatures are ordered by increasing sizes.](./figs/crossval/pcbi.1002240.g002.png)
 
-# Example - gene expression signatures
+# Many signatures simply correlate with cell proliferation
 
-![**Meta-PCNA adjustment decreases the prognostic abilities of published signatures.** Hazard ratios for overall survival association of 48 signatures in the original dataset (blue) and the meta-analysis (red).](./figs/lec4/example-4.pdf)
-
-# Example - gene expression signatures
-
-![ ](./figs/lec4/example-4b.pdf)
-
-# Example - gene expression signatures
-
-![ ](./figs/lec4/example-5.pdf)
+![**Figure 4. Most prognostic transcriptional signals are correlated with meta-PCNA.** A) Each point denotes a signature. The x-axis depicts the absolute value of the correlation of the first principal component of the signatures with meta-PCNA, the y-axis depicts the hazard ratio for outcome association. Details of the analysis for each data point are available in the Supporting Information (Text S1). B) Distribution of the correlations of individual genes with meta-PCNA, for genes significantly associated with overall survival (red) and for all the genes spotted on the microarrays (black).](./figs/crossval/pcbi.1002240.g004.png)
 
 # Implementation - Easiest
 
