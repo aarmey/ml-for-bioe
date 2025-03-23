@@ -23,10 +23,9 @@ title: "Course outline - BE 175"
 
 ### Week 3, April 14 – 18
 
-- [Monday: Does my model work? Crossvalidation, bootstrap, and friends](../lectures/Wk2-Lecture4.html)
-  - 📖: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
+- Monday: Does my model work? Crossvalidation, bootstrap, and friends ([slides](../lectures/model-validation.html), [notes](../notes/model-validation.html))
   - [Example Notebook](public/examples/CrossVal-Example.ipynb)
-- [Wednesday: Fitting & Regression Redux, Regularization](../lectures/regularization.html)
+- Wednesday: Fitting & Regression Redux, Regularization  ([slides](../lectures/regularization.html), [notes](../notes/regularization.html))
   - [Example Notebook](public/examples/Regularization-Example.ipynb)
 - Lab: Exam review
 

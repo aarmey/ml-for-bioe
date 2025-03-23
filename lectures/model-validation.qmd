@@ -296,6 +296,10 @@ for bootstrapi in range(num_bootstraps):
 - With all model evaluation, think about what your model should be "learning", and mess with that.
 - Models that always work, or work unexpectedly well, should be suspicious.
 
+# Reading & Resources
+
+- 📖: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
+
 ## Review Questions
 
 1. What does cross-validation aim to achieve? What does it pretend to do to achieve this?
