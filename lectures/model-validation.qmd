@@ -14,7 +14,7 @@ author: Aaron Meyer
 - You wouldn't test on exactly the same thing.
 :::
 
-# Training error vs. test error
+## Training error vs. test error
 
 - Recall the distinction between the *test error* and the *training error*:
 	- The *test error* is the average error that results from using a statistical learning method to predict the response on a new observation, one that was not used in training the method.
@@ -136,11 +136,11 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 - **Wrong:** Apply cross-validation in step 2.
 - **Right:** Apply cross-validation to steps 1 and 2.
 
-# The wrong way
+## The wrong way
 
 ![ ](./figs/crossval/sfd-31.png)
 
-# The right way
+## The right way
 
 ![ ](./figs/crossval/sfd-32.png)
 
@@ -149,7 +149,7 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 - Cross-validation within/between.
 :::
 
-# The bootstrap
+# The Bootstrap
 
 - The *bootstrap* is a flexible and powerful statistical tool that can be used to quantify the uncertainty associated with a given estimator or statistical learning method.
 - For example, it can provide an estimate of the standard error of a coefficient, or a confidence interval for that coefficient.
@@ -158,7 +158,7 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 Talk about imagining pulling data out from the data universe.
 :::
 
-# Where does the name come from?
+## Where does the name come from?
 
 - The use of the term bootstrap derives from the phrase *to pull oneself up by one’s bootstraps*, widely thought to be based on one of the eighteenth century “The Surprising Adventures of Baron Munchausen” by Rudolph Erich Raspe:
 
@@ -166,31 +166,31 @@ The Baron had fallen to the bottom of a deep lake. Just when it looked like all 
 
 - It is not the same as the term “bootstrap” used in computer science meaning to “boot” a computer from a set of core instructions, though the derivation is similar.
 
-# Now back to the real world
+## Now back to the real world
 
 - The procedure outlined above cannot be applied, because for real data we cannot generate new samples from the original population.
 - However, the bootstrap approach allows us to use a computer to mimic the process of obtaining new data sets.
 - Rather than repeatedly obtaining independent data sets from the population, we instead obtain distinct data sets by repeatedly sampling observations from the original data set *with replacement*.
 - Each of these “bootstrap data sets” is created by sampling *with replacement*, and is the *same size* as our original dataset. As a result some observations may appear more than once in a given bootstrap data set and some not at all.
 
-# Example with just 3 observations
+## Example with just 3 observations
 
 ![ ](./figs/crossval/sfd-43.png)
 
 A graphical illustration of the bootstrap approach on a small sample containing $n = 3$ observations. Each bootstrap data set contains $n$ observations, sampled with replacement from the original data set. Each bootstrap data set is used to obtain an estimate of $\alpha$.
 
-# Example with just 3 observations
+## Example with just 3 observations
 
 - Denoting the first bootstrap data set by $Z^{*1}$, we use $Z^{*1}$ to produce a new bootstrap estimate for $\alpha$, which we call $\hat{\alpha}^{*1}$
 - This procedure is repeated $B$ times for some large value of $B$ (say 100 or 1000), in order to produce $B$ different bootstrap data sets, $Z^{*1},Z^{*2},\ldots ,Z^{*B}$, and $B$ corresponding $\alpha$ estimates, $\alpha^{*1},\alpha^{*2},\ldots,\alpha^{*B}$.
 - We estimate the standard error of these bootstrap estimates using the formula $$\mathrm{SE}_B (\hat{\alpha}) = \sqrt{\frac{1}{B-1}\sum^{B}_{r=1}\left(\hat{\alpha}^{*r}-\bar{\hat{\alpha}}^{*r}\right)}.$$
 - This serves as an estimate of the standard error of $\hat{\alpha}$ estimated from the original data set.
 
-# A general picture for the bootstrap
+## A general picture for the bootstrap
 
 ![ ](./figs/crossval/sfd-45.png)
 
-# The bootstrap in general
+## The bootstrap in general
 
 - In more complex data situations, figuring out the appropriate way to generate bootstrap samples can require some thought.
 - For example, if the data is a time series, we can’t simply sample the observations with replacement (*why not?*).
@@ -200,13 +200,13 @@ A graphical illustration of the bootstrap approach on a small sample containing 
 Go over example of color blindness with replacement by gender.
 :::
 
-# Other uses of the bootstrap
+## Other uses of the bootstrap
 
 - Primarily used to obtain standard errors of an estimate.
 - Also provides approximate confidence intervals for a population parameter.
 - The above interval is called a *Bootstrap Percentile* confidence interval. It is the simplest method (among many approaches) for obtaining a confidence interval from the bootstrap.
 
-# Can the bootstrap estimate prediction error?
+## Can the bootstrap estimate prediction error?
 
 - In cross-validation, each of the $K$ validation folds is distinct from the other $K-1$ folds used for training: *there is no overlap.* This is crucial for its success. *Why?*
 - To estimate prediction error using the bootstrap, we could think about using each bootstrap dataset as our training sample, and the original sample as our validation sample.
@@ -218,12 +218,12 @@ Go over example of color blindness with replacement by gender.
 For example, we can just find exactly matching data points.
 :::
 
-# Removing the overlap
+## Removing the overlap
 
 - Can partly fix this problem by only using predictions for those observations that did not (by chance) occur in the current bootstrap sample.
 - But the method gets complicated, and in the end, cross-validation provides a simpler, more attractive approach for estimating prediction error.
 
-# The bootstrap vs. permutation tests
+## The bootstrap vs. permutation tests
 
 - The bootstrap samples from the estimated population, and uses the results to estimate standard errors and confidence intervals.
 - Permutation methods sample from an estimated *null* distribution for the data, and use this to estimate p-values and False Discovery Rates for hypothesis tests.
@@ -237,21 +237,23 @@ Go through dataset randomization.
 
 ![ ](./figs/crossval/example-1.png)
 
-# Random gene expression signatures are associated with survival
+## Random gene expression signatures are associated with survival
 
 ![**Figure 1. Association of negative control signatures with overall survival.** In plots A-C the NKI cohort was split into two groups using a signature of post-prandial laughter (panel A), localization of skin fibroblasts (panel B), social defeat in mice (panel C). In panels A-C, the fraction of patients alive (overall survival, OS) is shown as a function of time for both groups. Hazard ratios (HR) between groups and their associated p-values are given in bottom-left corners. Panel D depicts p-values for association with outcome for all MSigDB c2 signatures and random signatures of identical size as MSigDB c2 signatures.](./figs/crossval/pcbi.1002240.g001.png)
 
-# Random signatures often do better than the published ones
+## Random signatures often do better than the published ones
 
 ![**Figure 2. Most published signatures are not significantly better outcome predictors than random signatures of identical size.** The x-axis denotes the p-value of association with overall survival. Red dots stand for published signatures, yellow shapes depict the distribution of p-values for 1000 random signatures of identical size, with the lower 5% quantiles shaded in green and the median shown as black line. Signatures are ordered by increasing sizes.](./figs/crossval/pcbi.1002240.g002.png)
 
-# Many signatures simply correlate with cell proliferation
+## Many signatures simply correlate with cell proliferation
 
 ![**Figure 4. Most prognostic transcriptional signals are correlated with meta-PCNA.** A) Each point denotes a signature. The x-axis depicts the absolute value of the correlation of the first principal component of the signatures with meta-PCNA, the y-axis depicts the hazard ratio for outcome association. Details of the analysis for each data point are available in the Supporting Information (Text S1). B) Distribution of the correlations of individual genes with meta-PCNA, for genes significantly associated with overall survival (red) and for all the genes spotted on the microarrays (black).](./figs/crossval/pcbi.1002240.g004.png)
 
-# Implementation - Easiest
+# Implementation
 
-## `sklearn.model_selection.cross_val_score`
+## Implementation: Easiest
+
+### `sklearn.model_selection.cross_val_score`
 
 - `estimator`: estimator object implementing ‘fit’
 - `X`: array-like
@@ -265,7 +267,7 @@ Go through dataset randomization.
 Go through a notebook here.
 :::
 
-# Implementation - Iterators
+## Implementation: Iterators
 
 - `sklearn.model_selection.KFold(n_splits=3, shuffle=False, random_state=None)`
 - `sklearn.model_selection.LeaveOneOut()`
@@ -274,7 +276,7 @@ Both use loop `for train_index, test_index in kf.split(X):`.
 
 `get_n_splits` provides number of iterations that will occur.
 
-# Implementation - Bootstrap
+## Implementation: Bootstrap
 
 ```python
 for bootstrapi in range(num_bootstraps):

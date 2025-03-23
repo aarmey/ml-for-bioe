@@ -1,6 +1,8 @@
 /*-- scss:mixins --*/
 
 div.notes {
+  display: block;
+  visibility: visible;
   border: solid;
   padding: 0.5em;
   background-color: white;
