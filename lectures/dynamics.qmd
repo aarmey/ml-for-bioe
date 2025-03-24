@@ -110,6 +110,8 @@ Work out equations above. Going to learn a mathematical trick to solve!
 
 ::: {.notes}
 - maybe come back to these at the end
+- Prey is x
+- Predator is y
 - $\dot{x} = \alpha x - \beta x y$
 - $\dot{y} = \delta x y - \gamma y$
 ::: 
@@ -246,6 +248,8 @@ Nullclines are the sets of points for which $\dot{x} = 0$ or $\dot{y} = 0$, so f
 ![ ](./figs/dynamics/nonlin-6.svg)
 
 ::: {.notes}
+- Why do solutions partition the graph?
+	- Uniqueness. To cross, you must be on the solution.
 - This is a non-linear version of a saddle point.
 - Can we identify saddle-like behavior in linearized version of system?
 :::
@@ -261,12 +265,21 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ![ ](./figs/dynamics/nonlin-7.svg)
 
+::: {.notes}
+- Think of the Jacobian as the way to convert position to velocity.
+:::
+
 ## Solving Linearized Systems
 
 ![ ](./figs/dynamics/nonlin-7a.svg)
 
 ::: {.notes}
+- Third row is the definition of an eigenvalue.
 - So if we move in $\vec{v}$ (remember that this is delta), $\vec{A}$ has the same effect as $\lambda I$.
+- At stable point: $J \vec{x} = 0 = \dot{x}$
+- Definition of an eigenvalue: $J x = \lambda x = \dot{x}$
+	- Say this is positive?
+	- Say this is negative?
 :::
 
 ## Example
@@ -419,6 +432,41 @@ plt.show()
 ## Pendulum Oscillation
 
 ![ ](./figs/dynamics/scipy-integrate-odeint-1.png){width=80%}
+
+## Analysis Example: The Cell Cycle
+
+You build a very simple model of cells transitioning between both phases of the cell cycle?
+
+```{mermaid}
+graph LR
+    G1[G1 Phase] -->|α| G2S[G2/S Phase]
+	G2S -->|β| G1
+    G1 -->|γ| Death[Death]
+    G2S -->|γ| Death
+    
+    style G1 fill:#f9d5e5,stroke:#333,stroke-width:2px
+    style G2S fill:#a1e7e6,stroke:#333,stroke-width:2px
+    style Death fill:#f8b195,stroke:#333,stroke-width:2px
+```
+
+Can this model oscillate under physically meaningful situations and, if so, when?
+
+::: {.notes}
+$$\frac{dG1}{dt} = - \alpha [G1] + 2 \beta [G2] - \gamma [G1]$$
+
+$$\frac{dG2}{dt} = \alpha [G1] - 2 \beta [G2] - \gamma [G2]$$
+
+$$J = 
+\begin{pmatrix}
+-\alpha - \gamma & 2\beta \\
+\alpha & -\beta - \gamma \\
+\end{pmatrix}
+$$
+
+$$\lambda = \frac{1}{2} \left( -\alpha -\beta -2 \gamma \pm \sqrt{\alpha^2} + 6 \alpha \beta + \beta ^2  \right)$$
+
+$\alpha$ and/or $\beta$ would have to be negative to oscillate.
+:::
 
 ## Implementation Note: Stiff Systems
 
