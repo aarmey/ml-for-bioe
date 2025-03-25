@@ -1,11 +1,11 @@
 ---
-title: Does my model work? Crossvalidation, bootstrap, and friends.
+title: Does my model work? Crossvalidation, bootstrap, and friends
 author: Aaron Meyer
 ---
 
-# Cross-validation and the bootstrap
+# Cross-validation & the bootstrap
 
-- In the section we discuss two *resampling* methods: cross-validation and the bootstrap.
+- We will discuss two *resampling* methods: cross-validation and the bootstrap.
 - These methods refit a model with samples from the training set to obtain additional information about the fitted model.
 - For example, they provide estimates of test-set prediction error, or the standard deviation and bias of our parameter estimates.
 
@@ -97,10 +97,9 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 ## The details
 
 - Let the $K$ parts be $C_1,C_2,\ldots C_K$, where $C_k$ denotes the indices of the observations in part $k$. There are $n_k$ observations in part $k$: if $N$ is a multiple of $K$, then $n_k = n/K$.
-- Compute:
-	- $$CV_{(K)} =  \sum^{K}_{k=1} \frac{n_k}{n} MSE_k$$
+- Compute: $$CV_{(K)} =  \sum^{K}_{k=1} \frac{n_k}{n} MSE_k$$
 	- Where $MSE_k = \sum_{i\in C_k} (y_i - \hat{y}_i)^2/n_k$
-	- $\hat{y}_i$ is the prediction for observation $i$ when it was in the removed fold.
+	- $\hat{y}_i$ is the prediction for observation $i$ when it was in the removed.
 - Setting $K = n$ yields *leave-one out cross-validation* (LOOCV).
 
 ## Auto data revisited
@@ -123,7 +122,7 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 	1. Starting with 5000 predictors and 50 samples, find the 100 predictors having the largest correlation with the class labels.
 	2. We then apply a classifier such as logistic regression, using only these 100 predictors.
 - How do we estimate the test set performance of this classifier?
-- Can we apply CV in Step 2, forgetting about Step 1?
+- Can we apply CV in step 2, forgetting about step 1?
 
 ## NO!
 
@@ -131,18 +130,10 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 - It is easy to simulate realistic data that is completely randomized, so that it is not possible to make any prediction, but the CV error estimate that ignores Step 1 is zero!
 - This error is made in *many* biomedical studies.
 
-# The wrong and right way
+## The wrong and right way
 
 - **Wrong:** Apply cross-validation in step 2.
-- **Right:** Apply cross-validation to steps 1 and 2.
-
-## The wrong way
-
-![ ](./figs/crossval/sfd-31.png)
-
-## The right way
-
-![ ](./figs/crossval/sfd-32.png)
+- **Right:** Apply cross-validation _across_ steps 1 and 2.
 
 ::: {.notes}
 - Go through the hospital example.
@@ -160,11 +151,11 @@ Talk about imagining pulling data out from the data universe.
 
 ## Where does the name come from?
 
-- The use of the term bootstrap derives from the phrase *to pull oneself up by one’s bootstraps*, widely thought to be based on one of the eighteenth century “The Surprising Adventures of Baron Munchausen” by Rudolph Erich Raspe:
+The use of the term bootstrap derives from the phrase *to pull oneself up by one’s bootstraps*, widely thought to be based on one of the 18th century “The Surprising Adventures of Baron Munchausen” by Rudolph Erich Raspe:
 
-The Baron had fallen to the bottom of a deep lake. Just when it looked like all was lost, he thought to pick himself up by his own bootstraps.
+> The Baron had fallen to the bottom of a deep lake. Just when it looked like all was lost, he thought to pick himself up by his own bootstraps.
 
-- It is not the same as the term “bootstrap” used in computer science meaning to “boot” a computer from a set of core instructions, though the derivation is similar.
+It is not the same as the term “bootstrap” used in computer science meaning to “boot” a computer from a set of core instructions, though the derivation is similar.
 
 ## Now back to the real world
 
@@ -173,18 +164,17 @@ The Baron had fallen to the bottom of a deep lake. Just when it looked like all 
 - Rather than repeatedly obtaining independent data sets from the population, we instead obtain distinct data sets by repeatedly sampling observations from the original data set *with replacement*.
 - Each of these “bootstrap data sets” is created by sampling *with replacement*, and is the *same size* as our original dataset. As a result some observations may appear more than once in a given bootstrap data set and some not at all.
 
-## Example with just 3 observations
+## Example with just three observations
 
 ![ ](./figs/crossval/sfd-43.png)
 
 A graphical illustration of the bootstrap approach on a small sample containing $n = 3$ observations. Each bootstrap data set contains $n$ observations, sampled with replacement from the original data set. Each bootstrap data set is used to obtain an estimate of $\alpha$.
 
-## Example with just 3 observations
+## Example with just three observations
 
 - Denoting the first bootstrap data set by $Z^{*1}$, we use $Z^{*1}$ to produce a new bootstrap estimate for $\alpha$, which we call $\hat{\alpha}^{*1}$
 - This procedure is repeated $B$ times for some large value of $B$ (say 100 or 1000), in order to produce $B$ different bootstrap data sets, $Z^{*1},Z^{*2},\ldots ,Z^{*B}$, and $B$ corresponding $\alpha$ estimates, $\alpha^{*1},\alpha^{*2},\ldots,\alpha^{*B}$.
-- We estimate the standard error of these bootstrap estimates using the formula $$\mathrm{SE}_B (\hat{\alpha}) = \sqrt{\frac{1}{B-1}\sum^{B}_{r=1}\left(\hat{\alpha}^{*r}-\bar{\hat{\alpha}}^{*r}\right)}.$$
-- This serves as an estimate of the standard error of $\hat{\alpha}$ estimated from the original data set.
+- We can now calculate summary statistics, like the standard error, by running this calculation across the bootstrap samples.
 
 ## A general picture for the bootstrap
 
@@ -212,16 +202,16 @@ Go over example of color blindness with replacement by gender.
 - To estimate prediction error using the bootstrap, we could think about using each bootstrap dataset as our training sample, and the original sample as our validation sample.
 - But each bootstrap sample has significant overlap with the original data. About two-thirds of the original data points appear in each bootstrap sample. *Can you prove this?*
 - This will cause the bootstrap to seriously underestimate the true prediction error. *Why?*
-- The other way around—with original sample = training sample, bootstrap dataset = validation sample—is worse!
 
 ::: {.notes}
-For example, we can just find exactly matching data points.
+- For example, we can just find exactly matching data points.
+- Explain that variance is not distributed evenly. Prediction error is often most concentrated at extrapolation.
 :::
 
 ## Removing the overlap
 
 - Can partly fix this problem by only using predictions for those observations that did not (by chance) occur in the current bootstrap sample.
-- But the method gets complicated, and in the end, cross-validation provides a simpler, more attractive approach for estimating prediction error.
+- But the method gets complicated. In the end, cross-validation provides a simpler, better approach for estimating prediction error.
 
 ## The bootstrap vs. permutation tests
 
@@ -300,6 +290,8 @@ for bootstrapi in range(num_bootstraps):
 
 - 📖: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 
+
+::: {.smaller}
 ## Review Questions
 
 1. What does cross-validation aim to achieve? What does it pretend to do to achieve this?
@@ -307,9 +299,9 @@ for bootstrapi in range(num_bootstraps):
 3. Why does cross-validation need to be performed across multiple folds?
 4. How will the process of cross-validation influence the model fit error we observe? How does it affect the model prediction error?
 5. We want to demonstrate that we can predict the time until failure for an artificial heart from a set of clinical measurements. We plan to utilize LASSO regression to develop this prediction model and are interested in the variables selected by LASSO. Walk through the steps to implement cross-validation here. How can you ensure you select only one set of variables?
-6. List **two** ways in which cross-validation and bootstrap are similar.
+6. List **two** ways in which cross-validation and bootstrap are similar.
 7. List **two** ways in which cross-validation and bootstrap are different.
 8. Why is performing variable selection outside of your cross-validation loop bad, but it’s OK to decide what you are going to measure in the first place?
-9. You want to determine whether the first parameter in your ordinary least squares model, $$\beta_1$$, is significantly non-zero. How can you apply bootstrap to accomplish this?
+9. You want to determine whether the first parameter in your ordinary least squares model, $\beta_1$, is significantly non-zero. How can you apply bootstrap to accomplish this?
 10. Say you build a model with no unknown parameters and therefore no degrees of freedom. Do you need cross-validation to know the prediction error?
 11. Is it alright to adjust your model to improve the cross-validation error? Why/why not? If not, what would you need to do to fix the situation?
