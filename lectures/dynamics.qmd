@@ -183,7 +183,7 @@ Walk through 1D case of stability.
 
 ## Linearity & Separability
 
-![ ](./figs/dynamics/nonlin-2a.svg){height=600px}
+![ ](./figs/dynamics/nonlin-2a.svg)
 
 ::: {.notes}
 - What is a Jacobian?
@@ -197,7 +197,7 @@ $$
 \dot{\vec{x}} = \vec{f}(\vec{x})
 $$
 
-![ ](./figs/dynamics/phase.svg){height=300px}
+![ ](./figs/dynamics/phase.svg)
 
 ### Non-linear systems
 
@@ -206,7 +206,7 @@ $$
 
 ## Features in Phase Portraits
 
-![ ](./figs/dynamics/nonlin-3a.svg){height=600px}
+![ ](./figs/dynamics/nonlin-3a.svg)
 
 ::: {.notes}
 - Fixed Points (A, B, C). Steady states
@@ -226,7 +226,7 @@ $$
 
 ## Step 1: Find the fixed points
 
-![ ](./figs/dynamics/nonlin-4a.svg){height=600px}
+![ ](./figs/dynamics/nonlin-4a.svg)
 
 ## Step 2: Determine stability of fixed points
 
@@ -245,11 +245,11 @@ $$
 
 Nullclines are the sets of points for which $\dot{x} = 0$ or $\dot{y} = 0$, so flow is either horizontal or vertical.
 
-![ ](./figs/dynamics/nonlin-5a.png){height=600px}
+![ ](./figs/dynamics/nonlin-5a.png)
 
 ## Step 4: Plot flow lines
 
-![ ](./figs/dynamics/nonlin-6.svg){height=600px}
+![ ](./figs/dynamics/nonlin-6.svg)
 
 ::: {.notes}
 - Why do solutions partition the graph?
@@ -267,7 +267,7 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Linearization About Fixed Points
 
-![ ](./figs/dynamics/nonlin-7.svg){height=600px}
+![ ](./figs/dynamics/nonlin-7.svg)
 
 ::: {.notes}
 - Think of the Jacobian as the way to convert position to velocity.
@@ -275,7 +275,7 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Solving Linearized Systems
 
-![ ](./figs/dynamics/nonlin-7a.svg){height=600px}
+![ ](./figs/dynamics/nonlin-7a.svg)
 
 ::: {.notes}
 - Third row is the definition of an eigenvalue.
@@ -288,15 +288,15 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Example
 
-![ ](./figs/dynamics/nonlin-8.svg){height=600px}
+![ ](./figs/dynamics/nonlin-8.svg)
 
 ## More Examples
 
-![ ](./figs/dynamics/types.svg){height=600px}
+![ ](./figs/dynamics/types.svg)
 
 ## Classification of Fixed Points
 
-![ ](./figs/dynamics/nonlin-9.svg){height=600px}
+![ ](./figs/dynamics/nonlin-9.svg)
 
 ## Relevance for Nonlinear Dynamics
 
@@ -315,7 +315,7 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Saddle-Node Bifurcation
 
-![ ](./figs/dynamics/10a.svg){height=600px}
+![ ](./figs/dynamics/10a.svg)
 
 # Example: Genetic Control Network
 
@@ -326,7 +326,7 @@ Griffith (1971) model of genetic control:
 - x = protein concentration
 - y = mRNA concentration
 
-![ ](./figs/dynamics/gene-expr1.svg){height=400px}
+![ ](./figs/dynamics/gene-expr1.svg)
 
 ## Genetic Control Network
 
@@ -335,7 +335,7 @@ Biochemical version of a bistable switch:
 1. Only stable points are no protein and mRNA or a fixed composition
 2. If degradation rates too great, only stable point is origin
 
-![ ](./figs/dynamics/gene-expr.svg){height=400px}
+![ ](./figs/dynamics/gene-expr.svg)
 
 ::: {.notes}
 - How could we compare this to data?
@@ -437,7 +437,7 @@ plt.show()
 
 ## Pendulum Oscillation
 
-![ ](./figs/dynamics/scipy-integrate-odeint-1.png){width=80%}
+![ ](./figs/dynamics/scipy-integrate-odeint-1.png){.r-stretch}
 
 ## Analysis Example: The Cell Cycle
 
