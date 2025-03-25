@@ -93,8 +93,8 @@ flowchart LR
 ## Applications of ODE models: Pharmacokinetics
 
 - Have a bolus i.v. injection
-	- No drug in both compartments for t<0
-	- D μg of drug administered at once at t=0
+	- No drug in both compartments for $t<0$
+	- D μg of drug administered at once at $t=0$
 	- Drug distribution occurs instantaneously in the central compartment.
 		- Also get well-mixed instantaneously.
 		- Concentration in central compartment at $t=0$ is D μg/mL
@@ -114,29 +114,39 @@ Work out equations above. Going to learn a mathematical trick to solve!
 - Predator is y
 - $\dot{x} = \alpha x - \beta x y$
 - $\dot{y} = \delta x y - \gamma y$
-::: 
+:::
+
+# Types of Analysis
 
 ## Note about difference from other models we've covered
 
 - ODE models can be part of inference techniques just as elsewhere
-	- If we have a symbolic integral, then fitting an ODE model to data is just non-linear least squares
 - But we often don't have a symbolic expression of the answer
 	- Have to simulate the model every time
 	- Can only focus on the input-output we get from the black box
 - In this respect, what we do with ODE models will be very similar to what you could do with any computational simulation
 
+::: {.notes}
+- If we have a symbolic integral, then fitting an ODE model to data is just non-linear least squares
+:::
+
 ## Analytic vs Numerical Modeling
 
-- Analytic
-	- Wider range of parameters
-	- Avoid numerical problems
-	- Physical intuition more direct
-	- Often must simplify model
-- Numerical
-	- Can handle complex models
-	- Dependence on parameters & initial conditions
-	- Physical insight may be difficult to extract
-	- Convergence, numerical stability
+### Analytic
+
+- Wider range of parameters
+- Avoid numerical problems
+- Physical intuition more direct
+- Often must simplify model
+
+### Numerical
+
+- Can handle complex models
+- Dependence on parameters & initial conditions
+- Physical insight may be difficult to extract
+- Convergence, numerical stability
+
+## Analytic vs Numerical Modeling
 
 Reality often requires handling in between:
 
@@ -173,7 +183,7 @@ Walk through 1D case of stability.
 
 ## Linearity & Separability
 
-![ ](./figs/dynamics/nonlin-2a.svg)
+![ ](./figs/dynamics/nonlin-2a.svg){height=600px}
 
 ::: {.notes}
 - What is a Jacobian?
@@ -187,16 +197,16 @@ $$
 \dot{\vec{x}} = \vec{f}(\vec{x})
 $$
 
-![ ](./figs/dynamics/phase.svg)
+![ ](./figs/dynamics/phase.svg){height=300px}
 
-Non-linear systems
+### Non-linear systems
 
 - No general analytic approach to finding trajectory
 - So, goal is to understand qualitative trajectory behavior
 
 ## Features in Phase Portraits
 
-![ ](./figs/dynamics/nonlin-3a.svg)
+![ ](./figs/dynamics/nonlin-3a.svg){height=600px}
 
 ::: {.notes}
 - Fixed Points (A, B, C). Steady states
@@ -211,16 +221,14 @@ Non-linear systems
 	- i.e., Runge-Kutta integration
 - Qualitative
 	- Sufficient for some purposes
-- Analytic
+- Analytic/symbolic
 	- Elegant, though not always tractable
 
-## Example – fixed points
+## Step 1: Find the fixed points
 
-![ ](./figs/dynamics/nonlin-4a.svg)
+![ ](./figs/dynamics/nonlin-4a.svg){height=600px}
 
-## Example – stability
-
-#### Step 2: Determine stability of fixed points
+## Step 2: Determine stability of fixed points
 
 - If the systems moves slightly away from each fixed point, will it return or will it move further away?
 - Another way to ask the same question is to ask whether, as time approaches infinity, does the system tend toward or away from a given stable point.
@@ -231,21 +239,17 @@ Non-linear systems
 	- This has exponentially growing solutions
 	- Toward $\infty$ for $x > -1$ and $-\infty$ for $x < -1$
 
-**Thus, overall solution grows exponentially in at least one dimension, and so is unstable.**
+**Solution grows exponentially in at least one dimension, so it is unstable.**
 
-## Example – nullclines
-
-#### Step 3: Sketch nullclines
+## Step 3: Sketch nullclines
 
 Nullclines are the sets of points for which $\dot{x} = 0$ or $\dot{y} = 0$, so flow is either horizontal or vertical.
 
-![ ](./figs/dynamics/nonlin-5a.png)
+![ ](./figs/dynamics/nonlin-5a.png){height=600px}
 
-## Example – computed
+## Step 4: Plot flow lines
 
-#### Step 4: Plot flow lines
-
-![ ](./figs/dynamics/nonlin-6.svg)
+![ ](./figs/dynamics/nonlin-6.svg){height=600px}
 
 ::: {.notes}
 - Why do solutions partition the graph?
@@ -263,7 +267,7 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Linearization About Fixed Points
 
-![ ](./figs/dynamics/nonlin-7.svg)
+![ ](./figs/dynamics/nonlin-7.svg){height=600px}
 
 ::: {.notes}
 - Think of the Jacobian as the way to convert position to velocity.
@@ -271,7 +275,7 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Solving Linearized Systems
 
-![ ](./figs/dynamics/nonlin-7a.svg)
+![ ](./figs/dynamics/nonlin-7a.svg){height=600px}
 
 ::: {.notes}
 - Third row is the definition of an eigenvalue.
@@ -284,15 +288,15 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Example
 
-![ ](./figs/dynamics/nonlin-8.svg)
+![ ](./figs/dynamics/nonlin-8.svg){height=600px}
 
 ## More Examples
 
-![ ](./figs/dynamics/types.svg)
+![ ](./figs/dynamics/types.svg){height=600px}
 
 ## Classification of Fixed Points
 
-![ ](./figs/dynamics/nonlin-9.svg)
+![ ](./figs/dynamics/nonlin-9.svg){height=600px}
 
 ## Relevance for Nonlinear Dynamics
 
@@ -311,16 +315,18 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Saddle-Node Bifurcation
 
-![ ](./figs/dynamics/10a.svg)
+![ ](./figs/dynamics/10a.svg){height=600px}
 
 # Example: Genetic Control Network
+
+## Genetic Control Network
 
 Griffith (1971) model of genetic control:
 
 - x = protein concentration
 - y = mRNA concentration
 
-![ ](./figs/dynamics/gene-expr1.svg)
+![ ](./figs/dynamics/gene-expr1.svg){height=400px}
 
 ## Genetic Control Network
 
@@ -329,7 +335,7 @@ Biochemical version of a bistable switch:
 1. Only stable points are no protein and mRNA or a fixed composition
 2. If degradation rates too great, only stable point is origin
 
-![ ](./figs/dynamics/gene-expr.svg)
+![ ](./figs/dynamics/gene-expr.svg){height=400px}
 
 ::: {.notes}
 - How could we compare this to data?
@@ -361,7 +367,7 @@ SciPy provides two interfaces for ODE solving:
 Notes:
 
 - Both can solve stiff and non-stiff equations.
-- ode has a number of different methods. Pay attention to the "set_integrator" option.
+- ode has a number of different methods. Pay attention to the `set_integrator` option.
 
 ## Code Example: Pendulum Oscillation
 
