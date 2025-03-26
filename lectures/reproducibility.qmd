@@ -16,9 +16,9 @@ author: Aaron Meyer
 	- Failed test: an error was demonstrated.
 	- Passed test: no error was found (for this particular situation).
 
-# Cost-benefit tradeoff
+## Cost-benefit tradeoff
 
-## There is no one answer to testing
+### There is no one answer to testing
 
 - You're putting together a quick script to calculate the amount of a chemical you need
 	- You probably don't need to test this
@@ -32,7 +32,7 @@ author: Aaron Meyer
 - FDA now requires code review
 :::
 
-# Difficulties of testing
+## Difficulties of testing
 
 - Testing is seen as a novice's job.
 	- Assigned to the least experienced team members.
@@ -50,47 +50,72 @@ author: Aaron Meyer
 
 The basic idea:
 
-- For a given class Foo, create another class FooTest to test it, containing various "test case" methods to run.
+- For a given class `Foo`, create another class `FooTest` to test it, containing various "test case" methods to run.
 - Each method looks for particular results and passes / fails.
 - Put assertion calls in your test methods to check things you expect to be true.  If they aren't, the test will fail.
 
-# Python's unittest
+## Python's pytest
 
 ```python
-import unittest
+import pytest
 
-class TestStoneMethods(unittest.TestCase):
-    def test_nchoosek(self):
-        self.assertTrue(nchoosek(5)[3] == 10)
-        self.assertTrue(nchoosek(6)[3] == 20)
-        self.assertTrue(nchoosek(7)[3] == 35)
-        self.assertTrue(nchoosek(8)[3] == 56)
-        self.assertTrue(nchoosek(9)[3] == 84)
-
-if __name__ == '__main__':
-    unittest.main()
+def test_nchoosek():
+    assert nchoosek(5)[3] == 10
+    assert nchoosek(6)[3] == 20
+    assert nchoosek(7)[3] == 35
+    assert nchoosek(8)[3] == 56
+    assert nchoosek(9)[3] == 84
 ```
 
-# Assertions
+## Assertions
 
-![ ](./figs/reproducibility/assert1.png)
-
-# Assertions
-
-![ ](./figs/reproducibility/assert2.png)
-
-# Setup and Teardown
+`pytest` does not provide a large number of specific assertions. Instead, mostly use base `assert`.
 
 ```python
-import unittest
-from ..StoneModel import StoneModel
+assert a % 2 == 0, "value was odd, should be even"
+```
 
-class TestStoneMethods(unittest.TestCase):
-    def setUp(self):
-        self.M = StoneModel()
+## Assertions
 
-    def test_dataImport_mfiAdjMean(self):
-        self.assertTrue(self.M.mfiAdjMean.shape == (24, 8))
+There are specific approaches for special cases, like checking that exceptions *do* occur:
+
+```python
+def test_zero_division():
+    with pytest.raises(ZeroDivisionError):
+        1 / 0
+```
+
+The documentation covers [others](https://docs.pytest.org/en/stable/how-to/assert.html), such as checking warnings. Numpy also has [assertions](https://numpy.org/doc/stable/reference/routines.testing.html) for data vectors.
+
+## Setup and Teardown
+
+```python
+# content of test_emaillib.py
+from emaillib import Email, MailAdminClient
+
+import pytest
+
+@pytest.fixture
+def mail_admin():
+    return MailAdminClient()
+
+@pytest.fixture
+def sending_user(mail_admin):
+    user = mail_admin.create_user()
+    yield user
+    mail_admin.delete_user(user)
+
+@pytest.fixture
+def receiving_user(mail_admin):
+    user = mail_admin.create_user()
+    yield user
+    user.clear_mailbox()
+    mail_admin.delete_user(user)
+
+def test_email_received(sending_user, receiving_user):
+    email = Email(subject="Hey!", body="How's it going?")
+    sending_user.send_email(email, receiving_user)
+    assert email in receiving_user.inbox
 ```
 
 # Tips for Testing
@@ -106,7 +131,7 @@ class TestStoneMethods(unittest.TestCase):
 	- maybe add usually works, but fails after you call remove
 	- make multiple calls;  maybe size fails the second time only
 
-# Trustworthy tests
+## Trustworthy tests
 
 - Test one thing at a time per test method
 	- 10 small tests are much better than 1 test 10x as large
@@ -120,7 +145,7 @@ class TestStoneMethods(unittest.TestCase):
 
 Torture tests are okay, but only *in addition to* simple tests.
 
-# Regression testing
+## Regression testing
 
 - **regression**: When a feature that used to work, no longer works.
 	- Likely to happen when code changes and grows over time.
@@ -134,20 +159,23 @@ Many products have a set of mandatory check-in tests that must pass before code 
 
 # Test-driven development
 
-- Unit tests can be written after, during, or even before coding.
-	- **test-driven development**: Write tests, then write code to pass them.
+## Test-driven development
 
-- Imagine that we'd like to add a method `subtractWeeks` to a `Date` class, that shifts this Date backward in time by the given number of weeks.
+### Write tests, then write code to pass them.
+
+- Unit tests can be written after, during, or even before coding.
+
+Imagine that we'd like to add a method `subtractWeeks` to a `Date` class, that shifts this Date backward in time by the given number of weeks.
 
 - Write code to test this method before it has been written.
 - Then once we do implement the method, we'll know if it works.
 
 
-# Things to avoid in unit tests
+## Things to avoid in unit tests
 
-- Tests should be self-contained and not care about each other.
+### Tests should be self-contained and not care about each other.
 
-Avoid:
+### Avoid:
 
 - Constrained test order
 	- Test A must run before Test B.
@@ -159,7 +187,7 @@ Avoid:
 	- Tests A/B both use a shared object.
 	- If A breaks it, what happens to B?
 
-# Testing summary
+## Testing summary
 
 - Tests need failure atomicity  (ability to know exactly what failed).
 	- Each test should have a clear, long, descriptive name.
@@ -172,6 +200,12 @@ Avoid:
 - Avoid complex logic in test methods if possible.
 - Use helpers, setup functions to reduce redundancy between tests.
 
+## Failure consistency
+
+- Tests should _consistently_ pass or fail.
+- Inconsistent tests are hard to fix, and easy to miss.
+- Avoiding these is very difficult for iterative methods.
+
 # Reproducible builds
 
 - One element that unit testing highlights is the contribution of randomness
@@ -180,7 +214,7 @@ Avoid:
 	- Often, to avoid this, random number generators are set to a constant seed
 	- But, keep in mind this then only tests one outcome of this value
 
-# Reproducible builds
+## Reproducible builds
 
 - Other source of variation: the code surrounding your analysis
 	- E.g. `seaborn` package changes the way it orders colors on a graph
@@ -191,7 +225,7 @@ Avoid:
 		- Stores the names *and versions* of all the packages used
 		- Then can install specifically these before doing anything
 
-# Containerization
+## Containerization
 
 - What about Linux vs. Windows vs. MacOS differences? Time differences? "Gremlins"?
 - Way to get around this variability is to make sure **everything** else in the environment stays constant
@@ -201,7 +235,7 @@ Avoid:
 
 # Integration testing
 
-- **integration**: Combining 2 or more software units
+- **integration**: Combining two or more software units
 	- often a subset of the overall project  (!= system testing)
 
 - Why do software engineers care about integration?
@@ -212,7 +246,7 @@ Avoid:
 	- cascade of interdependencies
 		- cannot find and solve problems one-at-a-time
 
-# Two Approaches To Integration
+## Two Approaches To Integration
 
 - **phased ("big-bang") integration**:
 	- design, code, test, debug each class/unit/subsystem separately
@@ -224,7 +258,7 @@ Avoid:
 	- integrate this piece with the skeleton
 	- test/debug it before adding any other pieces
 
-# Benefits Of Incremental
+## Benefits Of Incremental
 
 - Benefits:
 	- Errors easier to isolate, find, fix
@@ -235,7 +269,7 @@ Avoid:
 	- May need to create "stub" versions of some features that have not yet been integrated
 	- Not always possible
 
-# When To Build
+## When To Build
 
 - daily build: Compile working executable on a daily basis
 	- allows you to test the quality of your integration so far
@@ -252,31 +286,33 @@ Avoid:
 
 ![ ](./figs/reproducibility/title.png)
 
-# Example - Genomics Annotations
+## Example - Genomics Annotations
 
 ![ ](./figs/reproducibility/fig1.png)
 
-# Example - Genomics Annotations
+## Example - Genomics Annotations
 
 ![ ](./figs/reproducibility/fig2.png)
 
-# Example - Genomics Annotations
+## Example - Genomics Annotations
 
 ![ ](./figs/reproducibility/fig3.png)
 
-# Example - Genomics Annotations
+## Example - Genomics Annotations
 
 ![ ](./figs/reproducibility/fig4.png)
 
-# Associated topics - Property-based testing
+# Associated topics & tools
+
+## Property-based testing
 
 - Property-based testing is a slight variant of unit testing
 	- Rather than specifying an exact program to run, you specify some properties that should hold
-	- e.g. if C = f(A, B), C > B and C > A
+	- e.g. if `C = f(A, B)`, `C > B` and `C > A`
 - Methods exist to test whether this is true, and do it in a way that is more efficient than trying random values
 - `hypothesis` is a python package for this
 
-# Associated topics - Fuzzing
+## Fuzzing
 
 - Let's say you have a function that reads in some random data from the internet then processes it
 	- You want to make sure it won't crash no matter what's sent to it
@@ -285,7 +321,7 @@ Avoid:
 - Tools like afl (American Fuzzy Lop) can peer into your program to actively look for random inputs to make it behave differently
 - Packages like `datafuzz` can perform the data equivalent—i.e. add noise, etc, that shouldn't influence the analysis
 
-# Associated topics - Linting
+## Linting
 
 - It's possible to write a program that is correct and runs, but just isn't written well
 	- E.g. Hard to read
@@ -309,7 +345,8 @@ Avoid:
 - [`hypothesis`](https://hypothesis.readthedocs.io/en/latest/index.html), a python package for property-based testing
 - [`datafuzz`](https://github.com/kjam/datafuzz), a python package for data fuzzing
 - [`pylint`](https://www.pylint.org), a python linter
-- [`pytest`](https://doc.pytest.org/en/latest/), a package to run your tests
+- [`ruff`](https://docs.astral.sh/ruff/), a modern python formatter
+- [`pytest`](https://doc.pytest.org/en/latest/), a package to run small, readable tests
 
 ## Review Questions
 
