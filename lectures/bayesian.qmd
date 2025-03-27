@@ -58,10 +58,10 @@ $$\Rightarrow P(A\mid B)={\frac {P(B\mid A)\,P(A)}{P(B)}},\;\text{if}\; P(B)\neq
 	- Answer: Depends on how likely it is to generate the data
 $$L(\theta; D) = P(D\mid\theta) = \prod_m P(x_m \mid\theta)$$
 
-- Example: Likelihood for the sequence: H, T, T, H, H
-$$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$$
+- Example: Likelihood for the sequence: H, H, T, H, H
+$$L(\theta; D) = \theta \theta (1-\theta)\theta\theta = \theta^4 (1-\theta)$$
 
-![ ](./figs/lec5/ho5.svg){width=2in}
+![ ](./figs/lec5/ho5.svg)
 
 ::: {.notes}
 - Frequentist: for a fixed parameter, model the data generation process.
@@ -100,16 +100,17 @@ $$L(\theta; D) = \theta(1-\theta)(1-\theta)\theta\theta = \theta^3 (1-\theta)^2$
 
 - The posterior distribution combines the prior distribution with the likelihood function using Bayes' rule: $$P(\theta \mid D) = \frac{P(\theta) P(D\mid \theta)}{P(D)}$$
 - The denominator is just a normalizing constant so you can simplify: $$\mathrm{Posterior} \propto \mathrm{Prior} \times \mathrm{Likelihood}$$
-- Predictions can be made by integrating over the posterior: $$P(\mathrm{new data} \mid D) = \int_{\theta} P(\mathrm{new data} \mid \theta) P(\theta \mid D)$$
+- Predictions can be made by integrating over the posterior: $$P(\mathrm{new data} \mid D) = \int_{\theta} P(\mathrm{new data} \mid \theta) P(\theta \mid D) \delta \theta$$
 
 ## Revisiting the Binomial experiment
 
 - Prior distribution: uniform for $\theta$ in [0, 1]
-- Posterior distribution: $$P(\theta\mid x_1, \ldots ,x_M) \propto P(x_1, \ldots ,x_M\mid\theta)\times 1$$
+- Posterior distribution: $P(\theta\mid x_1, \ldots ,x_M) \propto P(x_1, \ldots ,x_M\mid\theta)\times 1$
 - Example: 5 coin tosses with 4 heads, 1 tail
-	- MLE estimate: $$P(\theta) = \tfrac{4}{5} = 0.8$$
-	- Bayesian prediction: $$P(x_{M+1}=H\mid D) = \int\theta P(\theta\mid D)\; d\theta = \tfrac{5}{7}$$
-![ ](./figs/lec5/ho10.png){width=2in}
+	- MLE estimate: $P(\theta) = \tfrac{4}{5} = 0.8$
+	- Bayesian prediction: $P(x_{M+1}=H\mid D) = \int\theta P(\theta\mid D)\; d\theta = \tfrac{5}{7}$
+
+![ ](./figs/lec5/ho10.png)
 
 ## Bayesian inference and MLE
 
@@ -174,11 +175,11 @@ Variational approximation
 - Computationally demanding (compared to frequentist approach)
 - Use of approximations weakens coherence argument
 
-# Example problem - HIV test
+# Example: Diagnostic testing
 
 Facts:
 
-- Rapid home tests will pick up an infection 97.7% of the time 28 days after exposure (sensitivity).
+- Rapid home tests will pick up an HIV infection 97.7% of the time 28 days after exposure (sensitivity).
 - These same tests have a specificity of 95%.
 - 0.34% of the US population is estimated to be infected.
 
@@ -199,7 +200,7 @@ Questions:
 	- [emcee](https://github.com/dfm/emcee) (python)
 	- [Stan](https://github.com/stan-dev/stan) (C++, python, R)
 
-## Review Questions
+## Review Questions {.smaller}
 
 1. What is a prior? How does one go about making one?
 2. Can a prior be based on data? If so, how is this data related to the experiment being modeled (the observed)?
