@@ -43,7 +43,7 @@ Each data point is sampled from a **generative process**:
 1. Choose component i with probability $P(y=i)$
 2. Generate datapoint $N(m_i, \Sigma_i)$
 
-![ ](./figs/lec14/gm4.pdf)
+![ ](./figs/lec14/gm4.svg)
 
 # What Model Should We Use?
 
@@ -71,7 +71,7 @@ $$P(X = x_j \mid Y = i) = N(x_j, \mu_i, \Sigma_i)$$
 ::::
 
 :::: {.column width=50%}
-![ ](./figs/lec14/gm6.pdf)
+![ ](./figs/lec14/gm6.webp)
 ::::
 
 :::
@@ -82,11 +82,25 @@ $$P(X = x_j \mid Y = i) = N(x_j, \mu_i, \Sigma_i)$$
 
 # Multivariate Gaussians
 
-![ ](./figs/lec14/gm8.pdf)
+$$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \mu)^T \Sigma^{-1} (\mathbf{x}_j - \mu)\right]$$
+
+![ ](./figs/lec14/gm8.webp)
+
+$\Sigma$ is a diagonal matrix 
+
+$X_i$ are independent and uncorrelated
 
 # Multivariate Gaussians
 
-![ ](./figs/lec14/gm9.pdf)
+$$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \mu)^T \Sigma^{-1} (\mathbf{x}_j - \mu)\right]$$
+
+![ ](./figs/lec14/gm9.webp)
+
+$\Sigma$ is an arbitrary (semidefinite) matrix
+
+Specifies rotation/change of basis
+
+Eigenvalues specify the relative elongation
 
 # Multivariate Gaussians
 
@@ -116,7 +130,7 @@ $p(x\; is\; k) = \frac{\pi_k N(x|\mu_k, \Sigma_k)}{\sum_{k=1}^{N}}$
 
 # Mixtures of Gaussians (3)
 
-![ ](./figs/lec14/gm14.pdf)
+![ ](./figs/lec14/gm14.webp)
 
 # Eliminating Hard Assignments to Clusters
 
