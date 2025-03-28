@@ -26,7 +26,7 @@ author: Aaron Meyer (based on slides from Joyce Ho)
 
 ## Two views on how we interpret the world
 
-![https://xkcd.com/1132/](./figs/lec5/frequentists_vs_bayesians.png){width=2in}
+![https://xkcd.com/1132/](./figs/bayesian/frequentists_vs_bayesians.png){width=2in}
 
 ## Bayesian statistics derivation
 
@@ -60,7 +60,7 @@ $$L(\theta; D) = P(D\mid\theta) = \prod_m P(x_m \mid\theta)$$
 - Example: Likelihood for the sequence: H, H, T, H, H
 $$L(\theta; D) = \theta \theta (1-\theta)\theta\theta = \theta^4 (1-\theta)$$
 
-![ ](./figs/lec5/ho5.svg)
+![ ](./figs/bayesian/ho5.svg)
 
 ::: {.notes}
 - Frequentist: for a fixed parameter, model the data generation process.
@@ -109,7 +109,7 @@ $$L(\theta; D) = \theta \theta (1-\theta)\theta\theta = \theta^4 (1-\theta)$$
 	- MLE estimate: $P(\theta) = \tfrac{4}{5} = 0.8$
 	- Bayesian prediction: $P(x_{M+1}=H\mid D) = \int\theta P(\theta\mid D)\; d\theta = \tfrac{5}{7}$
 
-![ ](./figs/lec5/ho10.png)
+![ ](./figs/bayesian/ho10.png)
 
 ## Bayesian inference and MLE
 
