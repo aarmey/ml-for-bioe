@@ -16,7 +16,7 @@ title: "Course outline - BE 175"
 
 - Monday: Fitting & Regression ([slides](../lectures/regression.html), [notes](../notes/regression.html))
   - [Example Notebook](public/examples/OLS-Example.ipynb)
-- [Wednesday: Dynamical models](../lectures/dynamics.html)
+- Wednesday: Dynamical models ([slides](../lectures/dynamics.html), [notes](../notes/dynamics.html))
 - Lab: Statistics lab
   - Due April 24th at 11:59 pm
   - Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html)
@@ -25,13 +25,13 @@ title: "Course outline - BE 175"
 
 - Monday: Does my model work? Crossvalidation, bootstrap, and friends ([slides](../lectures/model-validation.html), [notes](../notes/model-validation.html))
   - [Example Notebook](public/examples/CrossVal-Example.ipynb)
-- Wednesday: Fitting & Regression Redux, Regularization  ([slides](../lectures/regularization.html), [notes](../notes/regularization.html))
+- Wednesday: Fitting & Regression Redux, Regularization ([slides](../lectures/regularization.html), [notes](../notes/regularization.html))
   - [Example Notebook](public/examples/Regularization-Example.ipynb)
 - Lab: Exam review
 
 ### Week 4, April 21 – 25
 
-- [Monday: Reproducible computational workflows](lectures/reproducibility.html)
+- Monday: Reproducible computational workflows ([slides](../lectures/reproducibility.html), [notes](../notes/reproducibility.html))
 - Wednesday: Exam review, buffer
 - Lab: Regression lab
   - Due May 8th at 11:59 pm
@@ -39,7 +39,7 @@ title: "Course outline - BE 175"
 ### Week 5, April 28 – May 2
 
 - Monday: Exam 1
-- [Wednesday: Dimensionality reduction - PCA and NMF](../lectures/dimensionality-reduction.html)
+- Wednesday: Dimensionality reduction - PCA and NMF ([slides](../lectures/dimensionality-reduction.html), [notes](../notes/dimensionality-reduction.html))
   - [Example Notebook](public/examples/PCA-NNMF.ipynb)
   - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
@@ -47,8 +47,8 @@ title: "Course outline - BE 175"
 
 ### Week 6, May 5 – 9
 
-- [Monday: Partial Least Squares Regression](../lectures/plsr.html)
-- [Wednesday: K-Means clustering](../lectures/clustering.html)
+- Monday: Partial Least Squares Regression ([slides](../lectures/plsr.html), [notes](../notes/plsr.html))
+- Wednesday: K-Means clustering ([slides](../lectures/clustering.html), [notes](../notes/clustering.html))
   - [Example Notebook](public/examples/K-Means.ipynb)
 - Submit project idea, due May 8th at 11:59 pm
 - Lab: PCA/PLSR lab
@@ -57,16 +57,16 @@ title: "Course outline - BE 175"
 
 ### Week 7, May 12 – 16
 
-- [Monday: Gaussian Mixture Models](../lectures/gmms.html)
+- Monday: Gaussian Mixture Models ([slides](../lectures/gmms.html), [notes](../notes/gmms.html))
   - [Example Notebook](public/examples/Gaussian-Mixtures.ipynb)
-- [Wednesday: Support vector machines](../lectures/svms.html)
+- Wednesday: Support vector machines ([slides](../lectures/svms.html), [notes](../notes/svms.html))
   - [Example Notebook](public/examples/SVMs-example.ipynb)
 - Lab: TODO
 
 ### Week 8, May 19 – 23
 
 - Monday: Continue SVMs
-- [Wednesday: Equitable application of models, dynamical models](../lectures/dynamics.html)
+- Wednesday: Equitable application of models
 - Lab: SVM lab
   - Due June 5th at 11:59 pm
   - Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863)
