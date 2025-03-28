@@ -31,8 +31,7 @@ author: Aaron Meyer (based on slides from Joyce Ho)
 ## Bayesian statistics derivation
 
 Bayes’ theorem may be derived from the definition of conditional probability:
-$$P(A\mid B)={\frac {P(A\cap B)}{P(B)}},{\text{ if }}P(B)\neq 0$$
-$$P(B\mid A)={\frac {P(B\cap A)}{P(A)}},{\text{ if }}P(A)\neq 0$$
+$$P(A\mid B)={\frac {P(B\mid A)\,P(A)}{P(B)}},\;\text{if}\; P(B)\neq 0$$
 because
 $$P(B\cap A) = P(A\cap B)$$
 $$\Rightarrow P(A\cap B)=P(A\mid B)\,P(B)=P(B\mid A)\,P(A)$$

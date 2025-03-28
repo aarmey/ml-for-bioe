@@ -5,7 +5,7 @@ title: "Course outline - BE 175"
 ### Week 1, March 31 – April 4
 
 - Monday: Statistics review ([slides](../lectures/lecture1.html), [notes](../notes/lecture1.html))
-- [Wednesday: Bayesian vs. frequentist approaches](../lectures/bayesian.html) (pre-recorded)
+- Wednesday: Bayesian vs. frequentist approaches ([slides](../lectures/bayesian.html), [notes](../notes/bayesian.html)) (pre-recorded)
 - Lab: Programming primer
   - Due April 10th at 11:59 pm
   - Recommended: Git & Github Fundamentals Tutorial
