@@ -86,7 +86,7 @@ By the end of the course you will learn how to:
 ~ Final Project
 
 25%
-~ Lab Assignments.
+~ Lab Assignments
 
 40%
 ~ Midterms 1 & 2
@@ -307,7 +307,7 @@ Complementary event
 - $\sigma$: standard deviation
 - $\sigma^2$: variance
 
-$$f(x)=\frac{1}{\sqrt{2\pi}}\; e^{-\frac{x^2}{2}}$$
+$$f(x)={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}$$
 
 ![ ](./figs/lec1/normal_pdf.png){width=2in}
 
