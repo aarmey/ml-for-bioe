@@ -21,3 +21,4 @@ format:
     slide-number: true
     date-format: long
     embed-resources: true
+    chalkboard: true
