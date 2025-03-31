@@ -291,8 +291,7 @@ for bootstrapi in range(num_bootstraps):
 - 📖: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 
 
-::: {.smaller}
-## Review Questions
+## Review Questions {.smaller}
 
 1. What does cross-validation aim to achieve? What does it pretend to do to achieve this?
 2. What does bootstrapping aim to achieve? What does it pretend to do to achieve this?
