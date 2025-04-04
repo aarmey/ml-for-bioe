@@ -61,7 +61,9 @@ title: "Course outline - BE 175"
   - [Example Notebook](public/examples/Gaussian-Mixtures.ipynb)
 - Wednesday: Support vector machines ([slides](../lectures/svms.html), [notes](../notes/svms.html))
   - [Example Notebook](public/examples/SVMs-example.ipynb)
-- Lab: TODO
+- Lab: Content review
+  - Review mixture models
+  - Discuss project plans
 
 ### Week 8, May 19 – 23
 
