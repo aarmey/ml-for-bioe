@@ -15,7 +15,7 @@ title: "Course outline - BE 175"
 ### Week 2, April 7 – 11
 
 - Monday: Fitting & Regression ([slides](../lectures/regression.html), [notes](../notes/regression.html))
-  - [Example Notebook](public/examples/OLS-Example.ipynb)
+  - [Example Notebook](../examples/OLS-Example.ipynb)
 - Wednesday: Dynamical models ([slides](../lectures/dynamics.html), [notes](../notes/dynamics.html))
 - Lab: Statistics lab
   - Due April 24th at 11:59 pm
@@ -24,9 +24,9 @@ title: "Course outline - BE 175"
 ### Week 3, April 14 – 18
 
 - Monday: Does my model work? Crossvalidation, bootstrap, and friends ([slides](../lectures/model-validation.html), [notes](../notes/model-validation.html))
-  - [Example Notebook](public/examples/CrossVal-Example.ipynb)
+  - [Example Notebook](../examples/CrossVal-Example.ipynb)
 - Wednesday: Fitting & Regression Redux, Regularization ([slides](../lectures/regularization.html), [notes](../notes/regularization.html))
-  - [Example Notebook](public/examples/Regularization-Example.ipynb)
+  - [Example Notebook](../examples/Regularization-Example.ipynb)
 - Lab: Exam review
 
 ### Week 4, April 21 – 25
@@ -40,7 +40,7 @@ title: "Course outline - BE 175"
 
 - Monday: Exam 1
 - Wednesday: Dimensionality reduction - PCA and NMF ([slides](../lectures/dimensionality-reduction.html), [notes](../notes/dimensionality-reduction.html))
-  - [Example Notebook](public/examples/PCA-NNMF.ipynb)
+  - [Example Notebook](../examples/PCA-NNMF.ipynb)
   - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - Lab: Project selection check-in, computational reproducibility review
@@ -49,7 +49,7 @@ title: "Course outline - BE 175"
 
 - Monday: Partial Least Squares Regression ([slides](../lectures/plsr.html), [notes](../notes/plsr.html))
 - Wednesday: K-Means clustering ([slides](../lectures/clustering.html), [notes](../notes/clustering.html))
-  - [Example Notebook](public/examples/K-Means.ipynb)
+  - [Example Notebook](../examples/K-Means.ipynb)
 - Submit project idea, due May 8th at 11:59 pm
 - Lab: PCA/PLSR lab
   - Due May 22nd at 11:59 pm
@@ -58,9 +58,9 @@ title: "Course outline - BE 175"
 ### Week 7, May 12 – 16
 
 - Monday: Gaussian Mixture Models ([slides](../lectures/gmms.html), [notes](../notes/gmms.html))
-  - [Example Notebook](public/examples/Gaussian-Mixtures.ipynb)
+  - [Example Notebook](../examples/Gaussian-Mixtures.ipynb)
 - Wednesday: Support vector machines ([slides](../lectures/svms.html), [notes](../notes/svms.html))
-  - [Example Notebook](public/examples/SVMs-example.ipynb)
+  - [Example Notebook](../examples/SVMs-example.ipynb)
 - Lab: Content review
   - Review mixture models
   - Discuss project plans
