@@ -460,7 +460,7 @@ Can this model oscillate under physically meaningful situations and, if so, when
 ::: {.notes}
 $$\frac{dG1}{dt} = - \alpha [G1] + 2 \beta [G2] - \gamma [G1]$$
 
-$$\frac{dG2}{dt} = \alpha [G1] - 2 \beta [G2] - \gamma [G2]$$
+$$\frac{dG2}{dt} = \alpha [G1] - \beta [G2] - \gamma [G2]$$
 
 $$J = 
 \begin{pmatrix}
@@ -469,7 +469,7 @@ $$J =
 \end{pmatrix}
 $$
 
-$$\lambda = \frac{1}{2} \left( -\alpha -\beta -2 \gamma \pm \sqrt{\alpha^2} + 6 \alpha \beta + \beta ^2  \right)$$
+$$\lambda = \frac{1}{2} \left( -\alpha -\beta -2 \gamma \pm \sqrt{\alpha^2 + 6 \alpha \beta + \beta ^2}  \right)$$
 
 $\alpha$ and/or $\beta$ would have to be negative to oscillate.
 :::
