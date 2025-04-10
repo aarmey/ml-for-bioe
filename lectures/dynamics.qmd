@@ -179,6 +179,7 @@ Walk through 1D case of stability.
 - Go through how linear systems come to a solution.
 - $\frac{dx'}{dt} = c_1 x$
 - What is this like if $c_1$ is negative? Positive? Imaginary?
+- $e^{i\theta} = \cos \theta + i \sin \theta$
 :::
 
 ## Linearity & Separability
