@@ -188,7 +188,7 @@ $$
 ::: {.notes}
 - Date shows the difficulty in solving.
 - $l_1$ indicates the sum of absolute values.
-- So $l_2 norm is more sensitive to large values. Here, sensitive to _all_ values.
+- So $l_2$ norm is more sensitive to large values. Here, sensitive to _all_ values.
 - What happens if $\hat{\beta}_j$ doesn't really affect the fitting quality?
 :::
 
