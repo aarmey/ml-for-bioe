@@ -23,27 +23,27 @@ title: "Course outline - BE 175"
 
 ### Week 3, April 14 – 18
 
-- Monday: Does my model work? Crossvalidation, bootstrap, and friends ([slides](../lectures/model-validation.html), [notes](../notes/model-validation.html))
+- Monday: Finish dynamics. The Adam optimizer.
+- Wednesday: Does my model work? Crossvalidation, bootstrap, and friends ([slides](../lectures/model-validation.html), [notes](../notes/model-validation.html))
   - [Example Notebook](../examples/CrossVal-Example.ipynb)
-- Wednesday: Fitting & Regression Redux, Regularization ([slides](../lectures/regularization.html), [notes](../notes/regularization.html))
-  - [Example Notebook](../examples/Regularization-Example.ipynb)
-- Lab: Exam review
+- Lab: Reviewing dynamics
 
 ### Week 4, April 21 – 25
 
-- Monday: Reproducible computational workflows ([slides](../lectures/reproducibility.html), [notes](../notes/reproducibility.html))
-- Wednesday: Exam review, buffer
-- Lab: Regression lab
+- Monday: Fitting & Regression Redux, Regularization ([slides](../lectures/regularization.html), [notes](../notes/regularization.html))
+  - [Example Notebook](../examples/Regularization-Example.ipynb)
+- Wednesday: Reproducible computational workflows ([slides](../lectures/reproducibility.html), [notes](../notes/reproducibility.html))
+- Lab: Regression lab, exam review
   - Due May 8th at 11:59 pm
 
 ### Week 5, April 28 – May 2
 
-- Monday: Exam 1
-- Wednesday: Dimensionality reduction - PCA and NMF ([slides](../lectures/dimensionality-reduction.html), [notes](../notes/dimensionality-reduction.html))
+- Monday: Dimensionality reduction - PCA and NMF ([slides](../lectures/dimensionality-reduction.html), [notes](../notes/dimensionality-reduction.html))
   - [Example Notebook](../examples/PCA-NNMF.ipynb)
   - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
   - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
-- Lab: Project selection check-in, computational reproducibility review
+- Wednesday: Exam 1
+- Lab: Project selection check-in
 
 ### Week 6, May 5 – 9
 
