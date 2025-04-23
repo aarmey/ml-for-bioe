@@ -332,6 +332,16 @@ Imagine that we'd like to add a method `subtractWeeks` to a `Date` class, that s
 - Can also use static analysis to determine potential errors
 - `pylint` is a linter for python code
 
+## Code review
+
+- Code review is when someone else looks at your code
+	- Can be informal, or part of a formal process
+- Goal is to identify bugs, improve code quality, and transfer knowledge
+- Can be done before or after code is committed
+- Mostly done by a human, through AI tools are becoming better
+- Some companies require code review for all code
+	- Can be a good way to catch errors, and ensure code quality
+
 # Summary
 
 - For complex analysis make sure to use unit testing
