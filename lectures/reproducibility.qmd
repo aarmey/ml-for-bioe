@@ -3,6 +3,26 @@ title: Reproducible Computational Workflows
 author: Aaron Meyer
 ---
 
+# Example - Genomics Annotations
+
+![ ](./figs/reproducibility/title.png)
+
+## Example - Genomics Annotations
+
+![ ](./figs/reproducibility/fig1.png)
+
+## Example - Genomics Annotations
+
+![ ](./figs/reproducibility/fig2.png)
+
+## Example - Genomics Annotations
+
+![ ](./figs/reproducibility/fig3.png)
+
+## Example - Genomics Annotations
+
+![ ](./figs/reproducibility/fig4.png)
+
 # Bugs and Testing
 
 - **software reliability**: Probability that a software system will not cause failure under specified conditions.
@@ -101,32 +121,23 @@ The documentation covers [others](https://docs.pytest.org/en/stable/how-to/asser
 ## Setup and Teardown
 
 ```python
-# content of test_emaillib.py
-from emaillib import Email, MailAdminClient
-
 import pytest
+import pandas as pd
 
 @pytest.fixture
-def mail_admin():
-    return MailAdminClient()
+def example_dataframe():
+	# Create a simple DataFrame for testing
+	data = {'col1': [1, 2, 3], 'col2': [4, 5, 6]}
+	df = pd.DataFrame(data)
+	return df
 
-@pytest.fixture
-def sending_user(mail_admin):
-    user = mail_admin.create_user()
-    yield user
-    mail_admin.delete_user(user)
+def test_dataframe_column_sum(example_dataframe):
+	# Test that the sum of 'col1' is correct
+	assert example_dataframe['col1'].sum() == 6
 
-@pytest.fixture
-def receiving_user(mail_admin):
-    user = mail_admin.create_user()
-    yield user
-    user.clear_mailbox()
-    mail_admin.delete_user(user)
-
-def test_email_received(sending_user, receiving_user):
-    email = Email(subject="Hey!", body="How's it going?")
-    sending_user.send_email(email, receiving_user)
-    assert email in receiving_user.inbox
+def test_dataframe_column_mean(example_dataframe):
+	# Test that the mean of 'col2' is correct
+	assert example_dataframe['col2'].mean() == 5.0
 ```
 
 # Tips for Testing
@@ -292,26 +303,6 @@ Imagine that we'd like to add a method `subtractWeeks` to a `Date` class, that s
 	- used (along with compilation) to make sure daily build runs
 - continuous integration:
 	- Adding new units immediately as they are written.
-
-# Example - Genomics Annotations
-
-![ ](./figs/reproducibility/title.png)
-
-## Example - Genomics Annotations
-
-![ ](./figs/reproducibility/fig1.png)
-
-## Example - Genomics Annotations
-
-![ ](./figs/reproducibility/fig2.png)
-
-## Example - Genomics Annotations
-
-![ ](./figs/reproducibility/fig3.png)
-
-## Example - Genomics Annotations
-
-![ ](./figs/reproducibility/fig4.png)
 
 # Associated topics & tools
 
