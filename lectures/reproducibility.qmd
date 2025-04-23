@@ -67,7 +67,7 @@ def test_nchoosek():
     assert nchoosek(9)[3] == 84
 ```
 
-## Assertions
+## Basic Assertions
 
 `pytest` does not provide a large number of specific assertions. Instead, mostly use base `assert`.
 
@@ -75,7 +75,7 @@ def test_nchoosek():
 assert a % 2 == 0, "value was odd, should be even"
 ```
 
-## Assertions
+## Asserting Exceptions
 
 There are specific approaches for special cases, like checking that exceptions *do* occur:
 
