@@ -303,6 +303,6 @@ $$
 5. What is variable selection? Which method(s) perform it? What can you say about the answers?
 6. What does it mean when one says ridge regression and LASSO give a family of answers?
 7. What can we say about the relationship between fitting error and prediction error?
-8. What does regularization do to the degrees of freedom (p) of a model? How about the number of measurements (n)?
-9. A colleague tells you about a new form of regularization they've come up with (e.g., remove X% of variables least correlated with Y). How would this influence the variance of the model? Might this improve the prediction error?
-10. Can you regularize NNLS? If so, how would this be implemented?
+8. What does regularization do to the variance of a model?
+9. A colleague tells you about a new form of regularization they've come up with (e.g., force all parameters to be within the range 1–3). How would this influence the variance of the model? Might this improve the prediction error?
+10. Can you regularize NNLS? If so, how could you implement this?
