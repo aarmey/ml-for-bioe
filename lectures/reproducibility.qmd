@@ -58,13 +58,24 @@ The basic idea:
 
 ```python
 import pytest
+import math
 
-def test_nchoosek():
-    assert nchoosek(5)[3] == 10
-    assert nchoosek(6)[3] == 20
-    assert nchoosek(7)[3] == 35
-    assert nchoosek(8)[3] == 56
-    assert nchoosek(9)[3] == 84
+# Example function to test
+def factorial(n):
+    if n < 0:
+        raise ValueError("Factorial not defined for negative numbers")
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+# Test for the example function
+def test_factorial():
+    assert factorial(0) == 1
+    assert factorial(1) == 1
+    assert factorial(5) == 120
+    with pytest.raises(ValueError):
+        factorial(-1)
 ```
 
 ## Basic Assertions
