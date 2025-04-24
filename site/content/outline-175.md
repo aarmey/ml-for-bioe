@@ -40,8 +40,6 @@ title: "Course outline - BE 175"
 
 - Monday: Dimensionality reduction - PCA and NMF ([slides](../lectures/dimensionality-reduction.html), [notes](../notes/dimensionality-reduction.html))
   - [Example Notebook](../examples/PCA-NNMF.ipynb)
-  - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-  - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - Wednesday: Exam 1
 - Lab: Project selection check-in
 

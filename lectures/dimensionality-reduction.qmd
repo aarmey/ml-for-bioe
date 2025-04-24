@@ -11,9 +11,9 @@ author: Aaron Meyer
 	- Many observations and many variables
 	- Many variables but few observations ($p > n$)
 
-# Dealing with many variables
+## Dealing with many variables
 
-## Usually when we're dealing with many variables, we don't have a great understanding of how they relate to each other
+#### Usually when we're dealing with many variables, we don't have a great understanding of how they relate to each other
 
 - E.g. if gene X is high, we can't be sure that will mean gene Y will be too
 - If we had these relationships, we could reduce the data
@@ -21,7 +21,7 @@ author: Aaron Meyer
 
 # Dimensionality Reduction
 
-## Generate a low-dimensional encoding of a high-dimensional space
+### Generate a low-dimensional encoding of a high-dimensional space
 
 Purposes:
 
@@ -31,7 +31,7 @@ Purposes:
 
 Bonus: Many of the other methods from the class can be applied after dimensionality reduction with little or no adjustment!
 
-# Matrix Factorization
+## Matrix Factorization
 
 Many (most?) dimensionality reduction methods involve matrix factorization
 
@@ -47,13 +47,13 @@ where $\mathbf{W}$ is $N\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 What is the implicit assumption here?
 :::
 
-# Matrix Factorization
+## Matrix Factorization
 
 ![ ](./figs/dimred/mflayout.png)
 
 Generalization of many methods (e.g., SVD, QR, CUR, Truncated SVD, etc.)
 
-# Aside - What should R be?
+## Aside - What should R be?
 
 $$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^{T} $$
 
@@ -65,38 +65,32 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 - Trade-off always
 :::
 
-# Matrix Factorization
-
-#### Matrix factorization is also compression
+## Matrix factorization is also compression
 
 ![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat.jpg){width=80%}
 
-# Factor Analysis
-
-#### Matrix factorization is also compression
+## Matrix factorization is also compression
 
 ![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat-3comp.jpg){width=80%}
 
-# Factor Analysis
-
-#### Matrix factorization is also compression
+## Matrix factorization is also compression
 
 ![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat-46comp.jpg){width=80%}
 
 ::: {.notes}
+- This is about 1% of the original data size.
 - There is always information lost
 - We just hope for it to be information that doesn't matter
 :::
 
-# Examples from bioengineering
+# Examples
 
 ### Process control
 - Large bioreactor runs may be recorded in a database, along with a variety of measurements from those runs
 - We may be interested in how those different runs varied, and how each factor relates to one another
 - Plotting a compressed version of that data can indicate when an anomolous change is present
 
-
-# Examples from bioengineering
+## Examples
 
 ### Mutational processes
 - Anytime multiple contributory factors give rise to a phenomena, matrix factorization can separate them out
@@ -109,18 +103,12 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 
 # Principal Components Analysis
 
-## Application of matrix factorization
-
 - Each principal component (PC) is linear combination of **uncorrelated** attributes / features'
 - Ordered in terms of variance
 - $k$th PC is orthogonal to all previous PCs
 - Reduce dimensionality while maintaining maximal variance
 
-![ ](./figs/dimred/pca.png){width=40%}
-
-# Principal Components Analysis
-
-BOARD
+![ ](./figs/dimred/pca.png)
 
 ::: {.notes}
 - Go through example
@@ -132,7 +120,7 @@ BOARD
 - Talk about relationship going back to data from PCA
 :::
 
-# Methods to calculate PCA
+## Methods to calculate PCA
 
 - Iterative computation
 	- More robust with high numbers of variables
@@ -141,9 +129,7 @@ BOARD
 	- Able to efficiently calculate a few PCs at once
 	- Breaks down for high numbers of variables (large p)
 
-# Practical Notes
-
-## PCA
+## Practical notes
 
 - Implemented within `sklearn.decomposition.PCA`
 	- `PCA.fit_transform(X)` fits the model to `X`, then provides the data in principal component space
@@ -154,9 +140,9 @@ BOARD
 Go over explained variance.
 :::
 
-# PCA
+## Code example
 
-~~~python
+~~~{.python code-line-numbers="11-12"}
 import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.decomposition import PCA
@@ -172,18 +158,6 @@ X_r = pca.fit(X).transform(X)
 
 # Print PC1 loadings
 print(pca.components_[:, 0])
-# ...
-~~~
-
-# PCA
-
-~~~python
-# ...
-pca = PCA(n_components=2)
-X_r = pca.fit(X).transform(X)
-
-# Print PC1 loadings
-print(pca.components_[:, 0])
 
 # Print PC1 scores
 print(X_r[:, 0])
@@ -193,24 +167,19 @@ print(pca.explained_variance_ratio_)
 # [ 0.92461621  0.05301557]
 ~~~
 
-# PCA
+## PCA
 
 ![ ](./figs/dimred/iris_pca.png){width=90%}
 
 # Non-negative matrix factorization
 
-## Like PCA, except the coefficients in the linear combination must be non-negative
+#### The answer you get will always depend on the error metric, starting point, and search method
 
+- Like PCA, except the coefficients in the linear combination must be non-negative
 - Forcing positive coefficients implies an additive combination of basis parts to reconstruct whole
 - Generally leads to zeros for factors that don't contribute
 
-# Non-negative matrix factorization
-
-## The answer you get will always depend on the error metric, starting point, and search method
-
-BOARD
-
-# What is significant about this?
+## What is significant about this?
 
 - The update rule is multiplicative instead of additive
 - In the initial values for W and H are non-negative, then W and H can never become negative
@@ -218,28 +187,26 @@ BOARD
 - Will converge to a local maxima
 	- Therefore starting point matters
 
-# Non-negative matrix factorization
-
-## The answer you get will always depend on the error metric, starting point, and search method
+## Non-negative matrix factorization
 
 - Another approach is to find the gradient across all the variables in the matrix
 - Called coordinate descent, and is usually faster
 - Not going to go through implementation
 - Will also converge to a local maxima
 
-# NMF application: Mutational Processes in Cancer
+## NMF application: Mutational Processes in Cancer
 
 ![Helleday et al, Nat Rev Gen, 2014](./figs/dimred/mutgen.jpg)
 
-# NMF application: Mutational Processes in Cancer
+## 
 
 ![Helleday et al, Nat Rev Gen, 2014](./figs/dimred/mutproc.jpg)
 
-# NMF application: Mutational Processes in Cancer
+## 
 
 ![Alexandrov et al, Cell Rep, 2013](./figs/dimred/sigA.jpg)
 
-# NMF application: Mutational Processes in Cancer
+## 
 
 ![Alexandrov et al, Cell Rep, 2013](./figs/dimred/sigB.jpg)
 
@@ -258,26 +225,30 @@ BOARD
 	- `NMF.components_`: components x features matrix
 	- Returns transformed data through `NMF.fit_transform()`
 
-# Summary
+## Summary
 
-## PCA
+#### PCA
 
 - Preserves the covariation within a dataset
 - Therefore mostly preserves axes of maximal variation
 - Number of components can vary—in practice more than 2 or 3 rarely helpful
 
-## NMF
+#### NMF
 
-- Explains the dataset through factoring into two **non-negative** matrices
+- Explains the dataset through two **non-negative** matrices
 - Much more stable and well-specified reconstruction when assumptions are appropriate
 - Excellent for separating out additive factors
 
-# Closing
+## Closing
 
 **As always, selection of the appropriate method depends upon the question being asked.**
 
+# Reading & Resources
 
-### Lecture 7
+- 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+- 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
+
+## Review Questions
 
 1. What do dimensionality reduction methods reduce? What is the tradeoff?
 2. What are three benefits of dimensionality reduction?

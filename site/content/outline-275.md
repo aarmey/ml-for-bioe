@@ -33,8 +33,6 @@ title: "Course outline - BE 275"
 - [Lecture 6: Bayesian vs. frequentist approaches](lectures/bayesian.html)
 - [Lecture 7: Dimensionality reduction - PCA and NMF](lectures/dimensionality-reduction.html)
   - [Example Notebook](public/examples/PCA-NNMF.ipynb)
-  - For a visual refresh of some linear algebra [look here](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-  - Reading: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 
 ### Week 4, Oct 21 – 25
 
