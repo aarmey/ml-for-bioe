@@ -11,6 +11,12 @@ author: Aaron Meyer
 	- Many observations and many variables
 	- Many variables but few observations ($p > n$)
 
+::: {.notes}
+- Write out a big table of variables for people:
+	- Age, HR, BP, Height, Weight, Income, Disposable income, Body fat %, 1 mile running time, Birth date, cholesterol level
+- Ask for data reduction methods
+:::
+
 ## Dealing with many variables
 
 #### Usually when we're dealing with many variables, we don't have a great understanding of how they relate to each other
@@ -31,6 +37,11 @@ Purposes:
 
 Bonus: Many of the other methods from the class can be applied after dimensionality reduction with little or no adjustment!
 
+::: {.notes}
+- When we aren't using prediction, there won't be a clear benchmark for what is best.
+- We will think about these methods both numerically and geometrically.
+:::
+
 ## Matrix Factorization
 
 *Many* dimensionality reduction methods involve matrix factorization
@@ -44,7 +55,24 @@ $$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^{T} $$
 where $\mathbf{W}$ is $N\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N$.
 
 ::: {.notes}
-What is the implicit assumption here?
+- What is the implicit assumption here?
+- So a values determine observation associations, b values determine variable associations.
+- So we can think about these as row-wise, column-wise effects.
+
+$$
+\begin{bmatrix}
+a_1  \\
+a_2 \\
+a_3
+\end{bmatrix}
+\begin{bmatrix} b_1 & b_2 & b_3 \end{bmatrix}
+= 
+\begin{bmatrix}
+a_1b_1 & a_1b_2 & \ldots \\
+a_2b_1 & & \\
+a_3b_1 & \ldots & 
+\end{bmatrix}
+$$
 :::
 
 ## Matrix Factorization
@@ -63,6 +91,16 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 - Reduced R simplifies the model substantially
 - Also decreases fidelity of reconstruction
 - Trade-off always
+- Worst case, let's say N = M = R
+	- $X \approx W H^T$
+	- $N^2 \rightarrow N^2 + N^2$
+	- Just doubled the number of values to track!
+	- But can reconstruct perfectly. We could just make $W = I$ and $H = X^T$
+- Most reduced:
+	- $R = 1$
+	- $X \approx w \otimes h$
+	- $N^2 \rightarrow 2N$
+	- Say $N=100$, we go from 10,000 to 200 values.
 :::
 
 ## Matrix factorization is also compression
