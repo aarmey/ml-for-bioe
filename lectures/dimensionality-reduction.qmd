@@ -21,7 +21,7 @@ author: Aaron Meyer
 
 # Dimensionality Reduction
 
-### Generate a low-dimensional encoding of a high-dimensional space
+## Generate a low-dimensional encoding of a high-dimensional space
 
 Purposes:
 
@@ -33,7 +33,7 @@ Bonus: Many of the other methods from the class can be applied after dimensional
 
 ## Matrix Factorization
 
-Many (most?) dimensionality reduction methods involve matrix factorization
+*Many* dimensionality reduction methods involve matrix factorization
 
 Basic Idea: Find two (or more) matrices whose product best approximate the original matrix
 
@@ -85,23 +85,23 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 
 # Examples
 
-### Process control
+## Process control
 - Large bioreactor runs may be recorded in a database, along with a variety of measurements from those runs
 - We may be interested in how those different runs varied, and how each factor relates to one another
 - Plotting a compressed version of that data can indicate when an anomolous change is present
 
-## Examples
-
-### Mutational processes
+## Mutational processes
 - Anytime multiple contributory factors give rise to a phenomena, matrix factorization can separate them out
 - Will talk about this in greater detail
 
-### Cell heterogeneity
+## Cell heterogeneity
 - Enormous interest in understanding how cells are similar or different
 - Answer to this can be in millions of different ways
 - But cells often follow *programs*
 
 # Principal Components Analysis
+
+## Principal Components Analysis
 
 - Each principal component (PC) is linear combination of **uncorrelated** attributes / features'
 - Ordered in terms of variance
@@ -122,6 +122,7 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 
 ## Methods to calculate PCA
 
+- All methods are essentially deterministic
 - Iterative computation
 	- More robust with high numbers of variables
 	- Slower to calculate
@@ -167,34 +168,15 @@ print(pca.explained_variance_ratio_)
 # [ 0.92461621  0.05301557]
 ~~~
 
-## PCA
+## Separating flower species
 
 ![ ](./figs/dimred/iris_pca.png){width=90%}
 
 # Non-negative matrix factorization
 
-#### The answer you get will always depend on the error metric, starting point, and search method
+What if we have data wherein effects always accumulate?
 
-- Like PCA, except the coefficients in the linear combination must be non-negative
-- Forcing positive coefficients implies an additive combination of basis parts to reconstruct whole
-- Generally leads to zeros for factors that don't contribute
-
-## What is significant about this?
-
-- The update rule is multiplicative instead of additive
-- In the initial values for W and H are non-negative, then W and H can never become negative
-- This guarantees a non-negative factorization
-- Will converge to a local maxima
-	- Therefore starting point matters
-
-## Non-negative matrix factorization
-
-- Another approach is to find the gradient across all the variables in the matrix
-- Called coordinate descent, and is usually faster
-- Not going to go through implementation
-- Will also converge to a local maxima
-
-## NMF application: Mutational Processes in Cancer
+## Application: Mutational processes in cancer
 
 ![Helleday et al, Nat Rev Gen, 2014](./figs/dimred/mutgen.jpg)
 
@@ -214,13 +196,34 @@ print(pca.explained_variance_ratio_)
 - Also used in interpreting medical health records
 :::
 
-# Practical Notes - NMF
+## Important considerations
+
+- Like PCA, except the coefficients must be non-negative
+- Forcing positive coefficients implies an additive combination of parts to reconstruct whole
+- Leads to _sparse_ factors
+- The answer you get will always depend on the error metric, starting point, and search method
+
+## Multiplicative update algorithm
+
+- The update rule is multiplicative instead of additive
+- In the initial values for W and H are non-negative, then W and H can never become negative
+- This guarantees a non-negative factorization
+- Will converge to a local maxima
+	- Therefore starting point matters
+
+## Coordinate descent solving
+
+- Another approach is to find the gradient across all the variables in the matrix
+- Not going to go through implementation
+- Will also converge to a local maxima
+
+## Practical notes
 
 - Implemented within `sklearn.decomposition.NMF`.
 	- `n_components`: number of components
 	- `init`: how to initialize the search
 	- `solver`: 'cd' for coordinate descent, or 'mu' for multiplicative update
-	- `l1_ratio`: Can regularize fit
+	- `l1_ratio`, `alpha_H`, `alpha_W`: Can regularize fit
 - Provides:
 	- `NMF.components_`: components x features matrix
 	- Returns transformed data through `NMF.fit_transform()`
@@ -231,12 +234,13 @@ print(pca.explained_variance_ratio_)
 
 - Preserves the covariation within a dataset
 - Therefore mostly preserves axes of maximal variation
-- Number of components can vary—in practice more than 2 or 3 rarely helpful
+- Number of components will vary in practice
 
 #### NMF
 
 - Explains the dataset through two **non-negative** matrices
-- Much more stable and well-specified reconstruction when assumptions are appropriate
+- Much more stable patterns when assumptions are appropriate
+- Will explain less variance for a given number of components
 - Excellent for separating out additive factors
 
 ## Closing
@@ -247,6 +251,9 @@ print(pca.explained_variance_ratio_)
 
 - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
+- 💾: [Principal Component Analysis Explained Visually](https://setosa.io/ev/principal-component-analysis/)
+- 💾: [`sklearn.decomposition.PCA`](https://setosa.io/ev/principal-component-analysis/)
+- 💾: [`sklearn.decomposition.NMF`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html)
 
 ## Review Questions
 
@@ -260,5 +267,3 @@ print(pca.explained_variance_ratio_)
 8. What is a scores matrix? What would be the dimensions of this matrix for the dataset in Q5 when using three PCs?
 9. By definition, what is the direction of PC1?
 10. [See question 5 on midterm W20](https://aarmey.github.io/ml-for-bioe/ex-midterm-files/20W.pdf). How does movement of the siControl EGF point represent changes in the original data?
-
-
