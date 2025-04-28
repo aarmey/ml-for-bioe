@@ -18,6 +18,18 @@ author: Aaron Meyer (based on slides from Pam Kreeger)
 - And what we care about is some outcome
 :::
 
+## Application
+
+![ ](./figs/plsr/lee-1.webp)
+
+## Application
+
+![ ](./figs/plsr/lee-2.webp)
+
+## Application
+
+![ ](./figs/plsr/lee-4.webp)
+
 # Many Methods for Relating a Signal to Response
 
 Say we have some measurement from cells and how they respond:
@@ -49,47 +61,19 @@ Draw out correlation and then include new point.
 - Learning about PLS is more difficult than it should be, partly because papers describing it span areas of chemistry, economics, medicine and statistics, with little agreement on terminology and notation.
 - These methods will show one example of where the model and algorithm are quite distinct—there are multiple algorithms for calculating a PLSR model.
 
-# Multi-Linear Regression (MLR)
+## Regularization
 
-In biology we often have multiple signals and multiple responses that were measured:
-$$ y_1 =a_1x_1 + b_1x_2 + e_1 $$
-$$ y_2 =a_2x_1 + b_2x_2 + e_2 $$
+- Both PCR and PLSR are forms of regularization.
+- Reduce the dimensionality of our regression problem to $N_{comp}$.
+- Prioritize certain variance in the data.
 
-This can be written more concisely in matrix notation as:
-$$ Y = XB + E $$
+# Principal Components Regression
 
-Where Y is a $n \times p$ matrix and X is a $n \times m$ matrix; minimizing E and solving for B:
-$$ B = (X^tX)^{-1}X^tY $$
-
-# Underdetermined Systems
-
-If $n$ observations and $m$ variables:
-
-- $m<n$: no exact solution, least-squares solution possible
-- $m=n$: one solution
-- $m>n$: no unique solution unless we delete independent variables since $X^tX$ cannot be inverted
-	- **$m>n$ is often the case in systems biology!**
-
-If a model is underdetermined with multiple solutions, there are two general approches we can take:
-
-- Regularization: We can use other information we know to focus on one answer
-- Sampling: We can look at all possible models
-
-# Regularization
-
-Today we will use regularization.
-
-- We will assume the larger variation in the data is more meaningful.
-- Therefore, we will assume that smaller changes are less important.
-- This is a choice that must be correct for the relevant biological question at hand.
-
-# Principal Components Regression (PCR)
+## Principal Components Regression
 
 One solution - use the concepts from PCA to reduce dimensionality.
 
 First step: **Simply apply PCA!**
-
-![Geladi *Analytica Chimica Acta* 1986](./figs/plsr/PCR2.png){width=60%}
 
 Dimensionality goes from $m$ to $N_{comp}$.
 
@@ -159,97 +143,63 @@ $$Y = TB + E$$
 
 ![ ](./figs/plsr/PC-8.pdf)
 
-# Determining the Number of Components
+## Determining the Number of Components
 
-![ ](./figs/plsr/PC-9.pdf)
+R2X provides the variance explained in X:
 
-::: {.notes}
-Go over each.
-:::
+$$ R^2X = 1 - \frac{\lvert X_{\textrm{PLSR}} - X \rvert }{\lvert X \rvert} $$
 
-# Determining the Number of Components
+R2Y shows the Y variance explained:
 
-![ ](./figs/plsr/PC-10.pdf)
+$$ R^2Y = 1 - \frac{\lvert Y_{\textrm{PLSR}} - Y \rvert }{\lvert Y \rvert} $$
 
-# Variants of PLSR
+If you are trying to predict something, you should look at the cross-validated R2Y (a.k.a. Q2Y).
 
-#### Discriminant PLSR
-
-#### Tensor PLSR
-
-# Application
-
-![ ](./figs/plsr/lee-1.pdf)
-
-# Application
-
-![ ](./figs/plsr/lee-2.pdf)
-
-# Application
-
-![ ](./figs/plsr/lee-3.pdf)
-
-# Application
-
-![ ](./figs/plsr/lee-4.pdf)
-
-# Application
+## Application
 
 ![ ](./figs/plsr/lee-5.pdf)
 
-# Application
+## Application
 
 ![ ](./figs/plsr/lee-6.pdf)
 
-# Application
+## Application
 
 ![ ](./figs/plsr/lee-7.pdf)
 
-# Practical Notes
+# Practical Notes & Summary
 
 ## PCR
 
 - sklearn does not implement PCR directly
-- Can be applied by chaining `sklearn.decomposition.PCA` and `sklearn.linear_model.LinearRegression`
-- See: <https://scikit-learn.sourceforge.net/dev/auto_examples/plot_digits_pipe.html>
+- Can be applied by chaining [`sklearn.decomposition.PCA`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html) and [`sklearn.linear_model.LinearRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
+- See: [`sklearn.pipeline.Pipeline`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
 
 ## PLSR
 
-- `sklearn.cross_decomposition.PLSRegression`
+- [`sklearn.cross_decomposition.PLSRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
 	- Uses `M.fit(X, Y)` to train
 	- Can use `M.predict(X)` to get new predictions
 	- `PLSRegression(n_components=3)` to set number of components on setup
 	- Or `M.n_components = 3` after setup
 
-<https://scikit-learn.org/stable/modules/generated/sklearn.cross_decomposition.PLSRegression.html>
+## Comparison
 
-# Summary
-
-## PLSR
+### PLSR
 
 - Maximizes the covariance
 - Takes into account both the dependent (Y) and independent (X) data
 
-## PCR
+### PCR
 
 - Uses PCA as initial decomp. step, then is just normal linear regression
 - Maximizes the variance explained of the independent (X) data
 
-# Summary
-
-## Interpreting PLSR
-
-- $R^2X$, $R^2Y$, $Q^2Y$ (maximum value of 1)
-- Using Q2Y to determine number of components Scores/loadings
-- DModY (lower = better predicton)
-- VIP (>1 indicates important)
-- **Ultimately, these metrics are seconary to whether a model works upon crossvalidation**
-
-# Summary
+## Performance
 
 - PLSR is amazingly well at prediction
 	- This is **incredibly** powerful
-- Interpreting **WHY** PLSR predicts something can be very challenging
+- Interpreting **why** PLSR predicts something can be very challenging
 
 ## Review Questions
 
