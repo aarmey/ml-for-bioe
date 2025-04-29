@@ -289,6 +289,7 @@ What if we have data wherein effects always accumulate?
 
 - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
+- 📖: [Algorithms to calculate PCA models](https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/algorithms-to-calculate-build-pca-models#lvm-pca-nipals-algorithm)
 - 💾: [Principal Component Analysis Explained Visually](https://setosa.io/ev/principal-component-analysis/)
 - 💾: [`sklearn.decomposition.PCA`](https://setosa.io/ev/principal-component-analysis/)
 - 💾: [`sklearn.decomposition.NMF`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html)

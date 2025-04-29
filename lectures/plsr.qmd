@@ -3,57 +3,17 @@ title: Partial Least Squares Regression
 author: Aaron Meyer (based on slides from Pam Kreeger)
 ---
 
-::: {.notes}
-- Explain unsupervised/supervised.
-- Can you bootstrap a PLSR/PCR/PCA model?
-:::
-
-# Common Challenge: Cue/Signal/Response Relationships
-
-![ ](./figs/plsr/CSR-figure.pdf)
-
-::: {.notes}
-- Number of components enough to make PCA/lasso useful
-- But how do we deal with components moving together?
-- And what we care about is some outcome
-:::
-
-## Application
+# Common challenge: Lots of measurements change together
 
 ![ ](./figs/plsr/lee-1.webp)
 
-## Application
+## 
 
 ![ ](./figs/plsr/lee-2.webp)
 
-## Application
+## 
 
 ![ ](./figs/plsr/lee-4.webp)
-
-# Many Methods for Relating a Signal to Response
-
-Say we have some measurement from cells and how they respond:
-
-$$ [1, 2, 1.5, 5, 6, 7] \sim [5, 10, 7, 24, 31, 35] $$
-
-From the variation we can see that:
-
-- Low signal is correlated with low response
-- High signal is correlated with high response
-
-If we can find a quantitative correlation between the input and output, we can predict new outcomes for measurements we haven't yet seen.
-
-::: {.notes}
-Draw out correlation and then include new point.
-:::
-
-# Challenges with Univariate Relationships
-
-![Janes, et al. Science, 2005](./figs/plsr/Janes-fig.jpg)
-
-- The relationship between JNK activation and apoptosis appears to be highly context-dependent
-	- Univariate relationships are often insufficient
-	- Cells respond to an environment with multiple factors present
 
 # Notes about Methods Today
 
@@ -107,13 +67,11 @@ $$Y = TB + E$$
 
 # Potential Problem
 
-- PCs for the X matrix do not necessarily capture X-variation that is important for Y
-	- So later PCs are going to be more important to regression
-- Example: the first components capture signaling that is related to another cell fate, while the signals that co-vary for this particular y are buried in later components
+#### PCs for the X matrix do not necessarily capture X-variation that is important for Y
 
-**How might we handle this differently?**
+#### We might *miss* later PCs that are important for prediction!
 
-# PLSR
+# Partial Least Squares Regression
 
 ![ ](./figs/plsr/PC-5.pdf)
 
@@ -125,19 +83,51 @@ $$Y = TB + E$$
 - Forces direction of components
 :::
 
-# PLSR - NIPALs with Scores Exchanged
+## NIPALs with Scores Exchanged
 
-![ ](./figs/plsr/PC-6.pdf)
+1. Take a random column of Y to be $u_a$, and regress it against X.
 
-::: {.notes}
-- $B$ is $T (P^T T)^{-1} Q^T$
-- $P^T T$ is the approximation of $X$
-- PLSR components are not orthogonal in data space, but are orthogonal in O-PLS.
-:::
+$$\mathbf{w}_a = \dfrac{1}{\mathbf{u}'_a\mathbf{u}_a} \cdot \mathbf{X}'_a\mathbf{u}_a$$
 
-# PLSR - NIPALs with Scores Exchanged
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
 
-![ ](./figs/plsr/PC-7.pdf)
+## NIPALs with Scores Exchanged
+
+2. Normalize $w_a$.
+
+$$\mathbf{w}_a = \dfrac{\mathbf{w}_a}{\sqrt{\mathbf{w}'_a \mathbf{w}_a}}$$
+
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+
+## NIPALs with Scores Exchanged
+
+3. Regress $w_a$ against $X^T$ to obtain $t_a$.
+
+$$\mathbf{t}_a = \dfrac{1}{\mathbf{w}'_a\mathbf{w}_a} \cdot \mathbf{X}_a\mathbf{w}_a$$
+
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+
+## NIPALs with Scores Exchanged
+
+4. Regress $t_a$ against Y to obtain $c_a$.
+
+$$\mathbf{c}_a = \dfrac{1}{\mathbf{t}'_a\mathbf{t}_a} \cdot \mathbf{Y}'_a\mathbf{t}_a$$
+
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+
+## NIPALs with Scores Exchanged
+
+5. Regress $c_a$ against $Y^T$ to obtain $u_a$.
+
+$$\mathbf{u}_a = \dfrac{1}{\mathbf{c}'_a\mathbf{c}_a} \cdot \mathbf{Y}_a\mathbf{c}_a$$
+
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+
+## NIPALs with Scores Exchanged
+
+5. Cycle until convergence, then subtract off variance explained by $\widehat{\mathbf{X}} = \mathbf{t}_a\mathbf{p}'_a$ and $\widehat{\mathbf{Y}}_a = \mathbf{t}_a \mathbf{c}'_a$.
+
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
 
 # Components in PLSR and PCA Differ
 
@@ -162,10 +152,6 @@ If you are trying to predict something, you should look at the cross-validated R
 ## Application
 
 ![ ](./figs/plsr/lee-6.pdf)
-
-## Application
-
-![ ](./figs/plsr/lee-7.pdf)
 
 # Practical Notes & Summary
 
