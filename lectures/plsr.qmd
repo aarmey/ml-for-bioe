@@ -15,7 +15,7 @@ author: Aaron Meyer (based on slides from Pam Kreeger)
 
 ![ ](./figs/plsr/lee-4.webp)
 
-# Notes about Methods Today
+## Notes about Methods Today
 
 - Both methods are supervised learning methods, however have a number of distinct properties from others we will discuss.
 - Learning about PLS is more difficult than it should be, partly because papers describing it span areas of chemistry, economics, medicine and statistics, with little agreement on terminology and notation.
@@ -42,7 +42,7 @@ Dimensionality goes from $m$ to $N_{comp}$.
 - What might be a concern as a consequence of this? (How do we determine how many components to keep?)
 :::
 
-# Principal Components Regression (PCR)
+## Principal Components Regression
 
 1)  Decompose X matrix (scores T, loadings P, residuals E)
 $$X = TP^T + E$$
@@ -65,7 +65,7 @@ $$Y = TB + E$$
 - Metrics like AIC or BIC
 :::
 
-# Potential Problem
+## Potential Problem
 
 #### PCs for the X matrix do not necessarily capture X-variation that is important for Y
 
@@ -129,9 +129,9 @@ $$\mathbf{u}_a = \dfrac{1}{\mathbf{c}'_a\mathbf{c}_a} \cdot \mathbf{Y}_a\mathbf{
 
 ![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
 
-# Components in PLSR and PCA Differ
+## Components in PLSR and PCA Differ
 
-![ ](./figs/plsr/PC-8.pdf)
+![ ](./figs/plsr/PC-8.webp)
 
 ## Determining the Number of Components
 
@@ -147,7 +147,7 @@ If you are trying to predict something, you should look at the cross-validated R
 
 ## Application
 
-![ ](./figs/plsr/lee-5.pdf)
+![ ](./figs/plsr/lee-5.webp)
 
 ## Application
 
