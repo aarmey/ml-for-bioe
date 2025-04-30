@@ -91,7 +91,7 @@ We will find principal components for both X and Y:
 
 $$X = T P^t + E$$
 
-$$Y = UQ^t + F$$
+$$Y = U Q^t + F$$
 
 ![ ](./figs/plsr/cross-decomp.webp)
 
@@ -143,7 +143,7 @@ $$\mathbf{u}_a = \dfrac{1}{\mathbf{c}'_a\mathbf{c}_a} \cdot \mathbf{Y}_a\mathbf{
 
 ## Components in PLSR and PCA Differ
 
-![ ](./figs/plsr/PC-8.webp)
+![Janes et al, Nat Rev MCB, 2006](./figs/plsr/PC-8.webp)
 
 ## Determining the Number of Components
 
@@ -198,6 +198,10 @@ If you are trying to predict something, you should look at the cross-validated R
 - PLSR is amazingly well at prediction
 	- This is **incredibly** powerful
 - Interpreting **why** PLSR predicts something can be very challenging
+
+# Reading & Resources
+
+- 📖: [How the PLS model is calculated](https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated)
 
 ## Review Questions
 
