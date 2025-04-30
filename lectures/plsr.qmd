@@ -73,7 +73,9 @@ $$Y = TB + E$$
 
 # Partial Least Squares Regression
 
-![ ](./figs/plsr/PC-5.pdf)
+## The core idea of PLSR
+
+**What if, instead of maximizing the variance explained in X, we maximize the *co*variance explained between X and Y?**
 
 ::: {.notes}
 - Go over definition of covariance.
@@ -82,6 +84,16 @@ $$Y = TB + E$$
 - A factorization occurs to find max covar with Y
 - Forces direction of components
 :::
+
+## PLSR is a cross-decomposition method
+
+We will find principal components for both X and Y:
+
+$$X = T P^t + E$$
+
+$$Y = UQ^t + F$$
+
+![ ](./figs/plsr/cross-decomp.webp)
 
 ## NIPALs with Scores Exchanged
 
@@ -151,7 +163,7 @@ If you are trying to predict something, you should look at the cross-validated R
 
 ## Application
 
-![ ](./figs/plsr/lee-6.pdf)
+![ ](./figs/plsr/lee-6.webp)
 
 # Practical Notes & Summary
 
