@@ -85,6 +85,9 @@ $$Y = TB + E$$
 - Forces direction of components
 :::
 
+## What is covariance?
+
+
 ## PLSR is a cross-decomposition method
 
 We will find principal components for both X and Y:
