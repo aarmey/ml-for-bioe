@@ -3,7 +3,7 @@ title: Clustering
 author: Aaron Meyer (based on slides from David Sontag)
 ---
 
-# Clustering
+## Clustering
 
 - Unsupervised learning
 - Requires data, but no labels
@@ -14,7 +14,7 @@ author: Aaron Meyer (based on slides from David Sontag)
 - Useful when don’t know what you’re looking for
 - But: **can be gibberish**
 
-# Clustering
+## Clustering
 
 - Basic idea: group together similar instances
 - Example: 2D point patterns
@@ -26,21 +26,23 @@ author: Aaron Meyer (based on slides from David Sontag)
 Go over what is the data input and output (discrete).
 :::
 
-# Clustering
+## Clustering
 
 - Basic idea: group together similar instances
 - Example: 2D point patterns
 
 ![ ](./figs/clustering/clust2.png)
 
-# Clustering
+## Clustering
 
 - Basic idea: group together similar instances
 - Example: 2D point patterns
 
 ![ ](./figs/clustering/clust3.png)
 
-# What could "similar" mean?
+# What does "similar" mean?
+
+## What does "similar" mean?
 
 - One option: Euclidean distance
 
@@ -48,7 +50,7 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 
 - Clustering results are **completely** dependent on the measure of similarity (or distance) between "points" to be clustered
 
-# What properties should a distance measure have?
+## What properties should a distance measure have?
 
 - Symmetric
 	- $D(A, B) = D(B, A)$
@@ -97,7 +99,7 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 
 :::
 
-# K-means, an iterative clustering algorithm
+## K-means, an iterative clustering algorithm
 
 ::: columns
 
@@ -114,16 +116,16 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 
 :::
 
-# K-means clustering: Example
+## K-means clustering: Example
 
 - Pick K random points as cluster centers (means)
 	- Shown here for K=2
 
 ![ ](./figs/clustering/k1.png)
 
-# K-means clustering: Example
+## K-means clustering: Example
 
-## Iterative Step 1
+### Iterative Step 1
 
 Assign data points to the closest cluster center
 
@@ -133,9 +135,9 @@ Assign data points to the closest cluster center
 Critical step is right here. How do we pick what is close? Which is closer?
 :::
 
-# K-means clustering: Example
+## K-means clustering: Example
 
-## Iterative Step 2
+### Iterative Step 2
 
 Change the cluster center to the average of the assigned points
 
@@ -146,48 +148,24 @@ Change the cluster center to the average of the assigned points
 - Can use stochastic sampling in some cases.
 :::
 
-# K-means clustering: Example
+## K-means clustering: Example
 
 Repeat until convergence
 
 ![ ](./figs/clustering/k4.png)
 
-# K-means clustering: Example
+## K-means clustering: Example
 
 ![ ](./figs/clustering/k5.png)
 
-# K-means clustering: Example
+## K-means clustering: Example
 
 ![ ](./figs/clustering/k6.png)
 
 
-# Another Example
+# An example
 
-![Step 1](./figs/clustering/slides2-1.pdf)
-
-# Another Example
-
-![Step 2](./figs/clustering/slides2-2.pdf)
-
-# Another Example
-
-![Step 3](./figs/clustering/slides2-3.pdf)
-
-# Another Example
-
-![Step 4](./figs/clustering/slides2-4.pdf)
-
-# Another Example
-
-![Step 5](./figs/clustering/slides2-5.pdf)
-
-# Another Example
-
-![Step 6](./figs/clustering/slides2-6.pdf)
-
-# Another Example
-
-![Step 7](./figs/clustering/slides2-7.pdf)
+![https://commons.wikimedia.org/wiki/User:Chire](./figs/clustering/K-means_convergence.gif)
 
 # Properties of K-means algorithm
 
@@ -274,13 +252,13 @@ Local optima dependent on how the problem was specified:
 
 :::
 
-# Agglomerative Clustering
+## Agglomerative Clustering
 
 How should we define “closest” for clusters with multiple elements?
 
 ![ ](./figs/clustering/agg2.png)
 
-# Agglomerative Clustering
+## Agglomerative Clustering
 
 - How should we define “closest” for clusters with multiple elements?
 - Many options:
@@ -291,7 +269,7 @@ How should we define “closest” for clusters with multiple elements?
 
 ![ ](./figs/clustering/agg3.png)
 
-# Agglomerative Clustering
+## Agglomerative Clustering
 
 - How should we define “closest” for clusters with multiple elements?
 - Many options:
@@ -330,11 +308,11 @@ How should we define “closest” for clusters with multiple elements?
 
 # Clustering Patients
 
-![ ](./figs/clustering/BCclustersTitle.pdf)
+![ ](./figs/clustering/BCclustersTitle.webp)
 
 # Clustering Patients
 
-![ ](./figs/clustering/BCclusters.pdf)
+![ ](./figs/clustering/BCclusters.webp)
 
 ::: {.notes}
 - We use clusters because they (hopefully) translate to meaningful differences.
@@ -343,31 +321,31 @@ How should we define “closest” for clusters with multiple elements?
 
 # Review
 
-![ ](./figs/clustering/review-title.pdf)
+![ ](./figs/clustering/review-title.webp)
 
 # Review
 
-![ ](./figs/clustering/review-fig1.pdf)
+![ ](./figs/clustering/review-fig1.webp)
 
 # Review
 
-![ ](./figs/clustering/review-fig2.pdf)
+![ ](./figs/clustering/review-fig2.webp)
 
 # Review
 
-![ ](./figs/clustering/review-fig3.pdf)
+![ ](./figs/clustering/review-fig3.webp)
 
 # Review
 
-![ ](./figs/clustering/review-fig4.pdf)
+![ ](./figs/clustering/review-fig4.webp)
 
 # Review
 
-![ ](./figs/clustering/review-fig5.pdf)
+![ ](./figs/clustering/review-fig5.webp)
 
 # Review
 
-![ ](./figs/clustering/review-fig6.pdf)
+![ ](./figs/clustering/review-fig6.webp)
 
 # Implementation
 
