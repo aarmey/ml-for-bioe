@@ -3,75 +3,36 @@ title: Partial Least Squares Regression
 author: Aaron Meyer (based on slides from Pam Kreeger)
 ---
 
-::: {.notes}
-- Explain unsupervised/supervised.
-- Can you bootstrap a PLSR/PCR/PCA model?
-:::
+# Common challenge: Finding *coordinated changes* within data
 
-# Common Challenge: Cue/Signal/Response Relationships
-
-![ ](./figs/plsr/CSR-figure.pdf)
-
-::: {.notes}
-- Number of components enough to make PCA/lasso useful
-- But how do we deal with components moving together?
-- And what we care about is some outcome
-:::
-
-## Application
+##
 
 ![ ](./figs/plsr/lee-1.webp)
 
-## Application
+## 
 
-![ ](./figs/plsr/lee-2.webp)
+![The timing and order of drug treatment affects cell death.](./figs/plsr/lee-2.webp)
 
-## Application
+## 
 
 ![ ](./figs/plsr/lee-4.webp)
 
-# Many Methods for Relating a Signal to Response
-
-Say we have some measurement from cells and how they respond:
-
-$$ [1, 2, 1.5, 5, 6, 7] \sim [5, 10, 7, 24, 31, 35] $$
-
-From the variation we can see that:
-
-- Low signal is correlated with low response
-- High signal is correlated with high response
-
-If we can find a quantitative correlation between the input and output, we can predict new outcomes for measurements we haven't yet seen.
-
-::: {.notes}
-Draw out correlation and then include new point.
-:::
-
-# Challenges with Univariate Relationships
-
-![Janes, et al. Science, 2005](./figs/plsr/Janes-fig.jpg)
-
-- The relationship between JNK activation and apoptosis appears to be highly context-dependent
-	- Univariate relationships are often insufficient
-	- Cells respond to an environment with multiple factors present
-
-# Notes about Methods Today
+## Notes about the methods today
 
 - Both methods are supervised learning methods, however have a number of distinct properties from others we will discuss.
-- Learning about PLS is more difficult than it should be, partly because papers describing it span areas of chemistry, economics, medicine and statistics, with little agreement on terminology and notation.
-- These methods will show one example of where the model and algorithm are quite distinct—there are multiple algorithms for calculating a PLSR model.
+- Learning about PLS is more difficult than it should be, partly because papers describing it span areas of chemistry, economics, medicine and statistics, with differences in terminology and notation.
 
 ## Regularization
 
 - Both PCR and PLSR are forms of regularization.
-- Reduce the dimensionality of our regression problem to $N_{comp}$.
+- Reduce the dimensionality of our regression problem to $N_{\textrm{comp}}$.
 - Prioritize certain variance in the data.
 
 # Principal Components Regression
 
 ## Principal Components Regression
 
-One solution - use the concepts from PCA to reduce dimensionality.
+One solution: use the concepts from PCA to reduce dimensionality.
 
 First step: **Simply apply PCA!**
 
@@ -82,40 +43,36 @@ Dimensionality goes from $m$ to $N_{comp}$.
 - What might be a concern as a consequence of this? (How do we determine how many components to keep?)
 :::
 
-# Principal Components Regression (PCR)
+## Principal Components Regression
 
 1)  Decompose X matrix (scores T, loadings P, residuals E)
 $$X = TP^T + E$$
 
-2) Regress Y against the scores (Scores describe observations – by using them we link X and Y for each observation)
+2) Regress Y against the scores (scores describe observations – by using them we link X and Y for each observation)
 
 $$Y = TB + E$$
 
 ::: {.notes}
 - What is the residual against here?
-- How do we invert the direction of the regression?
 :::
 
-# Challenge
-
-**How might we determine the number of components using our prediction?**
+## How do we determine the right number of components to use for our prediction?
 
 ::: {.notes}
 - Cross-validation with varying numbers of components
-- Metrics like AIC or BIC
 :::
 
-# Potential Problem
+## A remaining potential problem
 
-- PCs for the X matrix do not necessarily capture X-variation that is important for Y
-	- So later PCs are going to be more important to regression
-- Example: the first components capture signaling that is related to another cell fate, while the signals that co-vary for this particular y are buried in later components
+The PCs for the X matrix do not necessarily capture X-variation that is important for Y.
 
-**How might we handle this differently?**
+We might *miss* later PCs that are important for prediction!
 
-# PLSR
+# Partial Least Squares Regression
 
-![ ](./figs/plsr/PC-5.pdf)
+## The core idea of PLSR
+
+What if, instead of maximizing the variance explained in X, we maximize the **co**variance explained between X and Y?
 
 ::: {.notes}
 - Go over definition of covariance.
@@ -125,23 +82,68 @@ $$Y = TB + E$$
 - Forces direction of components
 :::
 
-# PLSR - NIPALs with Scores Exchanged
+## What is covariance?
 
-![ ](./figs/plsr/PC-6.pdf)
 
-::: {.notes}
-- $B$ is $T (P^T T)^{-1} Q^T$
-- $P^T T$ is the approximation of $X$
-- PLSR components are not orthogonal in data space, but are orthogonal in O-PLS.
-:::
+## PLSR is a cross-decomposition method
 
-# PLSR - NIPALs with Scores Exchanged
+We will find principal components for both X and Y:
 
-![ ](./figs/plsr/PC-7.pdf)
+$$X = T P^t + E$$
 
-# Components in PLSR and PCA Differ
+$$Y = U Q^t + F$$
 
-![ ](./figs/plsr/PC-8.pdf)
+![ ](./figs/plsr/cross-decomp.webp)
+
+## NIPALs while exchanging the scores
+
+1. Take a random column of Y to be $u_a$, and regress it against X.
+
+$$\mathbf{w}_a = \dfrac{1}{\mathbf{u}'_a\mathbf{u}_a} \cdot \mathbf{X}'_a\mathbf{u}_a$$
+
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+
+## NIPALs while exchanging the scores
+
+2. Normalize $w_a$.
+
+$$\mathbf{w}_a = \dfrac{\mathbf{w}_a}{\sqrt{\mathbf{w}'_a \mathbf{w}_a}}$$
+
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+
+## NIPALs while exchanging the scores
+
+3. Regress $w_a$ against $X^T$ to obtain $t_a$.
+
+$$\mathbf{t}_a = \dfrac{1}{\mathbf{w}'_a\mathbf{w}_a} \cdot \mathbf{X}_a\mathbf{w}_a$$
+
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+
+## NIPALs while exchanging the scores
+
+4. Regress $t_a$ against Y to obtain $c_a$.
+
+$$\mathbf{c}_a = \dfrac{1}{\mathbf{t}'_a\mathbf{t}_a} \cdot \mathbf{Y}'_a\mathbf{t}_a$$
+
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+
+## NIPALs while exchanging the scores
+
+5. Regress $c_a$ against $Y^T$ to obtain $u_a$.
+
+$$\mathbf{u}_a = \dfrac{1}{\mathbf{c}'_a\mathbf{c}_a} \cdot \mathbf{Y}_a\mathbf{c}_a$$
+
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+
+## NIPALs while exchanging the scores
+
+5. Cycle until convergence, then subtract off variance explained by $\widehat{\mathbf{X}} = \mathbf{t}_a\mathbf{p}'_a$ and $\widehat{\mathbf{Y}}_a = \mathbf{t}_a \mathbf{c}'_a$.
+
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+
+## Components in PLSR and PCA Differ
+
+![Janes et al, Nat Rev MCB, 2006](./figs/plsr/PC-8.webp)
 
 ## Determining the Number of Components
 
@@ -155,17 +157,13 @@ $$ R^2Y = 1 - \frac{\lvert Y_{\textrm{PLSR}} - Y \rvert }{\lvert Y \rvert} $$
 
 If you are trying to predict something, you should look at the cross-validated R2Y (a.k.a. Q2Y).
 
-## Application
+## PLSR uncovers coordinated cell death mechanisms
 
-![ ](./figs/plsr/lee-5.pdf)
+![ ](./figs/plsr/lee-5.webp)
 
-## Application
+## PLSR uncovers coordinated cell death mechanisms
 
-![ ](./figs/plsr/lee-6.pdf)
-
-## Application
-
-![ ](./figs/plsr/lee-7.pdf)
+![ ](./figs/plsr/lee-6.webp)
 
 # Practical Notes & Summary
 
@@ -199,9 +197,15 @@ If you are trying to predict something, you should look at the cross-validated R
 
 - PLSR is amazingly well at prediction
 	- This is **incredibly** powerful
-- Interpreting **why** PLSR predicts something can be very challenging
+- Interpreting **why** PLSR predicts something can be challenging
 
-## Review Questions
+## Reading & Resources
+
+- 📖: [How the PLS model is calculated](https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated)
+- 📖: [AMW: Partial Least Squares Regression](https://allmodelsarewrong.github.io/pls.html)
+- 📖: [Using Partial Least Squares Regression to Analyze Cellular Response Data](https://doi.org/10.1126/scisignal.2003849)
+
+## Review Questions {.smaller}
 
 1. What are three differences between PCA and PLSR in implementation and application?
 2. What is the difference between PCR and PLSR? When does this difference matter more/less?
