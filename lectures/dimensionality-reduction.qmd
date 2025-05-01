@@ -249,6 +249,18 @@ What if we have data wherein effects always accumulate?
 - Will converge to a local maxima
 	- Therefore starting point matters
 
+## Multiplicative update algorithm: Updating W
+
+$$[W]_{ij} \leftarrow [W]_{ij} \frac{[\color{darkred} X \color{darkblue}{H^T} \color{black}]_{ij}}{[\color{darkred}{WH} \color{darkblue}{H^T} \color{black}]_{ij}}$$
+
+Color indicates the [reconstruction of the data]{style="color:darkred;"} and the [projection matrix]{style="color:darkblue;"}.
+
+## Multiplicative update algorithm: Updating H
+
+$$[H]_{ij} \leftarrow [H]_{ij} \frac{[\color{darkblue}{W^T} \color{darkred}X \color{black}]_{ij}}{[\color{darkblue}{W^T} \color{darkred}{WH} \color{black}]_{ij}}$$
+
+Color indicates the [reconstruction of the data]{style="color:darkred;"} and the [projection matrix]{style="color:darkblue;"}.
+
 ## Coordinate descent solving
 
 - Another approach is to find the gradient across all the variables in the matrix
