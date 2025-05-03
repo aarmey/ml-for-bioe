@@ -45,9 +45,8 @@ title: "Course outline - BE 175"
 
 ### Week 6, May 5 – 9
 
-- Monday: Partial Least Squares Regression ([slides](../lectures/plsr.html), [notes](../notes/plsr.html))
-- Wednesday: K-Means clustering ([slides](../lectures/clustering.html), [notes](../notes/clustering.html))
-  - [Example Notebook](../examples/K-Means.ipynb)
+- Monday: Finish PCA
+- Wednesday: Partial Least Squares Regression ([slides](../lectures/plsr.html), [notes](../notes/plsr.html))
 - Submit project idea, due May 9th at 11:59 pm
 - Lab: PCA/PLSR lab
   - Due May 22nd at 11:59 pm
@@ -55,18 +54,19 @@ title: "Course outline - BE 175"
 
 ### Week 7, May 12 – 16
 
-- Monday: Gaussian Mixture Models ([slides](../lectures/gmms.html), [notes](../notes/gmms.html))
-  - [Example Notebook](../examples/Gaussian-Mixtures.ipynb)
-- Wednesday: Support vector machines ([slides](../lectures/svms.html), [notes](../notes/svms.html))
+- Monday: Support vector machines ([slides](../lectures/svms.html), [notes](../notes/svms.html))
   - [Example Notebook](../examples/SVMs-example.ipynb)
+- Wednesday: Continue SVMs
 - Lab: Content review
   - Review mixture models
   - Discuss project plans
 
 ### Week 8, May 19 – 23
 
-- Monday: Continue SVMs
-- Wednesday: Equitable application of models
+- Monday: K-Means clustering ([slides](../lectures/clustering.html), [notes](../notes/clustering.html))
+  - [Example Notebook](../examples/K-Means.ipynb)
+- Wednesday: Gaussian Mixture Models ([slides](../lectures/gmms.html), [notes](../notes/gmms.html))
+  - [Example Notebook](../examples/Gaussian-Mixtures.ipynb)
 - Lab: SVM lab
   - Due June 5th at 11:59 pm
   - Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863)
@@ -74,7 +74,7 @@ title: "Course outline - BE 175"
 ### Week 9, May 26 – 30
 
 - Monday: Memorial Day
-- Wednesday: Exam review, buffer
+- Wednesday: Equitable application of models
 - Lab: Exam review
 
 ### Week 10, June 2 – 6
