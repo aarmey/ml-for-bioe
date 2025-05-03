@@ -48,7 +48,7 @@ title: "Course outline - BE 175"
 - Monday: Partial Least Squares Regression ([slides](../lectures/plsr.html), [notes](../notes/plsr.html))
 - Wednesday: K-Means clustering ([slides](../lectures/clustering.html), [notes](../notes/clustering.html))
   - [Example Notebook](../examples/K-Means.ipynb)
-- Submit project idea, due May 8th at 11:59 pm
+- Submit project idea, due May 9th at 11:59 pm
 - Lab: PCA/PLSR lab
   - Due May 22nd at 11:59 pm
   - Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c)
