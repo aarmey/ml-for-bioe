@@ -294,7 +294,7 @@ Go over how to pick an appropriate kernel, and floppiness.
 
 - Strengths
 	- Training is relatively easy
-		-  No local optimal, unlike in neural networks
+		-  No local optima, unlike in neural networks
 	- It scales well to high dimensional data
 	- Tradeoff between classifier complexity and error can be controlled explicitly
 	- Non-traditional data like strings and trees can be used as input to SVM, instead of feature vectors
