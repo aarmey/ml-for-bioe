@@ -13,11 +13,11 @@ author: Aaron Meyer (adapted from slides by Martin Law)
 	- Later bested by deep learning methods
 - Note: the meaning of "kernel" is different from other methods
 
-# Application - Circulating Tumor Cells
+# Application
 
 ![ ](./figs/svms/dicarlo-title.webp)
 
-## Capture of circulating tumor cells enables assessment of patient metastatic state and chemotherapeutic response
+## CTCs enable assessment of patient state and drug response
 
 :::: {.columns}
 
@@ -36,25 +36,24 @@ author: Aaron Meyer (adapted from slides by Martin Law)
 
 ::::
 
-## Application - Separating CTCs From Other Blood Cells
+## 
 
 ![ ](./figs/svms/dicarlo-fig1.webp)
 
-## Application - Separating CTCs From Other Blood Cells
+## 
 
 ![ ](./figs/svms/dicarlo-fig5.webp)
 
 # What is a *good* decision boundary?
 
-#### Consider a two-class, linearly separable classification problem
-
-- Many decision boundaries!
-- Are all decision boundaries equally good?
+## Consider a two-class, linearly separable classification problem
 
 ![ ](./figs/svms/goodboundary.png){ width=50% }
 
 ::: {.notes}
-Let's say we have this data. How do we draw the decision boundaries?
+- Let's say we have this data. How do we draw the decision boundaries?
+- Many decision boundaries!
+- Are all decision boundaries equally good?
 :::
 
 ## Examples Of Bad Decision Boundaries
@@ -89,40 +88,44 @@ Which points most define where we should draw a boundary?
 - Want to minimize $\lVert \mathbf{w} \rVert$ so as to maximize the margin.
 :::
 
-# The Quadratic Programming Problem
+## The Quadratic Programming Problem
 
 #### Many approaches have been proposed
 
 - Most are "interior-point" methods
 	- Start with an initial solution that can violate the constraints
 	- Improve this solution by optimizing the objective function and/or reducing the amount of constraint violation
-- For SVM, sequential minimal optimization (SMO) seems to be the most popular
+- For SVM, sequential minimal optimization is most popular
 	- A QP with two variables is trivial to solve
 	- Each iteration of SMO picks a pair of ($\alpha_i, \alpha_j$) and solve the QP with these two variables; repeat until convergence
 - In practice, we can just regard the QP solver as a "black-box" without bothering how it works
 
 ## Characteristics of the solution
 
-- Many of the $\alpha_i$ are zero
-	- **w** is a linear combination of a small number of data points
-	- This "sparse" representation can be viewed as data compression as in the construction of knn classifier
 - $x_i$ with non-zero $\alpha_i$ are called support vectors (SV)
 	- The decision boundary is determined only by the SV
-	- Let $t_j (j=1, \ldots, s)$ be the indices of the s support vectors
+	- Let $t_j (j=1, \ldots, s)$ be the indices of the $s$ support vectors
 	- We can write $\mathbf{w} = \sum_{j=1}^{s} \alpha_{t_{j}}y_{t_{j}}\mathbf{x}_{t_{j}}$
-- For testing with a new data **z**
+- Many $\alpha_i$ are zero!
+	- $w$ is a linear combination of a small number of data points
+	- This "sparse" representation can be viewed as data compression
+- For testing with a new data $z$
 	- Compute $\mathbf{w}^T \mathbf{z} + b = \sum_{j=1}^{s} \alpha_{t_{j}}y_{t_{j}}\left( \mathbf{x}_{t_{j}}^T \mathbf{z} \right) + b$
-	- Classify **z** as class 1 if the sum is positive, and class 2 otherwise
-	- Note: **w** need not be formed explicitly
+	- Classify $z$ as class 1 if the sum is positive, and class 2 otherwise
+	- Note: $w$ need not be formed explicitly
 
 ## A geometrical interpretation
 
 ![ ](./figs/svms/ageomint.png){ width=70% }
 
+# Non-linearly-separable problems
+
+What can we do when we **can't** draw a line that separates the two classes?
+
 ## Non-linearly-separable problems
 
 - We allow “error” $\xi_i$ in classification; it is based on the output of the discriminant function $\mathbf{w}^T\mathbf{x} + b$
-- ξi approximates the number of misclassified samples
+- $\xi_i$ approximates the number of misclassified samples
 
 ![ ](./figs/svms/nonsep.png){ width=70% }
 
@@ -143,13 +146,16 @@ Which points most define where we should draw a boundary?
 - We want to minimize:
 	- $\tfrac{1}{2} \lVert \mathbf{w} \rVert^2 + C \sum_{i=1}^{n} \xi_i$
 	- $C$: tradeoff parameter between error and margin
-- The optimization problem becomes:
-	- Minimize $\tfrac{1}{2} \lVert \mathbf{w} \rVert^2 + C \sum_{i=1}^{n} \xi_i$
-	- subject to $y_i (\mathbf{w}^T \mathbf{x}_i + b) \geq 1 - \xi_i, \quad \xi_i \geq 0$
 
 ::: {.notes}
 - Still perfectly classifying the points, after we move them.
 :::
+
+## Soft margin hyperplane
+
+- The optimization problem becomes:
+	- Minimize $\tfrac{1}{2} \lVert \mathbf{w} \rVert^2 + C \sum_{i=1}^{n} \xi_i$
+	- subject to $y_i (\mathbf{w}^T \mathbf{x}_i + b) \geq 1 - \xi_i, \quad \xi_i \geq 0$
 
 ## The optimization problem
 
@@ -164,13 +170,15 @@ Which points most define where we should draw a boundary?
 - In a minute, it will become important that $\mathbf{x}$ really only shows up in one place.
 :::
 
-# Extension To Non-linear Decision Boundary
+# Extension to a non-linear decision boundary
+
+## Non-linear decision boundaries
 
 - So far, we have only considered large-margin classifier with a linear decision boundary
 - How to generalize it to become nonlinear?
 - Key idea: transform $\mathbf{x}_i$ to a higher dimensional space to "make life easier"
 	- Input space: the space the point $\mathbf{x}_i$ are located
-	- Feature space: the space of φ($\mathbf{x}_i$) after transformation
+	- Feature space: the space of $\phi(\mathbf{x}_i)$ after transformation
 - Why transform?
 	- Linear operation in the feature space is equivalent to non-linear operation in input space
 	- Classification can become easier with a proper transformation.
@@ -179,7 +187,7 @@ Which points most define where we should draw a boundary?
 Go over circle inside circle with transformation to polar coordinates.
 :::
 
-# Transforming The Data
+## Transforming The Data
 
 ![ ](./figs/svms/transdata.svg)
 
@@ -188,10 +196,9 @@ Go over circle inside circle with transformation to polar coordinates.
 	- The feature space is typically infinite-dimensional!
 - The kernel trick comes to rescue
 
-# The Kernel Trick
+## The kernel trick
 
 - Recall the SVM optimization problem
-
 - The data points only appear as the inner product
 	- max. $W(\alpha) = \sum_{i=1}^n \alpha_i - \frac{1}{2} \sum_{i=1,j=1}^n \alpha_i \alpha_j y_i y_j \mathbf{x}_i^T \mathbf{x}_j$
 	- subject to $C \geq \alpha_i \geq 0, \sum_{i=1}^n \alpha_i y_i = 0$
@@ -207,7 +214,7 @@ Go over circle inside circle with transformation to polar coordinates.
 ## Kernel Functions
 
 - In practical use of SVM, the user specifies the kernel function; the transformation φ(.) is not explicitly stated
-- Given a kernel function $K(x_i, x_j)$, the transformation φ(.) is given by its eigenfunctions (a concept in functional analysis)
+- Given a kernel function $K(x_i, x_j)$, the transformation $\phi(.)$ is given by its eigenfunctions (a concept in functional analysis)
 	- Eigenfunctions can be difficult to construct explicitly
 	- This is why people only specify the kernel function without worrying about the exact transformation
 - Another view: kernel function, being an inner product, is really a similarity measure between the objects
@@ -233,7 +240,9 @@ Go over circle inside circle with transformation to polar coordinates.
 
 ## Modification Due to Kernel Function
 
-- For testing, the new data **z** is classified as class 1 if $f \geq 0$, and class 2 if $f < 0$
+- For testing, the new data $z$ is classified as:
+	- class 1 if $f \geq 0$
+	- class 2 if $f < 0$
 - Original:
 	- $\mathbf{w} = \sum_{j=1}^{s} \alpha_{t_{j}}y_{t_{j}}\mathbf{x}_{t_{j}}$
 	- $f = \mathbf{w}^T \mathbf{z} + b = \sum_{j=1}^{s} \alpha_{t_{j}}y_{t_{j}}\left( \mathbf{x}_{t_{j}}^T \mathbf{z} \right) + b$
@@ -246,9 +255,9 @@ Go over circle inside circle with transformation to polar coordinates.
 - Since the training of SVM only requires the value of $K(\mathbf{x}_i, \mathbf{x}_j)$, there is no restriction of the form of $\mathbf{x}_i$ and $\mathbf{x}_j$
 	- $\mathbf{x}_i$ can be a sequence or a tree, instead of a feature vector
 - $K(\mathbf{x}_i, \mathbf{x}_j)$ is just a similarity measure comparing $\mathbf{x}_i$ and $\mathbf{x}_j$
-- For a test object **z**, the discrimination function essentially is a weighted sum of the similarity between **z** and a pre-selected set of objects (the support vectors):
+- For a test object $z$, the discrimination function essentially is a weighted sum of the similarity between $z$ and a pre-selected set of objects (the support vectors):
 	- $f(\mathbf{z}) = \sum_{\mathbf{x}_i \in S}\alpha_i y_i K(\mathbf{z}, \mathbf{x}_i) + b$
-	- S: the set of support vectors
+	- $S$: the set of support vectors
 
 ## Example of Non-Linear Transformation
 
@@ -293,10 +302,9 @@ Go over how to pick an appropriate kernel, and floppiness.
 ## Strengths and weaknesses of SVM
 
 - Strengths
-	- Training is relatively easy
-		-  No local optima, unlike in neural networks
-	- It scales well to high dimensional data
-	- Tradeoff between classifier complexity and error can be controlled explicitly
+	- Training is relatively easy (no local optima, unlike in neural networks)
+	- Scales well to high-dimensional data
+	- Complexity versus error can be controlled
 	- Non-traditional data like strings and trees can be used as input to SVM, instead of feature vectors
 - Weaknesses
 	- Need to choose a “good” kernel function.
@@ -316,11 +324,11 @@ Go over how to pick an appropriate kernel, and floppiness.
 - One can change the QP formulation to allow multi-class classification
 - More commonly, one splits the classes into binary decisions
 
-## Implementation
+## Implementation {.smaller}
 
 sklearn has implementations for a variety of SVM methods:
 
-- `sklearn.svm.SVC`
+- [`sklearn.svm.SVC`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
 	- Performs single or multi-class classification
 		- Multi-class is through one-vs-one scheme
 	- Multiple kernels available
@@ -331,7 +339,7 @@ sklearn has implementations for a variety of SVM methods:
 - Alternative implementations
 	- `sklearn.svm.NuSVC`
 		- Additionally provides parameter to control number of support parameters
-	- `sklearn.svm.LinearSVC`
+	- [`sklearn.svm.LinearSVC`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC)
 		- Only support for linear kernel, with better scaling/options
 		- For example can provide l1 or l2 regularization
 		- Scales better for many samples
@@ -344,7 +352,7 @@ sklearn has implementations for a variety of SVM methods:
 - 👂: [Linear Digressions: Maximal Margin Classifiers](https://lineardigressions.com/episodes/2017/12/3/maximal-margin-classifiers)
 - 👂: [Linear Digressions: The Kernel Trick and Support Vector Machines](https://lineardigressions.com/episodes/2017/12/10/the-kernel-trick-and-support-vector-machines)
 
-## Review Questions
+## Review Questions {.smaller}
 
 1. What is the core observation underlying SVMs?
 2. Does the answer for an SVM rely on the exact position of all points? If not, which points most influence the model?
