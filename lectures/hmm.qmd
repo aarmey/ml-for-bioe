@@ -354,7 +354,7 @@ Provides `logprob` and `state_sequence`.
 7. What is the forward-backward algorithm? What do we need to have before using it? What does it tell us?
 8. What is the Baum-Welch algorithm? What do we need to have before using it? What does it tell us?
 9. What is the Viterbi algorithm? What do we need to have before using it? What does it tell us?
-10. [TMHMM](https://services.healthtech.dtu.dk/services/DeepTMHMM-1.0/) is a HMM model that can be used to predict the transmembrane regions of proteins (there’s an example input you can use in the guide). Show us the output. Which algorithm is being used for each part of the output graphic?
+10. TMHMM is a HMM model that can be used to predict the transmembrane regions of proteins (there’s an example input you can use in the guide). Show us the output. Which algorithm is being used for each part of the output graphic?
 11. Markov models can be used to model sentences, as certain words tend to come after one another. Does your (or your group member’s) phone use a MM for predictive text? Justify your answer.
 
 
