@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: quarto-dev/quarto-actions/setup@v2
       with:
-        version: 1.6.39
+        version: 1.7.30
     - name: Build slides and handouts
       run: make slides && make pubnotes
 
