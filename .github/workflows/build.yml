@@ -23,6 +23,12 @@ jobs:
     - name: Build slides and handouts
       run: make slides && make pubnotes
 
+    - name: Install uv
+      uses: astral-sh/setup-uv@v5
+
+    - name: Build notebooks
+      run: make convert && make render
+
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
       with:
