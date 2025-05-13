@@ -1,0 +1,140 @@
+---
+title: "OLS Example"
+format: 
+  html:
+    embed-resources: true
+jupyter: python3
+---
+
+*This notebook contains an excerpt from the [Python Data Science Handbook](http://shop.oreilly.com/product/0636920034919.do) by Jake VanderPlas; the content is available [on GitHub](https://github.com/jakevdp/PythonDataScienceHandbook).*
+
+*The text is released under the [CC-BY-NC-ND license](https://creativecommons.org/licenses/by-nc-nd/3.0/us/legalcode), and code is released under the [MIT license](https://opensource.org/licenses/MIT). If you find this content useful, please consider supporting the work by [buying the book](http://shop.oreilly.com/product/0636920034919.do)!*
+
+# In Depth: Linear Regression
+
+Linear regression models are a good starting point for regression tasks.
+Such models are popular because they can be fit very quickly, and are very interpretable.
+You are probably familiar with the simplest form of a linear regression model (i.e., fitting a straight line to data) but such models can be extended to model more complicated data behavior.
+
+In this section we will start with a quick intuitive walk-through of the mathematics behind this well-known problem, before seeing how before moving on to see how linear models can be generalized to account for more complicated patterns in data.
+
+We begin with the standard imports:
+
+```{python}
+#| collapsed: true
+#| deletable: true
+#| editable: true
+import matplotlib.pyplot as plt
+import numpy as np
+import scipy as sp
+```
+
+## Simple Linear Regression
+
+We will start with the most familiar linear regression, a straight-line fit to data.
+A straight-line fit is a model of the form
+$$
+y = ax + b
+$$
+where $a$ is commonly known as the *slope*, and $b$ is commonly known as the *intercept*.
+
+Consider the following data, which is scattered about a line with a slope of 2 and an intercept of -5:
+
+```{python}
+rng = np.random.RandomState(1)
+x = 10 * rng.rand(50)
+y = 2 * x - 5 + rng.randn(50)
+plt.scatter(x, y);
+```
+
+We can use Scikit-Learn's ``LinearRegression`` estimator to fit this data and construct the best-fit line:
+
+```{python}
+from sklearn.linear_model import LinearRegression
+model = LinearRegression(fit_intercept=True)
+
+model.fit(x[:, np.newaxis], y)
+
+xfit = np.linspace(0, 10, 1000)
+yfit = model.predict(xfit[:, np.newaxis])
+
+plt.scatter(x, y)
+plt.plot(xfit, yfit);
+```
+
+The slope and intercept of the data are contained in the model's fit parameters, which in Scikit-Learn are always marked by a trailing underscore.
+Here the relevant parameters are ``coef_`` and ``intercept_``:
+
+```{python}
+print("Model slope:    ", model.coef_[0])
+print("Model intercept:", model.intercept_)
+```
+
+We see that the results are very close to the inputs, as we might hope.
+
+The ``LinearRegression`` estimator is much more capable than this, however—in addition to simple straight-line fits, it can also handle multidimensional linear models of the form
+$$
+y = a_0 + a_1 x_1 + a_2 x_2 + \cdots
+$$
+where there are multiple $x$ values.
+Geometrically, this is akin to fitting a plane to points in three dimensions, or fitting a hyper-plane to points in higher dimensions.
+
+The multidimensional nature of such regressions makes them more difficult to visualize, but we can see one of these fits in action by building some example data, using NumPy's matrix multiplication operator:
+
+```{python}
+rng = np.random.RandomState(1)
+X = 10 * rng.rand(100, 3)
+y = 0.5 + np.dot(X, [1.5, -2., 1.])
+
+model.fit(X, y)
+print(model.intercept_)
+print(model.coef_)
+```
+
+Here the $y$ data is constructed from three random $x$ values, and the linear regression recovers the coefficients used to construct the data.
+
+In this way, we can use the single ``LinearRegression`` estimator to fit lines, planes, or hyperplanes to our data.
+It still appears that this approach would be limited to strictly linear relationships between variables, but we will relax this as well.
+
+# Non-linear Regression
+
+```{python}
+X = np.logspace(-3, 2)
+Y = 1.0 * X / (1.0 + 0.4 * X) + 0.1 * rng.randn(*X.shape)
+
+plt.semilogx(X, Y,'.');
+plt.xlabel('Concentration [nM]')
+plt.ylabel('Binding');
+```
+
+```{python}
+def klotz1(xx, lig):
+    """ A function defining our binding curve. """
+    return (xx[1]*lig)/(1 + xx[0]*lig)
+
+def ls_obj_k1(xx, ligs, data):
+    """ A function that returns the residuals between our prediction and the data. """
+    return(data - klotz1(xx,ligs))
+```
+
+```{python}
+x0 = np.ones(2)
+plt.semilogx(X, Y,'.');
+plt.semilogx(X,klotz1(x0,X),'r-')
+plt.xlabel('Concentration [nM]')
+plt.ylabel('Binding');
+```
+
+```{python}
+res = sp.optimize.least_squares(ls_obj_k1, x0, args=(X,Y))
+assert res.success
+res
+```
+
+```{python}
+plt.semilogx(X, Y,'.');
+plt.semilogx(X,klotz1(res.x,X),'r-')
+plt.xlabel('Concentration [nM]')
+plt.ylabel('Binding');
+```
+

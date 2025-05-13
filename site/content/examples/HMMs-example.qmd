@@ -1,0 +1,91 @@
+---
+title: "HMM Example"
+format: 
+  html:
+    embed-resources: true
+jupyter: python3
+---
+
+
+
+```{python}
+import numpy as np
+from hmmlearn.hmm import GaussianHMM
+import matplotlib.pyplot as plt
+```
+
+```{python}
+toSick = 0.002
+toWell = 0.01
+
+model = GaussianHMM(n_components=2, covariance_type='tied')
+model.startprob_ = np.array([1, 0]) # Healthy is 0, sick is 1
+model.transmat_ = np.array([[1 - toSick, toSick], [toWell, 1 - toWell]])
+
+print(model.transmat_)
+
+model.means_ = np.reshape(np.array([98.6, 100.8]), (2, 1))
+model._covars_ = np.array([[2]])
+
+model._check()
+```
+
+```{python}
+data, samm = model.sample(n_samples = 1000, random_state=11)
+```
+
+```{python}
+plt.plot(data);
+```
+
+```{python}
+def movingaverage (values, window):
+    weights = np.repeat(1.0, window)/window
+    return np.convolve(np.squeeze(values), weights, 'valid')
+
+plt.plot(movingaverage(data, 20));
+```
+
+```{python}
+# Make an HMM instance and execute fit
+modelPred = GaussianHMM(n_components=2, n_iter=10000, tol=0.00001)
+
+
+# Use EM to fit the parameters of a model
+modelPred.fit(data);
+
+# startprob_, transmat_, means_, _covars_
+print(modelPred.means_)
+```
+
+```{python}
+# Predict the optimal sequence of internal hidden state
+hidden_states = modelPred.predict(data)
+
+plt.plot(hidden_states);
+```
+
+```{python}
+stateP = modelPred.predict_proba(data)
+
+plt.plot(np.log10(stateP));
+plt.ylim(-5, 0.1);
+```
+
+```{python}
+# How sure can we be a sickness event occured?
+maxL = modelPred.score(data)
+
+modelPredOne = GaussianHMM(n_components=1, n_iter=10000, tol=0.00001)
+modelPredOne.fit(data)
+
+wellL = modelPredOne.score(data)
+
+print(maxL)
+print(wellL)
+```
+
+```{python}
+plt.plot(samm);
+```
+

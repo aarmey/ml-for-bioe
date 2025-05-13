@@ -1,0 +1,80 @@
+---
+title: "PCA / NNMF Example"
+format: 
+  html:
+    embed-resources: true
+jupyter: python3
+---
+
+
+## Initial imports
+
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import datasets
+from sklearn.decomposition import PCA, NMF
+from sklearn.preprocessing import scale
+
+iris = datasets.load_iris();
+```
+
+## PCA
+
+```{python}
+X = iris.data
+y = iris.target
+X_scale = scale(X)
+target_names = iris.target_names
+
+pca = PCA(n_components=2)
+X_r = pca.fit(X_scale).transform(X_scale)
+
+# Same as above
+X_r = pca.fit_transform(X_scale)
+
+# Print PC1 loadings
+print(pca.components_[:, 0])
+
+# Print scores of first data point
+print(X_r[0, :])
+```
+
+```{python}
+# Percentage of variance explained for each component
+print(pca.explained_variance_ratio_)
+```
+
+```{python}
+colors = ['navy', 'turquoise', 'darkorange']
+
+for color, i, target_name in zip(colors, [0, 1, 2], target_names):
+    plt.scatter(X_r[y == i, 0], X_r[y == i, 1], color=color, alpha=.8, label=target_name)
+plt.legend(loc='best', shadow=False, scatterpoints=1)
+plt.title('PCA of IRIS dataset')
+plt.xlabel("PC 1")
+plt.ylabel("PC 2");
+```
+
+## NNMF
+
+```{python}
+nn = NMF(n_components=2)
+X_n = nn.fit_transform(X)
+```
+
+```{python}
+for color, i, target_name in zip(colors, [0, 1, 2], target_names):
+    plt.scatter(X_n[y == i, 0], X_n[y == i, 1], color=color, alpha=.8, label=target_name)
+plt.legend(loc='best', shadow=False, scatterpoints=1)
+plt.title('PCA of IRIS dataset')
+plt.xlabel("PC 1")
+plt.ylabel("PC 2");
+```
+
+```{python}
+# Percent variance explained
+1 - nn.reconstruction_err_ / np.linalg.norm(X_n)
+```
+

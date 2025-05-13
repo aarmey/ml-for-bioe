@@ -1,0 +1,125 @@
+---
+title: "Cross-Validation Example"
+format: 
+  html:
+    embed-resources: true
+jupyter: python3
+---
+
+```{python}
+#| collapsed: true
+#| deletable: true
+#| editable: true
+import matplotlib.pyplot as plt
+import numpy as np
+import scipy as sp
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import cross_val_score, cross_val_predict, KFold
+from sklearn.metrics import r2_score
+from sklearn.utils import resample
+```
+
+```{python}
+#| collapsed: false
+#| deletable: true
+#| editable: true
+rng = np.random.RandomState(1)
+x = 10 * rng.rand(50)
+X = x[:, np.newaxis]
+y = 2 * x - 5 + rng.randn(50)
+plt.scatter(x, y);
+```
+
+```{python}
+#| collapsed: false
+#| deletable: true
+#| editable: true
+model = LinearRegression(fit_intercept=True)
+
+model.fit(X, y)
+print(model.score(X, y))
+
+xfit = np.linspace(0, 10, 1000)
+yfit = model.predict(xfit[:, np.newaxis])
+
+plt.scatter(x, y)
+plt.plot(xfit, yfit);
+```
+
+```{python}
+#| collapsed: false
+#| deletable: true
+#| editable: true
+print(cross_val_score(model, X, y, cv=3))
+```
+
+```{python}
+y_pred = cross_val_predict(model, X, y, cv=3)
+r2_score(y, y_pred)
+```
+
+# More manual cross-validation
+
+```{python}
+X = np.logspace(-3, 2, num=15)
+Y = 1.0 * X / (1.0 + 0.4 * X) + 0.5 * rng.randn(*X.shape)
+
+plt.semilogx(X, Y,'.');
+plt.xlabel('Concentration [nM]')
+plt.ylabel('Binding');
+```
+
+```{python}
+def klotz1(xx, lig):
+    """ A function defining our binding curve. """
+    return (xx[1]*lig)/(1 + xx[0]*lig)
+
+def ls_obj_k1(xx, ligs, data):
+    """ A function that returns the residuals between our prediction and the data. """
+    return(data - klotz1(xx,ligs))
+```
+
+```{python}
+x0 = np.array([1.1, 0.9])
+res = sp.optimize.least_squares(ls_obj_k1, x0, args=(X,Y))
+assert res.success
+
+plt.plot(Y, klotz1(res.x, X), '.')
+plt.plot(Y, Y, 'r-')
+plt.xlabel("Actual")
+plt.ylabel("Fit");
+```
+
+```{python}
+kf = KFold(n_splits=2, shuffle=True)
+Y_pred = np.empty_like(Y)
+
+for train_index, test_index in kf.split(X):
+    res = sp.optimize.least_squares(ls_obj_k1, x0, args=(X[train_index], Y[train_index]))
+
+    Y_pred[test_index] = klotz1(res.x, X[test_index])
+
+plt.plot(Y, Y_pred, '.')
+plt.plot(Y, Y, 'r-')
+plt.xlabel("Actual")
+plt.ylabel("Predicted");
+```
+
+# Bootstrap
+
+```{python}
+p_boot = np.empty((2, 1000))
+
+for bootstrapi in range(p_boot.shape[1]):
+    resamp = resample(range(X.shape[0]))
+
+    res = sp.optimize.least_squares(ls_obj_k1, x0, args=(X[resamp], Y[resamp]))
+    p_boot[:, bootstrapi] = res.x
+```
+
+```{python}
+plt.scatter(p_boot[0, :], p_boot[1, :], s=0.2)
+plt.xlabel(r"$x_1$")
+plt.ylabel(r"$x_2$");
+```
+

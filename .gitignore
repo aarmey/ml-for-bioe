@@ -3,3 +3,5 @@
 notes
 website/lectures
 site/public
+.quarto
+.venv
