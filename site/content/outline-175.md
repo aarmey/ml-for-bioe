@@ -39,7 +39,7 @@ title: "Course outline - BE 175"
 ### Week 5, April 28 – May 2
 
 - Monday: Dimensionality reduction - PCA and NMF ([slides](../lectures/dimensionality-reduction.html), [notes](../notes/dimensionality-reduction.html))
-  - [Example Notebook](../examples/PCA-NNMF.ipynb)
+  - Example Notebook: [ipynb](../examples/PCA-NNMF.ipynb), [html](../examples/PCA-NNMF.html)
 - Wednesday: Exam 1
 - Lab: Project selection check-in
 
@@ -55,19 +55,20 @@ title: "Course outline - BE 175"
 ### Week 7, May 12 – 16
 
 - Monday: Support vector machines ([slides](../lectures/svms.html), [notes](../notes/svms.html))
-  - [Example Notebook](../examples/SVMs-example.ipynb)
+  - Example Notebook: [ipynb](../examples/SVMs-example.ipynb), [html](../examples/SVMs-example.html)
 - Wednesday: Continue SVMs
 - Lab: Content review
-  - Review mixture models
+  - Review SVMs
   - Discuss project plans
 
 ### Week 8, May 19 – 23
 
 - Monday: K-Means clustering ([slides](../lectures/clustering.html), [notes](../notes/clustering.html))
-  - [Example Notebook](../examples/K-Means.ipynb)
+  - Example Notebook: [ipynb](../examples/K-Means.ipynb), [html](../examples/K-Means.html)
 - Wednesday: Gaussian Mixture Models ([slides](../lectures/gmms.html), [notes](../notes/gmms.html))
-  - [Example Notebook](../examples/Gaussian-Mixtures.ipynb)
+  - Example Notebook: [ipynb](../examples/Gaussian-Mixtures.ipynb), [html](../examples/Gaussian-Mixtures.html)
 - Lab: SVM lab
+  - Review mixture models
   - Due June 5th at 11:59 pm
   - Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863)
 
