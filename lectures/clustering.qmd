@@ -163,11 +163,11 @@ Repeat until convergence
 ![ ](./figs/clustering/k6.png)
 
 
-# An example
+## An example
 
 ![https://commons.wikimedia.org/wiki/User:Chire](./figs/clustering/K-means_convergence.gif)
 
-# Properties of K-means algorithm
+## Properties of K-means algorithm
 
 - Guaranteed to converge in a finite number of iterations
 - Running time per iteration:
@@ -176,7 +176,7 @@ Repeat until convergence
 	2. Change the cluster center to the average of its assigned points:
 		- **O(N) time**
 
-# K-Means Convergence
+## K-Means Convergence
 
 **Objective:** $\min_{\mu}\min_{C}\sum_{i=1}^k \sum_{x\in C_i} \lVert x - \mu_i \rVert^2$
 
@@ -186,7 +186,7 @@ Repeat until convergence
 
 Kmeans takes an alternating optimization approach. Each step is guaranteed to decrease the objective—thus guaranteed to converge.
 
-# Initialization
+## Initialization
 
 ::: columns
 
@@ -203,13 +203,13 @@ K-means algorithm is a heuristic:
 
 :::
 
-# K-Means Getting Stuck
+## K-Means Getting Stuck
 
 Local optima dependent on how the problem was specified:
 
 ![ ](./figs/clustering/localopt.png)
 
-# K-means not able to properly cluster
+## K-means not able to properly cluster
 
 ![ ](./figs/clustering/circle.png)
 
@@ -219,7 +219,7 @@ Local optima dependent on how the problem was specified:
 - What would within-cluster distance look like in the ideal case?
 :::
 
-# Changing the features (distance function) can help
+## Changing the features (distance function) can help
 
 ![ ](./figs/clustering/circletrans.png)
 
@@ -229,6 +229,8 @@ Local optima dependent on how the problem was specified:
 :::
 
 # Agglomerative Clustering
+
+## Agglomerative Clustering
 
 ::: columns
 
