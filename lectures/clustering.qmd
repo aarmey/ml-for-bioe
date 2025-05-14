@@ -45,11 +45,11 @@ Go over what is the data input and output (discrete).
 - Cells into groups based on molecular measurements
 - Neuronal signals 
 
-## Clustering Patients
+## 
 
 ![ ](./figs/clustering/BCclustersTitle.webp)
 
-## Clustering Patients
+## 
 
 ![ ](./figs/clustering/BCclusters.webp)
 
@@ -248,7 +248,7 @@ Local optima dependent on how the problem was specified:
 
 # Agglomerative Clustering
 
-## Agglomerative Clustering
+## Agglomerative Clustering {.smaller}
 
 ::: columns
 
@@ -304,7 +304,7 @@ How should we define “closest” for clusters with multiple elements?
 
 ![Mouse tumor data from Hastie et al.](./figs/clustering/clustbeh.png)
 
-# Agglomerative Clustering Questions
+## Agglomerative Clustering Questions
 
 - Will agglomerative clustering converge?
 	- To a global optimum?
@@ -312,7 +312,7 @@ How should we define “closest” for clusters with multiple elements?
 - Do people ever use it?
 - How many clusters to pick?
 
-# Reconsidering “hard assignments”?
+## Reconsidering “hard assignments”?
 
 - Clusters may overlap
 - Some clusters may be “wider” than others
@@ -320,7 +320,7 @@ How should we define “closest” for clusters with multiple elements?
 
 ![ ](./figs/clustering/olap.svg)
 
-## 
+## Review
 
 ![ ](./figs/clustering/review-title.webp)
 
@@ -328,15 +328,15 @@ How should we define “closest” for clusters with multiple elements?
 
 ![ ](./figs/clustering/review-fig1.webp)
 
-## Review
+## 
 
 ![ ](./figs/clustering/review-fig2.webp)
 
-## Review
+## 
 
 ![ ](./figs/clustering/review-fig3.webp)
 
-## Review
+## 
 
 ![ ](./figs/clustering/review-fig4.webp)
 
@@ -393,7 +393,7 @@ ax.scatter(X[:, 3], X[:, 0], X[:, 2],
 
 # Review
 
-# Further Reading
+## Further Reading
 
 - [sklearn: Clustering](https://scikit-learn.org/stable/modules/clustering.html)
 - [Avoiding common pitfalls when clustering biological data](https://stke.sciencemag.org/content/9/432/re6)
