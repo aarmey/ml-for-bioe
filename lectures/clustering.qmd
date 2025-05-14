@@ -21,7 +21,6 @@ author: Aaron Meyer (based on slides from David Sontag)
 
 ![ ](./figs/clustering/clust1.png){fig-alt="Groups of points, circled to be placed within two clusters."}
 
-
 ::: {.notes}
 Go over what is the data input and output (discrete).
 :::
@@ -39,6 +38,25 @@ Go over what is the data input and output (discrete).
 - Example: 2D point patterns
 
 ![ ](./figs/clustering/clust3.png)
+
+# Applications
+
+- Clustering patients into groups based on molecular or etiological measurements
+- Cells into groups based on molecular measurements
+- Neuronal signals 
+
+## Clustering Patients
+
+![ ](./figs/clustering/BCclustersTitle.webp)
+
+## Clustering Patients
+
+![ ](./figs/clustering/BCclusters.webp)
+
+::: {.notes}
+- We use clusters because they (hopefully) translate to meaningful differences.
+- What if you cluster based on different measurements?
+:::
 
 # What does "similar" mean?
 
@@ -302,58 +320,31 @@ How should we define “closest” for clusters with multiple elements?
 
 ![ ](./figs/clustering/olap.svg)
 
-# Applications
-
-- Clustering patients into groups based on molecular or etiological measurements
-- Cells into groups based on molecular measurements
-- Neuronal signals 
-
-# Clustering Patients
-
-![ ](./figs/clustering/BCclustersTitle.webp)
-
-# Clustering Patients
-
-![ ](./figs/clustering/BCclusters.webp)
-
-::: {.notes}
-- We use clusters because they (hopefully) translate to meaningful differences.
-- What if you cluster based on different measurements?
-:::
-
-# Review
+## 
 
 ![ ](./figs/clustering/review-title.webp)
 
-# Review
+## 
 
 ![ ](./figs/clustering/review-fig1.webp)
 
-# Review
+## Review
 
 ![ ](./figs/clustering/review-fig2.webp)
 
-# Review
+## Review
 
 ![ ](./figs/clustering/review-fig3.webp)
 
-# Review
+## Review
 
 ![ ](./figs/clustering/review-fig4.webp)
-
-# Review
-
-![ ](./figs/clustering/review-fig5.webp)
-
-# Review
-
-![ ](./figs/clustering/review-fig6.webp)
 
 # Implementation
 
 ## K-means
 
-`sklearn.cluster.KMeans`
+[`sklearn.cluster.KMeans`](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
 
 - `n_clusters`: Number of clusters to form
 - `init`: Initialization method
@@ -362,9 +353,13 @@ How should we define “closest” for clusters with multiple elements?
 
 ## Agglomerative
 
-`sklearn.cluster.AgglomerativeClustering`
+[`sklearn.cluster.AgglomerativeClustering`](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html)
 
-# Implementation - K-means
+- `n_clusters`: Number of clusters to return
+- `metric`: Distance metric to use
+- `linkage`: Linkage metric to use
+
+## Implementation - K-means
 
 ```python
 import numpy as np
@@ -388,20 +383,22 @@ ax.scatter(X[:, 3], X[:, 0], X[:, 2],
 # ...
 ```
 
-# Implementation - K-means
+## Implementation - K-means
 
 ![ ](./figs/clustering/iris1.png)
 
-# Implementation - K-means
+## Implementation - K-means
 
 ![ ](./figs/clustering/iris2.png)
+
+# Review
 
 # Further Reading
 
 - [sklearn: Clustering](https://scikit-learn.org/stable/modules/clustering.html)
 - [Avoiding common pitfalls when clustering biological data](https://stke.sciencemag.org/content/9/432/re6)
 
-### K-Means clustering
+## Review Questions
 
 1. What is clustering? What does it seek to accomplish?
 2. What is agglomerative clustering? What does the resulting output look like?
