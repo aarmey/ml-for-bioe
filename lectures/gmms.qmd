@@ -9,7 +9,7 @@ author: Aaron Meyer (based on slides from David Sontag)
 - Some clusters may be “wider” than others
 - Distances can be deceiving!
 
-![ ](./figs/lec14/gm2.svg)
+![ ](./figs/gmms/gm2.svg)
 
 ::: {.notes}
 If we know which points are in each cluster, the answer is easy! (mu, sigma)
@@ -28,7 +28,7 @@ If we know which points are in each cluster, the answer is easy! (mu, sigma)
 ::::
 
 :::: column
-![ ](./figs/lec14/gm3.pdf)
+![ ](./figs/gmms/gm3.pdf)
 ::::
 
 :::
@@ -43,7 +43,7 @@ Each data point is sampled from a **generative process**:
 1. Choose component i with probability $P(y=i)$
 2. Generate datapoint $N(m_i, \Sigma_i)$
 
-![ ](./figs/lec14/gm4.svg)
+![ ](./figs/gmms/gm4.svg)
 
 # What Model Should We Use?
 
@@ -71,20 +71,20 @@ $$P(X = x_j \mid Y = i) = N(x_j, \mu_i, \Sigma_i)$$
 ::::
 
 :::: {.column width=50%}
-![ ](./figs/lec14/gm6.webp)
+![ ](./figs/gmms/gm6.webp)
 ::::
 
 :::
 
 # Multivariate Gaussians
 
-![ ](./figs/lec14/gm7.pdf)
+![ ](./figs/gmms/gm7.pdf)
 
 # Multivariate Gaussians
 
 $$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \mu)^T \Sigma^{-1} (\mathbf{x}_j - \mu)\right]$$
 
-![ ](./figs/lec14/gm8.webp)
+![ ](./figs/gmms/gm8.webp)
 
 $\Sigma$ is a diagonal matrix 
 
@@ -94,7 +94,7 @@ $X_i$ are independent and uncorrelated
 
 $$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \mu)^T \Sigma^{-1} (\mathbf{x}_j - \mu)\right]$$
 
-![ ](./figs/lec14/gm9.webp)
+![ ](./figs/gmms/gm9.webp)
 
 $\Sigma$ is an arbitrary (semidefinite) matrix
 
@@ -104,25 +104,25 @@ Eigenvalues specify the relative elongation
 
 # Multivariate Gaussians
 
-![ ](./figs/lec14/gm10.pdf)
+![ ](./figs/gmms/gm10.pdf)
 
 # Mixtures of Gaussians (1)
 
 Old Faithful Data Set
 
-![ ](./figs/lec14/gm11.pdf)
+![ ](./figs/gmms/gm11.pdf)
 
 # Mixtures of Gaussians (1)
 
 Old Faithful Data Set
 
-![ ](./figs/lec14/gm12.pdf)
+![ ](./figs/gmms/gm12.pdf)
 
 # Mixtures of Gaussians (2)
 
 Combine simple models into a complex model:
 
-![ ](./figs/lec14/gm13.pdf)
+![ ](./figs/gmms/gm13.pdf)
 
 ::: {.notes}
 $p(x\; is\; k) = \frac{\pi_k N(x|\mu_k, \Sigma_k)}{\sum_{k=1}^{N}}$
@@ -130,25 +130,25 @@ $p(x\; is\; k) = \frac{\pi_k N(x|\mu_k, \Sigma_k)}{\sum_{k=1}^{N}}$
 
 # Mixtures of Gaussians (3)
 
-![ ](./figs/lec14/gm14.webp)
+![ ](./figs/gmms/gm14.webp)
 
 # Eliminating Hard Assignments to Clusters
 
 Model data as mixture of multivariate Gaussians
 
-![ ](./figs/lec14/gm15.pdf)
+![ ](./figs/gmms/gm15.pdf)
 
 # Eliminating Hard Assignments to Clusters
 
 Model data as mixture of multivariate Gaussians
 
-![ ](./figs/lec14/gm16.pdf)
+![ ](./figs/gmms/gm16.pdf)
 
 # Eliminating Hard Assignments to Clusters
 
 Model data as mixture of multivariate Gaussians
 
-![ ](./figs/lec14/gm17.pdf)
+![ ](./figs/gmms/gm17.pdf)
 
 Shown is the posterior probability that a point was generated from $i$th Gaussian: $Pr(Y = i \mid x)$
 
@@ -175,7 +175,7 @@ Just sums over $x$ generated from the $k$'th Gaussian
 - Maximize **marginal likelihood**:
 	- $\arg\max_\theta \prod_j P(x_j) = \arg\max_\theta \prod_j \sum_{k=1}^K P(Y_j=k, x_j)$
 
-![ ](./figs/lec14/gm19.pdf){width=35%}
+![ ](./figs/gmms/gm19.pdf){width=35%}
 
 # How do we optimize? Closed Form?
 
@@ -187,7 +187,7 @@ Just sums over $x$ generated from the $k$'th Gaussian
 
 # Learning general mixtures of Gaussians
 
-![ ](./figs/lec14/gm21.pdf)
+![ ](./figs/gmms/gm21.pdf)
 
 - Need to differentiate and solve for $\mu_k$, $\sum_k$, and P(Y=k) for k=1..K
 - There will be no closed form solution, gradient is complex, lots of local optimum
@@ -211,35 +211,35 @@ Just sums over $x$ generated from the $k$'th Gaussian
 
 # EM: Two Easy Steps
 
-![ ](./figs/lec14/gm24.pdf)
+![ ](./figs/gmms/gm24.pdf)
 
 Especially useful when the E and M steps have closed form solutions!!!
 
 # EM algorithm: Pictorial View
 
-![ ](./figs/lec14/gm25.pdf)
+![ ](./figs/gmms/gm25.pdf)
 
 # Simple example: learn means only!
 
-![ ](./figs/lec14/gm26.pdf)
+![ ](./figs/gmms/gm26.pdf)
 
 # EM for GMMs: only learning means
 
-![ ](./figs/lec14/gm27.pdf)
+![ ](./figs/gmms/gm27.pdf)
 
 # 
 
-![ ](./figs/lec14/gm28.pdf)
+![ ](./figs/gmms/gm28.pdf)
 
 # Gaussian Mixture Example: Animation of Fitting
 
-![ ](./figs/lec14/animation.gif)
+![ ](./figs/gmms/animation.gif)
 
 # What if we do hard assignments?
 
 **Iterate:** On the t'th iteration let our estimates be $$\lambda_t = [\mu_{1}^{(t)}, \mu_{2}^{(t)}, \ldots \mu_{3}^{(t)}]$$
 
-![ ](./figs/lec14/gm37.pdf)
+![ ](./figs/gmms/gm37.pdf)
 
 Equivalent to k-means clustering algorithm!!!
 
