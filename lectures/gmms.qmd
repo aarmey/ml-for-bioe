@@ -23,6 +23,7 @@ If we know which points are in each cluster, the answer is easy! (mu, sigma)
 	- Allows overlaps, clusters of different size, etc.
 - Can tell a *generative story* for data
 	- $P(X\mid Y) P(Y)$
+	- "What is the probability of points, given what we have observed?"
 - Challenge: need to estimate model parameters without labeled `Y`s
 
 ## Probabilistic clustering
@@ -81,7 +82,9 @@ $$P(X = x_j \mid Y = i) = N(x_j, \mu_i, \Sigma_i)$$
 
 :::
 
-## Multivariate Gaussians
+# Multivariate Gaussians
+
+## Circular distribution
 
 $$P(X=\mathbf{x}_{j})=\frac{1}{(2\pi)^{m/2}\|\Sigma\|^{1/2}}\exp\left[-\frac{1}{2}(\mathbf{x}_{j}-\boldsymbol{\mu})^{T}\Sigma^{-1}(\mathbf{x}_{j}-\boldsymbol{\mu})\right]$$
 
@@ -97,7 +100,7 @@ $\Sigma$ is the identity matrix
 
 :::
 
-## Multivariate Gaussians
+## Ovals!
 
 $$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \boldsymbol{\mu})^T \Sigma^{-1} (\mathbf{x}_j - \boldsymbol{\mu})\right]$$
 
@@ -115,7 +118,7 @@ $X_i$ are independent and uncorrelated
 
 :::
 
-## Multivariate Gaussians
+## General case
 
 $$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \boldsymbol{\mu})^T \Sigma^{-1} (\mathbf{x}_j - \boldsymbol{\mu})\right]$$
 
@@ -141,19 +144,23 @@ $$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1
 
 ![ ](./figs/gmms/gm10.webp)
 
-## Mixtures of Gaussians (1)
+::: {.notes}
+Note relation to PCA.
+:::
+
+## How can we even more flexibly fit distributions?
 
 Old Faithful Data Set
 
 ![ ](./figs/gmms/gm11.webp)
 
-## Mixtures of Gaussians (1)
+## Two distributions might fit the data better
 
 Old Faithful Data Set
 
 ![ ](./figs/gmms/gm12.webp)
 
-## Mixtures of Gaussians (2)
+## We can make _mixtures_ of distributions!
 
 Combine simple models into a complex model:
 
@@ -177,23 +184,19 @@ $$\sum_{k=1}^K \pi_k = 1$$
 $p(x\; is\; k) = \frac{\pi_k N(x|\mu_k, \Sigma_k)}{\sum_{k=1}^{N}}$
 :::
 
-## Mixtures of Gaussians (3)
-
-![ ](./figs/gmms/gm14.webp)
-
-## Eliminating Hard Assignments to Clusters
+## Distribution mixtures eliminate hard assignments
 
 Model data as mixture of multivariate Gaussians
 
 ![ ](./figs/gmms/gm15.webp)
 
-## Eliminating Hard Assignments to Clusters
+## Distribution mixtures eliminate hard assignments
 
 Model data as mixture of multivariate Gaussians
 
 ![ ](./figs/gmms/gm16.webp)
 
-## Eliminating Hard Assignments to Clusters
+## Distribution mixtures eliminate hard assignments
 
 Model data as mixture of multivariate Gaussians
 
@@ -201,18 +204,19 @@ Model data as mixture of multivariate Gaussians
 
 Shown is the posterior probability that a point was generated from $i$th Gaussian: $Pr(Y = i \mid x)$
 
-## ML estimation in **supervised** setting
+## Fitting in a **supervised** setting
 
-- Univariate Gaussian
+### Univariate Gaussian
 
 $$\mu_{MLE} = \frac{1}{N}\sum_{i=1}^N x_i \quad\quad \sigma_{MLE}^2 = \frac{1}{N}\sum_{i=1}^N (x_i -\hat{\mu})^2$$
 
-- **Mixture** of **Multi**variate Gaussians
-	- ML estimate for each of the Multivariate Gaussians is given by:
+### Mixture of Multivariate Gaussians
+
+ML estimate for each of the Multivariate Gaussians is given by:
 
 $$\mu_{ML}^k = \frac{1}{n} \sum_{j=1}^n x_n \quad\quad \Sigma_{ML}^k = \frac{1}{n}\sum_{j=1}^n \left(\mathbf{x}_j - \mu_{ML}^k\right)  \left(\mathbf{x}_j - \mu_{ML}^k\right)^T$$
 
-Just sums over $x$ generated from the $k$'th Gaussian
+Sums over $x$ generated from the $k$'th Gaussian
 
 ## But what if unobserved data?
 
@@ -227,7 +231,7 @@ Just sums over $x$ generated from the $k$'th Gaussian
 - Maximize **marginal likelihood**:
 	- $\arg\max_\theta \prod_j P(x_j) = \arg\max_\theta \prod_j \sum_{k=1}^K P(Y_j=k, x_j)$
 
-# How do we optimize? Closed Form?
+## How do we optimize? Closed Form?
 
 - Maximize **marginal likelihood**: $$\arg\max_{\theta} \prod_j P(x_j) = \arg\max \prod_j \sum_{k=1}^K P(Y_j=k, x_j)$$
 - Almost always a hard problem!
@@ -247,11 +251,9 @@ $$= \prod_{j=1}^m \sum_{k=1}^K \frac{1}{(2\pi)^{n/2} ||\Sigma_k||^{1/2}} \exp\le
 - There will be no closed form solution, gradient is complex, lots of local optimum
 - **Wouldn’t it be nice if there was a better way!?!**
 
-# EM
+# Expectation Maximization
 
-## Expectation Maximization
-
-# The EM Algorithm
+## The EM Algorithm
 
 - A clever method for maximizing marginal likelihood:
 	- $\arg\max_{\theta} \prod_j P(x_j) = \arg\max_{\theta} \prod_j \sum_{k=1}^K P(Y_j=k, x_j)$
@@ -288,47 +290,8 @@ $$
 \prod_{j=1}^{m}\sum_{k=1}^{K} P(x,Y_{j} = k) \propto \prod_{j=1}^{m}\sum_{k=1}^{K=2}\exp\left[-\frac{1}{2\sigma^{2}} \| x - \mu_{k} \|^{2}\right] P(Y_{j}=k)
 $$
 
-## EM for GMMs: only learning means
 
-On the `t`'th iteration let our estimates be: $\lambda_t = \{ \mu_1^{(t)}, \mu_2^{(t)} ... \mu_K^{(t)} \}$
-
-### E-step
-
-Compute "expected" classes of all datapoints
-
-$$P(Y_j = k|x_j, \mu_1 ... \mu_K) \propto \exp(-\frac{1}{2\sigma^2}\|x_j - \mu_k\|^2)P(Y_j = k)$$
-
-### M-step
-
-Compute most likely new $\mu$s given class expectations
-
-$$\mu_k = \frac{\sum_{j=1}^{m} P(Y_j = k|x_j) x_j}{\sum_{j=1}^{m} P(Y_j = k|x_j)}$$
-
-
-## What if we do hard assignments?
-
-On the t'th iteration let our estimates be $\lambda_t = \{ \mu_1^{(t)}, \mu_2^{(t)} ... \mu_K^{(t)} \}$
-
-### E-step
-
-Compute “expected" classes of all datapoints
-
-$$P(Y_j = k | x_j, \mu_1...\mu_K) \propto \exp(-\frac{1}{2\sigma^2}\|x_j - \mu_k\|^2)$$
-
-## What if we do hard assignments?
-
-On the t'th iteration let our estimates be $\lambda_t = \{ \mu_1^{(t)}, \mu_2^{(t)} ... \mu_K^{(t)} \}$
-
-### M-step
-
-Compute most likely new $\mu$s given class expectations
-$$\mu_k = \frac{\sum_{j=1}^m \delta(Y_j=k,x_j)x_j}{\sum_{j=1}^m \delta(Y_j=k,x_j)}$$
-
-$\delta$ represents hard assignment to “most likely” or nearest cluster
-
-Equivalent to k-means clustering algorithm!!!
-
-# E.M. for General GMMs
+# EM for General GMMs
 
 ## General GMMs: Setup
 
@@ -357,11 +320,52 @@ $$ p_k^{(t+1)} = \frac{\sum_j P(Y_j = k|x_j,\lambda_t)}{m} $$
 
 $m$ is the number of training examples
 
-# Gaussian Mixture Example: Animation of Fitting
+## Animation of fitting
 
 ![ ](./figs/gmms/demo.gif)
 
-# Implementation
+
+## EM for GMMs: only learning means
+
+On the $t$'th iteration let our estimates be: $\lambda_t = \{ \mu_1^{(t)}, \mu_2^{(t)} ... \mu_K^{(t)} \}$
+
+### E-step
+
+Compute "expected" classes of all datapoints
+
+$$P(Y_j = k|x_j, \mu_1 ... \mu_K) \propto \exp(-\frac{1}{2\sigma^2}\|x_j - \mu_k\|^2)P(Y_j = k)$$
+
+### M-step
+
+Compute most likely new $\mu$s given class expectations
+
+$$\mu_k = \frac{\sum_{j=1}^{m} P(Y_j = k|x_j) x_j}{\sum_{j=1}^{m} P(Y_j = k|x_j)}$$
+
+
+## What if we do hard assignments?
+
+On the $t$'th iteration let our estimates be $\lambda_t = \{ \mu_1^{(t)}, \mu_2^{(t)} ... \mu_K^{(t)} \}$
+
+### E-step
+
+Compute “expected" classes of all datapoints
+
+$$P(Y_j = k | x_j, \mu_1...\mu_K) \propto \exp(-\frac{1}{2\sigma^2}\|x_j - \mu_k\|^2)$$
+
+## What if we do hard assignments?
+
+On the t'th iteration let our estimates be $\lambda_t = \{ \mu_1^{(t)}, \mu_2^{(t)} ... \mu_K^{(t)} \}$
+
+### M-step
+
+Compute most likely new $\mu$s given class expectations
+$$\mu_k = \frac{\sum_{j=1}^m \delta(Y_j=k,x_j)x_j}{\sum_{j=1}^m \delta(Y_j=k,x_j)}$$
+
+$\delta$ represents hard assignment to “most likely” or nearest cluster
+
+Equivalent to k-means clustering algorithm!
+
+## Implementation
 
 [`sklearn.mixture.GaussianMixture`](https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html) implements GMMs within `sklearn`.
 
@@ -379,7 +383,9 @@ $m$ is the number of training examples
 	- `M.predict_proba(X)` is the posterior probability of each component given the data
 	- `M.predict(X)` predict the class labels of each data point
 
-# Further Reading
+# Review
+
+## Reading & Resources
 
 - [`sklearn.mixture.GaussianMixture`](https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html#sklearn.mixture.GaussianMixture)
 - [Python Data Science Handbook: GMMs](https://jakevdp.github.io/PythonDataScienceHandbook/05.12-gaussian-mixtures.html)
@@ -387,7 +393,7 @@ $m$ is the number of training examples
 ## Review Questions
 
 1. What are two ways in which GMMs give different results from K-means?
-2. What does it mean to say GMMs produce “soft assignment”?
+2. What does it mean to say GMMs produce "soft assignments"?
 3. What can you say about a multivariate normal distribution with only diagonal elements?
 4. What does it mean to say a GMM is a generative model?
 5. Can mixture models be produced from distributions other than a Gaussian? If so, how is the distribution defined within the model? If not, why?
