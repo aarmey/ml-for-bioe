@@ -3,7 +3,7 @@ title: Clustering
 author: Aaron Meyer (based on slides from David Sontag)
 ---
 
-## Clustering
+# Clustering
 
 - Unsupervised learning
 - Requires data, but no labels
@@ -25,19 +25,17 @@ author: Aaron Meyer (based on slides from David Sontag)
 Go over what is the data input and output (discrete).
 :::
 
-## Clustering
+## Clustering is subjective!
 
-- Basic idea: group together similar instances
-- Example: 2D point patterns
-
-![ ](./figs/clustering/clust2.png)
-
-## Clustering
-
-- Basic idea: group together similar instances
-- Example: 2D point patterns
-
-![ ](./figs/clustering/clust3.png)
+::: {.notes}
+Go over example of the Simpsons
+- Lisa
+- Bart
+- Maggie
+- Marge
+- Krusty
+- Sideshow Bob
+:::
 
 # Applications
 
@@ -66,19 +64,24 @@ Go over what is the data input and output (discrete).
 
 $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert $$
 
-- Clustering results are **completely** dependent on the measure of similarity (or distance) between "points" to be clustered
+- Clustering results are **completely** dependent on the measure of similarity (or distance) between observations to be clustered
 
 ## What properties should a distance measure have?
 
-- Symmetric
-	- $D(A, B) = D(B, A)$
-	- Otherwise we can say A looks like B but not vice versa
-- Positivity and self-similarity
-	- $D(A,B) > 0$, and $D(A,B)=0$ iff $A=B$
-	- Otherwise there will be objects that we can't tell apart
-- Triangle inequality
-	- $D(A, B) + D(B, C) \geq D(A,C)$
-	- Otherwise one can say "A is like B, B is like C, but A is not like C at all"
+### Symmetric
+
+- $D(A, B) = D(B, A)$
+- Otherwise we can say `A` looks like `B` but not vice versa
+
+### Positivity and self-similarity
+
+- $D(A,B) > 0$, and $D(A,B)=0$ iff $A=B$
+- Otherwise there will be objects that we can't tell apart
+
+### Triangle inequality
+
+- $D(A, B) + D(B, C) \geq D(A,C)$
+- Otherwise one can say "`A` like `B`, `B` like `C`, but `A` not like `C` at all"
 
 # Clustering algorithms
 
@@ -194,7 +197,7 @@ Repeat until convergence
 	2. Change the cluster center to the average of its assigned points:
 		- **O(N) time**
 
-## K-Means Convergence
+## K-Means convergence
 
 **Objective:** $\min_{\mu}\min_{C}\sum_{i=1}^k \sum_{x\in C_i} \lVert x - \mu_i \rVert^2$
 
@@ -204,21 +207,23 @@ Repeat until convergence
 
 Kmeans takes an alternating optimization approach. Each step is guaranteed to decrease the objective—thus guaranteed to converge.
 
-## Initialization
+## K-means is (somewhat) sensitive to initialization
 
 ::: columns
 
 :::: column
-K-means algorithm is a heuristic:
-
-- Requires initial means
-- It does matter what you pick!
-- What can go wrong?
-- **Various schemes for preventing this kind of thing:** variance-based split / merge, initialization heuristics
+- Various heuristic schemes exist for preventing problematic results.
+- None of them are perfect.
 ::::
 
+:::: column
 ![ ](./figs/clustering/init.png)
+::::
 
+:::
+
+::: {.notes}
+- Also go through cluster identity invariance.
 :::
 
 ## K-Means Getting Stuck
@@ -282,8 +287,8 @@ How should we define “closest” for clusters with multiple elements?
 
 - How should we define “closest” for clusters with multiple elements?
 - Many options:
-	- Closest pair (single-link clustering)
-	- Farthest pair (complete-link clustering)
+	- [Closest pair]{style="color:darkgreen;"} (single-link clustering)
+	- [Farthest pair]{style="color:darkred;"} (complete-link clustering)
 	- Average of all pairs
 - Different choices create different clustering behaviors
 
@@ -359,13 +364,14 @@ How should we define “closest” for clusters with multiple elements?
 - `metric`: Distance metric to use
 - `linkage`: Linkage metric to use
 
-## Implementation - K-means
+## Fisher's iris dataset
 
-```python
-import numpy as np
-from matplotlib.pyplot import figure
-from mpl_toolkits.mplot3d import Axes3D
+![https://en.wikipedia.org/wiki/Iris_flower_data_set](./figs/clustering/iris1.webp)
 
+## K-means implementation
+
+```{.python}
+import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn import datasets
 
@@ -373,23 +379,19 @@ iris = datasets.load_iris()
 X, y = iris.data, iris.target
 
 est = KMeans(n_clusters=3)
-
-ax = Axes3D(figure(), rect=[0, 0, .95, 1], elev=48, azim=134)
 est.fit(X)
 labels = est.labels_
-
-ax.scatter(X[:, 3], X[:, 0], X[:, 2],
-           c=labels.astype(np.float), edgecolor='k')
 # ...
+plt.scatter(X_pca[:, 0], X_pca[:, 1], c=labels)
 ```
 
-## Implementation - K-means
+## 
 
-![ ](./figs/clustering/iris1.png)
+![ ](./figs/clustering/iris2.svg)
 
-## Implementation - K-means
+## 
 
-![ ](./figs/clustering/iris2.png)
+![ ](./figs/clustering/iris3.svg)
 
 # Review
 
