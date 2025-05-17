@@ -135,27 +135,43 @@ Eigenvalues specify the relative elongation
 
 :::
 
-## Multivariate Gaussians
+## $\Sigma$ accounts for degree to which points vary together
 
-![ ](./figs/gmms/gm10.pdf)
+$$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \boldsymbol{\mu})^T \Sigma^{-1} (\mathbf{x}_j - \boldsymbol{\mu})\right]$$
 
-## Mixtures of Gaussians (1)
-
-Old Faithful Data Set
-
-![ ](./figs/gmms/gm11.pdf)
+![ ](./figs/gmms/gm10.webp)
 
 ## Mixtures of Gaussians (1)
 
 Old Faithful Data Set
 
-![ ](./figs/gmms/gm12.pdf)
+![ ](./figs/gmms/gm11.webp)
+
+## Mixtures of Gaussians (1)
+
+Old Faithful Data Set
+
+![ ](./figs/gmms/gm12.webp)
 
 ## Mixtures of Gaussians (2)
 
 Combine simple models into a complex model:
 
-![ ](./figs/gmms/gm13.pdf)
+::: columns
+
+:::: {.column width=50%}
+$$p(\mathbf{x}) = \sum_{k=1}^K \pi_k \mathcal{N} (\mathbf{x} | \boldsymbol{\mu}_k, \mathbf{\Sigma}_k)$$
+
+$$\forall k: \pi_k \geq 0$$
+
+$$\sum_{k=1}^K \pi_k = 1$$
+::::
+
+:::: {.column width=50%}
+![ ](./figs/gmms/gm13.webp)
+::::
+
+:::
 
 ::: {.notes}
 $p(x\; is\; k) = \frac{\pi_k N(x|\mu_k, \Sigma_k)}{\sum_{k=1}^{N}}$
