@@ -5,3 +5,4 @@ website/lectures
 site/public
 .quarto
 .venv
+lectures/*_files

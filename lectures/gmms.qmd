@@ -3,7 +3,9 @@ title: Gaussian Mixture Models
 author: Aaron Meyer (based on slides from David Sontag)
 ---
 
-# The Evils of “Hard Assignments”?
+# The evils of "hard" assignments
+
+## The evils of "hard" assignments
 
 - Clusters may overlap
 - Some clusters may be “wider” than others
@@ -15,27 +17,30 @@ author: Aaron Meyer (based on slides from David Sontag)
 If we know which points are in each cluster, the answer is easy! (mu, sigma)
 :::
 
-# Probabilistic Clustering
+## Probabilistic clustering
 
-::: columns
-
-:::: column
 - Try a probabilistic model!
 	- Allows overlaps, clusters of different size, etc.
 - Can tell a *generative story* for data
 	- $P(X\mid Y) P(Y)$
-- Challenge: we need to estimate model parameters without labeled Ys
-::::
+- Challenge: need to estimate model parameters without labeled `Y`s
 
-:::: column
-![ ](./figs/gmms/gm3.pdf)
-::::
+## Probabilistic clustering
 
-:::
+| Y  | $X_1$ | $X_2$ |
+| :--- | :--- | :--- |
+| ?? | 0.1 | 2.1 |
+| ?? | 0.5 | -1.1 |
+| ?? | 0.0 | 3.0 |
+| ?? | -0.1 | -2.0 |
+| ?? | 0.2 | 1.5 |
+| ... | ... | ... |
 
-# The General GMM assumption
+: Data table
 
-- $P(Y)$: There are k components
+## The general GMM assumption
+
+- $P(Y)$: There are k clusters/components
 - $P(X\mid Y)$: Each component generates data from a *multivariate Gaussian* with mean $\mu_i$ and covariance matrix $\Sigma_i$
 
 Each data point is sampled from a **generative process**:
@@ -45,7 +50,7 @@ Each data point is sampled from a **generative process**:
 
 ![ ](./figs/gmms/gm4.svg)
 
-# What Model Should We Use?
+## What model should we use?
 
 - Depends on X.
 - If we know which points are in a cluster, then we can define the best distribution for it.
@@ -56,7 +61,7 @@ $$p(Y_i = y_k) = \theta_k$$
 
 $$P(X_i = x \mid Y = y_k) = N(x \mid \mu_{ik}, \sigma_{ik})$$
 
-# Could we make fewer assumptions?
+## Could we make fewer assumptions?
 
 ::: columns
 
@@ -76,49 +81,77 @@ $$P(X = x_j \mid Y = i) = N(x_j, \mu_i, \Sigma_i)$$
 
 :::
 
-# Multivariate Gaussians
+## Multivariate Gaussians
 
-![ ](./figs/gmms/gm7.pdf)
+$$P(X=\mathbf{x}_{j})=\frac{1}{(2\pi)^{m/2}\|\Sigma\|^{1/2}}\exp\left[-\frac{1}{2}(\mathbf{x}_{j}-\boldsymbol{\mu})^{T}\Sigma^{-1}(\mathbf{x}_{j}-\boldsymbol{\mu})\right]$$
 
-# Multivariate Gaussians
+::: columns
 
-$$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \mu)^T \Sigma^{-1} (\mathbf{x}_j - \mu)\right]$$
+:::: {.column width=50%}
+$\Sigma$ is the identity matrix
+::::
 
-![ ](./figs/gmms/gm8.webp)
+:::: {.column width=50%}
+![ ](./figs/gmms/gm7.webp)
+::::
 
+:::
+
+## Multivariate Gaussians
+
+$$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \boldsymbol{\mu})^T \Sigma^{-1} (\mathbf{x}_j - \boldsymbol{\mu})\right]$$
+
+::: columns
+
+:::: {.column width=50%}
 $\Sigma$ is a diagonal matrix 
 
 $X_i$ are independent and uncorrelated
+::::
 
-# Multivariate Gaussians
+:::: {.column width=50%}
+![ ](./figs/gmms/gm8.webp)
+::::
 
-$$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \mu)^T \Sigma^{-1} (\mathbf{x}_j - \mu)\right]$$
+:::
 
-![ ](./figs/gmms/gm9.webp)
+## Multivariate Gaussians
 
+$$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \boldsymbol{\mu})^T \Sigma^{-1} (\mathbf{x}_j - \boldsymbol{\mu})\right]$$
+
+::: columns
+
+:::: {.column width=50%}
 $\Sigma$ is an arbitrary (semidefinite) matrix
 
 Specifies rotation/change of basis
 
 Eigenvalues specify the relative elongation
+::::
 
-# Multivariate Gaussians
+:::: {.column width=50%}
+![ ](./figs/gmms/gm9.webp)
+::::
+
+:::
+
+## Multivariate Gaussians
 
 ![ ](./figs/gmms/gm10.pdf)
 
-# Mixtures of Gaussians (1)
+## Mixtures of Gaussians (1)
 
 Old Faithful Data Set
 
 ![ ](./figs/gmms/gm11.pdf)
 
-# Mixtures of Gaussians (1)
+## Mixtures of Gaussians (1)
 
 Old Faithful Data Set
 
 ![ ](./figs/gmms/gm12.pdf)
 
-# Mixtures of Gaussians (2)
+## Mixtures of Gaussians (2)
 
 Combine simple models into a complex model:
 
@@ -128,31 +161,31 @@ Combine simple models into a complex model:
 $p(x\; is\; k) = \frac{\pi_k N(x|\mu_k, \Sigma_k)}{\sum_{k=1}^{N}}$
 :::
 
-# Mixtures of Gaussians (3)
+## Mixtures of Gaussians (3)
 
 ![ ](./figs/gmms/gm14.webp)
 
-# Eliminating Hard Assignments to Clusters
+## Eliminating Hard Assignments to Clusters
 
 Model data as mixture of multivariate Gaussians
 
-![ ](./figs/gmms/gm15.pdf)
+![ ](./figs/gmms/gm15.webp)
 
-# Eliminating Hard Assignments to Clusters
-
-Model data as mixture of multivariate Gaussians
-
-![ ](./figs/gmms/gm16.pdf)
-
-# Eliminating Hard Assignments to Clusters
+## Eliminating Hard Assignments to Clusters
 
 Model data as mixture of multivariate Gaussians
 
-![ ](./figs/gmms/gm17.pdf)
+![ ](./figs/gmms/gm16.webp)
+
+## Eliminating Hard Assignments to Clusters
+
+Model data as mixture of multivariate Gaussians
+
+![ ](./figs/gmms/gm17.webp)
 
 Shown is the posterior probability that a point was generated from $i$th Gaussian: $Pr(Y = i \mid x)$
 
-# ML estimation in **supervised** setting
+## ML estimation in **supervised** setting
 
 - Univariate Gaussian
 
@@ -165,17 +198,18 @@ $$\mu_{ML}^k = \frac{1}{n} \sum_{j=1}^n x_n \quad\quad \Sigma_{ML}^k = \frac{1}{
 
 Just sums over $x$ generated from the $k$'th Gaussian
 
-# But what if unobserved data?
+## But what if unobserved data?
 
-- MLE:
-	- $\arg\max_\theta \prod_j P(y_i, x_j)$
+![ ](./figs/gmms/gm19.webp)
+
+## But what if unobserved data?
+
+- MLE: $\arg\max_\theta \prod_j P(y_i, x_j)$
 	- $\theta$: all model parameters
-		- eg, class probs, means, and variances
-- But we don't know $y_j$'s!
+		- e.g., class probs, means, and variances
+	- But we don't know $y_j$'s!
 - Maximize **marginal likelihood**:
 	- $\arg\max_\theta \prod_j P(x_j) = \arg\max_\theta \prod_j \sum_{k=1}^K P(Y_j=k, x_j)$
-
-![ ](./figs/gmms/gm19.pdf){width=35%}
 
 # How do we optimize? Closed Form?
 
@@ -185,9 +219,13 @@ Just sums over $x$ generated from the $k$'th Gaussian
 	- Even when lgP(X,Y) is convex, lgP(X) generally isn’t...
 	- For all but the simplest P(X), we will have to do gradient ascent, in a big messy space with lots of local optima...
 
-# Learning general mixtures of Gaussians
+## Learning general mixtures of Gaussians
 
-![ ](./figs/gmms/gm21.pdf)
+$$P(y = k | \mathbf{x}_j) \propto \frac{1}{(2\pi)^{n/2} ||\Sigma_k||^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \mu_k)^T \Sigma_k^{-1}(\mathbf{x}_j - \mu_k)\right]P(y = k)$$
+
+- Marginal likelihood:
+$$\prod_{j=1}^m P(\mathbf{x}_j) = \prod_{j=1}^m \sum_{k=1}^K P(\mathbf{x}_j, y = k)$$
+$$= \prod_{j=1}^m \sum_{k=1}^K \frac{1}{(2\pi)^{n/2} ||\Sigma_k||^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \mu_k)^T \Sigma_k^{-1}(\mathbf{x}_j - \mu_k)\right]P(y = k)$$
 
 - Need to differentiate and solve for $\mu_k$, $\sum_k$, and P(Y=k) for k=1..K
 - There will be no closed form solution, gradient is complex, lots of local optimum
@@ -208,48 +246,108 @@ Just sums over $x$ generated from the $k$'th Gaussian
 	- Compute a maximization
 - Not magic: **still optimizing a non-convex function with lots of local optima**
 	- The computations are just easier (often, significantly so!)
+	- Especially useful when the E and M steps have closed form solutions!
 
-# EM: Two Easy Steps
+## Simple(r) example: learn means only!
 
-![ ](./figs/gmms/gm24.pdf)
+::: columns
 
-Especially useful when the E and M steps have closed form solutions!!!
+:::: {.column width=50%}
+Consider:
 
-# EM algorithm: Pictorial View
+- 1D data
+- Mixture of k=2 Gaussians
+- Variances fixed to $\sigma=1$
+- Uniform distribution over classes
+- Just need to estimate $\mu_1$ and $\mu_2$
+::::
 
-![ ](./figs/gmms/gm25.pdf)
+:::: {.column width=50%}
+![ ](./figs/gmms/gm26.webp)
+::::
 
-# Simple example: learn means only!
+:::
 
-![ ](./figs/gmms/gm26.pdf)
+$$
+\prod_{j=1}^{m}\sum_{k=1}^{K} P(x,Y_{j} = k) \propto \prod_{j=1}^{m}\sum_{k=1}^{K=2}\exp\left[-\frac{1}{2\sigma^{2}} \| x - \mu_{k} \|^{2}\right] P(Y_{j}=k)
+$$
 
-# EM for GMMs: only learning means
+## EM for GMMs: only learning means
 
-![ ](./figs/gmms/gm27.pdf)
+On the `t`'th iteration let our estimates be: $\lambda_t = \{ \mu_1^{(t)}, \mu_2^{(t)} ... \mu_K^{(t)} \}$
 
-# 
+### E-step
 
-![ ](./figs/gmms/gm28.pdf)
+Compute "expected" classes of all datapoints
 
-# Gaussian Mixture Example: Animation of Fitting
+$$P(Y_j = k|x_j, \mu_1 ... \mu_K) \propto \exp(-\frac{1}{2\sigma^2}\|x_j - \mu_k\|^2)P(Y_j = k)$$
 
-![ ](./figs/gmms/animation.gif)
+### M-step
 
-# What if we do hard assignments?
+Compute most likely new $\mu$s given class expectations
 
-**Iterate:** On the t'th iteration let our estimates be $$\lambda_t = [\mu_{1}^{(t)}, \mu_{2}^{(t)}, \ldots \mu_{3}^{(t)}]$$
+$$\mu_k = \frac{\sum_{j=1}^{m} P(Y_j = k|x_j) x_j}{\sum_{j=1}^{m} P(Y_j = k|x_j)}$$
 
-![ ](./figs/gmms/gm37.pdf)
+
+## What if we do hard assignments?
+
+On the t'th iteration let our estimates be $\lambda_t = \{ \mu_1^{(t)}, \mu_2^{(t)} ... \mu_K^{(t)} \}$
+
+### E-step
+
+Compute “expected" classes of all datapoints
+
+$$P(Y_j = k | x_j, \mu_1...\mu_K) \propto \exp(-\frac{1}{2\sigma^2}\|x_j - \mu_k\|^2)$$
+
+## What if we do hard assignments?
+
+On the t'th iteration let our estimates be $\lambda_t = \{ \mu_1^{(t)}, \mu_2^{(t)} ... \mu_K^{(t)} \}$
+
+### M-step
+
+Compute most likely new $\mu$s given class expectations
+$$\mu_k = \frac{\sum_{j=1}^m \delta(Y_j=k,x_j)x_j}{\sum_{j=1}^m \delta(Y_j=k,x_j)}$$
+
+$\delta$ represents hard assignment to “most likely” or nearest cluster
 
 Equivalent to k-means clustering algorithm!!!
 
-::: {.notes}
-Can you make a mixture model of Gamma distributions? Poisson?
-:::
+# E.M. for General GMMs
+
+## General GMMs: Setup
+
+**Iterate:** On the $t$'th iteration let our estimates be
+
+$$ \lambda_t = \{ \mu_1^{(t)}, \mu_2^{(t)} ... \mu_K^{(t)}, \Sigma_1^{(t)}, \Sigma_2^{(t)} ... \Sigma_K^{(t)}, p_1^{(t)}, p_2^{(t)} ... p_K^{(t)} \} $$
+
+$p_k^{(t)}$ is shorthand for estimate of $P(y=k)$ on $t$'th iteration
+
+## General GMMs: E-step
+
+Compute "expected" classes of all datapoints for each class
+
+$$ P(Y_j = k|x_j, \lambda_t) \propto p_k^{(t)}p(x_j|\mu_k^{(t)}, \Sigma_k^{(t)}) $$
+Just evaluate a Gaussian at $x_j$
+
+## General GMMs: M-step
+
+Compute weighted MLE for $\mu$ given expected classes above
+
+$$ \mu_k^{(t+1)} = \frac{\sum_j P(Y_j = k|x_j,\lambda_t)x_j}{\sum_j P(Y_j = k|x_j,\lambda_t)} $$
+
+$$ \Sigma_k^{(t+1)} = \frac{\sum_j P(Y_j = k|x_j,\lambda_t) [x_j - \mu_k^{(t+1)}][x_j - \mu_k^{(t+1)}]^T}{\sum_j P(Y_j = k|x_j,\lambda_t)} $$
+
+$$ p_k^{(t+1)} = \frac{\sum_j P(Y_j = k|x_j,\lambda_t)}{m} $$
+
+$m$ is the number of training examples
+
+# Gaussian Mixture Example: Animation of Fitting
+
+![ ](./figs/gmms/demo.gif)
 
 # Implementation
 
-`sklearn.mixture.GaussianMixture` implements GMMs within `sklearn`.
+[`sklearn.mixture.GaussianMixture`](https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html) implements GMMs within `sklearn`.
 
 - `GaussianMixture` creates the class
 	- `n_components` indicates the number of Gaussians to use.
