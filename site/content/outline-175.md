@@ -75,7 +75,7 @@ title: "Course outline - BE 175"
 ### Week 9, May 26 – 30
 
 - Monday: Memorial Day
-- Wednesday: Equitable application of models
+- Wednesday: Bits and pieces of deep learning
 - Lab: Exam review
 
 ### Week 10, June 2 – 6
