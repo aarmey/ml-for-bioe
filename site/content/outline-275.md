@@ -14,24 +14,24 @@ title: "Course outline - BE 275"
 
 - [Lecture 2: Fitting & Regression](../lectures/regression.html)
   - [Example Notebook](../examples/OLS-Example.ipynb)
-- [Lecture 3: Fitting & Regression Redux, Regularization](lectures/regularization.html)
+- [Lecture 3: Fitting & Regression Redux, Regularization](../lectures/regularization.html)
   - [Example Notebook](../examples/Regularization-Example.ipynb)
 - Lab: Implementation of [Shaffer et al.](https://www.nature.com/nature/journal/v546/n7658/abs/nature22794.html), due Oct 10 at 11:59 pm
   - Repository link
 
 ### Week 2, Oct 7 – 11
 
-- [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](lectures/model-validation.html)
+- [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../lectures/model-validation.html)
   - [Example Notebook](../examples/CrossVal-Example.ipynb)
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
-- [Lecture 5: Reproducible computational workflows](lectures/reproducibility.html)
+- [Lecture 5: Reproducible computational workflows](../lectures/reproducibility.html)
 - Lab: Implementation of [Stone et al.](https://doi.org/10.1016/j.cels.2018.05.018), due Oct 17 at 11:59 pm
   - Repository link
 
 ### Week 3, Oct 14 – 18
 
-- [Lecture 6: Bayesian vs. frequentist approaches](lectures/bayesian.html)
-- [Lecture 7: Dimensionality reduction - PCA and NMF](lectures/dimensionality-reduction.html)
+- [Lecture 6: Bayesian vs. frequentist approaches](../lectures/bayesian.html)
+- [Lecture 7: Dimensionality reduction - PCA and NMF](../lectures/dimensionality-reduction.html)
   - [Example Notebook](../examples/PCA-NNMF.ipynb)
 
 ### Week 4, Oct 21 – 25
