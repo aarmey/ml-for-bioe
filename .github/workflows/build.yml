@@ -16,49 +16,49 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-    - uses: actions/checkout@v4
-    - uses: quarto-dev/quarto-actions/setup@v2
-      with:
-        version: 1.7.30
-    - name: Build slides and handouts
-      run: make slides && make pubnotes
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.7.30
+      - name: Build slides and handouts
+        run: make slides && make pubnotes
 
-    - name: Install uv
-      uses: astral-sh/setup-uv@v5
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
 
-    - name: Build notebooks
-      run: make convert
+      - name: Build notebooks
+        run: make convert
 
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v3
-      with:
-        hugo-version: 'latest'
-    - name: Build Hugo
-      run: hugo build --minify --gc -s site
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+      - name: Build Hugo
+        run: hugo build --minify --gc -s site
 
-    - name: Render notebooks
-      run: make render
+      - name: Render notebooks
+        run: make render
 
-    - name: Copy renders to site
-      run: cp site/content/examples/*.html site/public/examples/
+      - name: Copy renders to site
+        run: cp site/content/examples/*.html site/public/examples/
 
-    - name: Restore lychee cache
-      uses: actions/cache@v4
-      with:
-        path: .lycheecache
-        key: cache-lychee-${{ github.sha }}
-        restore-keys: cache-lychee-
-    - name: Run lychee
-      uses: lycheeverse/lychee-action@v2
-      with:
-        args: "--base . --exclude 'ml-for-bioe' --accept '100..=103,200..=299,403,409' --cache --max-cache-age 14d site/public"
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.sha }}
+          restore-keys: cache-lychee-
+      - name: Run lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: "--root-dir site/public --exclude 'ml-for-bioe' --accept '100..=103,200..=299,403,409' --cache --max-cache-age 14d site/public"
 
-    - name: Upload artifact
-      if: github.ref == 'refs/heads/main'
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: 'site/public'
-    - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/main'
-      id: deployment
-      uses: actions/deploy-pages@v4
+      - name: Upload artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "site/public"
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        id: deployment
+        uses: actions/deploy-pages@v4
