@@ -190,7 +190,6 @@ Questions:
 # Reading & Resources
 
 - 📖: [Bayesian Data Analysis](https://stat.columbia.edu/~gelman/books/)
-- 📖: [Probabilistic Programming & Bayesian Methods for Hackers](https://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/)
 - 📺: [Bayes theorem, the geometry of changing beliefs](https://www.youtube.com/watch?v=HZGCoVF3YvM)
 - 📺: [The medical test paradox, and redesigning Bayes' rule](https://www.youtube.com/watch?v=lG4VkPoG3ko)
 - 👂: [Linear Digressions: Beware of simple metrics](https://lineardigressions.com/episodes/2019/12/22/data-scientists-beware-of-simple-metrics)
@@ -209,5 +208,3 @@ Questions:
 6. What would be a reasonable estimate if you had no previous device's data?
 7. What do you expect to happen to a posterior distribution as you add more and more data?
 8. What does the integral of $p(a \vert b) p(b \vert c) \delta b$ give you? Why is this useful?
-
-
