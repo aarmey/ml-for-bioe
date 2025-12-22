@@ -196,15 +196,15 @@ What we will cover spans a range of fields:
 
 ## Why we need models - Can a biologist fix a radio?
 
-![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz1.jpg){width=2in}
+![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz1.jpg){width=2in fig-alt="Photo of a radio."}
 
 ## Why we need models - Can a biologist fix a radio?
 
-![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz2.jpg){width=2in}
+![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz2.jpg){width=2in fig-alt="Photo of inside a radio."}
 
 ## Why we need models - Can a biologist fix a radio?
 
-![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz3.png){width=2in}
+![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz3.png){width=2in fig-alt="Circuit diagram of a radio."}
 
 ## Comparisons
 
@@ -218,19 +218,19 @@ What we will cover spans a range of fields:
 
 ## Machine learning outperforms humans for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig1.png){width=2in}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig1.png){width=2in fig-alt="Diagram of signals with different timings."}
 
 ## Machine learning outperforms humans for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig2.png){width=2in}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig2.png){width=2in fig-alt="Diagram of a programmable circuit with random connections."}
 
 ## Machine learning outperforms humans for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig3.png){width=2in}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig3.png){width=2in fig-alt="Loss from stochastic fitting process."}
 
 ## Machine learning outperforms humans for some tasks
 
-![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig4.png){width=2in}
+![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig4.png){width=2in fig-alt="Diagram of a fit circuit that performs the desired function."}
 
 # Basic Statistical Concepts
 
@@ -309,7 +309,7 @@ Complementary event
 
 $$f(x)={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}$$
 
-![ ](./figs/lec1/normal_pdf.png){width=2in}
+![ ](./figs/lec1/normal_pdf.png){width=2in fig-alt="PDF of a normal distribution."}
 
 ## Normal Distributions
 
