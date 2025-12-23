@@ -427,7 +427,7 @@ When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
 - K-S test is most useful when the sample size is small
 - Geometric meaning of the test statistic:
 
-![ ](./figs/lec1/ks.jpg){width=2in}
+![ ](./figs/lec1/ks.jpg){width=2in fig-alt="Schematic of the K-S test."}
 
 ::: {.notes}
 No t-distribution available here.

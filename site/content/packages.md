@@ -22,12 +22,12 @@ These are some packages that may be of use to you during the course.
 
 ## Numerical Manipulations
 
-- [NumPy](https://www.numpy.org)
-- [SciPy](https://www.scipy.org)
+- [NumPy](https://numpy.org)
+- [SciPy](https://scipy.org/)
 
 ## Autodifferentiation
 
-- [JAX](https://jax.readthedocs.io/en/latest/index.html)
+- [JAX](https://docs.jax.dev/en/latest/index.html)
 - [Tensorflow](https://www.tensorflow.org)
 
 ## Testing

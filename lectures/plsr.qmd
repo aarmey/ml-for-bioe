@@ -203,7 +203,7 @@ If you are trying to predict something, you should look at the cross-validated R
 
 - 📖: [How the PLS model is calculated](https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated)
 - 📖: [AMW: Partial Least Squares Regression](https://allmodelsarewrong.github.io/pls.html)
-- 📖: [Using Partial Least Squares Regression to Analyze Cellular Response Data](https://doi.org/10.1126/scisignal.2003849)
+- 📖: [Using Partial Least Squares Regression to Analyze Cellular Response Data](https://www.science.org/doi/10.1126/scisignal.2003849)
 
 ## Review Questions {.smaller}
 
