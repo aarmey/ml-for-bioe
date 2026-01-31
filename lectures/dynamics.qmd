@@ -184,7 +184,7 @@ Walk through 1D case of stability.
 
 ## Linearity & Separability
 
-![ ](./figs/dynamics/nonlin-2a.svg)
+![](./figs/dynamics/nonlin-2a.svg){fig-alt="Linear separability and superposition principles in dynamical systems"}
 
 ::: {.notes}
 - What is a Jacobian?
@@ -198,7 +198,7 @@ $$
 \dot{\vec{x}} = \vec{f}(\vec{x})
 $$
 
-![ ](./figs/dynamics/phase.svg)
+![](./figs/dynamics/phase.svg){fig-alt="Phase portrait showing trajectories in a dynamical system"}
 
 ### Non-linear systems
 
@@ -207,7 +207,7 @@ $$
 
 ## Features in Phase Portraits
 
-![ ](./figs/dynamics/nonlin-3a.svg)
+![](./figs/dynamics/nonlin-3a.svg){fig-alt="Features of phase portraits including fixed points and closed orbits"}
 
 ::: {.notes}
 - Fixed Points (A, B, C). Steady states
@@ -227,7 +227,7 @@ $$
 
 ## Step 1: Find the fixed points
 
-![ ](./figs/dynamics/nonlin-4a.svg)
+![](./figs/dynamics/nonlin-4a.svg){fig-alt="Identification of fixed points where derivatives are zero"}
 
 ## Step 2: Determine stability of fixed points
 
@@ -246,11 +246,11 @@ $$
 
 Nullclines are the sets of points for which $\dot{x} = 0$ or $\dot{y} = 0$, so flow is either horizontal or vertical.
 
-![ ](./figs/dynamics/nonlin-5a.png)
+![](./figs/dynamics/nonlin-5a.png){fig-alt="Nullclines separating regions of horizontal and vertical flow"}
 
 ## Step 4: Plot flow lines
 
-![ ](./figs/dynamics/nonlin-6.svg)
+![](./figs/dynamics/nonlin-6.svg){fig-alt="Flow lines indicating system trajectories and saddle point behavior"}
 
 ::: {.notes}
 - Why do solutions partition the graph?
@@ -268,7 +268,7 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Linearization About Fixed Points
 
-![ ](./figs/dynamics/nonlin-7.svg)
+![](./figs/dynamics/nonlin-7.svg){fig-alt="Linearization of a non-linear system around a fixed point"}
 
 ::: {.notes}
 - Think of the Jacobian as the way to convert position to velocity.
@@ -276,7 +276,7 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Solving Linearized Systems
 
-![ ](./figs/dynamics/nonlin-7a.svg)
+![](./figs/dynamics/nonlin-7a.svg){fig-alt="Eigenvalue analysis for solving linearized dynamical systems"}
 
 ::: {.notes}
 - Third row is the definition of an eigenvalue.
@@ -289,15 +289,15 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Example
 
-![ ](./figs/dynamics/nonlin-8.svg)
+![](./figs/dynamics/nonlin-8.svg){fig-alt="Example phase portrait of a linearized system"}
 
 ## More Examples
 
-![ ](./figs/dynamics/types.svg)
+![](./figs/dynamics/types.svg){fig-alt="Various types of fixed points in phase portraits"}
 
 ## Classification of Fixed Points
 
-![ ](./figs/dynamics/nonlin-9.svg)
+![](./figs/dynamics/nonlin-9.svg){fig-alt="Classification of fixed points based on eigenvalue properties"}
 
 ## Relevance for Nonlinear Dynamics
 
@@ -316,7 +316,7 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ## Saddle-Node Bifurcation
 
-![ ](./figs/dynamics/10a.svg)
+![](./figs/dynamics/10a.svg){fig-alt="Diagram of a saddle-node bifurcation"}
 
 # Example: Genetic Control Network
 
@@ -327,7 +327,7 @@ Griffith (1971) model of genetic control:
 - x = protein concentration
 - y = mRNA concentration
 
-![ ](./figs/dynamics/gene-expr1.svg)
+![](./figs/dynamics/gene-expr1.svg){fig-alt="Griffith (1971) genetic control network model diagram"}
 
 ## Genetic Control Network
 
@@ -336,7 +336,7 @@ Biochemical version of a bistable switch:
 1. Only stable points are no protein and mRNA or a fixed composition
 2. If degradation rates too great, only stable point is origin
 
-![ ](./figs/dynamics/gene-expr.svg)
+![](./figs/dynamics/gene-expr.svg){fig-alt="Phase portrait of a genetic control network acting as a bistable switch"}
 
 ::: {.notes}
 - How could we compare this to data?
@@ -438,7 +438,7 @@ plt.show()
 
 ## Pendulum Oscillation
 
-![ ](./figs/dynamics/scipy-integrate-odeint-1.png){.r-stretch}
+![](./figs/dynamics/scipy-integrate-odeint-1.png){fig-alt="Plot of pendulum angle and angular velocity over time" .r-stretch}
 
 ## Analysis Example: The Cell Cycle
 
