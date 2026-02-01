@@ -24,7 +24,7 @@ author: Aaron Meyer
 
 ## Training- vs. test-set performance
 
-![ ](./figs/crossval/sfd-5.png)
+![ ](./figs/crossval/sfd-5.png){fig-alt="Plot showing the relationship between model complexity and prediction error. Training error decreases with complexity, while test error follows a U-shape, indicating overfitting at high complexity."}
 
 ::: {.notes}
 Walk through this in detail.
@@ -54,7 +54,7 @@ Move to board. Setup example with students up front. Predict height from arm len
 
 ## The validation process
 
-![ ](./figs/crossval/sfd-8.png)
+![ ](./figs/crossval/sfd-8.png){fig-alt="Diagram illustrating the validation set approach, where the dataset is randomly split into a training set and a validation set."}
 
 A random splitting into two halves: left part is training set, right part is validation set
 
@@ -67,7 +67,7 @@ First just leaving one set out.
 - Want to compare linear vs higher-order polynomial terms in a linear regression
 - We randomly split the 392 observations into two sets, a training set containing 196 of the data points, and a validation set containing the remaining 196 observations.
 
-![ ](./figs/crossval/sfd-9.png)
+![ ](./figs/crossval/sfd-9.png){fig-alt="Plots showing the Mean Squared Error (MSE) versus polynomial degree for the automobile dataset. The left panel shows a single split, while the right panel shows variability across multiple random splits."}
 
 *Left panel shows single split; right panel shows multiple splits*
 
@@ -104,11 +104,11 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 
 ## Auto data revisited
 
-![ ](./figs/crossval/sfd-18.png)
+![ ](./figs/crossval/sfd-18.png){fig-alt="Comparison of Mean Squared Error (MSE) estimates using Leave-One-Out Cross-Validation (LOOCV) and 10-fold Cross-Validation on the automobile dataset."}
 
 ## True and estimated test MSE for the simulated data
 
-![ ](./figs/crossval/sfd-19.png)
+![ ](./figs/crossval/sfd-19.png){fig-alt="Plot comparing the true test MSE with estimates from 10-fold Cross-Validation and LOOCV on simulated data."}
 
 ## Other issues with cross-validation
 
@@ -166,7 +166,7 @@ It is not the same as the term “bootstrap” used in computer science meaning 
 
 ## Example with just three observations
 
-![ ](./figs/crossval/sfd-43.png)
+![ ](./figs/crossval/sfd-43.png){fig-alt="Illustration of the bootstrap resampling method on a small dataset with three observations."}
 
 A graphical illustration of the bootstrap approach on a small sample containing $n = 3$ observations. Each bootstrap data set contains $n$ observations, sampled with replacement from the original data set. Each bootstrap data set is used to obtain an estimate of $\alpha$.
 
@@ -178,7 +178,7 @@ A graphical illustration of the bootstrap approach on a small sample containing 
 
 ## A general picture for the bootstrap
 
-![ ](./figs/crossval/sfd-45.png)
+![ ](./figs/crossval/sfd-45.png){fig-alt="Schematic diagram of the bootstrap process, showing the generation of bootstrap samples, calculation of statistics, and estimation of standard error."}
 
 ## The bootstrap in general
 
@@ -225,19 +225,19 @@ Go through dataset randomization.
 
 # Example: Prognostic gene expression signatures
 
-![ ](./figs/crossval/example-1.png)
+![ ](./figs/crossval/example-1.png){fig-alt="Survival curves showing prognostic gene expression signatures separating patients into risk groups."}
 
 ## Random gene expression signatures are associated with survival
 
-![**Figure 1. Association of negative control signatures with overall survival.** In plots A-C the NKI cohort was split into two groups using a signature of post-prandial laughter (panel A), localization of skin fibroblasts (panel B), social defeat in mice (panel C). In panels A-C, the fraction of patients alive (overall survival, OS) is shown as a function of time for both groups. Hazard ratios (HR) between groups and their associated p-values are given in bottom-left corners. Panel D depicts p-values for association with outcome for all MSigDB c2 signatures and random signatures of identical size as MSigDB c2 signatures.](./figs/crossval/pcbi.1002240.g001.png)
+![**Figure 1. Association of negative control signatures with overall survival.** In plots A-C the NKI cohort was split into two groups using a signature of post-prandial laughter (panel A), localization of skin fibroblasts (panel B), social defeat in mice (panel C). In panels A-C, the fraction of patients alive (overall survival, OS) is shown as a function of time for both groups. Hazard ratios (HR) between groups and their associated p-values are given in bottom-left corners. Panel D depicts p-values for association with outcome for all MSigDB c2 signatures and random signatures of identical size as MSigDB c2 signatures.](./figs/crossval/pcbi.1002240.g001.png){fig-alt="Figure 1 from the paper, showing Kaplan-Meier survival curves for negative control signatures (random events) which still show significant separation."}
 
 ## Random signatures often do better than the published ones
 
-![**Figure 2. Most published signatures are not significantly better outcome predictors than random signatures of identical size.** The x-axis denotes the p-value of association with overall survival. Red dots stand for published signatures, yellow shapes depict the distribution of p-values for 1000 random signatures of identical size, with the lower 5% quantiles shaded in green and the median shown as black line. Signatures are ordered by increasing sizes.](./figs/crossval/pcbi.1002240.g002.png)
+![**Figure 2. Most published signatures are not significantly better outcome predictors than random signatures of identical size.** The x-axis denotes the p-value of association with overall survival. Red dots stand for published signatures, yellow shapes depict the distribution of p-values for 1000 random signatures of identical size, with the lower 5% quantiles shaded in green and the median shown as black line. Signatures are ordered by increasing sizes.](./figs/crossval/pcbi.1002240.g002.png){fig-alt="Figure 2 showing that most published signatures do not perform significantly better than random signatures of identical size."}
 
 ## Many signatures simply correlate with cell proliferation
 
-![**Figure 4. Most prognostic transcriptional signals are correlated with meta-PCNA.** A) Each point denotes a signature. The x-axis depicts the absolute value of the correlation of the first principal component of the signatures with meta-PCNA, the y-axis depicts the hazard ratio for outcome association. Details of the analysis for each data point are available in the Supporting Information (Text S1). B) Distribution of the correlations of individual genes with meta-PCNA, for genes significantly associated with overall survival (red) and for all the genes spotted on the microarrays (black).](./figs/crossval/pcbi.1002240.g004.png)
+![**Figure 4. Most prognostic transcriptional signals are correlated with meta-PCNA.** A) Each point denotes a signature. The x-axis depicts the absolute value of the correlation of the first principal component of the signatures with meta-PCNA, the y-axis depicts the hazard ratio for outcome association. Details of the analysis for each data point are available in the Supporting Information (Text S1). B) Distribution of the correlations of individual genes with meta-PCNA, for genes significantly associated with overall survival (red) and for all the genes spotted on the microarrays (black).](./figs/crossval/pcbi.1002240.g004.png){fig-alt="Figure 4 showing the correlation of prognostic signatures with cell proliferation (meta-PCNA)."}
 
 # Implementation
 

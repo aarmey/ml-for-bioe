@@ -7,15 +7,15 @@ author: Aaron Meyer (based on slides from Pam Kreeger)
 
 ##
 
-![ ](./figs/plsr/lee-1.webp)
+![ ](./figs/plsr/lee-1.webp){fig-alt="Diagram from Lee et al. showing the challenge of finding coordinated changes in complex biological data."}
 
 ## 
 
-![The timing and order of drug treatment affects cell death.](./figs/plsr/lee-2.webp)
+![The timing and order of drug treatment affects cell death.](./figs/plsr/lee-2.webp){fig-alt="Bar chart or heatmap showing how the timing and order of drug treatment affects cell death percentage."}
 
 ## 
 
-![ ](./figs/plsr/lee-4.webp)
+![ ](./figs/plsr/lee-4.webp){fig-alt="Figure from Lee et al. likely showing the experimental setup or results related to drug combinations."}
 
 ## Notes about the methods today
 
@@ -93,7 +93,7 @@ $$X = T P^t + E$$
 
 $$Y = U Q^t + F$$
 
-![ ](./figs/plsr/cross-decomp.webp)
+![ ](./figs/plsr/cross-decomp.webp){fig-alt="Diagram of PLSR as a cross-decomposition method, showing X decomposing into T and P, and Y decomposing into U and Q, with a relationship between T and U."}
 
 ## NIPALs while exchanging the scores
 
@@ -101,7 +101,7 @@ $$Y = U Q^t + F$$
 
 $$\mathbf{w}_a = \dfrac{1}{\mathbf{u}'_a\mathbf{u}_a} \cdot \mathbf{X}'_a\mathbf{u}_a$$
 
-![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 
 ## NIPALs while exchanging the scores
 
@@ -109,7 +109,7 @@ $$\mathbf{w}_a = \dfrac{1}{\mathbf{u}'_a\mathbf{u}_a} \cdot \mathbf{X}'_a\mathbf
 
 $$\mathbf{w}_a = \dfrac{\mathbf{w}_a}{\sqrt{\mathbf{w}'_a \mathbf{w}_a}}$$
 
-![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 
 ## NIPALs while exchanging the scores
 
@@ -117,7 +117,7 @@ $$\mathbf{w}_a = \dfrac{\mathbf{w}_a}{\sqrt{\mathbf{w}'_a \mathbf{w}_a}}$$
 
 $$\mathbf{t}_a = \dfrac{1}{\mathbf{w}'_a\mathbf{w}_a} \cdot \mathbf{X}_a\mathbf{w}_a$$
 
-![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 
 ## NIPALs while exchanging the scores
 
@@ -125,7 +125,7 @@ $$\mathbf{t}_a = \dfrac{1}{\mathbf{w}'_a\mathbf{w}_a} \cdot \mathbf{X}_a\mathbf{
 
 $$\mathbf{c}_a = \dfrac{1}{\mathbf{t}'_a\mathbf{t}_a} \cdot \mathbf{Y}'_a\mathbf{t}_a$$
 
-![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 
 ## NIPALs while exchanging the scores
 
@@ -133,17 +133,17 @@ $$\mathbf{c}_a = \dfrac{1}{\mathbf{t}'_a\mathbf{t}_a} \cdot \mathbf{Y}'_a\mathbf
 
 $$\mathbf{u}_a = \dfrac{1}{\mathbf{c}'_a\mathbf{c}_a} \cdot \mathbf{Y}_a\mathbf{c}_a$$
 
-![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 
 ## NIPALs while exchanging the scores
 
 5. Cycle until convergence, then subtract off variance explained by $\widehat{\mathbf{X}} = \mathbf{t}_a\mathbf{p}'_a$ and $\widehat{\mathbf{Y}}_a = \mathbf{t}_a \mathbf{c}'_a$.
 
-![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png)
+![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 
 ## Components in PLSR and PCA Differ
 
-![Janes et al, Nat Rev MCB, 2006](./figs/plsr/PC-8.webp)
+![Janes et al, Nat Rev MCB, 2006](./figs/plsr/PC-8.webp){fig-alt="Figure from Janes et al (2006) comparing the principal components derived from PCA and PLSR, showing how they capture different variance."}
 
 ## Determining the Number of Components
 
@@ -159,11 +159,11 @@ If you are trying to predict something, you should look at the cross-validated R
 
 ## PLSR uncovers coordinated cell death mechanisms
 
-![ ](./figs/plsr/lee-5.webp)
+![ ](./figs/plsr/lee-5.webp){fig-alt="Figure from Lee et al. showing how PLSR helps uncover coordinated cell death mechanisms."}
 
 ## PLSR uncovers coordinated cell death mechanisms
 
-![ ](./figs/plsr/lee-6.webp)
+![ ](./figs/plsr/lee-6.webp){fig-alt="Additional figure from Lee et al. illustrating the results of PLSR analysis on cell death mechanisms."}
 
 # Practical Notes & Summary
 

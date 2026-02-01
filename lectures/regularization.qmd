@@ -9,11 +9,11 @@ author: Aaron Meyer (based on slides from Rob Tibshirani)
 
 ---
 
-![ ](./figs/regularization/ccle-title.jpg)
+![ ](./figs/regularization/ccle-title.jpg){fig-alt="Title figure from the Cancer Cell Line Encyclopedia (CCLE) paper (Barretina et al., Nature 2012), illustrating the goal of predicting drug sensitivity from genomic features."}
 
 ---
 
-![ ](./figs/regularization/ccle-fig3.jpg)
+![ ](./figs/regularization/ccle-fig3.jpg){fig-alt="Figure 3 from the CCLE paper showing the performance of elastic net regression in predicting drug sensitivity compared to other methods."}
 
 # The Bias-Variance Tradeoff
 
@@ -67,7 +67,7 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 
 ## Depicting the bias-variance tradeoff {.nostretch}
 
-![A graph depicting the bias-variance tradeoff.](./figs/regularization/bias-variance.svg){width=600}
+![A graph depicting the bias-variance tradeoff.](./figs/regularization/bias-variance.svg){width=600 fig-alt="Graph illustrating the bias-variance tradeoff, showing how total error is minimized at an intermediate level of model complexity."}
 
 ::: {.notes}
 - Regularization can be _anything_.
@@ -143,7 +143,7 @@ $$
 
 - The λ’s trace out a set of ridge solutions, as illustrated below
 
-![Ridge coefficient path for the diabetes data set found in the `lars` library in R.](./figs/regularization/ridge-path.svg){width=600}
+![Ridge coefficient path for the diabetes data set found in the `lars` library in R.](./figs/regularization/ridge-path.svg){width=600 fig-alt="Plot showing the path of ridge regression coefficients as the regularization parameter lambda varies, for the diabetes dataset."}
 
 ## Choosing λ
 
@@ -175,7 +175,7 @@ $$
 
 ## Plot of CV errors and standard error bands {.nostretch}
 
-![Cross validation errors from a ridge regression example on spam data.](./figs/regularization/ridge-CV.svg){width=600}
+![Cross validation errors from a ridge regression example on spam data.](./figs/regularization/ridge-CV.svg){width=600 fig-alt="Plot of cross-validation error versus the regularization parameter lambda for ridge regression on spam data, showing the optimal lambda value."}
 
 # The LASSO
 
@@ -242,7 +242,7 @@ $$
 
 ## The LASSO, LARS, and Forward Stagewise paths {.nostretch}
 
-![Comparison of the LASSO, LARS, and Forward Stagewise coefficient paths for the diabetes data set.](./figs/regularization/lasso-algos.svg){width=600}
+![Comparison of the LASSO, LARS, and Forward Stagewise coefficient paths for the diabetes data set.](./figs/regularization/lasso-algos.svg){width=600 fig-alt="Comparison of coefficient paths for LASSO, LARS, and Forward Stagewise algorithms on the diabetes dataset, showing their similarity."}
 
 ## More comments on variable selection
 
