@@ -45,11 +45,11 @@ Go over example of the Simpsons
 
 ## 
 
-![ ](./figs/clustering/BCclustersTitle.webp)
+![ ](./figs/clustering/BCclustersTitle.webp){fig-alt="Title slide or header image for Breast Cancer clusters."}
 
 ## 
 
-![ ](./figs/clustering/BCclusters.webp)
+![ ](./figs/clustering/BCclusters.webp){fig-alt="Heatmap or plot showing clustering of breast cancer patients based on molecular measurements."}
 
 ::: {.notes}
 - We use clusters because they (hopefully) translate to meaningful differences.
@@ -115,7 +115,7 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 ::::
 
 :::: column
-![ ](./figs/clustering/kmeans1.png)
+![ ](./figs/clustering/kmeans1.png){fig-alt="Illustration of K-means initialization: random cluster centers are picked."}
 ::::
 
 :::
@@ -132,7 +132,7 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 ::::
 
 :::: column
-![ ](./figs/clustering/kmeans2.png)
+![ ](./figs/clustering/kmeans2.png){fig-alt="Illustration of K-means step: data points assigned to closest centers."}
 ::::
 
 :::
@@ -142,7 +142,7 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 - Pick K random points as cluster centers (means)
 	- Shown here for K=2
 
-![ ](./figs/clustering/k1.png)
+![ ](./figs/clustering/k1.png){fig-alt="Step 1: K random points are chosen as initial cluster centers."}
 
 ## K-means clustering: Example
 
@@ -150,7 +150,7 @@ $$ \textrm{dist}(\mathbf{x}, \mathbf{y}) = \lVert \mathbf{x} - \mathbf{y} \rVert
 
 Assign data points to the closest cluster center
 
-![ ](./figs/clustering/k2.png)
+![ ](./figs/clustering/k2.png){fig-alt="Step 2: Data points are assigned to the nearest cluster center."}
 
 ::: {.notes}
 Critical step is right here. How do we pick what is close? Which is closer?
@@ -162,7 +162,7 @@ Critical step is right here. How do we pick what is close? Which is closer?
 
 Change the cluster center to the average of the assigned points
 
-![ ](./figs/clustering/k3.png)
+![ ](./figs/clustering/k3.png){fig-alt="Step 3: Cluster centers are updated to the average of assigned points."}
 
 ::: {.notes}
 - Can be slow for very large numbers of data points.
@@ -173,20 +173,20 @@ Change the cluster center to the average of the assigned points
 
 Repeat until convergence
 
-![ ](./figs/clustering/k4.png)
+![ ](./figs/clustering/k4.png){fig-alt="Step 4: Repeat assignment of points to new centers."}
 
 ## K-means clustering: Example
 
-![ ](./figs/clustering/k5.png)
+![ ](./figs/clustering/k5.png){fig-alt="Step 5: Centers update again."}
 
 ## K-means clustering: Example
 
-![ ](./figs/clustering/k6.png)
+![ ](./figs/clustering/k6.png){fig-alt="Final step: Convergence, assignments do not change."}
 
 
 ## An example
 
-![https://commons.wikimedia.org/wiki/User:Chire](./figs/clustering/K-means_convergence.gif)
+![https://commons.wikimedia.org/wiki/User:Chire](./figs/clustering/K-means_convergence.gif){fig-alt="Animation showing the iterative process of K-means clustering, where centroids move and partition the data until convergence."}
 
 ## Properties of K-means algorithm
 
@@ -217,7 +217,7 @@ Kmeans takes an alternating optimization approach. Each step is guaranteed to de
 ::::
 
 :::: column
-![ ](./figs/clustering/init.png)
+![ ](./figs/clustering/init.png){fig-alt="Comparison of two different K-means results on the same data, showing how different initializations can lead to different clusterings."}
 ::::
 
 :::
@@ -230,11 +230,11 @@ Kmeans takes an alternating optimization approach. Each step is guaranteed to de
 
 Local optima dependent on how the problem was specified:
 
-![ ](./figs/clustering/localopt.png)
+![ ](./figs/clustering/localopt.png){fig-alt="Example of K-means getting stuck in a local optimum, where the resulting clusters are suboptimal compared to the global optimum."}
 
 ## K-means not able to properly cluster
 
-![ ](./figs/clustering/circle.png)
+![ ](./figs/clustering/circle.png){fig-alt="K-means failing to cluster concentric circles, as it separates them linearly."}
 
 ::: {.notes}
 - Go over number of clusters.
@@ -244,7 +244,7 @@ Local optima dependent on how the problem was specified:
 
 ## Changing the features (distance function) can help
 
-![ ](./figs/clustering/circletrans.png)
+![ ](./figs/clustering/circletrans.png){fig-alt="Successful clustering of the concentric circles after transforming the features (e.g., using polar coordinates or kernel method)."}
 
 ::: {.notes}
 - This is the kernel method.
@@ -272,7 +272,7 @@ Local optima dependent on how the problem was specified:
 ::::
 
 :::: {.column width=40%}
-![ ](./figs/clustering/agg1.png)
+![ ](./figs/clustering/agg1.png){fig-alt="Schematic of agglomerative clustering: initially each point is a cluster, then closest pairs are merged."}
 ::::
 
 :::
@@ -281,7 +281,7 @@ Local optima dependent on how the problem was specified:
 
 How should we define “closest” for clusters with multiple elements?
 
-![ ](./figs/clustering/agg2.png)
+![ ](./figs/clustering/agg2.png){fig-alt="Illustration of measuring distance between two clusters with multiple points."}
 
 ## Agglomerative Clustering
 
@@ -292,7 +292,7 @@ How should we define “closest” for clusters with multiple elements?
 	- Average of all pairs
 - Different choices create different clustering behaviors
 
-![ ](./figs/clustering/agg3.png)
+![ ](./figs/clustering/agg3.png){fig-alt="Comparison of single-link, complete-link, and average-link distance measures between clusters."}
 
 ## Agglomerative Clustering
 
@@ -303,11 +303,11 @@ How should we define “closest” for clusters with multiple elements?
 	- Average of all pairs
 - Different choices create different clustering behaviors
 
-![ ](./figs/clustering/agglo.png)
+![ ](./figs/clustering/agglo.png){fig-alt="Visual comparison of clustering results using single-link (closest pair) versus complete-link (farthest pair) criteria."}
 
 # Clustering Behavior
 
-![Mouse tumor data from Hastie et al.](./figs/clustering/clustbeh.png)
+![Mouse tumor data from Hastie et al.](./figs/clustering/clustbeh.png){fig-alt="Dendrogram showing the hierarchical clustering of mouse tumor data."}
 
 ## Agglomerative Clustering Questions
 
@@ -323,27 +323,27 @@ How should we define “closest” for clusters with multiple elements?
 - Some clusters may be “wider” than others
 - Distances can be deceiving!
 
-![ ](./figs/clustering/olap.svg)
+![ ](./figs/clustering/olap.svg){fig-alt="Diagram showing overlapping probability distributions, illustrating that clusters can overlap and hard assignments might be misleading."}
 
 ## Review
 
-![ ](./figs/clustering/review-title.webp)
+![ ](./figs/clustering/review-title.webp){fig-alt="Review section title slide."}
 
 ## 
 
-![ ](./figs/clustering/review-fig1.webp)
+![ ](./figs/clustering/review-fig1.webp){fig-alt="Review figure 1."}
 
 ## 
 
-![ ](./figs/clustering/review-fig2.webp)
+![ ](./figs/clustering/review-fig2.webp){fig-alt="Review figure 2."}
 
 ## 
 
-![ ](./figs/clustering/review-fig3.webp)
+![ ](./figs/clustering/review-fig3.webp){fig-alt="Review figure 3."}
 
 ## 
 
-![ ](./figs/clustering/review-fig4.webp)
+![ ](./figs/clustering/review-fig4.webp){fig-alt="Review figure 4."}
 
 # Implementation
 
@@ -366,7 +366,7 @@ How should we define “closest” for clusters with multiple elements?
 
 ## Fisher's iris dataset
 
-![https://en.wikipedia.org/wiki/Iris_flower_data_set](./figs/clustering/iris1.webp)
+![https://en.wikipedia.org/wiki/Iris_flower_data_set](./figs/clustering/iris1.webp){fig-alt="Photograph of Iris flowers (setosa, versicolor, virginica) used in the dataset."}
 
 ## K-means implementation
 
@@ -387,11 +387,11 @@ plt.scatter(X_pca[:, 0], X_pca[:, 1], c=labels)
 
 ## 
 
-![ ](./figs/clustering/iris2.svg)
+![ ](./figs/clustering/iris2.svg){fig-alt="PCA plot of the Iris dataset showing the results of K-means clustering. The points are colored by their assigned cluster (teal, purple, yellow) plotted against the first two principal components."}
 
 ## 
 
-![ ](./figs/clustering/iris3.svg)
+![ ](./figs/clustering/iris3.svg){fig-alt="PCA plot of the Iris dataset colored by the true species labels (setosa, versicolor, virginica). This allows comparison with the K-means clustering results."}
 
 # Review
 

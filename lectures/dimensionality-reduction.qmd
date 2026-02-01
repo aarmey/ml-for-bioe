@@ -77,7 +77,7 @@ $$
 
 ## Matrix Factorization
 
-![ ](./figs/dimred/mflayout.png)
+![ ](./figs/dimred/mflayout.png){fig-alt="Diagram illustrating matrix factorization X approx W H^T, showing the dimensions of the original matrix X and the factor matrices W and H^T."}
 
 Generalization of many methods (e.g., SVD, QR, CUR, Truncated SVD, etc.)
 
@@ -105,15 +105,15 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 
 ## Matrix factorization is also compression
 
-![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat.jpg){width=80%}
+![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat.jpg){width=80% fig-alt="Original image of a cat."}
 
 ## Matrix factorization is also compression
 
-![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat-3comp.jpg){width=80%}
+![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat-3comp.jpg){width=80% fig-alt="Compressed image of the cat using 3 components, showing significant quality loss."}
 
 ## Matrix factorization is also compression
 
-![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat-46comp.jpg){width=80%}
+![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat-46comp.jpg){width=80% fig-alt="Compressed image of the cat using 46 components, showing better quality reconstruction."}
 
 ::: {.notes}
 - This is about 1% of the original data size.
@@ -146,7 +146,7 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 - $k$th PC is orthogonal to all previous PCs
 - Reduce dimensionality while maintaining maximal variance
 
-![ ](./figs/dimred/pca.png)
+![ ](./figs/dimred/pca.png){fig-alt="Scatter plot of data points with arrows indicating the directions of the first and second principal components (PC1 and PC2)."}
 
 ::: {.notes}
 - Go through example
@@ -208,7 +208,7 @@ print(pca.explained_variance_ratio_)
 
 ## Separating flower species
 
-![ ](./figs/dimred/iris_pca.png){width=90%}
+![ ](./figs/dimred/iris_pca.png){width=90% fig-alt="PCA plot of the Iris dataset, showing separation of the three flower species in the first two principal components."}
 
 # Non-negative matrix factorization
 
@@ -216,19 +216,19 @@ What if we have data wherein effects always accumulate?
 
 ## Application: Mutational processes in cancer
 
-![Helleday et al, Nat Rev Gen, 2014](./figs/dimred/mutgen.jpg)
+![Helleday et al, Nat Rev Gen, 2014](./figs/dimred/mutgen.jpg){fig-alt="Diagram from Helleday et al (2014) illustrating mutational processes in cancer."}
 
 ## 
 
-![Helleday et al, Nat Rev Gen, 2014](./figs/dimred/mutproc.jpg)
+![Helleday et al, Nat Rev Gen, 2014](./figs/dimred/mutproc.jpg){fig-alt="Diagram from Helleday et al (2014) illustrating mutational processes."}
 
 ## 
 
-![Alexandrov et al, Cell Rep, 2013](./figs/dimred/sigA.jpg)
+![Alexandrov et al, Cell Rep, 2013](./figs/dimred/sigA.jpg){fig-alt="Figure from Alexandrov et al (2013) showing mutational signature A."}
 
 ## 
 
-![Alexandrov et al, Cell Rep, 2013](./figs/dimred/sigB.jpg)
+![Alexandrov et al, Cell Rep, 2013](./figs/dimred/sigB.jpg){fig-alt="Figure from Alexandrov et al (2013) showing mutational signature B."}
 
 ::: {.notes}
 - Also used in interpreting medical health records

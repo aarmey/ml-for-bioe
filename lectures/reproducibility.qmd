@@ -5,23 +5,23 @@ author: Aaron Meyer
 
 # Example - Genomics Annotations
 
-![ ](./figs/reproducibility/title.png)
+![ ](./figs/reproducibility/title.png){fig-alt="Title slide image for the Genomics Annotations example."}
 
 ## Example - Genomics Annotations
 
-![ ](./figs/reproducibility/fig1.png)
+![ ](./figs/reproducibility/fig1.png){fig-alt="Figure 1 of the Genomics Annotations example, illustrating initial data or concepts."}
 
 ## Example - Genomics Annotations
 
-![ ](./figs/reproducibility/fig2.png)
+![ ](./figs/reproducibility/fig2.png){fig-alt="Figure 2 of the Genomics Annotations example, showing further analysis or results."}
 
 ## Example - Genomics Annotations
 
-![ ](./figs/reproducibility/fig3.png)
+![ ](./figs/reproducibility/fig3.png){fig-alt="Figure 3 of the Genomics Annotations example, likely showing results or a comparison."}
 
 ## Example - Genomics Annotations
 
-![ ](./figs/reproducibility/fig4.png)
+![ ](./figs/reproducibility/fig4.png){fig-alt="Figure 4 of the Genomics Annotations example, concluding the analysis or showing final results."}
 
 # Bugs and Testing
 

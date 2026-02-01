@@ -26,7 +26,7 @@ author: Aaron Meyer (based on slides from Joyce Ho)
 
 ## Two views on how we interpret the world
 
-![https://xkcd.com/1132/](./figs/bayesian/frequentists_vs_bayesians.png){width=2in}
+![https://xkcd.com/1132/](./figs/bayesian/frequentists_vs_bayesians.png){width=2in fig-alt="XKCD comic comparing frequentist and Bayesian statisticians. The frequentist concludes the sun exploded because the probability of the result happening by chance is low. The Bayesian bets it hasn't."}
 
 ## Bayesian statistics derivation
 
@@ -60,7 +60,7 @@ $$L(\theta; D) = P(D\mid\theta) = \prod_m P(x_m \mid\theta)$$
 - Example: Likelihood for the sequence: H, H, T, H, H
 $$L(\theta; D) = \theta \theta (1-\theta)\theta\theta = \theta^4 (1-\theta)$$
 
-![ ](./figs/bayesian/ho5.svg)
+![ ](./figs/bayesian/ho5.svg){fig-alt="Plot of the likelihood function L(theta; D) = theta^4 * (1-theta) against theta. The curve peaks around theta = 0.8."}
 
 ::: {.notes}
 - Frequentist: for a fixed parameter, model the data generation process.
@@ -109,7 +109,7 @@ $$L(\theta; D) = \theta \theta (1-\theta)\theta\theta = \theta^4 (1-\theta)$$
 	- MLE estimate: $P(\theta) = \tfrac{4}{5} = 0.8$
 	- Bayesian prediction: $P(x_{M+1}=H\mid D) = \int\theta P(\theta\mid D)\; d\theta = \tfrac{5}{7}$
 
-![ ](./figs/bayesian/ho10.png)
+![ ](./figs/bayesian/ho10.png){fig-alt="Plot showing the posterior distribution (blue curve). A dashed green line marks the MLE estimate at 0.8, and a dashed red line marks the Bayesian prediction at approximately 0.71."}
 
 ## Bayesian inference and MLE
 

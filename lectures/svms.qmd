@@ -15,7 +15,7 @@ author: Aaron Meyer (adapted from slides by Martin Law)
 
 # Application
 
-![ ](./figs/svms/dicarlo-title.webp)
+![ ](./figs/svms/dicarlo-title.webp){fig-alt="Title graphic from DiCarlo et al. paper showing the study of Circulating Tumor Cells (CTCs)."}
 
 ## CTCs enable assessment of patient state and drug response
 
@@ -31,24 +31,24 @@ author: Aaron Meyer (adapted from slides by Martin Law)
 :::
 
 ::: {.column width="50%"}
-![Circulating tumor cells. Created by Fabi Fuu 76, Wikimedia Commons.](./figs/svms/ctcs.webp)
+![Circulating tumor cells. Created by Fabi Fuu 76, Wikimedia Commons.](./figs/svms/ctcs.webp){fig-alt="Illustration of Circulating Tumor Cells (CTCs) in the bloodstream."}
 :::
 
 ::::
 
 ## 
 
-![ ](./figs/svms/dicarlo-fig1.webp)
+![ ](./figs/svms/dicarlo-fig1.webp){fig-alt="Figure 1 from DiCarlo et al. showing the experimental setup or analysis pipeline for CTC assessment."}
 
 ## 
 
-![ ](./figs/svms/dicarlo-fig5.webp)
+![ ](./figs/svms/dicarlo-fig5.webp){fig-alt="Figure 5 from DiCarlo et al. showing results of the SVM classification or analysis."}
 
 # What is a *good* decision boundary?
 
 ## Consider a two-class, linearly separable classification problem
 
-![ ](./figs/svms/goodboundary.png){ width=50% }
+![ ](./figs/svms/goodboundary.png){ width=50% fig-alt="Plot showing two classes of data points separated by a decision boundary with a wide margin."}
 
 ::: {.notes}
 - Let's say we have this data. How do we draw the decision boundaries?
@@ -58,7 +58,7 @@ author: Aaron Meyer (adapted from slides by Martin Law)
 
 ## Examples Of Bad Decision Boundaries
 
-![ ](./figs/svms/badboundary.png)
+![ ](./figs/svms/badboundary.png){fig-alt="Plot showing two classes of data points separated by a decision boundary with a narrow margin, illustrating a poor boundary choice."}
 
 ::: {.notes}
 Which points most define where we should draw a boundary?
@@ -70,7 +70,7 @@ Which points most define where we should draw a boundary?
 - We should maximize the margin, $m = 2 / \lVert \mathbf{w} \rVert$
 - Distance between the origin and the line $\mathbf{w}^T\mathbf{x}=k$ is $k / \lVert \mathbf{w} \rVert$
 
-![ ](./figs/svms/findboundary.png){ width=60% }
+![ ](./figs/svms/findboundary.png){ width=60% fig-alt="Diagram illustrating the margin of a decision boundary, showing the distance to the nearest data points (support vectors)."}
 
 ## Finding The Decision Boundary
 
@@ -116,7 +116,7 @@ Which points most define where we should draw a boundary?
 
 ## A geometrical interpretation
 
-![ ](./figs/svms/ageomint.png){ width=70% }
+![ ](./figs/svms/ageomint.png){ width=70% fig-alt="Geometric interpretation of the Support Vector Machine optimization problem."}
 
 # Non-linearly-separable problems
 
@@ -127,7 +127,7 @@ What can we do when we **can't** draw a line that separates the two classes?
 - We allow “error” $\xi_i$ in classification; it is based on the output of the discriminant function $\mathbf{w}^T\mathbf{x} + b$
 - $\xi_i$ approximates the number of misclassified samples
 
-![ ](./figs/svms/nonsep.png){ width=70% }
+![ ](./figs/svms/nonsep.png){ width=70% fig-alt="Illustration of a non-linearly separable dataset where a soft margin is used, allowing some misclassification."}
 
 ::: {.notes}
 - We can just move the points!
@@ -189,7 +189,7 @@ Go over circle inside circle with transformation to polar coordinates.
 
 ## Transforming The Data
 
-![ ](./figs/svms/transdata.svg)
+![ ](./figs/svms/transdata.svg){fig-alt="Visualization of transforming data from a low-dimensional input space to a higher-dimensional feature space to make it linearly separable."}
 
 - Note that feature space is usually of higher dimensions in practice
 - Computation in the feature space can be costly because it is high dimensional
@@ -261,7 +261,7 @@ Go over circle inside circle with transformation to polar coordinates.
 
 ## Example of Non-Linear Transformation
 
-![ ](./figs/svms/discfun.png){width=70%}
+![ ](./figs/svms/discfun.png){width=70% fig-alt="Example showing how a linear decision boundary in feature space corresponds to a non-linear boundary in the original input space."}
 
 ## Justification of SVM
 

@@ -11,7 +11,7 @@ author: Aaron Meyer (based on slides from David Sontag)
 - Some clusters may be “wider” than others
 - Distances can be deceiving!
 
-![ ](./figs/gmms/gm2.svg)
+![ ](./figs/gmms/gm2.svg){fig-alt="Diagram showing overlapping clusters where hard assignments might be ambiguous."}
 
 ::: {.notes}
 If we know which points are in each cluster, the answer is easy! (mu, sigma)
@@ -49,7 +49,7 @@ Each data point is sampled from a **generative process**:
 1. Choose component i with probability $P(y=i)$
 2. Generate datapoint $N(m_i, \Sigma_i)$
 
-![ ](./figs/gmms/gm4.svg)
+![ ](./figs/gmms/gm4.svg){fig-alt="Diagram illustrating the generative process of a Gaussian Mixture Model: selecting a component and then sampling a data point from its distribution."}
 
 ## What model should we use?
 
@@ -77,7 +77,7 @@ $$P(X = x_j \mid Y = i) = N(x_j, \mu_i, \Sigma_i)$$
 ::::
 
 :::: {.column width=50%}
-![ ](./figs/gmms/gm6.webp)
+![ ](./figs/gmms/gm6.webp){fig-alt="Scatter plot of data exhibiting covariance and multiple peaks, suitable for Gaussian Mixture Models."}
 ::::
 
 :::
@@ -95,7 +95,7 @@ $\Sigma$ is the identity matrix
 ::::
 
 :::: {.column width=50%}
-![ ](./figs/gmms/gm7.webp)
+![ ](./figs/gmms/gm7.webp){fig-alt="Contour plot of a circular bivariate Gaussian distribution where the covariance matrix is the identity."}
 ::::
 
 :::
@@ -113,7 +113,7 @@ $X_i$ are independent and uncorrelated
 ::::
 
 :::: {.column width=50%}
-![ ](./figs/gmms/gm8.webp)
+![ ](./figs/gmms/gm8.webp){fig-alt="Contour plot of an axis-aligned elliptical bivariate Gaussian distribution where the covariance matrix is diagonal."}
 ::::
 
 :::
@@ -133,7 +133,7 @@ Eigenvalues specify the relative elongation
 ::::
 
 :::: {.column width=50%}
-![ ](./figs/gmms/gm9.webp)
+![ ](./figs/gmms/gm9.webp){fig-alt="Contour plot of a rotated elliptical bivariate Gaussian distribution with an arbitrary covariance matrix."}
 ::::
 
 :::
@@ -142,7 +142,7 @@ Eigenvalues specify the relative elongation
 
 $$P(X=\mathbf{x}_j) = \frac{1}{(2\pi)^{m/2} \|\Sigma\|^{1/2}} \exp\left[-\frac{1}{2}(\mathbf{x}_j - \boldsymbol{\mu})^T \Sigma^{-1} (\mathbf{x}_j - \boldsymbol{\mu})\right]$$
 
-![ ](./figs/gmms/gm10.webp)
+![ ](./figs/gmms/gm10.webp){fig-alt="Visual representation of how the covariance matrix determines the shape and orientation of the Gaussian distribution."}
 
 ::: {.notes}
 Note relation to PCA.
@@ -152,13 +152,13 @@ Note relation to PCA.
 
 Old Faithful Data Set
 
-![ ](./figs/gmms/gm11.webp)
+![ ](./figs/gmms/gm11.webp){fig-alt="Histogram or scatter plot of the Old Faithful dataset showing two distinct clusters."}
 
 ## Two distributions might fit the data better
 
 Old Faithful Data Set
 
-![ ](./figs/gmms/gm12.webp)
+![ ](./figs/gmms/gm12.webp){fig-alt="Old Faithful dataset with two Gaussian distributions superimposed, fitting the two modes of the data."}
 
 ## We can make _mixtures_ of distributions!
 
@@ -175,7 +175,7 @@ $$\sum_{k=1}^K \pi_k = 1$$
 ::::
 
 :::: {.column width=50%}
-![ ](./figs/gmms/gm13.webp)
+![ ](./figs/gmms/gm13.webp){fig-alt="Illustration of a mixture model combining multiple Gaussian distributions to approximate a complex data distribution."}
 ::::
 
 :::
@@ -188,19 +188,19 @@ $p(x\; is\; k) = \frac{\pi_k N(x|\mu_k, \Sigma_k)}{\sum_{k=1}^{N}}$
 
 Model data as mixture of multivariate Gaussians
 
-![ ](./figs/gmms/gm15.webp)
+![ ](./figs/gmms/gm15.webp){fig-alt="Visualisation of soft assignments in a Gaussian Mixture Model, where points have probabilities of belonging to each cluster."}
 
 ## Distribution mixtures eliminate hard assignments
 
 Model data as mixture of multivariate Gaussians
 
-![ ](./figs/gmms/gm16.webp)
+![ ](./figs/gmms/gm16.webp){fig-alt="Another visualization of Gaussian Mixture Model soft assignments."}
 
 ## Distribution mixtures eliminate hard assignments
 
 Model data as mixture of multivariate Gaussians
 
-![ ](./figs/gmms/gm17.webp)
+![ ](./figs/gmms/gm17.webp){fig-alt="Plot showing the posterior probability of each data point belonging to a specific Gaussian component."}
 
 Shown is the posterior probability that a point was generated from $i$th Gaussian: $Pr(Y = i \mid x)$
 
@@ -220,7 +220,7 @@ Sums over $x$ generated from the $k$'th Gaussian
 
 ## But what if unobserved data?
 
-![ ](./figs/gmms/gm19.webp)
+![ ](./figs/gmms/gm19.webp){fig-alt="Diagram representing the concept of unobserved or latent variables in the context of mixture models."}
 
 ## But what if unobserved data?
 
@@ -281,7 +281,7 @@ Consider:
 ::::
 
 :::: {.column width=50%}
-![ ](./figs/gmms/gm26.webp)
+![ ](./figs/gmms/gm26.webp){fig-alt="One-dimensional example of fitting two Gaussian means to data points."}
 ::::
 
 :::
@@ -322,7 +322,7 @@ $m$ is the number of training examples
 
 ## Animation of fitting
 
-![ ](./figs/gmms/demo.gif)
+![ ](./figs/gmms/demo.gif){fig-alt="Animation showing the Expectation-Maximization algorithm converging to fit a Gaussian Mixture Model to data."}
 
 
 ## EM for GMMs: only learning means

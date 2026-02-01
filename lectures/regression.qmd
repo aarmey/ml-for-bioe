@@ -399,7 +399,7 @@ plt.xlabel('Concentration [nM]')
 plt.ylabel('Binding')
 ~~~
 
-![ ](./figs/regression/bindingdata.png){width=2in}
+![ ](./figs/regression/bindingdata.png){width=2in fig-alt="Scatter plot of protein binding data versus concentration."}
 
 ::: {.notes}
 - Run this as a notebook.
@@ -426,7 +426,7 @@ plt.xlabel('Concentration [nM]')
 plt.ylabel('Binding')
 ~~~
 
-![ ](./figs/regression/bindingpred.png){width=2in}
+![ ](./figs/regression/bindingpred.png){width=2in fig-alt="Scatter plot of protein binding data versus concentration with a fitted single-site binding model curve."}
 
 ## NNLS Example
 
