@@ -2,6 +2,8 @@
 title: "Course outline - BE 175"
 ---
 
+<!-- TODO: Confirm the labs and due dates. -->
+
 ### Week 1, March 30–April 3
 
 <!-- YT, then ASM -->
@@ -32,16 +34,16 @@ title: "Course outline - BE 175"
 
 - Monday: Fitting & Regression Redux, Regularization ([slides](../lectures/regularization.html), [notes](../notes/regularization.html))
   - [Example Notebook](../examples/Regularization-Example.ipynb)
-- Wednesday: Dimensionality reduction - PCA and NMF ([slides](../lectures/dimensionality-reduction.html), [notes](../notes/dimensionality-reduction.html))
+- Wednesday: Dimensionality reduction - PCA & NMF ([slides](../lectures/dimensionality-reduction.html), [notes](../notes/dimensionality-reduction.html))
   - Example Notebook: [ipynb](../examples/PCA-NNMF.ipynb), [html](../examples/PCA-NNMF.html)
-- Lab: Reviewing dynamics
-- Submit project idea, due April 17th at 11:59 pm
+- Lab: Review material, discuss project ideas
+- Submit project idea, due April 18th at 11:59 pm
 
 ### Week 4, April 20–24
 
 <!-- YT -->
 
-- Monday: Finish PCA / NMF
+- Monday: Finish PCA & NMF
 - Wednesday: Partial Least Squares Regression ([slides](../lectures/plsr.html), [notes](../notes/plsr.html))
 - Lab: Review material
 
@@ -63,7 +65,7 @@ title: "Course outline - BE 175"
   - Due May 22nd at 11:59 pm
   - Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c)
 
-### Week 7, May 12 – 16
+### Week 7, May 12–16
 
 <!-- ASM -->
 
@@ -71,7 +73,7 @@ title: "Course outline - BE 175"
 - Wednesday: Reproducible computational workflows ([slides](../lectures/reproducibility.html), [notes](../notes/reproducibility.html))
 - Lab: Content review
   - Review autodifferentiation
-  - Discuss project plans
+  - Discuss project progress
 
 ### Week 8, May 18–22
 
@@ -86,7 +88,7 @@ title: "Course outline - BE 175"
 
 <!-- Add example notebook? -->
 
-### Week 9, May 25–29 <!-- Setup -->
+### Week 9, May 25–29
 
 <!-- ASM -->
 
@@ -102,6 +104,6 @@ title: "Course outline - BE 175"
 - Thursday: Project presentations
 - Lab: TBD
 
-### Finals Week, June 8–12 <!-- Setup -->
+### Finals Week, June 8–12
 
 - Final project due June 11th at 11:59 pm
