@@ -1,6 +1,6 @@
 ---
 title: "Introduction, statistics review"
-author: "Aaron Meyer"
+author: "Aaron Meyer & Yosuke Tanigawa"
 ---
 
 # Class overview
@@ -9,8 +9,8 @@ author: "Aaron Meyer"
 
 ### Lecture:
 
-- Mondays/Wednesdays, 10–11:50 am
-- Mong Learning Center
+- Mondays/Wednesdays, 8–9:50 am
+- Boelter 2760
 
 ### Lab
 
@@ -37,8 +37,12 @@ author: "Aaron Meyer"
 
 ### Prof. Meyer
 
-- Thursday, 9–9:50 am on Zoom
+- Thursday, 10–10:50 am in Engineering V 4121G
 - I will usually stick around after class and am happy to answer questions
+
+### Prof. Tanigawa
+
+- Tuesday, 10–10:50 am in Engineering V 5121E
 
 ### TAs
 
@@ -119,7 +123,7 @@ By the end of the course you will learn how to:
 - A list of papers and data repositories is provided on the website as suggestions.
 - Absolutely go find ideas that interest you!
 - More details to come.
-- First deadline will be in week 6 to pick a project topic.
+- First deadline will be in week 3 to pick a project topic.
 
 ::: {.notes}
 - Think about this now!
@@ -127,7 +131,7 @@ By the end of the course you will learn how to:
 
 ## Exams
 
-- We will have midterm exams on weeks 5 and 10.
+- We will have midterm exams on weeks 5 and 9.
 - You will have a final project in lieu of a final exam.
 
 ::: {.notes}
