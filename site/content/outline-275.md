@@ -84,6 +84,3 @@ title: "Course outline - BE 275"
 - Lecture: Project presentations
 - Lab: Further project implementation
 - Final Project, due Dec 11 at 11:59 pm (submit through project Github repository)
-
-<!-- - [Lecture 13: Hidden Markov Models](lectures/hmm.html)
--->
