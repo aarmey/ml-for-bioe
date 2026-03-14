@@ -26,6 +26,16 @@ author: "Aaron Meyer & Yosuke Tanigawa"
 - Mention review questions at the start of lecture.
 :::
 
+## Attendance
+
+- We expect students to come to the Lectures and Discussion sessions.
+- The lecture is recorded via BruinCast to accomondate personal circumstances.
+- However, if the attendance level is too low, we will stop releasing the video.
+
+::: {.notes}
+- We will share the lectures so long as attendance is over 80%.
+:::
+
 ## Textbook / Other Course Materials
 
 - There is no textbook for this course.
@@ -117,6 +127,13 @@ By the end of the course you will learn how to:
 - Cover Python, notebooks.
 :::
 
+### AI usage in Computational Labs
+
+- UCLA provides access to Generative AI (GenAI) tools
+	- https://dts.ucla.edu/initiatives/ai/available-tools
+- GenAI tools helps you perform the tasks you're familiar with, but mere reliance on it without critical assessment of their output may bloack your learning process
+- We will ask you to (1) **declar** the usage of those tools and (2) how did you **verify** the outputs in assignments
+
 ## Project
 
 - You will take data from a scientific paper, and implement a machine learning method using best practices.
@@ -179,8 +196,8 @@ Distinguish each of these.
 What we will cover spans a range of fields:
 
 - Engineering (the data)
-- Computational techniques (the algorithms)
 - Statistics (the model)
+- Computational techniques (the algorithms)
 
 ::: {.notes}
 - Makes this material challenging.
@@ -193,22 +210,40 @@ What we will cover spans a range of fields:
 ## Why do we need models to learn about the world?
 
 ::: {.notes}
+- Model provides a **formal language** that allows unifying efforts by multiple investigators and helps identify/focus on complex system's key parameters.
 - It may not be feasible for humans to learn on the scale / in the time alloted.
 - Model construction serves as goal posts. I.e. a well-specified target we can compare, share, etc.
-- For many tasks, machine learning can perform better than a human would.
+- For many tasks, machine learning can perform better than a human would once you specify a model.
 :::
 
 ## Why we need models - Can a biologist fix a radio?
 
 ![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz1.jpg){width=2in fig-alt="Photo of a radio."}
 
+::: {.notes}
+- A radio functions similarly to a signal transduction pathway.
+- ~100 various components (resistors, capacitors, and transistors vs. molecules)
+:::
+
 ## Why we need models - Can a biologist fix a radio?
 
 ![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz2.jpg){width=2in fig-alt="Photo of inside a radio."}
 
+::: {.notes}
+- Biologists' approach: (1) open functionally normal radios; (2) describe and classify components; and (3) remove a component at a time and assess its phenotypic consequence.
+- Can the information from this process fix a radio?
+- Limited insights into tunable components.
+:::
+
 ## Why we need models - Can a biologist fix a radio?
 
 ![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz3.png){width=2in fig-alt="Circuit diagram of a radio."}
+
+::: {.notes}
+- Engineers use standardized formal language.
+- Any engineer trained in electronics would unambiguously understand a diagram and discuss it with others.
+- Because the language is quantitative, it is suitable for quantitative analysis, including modeling
+:::
 
 ## Comparisons
 
@@ -219,6 +254,9 @@ What we will cover spans a range of fields:
 - Component-wise understanding
 	- Only provides basic characterization
 	- Leads to "context-dependent" function
+- Standardized formal language
+	- Anyone can unambiguously understand the system
+	- It enables quantitative analyses, including modeling
 
 ## Machine learning outperforms humans for some tasks
 
@@ -252,11 +290,31 @@ What we will cover spans a range of fields:
 
 ## Probability
 
+- Probability indicates the chance of an event within a wider set of outcomes.
+- $X$: random variable with possible outcomes $x \in \Omega$
+- **First axiom**: $p(x) \geq 0$
+- **Second axiom**: $\sum_{x}p(x) = 1$
+- **Third axiom**: $p(A \cup B) = p(A) + p(B)$ for mutually exclusive events $A$ and $B$.
+ 
 ::: {.notes}
-- Probability indicates the chance of an event within a wider set of outcomes
 - Also talk about if something is conditionally dependent/independent
 - What is integral?
 - What is limit as dx goes to 0?
+:::
+
+## Dice rolling example
+
+- Consider rolling a dice
+- Possible outcomes ($\Omega$) is $\{1, 2, 3, 4, 5, 6\}$
+	- They are mutually exclusive.
+- Let's verify the three axioms.
+	- $p(X = i) \geq 0$ for all $i \in \Omega$.
+	- $\sum_{i = 1}^6 p(X = i) = 1$.
+	- $p(X = i \cup X = j) = p(X = i) + p(X = j)$ if $i \neq j$.
+
+::: {.notes}
+- The modeling language allows us to focus on key parameters of the system.
+	- We don't care about the color or size of a dice.
 :::
 
 ## Coin toss example
@@ -288,17 +346,17 @@ We've already been talking about these! Distributions describe the range of prob
 
 ## Other Probabilities
 
+Joint probability
+~ In a multivariate probability space, the distribution for more than one variable. $p(X, Y)$.
+
 Conditional probability
-~ The measure of an event given that another event has occured.
+~ The measure of an event given that another event has occured. $p(X \mid Y) = p(X, Y)/p(Y)$.
 
 Marginal distribution
-~ The probability distribution regardless of other observations/factors.
-
-Joint probability
-~ In a multivariate probability space, the distribution for more than one variable.
+~ The probability distribution regardless of other observations/factors. $p(X) = \sum_{Y}p(X, Y)$.
 
 Complementary event
-~ The probability of an event not occuring.
+~ The probability of an event not occuring. $p(X^c) = 1 - p(X)$.
 
 ::: {.notes}
 - Plot out a joint probability
@@ -307,8 +365,10 @@ Complementary event
 
 ## Normal Distributions
 
-- $\mu$: center of the distribution
-- $\sigma$: standard deviation
+- Also known as Gaussian Distributions
+- Two model parameters
+	- $\mu$: center of the distribution
+	- $\sigma$: standard deviation
 - $\sigma^2$: variance
 
 $$f(x)={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}$$
@@ -339,17 +399,17 @@ You can normalize any normal distribution to the standard normal.
 Normal Distribution
 ~ Describes many naturally observed variables and has statistics mean and standard deviation.
 
-Exponential Distribution
-~ Describes the time between events in Poisson processes.
-
 Poisson
 ~ Stochastic process that counts events in some time frame.
+
+Exponential Distribution
+~ Describes the time between events in Poisson processes.
 
 Gamma
 ~ Used in Bayesian statistics, often for modeling waiting times.
 
 Bernoulli
-~ Like a coin flip. Binary outcome.
+~ Like a coin flip. Binary outcome. A special case of Binomial.
 
 Binomial
 ~ Describes the number of successes in a sequence of Bernoulli trials.
@@ -368,19 +428,27 @@ The moments of a distribution describe its shape: $$\mu_{n}=\int_{-\infty}^{\inf
 
 <https://gregorygundersen.com/blog/2020/04/11/moments/>
 
+::: {.notes}
+- For a standard normal distribution, Mean = 0, variance = 1, skewness = 0, kertosis = 3.
+:::
+
 # Sample statistics
 
 ## Sample statistics
 
-If we sampled a number of times ($n=3$, say) many times, we could build a **sampling** distribution of the statistics (e.g., one for the **sample** mean and one for the **sample** standard deviation).
+If we sampled a finite number of times (let's say **sample size** of $n=3$), we could build a **sampling** distribution of the statistics (e.g., one for the **sample** mean and one for the **sample** standard deviation).
 
 General properties of sampling distributions:
 
-1. The sampling distribution of a statistic often tends to be centered at the value of the population parameter estimated by the statistics
+1. The sampling distribution of a statistic *often* tends to be centered at the value of the population parameter estimated by the statistics
 2. The spread of the sampling distributions of many statistics *tends* to grow smaller as sample size $n$ increases
-3. As $n$ increases, sampling distributions tends towards normality. If a process has mean $\mu$ and standard deviation $\sigma$, them the sample mean ($\mu$) and the sample standard deviation ($\sigma / \sqrt{n}$)
+3. **Central Limit Theorem**: As $n$ increases, sampling distributions of the sample mean tends towards normality. $\bar{X} \approx \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)$
 
-## Sample statistics
+::: {.notes}
+- Unbiased estimates vs. biased estimates.
+:::
+
+## Sample statistics of the mean
 
 - This means that as $n$ increases, the better estimate $\mu_x$ is of $\mu$.
 	- Sample standard deviation is the standard deviation of the mean.
@@ -395,7 +463,7 @@ In hypothesis testing, we state a null hypothesis that we will test; if its like
 For example:
 
 - $H_0$: A particular set of points come from a normal distribution with mean $\mu$ and variance $\sigma$.
-- $H_0$: Two sets of observations were sampled from distributions with different means.
+- $H$: Two sets of observations were sampled from distributions with different means.
 
 When we do an experiment, we typically take a **sampling** of several observations, to be more certain of the result.
 
@@ -406,7 +474,7 @@ When we do an experiment, we typically take a **sampling** of several observatio
 
 ## T-distribution
 
-When $n$ is small use the t-distribution with $n-1$ degrees of freedom.
+The t-distribution with $n-1$ degrees of freedom is useful for comparing means when the sample size $n$ is small and the population variance is unknown.
 
 - $H_0$: Assume $\mu=\mu_0$ then calculate t. $$t = \frac{\overline{x} - \mu_0}{s/\sqrt{n}}$$
 	- Can think of $t$ designed to be $z/s$, where it’s sensitive to the magnitude of the difference to the alternate hypothesis and scaled to control for the spread.
