@@ -8,8 +8,8 @@ title: "Course outline - BE 175"
 
 <!-- YT, then ASM -->
 
-- Monday: Statistics review ([slides](../lectures/lecture1.html), [notes](../notes/lecture1.html))
-- Wednesday: Bayesian vs. frequentist approaches ([slides](../lectures/bayesian.html), [notes](../notes/bayesian.html))
+- Tuesday: Statistics review ([slides](../lectures/lecture1.html), [notes](../notes/lecture1.html))
+- Thursday: Bayesian vs. frequentist approaches ([slides](../lectures/bayesian.html), [notes](../notes/bayesian.html))
 - Lab: Programming primer
   - Due April 10th at 11:59 pm
   - Recommended: Git & Github Fundamentals Tutorial
@@ -20,9 +20,9 @@ title: "Course outline - BE 175"
 
 <!-- YT, then ASM -->
 
-- Monday: Fitting & Regression ([slides](../lectures/regression.html), [notes](../notes/regression.html))
+- Tuesday: Fitting & Regression ([slides](../lectures/regression.html), [notes](../notes/regression.html))
   - [Example Notebook](../examples/OLS-Example.ipynb)
-- Wednesday: Does my model work? Crossvalidation, bootstrap, and friends ([slides](../lectures/model-validation.html), [notes](../notes/model-validation.html))
+- Thursday: Does my model work? Crossvalidation, bootstrap, and friends ([slides](../lectures/model-validation.html), [notes](../notes/model-validation.html))
   - [Example Notebook](../examples/CrossVal-Example.ipynb)
 - Lab: Statistics lab
   - Due April 24th at 11:59 pm
@@ -32,9 +32,9 @@ title: "Course outline - BE 175"
 
 <!-- YT -->
 
-- Monday: Fitting & Regression Redux, Regularization ([slides](../lectures/regularization.html), [notes](../notes/regularization.html))
+- Tuesday: Fitting & Regression Redux, Regularization ([slides](../lectures/regularization.html), [notes](../notes/regularization.html))
   - [Example Notebook](../examples/Regularization-Example.ipynb)
-- Wednesday: Dimensionality reduction - PCA & NMF ([slides](../lectures/dimensionality-reduction.html), [notes](../notes/dimensionality-reduction.html))
+- Thursday: Dimensionality reduction - PCA & NMF ([slides](../lectures/dimensionality-reduction.html), [notes](../notes/dimensionality-reduction.html))
   - Example Notebook: [ipynb](../examples/PCA-NNMF.ipynb), [html](../examples/PCA-NNMF.html)
 - Lab: Review material, discuss project ideas
 - Submit project idea, due April 18th at 11:59 pm
@@ -43,24 +43,24 @@ title: "Course outline - BE 175"
 
 <!-- YT -->
 
-- Monday: Finish PCA & NMF
-- Wednesday: Partial Least Squares Regression ([slides](../lectures/plsr.html), [notes](../notes/plsr.html))
+- Tuesday: Finish PCA & NMF
+- Thursday: Partial Least Squares Regression ([slides](../lectures/plsr.html), [notes](../notes/plsr.html))
 - Lab: Review material
 
 ### Week 5, April 27–May 1
 
 <!-- YT -->
 
-- Monday: Finish PLSR
-- Wednesday: Exam 1
+- Tuesday: Finish PLSR
+- Thursday: Exam 1
 - Lab: Project progress check-in
 
 ### Week 6, May 4–8
 
 <!-- ASM -->
 
-- Monday: Dynamical models ([slides](../lectures/dynamics.html), [notes](../notes/dynamics.html))
-- Wednesday: Dynamical models continued
+- Tuesday: Dynamical models ([slides](../lectures/dynamics.html), [notes](../notes/dynamics.html))
+- Thursday: Dynamical models continued
 - Lab: PCA/PLSR lab
   - Due May 22nd at 11:59 pm
   - Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c)
@@ -69,8 +69,8 @@ title: "Course outline - BE 175"
 
 <!-- ASM -->
 
-- Monday: Autodifferentiation
-- Wednesday: Reproducible computational workflows ([slides](../lectures/reproducibility.html), [notes](../notes/reproducibility.html))
+- Tuesday: Autodifferentiation ([slides](../lectures/autodifferentiation.html), [notes](../notes/autodifferentiation.html))
+- Thursday: Reproducible computational workflows ([slides](../lectures/reproducibility.html), [notes](../notes/reproducibility.html))
 - Lab: Content review
   - Review autodifferentiation
   - Discuss project progress
@@ -79,8 +79,8 @@ title: "Course outline - BE 175"
 
 <!-- ASM, YT away -->
 
-- Monday: Double descent
-- Wednesday: Neural networks
+- Tuesday: Double descent
+- Thursday: Neural networks
 - Lab: Neural network lab
   - Review TBD
   - Due June 5th at 11:59 pm
