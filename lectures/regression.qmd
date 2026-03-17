@@ -22,7 +22,7 @@ The proposal should be less than one page and describe the following items:
 - Why the topic you chose is interesting
 - Demonstrate that your project fits the criteria above
 - What overall approach do you plan to take for the project and why
-- Demonstrate that your project can be finished within a month
+- Demonstrate that your project can be finished within a month, including statement of data availability
 - Estimate the difficulty of your project
 
 **We are available to discuss your ideas whenever you are ready, and you should discuss your idea with us prior to submitting your proposal.**
@@ -38,11 +38,9 @@ The proposal should be less than one page and describe the following items:
 - Where do *de novo* mutations arise?
 - Are there factors that influence the rate of *de novo* mutations from one generation to another?
 
-::: {.notes}
-- Use David Q as an example of _de novo_ mutations.
-:::
-
 ## Application: Paternal *de novo* mutations
+
+Meiosis of a cell with 2n=4 chromosomes.
 
 ![By Rdbickel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49599354](./figs/regression/meiosis.svg){fig-alt="Schematic of cells undergoing meiosis." height=500}
 
@@ -56,7 +54,29 @@ What is different about paternal vs. maternal meiosis?
 
 ## Application: Paternal *de novo* mutations
 
+Table. *De novo* mutations observed with parental origin assigned (Kong *et al*, *Nature*, 2012).
+
+| Trio   | Father's age | Mother's age | Paternal chromosome | Maternal chromosome | Combined |
+|--------|------------------:|------------------:|--------------------:|--------------------:|---------:|
+| Trio 1 | 21.8 | 19.3 | 39 | 9  | 48 |
+| Trio 2 | 22.7 | 19.8 | 43 | 10 | 53 |
+| Trio 3 | 25.0 | 22.1 | 51 | 11 | 62 |
+| Trio 4 | 36.2 | 32.2 | 53 | 26 | 79 |
+| Trio 5 | 40.0 | 39.1 | 91 | 15 | 106 |
+| Mean   | 29.1 | 26.5 | 55.4 | 14.2 | 69.6 |
+| s.d.   | 8.4  | 8.8  | 20.7 | 7.0  | 23.5 |
+
+::: {.notes}
+The data are from five trios in which the proband also had a sequenced child (a third generation).
+:::
+
+## Application: Paternal *de novo* mutations
+
 ![Kong *et al*, *Nature*, 2012](./figs/regression/decode2.jpg){fig-alt="Figure from Kong et al showing a significant correlation between father age and number of de novo mutations." width=2in}
+
+::: {.notes}
+Fig 2. The number of de novo mutations called is plotted against father’s age at conception of child for the 78 trios. The solid black line denotes the linear fit. The dashed red curve is based on an exponential model fitted to the combined mutation counts. The dashed blue curve corresponds to a model in which maternal mutations are assumed to have a constant rate of 14.2 and paternal mutations are assumed to increase exponentially with father’s age.
+:::
 
 # Fitting
 
@@ -81,7 +101,7 @@ The key factor is how one defines the problem—i.e., how the distribution is de
 - Any fitting result is highly dependent upon the correctness of the model
 - Successful fitting requires concordance between the model and data
 	- Too little data and a model is underdetermined
-  - Unaccounted for variables can lead to systematic error
+	- Unaccounted for variables can lead to systematic error
 
 > Since all models are wrong the scientist cannot obtain a "correct" one by excessive elaboration. On the contrary following William of Occam he should seek an economical description of natural phenomena. Just as the ability to devise simple but evocative models is the signature of the great scientist so overelaboration and overparameterization is often the mark of mediocrity. ~George Box, *J American Stat Assoc*, 1976
 
@@ -103,7 +123,7 @@ Walk through model, what the model is, etc.
 
 # Ordinary Least Squares
 
-## Ordinary Least Squares
+## Ordinary Least Squares (OLS)
 
 - Probably the most widely used estimation technique.
 - Based on extending the maximum likelihood estimate of a distribution.
@@ -122,7 +142,7 @@ If we have a vector of $n$ observations $\mathbf{y}$, our predictions are going 
 
 $$ \mathbf{y} = \mathbf{X} \beta + \mathbf{\epsilon} $$
 
-Here $\mathbf{X}$ is a $n \times p$ structure matrix, $\beta$ is a p-dimensional vector with the parameters of our model, and $\mathbf{\epsilon} = \left( \epsilon_1, \epsilon_2, ... \epsilon_n \right)'$ is the noise present in the model.
+Here $\mathbf{X}$ is a $n \times p$ structure matrix, $\beta$ is a p-dimensional vector with the parameters of our model, and $\mathbf{\epsilon} = \left( \epsilon_1, \epsilon_2, ... \epsilon_n \right)^\top$ is the noise present in the model.
 
 ## Ordinary Least Squares
 
@@ -133,7 +153,8 @@ $\mathbf{\epsilon}$ is usually handled to be uncorrelated random components with
 $$ \mathbf{\epsilon} \sim \left( \mathbf{0}, \sigma^2 \mathbf{I} \right) $$
 
 ::: {.notes}
-Graph this
+- Graph this
+- Discuss the source of noise. What will happen if there is non-Gaussian component unaccounted?
 :::
 
 ## Ordinary Least Squares
@@ -146,18 +167,36 @@ $$ \mathbf{y} = \mathbf{X} \beta + \mathbf{\epsilon} $$
 
 would be:
 
-$$ \mathbf{y} = m_1 \mathbf{x_1} + m_2 \mathbf{x_2} \ldots + b + \mathbf{\epsilon} $$
+$$ \mathbf{y} = m_1 \mathbf{x_1} + m_2 \mathbf{x_2} \ldots + \beta_0 + \mathbf{\epsilon} $$
 
 ::: {.notes}
 - Go through why you would need to transform the data
 - Write out on the board how this corresponds to shifted distributions
 :::
 
+### Including the intercept term
+
+Consider including the intercept $\beta_0$ by setting $\beta = 
+\left(\beta_0 \beta \right)^\top$.
+
+$$ \mathbf{X} \beta =
+(1 \; \mathbf{x})
+\begin{pmatrix}
+\beta_0 \\
+\beta
+\end{pmatrix}
+$$
+
+Now, the standard notation considers the intercept effects.
+
+$$ \mathbf{y} = \mathbf{X} \beta + \mathbf{\epsilon} $$
+
+
 ## Ordinary Least Squares
 
 ### Single variable case
 
-$$ \mathbf{y} = m \mathbf{x} + b + \mathbf{\epsilon} $$
+$$ \mathbf{y} = m \mathbf{x} + \beta_0 + \mathbf{\epsilon} $$
 
 The values of $m$ and $b$ that minimize the distance from $y$ are optimal, and they don't depend on $\epsilon$.
 
@@ -191,7 +230,7 @@ $$ \beta = \left(X^T X \right)^{-1} X^T y $$
 
 $\hat{\beta}$ is the maximum likelihood estimate of $\beta$, and has covariance $\sigma^2 \mathbf{S}^{-1}$:
 
-$$\hat{\beta}\sim\left(\beta,\sigma^2 \mathbf{S}^{-1}\right)$$
+$$\hat{\beta}\sim{}N\left(\beta,\sigma^2 \mathbf{S}^{-1}\right)$$
 
 In the normal case (when our assumptions hold), $\hat{\beta}$ is an *unbiased estimator* of $\beta$. Making these calculations tractable for larger data sets used to be a challenge but is now trivial.
 
@@ -201,15 +240,15 @@ In the normal case (when our assumptions hold), $\hat{\beta}$ is an *unbiased es
 	- So just stdev of residuals
 :::
 
-## Ordinary Least Squares
+## Ordinary Least Squares method gives the MLE estimate
 
 ### Likelihood of Model
 
-$$ \frac{-n}{2} \log(\sigma^{2}) - \frac{1}{2 \sigma^{2}} \sum_{i=1}^{n} (y_{i}-x_{i} \beta)^{2} $$
+$$ \log L(\beta,\sigma^{2}) = -\frac{n}{2} \log(2\pi\sigma^{2}) - \frac{1}{2 \sigma^{2}} \sum_{i=1}^{n} (y_{i}-x_{i}^\top \beta)^{2} $$
 
 therefore, only considering $\beta$ (the only factor that influences predictions), we need to minimize:
 
-$$ \sum_{i=1}^{n} (y_{i}-x_{i} \beta)^{2} $$
+$$ \sum_{i=1}^{n} (y_{i}-x_{i}^\top \beta)^{2} $$
 
 *Exactly how we calculate $\beta$!*
 
@@ -222,7 +261,7 @@ $$ \ln f(x | \mu, \sigma^2) = -\frac{1}{2}\ln(2\pi\sigma^2) - \frac{(x-\mu)^2}{2
 
 $$ \ln L(\mu, \sigma^2 | x_1, x_2, \ldots, x_n) = -\frac{n}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2}\sum_{i=1}^{n}(x_i-\mu)^2 $$
 
-$$ \ln L(\beta, \sigma^2 \mid y) = -\frac{n}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2} (y - X\beta)'(y - X\beta). $$
+$$ \ln L(\beta, \sigma^2 \mid y) = -\frac{n}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2} (y - X\beta)^\top(y - X\beta). $$
 :::
 
 ## Ordinary Least Squares
@@ -293,6 +332,7 @@ ax.set_ylabel('Predicted')
 
 ::: {.notes}
 - Run this as a notebook.
+	- https://colab.research.google.com/drive/1PgyReaN48dMhP-qZ4kCQ4EQyXNZ-iXyM?usp=sharing
 - Play with options.
 :::
 
@@ -415,6 +455,10 @@ We can predict the amount of binding we'd observe from a single-site binding mod
 def klotz1(k1, lig):
 	return (k1*lig)/(1 + k1*lig)
 ~~~
+
+::: {.notes}
+- Klotz binding model
+:::
 
 ## NNLS Example
 
