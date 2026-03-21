@@ -3,6 +3,12 @@ toc-title: "Outline"
 toc-depth: 1
 format-links: false
 
+filters:
+  - webp-to-png.lua
+
+project:
+  post-render: ./webp-cleanup-png.sh
+
 format:
   typst:
     mainfont: "Helvetica"
