@@ -50,6 +50,12 @@ What is different about paternal vs. maternal meiosis?
 
 ## Application: Paternal *de novo* mutations
 
+![Kong *et al*, *Nature*, 2012](./figs/regression/decode0.png){fig-alt="Title and abstract from Kong et al." width=3in}
+
+- How do you infer the relationship between the parental age and the rate of *de novo* mutations?
+
+## Application: Paternal *de novo* mutations
+
 ![Kong *et al*, *Nature*, 2012](./figs/regression/decode1.jpg){fig-alt="Figure from Kong et al showing the family tree of several sample collections." width=2in}
 
 ## Application: Paternal *de novo* mutations
