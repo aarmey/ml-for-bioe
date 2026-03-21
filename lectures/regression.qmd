@@ -22,7 +22,7 @@ The proposal should be less than one page and describe the following items:
 - Why the topic you chose is interesting
 - Demonstrate that your project fits the criteria above
 - What overall approach do you plan to take for the project and why
-- Demonstrate that your project can be finished within a month, including statement of data availability
+- Demonstrate that your project can be finished within a month, including statement of **data availability**
 - Estimate the difficulty of your project
 
 **We are available to discuss your ideas whenever you are ready, and you should discuss your idea with us prior to submitting your proposal.**
@@ -117,7 +117,7 @@ The key factor is how one defines the problem—i.e., how the distribution is de
 
 ## Any Fitting Depends on Model Correctness
 
-![ ](./figs/regression/garbage.svg){fig-alt="A chart showing a spurious correlation between two random measurements over time." width=2in}
+![Tyler Vigen. Spurious correlation.](./figs/regression/garbage2.svg){fig-alt="A chart showing a spurious correlation between two random measurements over time." width=2in}
 
 Fitting does not happen in a vacuum!
 
@@ -148,7 +148,7 @@ If we have a vector of $n$ observations $\mathbf{y}$, our predictions are going 
 
 $$ \mathbf{y} = \mathbf{X} \beta + \mathbf{\epsilon} $$
 
-Here $\mathbf{X}$ is a $n \times p$ structure matrix, $\beta$ is a p-dimensional vector with the parameters of our model, and $\mathbf{\epsilon} = \left( \epsilon_1, \epsilon_2, ... \epsilon_n \right)^\top$ is the noise present in the model.
+Here $\mathbf{X}$ is a $n \times p$ structure matrix, $\beta$ is a p-dimensional vector with the parameters of our model (a.k.a. regression coefficients), and $\mathbf{\epsilon} = \left( \epsilon_1, \epsilon_2, ... \epsilon_n \right)^\top$ is the noise present in the model.
 
 ## Ordinary Least Squares
 
@@ -193,7 +193,7 @@ $$ \mathbf{X} \beta =
 \end{pmatrix}
 $$
 
-Now, the standard notation considers the intercept effects.
+Now, the standard notation considers the intercept.
 
 $$ \mathbf{y} = \mathbf{X} \beta + \mathbf{\epsilon} $$
 
@@ -358,7 +358,7 @@ Our input-output relationship is:
 
 $$ \mathbf{y} = f(\mathbf{X}, \beta) + \mathbf{\epsilon} $$
 
-for the same construction of $\mathbf{\epsilon}$.
+for the same construction of $\mathbf{\epsilon} \sim \left( \mathbf{0}, \sigma^2 \mathbf{I} \right)$.
 
 ::: {.notes}
 - Independent points
@@ -459,11 +459,32 @@ We can predict the amount of binding we'd observe from a single-site binding mod
 
 ~~~python
 def klotz1(k1, lig):
+    """
+    Calculates the fractional binding for a single-site receptor model.
+    
+    Args:
+        k1: The association constant. Higher values indicate stronger binding affinity.
+        lig: The concentration of the free ligand.
+		
+    Returns:
+	    The predicted fractional occupancy (Y). 
+		This will be a value strictly between 0.0 (no binding) and 1.0 (100% saturation).
+    """
 	return (k1*lig)/(1 + k1*lig)
 ~~~
 
 ::: {.notes}
-- Klotz binding model
+Klotz binding model
+- R + L <-- --> RL, $k = [RL]/[R][L]$
+
+$$
+\begin{aligned}
+Y &= \frac{[RL]}{[R]_\textrm{tot}} \\
+  &= \frac{[RL]}{[R] + [RL]} \\
+  &= \frac{k[R][L]}{[R] + k[R][L]} \\
+  &= \frac{k[L]}{1 + k[L]}
+\end{aligned}
+$$
 :::
 
 ## NNLS Example
@@ -526,10 +547,33 @@ sp.optimize.least_squares(ls_obj_k1, 1., args=(X,Y))
 
 - In many cases linear regression can be inappropriate
 	- E.g. A measurement that is Poisson distributed
+	- E.g. A binary outcome measurements
 
 ::: {.notes}
 - CLT works to your benefit here.
 :::
+
+### Logistic regression
+
+Commonly used to model binary outcomes.
+
+$$
+p(x) = \frac{1}{1 + \exp\left(-\left(\beta_0 + \beta^{\top}x\right)\right)}
+$$
+
+::: {.notes}
+Connection with the Klotz binding model
+
+$$
+\begin{aligned}
+Y &= \frac{k[L]}{1 + k[L]} \\
+  &= \frac{1}{1 + (k[L])^{-1}} \\
+  &= \frac{1}{1 + \left( \exp(\ln(k)) \cdot \exp(\ln([L])) \right)^{-1}} \\
+  &= \frac{1}{1 + \exp \left( -\left( \ln(k) + \ln([L]) \right) \right)}
+\end{aligned}
+$$
+:::
+
 
 # Review
 
