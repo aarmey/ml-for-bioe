@@ -17,9 +17,9 @@ author: Aaron Meyer (based on slides from Rob Tibshirani)
 
 # The Bias-Variance Tradeoff
 
-## Estimating β
+## Estimating $\boldsymbol{\beta}$
 
-- As usual, we assume the model: $$y=f(\mathbf{z})+\epsilon, \epsilon\sim \mathcal{N}(0,\sigma^2)$$
+- As usual, we assume the model: $$y=f(\mathbf{z})+\epsilon, \epsilon\sim \mathcal{N}(0,\sigma^2I)$$
 - In regression analysis, our major goal is to come up with some good regression function $$\hat{f}(\mathbf{z}) = \mathbf{z}^\intercal \hat{\beta}$$
 - So far, we’ve been dealing with $\hat{\beta}^{ls}$, or the least squares solution:
 	- $\hat{\beta}^{ls}$ has well known properties (e.g., Gauss-Markov, ML)
@@ -29,20 +29,51 @@ author: Aaron Meyer (based on slides from Rob Tibshirani)
 
 - Suppose we have an estimator $$\hat{f}(\mathbf{z}) = \mathbf{z}^\intercal \hat{\beta}$$
 - To see if this is a good candidate, we can ask ourselves two questions:
-	1. Is $\hat{\beta}$ close to the true $\beta$?
+	1. Is $\hat{\boldsymbol\beta}$ close to the true $\boldsymbol{\beta}$?
 	2. Will $\hat{f}(\mathbf{z})$ fit future observations well?
 - These might have very different outcomes!!
 
-## Is $\hat{\boldsymbol\beta}$ close to the true β?
+## Is $\hat{\boldsymbol\beta}$ close to the true $\boldsymbol{\beta}$?
 
 - To answer this question, we might consider the **mean squared error** of our estimate $\hat{\boldsymbol\beta}$:
-	- i.e., consider squared distance of $\hat{\boldsymbol\beta}$ to the true $\boldsymbol\beta$: $$MSE(\hat{\boldsymbol\beta}) = \mathop{\mathbb{E}}\left[\lVert \hat{\boldsymbol\beta} - \boldsymbol\beta \rVert^2\right] = \mathop{\mathbb{E}}[(\hat{\boldsymbol\beta} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta} - \boldsymbol\beta)]$$
-- **Example:** In least squares (LS), we know that: $$\mathop{\mathbb{E}}[(\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)] = \sigma^2 \mathrm{tr}[(\mathbf{Z}^T \mathbf{Z})^{-1}]$$
+	- i.e., consider squared distance of $\hat{\boldsymbol\beta}$ to the true $\boldsymbol\beta$: $$\textrm{MSE}(\hat{\boldsymbol\beta}) = \mathop{\mathbb{E}}\left[\lVert \hat{\boldsymbol\beta} - \boldsymbol\beta \rVert^2\right] = \mathop{\mathbb{E}}[(\hat{\boldsymbol\beta} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta} - \boldsymbol\beta)]$$
+- **Example:** In least squares (LS), we know that: $$\mathrm{MSE}(\hat{\boldsymbol\beta}^{ls}) = \mathop{\mathbb{E}}[(\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)^\intercal (\hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta)] = \sigma^2 \mathrm{tr}[(\mathbf{Z}^T \mathbf{Z})^{-1}]$$
+
+## Mean squared error of the least squares fit
+
+$$\mathrm{MSE}(\hat{\boldsymbol\beta}^{ls}) = \sigma^2 \mathrm{tr}[(\mathbf{Z}^T \mathbf{Z})^{-1}]$$
+
+Interpretation:
+
+- $\sigma^2$: the magnitude of noise in the linear model
+- $(\mathbf{Z}^T \mathbf{Z})^{-1}$: Sensitivity to the design matrix. Poorly conditioned or highly correlated predictors will lead to large MSE
+- $\mathrm{tr}[(\mathbf{Z}^T \mathbf{Z})^{-1}]$: Total variance across all coefficients
+
+::: {.notes}
+Recall the linear model: $\mathbf{y} = \mathbf{Z}\boldsymbol\beta + \boldsymbol\epsilon, \quad \boldsymbol\epsilon \sim \mathcal{N}(0, \sigma^2 \mathbf{I})$
+
+The least squares estimator is: $\hat{\boldsymbol\beta}^{ls} = (\mathbf{Z}^T \mathbf{Z})^{-1} \mathbf{Z}^T \mathbf{y}$
+
+Under these assumptions, the estimator has distribution:
+$$\hat{\boldsymbol\beta}^{ls} \sim \mathcal{N}\left(\boldsymbol\beta,\; \sigma^2 (\mathbf{Z}^T \mathbf{Z})^{-1}\right)$$
+
+
+We define the mean squared error: $\mathrm{MSE}(\hat{\boldsymbol\beta}) = \mathbb{E}\left[\|\hat{\boldsymbol\beta} - \boldsymbol\beta\|^2\right]$
+
+Let $\mathbf{x} = \hat{\boldsymbol\beta}^{ls} - \boldsymbol\beta$. Since the estimator is unbiased, $\mathbb{E}[\mathbf{x}] = 0$, and $\mathrm{MSE} = \mathbb{E}[\mathbf{x}^T \mathbf{x}]$
+
+A useful identity for zero-mean vectors:
+$$\mathbb{E}[\mathbf{x}^T \mathbf{x}] = \mathrm{tr}(\mathrm{Cov}(\mathbf{x}))$$
+
+Applying this:
+$$\mathrm{MSE}(\hat{\boldsymbol\beta}^{ls}) = \mathrm{tr}\left(\mathrm{Cov}(\hat{\boldsymbol\beta}^{ls})\right)
+= \sigma^2 \mathrm{tr}\left((\mathbf{Z}^T \mathbf{Z})^{-1}\right)$$
+:::
 
 ## Will $\hat{f}(z)$ fit future observations well?
 
 - Just because $\hat{f}(z)$ fits our data well, this doesn't mean that it will be a good fit to new data
-- In fact, suppose that we take new measurements $y_i'$ at the same $\mathbf{z}_i$’s: $$(\mathbf{z}_1,\mathbf{y}_1'),(\mathbf{z}_2,\mathbf{y}_2'),...,(\mathbf{z}_n,\mathbf{y}_n')$$
+- In fact, suppose that we take new measurements $y_i'$ at the same $\mathbf{z}_i$’s: $$(\mathbf{z}_1,\mathbf{y}_1'),(\mathbf{z}_2,\mathbf{y}_2'), \ldots ,(\mathbf{z}_n,\mathbf{y}_n')$$
 - So if $\hat{f}(\cdot)$ is a good model, then $\hat{f}(\mathbf{z}_i)$ should also be close to the new target $y_i'$
 - This is the notion of **prediction error** (PE)
 
@@ -54,15 +85,69 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 
 - So good estimators should, on average have, small prediction errors
 - Let’s consider the PE at a particular target point $\mathbf{z}_0$:
-	- $PE(\mathbf{z}_0) = \sigma_{\epsilon}^2 + Bias^2(\hat{f}(\mathbf{z}_0)) + Var(\hat{f}(\mathbf{z}_0))$
-	- Not going to derive, but comes directly from previous definitions
+	- $\mathrm{PE}(\mathbf{z}_0) = \sigma_{\epsilon}^2 + \textrm{Bias}^2(\hat{f}(\mathbf{z}_0)) + \textrm{Var}(\hat{f}(\mathbf{z}_0))$
+	- where, the bias and variance 
+		- $\textrm{Bias}(\hat{f}(\mathbf{z}_0)) = \mathbb{E}[\hat{f}(\mathbf{z}_0)] - f(\mathbf{z}_0)$
+		- $\textrm{Var}(\hat{f}(\mathbf{z}_0)) = \mathbb{E}\left[(\hat{f}(\mathbf{z}_0) - \mathbb{E}[\hat{f}(\mathbf{z}_0)])^2\right]$
+	- Not going to derive, but comes directly from the definitions
 - Such a decomposition is known as the **bias-variance tradeoff**
 	- As model becomes more complex (more terms included), local structure/curvature is picked up
 	- But coefficient estimates suffer from high variance as more terms are included in the model
-- So introducing a little bias in our estimate for **β** ***might*** lead to a large decrease in variance, and hence a substantial decrease in PE
+- So introducing a little bias in our estimate for **$\boldsymbol{\beta}$** ***might*** lead to a large decrease in variance, and hence a substantial decrease in PE
 
 ::: {.notes}
-- Bias is squared, so a small amount is ok.
+### Bias-variance decomposition and Prediction Error (PE)
+
+We start from the regression model:
+
+$$
+y = f(\mathbf{z}) + \epsilon, \quad \epsilon \sim (0, \sigma^2I)
+$$
+
+Our goal is to understand how well a fitted model $\hat{f}$ will predict new data.
+
+Let $D$ denote the training data used to fit the model. At a new point $\mathbf{z}_0$,
+
+$$
+\mathrm{PE}(\mathbf{z}_0) = \mathbb{E}_{D,\epsilon}\left[(y_0 - \hat{f}_D(\mathbf{z}_0))^2\right].
+$$
+
+Since $y_0 = f(\mathbf{z}_0) + \epsilon$, we have $\mathrm{PE}(\mathbf{z}_0) = \mathbb{E}_{D,\epsilon}\left[(f(\mathbf{z}_0) + \epsilon - \hat{f}_D(\mathbf{z}_0))^2\right].$
+
+Expanding the square gives
+
+$$
+\mathrm{PE}(\mathbf{z}_0)
+= \mathbb{E}_{D,\epsilon}\left[(f(\mathbf{z}_0) - \hat{f}_D(\mathbf{z}_0))^2\right]
++ \mathbb{E}[\epsilon^2]
++ 2\mathbb{E}_{D,\epsilon}\left[\epsilon \bigl(f(\mathbf{z}_0) - \hat{f}_D(\mathbf{z}_0)\bigr)\right].
+$$
+
+The cross term is zero because $\epsilon$ has mean zero and is independent of the training data, so $\mathbb{E}_{D,\epsilon}\left[\epsilon \bigl(f(\mathbf{z}_0) - \hat{f}_D(\mathbf{z}_0)\bigr)\right] = 0.$
+
+Therefore,
+
+$$
+\mathrm{PE}(\mathbf{z}_0)
+= \sigma^2 + \mathbb{E}_D\left[(f(\mathbf{z}_0) - \hat{f}_D(\mathbf{z}_0))^2\right].
+$$
+
+Define
+
+- $\mathrm{Bias}(\hat{f}(\mathbf{z}_0)) = \mathbb{E}_D[\hat{f}_D(\mathbf{z}_0)] - f(\mathbf{z}_0)$, and
+- $\mathrm{Var}(\hat{f}(\mathbf{z}_0)) = \mathbb{E}_D\left[\left(\hat{f}_D(\mathbf{z}_0) - \mathbb{E}_D[\hat{f}_D(\mathbf{z}_0)]\right)^2\right].$
+
+We have the the bias-variance tradeoff:
+
+$$
+\mathrm{PE}(\mathbf{z}_0) = \sigma^2 + \mathrm{Bias}^2 + \mathrm{Var}.
+$$
+
+- $\sigma^2$ is irreducible noise.
+- Bias is systematic error from model misspecification
+- Variance is sensitivity to the training data
+
+Bias term is squared, so a small amount is often acceptable if it reduces variance enough.
 :::
 
 ## Depicting the bias-variance tradeoff {.nostretch}
@@ -96,14 +181,14 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 
 $$
 \begin{aligned}
-PRSS(\beta)_{\ell_2} &= \sum_{i=1}^{n}(y_i - \mathbf{z}_i^{\top}\beta)^2 + \lambda\sum_{j=1}^{p}\beta_j^2 \\
-&= (\mathbf{y} - \mathbf{Z}\beta)^{\top}(\mathbf{y} - \mathbf{Z}\beta) + \lambda\|\beta\|_2^2
+\textrm{PRSS}(\beta)_{\ell_2} &= \sum_{i=1}^{n}(y_i - \mathbf{z}_i^{\top}\beta)^2 + \lambda\sum_{j=1}^{p}\beta_j^2 \\
+&= (\mathbf{y} - \mathbf{Z}\beta)^{\top}(\mathbf{y} - \mathbf{Z}\beta) + \lambda{\left\|\beta\right\|}_2^2
 \end{aligned}
 $$
 
 - Its solution may have smaller average PE than $\hat{\boldsymbol\beta}^{ls}$
-- $PRSS(\boldsymbol\beta)_{l_2}$ is convex, and hence has a unique solution
-- Taking derivatives, we obtain: $$\frac{\delta PRSS(\beta)_{l_2}}{\delta \beta} = -2\mathbf{Z}^T (y-\mathbf{Z}\beta)+2\lambda\beta$$
+- $\textrm{PRSS}(\boldsymbol\beta)_{l_2}$ is convex, and hence has a unique solution
+- Taking derivatives, we obtain: $$\frac{\delta \textrm{PRSS}(\beta)_{l_2}}{\delta \beta} = -2\mathbf{Z}^T (y-\mathbf{Z}\beta)+2\lambda\beta$$
 
 ::: {.notes}
 - So this is just an added term to OLS!
@@ -115,7 +200,7 @@ $$
 
 ## The ridge solutions
 
-- The solution to $PRSS(\hat{\beta})_{l2}$ is now seen to be: $$\hat{\beta}_\lambda^{ridge} = (\mathbf{Z}^\intercal \mathbf{Z} + \lambda \mathbf{I}_p)^{-1} \mathbf{Z}^\intercal \mathbf{y}$$
+- The solution to $\textrm{PRSS}(\hat{\beta})_{l2}$ is now seen to be: $$\hat{\beta}_\lambda^{ridge} = (\mathbf{Z}^\intercal \mathbf{Z} + \lambda \mathbf{I}_p)^{-1} \mathbf{Z}^\intercal \mathbf{y}$$
 	- Remember that **Z** is standardized
 	- **y** is centered
 - Solution is indexed by the tuning parameter λ
@@ -231,6 +316,10 @@ $$
 	4. Set $\mathbf{r}=\mathbf{r} - \delta_j \mathbf{Z}_j$
 	5. Repeat from step 2 many times
 
+::: {.notes}
+- We may skip the forward stagewise algorithm.
+:::
+
 # Comparing LS, Ridge, and the LASSO
 
 ## Comparing LS, Ridge, and the LASSO
@@ -239,6 +328,15 @@ $$
 - We have a problem when $p \gg n$ (more predictor variables than observations)
 	- But both ridge regression and the LASSO have solutions
 	- Regularization tends to reduce prediction error
+
+## Comparing LS, Ridge, and the LASSO
+
+![Estimation picture for the lasso (left) and ridge regression (right). Hastie, Tibshirani, and Friedman. Elements of Statistical Learning (2e). 2009.](./figs/regularization/estimation-lasso-ridge.png){fig-alt="Estimation picture for the lasso (left) and ridge regression (right). Elements of Statistical Learning (2nd Ed.) (c) Hastie, Tibshirani, and Friedman. 2009."}
+
+- The residual sum of squares has elliptical contours.
+- The least squares estimate is at the center of the contours.
+- The diamond and the disk represents the constraint regions.
+- Solutions at the corners at the diamond represent sparse solutions.
 
 ## The LASSO, LARS, and Forward Stagewise paths {.nostretch}
 
@@ -259,6 +357,10 @@ $$
 - Zou and Hastie (2005) propose the **elastic net**, which is a convex combination of ridge and the LASSO
 	- Paper asserts that the elastic net can improve error over LASSO
 	- Still produces sparse solutions
+	- The strengths and balance of the $l_2$ (ridge) and the $l_1$ (LASSO) are both tunable hyperparameter
+- Tay, Friedman, and Tibshirani (2019) propose **principal components lasso** (**pcLasso**), which is a generalization of elastic net
+	- It also has a connection to principal component regression
+	- We will cover principal component regression in Partial Least Squares Regression lectures
 
 ::: {.notes}
 - Write out penalized error with all three norms (error, $l_1$, $l_2$)
