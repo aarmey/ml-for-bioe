@@ -50,9 +50,9 @@ Basic Idea: Find two (or more) matrices whose product best approximate the origi
 
 Low rank approximation to original $N\times M$ matrix:
 
-$$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^{T} $$
+$$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^\top $$
 
-where $\mathbf{W}$ is $N\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N$.
+where $\mathbf{W}$ is $N\times R$, $\mathbf{H}^\top$ is $M\times R$, and $R \ll N$.
 
 ::: {.notes}
 - What is the implicit assumption here?
@@ -81,11 +81,11 @@ $$
 
 Generalization of many methods (e.g., SVD, QR, CUR, Truncated SVD, etc.)
 
-## Aside - What should R be?
+## Aside - What should R (rank) be?
 
-$$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^{T} $$
+$$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^\top $$
 
-where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N$.
+where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^\top$ is $M\times R$, and $R \ll N$.
 
 ::: {.notes}
 - Reduced R simplifies the model substantially
@@ -119,6 +119,9 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 - This is about 1% of the original data size.
 - There is always information lost
 - We just hope for it to be information that doesn't matter
+- We have a good reason to believe the relevance of low dimensional structures
+	- White noise has the highest entropy.
+	- Adjacent pixels, edges, etc. indicates that the data points are sitting in a low dimensional subspace.
 :::
 
 # Examples
@@ -141,12 +144,78 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^{T}$ is $M\times R$, and $R \ll N
 
 ## Principal Components Analysis
 
-- Each principal component (PC) is linear combination of **uncorrelated** attributes / features'
+For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} = \mathbf{U}\mathbf{D}\mathbf{V}^\top$, 
+
+- $\mathbf{W} = \mathbf{U}\mathbf{D}$ as scores, observations in low-dimensional space
+- $\mathbf{H} = \mathbf{V}$ as loadings, relationship between the features to their low-dimensional space
+	- Each principal component (PC) is linear combination of **uncorrelated** attributes / features
+
+## Principal Components Analysis
+
 - Ordered in terms of variance
 - $k$th PC is orthogonal to all previous PCs
 - Reduce dimensionality while maintaining maximal variance
+	- PCA minimizes reconstruction error: $\left\|\mathbf{X} - \mathbf{W}\mathbf{H}^\top\right\|^2_2$
 
 ![ ](./figs/dimred/pca.png){fig-alt="Scatter plot of data points with arrows indicating the directions of the first and second principal components (PC1 and PC2)."}
+
+## Example: Principal Components Analysis
+
+- Consider an example dataset of two variables about words
+	- The number of lines of its disctionary definition
+	- The lenght of a word
+	- Example from Abidi & Williams, 2010
+- We obtain $\mathbf{X}$ after applying appropriate centering and normalization
+
+![ ](./figs/dimred/PCA-Fig1a.png){fig-alt=""}
+
+##
+
+- PCA identifies two orthogonal axes of variation
+	- The first component (PC1) explains the most variation
+	- The second component (PC2) is orthogonal to PC1
+
+![ ](./figs/dimred/PCA-Fig1b.png){fig-alt=""}
+
+##
+
+- We can project the observed data points into components
+
+![ ](./figs/dimred/PCA-Fig1c.png){fig-alt=""}
+
+
+##
+
+- We can project the observed data points into components
+
+![ ](./figs/dimred/PCA-Fig2.png){fig-alt=""}
+
+::: {.notes}
+- SVD: $\mathbf{X} = \mathbf{U}\mathbf{D}\mathbf{V}^\top$ 
+- Scores: $\mathbf{W} = \mathbf{U}\mathbf{D}$
+- Loadings: $\mathbf{H} = \mathbf{V}$
+- Projection: $\mathbf{X}\mathbf{H} = \mathbf{U}\mathbf{D}\mathbf{V}^\top\mathbf{H} = \mathbf{U}\mathbf{D}\mathbf{H}^\top\mathbf{H} = \mathbf{U}\mathbf{D}\mathbf{I} = \mathbf{W}$
+:::
+
+## Principal Components Analysis
+
+- Once you characterize PCA components, you may use the loadings to project new data points.
+
+## Example: Principal Components Analysis
+
+- Let's consider projecting a new word, 'sur'.
+
+![ ](./figs/dimred/PCA-Fig3a.png){fig-alt=""}
+
+::: {.notes}
+- sur means 'on' in French
+:::
+
+##
+
+- Let's consider projecting a new word, 'sur'.
+
+![ ](./figs/dimred/PCA-Fig3b.png){fig-alt=""}
 
 ::: {.notes}
 - Go through example
@@ -209,6 +278,15 @@ print(pca.explained_variance_ratio_)
 ## Separating flower species
 
 ![ ](./figs/dimred/iris_pca.png){width=90% fig-alt="PCA plot of the Iris dataset, showing separation of the three flower species in the first two principal components."}
+
+## Genes mirror geography within Europe
+
+![A statistical summary of genetic data from 1,387 Europeans based on principal component axis one (PC1) and axis two (PC2). Novembre et al. Nature. 2008.](./figs/dimred/novembre_2008_pca.png){width=90% fig-alt="PCA plot from Novembre et al. 2008, showing population structure of 1,387 European individuals."}
+
+::: {.notes}
+- Talk about the population structure. Migration.
+- Talk about the continum of genetic ancestry.
+:::
 
 # Non-negative matrix factorization
 
@@ -301,6 +379,7 @@ Color indicates the [reconstruction of the data]{style="color:darkred;"} and the
 
 - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
+- 📖: [Abdi and Williams. Principal component analysis](https://wires.onlinelibrary.wiley.com/doi/10.1002/wics.101)
 - 📖: [Algorithms to calculate PCA models](https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/algorithms-to-calculate-build-pca-models#lvm-pca-nipals-algorithm)
 - 💾: [Principal Component Analysis Explained Visually](https://setosa.io/ev/principal-component-analysis/)
 - 💾: [`sklearn.decomposition.PCA`](https://setosa.io/ev/principal-component-analysis/)
