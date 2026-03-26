@@ -3,9 +3,6 @@ toc-title: "Outline"
 toc-depth: 1
 format-links: false
 
-filters:
-  - webp-to-png.lua
-
 project:
   post-render: ./webp-cleanup-png.sh
 
@@ -17,6 +14,8 @@ format:
       left: 0.5in
       right: 4in
       y: 0.5in
+    filters:
+      - webp-to-png.lua
   html:
     embed-resources: true
     theme: [default, pubnotes.scss]
