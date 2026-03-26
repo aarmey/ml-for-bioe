@@ -19,7 +19,7 @@ author: Aaron Meyer & Yosuke Tanigawa (based on slides from Pam Kreeger)
 
 ## Notes about the methods today
 
-- Both methods are supervised learning methods, however have a number of distinct properties from others we will discuss.
+- Both methods are supervised learning methods; however, they have a number of distinct properties from other methods we will discuss.
 - Learning about PLS is more difficult than it should be, partly because papers describing it span areas of chemistry, economics, medicine and statistics, with differences in terminology and notation.
 
 ## Regularization
@@ -180,8 +180,8 @@ If you are trying to predict something, you should look at the cross-validated R
 - [`sklearn.cross_decomposition.PLSRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
 	- Uses `M.fit(X, Y)` to train
 	- Can use `M.predict(X)` to get new predictions
-	- `PLSRegression(n_components=3)` to set number of components on setup
-	- Or `M.n_components = 3` after setup
+	- `PLSRegression(n_components=3)` to set the number of components at initialization
+	- Or `M.n_components = 3` after initialization
 
 ## Comparison
 
@@ -192,12 +192,12 @@ If you are trying to predict something, you should look at the cross-validated R
 
 ### PCR
 
-- Uses PCA as initial decomp. step, then is just normal linear regression
-- Maximizes the variance explained of the independent (X) data
+- Uses PCA as an initial decomposition step, then is just normal linear regression
+- Maximizes the variance explained in the independent (X) data
 
 ## Performance
 
-- PLSR is amazingly well at prediction
+- PLSR is amazingly good at prediction
 	- This is **incredibly** powerful
 - Interpreting **why** PLSR predicts something can be challenging
 

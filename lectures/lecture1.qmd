@@ -29,7 +29,7 @@ author: "Aaron Meyer & Yosuke Tanigawa"
 ## Attendance
 
 - We expect students to come to the Lectures and Discussion sessions.
-- The lecture is recorded via BruinCast to accomondate personal circumstances.
+- The lecture is recorded via BruinCast to accommodate personal circumstances.
 - However, if the attendance level is too low, we will stop releasing the video.
 
 ::: {.notes}
@@ -57,7 +57,7 @@ author: "Aaron Meyer & Yosuke Tanigawa"
 ### TAs
 
 - By appointment
-- Will have regular times setup soon
+- Will have regular times set up soon
 
 ### Campuswire
 
@@ -133,8 +133,8 @@ By the end of the course you will learn how to:
 
 - UCLA provides access to Generative AI (GenAI) tools
 	- https://dts.ucla.edu/initiatives/ai/available-tools
-- GenAI tools helps you perform the tasks you're familiar with, but mere reliance on it without critical assessment of their output may bloack your learning process
-- We will ask you to (1) **declar** the usage of those tools and (2) how did you **verify** the outputs in assignments
+- GenAI tools help you perform the tasks you're familiar with, but mere reliance on them without critical assessment of their output may block your learning process
+- We will ask you to (1) **declare** the usage of those tools and (2) explain how you **verified** the outputs in assignments
 
 ## Project
 
@@ -167,7 +167,7 @@ If you do these three things, you will do well.
 
 ::: {.notes}
 - Extensive changes this year, so I am interested in your feedback
-- If you aren't famiilar with a term, guaranteed we should review
+- If you aren't familiar with a term, guaranteed we should review it
 :::
 
 # Introduction
@@ -213,7 +213,7 @@ What we will cover spans a range of fields:
 
 ::: {.notes}
 - Model provides a **formal language** that allows unifying efforts by multiple investigators and helps identify/focus on complex system's key parameters.
-- It may not be feasible for humans to learn on the scale / in the time alloted.
+- It may not be feasible for humans to learn on the scale / in the time allotted.
 - Model construction serves as goal posts. I.e. a well-specified target we can compare, share, etc.
 - For many tasks, machine learning can perform better than a human would once you specify a model.
 :::
@@ -352,13 +352,13 @@ Joint probability
 ~ In a multivariate probability space, the distribution for more than one variable. $p(X, Y)$.
 
 Conditional probability
-~ The measure of an event given that another event has occured. $p(X \mid Y) = p(X, Y)/p(Y)$.
+~ The measure of an event given that another event has occurred. $p(X \mid Y) = p(X, Y)/p(Y)$.
 
 Marginal distribution
 ~ The probability distribution regardless of other observations/factors. $p(X) = \sum_{Y}p(X, Y)$.
 
 Complementary event
-~ The probability of an event not occuring. $p(X^c) = 1 - p(X)$.
+~ The probability of an event not occurring. $p(X^c) = 1 - p(X)$.
 
 ::: {.notes}
 - Plot out a joint probability
@@ -423,7 +423,7 @@ Multinomial
 
 The moments of a distribution describe its shape: $$\mu_{n}=\int_{-\infty}^{\infty}(x-c)^{n}\,f(x)\,\mathrm{d} x$$
 
-- Mean ($n=1$), variance ($n=2$), skewness ($n=3$), kertosis ($n=4$)
+- Mean ($n=1$), variance ($n=2$), skewness ($n=3$), kurtosis ($n=4$)
 - Essential properties to determining how data will behave during analysis:
 	- How might your measurements need to change with changes in variance?
 	- What are these values for a normal distribution?
@@ -431,7 +431,7 @@ The moments of a distribution describe its shape: $$\mu_{n}=\int_{-\infty}^{\inf
 <https://gregorygundersen.com/blog/2020/04/11/moments/>
 
 ::: {.notes}
-- For a standard normal distribution, Mean = 0, variance = 1, skewness = 0, kertosis = 3.
+- For a standard normal distribution, mean = 0, variance = 1, skewness = 0, kurtosis = 3.
 :::
 
 # Sample statistics

@@ -6,8 +6,8 @@ author: Aaron Meyer & Yosuke Tanigawa
 # Dealing with many variables
 
 - So far we've largely concentrated on cases in which we have relatively large numbers of measurements for a few variables
-	- This is frequently refered to as $n > p$
-- Two other extremes are imporant
+	- This is frequently referred to as $n > p$
+- Two other extremes are important
 	- Many observations and many variables
 	- Many variables but few observations ($p > n$)
 
@@ -129,10 +129,10 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^\top$ is $M\times R$, and $R \ll 
 ## Process control
 - Large bioreactor runs may be recorded in a database, along with a variety of measurements from those runs
 - We may be interested in how those different runs varied, and how each factor relates to one another
-- Plotting a compressed version of that data can indicate when an anomolous change is present
+- Plotting a compressed version of that data can indicate when an anomalous change is present
 
 ## Mutational processes
-- Anytime multiple contributory factors give rise to a phenomena, matrix factorization can separate them out
+- Anytime multiple contributory factors give rise to a phenomenon, matrix factorization can separate them out
 - Will talk about this in greater detail
 
 ## Cell heterogeneity
@@ -162,8 +162,8 @@ For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} =
 ## Example: Principal Components Analysis
 
 - Consider an example dataset of two variables about words
-	- The number of lines of its disctionary definition
-	- The lenght of a word
+	- The number of lines of its dictionary definition
+	- The length of a word
 	- Example from Abidi & Williams, 2010
 - We obtain $\mathbf{X}$ after applying appropriate centering and normalization
 
@@ -287,7 +287,7 @@ print(pca.explained_variance_ratio_)
 
 ::: {.notes}
 - Talk about the population structure. Migration.
-- Talk about the continum of genetic ancestry.
+- Talk about the continuum of genetic ancestry.
 :::
 
 # Non-negative matrix factorization
