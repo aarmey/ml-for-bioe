@@ -127,6 +127,8 @@ By the end of the course you will learn how to:
 - Cover Python, notebooks.
 :::
 
+---
+
 ### AI usage in Computational Labs
 
 - UCLA provides access to Generative AI (GenAI) tools
@@ -442,7 +444,7 @@ General properties of sampling distributions:
 
 1. The sampling distribution of a statistic *often* tends to be centered at the value of the population parameter estimated by the statistics
 2. The spread of the sampling distributions of many statistics *tends* to grow smaller as sample size $n$ increases
-3. **Central Limit Theorem**: As $n$ increases, sampling distributions of the sample mean tends towards normality. $\bar{X} \approx \mathcal{N}\left(\mu, \frac{\sigma^2}{n}I\right)$
+3. **Central Limit Theorem**: As $n$ increases, sampling distributions of the sample mean tends towards normality. $\bar{X} \approx N\left(\mu, \frac{\sigma^2}{n}I\right)$
 
 ::: {.notes}
 - Unbiased estimates vs. biased estimates.
@@ -522,8 +524,8 @@ How is this then converted to a p-value?
 - Plotting a distribution is often more informative than a test.
 - Not only assesses deviation, but can explain where it occurs.
 - Many variants:
-	- [Q-Q plot](https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot)
-	- [P-P plot](https://en.wikipedia.org/wiki/P%E2%80%93P_plot)
+	- [Q-Q plot](https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot) (quantile-quantile plot)
+	- [P-P plot](https://en.wikipedia.org/wiki/P%E2%80%93P_plot) (probability-probability plot or percent-percent plot)
 	- Histogram with fitted distribution
 
 ## Testing errors

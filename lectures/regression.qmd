@@ -1,6 +1,6 @@
 ---
 title: "Fitting And Regression"
-author: Aaron Meyer
+author: Aaron Meyer & Yosuke Tanigawa
 state: Done
 ---
 
@@ -54,11 +54,11 @@ What is different about paternal vs. maternal meiosis?
 
 - How do you infer the relationship between the parental age and the rate of *de novo* mutations?
 
-## Application: Paternal *de novo* mutations
+---
 
 ![Kong *et al*, *Nature*, 2012](./figs/regression/decode1.jpg){fig-alt="Figure from Kong et al showing the family tree of several sample collections." width=2in}
 
-## Application: Paternal *de novo* mutations
+---
 
 Table. *De novo* mutations observed with parental origin assigned (Kong *et al*, *Nature*, 2012).
 
@@ -76,7 +76,7 @@ Table. *De novo* mutations observed with parental origin assigned (Kong *et al*,
 The data are from five trios in which the proband also had a sequenced child (a third generation).
 :::
 
-## Application: Paternal *de novo* mutations
+---
 
 ![Kong *et al*, *Nature*, 2012](./figs/regression/decode2.jpg){fig-alt="Figure from Kong et al showing a significant correlation between father age and number of de novo mutations." width=2in}
 
@@ -179,6 +179,8 @@ $$ \mathbf{y} = m_1 \mathbf{x_1} + m_2 \mathbf{x_2} \ldots + \beta_0 + \mathbf{\
 - Go through why you would need to transform the data
 - Write out on the board how this corresponds to shifted distributions
 :::
+
+---
 
 ### Including the intercept term
 
@@ -398,7 +400,7 @@ One property we can take advantage of is that the gradient of the SSE w.r.t. $\b
 
 $$ {\frac {\partial S}{\partial \beta_j}}=2\sum_i r_i{\frac {\partial r_i}{\partial \beta_j}}=0 $$
 
-- $\frac{\partial r_i}{\partial \beta_j}$ is a function of both the nonlinear function and the data.
+- $\frac{\partial r_i}{\partial \beta_j}$ is a function of both the non-linear function and the data.
 - This can be expanded out through a first-order Taylor approximation.
 - Doing so essentially performs ordinary least squares around the current point, for the linearized function.
 
@@ -408,7 +410,7 @@ $$ {\frac {\partial S}{\partial \beta_j}}=2\sum_i r_i{\frac {\partial r_i}{\part
 
 $$ {\frac {\partial S}{\partial \beta_j}}=2\sum_i r_i{\frac {\partial r_i}{\partial \beta_j}}=0 $$
 
-- $\frac{\partial r_i}{\partial \beta_j}$ is a function of both the nonlinear function and the data.
+- $\frac{\partial r_i}{\partial \beta_j}$ is a function of both the non-linear function and the data.
 - This can be expanded out through a first-order Taylor approximation.
 - Doing so essentially performs OLS around the current point.
 	- ${\frac{\partial r_i}{\partial \beta_j}}= -J_{ij}$, where $J$ is the Jacobian of the function.
@@ -560,6 +562,10 @@ Commonly used to model binary outcomes.
 $$
 p(x) = \frac{1}{1 + \exp\left(-\left(\beta_0 + \beta^{\top}x\right)\right)}
 $$
+
+Can we simply use logistic regression to analyze the Binding Data?
+
+**Why or why not?**
 
 ::: {.notes}
 Connection with the Klotz binding model

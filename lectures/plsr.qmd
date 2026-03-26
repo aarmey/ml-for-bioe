@@ -1,19 +1,19 @@
 ---
 title: Partial Least Squares Regression
-author: Aaron Meyer (based on slides from Pam Kreeger)
+author: Aaron Meyer & Yosuke Tanigawa (based on slides from Pam Kreeger)
 ---
 
 # Common challenge: Finding *coordinated changes* within data
 
-##
+---
 
 ![ ](./figs/plsr/lee-1.webp){fig-alt="Diagram from Lee et al. showing the challenge of finding coordinated changes in complex biological data."}
 
-## 
+--- 
 
 ![The timing and order of drug treatment affects cell death.](./figs/plsr/lee-2.webp){fig-alt="Bar chart or heatmap showing how the timing and order of drug treatment affects cell death percentage."}
 
-## 
+--- 
 
 ![ ](./figs/plsr/lee-4.webp){fig-alt="Figure from Lee et al. likely showing the experimental setup or results related to drug combinations."}
 
@@ -97,13 +97,15 @@ $$Y = U Q^t + F$$
 
 ## NIPALs while exchanging the scores
 
+NIPALS: Non-linear iterative partial least-squares
+
 1. Take a random column of Y to be $u_a$, and regress it against X.
 
 $$\mathbf{w}_a = \dfrac{1}{\mathbf{u}'_a\mathbf{u}_a} \cdot \mathbf{X}'_a\mathbf{u}_a$$
 
 ![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 
-## NIPALs while exchanging the scores
+---
 
 2. Normalize $w_a$.
 
@@ -111,7 +113,7 @@ $$\mathbf{w}_a = \dfrac{\mathbf{w}_a}{\sqrt{\mathbf{w}'_a \mathbf{w}_a}}$$
 
 ![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 
-## NIPALs while exchanging the scores
+---
 
 3. Regress $w_a$ against $X^T$ to obtain $t_a$.
 
@@ -119,7 +121,7 @@ $$\mathbf{t}_a = \dfrac{1}{\mathbf{w}'_a\mathbf{w}_a} \cdot \mathbf{X}_a\mathbf{
 
 ![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 
-## NIPALs while exchanging the scores
+---
 
 4. Regress $t_a$ against Y to obtain $c_a$.
 
@@ -127,7 +129,7 @@ $$\mathbf{c}_a = \dfrac{1}{\mathbf{t}'_a\mathbf{t}_a} \cdot \mathbf{Y}'_a\mathbf
 
 ![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 
-## NIPALs while exchanging the scores
+---
 
 5. Regress $c_a$ against $Y^T$ to obtain $u_a$.
 
@@ -135,9 +137,9 @@ $$\mathbf{u}_a = \dfrac{1}{\mathbf{c}'_a\mathbf{c}_a} \cdot \mathbf{Y}_a\mathbf{
 
 ![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 
-## NIPALs while exchanging the scores
+---
 
-5. Cycle until convergence, then subtract off variance explained by $\widehat{\mathbf{X}} = \mathbf{t}_a\mathbf{p}'_a$ and $\widehat{\mathbf{Y}}_a = \mathbf{t}_a \mathbf{c}'_a$.
+6. Cycle until convergence, then subtract off variance explained by $\widehat{\mathbf{X}} = \mathbf{t}_a\mathbf{p}'_a$ and $\widehat{\mathbf{Y}}_a = \mathbf{t}_a \mathbf{c}'_a$.
 
 ![https://learnche.org/pid/latent-variable-modelling/projection-to-latent-structures/how-the-pls-model-is-calculated](./figs/plsr/NIPALS-iterations-PLS.png){fig-alt="Flowchart or diagram illustrating the iterative steps of the NIPALS algorithm for Partial Least Squares."}
 

@@ -5,9 +5,8 @@ author: Aaron Meyer (based on slides from Rob Tibshirani)
 
 # Example
 
-### Predicting Drug Response
+## Predicting Drug Response
 
----
 
 ![ ](./figs/regularization/ccle-title.jpg){fig-alt="Title figure from the Cancer Cell Line Encyclopedia (CCLE) paper (Barretina et al., Nature 2012), illustrating the goal of predicting drug sensitivity from genomic features."}
 
@@ -19,7 +18,7 @@ author: Aaron Meyer (based on slides from Rob Tibshirani)
 
 ## Estimating $\boldsymbol{\beta}$
 
-- As usual, we assume the model: $$y=f(\mathbf{z})+\epsilon, \epsilon\sim \mathcal{N}(0,\sigma^2I)$$
+- As usual, we assume the model: $$y=f(\mathbf{z})+\epsilon, \epsilon\sim N(0,\sigma^2I)$$
 - In regression analysis, our major goal is to come up with some good regression function $$\hat{f}(\mathbf{z}) = \mathbf{z}^\intercal \hat{\beta}$$
 - So far, we’ve been dealing with $\hat{\beta}^{ls}$, or the least squares solution:
 	- $\hat{\beta}^{ls}$ has well known properties (e.g., Gauss-Markov, ML)
@@ -50,7 +49,7 @@ Interpretation:
 - $\mathrm{tr}[(\mathbf{Z}^T \mathbf{Z})^{-1}]$: Total variance across all coefficients
 
 ::: {.notes}
-Recall the linear model: $\mathbf{y} = \mathbf{Z}\boldsymbol\beta + \boldsymbol\epsilon, \quad \boldsymbol\epsilon \sim \mathcal{N}(0, \sigma^2 \mathbf{I})$
+Recall the linear model: $\mathbf{y} = \mathbf{Z}\boldsymbol\beta + \boldsymbol\epsilon, \quad \boldsymbol\epsilon \sim N(0, \sigma^2 \mathbf{I})$
 
 The least squares estimator is: $\hat{\boldsymbol\beta}^{ls} = (\mathbf{Z}^T \mathbf{Z})^{-1} \mathbf{Z}^T \mathbf{y}$
 
@@ -89,14 +88,18 @@ Have students draw lines for smoking vs. heart attack risk over data. Make two d
 	- where, the bias and variance 
 		- $\textrm{Bias}(\hat{f}(\mathbf{z}_0)) = \mathbb{E}[\hat{f}(\mathbf{z}_0)] - f(\mathbf{z}_0)$
 		- $\textrm{Var}(\hat{f}(\mathbf{z}_0)) = \mathbb{E}\left[(\hat{f}(\mathbf{z}_0) - \mathbb{E}[\hat{f}(\mathbf{z}_0)])^2\right]$
-	- Not going to derive, but comes directly from the definitions
 - Such a decomposition is known as the **bias-variance tradeoff**
 	- As model becomes more complex (more terms included), local structure/curvature is picked up
 	- But coefficient estimates suffer from high variance as more terms are included in the model
+
+## Bias-variance tradeoff
+
+- $\mathrm{PE}(\mathbf{z}_0) = \sigma_{\epsilon}^2 + \textrm{Bias}^2(\hat{f}(\mathbf{z}_0)) + \textrm{Var}(\hat{f}(\mathbf{z}_0))$
+	- Not going to derive, but comes directly from the definitions
 - So introducing a little bias in our estimate for **$\boldsymbol{\beta}$** ***might*** lead to a large decrease in variance, and hence a substantial decrease in PE
 
 ::: {.notes}
-### Bias-variance decomposition and Prediction Error (PE)
+Bias-variance decomposition and Prediction Error (PE)
 
 We start from the regression model:
 
@@ -333,6 +336,10 @@ $$
 
 ![Estimation picture for the lasso (left) and ridge regression (right). Hastie, Tibshirani, and Friedman. Elements of Statistical Learning (2e). 2009.](./figs/regularization/estimation-lasso-ridge.png){fig-alt="Estimation picture for the lasso (left) and ridge regression (right). Elements of Statistical Learning (2nd Ed.) (c) Hastie, Tibshirani, and Friedman. 2009."}
 
+---
+
+![Estimation picture for the lasso (left) and ridge regression (right). Hastie, Tibshirani, and Friedman. Elements of Statistical Learning (2e). 2009.](./figs/regularization/estimation-lasso-ridge.png){fig-alt="Estimation picture for the lasso (left) and ridge regression (right). Elements of Statistical Learning (2nd Ed.) (c) Hastie, Tibshirani, and Friedman. 2009."}
+
 - The residual sum of squares has elliptical contours.
 - The least squares estimate is at the center of the contours.
 - The diamond and the disk represents the constraint regions.
@@ -403,6 +410,9 @@ $$
 3. What is the difference between ridge regression and LASSO? How should you choose between them?
 4. Are you guaranteed to find the global optimal answer for ridge regression? What about LASSO?
 5. What is variable selection? Which method(s) perform it? What can you say about the answers?
+
+---
+
 6. What does it mean when one says ridge regression and LASSO give a family of answers?
 7. What can we say about the relationship between fitting error and prediction error?
 8. What does regularization do to the variance of a model?
