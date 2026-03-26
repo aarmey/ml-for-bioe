@@ -15,19 +15,16 @@ In this project, you have two options for the general route you can take:
 
 More details in final project guidelines.
 
-## Project Proposals
+---
 
-The proposal should be less than one page and describe the following items:
-
-- Why the topic you chose is interesting
-- Demonstrate that your project fits the criteria above
-- What overall approach do you plan to take for the project and why
-- Demonstrate that your project can be finished within a month, including statement of **data availability**
-- Estimate the difficulty of your project
-
-**We are available to discuss your ideas whenever you are ready, and you should discuss your idea with us prior to submitting your proposal.**
-
-*Recommend an early start—the earlier you finalize a proposal the sooner you can begin the project.*
+- The proposal should be less than one page and describe the following items:
+	- Why the topic you chose is interesting
+	- Demonstrate that your project fits the criteria above
+	- What overall approach do you plan to take for the project and why
+	- Demonstrate that your project can be finished within a month, including **data availability**
+	- Estimate the difficulty of your project
+- **We are available to discuss your ideas whenever you are ready, and you should discuss your idea with us prior to submitting your proposal.**
+- *Recommend an early start—the earlier you finalize a proposal the sooner you can begin the project.*
 
 # Application
 
@@ -55,6 +52,8 @@ What is different about paternal vs. maternal meiosis?
 - How do you infer the relationship between parental age and the rate of *de novo* mutations?
 
 ---
+
+#### *de novo* mutations data from trios
 
 ![Kong *et al*, *Nature*, 2012](./figs/regression/decode1.jpg){fig-alt="Figure from Kong et al showing the family tree of several sample collections." width=2in}
 
@@ -98,9 +97,23 @@ Fig 2. The number of de novo mutations called is plotted against the father’s 
 
 ## Process of Fitting
 
-The *process* of fitting is nothing more than finding the maximum likelihood distribution of models for a set of points.
+The *process* of fitting is choosing parameter values so that a model explains the observed data as well as possible.
 
 The key factor is how one defines the problem—i.e., how the distribution is described.
+
+## Three ingredients of a fitting problem
+
+- **Model form**: What relationship do we assume between inputs and outputs?
+- **Loss / objective**: What does it mean for the model to fit the data well?
+- **Assumptions**: What statistical assumptions make the fit interpretable?
+
+::: {.notes}
+- Keep these separate throughout the lecture.
+- Example for OLS:
+	- Model: linear
+	- Loss: sum of squared error
+	- Assumptions: independent Gaussian noise with constant variance
+:::
 
 ## Caveats
 
@@ -132,8 +145,10 @@ Walk through model, what the model is, etc.
 ## Ordinary Least Squares (OLS)
 
 - Probably the most widely used estimation technique.
-- Based on extending the maximum likelihood estimate of a distribution.
-- Model assumes output quantity is linear combination of inputs.
+- Closely connected to maximum likelihood under a Gaussian noise model.
+- Model assumes the output quantity is a linear combination of inputs.
+
+![ ](./figs/regression/olsplot.svg){fig-alt="Plot of measured vs. predicted values of scikit-learn's diabetes dataset." width=2in}
 
 ::: {.notes}
 - Every model will have:
@@ -142,126 +157,150 @@ Walk through model, what the model is, etc.
 	- Intuitive "feel"
 :::
 
-## Ordinary Least Squares
+---
+
+### Model setup
 
 If we have a vector of $n$ observations $\mathbf{y}$, our predictions are going to follow the form:
 
-$$ \mathbf{y} = \mathbf{X} \beta + \mathbf{\epsilon} $$
+$$ \mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \boldsymbol{\epsilon} $$
 
-Here $\mathbf{X}$ is a $n \times p$ structure matrix, $\beta$ is a p-dimensional vector with the parameters of our model (a.k.a. regression coefficients), and $\mathbf{\epsilon} = \left( \epsilon_1, \epsilon_2, ... \epsilon_n \right)^\top$ is the noise present in the model.
+Here:
 
-## Ordinary Least Squares
+- $\mathbf{X}$ is a $n \times p$ structure matrix (a.k.a. design matrix)
+- $\boldsymbol{\beta} \in \mathbb{R}^p$ is the vector of model parameters (regression coefficients)
+- $\boldsymbol{\epsilon} = \left( \epsilon_1, \epsilon_2, ... \epsilon_n \right)^\top$ is the noise present in the model
+	- Usual assumptions: uncorrelated and have constant variance $\sigma^2$: 
 
-$$ \mathbf{y} = \mathbf{X} \beta + \mathbf{\epsilon} $$
-
-$\mathbf{\epsilon}$ is usually handled to be uncorrelated random components with constant variance $\sigma^2$:
-
-$$ \mathbf{\epsilon} \sim \left( \mathbf{0}, \sigma^2 \mathbf{I} \right) $$
+$$ \boldsymbol{\epsilon} \sim \left( \mathbf{0}, \sigma^2 \mathbf{I} \right) $$
 
 ::: {.notes}
 - Graph this
 - Discuss the source of noise. What will happen if there is non-Gaussian component unaccounted?
 :::
 
-## Ordinary Least Squares
+---
+
+### Intuition
+
+OLS picks the line, plane, or hyperplane that makes predictions as close as possible to the observed data in total squared distance.
+
+![ ](./figs/regression/ElemStatLearnII_fig3.1.svg){fig-alt="Linear least squares fitting with X \in R^2. We seek the linear function of X that minimizes the sum of squared residuals from Y. Elements of Statistical Learning (2nd Ed.) (c) Hastie, Tibshirani, and Friedman. 2009."}
+
+::: {.notes}
+- For a single variable, this is the "best fit line."
+- "Squared" makes large errors count more heavily and gives a tractable solution.
+:::
+
+---
 
 ### Single variable case
 
-The structure matrix is little more than the data, sometimes transformed, usually with an offset. So, another way to write:
+For a single input variable, ordinary least squares is just:
 
-$$ \mathbf{y} = \mathbf{X} \beta + \mathbf{\epsilon} $$
+$$ \mathbf{y} = m \mathbf{x} + \beta_0 + \boldsymbol{\epsilon} $$
 
-would be:
-
-$$ \mathbf{y} = m_1 \mathbf{x_1} + m_2 \mathbf{x_2} \ldots + \beta_0 + \mathbf{\epsilon} $$
+Here, $m$ is the slope, $\beta_0$ is the intercept, and $\boldsymbol{\epsilon}$ is the noise.
 
 ::: {.notes}
+- This is the familiar line equation.
+	- Use this before generalizing to multiple predictors.
 - Go through why you would need to transform the data
 - Write out on the board how this corresponds to shifted distributions
 :::
 
 ---
 
-### Including the intercept term
+### Multiple variable case
 
-Consider including the intercept $\beta_0$ by setting $\beta = 
-\left(\beta_0 \beta \right)^\top$.
+The structure matrix is little more than the data, sometimes transformed, usually with an intercept (offset). So, another way to write:
 
-$$ \mathbf{X} \beta =
-(1 \; \mathbf{x})
+$$ \mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \boldsymbol{\epsilon} $$
+
+would be:
+
+$$ \mathbf{y} = m_1 \mathbf{x}_1 + m_2 \mathbf{x}_2 + \ldots + \beta_0 + \boldsymbol{\epsilon} $$
+
+The values of $m$ and $\beta_0$ that minimize the sum of squared error (SSE) are optimal.
+
+::: {.notes}
+- Connect back to the single-variable line fit.
+- Then generalize to many variables.
+:::
+
+---
+
+#### Including the intercept term
+
+Consider including the intercept $\beta_0$ by augmenting the design matrix $\mathbf{X}$ and parameter vector $\boldsymbol{\beta}$:
+
+$$ \mathbf{X} \boldsymbol{\beta} =
+\left(\mathbf{1} \; \mathbf{x}_1 \; \mathbf{x}_2 \; \cdots \; \mathbf{x}_p \right)
 \begin{pmatrix}
 \beta_0 \\
-\beta
+\beta_1 \\
+\beta_2 \\
+\vdots \\
+\beta_p
 \end{pmatrix}
 $$
 
 Now, the standard notation considers the intercept.
 
-$$ \mathbf{y} = \mathbf{X} \beta + \mathbf{\epsilon} $$
+$$ \mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \boldsymbol{\epsilon} $$
 
+---
 
-## Ordinary Least Squares
+### Least-squares objective and closed-form solution
 
-### Single variable case
+Gauss and Markov in the early 1800s identified that the least squares estimate of $\boldsymbol{\beta}$, $\hat{\boldsymbol{\beta}}$, is obtained by minimizing the total squared error:
 
-$$ \mathbf{y} = m \mathbf{x} + \beta_0 + \mathbf{\epsilon} $$
+$$ \hat{\boldsymbol{\beta}} = \arg\min_{\boldsymbol{\beta}}{\left\Vert \mathbf{y} - \mathbf{X} \boldsymbol{\beta} \right\Vert^{2}} $$ <!-- Eq 7.31 -->
 
-The values of $m$ and $b$ that minimize the distance from $y$ are optimal, and they don't depend on $\epsilon$.
+When $\mathbf{X}^\top \mathbf{X}$ is invertible, this can be directly calculated by:
 
-
-## Ordinary Least Squares
-
-Gauss and Markov in the early 1800s identified that the least squares estimate of $\beta$, $\hat{\beta}$, is:
-
-$$ \hat{\mathbf{\beta}} = \arg\min_{\beta}{\left\Vert \mathbf{y} - \mathbf{X} \beta \right\Vert^{2}} $$ <!-- Eq 7.31 -->
-
-## Ordinary Least Squares
-
-$$ \hat{\mathbf{\beta}} = \arg\min_{\beta}{\left\Vert \mathbf{y} - \mathbf{X} \beta \right\Vert^{2}} $$ <!-- Eq 7.31 -->
-
-can be directly calculated by:
-
-$$ \hat{\beta} = \mathbf{S}^{-1} \mathbf{X}' \mathbf{y} $$ <!-- Eq 7.32 -->
+$$ \hat{\boldsymbol{\beta}} = \mathbf{S}^{-1} \mathbf{X}^\top \mathbf{y} $$ <!-- Eq 7.32 -->
 
 where 
 
-$$ \mathbf{S} = \mathbf{X}'\mathbf{X} $$ <!-- Eq 7.33 -->
+$$ \mathbf{S} = \mathbf{X}^\top \mathbf{X} $$ <!-- Eq 7.33 -->
 
 ::: {.notes}
-$$ \frac{\delta}{\delta \beta} \left(\left\Vert \mathbf{y} - \mathbf{X} \beta \right\Vert^{2}\right) = 0 $$
-$$ 2 X^T (y - X \beta ) = 0 $$
-$$ 2 X^T y = 2X^T X \beta $$
-$$ \beta = \left(X^T X \right)^{-1} X^T y $$
+$$ \frac{\delta}{\delta \boldsymbol{\beta}} \left(\left\Vert \mathbf{y} - \mathbf{X} \boldsymbol{\beta} \right\Vert^{2}\right) = 0 $$
+$$ 2 \mathbf{X}^\top (\mathbf{y} - \mathbf{X} \boldsymbol{\beta}) = 0 $$
+$$ 2 \mathbf{X}^\top \mathbf{y} = 2 \mathbf{X}^\top \mathbf{X} \boldsymbol{\beta} $$
+$$ \boldsymbol{\beta} = \left(\mathbf{X}^\top \mathbf{X} \right)^{-1} \mathbf{X}^\top \mathbf{y} $$
 :::
 
-## Ordinary Least Squares
+---
 
-$\hat{\beta}$ is the maximum likelihood estimate of $\beta$, and has covariance $\sigma^2 \mathbf{S}^{-1}$:
+### Ordinary Least Squares and Maximum Likelihood
 
-$$\hat{\beta}\sim{}N\left(\beta,\sigma^2 \mathbf{S}^{-1}\right)$$
+#### Why does least squares make sense?
 
-In the normal case (when our assumptions hold), $\hat{\beta}$ is an *unbiased estimator* of $\beta$. Making these calculations tractable for larger data sets used to be a challenge but is now trivial.
+$$ \log L(\boldsymbol{\beta},\sigma^{2}) = -\frac{n}{2} \log(2\pi\sigma^{2}) - \frac{1}{2 \sigma^{2}} \sum_{i=1}^{n} (y_{i}-\mathbf{x}_{i}^\top \boldsymbol{\beta})^{2} $$
+
+Under the Gaussian noise assumption, maximizing the likelihood is therefore equivalent to minimizing:
+
+$$ \sum_{i=1}^{n} (y_{i}-\mathbf{x}_{i}^\top \boldsymbol{\beta})^{2} $$
+
+So least squares is also the maximum likelihood estimate under this model.
+
+---
+
+### Statistical properties of the estimator
+
+$\hat{\boldsymbol{\beta}}$ is the maximum likelihood estimate of $\boldsymbol{\beta}$, and has covariance $\sigma^2 \mathbf{S}^{-1}$:
+
+$$\hat{\boldsymbol{\beta}}\sim{}N\left(\boldsymbol{\beta},\sigma^2 \mathbf{S}^{-1}\right)$$
+
+In the normal case (when our assumptions hold), $\hat{\boldsymbol{\beta}}$ is an *unbiased estimator* of $\boldsymbol{\beta}$. Making these calculations tractable for larger data sets used to be a challenge but is now trivial.
 
 ::: {.notes}
 - How do we know $\sigma$?
-	- Stdev is best estimate of $\sigma$
-	- So just stdev of residuals
-:::
-
-## Ordinary Least Squares method gives the MLE estimate
-
-### Likelihood of Model
-
-$$ \log L(\beta,\sigma^{2}) = -\frac{n}{2} \log(2\pi\sigma^{2}) - \frac{1}{2 \sigma^{2}} \sum_{i=1}^{n} (y_{i}-x_{i}^\top \beta)^{2} $$
-
-therefore, only considering $\beta$ (the only factor that influences predictions), we need to minimize:
-
-$$ \sum_{i=1}^{n} (y_{i}-x_{i}^\top \beta)^{2} $$
-
-*Exactly how we calculate $\beta$!*
-
-::: {.notes}
-Go through where this arises from. Leave this up for later.
+	- The sample standard deviation is a common estimate of $\sigma$
+	- So the standard deviation of the residuals is a natural estimate
+- Go through where the likelihood arises from. Leave this up for later.
 
 $$ f(x | \mu, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} $$
 
@@ -269,54 +308,59 @@ $$ \ln f(x | \mu, \sigma^2) = -\frac{1}{2}\ln(2\pi\sigma^2) - \frac{(x-\mu)^2}{2
 
 $$ \ln L(\mu, \sigma^2 | x_1, x_2, \ldots, x_n) = -\frac{n}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2}\sum_{i=1}^{n}(x_i-\mu)^2 $$
 
-$$ \ln L(\beta, \sigma^2 \mid y) = -\frac{n}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2} (y - X\beta)^\top(y - X\beta). $$
+$$ \ln L(\boldsymbol{\beta}, \sigma^2 \mid \mathbf{y}) = -\frac{n}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2} (\mathbf{y} - \mathbf{X}\boldsymbol{\beta})^\top(\mathbf{y} - \mathbf{X}\boldsymbol{\beta}). $$
 :::
 
-## Ordinary Least Squares
+---
 
-What might be some advantages of a method such as this?
+### Advantages and limitations
 
-::: {.notes}
-- Only has p parameters.
-- Can be directly calculated from data (without an optimization procedure; fit and uncertainty can be directly calculated.)
-- Fast
-- Easily quantify error
-- Scalable
-- Clear assumptions
-- Clearly interpretable
-:::
+#### When should we use ordinary least squares (OLS)?
 
-## Ordinary Least Squares
-
-What are some of the assumptions?
-
-What are the implications of these assumptions not holding?
-
-What are some downsides?
+- What are some of the assumptions?
+- What are the implications of these assumptions not holding?
+- What are some downsides?
 
 ::: {.notes}
-- Very sensitive to outliers.
-- Fails for p > n.
+- Advantages:
+	- Only has p parameters.
+	- Can be directly calculated from data (without an optimization procedure; fit and uncertainty can be directly calculated.)
+	- Fast
+	- Easily quantify error
+	- Scalable
+	- Clear assumptions
+	- Clearly interpretable
+- Limitations:
+	- Very sensitive to outliers.
+	- Fails for p > n.
 
-$$ \frac{\partial \ln L}{\partial \beta} = \frac{1}{\sigma^2}X^T(y-X\beta) $$
+$$ \frac{\partial \ln L}{\partial \boldsymbol{\beta}} = \frac{1}{\sigma^2}\mathbf{X}^\top(\mathbf{y}-\mathbf{X}\boldsymbol{\beta}) $$
 :::
 
 ## Implementation
 
 scikit-learn provides a very basic function for ordinary least squares.
 
+#### scikit-learn
+
 - `sklearn.linear_model.LinearRegression`
   - `fit_intercept`: Should an intercept value be fit?
-  - `normalize`: Should the input variables be mean and variance scaled?
+  - Centering or scaling the input variables should typically be done as a separate preprocessing step
 - No tests for significance/model performance included.
 - We'll discuss evaluating the model in depth later.
+
+---
+
+#### NumPy
 
 Or there's an even more bare-bones function in NumPy: `numpy.linalg.lstsq`.
 
 - Takes input variables `A` and `B`.
 - Solves the equation $Ax=B$ by computing a vector $x$ that minimizes the Euclidean 2-norm $\lVert B-Ax \rVert^2$.
 
-## Implementation
+---
+
+#### Example
 
 ~~~python
 from sklearn.linear_model import LinearRegression
@@ -344,9 +388,11 @@ ax.set_ylabel('Predicted')
 - Play with options.
 :::
 
-## Implementation
+---
 
 ![ ](./figs/regression/olsplot.svg){fig-alt="Plot of measured vs. predicted values of scikit-learn's diabetes dataset." width=2in}
+
+This plot shows *training-set* fit only. It is useful for illustration, but it does **not** tell us how well the model will generalize to new data.
 
 # Non-Linear Least Squares
 
@@ -354,13 +400,13 @@ ax.set_ylabel('Predicted')
 
 Non-Linear Least Squares makes similar assumptions to ordinary least squares, but for arbitrary functions. Thus, instead of following the form:
 
-$$ \mathbf{y} = \mathbf{X} \beta + \mathbf{\epsilon} $$
+$$ \mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \boldsymbol{\epsilon} $$
 
 Our input-output relationship is:
 
-$$ \mathbf{y} = f(\mathbf{X}, \beta) + \mathbf{\epsilon} $$
+$$ \mathbf{y} = f(\mathbf{X}, \boldsymbol{\beta}) + \boldsymbol{\epsilon} $$
 
-for the same construction of $\mathbf{\epsilon} \sim \left( \mathbf{0}, \sigma^2 \mathbf{I} \right)$.
+for the same construction of $\boldsymbol{\epsilon} \sim \left( \mathbf{0}, \sigma^2 \mathbf{I} \right)$.
 
 ::: {.notes}
 - Independent points
@@ -370,24 +416,30 @@ for the same construction of $\mathbf{\epsilon} \sim \left( \mathbf{0}, \sigma^2
 
 ## Transformation
 
-NNLSQ used to be mostly performed by transforming one's data into a linear model.
-
-For instance, by taking the ratio of variables, or log-transforming them.
-
-This is now considered **bad practice**.
-
-**Why?**
+- Non-linear least squares used to be mostly performed by transforming one's data into a linear model.
+	- For instance, by taking the ratio of variables, or log-transforming them.
+- This is now considered **bad practice**.
+- **Why?**
 
 ::: {.notes}
 - Distorts error term.
 - But made it easier to calculate.
 :::
 
+## Why move to non-linear least squares?
+
+If we believe the underlying relationship is **non-linear** (e.g., curved), it is usually better to fit that curved model directly than to force the data into a linear form by transformation.
+
+::: {.notes}
+- The goal is still the same: choose parameters that make predictions close to the data.
+- The difference is that the model itself is now nonlinear in the parameters.
+:::
+
 ## Non-Linear Least Squares
 
 ### Algorithms
 
-We again need to solve for $\beta$ to minimize the sum of squared error:
+We again need to solve for $\boldsymbol{\beta}$ to minimize the sum of squared error (SSE):
 
 - There are many methods to solve these problems, and finding the true minimum is not a trivial task.
 - We're not going to cover how these algorithms work in depth.
@@ -396,7 +448,7 @@ We again need to solve for $\beta$ to minimize the sum of squared error:
 
 ### Algorithms
 
-One property we can take advantage of is that the gradient of the SSE w.r.t. $\beta$ at the minimum is zero ($r_i$ is the residual of the $i$th point):
+One property we can take advantage of is that the gradient of the SSE with respect to $\boldsymbol{\beta}$ at the minimum is zero ($r_i$ is the residual of the $i$th point):
 
 $$ {\frac {\partial S}{\partial \beta_j}}=2\sum_i r_i{\frac {\partial r_i}{\partial \beta_j}}=0 $$
 
@@ -404,9 +456,7 @@ $$ {\frac {\partial S}{\partial \beta_j}}=2\sum_i r_i{\frac {\partial r_i}{\part
 - This can be expanded out through a first-order Taylor approximation.
 - Doing so essentially performs ordinary least squares around the current point, for the linearized function.
 
-## Non-Linear Least Squares
-
-### Algorithms
+---
 
 $$ {\frac {\partial S}{\partial \beta_j}}=2\sum_i r_i{\frac {\partial r_i}{\partial \beta_j}}=0 $$
 
@@ -414,7 +464,7 @@ $$ {\frac {\partial S}{\partial \beta_j}}=2\sum_i r_i{\frac {\partial r_i}{\part
 - This can be expanded out through a first-order Taylor approximation.
 - Doing so essentially performs OLS around the current point.
 	- ${\frac{\partial r_i}{\partial \beta_j}}= -J_{ij}$, where $J$ is the Jacobian of the function.
-	- Many NNLSQ solvers require $J$ for this reason: can be approximated by finite differences.
+	- Many non-linear least-squares solvers require $J$ for this reason; it can be approximated by finite differences.
 	- Probably the most common method, Gauss-Newton, uses this property with Newton's method.
 
 ## Non-Linear Least Squares
@@ -423,7 +473,7 @@ $$ {\frac {\partial S}{\partial \beta_j}}=2\sum_i r_i{\frac {\partial r_i}{\part
 
 - Unlike ordinary least squares, no guarantee about finding the optimal solution.
 - Depending upon the data and model, there may be many local minima.
-- Exactly equivalent to shifting normal distributions up and down around one's data.
+- This can still be interpreted in terms of shifting normal distributions around the data.
 
 ## Implementation
 
@@ -453,11 +503,25 @@ plt.ylabel('Binding')
 - Run this as a notebook.
 :::
 
-## NNLS Example
+---
 
-### Binding Data
+Let $X$ denote ligand concentration and let $\beta = k_1$ denote the association constant. We can predict the amount of binding we'd observe from a single-site binding model. 
 
-We can predict the amount of binding we'd observe from a single-site binding model:
+$$
+y = f(X, \beta) + \epsilon
+$$
+
+where,
+
+$$
+f(X, \beta) = \frac{X\beta}{1 + X\beta}
+$$
+
+---
+
+#### Implementation
+
+We can define custom function: $f([L], k) = \frac{k[L]}{1 + k[L]}$
 
 ~~~python
 def klotz1(k1, lig):
@@ -489,9 +553,7 @@ Y &= \frac{[RL]}{[R]_\textrm{tot}} \\
 $$
 :::
 
-## NNLS Example
-
-### Binding Data
+---
 
 ~~~python
 plt.semilogx(X,klotz1(1.,X),'.')
@@ -512,9 +574,7 @@ def ls_obj_k1(k1, ligs, data):
 	return data - klotz1(k1, ligs)
 ~~~
 
-## NNLS Example
-
-### Binding Data
+---
 
 ~~~python
 sp.optimize.least_squares(ls_obj_k1, 1., args=(X,Y))
@@ -543,13 +603,15 @@ sp.optimize.least_squares(ls_obj_k1, 1., args=(X,Y))
 		   x: array([ 0.95864059])
 ~~~
 
+# How to select the right model?
+
 ## Generalized Linear Model
 
 ### What if the error term isn't Gaussian?
 
 - In many cases linear regression can be inappropriate
 	- E.g. A measurement that is Poisson distributed
-	- E.g. A binary outcome measurement
+	- E.g. A binary outcome
 
 ::: {.notes}
 - CLT works to your benefit here.
@@ -557,27 +619,51 @@ sp.optimize.least_squares(ls_obj_k1, 1., args=(X,Y))
 
 ### Logistic regression
 
-Commonly used to model binary outcomes.
+- Commonly used to model binary outcomes.
+	- $p(\mathbf{x}) = \frac{1}{1 + \exp\left(-\left(\beta_0 + \boldsymbol{\beta}^{\top}\mathbf{x}\right)\right)}$
+- Can we simply use logistic regression to analyze the Binding Data?
+	- **Why or why not?**
 
-$$
-p(x) = \frac{1}{1 + \exp\left(-\left(\beta_0 + \beta^{\top}x\right)\right)}
-$$
+## Can/should we use logistic regression for binding data?
 
-Can we simply use logistic regression to analyze the Binding Data?
+- The choice depends on what you know about the system.
+	- If you have domain knowledge about receptor-ligand binding, a mechanistic model is usually preferable because its parameters are interpretable.
+- We *can* use logistic regression for binding data.
+- There *is* a connection: the Klotz binding model can be written in a logistic-like form.
 
-**Why or why not?**
+---
 
-::: {.notes}
-Connection with the Klotz binding model
+### The Klotz binding model and logistic regression
 
 $$
 \begin{aligned}
-Y &= \frac{k[L]}{1 + k[L]} \\
-  &= \frac{1}{1 + (k[L])^{-1}} \\
+y &= \frac{k[L]}{1 + k[L]} = \frac{1}{1 + (k[L])^{-1}} \\
   &= \frac{1}{1 + \left( \exp(\ln(k)) \cdot \exp(\ln([L])) \right)^{-1}} \\
   &= \frac{1}{1 + \exp \left( -\left( \ln(k) + \ln([L]) \right) \right)}
 \end{aligned}
 $$
+
+- Logistic regression with the *logarithm* of ligand concentration, $\ln([L])$, is related to the Klotz binding model.
+- The scaling and transformation of the variables matters.
+
+---
+
+## How to select the right model?
+
+- If you have domain knowledge about the system, use it.
+	- Mechanistic models can give interpretable parameter estimates.
+- If you do **not** have a mechanistic model, use a statistical model whose assumptions are reasonable.
+	- Off-the-shelf models often have good documentation, toy examples, and efficient implementations.
+- Choose a model whose outputs answer your scientific question.
+	- Good prediction alone is not always enough if the goal is interpretation.
+
+::: {.notes}
+Connection with the Klotz binding model
+
+- The logistic-like behavior appears when the predictor is log concentration.
+- This is a useful reminder that different models can produce similar functional shapes.
+- If you know the system is receptor-ligand binding, the mechanistic model is typically preferable because the parameters have direct scientific meaning.
+- If you do not have a mechanistic model, a statistical model may still be useful if its assumptions match the data and the question.
 :::
 
 
