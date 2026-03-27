@@ -3,7 +3,9 @@ title: "Dimensionality Reduction: PCA and NMF"
 author: Aaron Meyer & Yosuke Tanigawa
 ---
 
-# Dealing with many variables
+# High-dimensional datasets
+
+## Dealing with many variables
 
 - So far we've largely concentrated on cases in which we have relatively large numbers of measurements for a few variables
 	- This is frequently referred to as $n > p$
@@ -17,9 +19,11 @@ author: Aaron Meyer & Yosuke Tanigawa
 - Ask for data reduction methods
 :::
 
-## Dealing with many variables
+---
 
-#### Usually when we're dealing with many variables, we don't have a great understanding of how they relate to each other
+### Why many variables are hard
+
+Usually, when we're dealing with many variables, we don't have a great understanding of how they relate to each other.
 
 - E.g. if gene X is high, we can't be sure that will mean gene Y will be too
 - If we had these relationships, we could reduce the data
@@ -42,17 +46,17 @@ Bonus: Many of the other methods from the class can be applied after dimensional
 - We will think about these methods both numerically and geometrically.
 :::
 
-## Matrix Factorization
+## Matrix factorization
 
 *Many* dimensionality reduction methods involve matrix factorization
 
-Basic Idea: Find two (or more) matrices whose product best approximate the original matrix
+Basic Idea: Find two (or more) matrices whose product best approximates the original matrix
 
 Low rank approximation to original $N\times M$ matrix:
 
 $$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^\top $$
 
-where $\mathbf{W}$ is $N\times R$, $\mathbf{H}^\top$ is $M\times R$, and $R \ll N$.
+where $\mathbf{W}$ is $N\times R$, $\mathbf{H}$ is $M\times R$, and $R \ll \min(N, M)$.
 
 ::: {.notes}
 - What is the implicit assumption here?
@@ -75,17 +79,21 @@ a_3b_1 & \ldots &
 $$
 :::
 
-## Matrix Factorization
+---
+
+### Visualizing matrix factorization
 
 ![ ](./figs/dimred/mflayout.png){fig-alt="Diagram illustrating matrix factorization X approx W H^T, showing the dimensions of the original matrix X and the factor matrices W and H^T."}
 
 Generalization of many methods (e.g., SVD, QR, CUR, Truncated SVD, etc.)
 
-## Aside - What should R (rank) be?
+---
+
+### How to choose the rank, $R$?
 
 $$ \mathbf{X} \approx \mathbf{W} \mathbf{H}^\top $$
 
-where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^\top$ is $M\times R$, and $R \ll N$.
+where $\mathbf{W}$ is $N\times R$, $\mathbf{H}$ is $M\times R$, and $R \ll \min(N, M)$.
 
 ::: {.notes}
 - Reduced R simplifies the model substantially
@@ -103,15 +111,23 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^\top$ is $M\times R$, and $R \ll 
 	- Say $N=100$, we go from 10,000 to 200 values.
 :::
 
-## Matrix factorization is also compression
+---
+
+### Example: image compression
+
+#### Original image
 
 ![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat.jpg){width=80% fig-alt="Original image of a cat."}
 
-## Matrix factorization is also compression
+---
+
+#### Rank = 3
 
 ![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat-3comp.jpg){width=80% fig-alt="Compressed image of the cat using 3 components, showing significant quality loss."}
 
-## Matrix factorization is also compression
+---
+
+#### Rank = 46
 
 ![https://www.aaronschlegel.com/image-compression-principal-component-analysis/](./figs/dimred/cat-46comp.jpg){width=80% fig-alt="Compressed image of the cat using 46 components, showing better quality reconstruction."}
 
@@ -119,47 +135,55 @@ where $\mathbf{W}$ is $M\times R$, $\mathbf{H}^\top$ is $M\times R$, and $R \ll 
 - This is about 1% of the original data size.
 - There is always information lost
 - We just hope for it to be information that doesn't matter
-- We have a good reason to believe the relevance of low dimensional structures
+- We have a good reason to believe in the relevance of low-dimensional structures
 	- White noise has the highest entropy.
-	- Adjacent pixels, edges, etc. indicates that the data points are sitting in a low dimensional subspace.
+	- Adjacent pixels, edges, etc. indicate that the data points are sitting in a low-dimensional subspace.
 :::
 
-# Examples
+## Applications
 
-## Process control
+### Process control
+
 - Large bioreactor runs may be recorded in a database, along with a variety of measurements from those runs
 - We may be interested in how those different runs varied, and how each factor relates to one another
 - Plotting a compressed version of that data can indicate when an anomalous change is present
 
-## Mutational processes
+---
+
+### Mutational processes
+
 - Anytime multiple contributory factors give rise to a phenomenon, matrix factorization can separate them out
 - Will talk about this in greater detail
 
-## Cell heterogeneity
+### Cell heterogeneity
+
 - Enormous interest in understanding how cells are similar or different
 - Answer to this can be in millions of different ways
 - But cells often follow *programs*
 
-# Principal Components Analysis
+# Principal Components Analysis (PCA)
 
-## Principal Components Analysis
+## PCA as matrix factorization
 
 For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} = \mathbf{U}\mathbf{D}\mathbf{V}^\top$, 
 
-- $\mathbf{W} = \mathbf{U}\mathbf{D}$ as scores, observations in low-dimensional space
-- $\mathbf{H} = \mathbf{V}$ as loadings, relationship between the features to their low-dimensional space
-	- Each principal component (PC) is linear combination of **uncorrelated** attributes / features
+- $\mathbf{W} = \mathbf{U}\mathbf{D}$ gives the **scores**, placing observations in a low-dimensional space
+- $\mathbf{H} = \mathbf{V}$ gives the **loadings**, relating the features to that low-dimensional space
+	- Each principal component (PC) is a linear combination of the original features
+	- PCs are uncorrelated with each other
 
-## Principal Components Analysis
+---
+
+### PCA intuition
 
 - Ordered in terms of variance
 - $k$th PC is orthogonal to all previous PCs
 - Reduce dimensionality while maintaining maximal variance
-	- PCA minimizes reconstruction error: $\left\|\mathbf{X} - \mathbf{W}\mathbf{H}^\top\right\|^2_2$
+	- PCA minimizes reconstruction error: $\left\|\mathbf{X} - \mathbf{W}\mathbf{H}^\top\right\|_F^2$
 
 ![ ](./figs/dimred/pca.png){fig-alt="Scatter plot of data points with arrows indicating the directions of the first and second principal components (PC1 and PC2)."}
 
-## Example: Principal Components Analysis
+## PCA example: words
 
 - Consider an example dataset of two variables about words
 	- The number of lines of its dictionary definition
@@ -169,28 +193,31 @@ For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} =
 
 ---
 
-![ ](./figs/dimred/PCA-Fig1a.png){fig-alt=""}
+### PCA identifies two orthogonal axes of variation
+
+![ ](./figs/dimred/PCA-Fig1a.svg){fig-alt=""}
+
+- The first component (PC1) explains the most variation
+- The second component (PC2) is orthogonal to PC1
 
 ---
 
-- PCA identifies two orthogonal axes of variation
-	- The first component (PC1) explains the most variation
-	- The second component (PC2) is orthogonal to PC1
+### One can project the observed data points onto the principal components
 
-![ ](./figs/dimred/PCA-Fig1b.png){fig-alt=""}
+![ ](./figs/dimred/PCA-Fig1b.svg){fig-alt=""}
 
 ---
 
-- We can project the observed data points into components
+### Scores for each data point
 
-![ ](./figs/dimred/PCA-Fig1c.png){fig-alt=""}
+![ ](./figs/dimred/PCA-Fig1c.svg){fig-alt=""}
 
+
+- We can read the projected **scores** for each data point
 
 ---
 
-- We can project the observed data points into components
-
-![ ](./figs/dimred/PCA-Fig2.png){fig-alt=""}
+![ ](./figs/dimred/PCA-Fig2.svg){fig-alt=""}
 
 ::: {.notes}
 - SVD: $\mathbf{X} = \mathbf{U}\mathbf{D}\mathbf{V}^\top$ 
@@ -199,15 +226,15 @@ For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} =
 - Projection: $\mathbf{X}\mathbf{H} = \mathbf{U}\mathbf{D}\mathbf{V}^\top\mathbf{H} = \mathbf{U}\mathbf{D}\mathbf{H}^\top\mathbf{H} = \mathbf{U}\mathbf{D}\mathbf{I} = \mathbf{W}$
 :::
 
-## Principal Components Analysis
+---
 
-- Once you characterize PCA components, you may use the loadings to project new data points.
+### Projecting new data with PCA
 
-## Example: Principal Components Analysis
+- Once you have characterized the PCA components, you may use the loadings to project new data points.
 
-- Let's consider projecting a new word, 'sur'.
+#### PCA words example: projecting a new word, 'sur'.
 
-![ ](./figs/dimred/PCA-Fig3a.png){fig-alt=""}
+![ ](./figs/dimred/PCA-Fig3a.svg){fig-alt=""}
 
 ::: {.notes}
 - sur means 'on' in French
@@ -215,9 +242,9 @@ For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} =
 
 ---
 
-- Let's consider projecting a new word, 'sur'.
+#### Score for the new word, 'sur'.
 
-![ ](./figs/dimred/PCA-Fig3b.png){fig-alt=""}
+![ ](./figs/dimred/PCA-Fig3b.svg){fig-alt=""}
 
 ::: {.notes}
 - Go through example
@@ -229,17 +256,17 @@ For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} =
 - Talk about relationship going back to data from PCA
 :::
 
-## Methods to calculate PCA
+## Algorithms: computing PCA
 
 - All methods are essentially deterministic
 - Iterative computation
 	- More robust with high numbers of variables
 	- Slower to calculate
-- NIPALS (Non-linear iterative partial least squares)
+- NIPALS (nonlinear iterative partial least squares)
 	- Able to efficiently calculate a few PCs at once
 	- Breaks down for high numbers of variables (large p)
 
-## Practical notes
+### PCA in practice
 
 - Implemented within `sklearn.decomposition.PCA`
 	- `PCA.fit_transform(X)` fits the model to `X`, then provides the data in principal component space
@@ -250,7 +277,7 @@ For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} =
 Go over explained variance.
 :::
 
-## Code example
+#### PCA code example
 
 ~~~{.python code-line-numbers="11-12"}
 import matplotlib.pyplot as plt
@@ -264,10 +291,10 @@ y = iris.target
 target_names = iris.target_names
 
 pca = PCA(n_components=2)
-X_r = pca.fit(X).transform(X)
+X_r = pca.fit_transform(X)
 
 # Print PC1 loadings
-print(pca.components_[:, 0])
+print(pca.components_[0, :])
 
 # Print PC1 scores
 print(X_r[:, 0])
@@ -277,11 +304,11 @@ print(pca.explained_variance_ratio_)
 # [ 0.92461621  0.05301557]
 ~~~
 
-## Separating flower species
+#### PCA example: separating flower species
 
 ![ ](./figs/dimred/iris_pca.png){width=90% fig-alt="PCA plot of the Iris dataset, showing separation of the three flower species in the first two principal components."}
 
-## Genes mirror geography within Europe
+## PCA example: genes mirror geography within Europe
 
 ![A statistical summary of genetic data from 1,387 Europeans based on principal component axis one (PC1) and axis two (PC2). Novembre et al. Nature. 2008.](./figs/dimred/novembre_2008_pca.png){width=90% fig-alt="PCA plot from Novembre et al. 2008, showing population structure of 1,387 European individuals."}
 
@@ -290,11 +317,11 @@ print(pca.explained_variance_ratio_)
 - Talk about the continuum of genetic ancestry.
 :::
 
-# Non-negative matrix factorization
+# Non-Negative Matrix Factorization (NMF)
 
 What if we have data wherein effects always accumulate?
 
-## Application: Mutational processes in cancer
+## NMF application: mutational processes in cancer
 
 ![Helleday et al, Nat Rev Gen, 2014](./figs/dimred/mutgen.jpg){fig-alt="Diagram from Helleday et al (2014) illustrating mutational processes in cancer."}
 
@@ -317,37 +344,39 @@ What if we have data wherein effects always accumulate?
 ## Important considerations
 
 - Like PCA, except the coefficients must be non-negative
-- Forcing positive coefficients implies an additive combination of parts to reconstruct whole
+- Forcing positive coefficients implies an additive combination of parts to reconstruct the whole
 - Leads to _sparse_ factors
 - The answer you get will always depend on the error metric, starting point, and search method
 
-## Multiplicative update algorithm
+## Multiplicative updates
 
 - The update rule is multiplicative instead of additive
-- In the initial values for W and H are non-negative, then W and H can never become negative
+- If the initial values for $\mathbf{W}$ and $\mathbf{H}$ are non-negative, then $\mathbf{W}$ and $\mathbf{H}$ can never become negative
 - This guarantees a non-negative factorization
-- Will converge to a local maxima
+- Will converge to a local minimum
 	- Therefore starting point matters
 
-## Multiplicative update algorithm: Updating W
+---
+
+### Updating W
 
 $$[W]_{ij} \leftarrow [W]_{ij} \frac{[\color{darkred} X \color{darkblue}{H^T} \color{black}]_{ij}}{[\color{darkred}{WH} \color{darkblue}{H^T} \color{black}]_{ij}}$$
 
 Color indicates the [reconstruction of the data]{style="color:darkred;"} and the [projection matrix]{style="color:darkblue;"}.
 
-## Multiplicative update algorithm: Updating H
+### Updating H
 
 $$[H]_{ij} \leftarrow [H]_{ij} \frac{[\color{darkblue}{W^T} \color{darkred}X \color{black}]_{ij}}{[\color{darkblue}{W^T} \color{darkred}{WH} \color{black}]_{ij}}$$
 
 Color indicates the [reconstruction of the data]{style="color:darkred;"} and the [projection matrix]{style="color:darkblue;"}.
 
-## Coordinate descent solving
+## Coordinate descent
 
 - Another approach is to find the gradient across all the variables in the matrix
 - Not going to go through implementation
-- Will also converge to a local maxima
+- Will also converge to a local minimum
 
-## Practical notes
+## NMF in practice
 
 - Implemented within `sklearn.decomposition.NMF`.
 	- `n_components`: number of components
@@ -358,15 +387,17 @@ Color indicates the [reconstruction of the data]{style="color:darkred;"} and the
 	- `NMF.components_`: components x features matrix
 	- Returns transformed data through `NMF.fit_transform()`
 
-## Summary
+# Review
 
-#### PCA
+## Summary: PCA and NMF
+
+### PCA
 
 - Preserves the covariation within a dataset
 - Therefore mostly preserves axes of maximal variation
 - Number of components will vary in practice
 
-#### NMF
+### NMF
 
 - Explains the dataset through two **non-negative** matrices
 - Much more stable patterns when assumptions are appropriate
@@ -377,14 +408,14 @@ Color indicates the [reconstruction of the data]{style="color:darkred;"} and the
 
 **As always, selection of the appropriate method depends upon the question being asked.**
 
-# Reading & Resources
+## Reading & Resources
 
 - 📺: [A visual linear algebra refresh](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 - 📖: [Points of Significance: Principal Components Analysis](https://www.nature.com/articles/nmeth.4346)
 - 📖: [Abdi and Williams. Principal component analysis](https://wires.onlinelibrary.wiley.com/doi/10.1002/wics.101)
 - 📖: [Algorithms to calculate PCA models](https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/algorithms-to-calculate-build-pca-models#lvm-pca-nipals-algorithm)
 - 💾: [Principal Component Analysis Explained Visually](https://setosa.io/ev/principal-component-analysis/)
-- 💾: [`sklearn.decomposition.PCA`](https://setosa.io/ev/principal-component-analysis/)
+- 💾: [`sklearn.decomposition.PCA`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
 - 💾: [`sklearn.decomposition.NMF`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html)
 
 ## Review Questions
