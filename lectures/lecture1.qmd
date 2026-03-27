@@ -7,7 +7,7 @@ author: "Aaron Meyer & Yosuke Tanigawa"
 
 ## Machine learning & data-driven modeling in bioengineering
 
-### Lecture:
+### Lecture
 
 - Mondays/Wednesdays, 8–9:50 am
 - Boelter 2760
@@ -26,22 +26,22 @@ author: "Aaron Meyer & Yosuke Tanigawa"
 - Mention review questions at the start of lecture.
 :::
 
+### Textbook / Other Course Materials
+
+- There is no textbook for this course.
+- We will post related readings prior to each lecture.
+- These will either broaden the scope of material covered in class or provide critical background.
+- We will make it clear if the material is more than optional.
+
 ## Attendance
 
-- We expect students to come to the Lectures and Discussion sessions.
+- We expect students to come to the lectures and discussion sessions.
 - The lecture is recorded via BruinCast to accommodate personal circumstances.
 - However, if the attendance level is too low, we will stop releasing the video.
 
 ::: {.notes}
 - We will share the lectures so long as attendance is over 80%.
 :::
-
-## Textbook / Other Course Materials
-
-- There is no textbook for this course.
-- I will post related readings prior to each lecture.
-- These will either broaden the scope of material covered in class, or provide critical background.
-- I will make it clear if the material is more than optional.
 
 ## Support / Office Hours
 
@@ -61,7 +61,7 @@ author: "Aaron Meyer & Yosuke Tanigawa"
 
 ### Campuswire
 
-- Allows for quick help from me & the TAs
+- Allows for quick help from us, the TAs, and the LAs
 
 ::: {.notes}
 - Go over TA availability.
@@ -118,10 +118,10 @@ By the end of the course you will learn how to:
 ### Computational Labs
 
 - You will implement what we have learned using _real_ data from studies.
-- Reinforces the material with hands-on experience by implementing what we learn in class.
-- These are meant to challenge you to become comfortable applying the material.
-	- Document your effort. Get started early. Seek answers to your questions in office hours, in lab, or on Campuswire!
-	- Your lowest grade will be automatically dropped.
+- These labs reinforce the material through hands-on practice.
+- They are meant to help you become comfortable applying the material.
+- Document your effort, get started early, and seek help in office hours, in lab, or on Campuswire.
+- Your lowest lab grade will be automatically dropped.
 
 ::: {.notes}
 - Cover Python, notebooks.
@@ -134,7 +134,7 @@ By the end of the course you will learn how to:
 - UCLA provides access to Generative AI (GenAI) tools
 	- https://dts.ucla.edu/initiatives/ai/available-tools
 - GenAI tools help you perform the tasks you're familiar with, but mere reliance on them without critical assessment of their output may block your learning process
-- We will ask you to (1) **declare** the usage of those tools and (2) explain how you **verified** the outputs in assignments
+- We will ask you to (1) **declare** your use of those tools and (2) explain how you **verified** the outputs in assignments
 
 ## Project
 
@@ -214,11 +214,11 @@ What we will cover spans a range of fields:
 ::: {.notes}
 - Model provides a **formal language** that allows unifying efforts by multiple investigators and helps identify/focus on complex system's key parameters.
 - It may not be feasible for humans to learn on the scale / in the time allotted.
-- Model construction serves as goal posts. I.e. a well-specified target we can compare, share, etc.
+- Model construction serves as goal posts, i.e., a well-specified target we can compare and share.
 - For many tasks, machine learning can perform better than a human would once you specify a model.
 :::
 
-## Why we need models - Can a biologist fix a radio?
+## Can a biologist fix a radio?
 
 ![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz1.jpg){width=2in fig-alt="Photo of a radio."}
 
@@ -227,9 +227,11 @@ What we will cover spans a range of fields:
 - ~100 various components (resistors, capacitors, and transistors vs. molecules)
 :::
 
-## Why we need models - Can a biologist fix a radio?
+---
 
-![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz2.jpg){width=2in fig-alt="Photo of inside a radio."}
+### Reverse-engineering a radio
+
+![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz2.jpg){width=2in fig-alt="Photo of the inside of a radio."}
 
 ::: {.notes}
 - Biologists' approach: (1) open functionally normal radios; (2) describe and classify components; and (3) remove a component at a time and assess its phenotypic consequence.
@@ -237,7 +239,9 @@ What we will cover spans a range of fields:
 - Limited insights into tunable components.
 :::
 
-## Why we need models - Can a biologist fix a radio?
+---
+
+### Formal circuit representation
 
 ![Lazebnik et al, Cancer Cell, 2002](./figs/lec1/laz3.png){width=2in fig-alt="Circuit diagram of a radio."}
 
@@ -264,17 +268,41 @@ What we will cover spans a range of fields:
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig1.png){width=2in fig-alt="Diagram of signals with different timings."}
 
-## Machine learning outperforms humans for some tasks
+::: {.notes}
+- 'Intrinsic' Hardware Evolution, a process to design electronic circuits with a genetic algorithm.
+- Task: discriminate between square waves of 1kHz and 10kHz presented at the input.
+	- The circuit does not have access to a clock.
+	- "Evolution was required to produce a configuration of the array of 100 logic cells to discriminate between input periods five orders of magnitude longer than the input."
+:::
+
+---
+
+### The FPGA hardware setup to test a genetic algorithm (GA)
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig2.png){width=2in fig-alt="Diagram of a programmable circuit with random connections."}
 
-## Machine learning outperforms humans for some tasks
+
+::: {.notes}
+Thompson used Field Programmable Gate Array (FPGA) to instantiate the circuit design and measure the fitness.
+:::
+
+---
+
+### The maximum and minimum fitness and genetic convergence
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig3.png){width=2in fig-alt="Loss from stochastic fitting process."}
 
-## Machine learning outperforms humans for some tasks
+---
+
+### Learned circuit
 
 ![Thompson et al. Proc. 1st Int. Conf. on Evolvable Systems, 1996](./figs/lec1/fig4.png){width=2in fig-alt="Diagram of a fit circuit that performs the desired function."}
+
+::: {.notes}
+- The largest set of cells that could have their function unit outputs simultaneously clamped to constant values (0 or 1) without affecting the behavior.
+	- "The cells shaded gray cannot be clamped without degrading performance, even though there is no connected path by which they could influence the output."
+	- "They must be influencing the rest of the circuit by some means other than the normal cell-to-cell wires."
+:::
 
 # Basic Statistical Concepts
 
@@ -292,7 +320,7 @@ What we will cover spans a range of fields:
 
 ## Probability
 
-- Probability indicates the chance of an event within a wider set of outcomes.
+- Probability indicates the chance of an event within a broader set of outcomes.
 - $X$: random variable with possible outcomes $x \in \Omega$
 - **First axiom**: $p(x) \geq 0$
 - **Second axiom**: $\sum_{x}p(x) = 1$
@@ -301,13 +329,17 @@ What we will cover spans a range of fields:
 ::: {.notes}
 - Also talk about if something is conditionally dependent/independent
 - What is integral?
-- What is limit as dx goes to 0?
+- What is the limit as dx goes to 0?
 :::
 
-## Dice rolling example
+---
+
+### Examples
+
+#### Dice rolling example
 
 - Consider rolling a dice
-- Possible outcomes ($\Omega$) is $\{1, 2, 3, 4, 5, 6\}$
+- The possible outcomes ($\Omega$) are $\{1, 2, 3, 4, 5, 6\}$
 	- They are mutually exclusive.
 - Let's verify the three axioms.
 	- $p(X = i) \geq 0$ for all $i \in \Omega$.
@@ -319,7 +351,9 @@ What we will cover spans a range of fields:
 	- We don't care about the color or size of a dice.
 :::
 
-## Coin toss example
+---
+
+#### Coin toss example
 
 A set of trials: HTHHHTTHHTT
 
@@ -337,16 +371,20 @@ Two possibilities:
 - Probabilities are 0.00049 fair, 0.00048 biased.
 :::
 
-## Distributions
+---
+
+### Probability distributions
 
 We've already been talking about these! Distributions describe the range of probabilities that exist for all possible outcomes.
 
 ::: {.notes}
-- Choice of distribution implies a specific underlying process.
+- The choice of distribution implies a specific underlying process.
 - Can a distribution be categorical? Ordinal? Numerical?
 :::
 
-## Other Probabilities
+---
+
+### Other probability concepts
 
 Joint probability
 ~ In a multivariate probability space, the distribution for more than one variable. $p(X, Y)$.
@@ -365,7 +403,7 @@ Complementary event
 - Also talk about if something is conditionally dependent/independent
 :::
 
-## Normal Distributions
+## Normal distributions
 
 - Also known as Gaussian Distributions
 - Two model parameters
@@ -375,9 +413,13 @@ Complementary event
 
 $$f(x)={\frac {1}{\sqrt {2\pi \sigma ^{2}}}}e^{-{\frac {(x-\mu )^{2}}{2\sigma ^{2}}}}$$
 
+---
+
 ![ ](./figs/lec1/normal_pdf.png){width=2in fig-alt="PDF of a normal distribution."}
 
-## Normal Distributions
+---
+
+### Standard normal distribution
 
 For a *standard* normal distribution ($\mu = 0$, $\sigma = 1$):
 
@@ -386,8 +428,8 @@ $$f(x)=\frac{1}{\sqrt{2\pi}}\; e^{-\frac{x^2}{2}}$$
 Area between:
 
 - One standard deviation: 68%
-- Two stdev: 95%
-- Three stdev: 99.7%
+- Two standard deviations: 95%
+- Three standard deviations: 99.7%
 
 You can normalize any normal distribution to the standard normal.
 
@@ -396,28 +438,15 @@ You can normalize any normal distribution to the standard normal.
 - Walk through process of Z-scoring.
 :::
 
-## Other Distributions
+## Other commonly used distributions
 
-Normal Distribution
-~ Describes many naturally observed variables and has statistics mean and standard deviation.
-
-Poisson
-~ Stochastic process that counts events in some time frame.
-
-Exponential Distribution
-~ Describes the time between events in Poisson processes.
-
-Gamma
-~ Used in Bayesian statistics, often for modeling waiting times.
-
-Bernoulli
-~ Like a coin flip. Binary outcome. A special case of Binomial.
-
-Binomial
-~ Describes the number of successes in a sequence of Bernoulli trials.
-
-Multinomial
-~ Generalization of Binomial for more than two states.
+- **Normal distribution**: common for many naturally observed variables; often summarized by its mean and standard deviation.
+- **Poisson distribution**: counts events in a fixed interval.
+- **Exponential distribution**: describes the time between events in a Poisson process.
+- **Gamma distribution**: often used for modeling waiting times and in Bayesian statistics.
+- **Bernoulli distribution**: a binary outcome, like a coin flip.
+- **Binomial distribution**: the number of successes in a sequence of Bernoulli trials.
+- **Multinomial distribution**: a generalization of the binomial distribution for more than two states.
 
 ## Distribution moments
 
@@ -436,35 +465,37 @@ The moments of a distribution describe its shape: $$\mu_{n}=\int_{-\infty}^{\inf
 
 # Sample statistics
 
-## Sample statistics
+## Sampling distributions
 
 If we sampled a finite number of times (let's say **sample size** of $n=3$), we could build a **sampling** distribution of the statistics (e.g., one for the **sample** mean and one for the **sample** standard deviation).
 
 General properties of sampling distributions:
 
-1. The sampling distribution of a statistic *often* tends to be centered at the value of the population parameter estimated by the statistics
+1. The sampling distribution of a statistic *often* tends to be centered at the value of the population parameter estimated by that statistic
 2. The spread of the sampling distributions of many statistics *tends* to grow smaller as sample size $n$ increases
-3. **Central Limit Theorem**: As $n$ increases, sampling distributions of the sample mean tends towards normality. $\bar{X} \approx N\left(\mu, \frac{\sigma^2}{n}I\right)$
+3. **Central Limit Theorem**: As $n$ increases, the sampling distribution of the sample mean tends toward normality. $\bar{X} \approx N\left(\mu, \frac{\sigma^2}{n}\right)$
 
 ::: {.notes}
 - Unbiased estimates vs. biased estimates.
 :::
 
-## Sample statistics of the mean
+---
 
-- This means that as $n$ increases, the better estimate $\mu_x$ is of $\mu$.
-	- Sample standard deviation is the standard deviation of the mean.
+### Sample mean
+
+- This means that as $n$ increases, the sample mean $\bar{X}$ is a better estimate of $\mu$.
+	- The standard error is the standard deviation of the sample mean.
 - When a population distribution is normal, the sampling distribution of the sample statistic is also normal, regardless of $n$.
 - And the central limit theorem states that the sampling distribution can be approximated by a normal distribution when the sample size, $n$, is sufficiently large.
-- Rule of thumb is that $n=30$ is sufficiently large, but there are times when smaller $n$ will suffice. Greater $n$ is required with higher **skew**.
+- A common rule of thumb is that $n=30$ is sufficiently large, but there are times when smaller $n$ will suffice. Greater $n$ may be required with higher **skewness**.
 
 ## Hypothesis Testing
 
-In hypothesis testing, we state a null hypothesis that we will test; if its likelihood is less than some value, then we reject it.
+In hypothesis testing, we state a null hypothesis that we will test; if the p-value is less than a chosen threshold, then we reject it.
 
 For example:
 
-- $H_0$: A particular set of points come from a normal distribution with mean $\mu$ and variance $\sigma$.
+- $H_0$: A particular set of points comes from a normal distribution with mean $\mu$ and variance $\sigma^2$.
 - $H$: Two sets of observations were sampled from distributions with different means.
 
 When we do an experiment, we typically take a **sampling** of several observations, to be more certain of the result.
@@ -476,27 +507,30 @@ When we do an experiment, we typically take a **sampling** of several observatio
 
 ## T-distribution
 
-The t-distribution with $n-1$ degrees of freedom is useful for comparing means when the sample size $n$ is small and the population variance is unknown.
+The t-distribution with $n-1$ degrees of freedom is useful for **comparing means** with small sample size $n$ and unknown population variance.
 
 - $H_0$: Assume $\mu=\mu_0$ then calculate t. $$t = \frac{\overline{x} - \mu_0}{s/\sqrt{n}}$$
-	- Can think of $t$ designed to be $z/s$, where it’s sensitive to the magnitude of the difference to the alternate hypothesis and scaled to control for the spread.
-- When comparing the differences between two means: (null hypothesis the means are the same, variances/sizes assumed equal). $$t=\frac{{\bar{X}}_1-{\bar{X}}_2}{\sqrt{\frac{s_{X_1}^2+s_{X_2}^2}{n}}}$$
+	- You can think of $t$ as $z/s$, where it is sensitive to the magnitude of the difference from the null and scaled to control for the spread.
+- When comparing two means under the equal-variance assumption: $$t=\frac{\bar{X}_1-\bar{X}_2}{s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}$$
+	- Here, $s_p$ is the pooled standard deviation.
 
 ## Effect size
 
 - The scalar factor scales the t-value
-	- If normal data, the sample distribution variance scales as $1 / \sqrt{n}$
-	- p-values become significant even with small difference in means
+	- For normal data, the standard error scales as $1 / \sqrt{n}$
+		- p-values can become significant even with a small difference in means
 - Exercise caution and report the effect size
 	- For example, a 1% or 50% difference in the means
 
-## Kolmogorov-Smirnov Test
+## Kolmogorov-Smirnov test
 
 - Comparison of an empirical distribution function with the distribution function of the hypothesized distribution.
 - Does not depend on the grouping of data.
 - Relatively insensitive to outlier points (i.e., distribution tails).
 
-## Kolmogorov-Smirnov Test
+---
+
+### Geometric intuition
 
 - K-S test is most useful when the sample size is small
 - Geometric meaning of the test statistic:
@@ -504,10 +538,21 @@ The t-distribution with $n-1$ degrees of freedom is useful for comparing means w
 ![ ](./figs/lec1/ks.jpg){width=2in fig-alt="Schematic of the K-S test."}
 
 ::: {.notes}
-No t-distribution available here.
+- Intuition: largest vertical gap between $F(x)$ and $\hat{F}(x)$ across all $x$
+- We use univariate Normal distribution with $n=4$ observations
+	- No t-distribution available here.
+- $F(x)$: theoretical CDF, $F(x)=P(X \le x)$; smooth curve from the hypothesized distribution  
+- $\hat{F}(x)$: empirical CDF, $\hat{F}(x)=\frac{\#\{X_i \le x\}}{n}$; step function from data  
+- Ordered data: $X_{(1)} \le X_{(2)} \le X_{(3)} \le X_{(4)}$  
+- Empirical CDF values: just before $X_{(i)}$: $\frac{i-1}{4}$; just after $X_{(i)}$: $\frac{i}{4}$  
+- $D_4^+ = \max_i \left(\frac{i}{4} - F(X_{(i)})\right)$ (empirical above model)  
+- $D_4^- = \max_i \left(F(X_{(i)}) - \frac{i-1}{4}\right)$ (model above empirical)  
+- $D_4 = \max(D_4^+, D_4^-)$  
 :::
 
-## Kolmogorov-Smirnov Test Statistic
+---
+
+### Test statistic
 
 This is the operation that creates the sample distribution.
 
@@ -519,26 +564,55 @@ Not expressed in one equation with absolute value because distance is assessed f
 
 How is this then converted to a p-value?
 
+::: {.notes}
+- $D_n$ is a random variable (depends on the sample)
+- Under $H_0$, $\hat{F}(x)$ fluctuates around $F(x)$
+- So $D_n$ has a known distribution under the null
+	- As $n \to \infty$: $\sqrt{n} D_n \Rightarrow \sup_{t \in [0,1]} |B(t)|$
+	- $B(t)$: Brownian bridge (random fluctuation constrained at endpoints) 
+	- Start: $B(0) = 0$ (both CDFs start at 0)
+	- End: $B(1) = 0$ (both CDFs end at 1)
+- Interpretation: fluctuations of $\hat{F}(x) - F(x)$ over $t \in [0,1]$
+- p-value = $P(D_n^{\text{null}} \ge D_n^{\text{observed}})$
+	- i.e., probability of seeing a gap at least this large by chance
+:::
+
 ## Graphical Analysis
 
 - Plotting a distribution is often more informative than a test.
-- Not only assesses deviation, but can explain where it occurs.
+- It not only assesses deviation, but can also explain where it occurs.
 - Many variants:
 	- [Q-Q plot](https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot) (quantile-quantile plot)
 	- [P-P plot](https://en.wikipedia.org/wiki/P%E2%80%93P_plot) (probability-probability plot or percent-percent plot)
 	- Histogram with fitted distribution
 
-## Testing errors
+::: {.notes}
+- Q-Q plot and P-P plot: both compare empirical distribution vs theoretical distribution (graphically)  
+	- Often more informative than a single test statistic  
+- Q-Q plot: empirical quantiles vs theoretical quantiles  
+  - If distributions match, then points lie on a straight line  
+  - Deviations indicate *where* distributions differ  
+  - Sensitive to differences in tails  
+- P-P plot: $\hat{F}(x)$ vs $F(x)$  
+  - If distributions match, then points lie on diagonal ($y = x$)  
+  - Directly compares cumulative probabilities  
+  - Less sensitive to tail differences  
+- Intuition  
+  - Q-Q: compares *values (quantiles)*  
+  - P-P: compares *probabilities (CDFs)*  
+:::
+
+## Type I and Type II errors in hypothesis testing
 
 - Type I error: error of rejecting $H_0$ when it is true (false positive)
 - Type II error: not rejecting $H_0$ when it is false (false negative)
-- Alpha: significance level in the long run $H_0$ would be rejected this amount of the time falsely (i.e., we are willing to accept $x$ fraction of false positives)
+- Alpha: significance level; in the long run, $H_0$ would be rejected falsely this fraction of the time (i.e., we are willing to accept an $x$ fraction of false positives)
 
 Beware of goodness-of-fit tests because they are unlikely to reject *any* distribution with little data, and are very sensitive to the smallest systematic error with lots of data.
 
 ## Multiple hypotheses
 
-We want to test whether the gene expression between two cells differs greater than chance alone. We test the two samples with a p-value cutoff of 0.05:
+We want to test whether gene expression differs between two cells more than would be expected by chance alone. We test the two samples with a p-value cutoff of 0.05:
 
 - How many false positives would we expect after testing 20 genes?
 - How about 1000 genes?
@@ -547,7 +621,9 @@ What about false negatives?
 
 What does this mean when it comes to hypothesis testing?
 
-# Reading & Resources
+# Review
+
+## Reading & Resources
 
 - 📖: [Can a biologist fix a radio?](https://www.cell.com/cancer-cell/fulltext/S1535-6108(02)00133-2)
 - 👂: [Linear Digressions: The Normal Distribution and the Central Limit Theorem](https://lineardigressions.com/episodes/2018/12/9/the-normal-distribution-and-the-central-limit-theorem)
@@ -563,5 +639,8 @@ What does this mean when it comes to hypothesis testing?
 3. What are the three kinds of variables? Give an example of each.
 4. You are interested in the sample distribution of the mean for an exponential distribution (N=8). What can you say about it relative to the original one?
 5. What can you say about the sample distribution for the N=1 case?
+
+---
+
 6. Studying an anti-tumor compound, you create 2 tumors in either flank (i.e. 1 mouse gets 2 tumors) of 5 mice, then treat the animals with a compound, measuring tumor growth. What is N? Justify your answer.
 7. You want to model a process where each successive outcome is 1/5 as likely (e.g., getting 3 is 1/5 as likely as getting 2). What is the expression for this distribution?
