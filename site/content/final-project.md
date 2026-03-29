@@ -90,4 +90,4 @@ No project is complete without verification. You are required to include testing
 
 - Many interesting datasets are listed in the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu).
 - Machine learning competitions, such as the [DREAM Challenges](https://dreamchallenges.org), [Kaggle](https://www.kaggle.com), and [DrivenData](https://www.drivendata.org), may have relevant challenges and pre-assembled datasets.
-- You are welcome to use a dataset from your own research. There is no problem keeping the data confidential, and this does not create any issues related to authorship. If you chose to do so, you should chose a new analysis approach that has not yet been performed.
+- You are welcome to use a dataset from your own research. There is no problem keeping the data confidential, and this does not create any issues related to authorship. If you choose to do so, you should choose a new analysis approach that has not yet been performed.
