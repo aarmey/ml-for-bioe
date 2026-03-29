@@ -195,7 +195,7 @@ $$
 ## λ (or t) as a tuning parameter
 
 - Again, we have a tuning parameter λ that controls the amount of regularization
-- One-to-one correspondence with the threshhold t:
+- One-to-one correspondence with the threshold t:
 	- recall the constraint: $$\sum_{j=1}^p = \lVert \beta_j \rVert \leq t$$
 	- Hence, have a "path" of solutions indexed by $t$
 	- If $t_0 = \sum_{j=1}^p \lVert \hat{\beta}_j^{ls} \rVert$ (equivalently, λ = 0), we obtain no shrinkage (and hence obtain the LS solutions as our solution)

@@ -24,7 +24,7 @@ author: Aaron Meyer (based on slides from Bruce Tidor)
 
 Remember BE 110!
 
-Let's say we have to ligands that dimerize, then this dimer binds to a receptor as one unit:
+Let's say we have two ligands that dimerize, then this dimer binds to a receptor as one unit:
 
 $$ L_f + L_f \leftrightarrow L_D $$
 

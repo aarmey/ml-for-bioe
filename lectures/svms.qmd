@@ -24,7 +24,7 @@ author: Aaron Meyer (adapted from slides by Martin Law)
 ::: {.column width="50%"}
 - Found in the blood of metastatic cancer patients
 - Approximately 1 CTC per billion blood cells
-- CTs have great clinical value
+- CTCs have great clinical value
 	- Liquid biopsy
 	- Genetic information
 	- Prognostic
@@ -267,7 +267,7 @@ Go over circle inside circle with transformation to polar coordinates.
 
 - Large margin classifier
 - Ridge regression: the term $\tfrac{1}{2}\lVert w \rVert^2$ “shrinks” the parameters towards zero to avoid overfitting
-- The term the term $\tfrac{1}{2}\lVert w \rVert^2$ can also be viewed as imposing a weight-decay prior on the weight vector
+- The term $\tfrac{1}{2}\lVert w \rVert^2$ can also be viewed as imposing a weight-decay prior on the weight vector
 
 ## Choosing the Kernel Function
 

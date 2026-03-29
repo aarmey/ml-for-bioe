@@ -148,7 +148,7 @@ If you do these three things, you will do well.
 
 ::: {.notes}
 - Extensive changes this year, so I am interested in your feedback
-- If you aren't famiilar with a term, guaranteed we should review
+- If you aren't familiar with a term, guaranteed we should review
 :::
 
 # Introduction
@@ -289,7 +289,7 @@ We've already been talking about these! Distributions describe the range of prob
 ## Other Probabilities
 
 Conditional probability
-~ The measure of an event given that another event has occured.
+~ The measure of an event given that another event has occurred.
 
 Marginal distribution
 ~ The probability distribution regardless of other observations/factors.
@@ -361,7 +361,7 @@ Multinomial
 
 The moments of a distribution describe its shape: $$\mu_{n}=\int_{-\infty}^{\infty}(x-c)^{n}\,f(x)\,\mathrm{d} x$$
 
-- Mean ($n=1$), variance ($n=2$), skewness ($n=3$), kertosis ($n=4$)
+- Mean ($n=1$), variance ($n=2$), skewness ($n=3$), kurtosis ($n=4$)
 - Essential properties to determining how data will behave during analysis:
 	- How might your measurements need to change with changes in variance?
 	- What are these values for a normal distribution?

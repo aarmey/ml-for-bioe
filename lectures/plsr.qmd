@@ -195,7 +195,7 @@ If you are trying to predict something, you should look at the cross-validated R
 
 ## Performance
 
-- PLSR is amazingly well at prediction
+- PLSR is amazingly good at prediction
 	- This is **incredibly** powerful
 - Interpreting **why** PLSR predicts something can be challenging
 

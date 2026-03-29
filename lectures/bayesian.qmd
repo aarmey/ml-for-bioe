@@ -43,7 +43,7 @@ $$\Rightarrow P(A\mid B)={\frac {P(B\mid A)\,P(A)}{P(B)}},\;\text{if}\; P(B)\neq
 - Left unpublished
 - Posthumously recognized, edited, and published by Richard Price in 1770's
 - Elected to Royal Society based on the work
-- Philisophical extensions by Pierre-Simon Laplace
+- Philosophical extensions by Pierre-Simon Laplace
 :::
 
 ## Classic example: Binomial experiment
