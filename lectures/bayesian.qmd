@@ -324,22 +324,6 @@ Questions:
 - A US resident receives a positive test. What is the chance they have HIV?
 - How would this change if 5% of the population were infected?
 
-## Diagnostic testing: worked solution
-
-Let $H$ = infected, $+$ = positive test. Applying Bayes' rule:
-$$P(H \mid +) = \frac{P(+ \mid H)\, P(H)}{P(+)} = \frac{\text{sensitivity} \times \text{prevalence}}{\text{sensitivity} \times \text{prevalence} + (1-\text{specificity}) \times (1-\text{prevalence})}$$
-
-**Case 1: prevalence = 0.34%**
-$$P(H \mid +) = \frac{0.977 \times 0.0034}{0.977 \times 0.0034 + 0.05 \times 0.9966} = \frac{0.00332}{0.00332 + 0.04983} \approx 6.3\%$$
-
-**Case 2: prevalence = 5%**
-$$P(H \mid +) = \frac{0.977 \times 0.05}{0.977 \times 0.05 + 0.05 \times 0.95} = \frac{0.04885}{0.04885 + 0.04750} \approx 50.7\%$$
-
-::: {.notes}
-- The prior (prevalence) dominates when it is very small — even a good test produces mostly false positives in a low-prevalence population.
-- This illustrates why screening programs in low-prevalence populations require confirmatory testing.
-:::
-
 # Reading & Resources
 
 - 📖: [Bayesian Data Analysis](https://stat.columbia.edu/~gelman/books/)
