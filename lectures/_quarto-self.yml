@@ -1,3 +1,6 @@
+filters:
+  - filters/notes.lua
+
 toc: true
 toc-title: "Outline"
 toc-depth: 1
