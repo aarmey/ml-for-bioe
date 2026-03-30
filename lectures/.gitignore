@@ -1,1 +1,6 @@
 /.quarto/
+
+*.html
+*.typ
+*.pdf
+**/*.quarto_ipynb

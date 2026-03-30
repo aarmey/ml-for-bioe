@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="PCA-Fig2" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 203.21 159.82">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke-dasharray: .65 3.89;
+      }
+
+      .st0, .st1 {
+        stroke-dashoffset: 3.89px;
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .st0, .st1, .st3, .st4, .st5, .st7 {
+        stroke-width: 1.57px;
+      }
+
+      .st0, .st11 {
+        stroke: #f1e0e0;
+      }
+
+      .st12 {
+        fill: #eb2f30;
+      }
+
+      .st1 {
+        stroke: #b22b2d;
+        stroke-dasharray: .45 2.25;
+      }
+
+      .st2 {
+        stroke: #9a3225;
+      }
+
+      .st2, .st8, .st11 {
+        stroke-width: 1.12px;
+      }
+
+      .st3 {
+        stroke-linecap: round;
+      }
+
+      .st3, .st6, .st7, .st8, .st9 {
+        stroke: #09aa4e;
+      }
+
+      .st13, .st14, .st15 {
+        fill-rule: evenodd;
+      }
+
+      .st13, .st16, .st17 {
+        fill: #f1e0e0;
+      }
+
+      .st4 {
+        stroke: #eb2f30;
+      }
+
+      .st18, .st19, .st20, .st21, .st17 {
+        font-family: Helvetica, Helvetica;
+      }
+
+      .st18, .st19, .st21, .st22 {
+        font-size: 7.2px;
+      }
+
+      .st18, .st15 {
+        fill: #09aa4e;
+      }
+
+      .st23 {
+        letter-spacing: 2.72em;
+      }
+
+      .st5 {
+        stroke: #0ca74f;
+      }
+
+      .st14 {
+        fill: #29b6e9;
+      }
+
+      .st19 {
+        fill: #0ca74f;
+      }
+
+      .st20, .st21, .st22 {
+        fill: #231f20;
+      }
+
+      .st20, .st16, .st17 {
+        font-size: 7.2px;
+      }
+
+      .st6 {
+        stroke-width: .9px;
+      }
+
+      .st9, .st10 {
+        stroke-width: .45px;
+      }
+
+      .st10 {
+        stroke: #7bcaf1;
+      }
+
+      .st16, .st22 {
+        font-family: Symbol, Symbol;
+      }
+    </style>
+  </defs>
+  <line class="st1" x1="88.84" y1="118.57" x2="33.65" y2="86.41"/>
+  <path class="st14" d="M104.72,96.34c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M104.72,96.34c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M116.37,96.05c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M116.37,96.05c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <text class="st17" transform="translate(32.78 58.16)"><tspan x="0" y="0">Monastery</tspan></text>
+  <text class="st16" transform="translate(86.89 92.82)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st17" transform="translate(90.84 92.82)"><tspan x="0" y="0">1</tspan></text>
+  <text class="st17" transform="translate(69.19 105.06)"><tspan x="0" y="0">Across</tspan></text>
+  <text class="st17" transform="translate(107.64 92.53)"><tspan x="0" y="0">Insane</tspan></text>
+  <line class="st1" x1="31.46" y1="86.82" x2="44.86" y2="64.1"/>
+  <text class="st17" transform="translate(83.17 55.54)"><tspan x="0" y="0">Infectious</tspan></text>
+  <text class="st17" transform="translate(166.48 140.3)"><tspan x="0" y="0">Bag</tspan></text>
+  <polyline class="st13" points="11.23 95.91 195.32 96.49 195.03 96.78"/>
+  <polyline class="st0" points="11.23 95.91 195.32 96.49 195.03 96.78"/>
+  <text class="st16" transform="translate(89.33 121.95)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st17" transform="translate(93.28 121.95)"><tspan x="0" y="0">2</tspan></text>
+  <path class="st14" d="M93.65,96.63c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M93.65,96.63c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <line class="st8" x1="54.09" y1="58.95" x2="106.44" y2="89.29"/>
+  <polyline class="st15" points="57.75 59.38 51.36 57.36 56.3 61.91 58.92 61.73 57.75 59.38"/>
+  <polygon class="st7" points="57.75 59.38 51.36 57.36 56.3 61.91 58.92 61.73 57.75 59.38"/>
+  <polyline class="st15" points="98.28 86.24 104.69 88.28 99.74 83.71 97.12 83.89 98.28 86.24"/>
+  <polygon class="st7" points="98.28 86.24 104.69 88.28 99.74 83.71 97.12 83.89 98.28 86.24"/>
+  <text class="st17" transform="translate(106.77 105.64)"><tspan x="0" y="0">Relief</tspan></text>
+  <path class="st11" d="M150.46,94.86v2.91M162.11,95.15v2.91M186,95.44v2.91M173.18,95.15v2.91M138.23,95.15v2.91M126.28,94.86v2.91M114.92,94.86v2.91M91.62,95.44v2.91M79.39,95.44v2.91M68.61,95.15v2.91M56.67,94.57v2.91M45.01,94.57v2.91M33.07,94.57v2.91M20.84,94.28v2.91M100.94,142.63h2.91M101.82,130.69h2.91M101.52,106.8h2.91M100.65,83.79h2.91"/>
+  <line class="st12" x1="102.11" y1="159.82" x2="101.78" y2="26.12"/>
+  <line class="st0" x1="102.11" y1="159.82" x2="101.78" y2="26.12"/>
+  <line class="st11" x1="101.23" y1="47.96" x2="104.15" y2="47.96"/>
+  <line class="st3" x1="75" y1="142.59" x2="127.86" y2="51.98"/>
+  <path class="st4" d="M50.34,57.4l-1.69,3.63,3.2-2.41M50.12,59.56l28.53-35.36"/>
+  <line class="st2" x1="44.24" y1="66.16" x2="47.38" y2="60.7"/>
+  <line class="st5" x1="20.6" y1="49.13" x2="190.89" y2="147.45"/>
+  <line class="st2" x1="92.03" y1="120.28" x2="86.57" y2="117.13"/>
+  <path class="st4" d="M94.57,113.39l-1.57,3.69,3.13-2.5M94.35,115.73l57.71-75.81"/>
+  <line class="st6" x1="99.17" y1="120.47" x2="108.28" y2="105.16"/>
+  <polyline class="st15" points="98.38 118.92 97.43 123.43 100.9 120.4 100.38 118.4 98.38 118.92"/>
+  <polygon class="st9" points="98.38 118.92 97.43 123.43 100.9 120.4 100.38 118.4 98.38 118.92"/>
+  <polyline class="st15" points="108.61 107.35 109.58 102.86 106.09 105.87 106.61 107.87 108.61 107.35"/>
+  <polygon class="st9" points="108.61 107.35 109.58 102.86 106.09 105.87 106.61 107.87 108.61 107.35"/>
+  <text class="st17" transform="translate(93.28 38.35)"><tspan x="0" y="0">5</tspan></text>
+  <text class="st17" transform="translate(93.28 50.29)"><tspan x="0" y="0">4</tspan></text>
+  <text class="st17" transform="translate(93.28 61.65)"><tspan x="0" y="0">3</tspan></text>
+  <text class="st17" transform="translate(93.28 73.6)"><tspan x="0" y="0">2</tspan></text>
+  <text class="st17" transform="translate(93.28 84.96)"><tspan x="0" y="0">1</tspan></text>
+  <text class="st17" transform="translate(127.45 103.02)"><tspan x="0" y="0">Slope</tspan></text>
+  <text class="st17" transform="translate(12.97 70.98)"><tspan x="0" y="0">Therefore</tspan></text>
+  <text class="st17" transform="translate(62.49 69.52)"><tspan x="0" y="0">Scoundrel</tspan></text>
+  <text class="st17" transform="translate(39.77 46.51)"><tspan x="0" y="0">Generality</tspan></text>
+  <text class="st17" transform="translate(159.2 103.6)"><tspan x="0" y="0">Arise</tspan></text>
+  <text class="st17" transform="translate(141.14 117.87)"><tspan x="0" y="0">Solid</tspan></text>
+  <text class="st17" transform="translate(177.55 115.54)"><tspan x="0" y="0">Blot</tspan></text>
+  <text class="st17" transform="translate(134.15 138.56)"><tspan x="0" y="0">On</tspan></text>
+  <text class="st17" transform="translate(106.18 114.96)"><tspan x="0" y="0">With</tspan></text>
+  <text class="st17" transform="translate(109.1 136.22)"><tspan x="0" y="0">For</tspan></text>
+  <text class="st17" transform="translate(120.75 148.75)"><tspan x="0" y="0">By</tspan></text>
+  <text class="st17" transform="translate(119.58 125.45)"><tspan x="0" y="0">This</tspan></text>
+  <text class="st17" transform="translate(41.23 34.27)"><tspan x="0" y="0">Pretentious</tspan></text>
+  <text class="st17" transform="translate(160.95 92.24)"><tspan class="st23" x="0" y="0">5</tspan><tspan x="23.59" y="0">7</tspan></text>
+  <text class="st17" transform="translate(172.6 92.24)"><tspan x="0" y="0">6</tspan></text>
+  <text class="st17" transform="translate(148.42 92.24)"><tspan x="0" y="0">4</tspan></text>
+  <text class="st17" transform="translate(137.94 92.24)"><tspan x="0" y="0">3</tspan></text>
+  <text class="st17" transform="translate(125.99 92.24)"><tspan x="0" y="0">2</tspan></text>
+  <text class="st17" transform="translate(113.76 92.24)"><tspan x="0" y="0">1</tspan></text>
+  <text class="st16" transform="translate(15.3 93.32)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st17" transform="translate(19.25 93.32)"><tspan x="0" y="0">7</tspan></text>
+  <text class="st16" transform="translate(27.37 93.32)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st17" transform="translate(31.32 93.32)"><tspan x="0" y="0">6</tspan></text>
+  <text class="st16" transform="translate(39.43 93.32)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st17" transform="translate(43.38 93.32)"><tspan x="0" y="0">5</tspan></text>
+  <text class="st16" transform="translate(51.5 93.32)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st17" transform="translate(55.45 93.32)"><tspan x="0" y="0">4</tspan></text>
+  <text class="st16" transform="translate(63.56 93.32)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st17" transform="translate(67.51 93.32)"><tspan x="0" y="0">3</tspan></text>
+  <text class="st16" transform="translate(75.62 93.32)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st17" transform="translate(79.57 93.32)"><tspan x="0" y="0">2</tspan></text>
+  <text class="st16" transform="translate(89.33 134.77)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st17" transform="translate(93.28 134.77)"><tspan x="0" y="0">3</tspan></text>
+  <text class="st16" transform="translate(89.33 110.3)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st17" transform="translate(93.28 110.3)"><tspan x="0" y="0">1</tspan></text>
+  <text class="st16" transform="translate(89.33 146.13)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st17" transform="translate(93.28 146.13)"><tspan x="0" y="0">4</tspan></text>
+  <text class="st19" transform="translate(188.36 139.57) rotate(30)"><tspan x="0" y="0">1</tspan></text>
+  <text class="st20" transform="translate(0 86.24)"><tspan x="0" y="0">Neither</tspan></text>
+  <text class="st18" transform="translate(74.79 136.54) rotate(-60)"><tspan x="0" y="0">2</tspan></text>
+  <text class="st20" transform="translate(123.99 6.18)"><tspan x="0" y="0">Projection of</tspan></text>
+  <text class="st20" transform="translate(130.6 14.28)"><tspan x="0" y="0">“neither”</tspan></text>
+  <text class="st20" transform="translate(43.11 19.83)"><tspan x="0" y="0">On first component</tspan></text>
+  <text class="st20" transform="translate(130.79 32.64)"><tspan x="0" y="0">On second component</tspan></text>
+  <text class="st22" transform="translate(113.46 105.05) rotate(120)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st21" transform="translate(111.49 108.47) rotate(120)"><tspan x="0" y="0">2.38</tspan></text>
+  <path class="st14" d="M174.63,131c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.92-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M174.63,131c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.92-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <text class="st22" transform="translate(72.41 64.55) rotate(30)"><tspan x="0" y="0">−</tspan></text>
+  <text class="st21" transform="translate(75.83 66.53) rotate(30)"><tspan x="0" y="0">5.60</tspan></text>
+  <path class="st14" d="M140.55,142.65c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M140.55,142.65c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M117.05,142.17c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M117.05,142.17c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M52.29,61.09c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M52.29,61.09c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M63.94,61.09c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M63.94,61.09c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M59.57,37.79c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M59.57,37.79c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M105.01,130.71c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M105.01,130.71c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M23.64,61.77c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <circle class="st10" cx="21.6" cy="61.77" r="2.04"/>
+  <path class="st14" d="M59.28,49.44c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <circle class="st10" cx="57.24" cy="49.44" r="2.04"/>
+  <path class="st14" d="M81.71,48.57c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <circle class="st10" cx="79.67" cy="48.57" r="2.04"/>
+  <path class="st14" d="M116.76,119.35c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.92-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <circle class="st10" cx="114.72" cy="119.35" r="2.04"/>
+  <path class="st14" d="M140.06,108.18c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M140.06,108.18c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M152.49,108.28c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M152.49,108.28c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M185.41,119.64c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M185.41,119.64c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M163.56,108.57c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M163.56,108.57c0,1.13-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M34.13,85.37c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M34.13,85.37c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st14" d="M105.69,119.74c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04"/>
+  <path class="st10" d="M105.69,119.74c0,1.12-.91,2.04-2.04,2.04s-2.04-.91-2.04-2.04.91-2.04,2.04-2.04,2.04.91,2.04,2.04Z"/>
+  <path class="st11" d="M100.94,73.01h2.91M100.94,60.78h2.91M101.23,37.77h2.91"/>
+</svg>
