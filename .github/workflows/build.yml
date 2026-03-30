@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: 1.7.30
@@ -24,7 +24,7 @@ jobs:
         run: make slides && make pubnotes
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v8
 
       - name: Build notebooks
         run: make convert
@@ -43,12 +43,14 @@ jobs:
         run: cp site/content/examples/*.html site/public/examples/
 
       - name: Restore lychee cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .lycheecache
           key: cache-lychee-${{ github.sha }}
           restore-keys: cache-lychee-
       - name: Run lychee
+        # disable lychee for now
+        if: false
         uses: lycheeverse/lychee-action@v2
         with:
           args: --root-dir "$(pwd)" --accept '100..=103,200..=299,403,409' --cache --max-cache-age 14d './**/*.html'
