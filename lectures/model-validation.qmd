@@ -99,7 +99,7 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 - Let the $K$ parts be $C_1,C_2,\ldots C_K$, where $C_k$ denotes the indices of the observations in part $k$. There are $n_k$ observations in part $k$: if $N$ is a multiple of $K$, then $n_k = n/K$.
 - Compute: $$CV_{(K)} =  \sum^{K}_{k=1} \frac{n_k}{n} MSE_k$$
 	- Where $MSE_k = \sum_{i\in C_k} (y_i - \hat{y}_i)^2/n_k$
-	- $\hat{y}_i$ is the prediction for observation $i$ when it was in the removed.
+	- $\hat{y}_i$ is the prediction for observation $i$ when its fold was removed from training.
 - Setting $K = n$ yields *leave-one out cross-validation* (LOOCV).
 
 ## Auto data revisited
