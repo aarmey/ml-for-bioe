@@ -9,7 +9,7 @@ author: "Aaron Meyer & Yosuke Tanigawa"
 
 ### Lecture
 
-- Mondays/Wednesdays, 8–9:50 am
+- Tuesdays/Thursdays, 8–9:50 am
 - Boelter 2760
 
 ### Lab
