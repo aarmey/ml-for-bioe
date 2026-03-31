@@ -60,9 +60,7 @@ title: "Course outline - BE 275"
 
 ### Week 7, Nov 11 – 15
 
-- [Lecture 14: Gaussian Mixture Models](../lectures/gmms.html)
-  - [Understanding Gaussians](https://gestalt.ink/gaussians)
-  - [Example Notebook](../examples/Gaussian-Mixtures.ipynb)
+- Lecture 14: Gaussian Mixture Models
 - [Lecture 15: Support vector machines](../lectures/svms.html)
   - [Example Notebook](../examples/SVMs-example.ipynb)
 - Lab: Attend Research Day!
