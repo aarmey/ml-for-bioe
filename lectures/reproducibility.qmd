@@ -240,12 +240,13 @@ Imagine that we'd like to add a method `subtractWeeks` to a `Date` class, that s
 
 - Other source of variation: the code surrounding your analysis
 	- E.g. `seaborn` package changes the way it orders colors on a graph
-	- A solution to this is `virtualenv`
-		- This is a package that creates a virtual environment to run your python code
-		- Can avoid anything someone else might have installed / messed with
-	- Often projects will have a `requirements.txt` file
-		- Stores the names *and versions* of all the packages used
-		- Then can install specifically these before doing anything
+	- A solution to this is `uv`, a modern Python package manager
+		- Creates an isolated virtual environment for your project
+		- Pins exact versions of all dependencies in a lockfile (`uv.lock`)
+		- Much faster than older tools like `pip` or `virtualenv`
+	- Projects using `uv` have a `pyproject.toml` file
+		- Declares the project's dependencies and metadata
+		- The `uv.lock` lockfile records exact versions of every package, ensuring anyone running the project gets the same environment
 
 ## Containerization
 
@@ -254,6 +255,9 @@ Imagine that we'd like to add a method `subtractWeeks` to a `Date` class, that s
 	- One way to do this is with a container
 	- E.g. docker, which downloads and runs a virtual machine
 - Essentially you start up a "virtual computer", then install everything you need
+- **Dev containers**: VS Code Dev Containers and GitHub Codespaces provide a more accessible entry point
+	- Define your entire development environment in a `.devcontainer/` config file
+	- Anyone opening the project gets the same environment automatically
 
 # Integration testing
 
@@ -302,7 +306,8 @@ Imagine that we'd like to add a method `subtractWeeks` to a `Date` class, that s
 	- NOT exhaustive; just sees whether code "smokes" (breaks)
 	- used (along with compilation) to make sure daily build runs
 - continuous integration:
-	- Adding new units immediately as they are written.
+	- Automatically running tests on every commit, typically via a service like GitHub Actions.
+	- Catches bugs early and ensures the codebase stays in a working state.
 
 # Associated topics & tools
 
@@ -332,7 +337,9 @@ Imagine that we'd like to add a method `subtractWeeks` to a `Date` class, that s
 - For example: `pythonfunctioniwrotemyselfonasundayafterwaytoomuchcoffee(argument = False)`
 - Linters are programs to check various rules about how code should be written
 - Can also use static analysis to determine potential errors
-- `pylint` is a linter for python code
+- `ruff` is the modern standard for Python linting and formatting
+	- Replaces both `pylint` (linter) and `black` (formatter) in a single, extremely fast tool
+	- Catches style issues, unused imports, potential bugs, and enforces consistent formatting
 
 ## Code review
 
@@ -340,9 +347,37 @@ Imagine that we'd like to add a method `subtractWeeks` to a `Date` class, that s
 	- Can be informal, or part of a formal process
 - Goal is to identify bugs, improve code quality, and transfer knowledge
 - Can be done before or after code is committed
-- Mostly done by a human, though AI tools are becoming better
+- AI-assisted review (GitHub Copilot, Claude, etc.) is now mainstream and widely used in production
+	- Useful for catching surface-level issues quickly, but can miss logic errors, domain-specific correctness, or security flaws
+	- Human review remains essential for critical code paths
 - Some companies require code review for all code
 	- Can be a good way to catch errors, and ensure code quality
+
+# Reproducibility in Machine Learning
+
+## Random seeds and non-determinism
+
+- Many ML workflows involve randomness: weight initialization, data shuffling, dropout, etc.
+	- Setting a random seed (`numpy.random.seed`, `torch.manual_seed`) controls this
+	- But GPU operations can still be non-deterministic even with seeds set
+	- A seed only tests *one* outcome — make sure results are robust across seeds
+
+## Data and model versioning
+
+- Code isn't the only thing that changes — datasets and model checkpoints do too
+- **DVC** (Data Version Control) tracks datasets and model artifacts alongside code
+	- Works like git for large files, storing metadata in the repo and data in remote storage
+	- Lets you reproduce any past result by checking out a specific version of both code and data
+
+## Notebook reproducibility
+
+- Jupyter notebooks are common in research and bioinformatics, but have a reproducibility trap:
+	- Cells can be run out of order, leaving hidden state in memory
+	- A notebook that "works" interactively may fail when run top-to-bottom
+- Best practices:
+	- Always test notebooks by restarting the kernel and running all cells in order
+	- `nbstripout` removes output and execution counts from notebooks before committing to git
+	- `papermill` can execute notebooks programmatically as part of a pipeline
 
 # Summary
 
@@ -353,12 +388,13 @@ Imagine that we'd like to add a method `subtractWeeks` to a `Date` class, that s
 
 # Further Reading
 
-- [`unittest`](https://docs.python.org/3.6/library/unittest.html), the built-in python testing framework
-- [`hypothesis`](https://hypothesis.readthedocs.io/en/latest/index.html), a python package for property-based testing
-- [`datafuzz`](https://github.com/kjam/datafuzz), a python package for data fuzzing
-- [`pylint`](https://www.pylint.org), a python linter
-- [`ruff`](https://docs.astral.sh/ruff/), a modern python formatter
+- [`unittest`](https://docs.python.org/3/library/unittest.html), the built-in python testing framework
 - [`pytest`](https://doc.pytest.org/en/latest/), a package to run small, readable tests
+- [`hypothesis`](https://hypothesis.readthedocs.io/en/latest/index.html), a python package for property-based testing
+- [`ruff`](https://docs.astral.sh/ruff/), a modern python linter and formatter
+- [`uv`](https://docs.astral.sh/uv/), a modern Python package and environment manager
+- [`dvc`](https://dvc.org), data version control for ML datasets and model artifacts
+- [`papermill`](https://papermill.readthedocs.io/), parameterizing and executing Jupyter notebooks
 
 ## Review Questions
 
