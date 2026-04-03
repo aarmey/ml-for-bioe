@@ -30,7 +30,13 @@ $$ L_f + L_f \leftrightarrow L_D $$
 
 $$ L_D + R_f \leftrightarrow R_b $$
 
-If we want to know about how these species interact, we can model their behavior with the rate equations that describe this process.
+If we want to know about how these species interact, we can model their behavior with the rate equations:
+
+$$\frac{dL_f}{dt} = -k_1 L_f^2 + k_{-1}L_D$$
+
+$$\frac{dL_D}{dt} = k_1 L_f^2 - k_2 L_D R_f + k_{-2} R_b$$
+
+$$\frac{dR_b}{dt} = k_2 L_D R_f - k_{-2} R_b, \quad \frac{dR_f}{dt} = k_{-2} R_b - k_2 L_D R_f$$
 
 ::: {.notes}
 - $\frac{dL_f}{dt} = -k_1 L_f^2 + k_{-1}L_D$
@@ -67,8 +73,8 @@ flowchart LR
 ::: {.notes}
 - Copy to board
 - What does each compartment represent?
-- $V_1 \frac{dC_1}{dt} = k_e C_1 V_1 - k_1 C_1 V_1 + k_2 C_2 V_2$
-- $V_2 \frac{dC_2}{dt} = k_1 C_1 V_1 + k_2 C_2 V_2$
+- $V_1 \frac{dC_1}{dt} = -k_e C_1 V_1 - k_1 C_1 V_1 + k_2 C_2 V_2$
+- $V_2 \frac{dC_2}{dt} = k_1 C_1 V_1 - k_2 C_2 V_2$
 :::
 
 ## Applications of ODE models: Pharmacokinetics
@@ -89,15 +95,22 @@ flowchart LR
 - $k_2$ is the rate constant for mass transfer from the peripheral to central compartment.
 	- $k_2 C_2 V_2$ is the mass of drug/time that transfers from the peripheral to the central compartment.
 
+## Applications of ODE models: Pharmacokinetics
+
+Governing equations for the two-compartment model:
+
+$$V_1 \frac{dC_1}{dt} = -k_e C_1 V_1 - k_1 C_1 V_1 + k_2 C_2 V_2$$
+
+$$V_2 \frac{dC_2}{dt} = k_1 C_1 V_1 - k_2 C_2 V_2$$
 
 ## Applications of ODE models: Pharmacokinetics
 
 - Have a bolus i.v. injection
 	- No drug in both compartments for $t<0$
-	- D μg of drug administered at once at $t=0$
+	- Total dose $D$ (μg) administered at once at $t=0$
 	- Drug distribution occurs instantaneously in the central compartment.
 		- Also get well-mixed instantaneously.
-		- Concentration in central compartment at $t=0$ is D μg/mL
+		- Concentration in central compartment at $t=0$ is $C_1(0) = D/V_1$ μg/mL
 - No chemical reactions in the compartment
 
 ::: {.notes}
@@ -108,8 +121,16 @@ Work out equations above. Going to learn a mathematical trick to solve!
 
 #### Lotka-Volterra Equations
 
+- Prey population $x$, predator population $y$:
+
+$$\dot{x} = \alpha x - \beta x y$$
+
+$$\dot{y} = \delta x y - \gamma y$$
+
+- $\alpha$: prey birth rate; $\beta$: predation rate per encounter
+- $\gamma$: predator death rate; $\delta$: predator growth per prey consumed
+
 ::: {.notes}
-- maybe come back to these at the end
 - Prey is x
 - Predator is y
 - $\dot{x} = \alpha x - \beta x y$
@@ -156,9 +177,9 @@ Reality often requires handling in between:
 
 ## Stability Analysis
 
-- Can solve for steady-states of a system $$\frac{\delta F}{\delta t} = 0$$
+- Can solve for steady-states of a system $$\frac{dF}{dt} = 0$$
 - Results of this can be both stable or unstable points
-	- With stable points, slope of $\frac{\delta F}{\delta t}$ is negative
+	- With stable points, slope of $\frac{dF}{dt}$ is negative
 	- In multivariate case, this means eigenvalues of Jacobian are negative
 - Steady-state points aren't necessarily realistic or feasible!
 	- NNLSQ can solve for points
@@ -168,7 +189,7 @@ Reality often requires handling in between:
 Walk through 1D case of stability.
 :::
 
-## Generalization
+## Linear vs. Nonlinear Systems
 
 - Linear models are easier to simulate and understand than non-linear
 	- Linearity: If $\mathbf{x}_1$ and $\mathbf{x}_2$ are both solutions, then $c_1 \mathbf{x}_1 + c_2 \mathbf{x}_2$ is also a solution
@@ -299,6 +320,17 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ![](./figs/dynamics/nonlin-9.svg){fig-alt="Classification of fixed points based on eigenvalue properties"}
 
+## Eigenvalue Behavior Summary
+
+| Eigenvalues | Fixed Point Type | Behavior |
+|---|---|---|
+| Real, both negative | Stable node | Trajectories converge to fixed point |
+| Real, both positive | Unstable node | Trajectories diverge from fixed point |
+| Real, opposite signs | Saddle point | Stable in one direction, unstable in another |
+| Complex, negative real part | Stable spiral | Oscillatory decay toward fixed point |
+| Complex, positive real part | Unstable spiral | Oscillatory divergence from fixed point |
+| Purely imaginary | Center | Neutral closed orbits (undamped oscillation) |
+
 ## Relevance for Nonlinear Dynamics
 
 - So, we have said that we can find fixed points of nonlinear dynamics, linearize about each fixed point, and characterize the dynamics about each fixed point in the non-linear model by the corresponding linear model.
@@ -318,11 +350,27 @@ Non-linear $\dot{\mathbf{x}} = f(\mathbf{x})$ and given an initial condition.
 
 ![](./figs/dynamics/10a.svg){fig-alt="Diagram of a saddle-node bifurcation"}
 
+- Canonical example: $\dot{x} = r + x^2$
+  - For $r < 0$: two fixed points (one stable, one unstable)
+  - At $r = 0$: the two fixed points collide and annihilate
+  - For $r > 0$: no fixed points — system escapes to infinity
+
+## Hopf Bifurcation
+
+- A **Hopf bifurcation** occurs when a fixed point changes stability and a **limit cycle** (sustained oscillation) is born or destroyed
+- Eigenvalues of $J$ cross the imaginary axis as a parameter varies
+- Common in biological oscillators: circadian rhythms, cell cycle checkpoints, neural firing
+
+::: {.notes}
+- A stable limit cycle is born at a supercritical Hopf bifurcation
+- An unstable limit cycle is born at a subcritical Hopf bifurcation — the system can then jump discontinuously to a distant attractor
+:::
+
 # Example: Genetic Control Network
 
 ## Genetic Control Network
 
-Griffith (1971) model of genetic control:
+The Griffith model is a canonical example of a **saddle-node bifurcation** giving rise to bistability — two coexisting stable steady states separated by an unstable one. Griffith (1971) model of genetic control:
 
 - x = protein concentration
 - y = mRNA concentration
@@ -360,15 +408,17 @@ Go through example of mass balance at deriv and solution.
 
 ## Python Packages
 
-SciPy provides two interfaces for ODE solving:
+SciPy provides several interfaces for ODE solving:
 
-- [scipy.integrate.ode](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.ode.html)
-- [scipy.integrate.odeint](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html)
+- [scipy.integrate.solve_ivp](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html) — **recommended modern interface**
+- [scipy.integrate.odeint](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html) — legacy, widely used in existing code
+- [scipy.integrate.ode](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.ode.html) — low-level interface
 
 Notes:
 
-- Both can solve stiff and non-stiff equations.
-- ode has a number of different methods. Pay attention to the `set_integrator` option.
+- All can solve stiff and non-stiff equations.
+- `scipy.integrate.ode` exposes multiple backends; use `set_integrator` to select (e.g., `'vode'`, `'lsoda'`).
+- `solve_ivp` uses the `method` argument instead (default `'RK45'`; use `'Radau'` or `'BDF'` for stiff systems).
 
 ## Code Example: Pendulum Oscillation
 
@@ -442,7 +492,7 @@ plt.show()
 
 ## Analysis Example: The Cell Cycle
 
-You build a very simple model of cells transitioning between both phases of the cell cycle?
+Consider a simple model of cells transitioning between two phases of the cell cycle:
 
 ```{mermaid}
 graph LR
@@ -481,18 +531,26 @@ $\alpha$ and/or $\beta$ would have to be negative to oscillate.
 - For systems where there are two processes operating on differing timescales, this can be problematic
 	- If everything happens really fast, the system will come to equilibrium quickly
 	- If everything is slow, you can take longer steps
+- A typical biological example: receptor–ligand binding equilibrates in milliseconds, while downstream transcriptional responses occur over hours — a $10^6$-fold difference in timescale
 - *Stiff* solvers additionally require the Jacobian matrix
 	- This very roughly allows them to keep track of these differences in timescales
 - `odeint` can automatically find this for you
 	- Sometimes it's faster/better to provide this as parameter `Dfun`
+- For stiff problems with `solve_ivp`, prefer `method='Radau'` or `method='BDF'`
 
 ## Implementation Note: Matrix Exponential
 
 If $J$ is the Jacobian matrix of an ODE model, $y(t) = e^{Jt} y_0$.
 
+For a diagonalizable $J = V \Lambda V^{-1}$, this becomes:
+
+$$e^{Jt} = V e^{\Lambda t} V^{-1}$$
+
+where $e^{\Lambda t}$ is a diagonal matrix of $e^{\lambda_i t}$ — directly connecting to our eigenvalue stability analysis.
+
 Matrix exponential is also implemented.
 
-- [scipy.linalg.expm](https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.linalg.expm.html)
+- [scipy.linalg.expm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.expm.html)
 	- This method is numerically stable, but there are faster implementations elsewhere.
 - A commonly used package is [expokit](https://www.maths.uq.edu.au/expokit/)
 
@@ -500,9 +558,28 @@ For linear systems, this can be >1000x faster.
 
 # Reading & Resources
 
-- 💾: [scipy.linalg.expm](https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.linalg.expm.html)
+- 💾: [scipy.linalg.expm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.expm.html)
 - 💾: [scipy.integrate.odeint](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html)
 - 📖: [Steven Strogatz, Nonlinear Dynamics and Chaos](https://www.biodyn.ro/course/literatura/Nonlinear_Dynamics_and_Chaos_2018_Steven_H._Strogatz.pdf)
+
+## Fitting ODE Models to Data
+
+- ODE models have no closed-form solution in general — must simulate to evaluate the likelihood
+- Fitting is an **outer optimization loop** around numerical integration:
+
+```python
+from scipy.integrate import solve_ivp
+from scipy.optimize import minimize
+
+def residuals(params):
+    sol = solve_ivp(model, t_span, y0, args=(params,), t_eval=t_obs)
+    return np.sum((sol.y.T - y_obs)**2)
+
+result = minimize(residuals, params_init)
+```
+
+- Can constrain to oscillatory solutions by checking eigenvalues of $J$ at steady state
+	- Oscillation requires eigenvalues with nonzero imaginary part
 
 ## Review Questions
 
