@@ -88,19 +88,23 @@ idea of the test error of the final chosen model.
 
 ## K-fold cross-validation in detail
 
-   **1**            2       3       4       5
----------------- ------- ------- ------- -------
- **Validation**   Train   Train   Train   Train
+ Fold    Part 1           Part 2           Part 3           Part 4           Part 5
+------- ---------------- ---------------- ---------------- ---------------- ----------------
+  1     **Validation**   Train            Train            Train            Train
+  2     Train            **Validation**   Train            Train            Train
+  3     Train            Train            **Validation**   Train            Train
+  4     Train            Train            Train            **Validation**   Train
+  5     Train            Train            Train            Train            **Validation**
 
-Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
+Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here). Each row shows which part is held out for that fold.
 
 ## The details
 
-- Let the $K$ parts be $C_1,C_2,\ldots C_K$, where $C_k$ denotes the indices of the observations in part $k$. There are $n_k$ observations in part $k$: if $N$ is a multiple of $K$, then $n_k = n/K$.
+- Let the $K$ parts be $C_1,C_2,\ldots C_K$, where $C_k$ denotes the indices of the observations in part $k$. There are $n_k$ observations in part $k$: if $n$ is a multiple of $K$, then $n_k = n/K$.
 - Compute: $$CV_{(K)} =  \sum^{K}_{k=1} \frac{n_k}{n} MSE_k$$
 	- Where $MSE_k = \sum_{i\in C_k} (y_i - \hat{y}_i)^2/n_k$
 	- $\hat{y}_i$ is the prediction for observation $i$ when its fold was removed from training.
-- Setting $K = n$ yields *leave-one out cross-validation* (LOOCV).
+- Setting $K = n$ yields *leave-one out cross-validation* (LOOCV). LOOCV uses nearly all the data for training, minimizing bias, but the estimates across folds come from nearly-identical training sets and are therefore highly correlated — leading to high variance in the overall error estimate.
 
 ## Auto data revisited
 
@@ -114,7 +118,7 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 
 - Since each training set is only $(K - 1)/K$ as big as the original training set, the estimates of prediction error will typically be biased upward. ***Why?***
 - This bias is minimized when $K = n_{(LOOCV)}$, but this estimate has high variance, as noted earlier.
-- $K = 5--10$ provides a good compromise.
+- $K = 5$–$10$ provides a good compromise.
 
 ## Cross-validation: right and wrong
 
@@ -140,8 +144,23 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here)
 - Cross-validation within/between.
 :::
 
+## Nested cross-validation
+
+- When you tune hyperparameters *and* want an honest estimate of generalization error, a single CV loop does both — but the chosen model was selected based on the same folds used to estimate error, producing an optimistic bias.
+- **Nested CV** separates the two concerns:
+	- **Outer loop**: holds out a test fold to estimate generalization error.
+	- **Inner loop**: runs a full CV on the remaining data to select hyperparameters.
+- The outer error estimate is unbiased because the test fold never influenced model selection.
+- Computationally expensive ($K_{\text{outer}} \times K_{\text{inner}}$ fits), but essential when comparing models that were tuned to the data.
+
+::: {.notes}
+Draw the nested loop on the board. Emphasize: the outer fold is touched exactly once, only for evaluation.
+:::
+
 # The Bootstrap
 
+- Cross-validation resamples by *partitioning* — it asks how well the model generalizes to held-out data.
+- The bootstrap resamples *with replacement* and serves a complementary purpose: quantifying the uncertainty of an estimate itself.
 - The *bootstrap* is a flexible and powerful statistical tool that can be used to quantify the uncertainty associated with a given estimator or statistical learning method.
 - For example, it can provide an estimate of the standard error of a coefficient, or a confidence interval for that coefficient.
 
@@ -200,7 +219,7 @@ Go over example of color blindness with replacement by gender.
 
 - In cross-validation, each of the $K$ validation folds is distinct from the other $K-1$ folds used for training: *there is no overlap.* This is crucial for its success. *Why?*
 - To estimate prediction error using the bootstrap, we could think about using each bootstrap dataset as our training sample, and the original sample as our validation sample.
-- But each bootstrap sample has significant overlap with the original data. About two-thirds of the original data points appear in each bootstrap sample. *Can you prove this?*
+- But each bootstrap sample has significant overlap with the original data. About two-thirds of the original data points appear in each bootstrap sample. The probability that a given observation is *not* selected in a single draw is $(1 - 1/n)$. Over $n$ draws, the probability it never appears is $(1 - 1/n)^n \to e^{-1} \approx 0.368$ as $n \to \infty$, so roughly $1 - 0.368 = 63.2\%$ of observations appear in each bootstrap sample.
 - This will cause the bootstrap to seriously underestimate the true prediction error. *Why?*
 
 ::: {.notes}
@@ -224,6 +243,10 @@ Go through dataset randomization.
 :::
 
 # Example: Prognostic gene expression signatures
+
+- The following papers illustrate the real consequences of CV leakage in biomedical research.
+- Gene selection (step 1) was performed on the full dataset before cross-validation (step 2) — exactly the error described above.
+- The result: signatures built from *random, biologically meaningless genes* appeared prognostically significant.
 
 ![ ](./figs/crossval/example-1.png){fig-alt="Survival curves showing prognostic gene expression signatures separating patients into risk groups."}
 
@@ -253,6 +276,8 @@ Go through dataset randomization.
 - `cv`: int, cross-validation generator or an iterable, optional
 - `n_jobs`: integer, optional
 
+Use `cross_val_predict` instead when you need the out-of-fold predictions themselves (e.g., for calibration plots or stacking) rather than just a summary score.
+
 ::: {.notes}
 Go through a notebook here.
 :::
@@ -261,8 +286,9 @@ Go through a notebook here.
 
 - `sklearn.model_selection.KFold(n_splits=3, shuffle=False, random_state=None)`
 - `sklearn.model_selection.LeaveOneOut()`
+- `sklearn.model_selection.StratifiedKFold(n_splits=5)` — preserves class proportions in each fold; important for imbalanced classification problems where an unlucky split could place all minority-class examples in training or validation.
 
-Both use loop `for train_index, test_index in kf.split(X):`.
+All use loop `for train_index, test_index in kf.split(X):`.
 
 `get_n_splits` provides number of iterations that will occur.
 
