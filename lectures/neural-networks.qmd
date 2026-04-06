@@ -1,0 +1,534 @@
+---
+title: "Neural Networks"
+author: Aaron Meyer
+---
+
+# Application
+
+## Classifying Cells by Deformability
+
+![ ](./figs/neural-networks/masaeli-title.png){fig-alt="Title of Masaeli et al. 2016 describing real-time label-free cell classification using deformability cytometry."}
+
+::: {.notes}
+Masaeli et al. used a neural network to classify cell types from deformability measurements alone—no fluorescent labels. The network learned subtle shape and mechanical signatures that no hand-crafted feature set had captured. This is the motivation for the lab: you'll implement a similar classifier. Keep this application in mind as we develop the tools.
+:::
+
+---
+
+### Why can't simpler models handle this?
+
+- The feature space is **high-dimensional**: images + mechanical signals
+- The relevant structure is **nonlinear**: cell type isn't linearly separable in raw pixel space
+- The "right" features are **unknown a priori**: handcrafted features miss what matters
+- Neural networks learn a hierarchy of features directly from the data
+
+::: {.notes}
+Contrast with logistic regression (linear decision boundary), PCA (linear structure), and even regularized regression. Each of those requires the right features to already exist. Neural networks discover the features themselves.
+:::
+
+# Neural Network Architecture
+
+## From Neurons to Networks
+
+- A single **artificial neuron** computes:
+  $$a = \sigma\!\left(\sum_{i} w_i x_i + b\right) = \sigma(\mathbf{w}^\top \mathbf{x} + b)$$
+  - $\mathbf{x}$: inputs; $\mathbf{w}$: weights; $b$: bias; $\sigma$: **activation function**
+- A **layer** applies this operation to every neuron in parallel
+- A **network** stacks multiple layers: the output of one layer is the input to the next
+
+::: {.notes}
+The key is the nonlinear activation function σ. Without it, stacking layers would just be matrix multiplication—equivalent to a single linear layer. The nonlinearity is what allows deep networks to represent complex functions.
+:::
+
+---
+
+### Feedforward network architecture
+
+```{python}
+#| echo: false
+#| fig-cap: "A fully connected feedforward network. Each node computes a weighted sum of its inputs, then applies an activation function."
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+
+# Left: network diagram
+ax = axes[0]
+ax.set_xlim(0, 1)
+ax.set_ylim(0, 1)
+ax.axis('off')
+
+layer_sizes = [3, 5, 5, 2]
+layer_x     = [0.12, 0.37, 0.63, 0.88]
+layer_names = ['Input\nlayer', 'Hidden\nlayer 1', 'Hidden\nlayer 2', 'Output\nlayer']
+colors      = ['#AED6F1', '#A9DFBF', '#A9DFBF', '#F9E79F']
+edge_colors = ['#2980B9', '#27AE60', '#27AE60', '#D4AC0D']
+
+all_nodes = []
+for i, (lx, n) in enumerate(zip(layer_x, layer_sizes)):
+    ys = np.linspace(0.18, 0.82, n)
+    layer_nodes = [(lx, y) for y in ys]
+    all_nodes.append(layer_nodes)
+    for y in ys:
+        c = plt.Circle((lx, y), 0.038, color=colors[i], ec=edge_colors[i], lw=1.8, zorder=5)
+        ax.add_patch(c)
+    ax.text(lx, 0.05, layer_names[i], ha='center', fontsize=9.5, va='top')
+
+for i in range(len(all_nodes) - 1):
+    for (x1, y1) in all_nodes[i]:
+        for (x2, y2) in all_nodes[i + 1]:
+            ax.plot([x1, x2], [y1, y2], color='gray', alpha=0.22, lw=0.8, zorder=1)
+
+ax.set_title('Feedforward Network', fontsize=12)
+
+# Right: single neuron zoom
+ax2 = axes[1]
+ax2.set_xlim(0, 1)
+ax2.set_ylim(0, 1)
+ax2.axis('off')
+ax2.set_title('Single Neuron', fontsize=12)
+
+# Input arrows
+inputs = [0.15, 0.35, 0.55, 0.75]
+for j, iy in enumerate(inputs):
+    ax2.annotate('', xy=(0.45, 0.5), xytext=(0.05, iy),
+                 arrowprops=dict(arrowstyle='->', color='gray', lw=1.2))
+    ax2.text(0.03, iy, f'$x_{j+1}$', ha='right', va='center', fontsize=12)
+    ax2.text(0.23, (iy + 0.5) / 2 + 0.02, f'$w_{j+1}$', ha='center',
+             va='bottom', fontsize=10, color='#555')
+
+neuron = plt.Circle((0.55, 0.5), 0.09, color='#A9DFBF', ec='#27AE60', lw=2, zorder=5)
+ax2.add_patch(neuron)
+ax2.text(0.55, 0.5, r'$\sigma$', ha='center', va='center', fontsize=16, zorder=6)
+
+ax2.annotate('', xy=(0.92, 0.5), xytext=(0.64, 0.5),
+             arrowprops=dict(arrowstyle='->', color='gray', lw=1.5))
+ax2.text(0.95, 0.5, '$a$', ha='left', va='center', fontsize=13)
+ax2.text(0.55, 0.3, r'$a = \sigma\!\left(\mathbf{w}^\top\mathbf{x} + b\right)$',
+         ha='center', va='top', fontsize=11)
+
+plt.tight_layout()
+plt.show()
+```
+
+## Activation Functions
+
+```{python}
+#| echo: false
+#| fig-cap: "Common activation functions. ReLU dominates modern hidden layers; sigmoid and softmax are used in output layers for classification."
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 400)
+fig, axes = plt.subplots(1, 3, figsize=(12, 4))
+
+activations = [
+    ('ReLU', np.maximum(0, x),      '#2980B9', r'$\max(0,\, x)$'),
+    ('Sigmoid', 1 / (1 + np.exp(-x)), '#E74C3C', r'$\frac{1}{1+e^{-x}}$'),
+    ('tanh',    np.tanh(x),           '#27AE60', r'$\tanh(x)$'),
+]
+
+for ax, (name, y, color, formula) in zip(axes, activations):
+    ax.plot(x, y, color=color, lw=2.5)
+    ax.axhline(0, color='black', lw=0.7)
+    ax.axvline(0, color='black', lw=0.7)
+    ax.set_title(f'{name}: {formula}', fontsize=11)
+    ax.set_xlabel('$x$')
+    ax.grid(True, alpha=0.3)
+    ax.set_xlim(-3, 3)
+
+plt.tight_layout()
+plt.show()
+```
+
+- **ReLU** (rectified linear unit): sparse, fast to compute, avoids vanishing gradient—the default choice for hidden layers
+- **Sigmoid**: output in $(0,1)$—useful for binary probability outputs
+- **tanh**: output in $(-1,1)$—zero-centered, often used in recurrent networks
+
+::: {.notes}
+The choice of activation function matters a lot in practice. ReLU and its variants (leaky ReLU, GELU) dominate modern architectures. The key property is that the derivative is non-zero in at least some region—this allows gradients to flow during training.
+:::
+
+# Backpropagation
+
+## Backprop Is Reverse-Mode Autodiff
+
+- Recall from the autodifferentiation lecture:
+  - **Reverse mode**: one forward pass + one backward pass computes the gradient w.r.t. *all* parameters in $O(1)$ function evaluations
+  - Cost ∝ cost of the forward pass—regardless of how many parameters we have
+
+- Backpropagation is exactly reverse-mode autodiff applied to a neural network:
+  $$\frac{\partial L}{\partial w_{ij}^{(\ell)}} = \frac{\partial L}{\partial a_j^{(\ell)}} \cdot \frac{\partial a_j^{(\ell)}}{\partial z_j^{(\ell)}} \cdot \frac{\partial z_j^{(\ell)}}{\partial w_{ij}^{(\ell)}}$$
+  where $z_j^{(\ell)} = \mathbf{w}_j^{(\ell)\top}\mathbf{a}^{(\ell-1)} + b_j^{(\ell)}$ and $a_j^{(\ell)} = \sigma(z_j^{(\ell)})$
+
+::: {.notes}
+This is the chain rule, applied layer by layer, moving backwards through the network. The "delta" terms are the error signals propagated from the output. Modern frameworks (PyTorch, JAX, TensorFlow) implement this automatically—you never write backprop by hand.
+
+The connection to autodiff is important: backprop is not a special algorithm unique to neural networks. It is a special case of reverse-mode AD applied to a specific computational graph. JAX's `jax.grad` computes this for any function, not just neural networks.
+:::
+
+---
+
+### Training loop in practice
+
+```python
+import jax
+import jax.numpy as jnp
+import optax  # gradient-based optimizers
+
+# Define network forward pass
+def predict(params, x):
+    for W, b in params[:-1]:
+        x = jax.nn.relu(x @ W + b)
+    W, b = params[-1]
+    return x @ W + b
+
+# Loss function
+def loss_fn(params, x_batch, y_batch):
+    preds = predict(params, x_batch)
+    return jnp.mean((preds - y_batch) ** 2)
+
+# Gradient via reverse-mode autodiff
+grad_fn = jax.jit(jax.grad(loss_fn))
+
+# Stochastic gradient descent step
+optimizer = optax.adam(learning_rate=1e-3)
+opt_state = optimizer.init(params)
+
+for x_batch, y_batch in dataloader:
+    grads = grad_fn(params, x_batch, y_batch)
+    updates, opt_state = optimizer.update(grads, opt_state)
+    params = optax.apply_updates(params, updates)
+```
+
+::: {.notes}
+Point out that jax.grad does all the backpropagation automatically. The user just specifies the forward pass and the loss. The training loop is: compute gradient, update parameters, repeat. Mini-batching (not the full dataset each step) makes this tractable for large datasets.
+:::
+
+---
+
+### The non-convex optimization landscape
+
+- Unlike ridge regression or LASSO, the neural network loss surface is **non-convex**
+  - Multiple local minima exist
+  - The landscape has saddle points and flat regions ("plateaus")
+- Classical convex optimization guarantees do **not** apply
+
+- Yet in practice, large overparameterized networks train reliably. Why?
+  - In very high dimensions, local minima tend to have similar loss values
+  - Stochastic gradient descent (SGD) acts as an implicit regularizer—it finds "flat" minima that generalize better than sharp ones
+
+::: {.notes}
+This is an active research area. The key empirical observation is that for sufficiently overparameterized models, the loss landscape has very few "bad" local minima—most local minima are near the global minimum. This is not true for small networks.
+
+The SGD implicit bias toward flat minima is related to the double descent story: SGD finds solutions that are "smooth" in weight space, which tends to generalize well.
+:::
+
+# Regularization in Neural Networks
+
+## The Gap Between Theory and Practice
+
+- The Universal Approximation Theorem guarantees that a large enough network can represent the target function
+- But in practice, without regularization:
+  - Large networks memorize noise
+  - Training diverges or oscillates
+  - Generalization fails badly
+
+- Everything we know about regularization still applies—just adapted to the NN setting
+
+::: {.notes}
+This is the key message of this section. Double descent and UAT explain *why* overparameterized networks can generalize—but they don't tell you how to *make them* generalize in practice. That requires the techniques in this section.
+:::
+
+---
+
+### Training curves without and with regularization
+
+```{python}
+#| echo: false
+#| fig-cap: "Training and validation loss with and without regularization. Without regularization, the network memorizes training data but fails to generalize. Early stopping (dashed line) is a simple regularizer."
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+epochs = np.arange(1, 251)
+
+train_overfit = 0.9 * np.exp(-0.025 * epochs) + 0.02
+val_overfit   = (0.8 * np.exp(-0.008 * epochs) + 0.35
+                 + 0.18 * np.log1p(0.015 * epochs)
+                 + np.random.normal(0, 0.012, len(epochs)))
+
+train_reg = 0.9 * np.exp(-0.022 * epochs) + 0.1
+val_reg   = (0.85 * np.exp(-0.018 * epochs) + 0.15
+             + np.random.normal(0, 0.008, len(epochs)))
+val_reg   = np.clip(val_reg, 0.1, 1.0)
+
+early_stop = 55
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+
+for ax, (tr, va, title, show_stop) in zip(axes, [
+    (train_overfit, val_overfit, 'Without regularization', True),
+    (train_reg,     val_reg,     'With regularization',    False),
+]):
+    ax.plot(epochs, tr, color='#2980B9', lw=2, label='Training loss')
+    ax.plot(epochs, va, color='#E74C3C', lw=2, label='Validation loss')
+    if show_stop:
+        ax.axvline(early_stop, color='black', lw=1.5, linestyle='--', label='Early stopping')
+        ax.annotate('Generalization\ngap grows', xy=(180, 0.65), fontsize=9,
+                    color='#C0392B',
+                    bbox=dict(boxstyle='round,pad=0.3', fc='#fde', ec='#E74C3C', alpha=0.8))
+    ax.set_xlabel('Epoch', fontsize=11)
+    ax.set_ylabel('Loss', fontsize=11)
+    ax.set_title(title, fontsize=12)
+    ax.set_ylim(0, 1.05)
+    ax.legend(fontsize=10)
+
+plt.tight_layout()
+plt.show()
+```
+
+## Weight Decay
+
+- **Weight decay** adds an $\ell_2$ penalty to the loss—directly analogous to ridge regression:
+  $$L_\text{reg}(\boldsymbol{\theta}) = L(\boldsymbol{\theta}) + \frac{\lambda}{2}\|\boldsymbol{\theta}\|_2^2$$
+- Penalizes large weights; shrinks them toward zero during training
+- Bayesian interpretation: Gaussian prior $\theta_j \sim \mathcal{N}(0, 1/\lambda)$ on each weight
+  - From the Bayesian lecture: MAP estimation with a Gaussian prior = $\ell_2$ regularization
+
+::: {.notes}
+This is a direct callback to both the regularization lecture (ridge regression) and the Bayesian lecture (MAP = regularization). The same principle works at scale.
+
+Note: in neural networks, we typically don't regularize bias terms—only weights.
+:::
+
+## Dropout
+
+- During each forward pass, randomly **zero out** a fraction $p$ of neurons (Srivastava et al., 2014)
+- At test time, scale all activations by $(1-p)$ to preserve expected magnitude
+
+```{python}
+#| echo: false
+#| fig-cap: "Dropout at training time: a random subset of neurons is silenced each forward pass. This forces the network to learn redundant representations."
+import matplotlib.pyplot as plt
+import numpy as np
+
+np.random.seed(7)
+fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+layer_sizes = [3, 5, 5, 2]
+layer_x     = [0.12, 0.37, 0.63, 0.88]
+dropped = {(1, 1), (1, 3), (2, 0), (2, 3)}
+
+for ax_idx, (ax, title) in enumerate(zip(axes, ['Full network (inference)', 'Dropout (training, p=0.4)'])):
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis('off')
+    ax.set_title(title, fontsize=12)
+
+    all_nodes = []
+    is_active = []
+    for i, (lx, n) in enumerate(zip(layer_x, layer_sizes)):
+        ys = np.linspace(0.18, 0.82, n)
+        layer_nodes = [(lx, y) for y in ys]
+        all_nodes.append(layer_nodes)
+        layer_active = []
+        for j, y in enumerate(ys):
+            dropped_node = (ax_idx == 1) and (i, j) in dropped
+            color    = '#E8E8E8' if dropped_node else '#AED6F1'
+            ec_color = '#AAAAAA' if dropped_node else '#2980B9'
+            c = plt.Circle((lx, y), 0.038, color=color, ec=ec_color, lw=1.8, zorder=5)
+            ax.add_patch(c)
+            if dropped_node:
+                ax.text(lx, y, '✕', ha='center', va='center', color='#AAAAAA', fontsize=13, zorder=6)
+            layer_active.append(not dropped_node)
+        is_active.append(layer_active)
+
+    for i in range(len(all_nodes) - 1):
+        for j, (x1, y1) in enumerate(all_nodes[i]):
+            for k, (x2, y2) in enumerate(all_nodes[i + 1]):
+                if is_active[i][j] and is_active[i + 1][k]:
+                    ax.plot([x1, x2], [y1, y2], color='gray', alpha=0.28, lw=0.9, zorder=1)
+
+plt.tight_layout()
+plt.show()
+```
+
+::: {.notes}
+Dropout forces the network to learn distributed representations: no single neuron can "specialize" and be relied upon because it might be dropped. At test time, the full network is used but with scaled activations—this approximates averaging over the exponentially many thinned networks, which is an ensemble method.
+
+Dropout can also be interpreted as approximate Bayesian inference (Gal & Ghahramani, 2016)—connecting again to the Bayesian lecture.
+:::
+
+---
+
+### Batch normalization
+
+- After each layer, normalize activations to have zero mean and unit variance across the training mini-batch:
+  $$\hat{x}_i = \frac{x_i - \mu_\mathcal{B}}{\sqrt{\sigma_\mathcal{B}^2 + \epsilon}}, \qquad y_i = \gamma \hat{x}_i + \delta$$
+- Learnable scale $\gamma$ and shift $\delta$ restore representational capacity
+- Benefits:
+  - Stabilizes optimization: prevents activations from exploding or vanishing
+  - Acts as mild regularization (adding noise through batch statistics)
+  - Allows higher learning rates → faster training
+
+::: {.notes}
+Batch norm was introduced by Ioffe & Szegedy (2015) and became ubiquitous quickly. The mechanism is still debated—it was originally motivated as reducing "internal covariate shift," but later work showed the optimization stability benefit is the dominant effect.
+:::
+
+---
+
+### Summary: regularization toolkit for neural networks
+
+| Method | Mechanism | Analogy |
+|---|---|---|
+| Weight decay | $\ell_2$ penalty on weights | Ridge regression |
+| Dropout | Random neuron silencing | Ensemble averaging |
+| Early stopping | Stop before validation loss rises | Cross-validation |
+| Batch norm | Normalize activations per batch | Conditioning |
+| Data augmentation | Random transforms of training data | Effectively enlarges $n$ |
+
+::: {.notes}
+In practice, you use all of these simultaneously. The specific strengths depend on the architecture and dataset. Data augmentation (not shown in detail) is often the most powerful: for images, random flips/crops/color jitter; for molecules, random rotations; for sequences, random masking.
+:::
+
+# Structure as Inductive Bias
+
+## The Key Insight
+
+- A fully connected network is **structure-agnostic**: it treats all inputs symmetrically
+- This is flexible, but expensive: it must *learn* from scratch that nearby pixels are correlated, that molecules are rotation-invariant, that sequences have order
+- **Inductive biases** bake known structure into the architecture:
+  - Less data needed to learn the relevant function
+  - Better generalization on finite datasets
+  - Often leads to models that are interpretable in domain terms
+
+::: {.notes}
+This is the deepest conceptual point of the lecture. UAT says any function is representable; inductive biases say which function is *easy* to learn. The history of deep learning is largely a history of discovering the right inductive biases for each domain.
+
+Connect back to regularization: inductive biases are another form of regularization—they constrain the hypothesis space to functions consistent with our domain knowledge.
+:::
+
+## Convolutional Neural Networks (CNNs)
+
+- Designed for **spatially structured** data (images, 1-D signals)
+- Two key inductive biases:
+  1. **Local connectivity**: neurons connect only to nearby inputs—nearby pixels are more related
+  2. **Weight sharing**: the same filter is applied across all spatial positions (**translation equivariance**)
+
+$$(\mathbf{W} * \mathbf{x})_{i,j} = \sum_{k,\ell} W_{k,\ell} \cdot x_{i+k,\, j+\ell}$$
+
+- Many fewer parameters than fully connected layers for image-sized inputs
+- Applications in biology: cell morphology, histology, microscopy image analysis
+
+::: {.notes}
+For cell images like in the Masaeli example, translation equivariance is exactly right: a cell in the top-left corner should be classified the same way as the same cell in the bottom-right corner.
+
+Note: convolutional layers are not the same as Fourier transforms, but they share the translation equivariance property.
+:::
+
+---
+
+### Graph Neural Networks (GNNs)
+
+- Designed for data with **relational structure** (graphs, molecules, interaction networks)
+- Update node features by **aggregating information from neighbors**:
+  $$\mathbf{h}_v^{(\ell+1)} = \sigma\!\left(\mathbf{W}^{(\ell)} \cdot \text{AGGREGATE}\!\left(\left\{\mathbf{h}_u^{(\ell)} : u \in \mathcal{N}(v)\right\}\right)\right)$$
+- Key inductive biases:
+  - Permutation invariance over the node set (molecules have no canonical atom ordering)
+  - Local neighborhood aggregation reflects chemical bonding
+
+- Applications in bioengineering:
+  - Drug-target interaction prediction
+  - Protein–protein interaction networks
+  - Metabolic pathway modeling
+
+::: {.notes}
+GNNs are arguably the most important architecture for bioengineering applications because biology is fundamentally a graph-structured discipline: signaling networks, metabolic networks, protein contact maps. The structure of the graph reflects causal relationships, and GNNs can exploit this.
+:::
+
+---
+
+### Attention and Transformers
+
+- Rather than fixed local connectivity, **attention** learns which inputs to weight:
+  $$\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right) V$$
+- Inductive bias: **relational structure is data-dependent**, not hardcoded
+- More flexible than CNNs and GNNs—but requires more data to learn useful structure
+
+- Bioengineering applications:
+  - Protein language models (ESM, ProtTrans): treat protein sequence like text
+  - AlphaFold2: combines attention over sequence + structural inductive biases
+  - Single-cell transformers: model gene expression programs
+
+::: {.notes}
+The transformer architecture (Vaswani et al., 2017) was developed for NLP but has since dominated biology. The key insight is that "attention" generalizes to any domain where pairwise relationships matter. AlphaFold2 uses attention over both sequence and predicted pair representations—the inductive biases are about protein geometry (residue distance, angles), not just sequence order.
+:::
+
+# Applications in Bioengineering
+
+## Drug Response Prediction (Revisited)
+
+- In the regularization lecture, we used elastic net to predict drug sensitivity from genomic features in the CCLE
+- Neural networks can capture **nonlinear gene–drug interactions** that linear models miss
+- With enough data, a deep network often outperforms LASSO/ridge
+- But: neural networks require more data and careful regularization—with 500 cell lines, regularized linear models often win
+
+::: {.notes}
+This is an important practical lesson. Neural networks are not automatically better than simpler models. For n=500, the extra capacity of a deep network often leads to overfitting unless extremely well-regularized. The tradeoff shifts as n increases—this is another manifestation of double descent.
+:::
+
+---
+
+### Protein structure prediction: AlphaFold2
+
+- **Why it works**: massive structural inductive bias
+  - Equivariance to rotation and translation of the protein backbone
+  - Pair representation explicitly encodes residue–residue distances
+  - Iterative "recycling" refines structure over multiple passes
+- Training data: ~170,000 experimentally solved structures (PDB)
+- Result: near-experimental accuracy on most proteins—solved a 50-year-old problem
+
+::: {.notes}
+AlphaFold is the most striking example of what the right inductive biases can achieve. The network has ~93M parameters trained on ~170K structures—roughly 550 parameters per training example. This is highly regularized by bioengineering standards. The key was not just scale, but the right structural biases: triangular attention, equivariant frames, and evolutionary covariation signal.
+
+Jumper et al., Nature 2021.
+:::
+
+---
+
+### Cell morphology as a phenotypic readout
+
+- **Cell Painting** (Bray et al., 2016): image cells stained with 6 fluorescent dyes; extract ~1,500 morphological features
+- Neural networks trained on raw images learn features that correlate with:
+  - Mechanism of action of compounds
+  - Disease phenotype
+  - Genetic perturbation identity
+- Architecture: CNN backbone (treats image as spatially structured) + classification head
+
+::: {.notes}
+This connects directly to the Masaeli et al. paper. The key insight is that cell morphology is a rich, high-dimensional phenotype that encodes biological state. Neural networks, especially with CNN inductive biases, can extract this information in ways that hand-crafted features cannot.
+:::
+
+# Review
+
+## Further Reading
+
+- LeCun Y., Bengio Y., Hinton G. [Deep learning](https://www.nature.com/articles/nature14539). *Nature*, 2015.
+- Srivastava N. *et al.* [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://jmlr.org/papers/v15/srivastava14a.html). *JMLR*, 2014.
+- Jumper J. *et al.* [Highly accurate protein structure prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2). *Nature*, 2021.
+- Ching T. *et al.* [Opportunities and obstacles for deep learning in biology and medicine](https://doi.org/10.1098/rsif.2017.0387). *J. R. Soc. Interface*, 2018.
+- Masaeli M. *et al.* [Multicolor fluorescence imaging to study cell heterogeneity](https://www.nature.com/articles/srep37863). *Sci. Rep.*, 2016.
+- sklearn: [Neural network models](https://scikit-learn.org/stable/modules/neural_networks_supervised.html)
+
+## Review Questions {.smaller}
+
+1. What is the role of the activation function in a neural network? What would happen if all activations were linear?
+2. Explain how backpropagation is a special case of reverse-mode autodifferentiation. What is computed in the forward pass, and what is computed in the backward pass?
+3. Why is the neural network loss surface non-convex? What practical consequences does this have for training?
+4. A colleague trains a network and observes that training loss continues to decrease while validation loss starts to rise. What is happening, and what would you do?
+5. Weight decay is described as analogous to ridge regression. What is the analogous Bayesian interpretation for each? (Hint: what prior does each correspond to?)
+6. Dropout prevents any single neuron from being relied upon. How is this related to ensemble methods?
+7. What is an inductive bias? Give one example from each of: CNNs, GNNs, and attention mechanisms, and explain what assumption about the data each encodes.
+8. A fully connected network and a CNN are each trained on the same image classification task. The CNN uses far fewer parameters. Under what conditions might the simpler CNN outperform the larger fully connected network?
+9. AlphaFold2 has ~93M parameters trained on ~170K examples. How do you reconcile this with the double descent picture—shouldn't such an overparameterized model need far more data?
+10. For the cell deformability classification problem (Masaeli et al.), why might a CNN be preferred over a fully connected network? What symmetry does it exploit?
