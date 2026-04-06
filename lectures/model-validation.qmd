@@ -244,10 +244,6 @@ Go through dataset randomization.
 
 # Example: Prognostic gene expression signatures
 
-- The following papers illustrate the real consequences of CV leakage in biomedical research.
-- Gene selection (step 1) was performed on the full dataset before cross-validation (step 2) — exactly the error described above.
-- The result: signatures built from *random, biologically meaningless genes* appeared prognostically significant.
-
 ![ ](./figs/crossval/example-1.png){fig-alt="Survival curves showing prognostic gene expression signatures separating patients into risk groups."}
 
 ## Random gene expression signatures are associated with survival
