@@ -696,7 +696,7 @@ Connection with the Klotz binding model
 
 ## Review Questions {.smaller}
 
-1. Are OLS or NNLS guaranteed to find the solution?
+1. Are OLS or NNLS guaranteed to find the optimal solution?
 2. How are new points predicted to be distributed in OLS?
 3. How are new points predicted to be distributed in NNLS?
 4. How might you determine whether the assumptions you made when running OLS are valid? (Hint: Think about the tests from lecture 1.)
