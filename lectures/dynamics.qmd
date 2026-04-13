@@ -1,6 +1,7 @@
 ---
 title: Dynamical models
 author: Aaron Meyer (based on slides from Bruce Tidor)
+jupyter: python3
 ---
 
 # Ordinary Differential Equations
@@ -15,7 +16,7 @@ author: Aaron Meyer (based on slides from Bruce Tidor)
 
 ::: {.notes}
 - ODEs are extremely valuable
-- During fitting, ML models are essentially a dynamic process
+- During fitting, ML models are essentially a dynamic process — we will return to this at the end of the lecture and show that optimizers like Adam are coupled ODE systems
 :::
 
 # Applications of ODE models
@@ -476,7 +477,30 @@ plt.show()
 
 ## Pendulum Oscillation
 
-![](./figs/dynamics/scipy-integrate-odeint-1.png){fig-alt="Plot of pendulum angle and angular velocity over time" .r-stretch}
+```{python}
+#| echo: false
+#| fig-alt: "Plot of pendulum angle and angular velocity over time"
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
+
+def pend(y, t, b, c):
+    theta, omega = y
+    dydt = [omega, -b*omega - c*np.sin(theta)]
+    return dydt
+
+b, c = 0.25, 5.0
+y0 = [np.pi - 0.1, 0.0]
+t = np.linspace(0, 10, 101)
+sol = odeint(pend, y0, t, args=(b, c))
+
+plt.plot(t, sol[:, 0], 'b', label='theta(t)')
+plt.plot(t, sol[:, 1], 'g', label='omega(t)')
+plt.legend(loc='best')
+plt.xlabel('t')
+plt.grid()
+plt.show()
+```
 
 ## Analysis Example: The Cell Cycle
 
@@ -526,30 +550,6 @@ $\alpha$ and/or $\beta$ would have to be negative to oscillate.
 	- Sometimes it's faster/better to provide this as parameter `Dfun`
 - For stiff problems with `solve_ivp`, prefer `method='Radau'` or `method='BDF'`
 
-## Implementation Note: Matrix Exponential
-
-If $J$ is the Jacobian matrix of an ODE model, $y(t) = e^{Jt} y_0$.
-
-For a diagonalizable $J = V \Lambda V^{-1}$, this becomes:
-
-$$e^{Jt} = V e^{\Lambda t} V^{-1}$$
-
-where $e^{\Lambda t}$ is a diagonal matrix of $e^{\lambda_i t}$ — directly connecting to our eigenvalue stability analysis.
-
-Matrix exponential is also implemented.
-
-- [scipy.linalg.expm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.expm.html)
-	- This method is numerically stable, but there are faster implementations elsewhere.
-- A commonly used package is [expokit](https://www.maths.uq.edu.au/expokit/)
-
-For linear systems, this can be >1000x faster.
-
-# Reading & Resources
-
-- 💾: [scipy.linalg.expm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.expm.html)
-- 💾: [scipy.integrate.odeint](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html)
-- 📖: [Steven Strogatz, Nonlinear Dynamics and Chaos](https://www.biodyn.ro/course/literatura/Nonlinear_Dynamics_and_Chaos_2018_Steven_H._Strogatz.pdf)
-
 ## Fitting ODE Models to Data
 
 - ODE models have no closed-form solution in general — must simulate to evaluate the likelihood
@@ -569,7 +569,364 @@ result = minimize(residuals, params_init)
 - Can constrain to oscillatory solutions by checking eigenvalues of $J$ at steady state
 	- Oscillation requires eigenvalues with nonzero imaginary part
 
-## Review Questions
+# Machine Learning as a Dynamical System
+
+```{python}
+#| include: false
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+plt.rcParams.update({
+    "font.family": "sans-serif",
+    "font.size": 11,
+    "axes.titlesize": 12,
+    "axes.labelsize": 11,
+    "axes.spines.top": False,
+    "axes.spines.right": False,
+})
+
+COLORS = {
+    "stable":      "#2ecc71",
+    "oscillatory": "#3498db",
+    "diverging":   "#e74c3c",
+}
+```
+
+## Optimization as a Discrete-Time ODE
+
+- Every iterative ML optimizer is a **discrete-time dynamical system**
+  - State vector: model parameters $\theta_t$ (and, for adaptive optimizers, auxiliary moment estimates)
+  - Update rule: $\theta_{t+1} = \theta_t - \eta \, g_t$ (analogue of an Euler integration step)
+- The **learning rate** $\eta$ plays the role of the integration step size
+  - Too small: slow convergence (fine-grained but inefficient)
+  - Too large: oscillation or divergence — exactly as in stiff ODE solvers
+
+::: {.notes}
+- Gradient descent with step size η on L(θ) = θ²/2 gives θ_{t+1} = (1−η)θ_t
+- This is a linear map with discrete eigenvalue λ = 1−η
+- |λ| < 1 ↔ convergence; λ < 0 ↔ sign-alternating (oscillatory)
+- The stability condition 0 < η < 2/L (L = Lipschitz constant of gradient) mirrors the ODE condition that all eigenvalues have negative real part
+:::
+
+## Stability Analysis of Gradient Descent
+
+For a quadratic loss $L(\theta) = \frac{1}{2}\theta^T H \theta$, the gradient descent update is:
+
+$$\theta_{t+1} = (I - \eta H)\,\theta_t$$
+
+The discrete eigenvalues are $\lambda_i = 1 - \eta h_i$, where $h_i$ are eigenvalues of the Hessian $H$.
+
+| Eigenvalue $\lambda_i$ | Fixed-Point Type | Behavior |
+|---|---|---|
+| $0 < \lambda < 1$ | Stable node | Monotone convergence |
+| $-1 < \lambda < 0$ | Stable spiral | Oscillatory convergence |
+| $\lambda < -1$ | Unstable | Divergence |
+| $\lambda = 0$ | Dead-beat | Converges in one step |
+
+## Stability Analysis of Gradient Descent
+
+**Stability requires** $0 < \eta < \frac{2}{h_\text{max}}$ — controlled entirely by the largest Hessian eigenvalue.
+
+```{python}
+#| echo: false
+#| fig-alt: "Three regimes of gradient descent for different learning rates: monotone convergence, oscillatory convergence, and divergence"
+fig, axes = plt.subplots(1, 3, figsize=(11, 3.8))
+
+configs = [
+    (0.3,  30, "stable",      r"$\eta = 0.3$" + "\nMonotone convergence",    r"$\lambda = 0.7$"),
+    (1.5,  30, "oscillatory", r"$\eta = 1.5$" + "\nOscillatory convergence",  r"$\lambda = -0.5$"),
+    (2.2,  15, "diverging",   r"$\eta = 2.2$" + "\nDivergence",               r"$\lambda = -1.2$"),
+]
+theta0 = 1.8
+for ax, (eta, n, key, title, lam_str) in zip(axes, configs):
+    thetas = [theta0]
+    for _ in range(n):
+        thetas.append((1 - eta) * thetas[-1])
+        if abs(thetas[-1]) > 8:
+            break
+    thetas = np.array(thetas)
+    color = COLORS[key]
+    ax.plot(range(len(thetas)), thetas, "o-", color=color, markersize=5,
+            linewidth=2, markerfacecolor="white", markeredgewidth=1.8)
+    ax.axhline(0, color="black", linestyle="--", linewidth=1, alpha=0.4)
+    ax.set_title(title, pad=8)
+    ax.set_xlabel("Iteration $t$")
+    ax.set_xlim(-0.5, n + 0.5)
+    ax.text(0.97, 0.97, lam_str, transform=ax.transAxes, ha="right", va="top",
+            fontsize=10, bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
+                                   edgecolor=color, linewidth=1.5))
+
+axes[0].set_ylabel(r"$\theta$ (parameter value)")
+
+ins = axes[0].inset_axes([0.55, 0.45, 0.42, 0.42])
+th = np.linspace(-2, 2, 200)
+ins.plot(th, th**2 / 2, color="gray", linewidth=1.5)
+ins.set_title(r"$L(\theta)=\frac{\theta^2}{2}$", fontsize=8, pad=2)
+ins.set_xticks([]); ins.set_yticks([])
+
+fig.suptitle("Learning Rate Governs Stability of Gradient Descent",
+             fontsize=13, fontweight="bold", y=1.01)
+plt.tight_layout()
+plt.show()
+```
+
+## The Condition Number Problem
+
+- Realistic loss surfaces have Hessian eigenvalues spanning many orders of magnitude (ill-conditioned)
+- For $L(\theta) = \frac{a}{2}\theta_1^2 + \frac{b}{2}\theta_2^2$ with $a \gg b$:
+  - Stability requires $\eta < 2/a$ — set by the **stiff** direction
+  - The slow direction $\theta_2$ then requires $\sim \frac{a}{b}$ more steps to converge
+
+## The Condition Number Problem
+
+- This is precisely the **stiff ODE** problem: fast and slow timescales coexist
+  - Just as stiff ODE solvers need the Jacobian, adaptive optimizers track local curvature
+
+```{python}
+#| echo: false
+#| fig-alt: "Phase portraits of gradient descent on an ill-conditioned quadratic loss showing monotone, oscillatory, and diverging trajectories"
+a, b = 8.0, 1.0
+
+th1 = np.linspace(-2.5, 2.5, 300)
+th2 = np.linspace(-2.5, 2.5, 300)
+T1, T2 = np.meshgrid(th1, th2)
+L = (a / 2) * T1**2 + (b / 2) * T2**2
+
+fig, axes = plt.subplots(1, 3, figsize=(12, 4.2))
+
+phase_configs = [
+    (0.08, [2.0, 2.0], "stable",      r"$\eta = 0.08$" + "\n(monotone, slow)"),
+    (0.18, [2.0, 2.0], "oscillatory", r"$\eta = 0.18$" + "\n(oscillatory convergence)"),
+    (0.28, [2.0, 2.0], "diverging",   r"$\eta = 0.28$" + "\n(divergence)"),
+]
+
+for ax, (eta, t0, key, title) in zip(axes, phase_configs):
+    traj = [np.array(t0, dtype=float)]
+    for _ in range(40):
+        t = traj[-1]
+        traj.append(t - eta * np.array([a * t[0], b * t[1]]))
+        if np.linalg.norm(traj[-1]) > 6:
+            break
+    traj = np.array(traj)
+
+    ax.contour(T1, T2, L, levels=[0.5, 1, 2, 4, 8, 16],
+               colors="gray", alpha=0.4, linewidths=0.8)
+    color = COLORS[key]
+    ax.plot(traj[:, 0], traj[:, 1], "o-", color=color, markersize=4,
+            linewidth=1.8, markerfacecolor="white", markeredgewidth=1.5)
+    ax.plot(traj[0, 0], traj[0, 1], "s", color=color, markersize=8, zorder=5)
+    ax.plot(0, 0, "*", color="black", markersize=12, zorder=6)
+
+    lam1, lam2 = 1 - eta * a, 1 - eta * b
+    ax.text(0.03, 0.97, f"λ₁ = {lam1:.2f}\nλ₂ = {lam2:.2f}",
+            transform=ax.transAxes, ha="left", va="top", fontsize=9,
+            fontfamily="monospace",
+            bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
+                      edgecolor=color, linewidth=1.5))
+    ax.set_xlim(-2.8, 2.8); ax.set_ylim(-2.8, 2.8)
+    ax.set_xlabel(r"$\theta_1$ (high curvature)")
+    ax.set_title(title, pad=8)
+    ax.set_aspect("equal")
+    ax.axhline(0, color="black", linewidth=0.5, alpha=0.3)
+    ax.axvline(0, color="black", linewidth=0.5, alpha=0.3)
+
+axes[0].set_ylabel(r"$\theta_2$ (low curvature)")
+fig.suptitle(
+    r"Phase Portraits of GD on $L=\frac{a}{2}\theta_1^2+\frac{b}{2}\theta_2^2$"
+    f"\n(condition number = {int(a/b)};  stable if  $\\eta < 2/a = {2/a:.2f}$)",
+    fontsize=12, fontweight="bold", y=1.03,
+)
+plt.tight_layout()
+plt.show()
+```
+
+::: {.notes}
+- Condition number a/b is directly analogous to the ratio of timescales in a stiff ODE
+- The same phenomenon that makes receptor-ligand binding + transcription hard to simulate also makes training deep networks hard
+- Preconditioning (Adam, L-BFGS) addresses this exactly as implicit ODE solvers do for stiff systems
+:::
+
+## Learning Rate as a Bifurcation Parameter
+
+- As $\eta$ increases past $1/h_\text{max}$, the fixed point changes from a **stable node** to a **stable spiral** — a bifurcation
+- Past $2/h_\text{max}$: the fixed point becomes **unstable** — training diverges
+- This is structurally identical to the bifurcations we studied for ODE systems
+
+```{python}
+#| echo: false
+#| fig-alt: "Bifurcation diagram showing how final parameter values depend on learning rate, with stable, oscillatory, and divergent regimes"
+a_bif = 6.0
+etas_bif = np.linspace(0.001, 0.42, 2000)
+eta_vals, theta_finals = [], []
+
+for eta in etas_bif:
+    th = 1.0
+    for _ in range(200):
+        th = (1 - eta * a_bif) * th
+    for _ in range(100):
+        th = (1 - eta * a_bif) * th
+        eta_vals.append(eta)
+        theta_finals.append(th)
+
+eta_vals = np.array(eta_vals)
+theta_finals = np.array(theta_finals)
+
+fig, ax = plt.subplots(figsize=(8, 4))
+
+mask_stable = np.abs(theta_finals) < 0.01
+mask_osc    = (~mask_stable) & (np.abs(theta_finals) < 5)
+mask_div    = np.abs(theta_finals) >= 5
+
+ax.scatter(eta_vals[mask_stable], theta_finals[mask_stable],
+           s=0.5, color=COLORS["stable"], alpha=0.4, label="Converged (θ → 0)")
+ax.scatter(eta_vals[mask_osc], theta_finals[mask_osc],
+           s=0.5, color=COLORS["oscillatory"], alpha=0.6, label="Oscillating")
+ax.scatter(eta_vals[mask_div], theta_finals[mask_div],
+           s=0.5, color=COLORS["diverging"], alpha=0.4, label="Diverged")
+
+crit, stab = 1.0 / a_bif, 2.0 / a_bif
+ax.axvline(crit, color=COLORS["oscillatory"], linewidth=1.5, linestyle="--",
+           label=f"Oscillation onset  η = 1/a = {crit:.3f}")
+ax.axvline(stab, color=COLORS["diverging"], linewidth=1.5, linestyle="--",
+           label=f"Stability boundary  η = 2/a = {stab:.3f}")
+
+ax.set_xlabel("Learning rate η"); ax.set_ylabel("θ after training (sampled)")
+ax.set_ylim(-6, 6); ax.set_xlim(0, 0.42)
+ax.set_title(
+    "Bifurcation Diagram: Learning Rate as the Bifurcation Parameter\n"
+    r"($L(\theta)=\frac{a}{2}\theta^2$,  " + f"$a={a_bif}$)",
+    fontsize=12, fontweight="bold"
+)
+ax.legend(loc="upper left", fontsize=9, markerscale=6)
+for x, label, color in [
+    (crit / 2,          "Stable\nnode",   COLORS["stable"]),
+    ((crit + stab) / 2, "Stable\nspiral", COLORS["oscillatory"]),
+    ((stab + 0.42) / 2, "Unstable",       COLORS["diverging"]),
+]:
+    ax.text(x, 5.2, label, ha="center", color=color, fontsize=9, fontweight="bold")
+
+plt.tight_layout()
+plt.show()
+```
+
+::: {.notes}
+- Learning rate schedules (warmup + decay) are a way to navigate the bifurcation landscape
+- Start with small η to find the basin, then increase (warmup) for speed, then decay as you approach the optimum
+- "Loss spikes" during training are transient exits from the basin of attraction — the system recovers when the trajectory re-enters
+:::
+
+## Adam as a Coupled Dynamical System {.smaller}
+
+Adam maintains **three state variables** — exactly like an ODE system with three coupled equations:
+
+$$m_t = \beta_1 m_{t-1} + (1-\beta_1)\,g_t \qquad \text{(1st moment — smoothed gradient)}$$
+
+$$v_t = \beta_2 v_{t-1} + (1-\beta_2)\,g_t^2 \qquad \text{(2nd moment — smoothed curvature)}$$
+
+$$\theta_t = \theta_{t-1} - \eta \, \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \varepsilon} \qquad \text{(parameter update)}$$
+
+- $m_t$ and $v_t$ are **state variables** with their own dynamics (exponential moving averages)
+- $\beta_1, \beta_2$ are decay constants — analogous to rate constants in ODE models
+- The effective step size $\eta / \sqrt{v_t}$ adapts to local curvature, making Adam more robust to ill-conditioning than SGD
+
+## Adam as a Coupled Dynamical System
+
+```{python}
+#| echo: false
+#| fig-alt: "Adam optimizer state variables over training: parameter trajectory, first moment, second moment, and effective step size"
+np.random.seed(42)
+
+def loss_grad(theta, noise_scale=0.3):
+    return 2 * (theta - 3.0) + np.random.randn() * noise_scale
+
+T = 120
+theta_sgd, theta_adam = 0.0, 0.0
+m, v = 0.0, 0.0
+beta1, beta2, eps_adam = 0.9, 0.999, 1e-8
+eta_sgd, eta_adam = 0.6, 0.3
+
+hist = {k: [] for k in ["theta_sgd", "theta_adam", "m", "v", "g"]}
+for t in range(1, T + 1):
+    theta_sgd -= eta_sgd * loss_grad(theta_sgd)
+    g = loss_grad(theta_adam)
+    m = beta1 * m + (1 - beta1) * g
+    v = beta2 * v + (1 - beta2) * g**2
+    m_hat = m / (1 - beta1**t)
+    v_hat = v / (1 - beta2**t)
+    theta_adam -= eta_adam * m_hat / (np.sqrt(v_hat) + eps_adam)
+    hist["theta_sgd"].append(theta_sgd)
+    hist["theta_adam"].append(theta_adam)
+    hist["m"].append(m); hist["v"].append(v); hist["g"].append(g)
+
+steps = np.arange(1, T + 1)
+m_arr, v_arr = np.array(hist["m"]), np.array(hist["v"])
+m_hat_arr = m_arr / (1 - beta1 ** steps)
+v_hat_arr = v_arr / (1 - beta2 ** steps)
+eff_step  = eta_adam * np.abs(m_hat_arr) / (np.sqrt(v_hat_arr) + eps_adam)
+
+fig = plt.figure(figsize=(11, 7))
+gs  = gridspec.GridSpec(2, 2, hspace=0.45, wspace=0.38)
+
+ax_theta = fig.add_subplot(gs[0, 0])
+ax_theta.plot(steps, hist["theta_sgd"], color=COLORS["oscillatory"],
+              linewidth=1.8, label=f"SGD (η={eta_sgd}, oscillating)", alpha=0.85)
+ax_theta.plot(steps, hist["theta_adam"], color=COLORS["stable"],
+              linewidth=2.0, label=f"Adam (η={eta_adam})")
+ax_theta.axhline(3.0, color="black", linestyle="--", linewidth=1, alpha=0.5, label="θ* = 3")
+ax_theta.set_xlabel("Iteration $t$"); ax_theta.set_ylabel(r"$\theta$")
+ax_theta.set_title("Parameter trajectory"); ax_theta.legend(fontsize=8.5)
+
+ax_m = fig.add_subplot(gs[0, 1])
+ax_m.plot(steps, hist["m"], color="#8e44ad", linewidth=2)
+ax_m.axhline(0, color="black", linewidth=0.5, alpha=0.3)
+ax_m.set_xlabel("Iteration $t$"); ax_m.set_ylabel(r"$m_t$")
+ax_m.set_title(r"Adam: 1st moment $m_t$ (smoothed gradient)")
+ax_m.text(0.97, 0.97, r"$m_t = \beta_1 m_{t-1} + (1-\beta_1)\,g_t$",
+          transform=ax_m.transAxes, ha="right", va="top", fontsize=9,
+          bbox=dict(boxstyle="round,pad=0.3", facecolor="#f0e6ff", edgecolor="#8e44ad", linewidth=1))
+
+ax_v = fig.add_subplot(gs[1, 0])
+ax_v.plot(steps, hist["v"], color="#e67e22", linewidth=2)
+ax_v.set_xlabel("Iteration $t$"); ax_v.set_ylabel(r"$v_t$")
+ax_v.set_title(r"Adam: 2nd moment $v_t$ (smoothed gradient²)")
+ax_v.text(0.97, 0.97, r"$v_t = \beta_2 v_{t-1} + (1-\beta_2)\,g_t^2$",
+          transform=ax_v.transAxes, ha="right", va="top", fontsize=9,
+          bbox=dict(boxstyle="round,pad=0.3", facecolor="#fde9d9", edgecolor="#e67e22", linewidth=1))
+
+ax_step = fig.add_subplot(gs[1, 1])
+ax_step.plot(steps, eff_step, color=COLORS["stable"], linewidth=2)
+ax_step.set_xlabel("Iteration $t$")
+ax_step.set_ylabel(r"$\eta \cdot |\hat{m}_t| / \sqrt{\hat{v}_t}$")
+ax_step.set_title("Adam: effective step size\n(self-regulating via state)")
+ax_step.text(0.97, 0.97, "Adapts automatically:\nlarge early, small near optimum",
+             transform=ax_step.transAxes, ha="right", va="top", fontsize=9,
+             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
+                       edgecolor=COLORS["stable"], linewidth=1))
+
+fig.suptitle(
+    "Adam Optimizer as a Coupled Dynamical System\n"
+    r"State variables: $\theta_t$, $m_t$ (1st moment), $v_t$ (2nd moment)",
+    fontsize=12, fontweight="bold", y=1.01,
+)
+plt.show()
+```
+
+::: {.notes}
+- The bias correction 1/(1−β^t) is the transient response of the exponential filter — same as the early-time behavior of a first-order ODE with zero initial condition
+- Fixed points of the Adam update equations: m* = g*, v* = g*² → effective step = η (constant), which is SGD at the optimum
+- Momentum (β₁) is literally the same as inertia in a damped harmonic oscillator: it smooths the gradient signal, suppressing oscillations
+:::
+
+# Reading & Resources
+
+- 💾: [scipy.linalg.expm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.expm.html)
+- 💾: [scipy.integrate.odeint](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.odeint.html)
+- 📖: [Steven Strogatz, Nonlinear Dynamics and Chaos](https://www.biodyn.ro/course/literatura/Nonlinear_Dynamics_and_Chaos_2018_Steven_H._Strogatz.pdf)
+- 📄: [Kingma & Ba, Adam: A Method for Stochastic Optimization (2014)](https://arxiv.org/abs/1412.6980)
+- 📄: [Ahn et al., SGD with Large Step Sizes Learns Sparse Features (2022)](https://arxiv.org/abs/2210.05337) — connects large-η oscillations to implicit regularization
+
+## Review Questions {.smaller}
 
 1. What is the steady-state solution to an ODE model? How do you solve for them?
 2. What is a phase-space diagram?
@@ -581,3 +938,5 @@ result = minimize(residuals, params_init)
 8. What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and negative, the other is imaginary)?
 9. How can you fit an ODE model to a series of measurements over time?
 10. How could you constrain an ODE system so that you only consider parameter values that have oscillation?
+11. Why does gradient descent on an ill-conditioned loss surface behave like a stiff ODE? What do adaptive optimizers like Adam do to address this?
+12. What is the analogue of a bifurcation in the context of optimizer dynamics? What happens at the stability boundary $\eta = 2/h_\text{max}$?
