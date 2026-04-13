@@ -64,8 +64,8 @@ title: "Course outline - BE 175"
 - Tuesday: Dynamical models ([slides](../lectures/dynamics.html), [notes](../notes/dynamics.html))
 - Thursday: Dynamical models continued
 - Lab: PCA/PLSR lab
-  - Due May 22nd at 11:59 pm
   - Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c)
+  - Due May 22nd at 11:59 pm
 
 ### Week 7, May 12–16
 
@@ -81,12 +81,12 @@ title: "Course outline - BE 175"
 
 <!-- ASM, YT away -->
 
-- Tuesday: Double descent
-- Thursday: Neural networks
+- Tuesday: Double descent ([slides](../lectures/overparameterization.html), [notes](../notes/overparameterization.html))
+- Thursday: Neural networks ([slides](../lectures/neural-networks.html), [notes](../notes/neural-networks.html))
 - Lab: Neural network lab
-  - Review TBD
-  - Due June 5th at 11:59 pm
+  - Review double descent and neural networks
   - Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863)
+  - Due June 5th at 11:59 pm
 
 <!-- Add example notebook? -->
 
@@ -94,9 +94,9 @@ title: "Course outline - BE 175"
 
 <!-- ASM -->
 
-- Tuesday: Review
+- Tuesday: Finish remaining material / review content
 - Thursday: Exam 2
-- Lab: TBD
+- Lab: Feedback/review on projects progress
 
 ### Week 10, June 1–5 <!-- Setup, ASM away -->
 
@@ -104,7 +104,7 @@ title: "Course outline - BE 175"
 
 - Tuesday: Project presentations 
 - Thursday: Project presentations
-- Lab: TBD
+- Lab: Feedback/review on projects progress
 
 ### Finals Week, June 8–12
 
