@@ -221,33 +221,37 @@ import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots(figsize=(9, 5))
 
-x_under = np.linspace(0.1, 0.92, 200)
-x_over  = np.linspace(1.08, 4.5, 200)
+# Classical regime: U-shaped bias-variance tradeoff
+# bias² (high at low complexity) + variance (rises toward threshold) = U-shape
+x_under = np.linspace(0.1, 0.99, 300)
+bias_sq = 1.4 * np.exp(-4.0 * x_under)
+variance = 0.05 + 1.2 * x_under**2
+risk_under = bias_sq + variance
+# x=0.1 → ~1.0 (underfitting), min ~0.54 near x=0.5, x=0.99 → ~1.25 (overfitting)
 
-risk_under = 0.6 * np.exp(-1.5 * x_under) + 0.22 * x_under**1.2 + 0.08
-risk_peak  = np.array([5.5])
+spike_y = 2.1   # peak AT the interpolation threshold — visible within ylim
 
-x_peak_region = np.linspace(0.92, 1.08, 50)
-peak_profile = 5.5 * np.exp(-60 * (x_peak_region - 1.0)**2) + (
-    np.interp(x_peak_region, [0.92, 1.08],
-              [risk_under[-1], 0.28 + 0.5/1.08]))
+# Overparameterized regime: second descent from the spike
+x_over = np.linspace(1.0, 4.5, 300)
+risk_over = 0.35 + (spike_y - 0.35) / (1.0 + 2.5 * (x_over - 1.0)) ** 1.1
+# x=1.0 → spike_y=2.1, x=4.5 → ~0.5
 
-risk_over = 0.28 + 0.5 / x_over
-
-ax.plot(x_under, risk_under, color='#E74C3C', lw=2.5, label='Classical regime')
-ax.plot(x_peak_region, peak_profile, color='#E74C3C', lw=2.5)
+# Red: classical U-shape rising to the spike at x=1
+ax.plot(np.append(x_under, 1.0), np.append(risk_under, spike_y),
+        color='#E74C3C', lw=2.5, label='Classical regime')
+# Blue: second descent from spike downward
 ax.plot(x_over, risk_over, color='#2980B9', lw=2.5, label='Overparameterized regime')
 ax.axvline(1.0, color='black', lw=1.5, linestyle='--', label='Interpolation threshold ($p = n$)')
 
-ax.annotate('', xy=(0.55, 1.5), xytext=(0.15, 1.5),
+ax.annotate('', xy=(0.45, 1.7), xytext=(0.15, 1.7),
             arrowprops=dict(arrowstyle='->', color='#E74C3C', lw=1.5))
-ax.text(0.35, 1.65, 'Underfitting', ha='center', color='#E74C3C', fontsize=10)
-ax.annotate('', xy=(0.88, 1.5), xytext=(0.66, 1.5),
+ax.text(0.3, 1.85, 'Underfitting', ha='center', color='#E74C3C', fontsize=10)
+ax.annotate('', xy=(0.90, 1.7), xytext=(0.60, 1.7),
             arrowprops=dict(arrowstyle='->', color='#E74C3C', lw=1.5))
-ax.text(0.77, 1.65, 'Overfitting', ha='center', color='#E74C3C', fontsize=10)
-ax.annotate('', xy=(3.5, 0.45), xytext=(1.3, 0.45),
+ax.text(0.75, 1.85, 'Overfitting', ha='center', color='#E74C3C', fontsize=10)
+ax.annotate('', xy=(3.5, 0.6), xytext=(1.5, 0.9),
             arrowprops=dict(arrowstyle='->', color='#2980B9', lw=1.5))
-ax.text(2.4, 0.58, 'Second descent', ha='center', color='#2980B9', fontsize=10)
+ax.text(2.3, 1.0, 'Second descent', ha='center', color='#2980B9', fontsize=10)
 
 ax.set_xlabel('Model complexity (parameters / training points)', fontsize=12)
 ax.set_ylabel('Test error', fontsize=12)
