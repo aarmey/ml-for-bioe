@@ -23,7 +23,7 @@ Remind students this is the Hill equation with n=1 (no cooperativity). We want t
 ### What can we learn from equilibrium binding data?
 
 - Measuring $\theta$ vs. $[L]$ gives us a binding curve
-- Fitting the curve estimates $K_d$—but **not** $k_\text{on}$ or $k_\text{off}$ individually
+- Fitting the curve estimates $K_d$, but **not** $k_\text{on}$ or $k_\text{off}$ individually
 - Infinitely many $(k_\text{on}, k_\text{off})$ pairs are consistent with any measured $K_d$:
   $$k_\text{off} = K_d \cdot k_\text{on} \quad \Rightarrow \quad \text{a 1-D manifold in parameter space}$$
 - Yet **every** point on this manifold makes **identical** equilibrium predictions
@@ -86,7 +86,7 @@ axes[1].set_title('Infinite valid $(k_\\mathrm{on},\\, k_\\mathrm{off})$ pairs',
 axes[1].legend(fontsize=10)
 axes[1].grid(True, alpha=0.3)
 axes[1].annotate('All red points predict\nidentically at equilibrium',
-                 xy=(6, -2), fontsize=9, color='darkred',
+                 xy=(4.5, -2), fontsize=9, color='darkred',
                  bbox=dict(boxstyle='round,pad=0.3', fc='#fde', ec='red', alpha=0.7))
 
 plt.tight_layout()
@@ -190,7 +190,7 @@ This is the Moore-Penrose pseudoinverse solution. It is analogous to ridge regre
 ### Connection to the binding example
 
 - Recall: from binding data, the data constrains $K_d = k_\text{off}/k_\text{on}$, a 1-D subspace of 2-D parameter space
-- The minimum-norm solution picks the **shortest** vector in this subspace—physically, the point where $k_\text{on}$ and $k_\text{off}$ are both smallest
+- The minimum-norm solution picks the **shortest** vector in this subspace: physically, the point where $k_\text{on}$ and $k_\text{off}$ are both smallest
 - But **all** solutions make the same equilibrium predictions
 
 | Analogy | Binding | Machine Learning |
@@ -289,7 +289,7 @@ all_freqs  = np.random.uniform(0, 8, max_feats)
 all_phases = np.random.uniform(0, 2 * np.pi, max_feats)
 
 def make_features(x, nf):
-    return np.column_stack([np.cos(2 * np.pi * all_freqs[:nf] * x + all_phases[:nf])])
+    return np.cos(2 * np.pi * all_freqs[:nf] * x[:, None] + all_phases[:nf])
 
 n_feats_range = list(range(2, max_feats + 1))
 test_errors   = []
