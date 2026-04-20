@@ -83,7 +83,7 @@ $$
 
 ### Visualizing matrix factorization
 
-![ ](./figs/dimred/mflayout.png){fig-alt="Diagram illustrating matrix factorization X approx W H^T, showing the dimensions of the original matrix X and the factor matrices W and H^T."}
+![Visualization of matrix factorization, showing a data matrix X approximated by the product of W and H transpose, with sample and feature axes and common names for the factor matrices in PCA and NMF.](./figs/dimred/mflayout-tikz.svg)
 
 Generalization of many methods (e.g., SVD, QR, CUR, Truncated SVD, etc.)
 
@@ -183,6 +183,22 @@ For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} =
 
 ![ ](./figs/dimred/pca.png){fig-alt="Scatter plot of data points with arrows indicating the directions of the first and second principal components (PC1 and PC2)."}
 
+---
+
+### Before running PCA: preprocess with care
+
+- PCA is sensitive to the scale of the variables
+- Usually center each feature to mean 0 first
+- Often scale each feature to unit variance when variables are in different units
+	- Otherwise a high-variance measurement can dominate PC1
+- Any new samples must be transformed using the same centering and scaling learned from the training data
+
+::: {.notes}
+- Good place to pause and ask whether gene expression counts, heights, and blood pressure should be compared on raw scales.
+- If the question is about total magnitude, maybe do not scale.
+- If the question is about patterns across features, scaling is often much more sensible.
+:::
+
 ## PCA example: words
 
 - Consider an example dataset of two variables about words
@@ -256,15 +272,67 @@ For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} =
 - Talk about relationship going back to data from PCA
 :::
 
+---
+
+### PCA gives a low-rank approximation
+
+- PCA approximates the original data using only a few principal directions
+- Keeping the first $R$ PCs gives the best rank-$R$ linear approximation in least squares terms
+- Geometrically: project the data onto a lower-dimensional subspace, then reconstruct back into the original space
+
+---
+
+![Visualization of PCA as a low-rank approximation: data points are approximated by projection onto the leading principal component directions.](./figs/dimred/ElemStatLearnII_fig14.21.svg){width=90%}
+
+::: {.notes}
+- This is the visual bridge between "variance-maximizing directions" and "low-rank matrix approximation."
+- The approximation is not arbitrary: among all rank-$R$ approximations, PCA/SVD gives the one with the smallest squared reconstruction error.
+- Nice place to say: compress, then reconstruct.
+:::
+
+---
+
+### Interpreting PCA outputs
+
+- **Scores** tell you where each observation lies in PC space
+- **Loadings** tell you which original features define each PC
+- Large-magnitude loadings indicate features that contribute strongly to that component
+- The sign of a PC is arbitrary
+	- Flipping all scores and loadings for a component gives the same model
+
+::: {.notes}
+- This is a frequent source of confusion.
+- Help students connect "points" to scores and "arrows/weights" to loadings.
+- Stress that opposite signs are relative within a component, not good/bad.
+:::
+
+---
+
+### How many PCs should we keep?
+
+- Look at the explained variance ratio
+- Use a scree plot to look for an elbow
+- Keep enough PCs for the downstream goal
+	- Visualization may need only 2-3 PCs
+	- Denoising or compression may need more
+- Validate the choice with reconstruction error or downstream performance when possible
+
+::: {.notes}
+- There is no single universally correct cutoff.
+- Distinguish exploratory visualization from building a predictive pipeline.
+:::
+
 ## Algorithms: computing PCA
 
-- All methods are essentially deterministic
-- Iterative computation
-	- More robust with high numbers of variables
-	- Slower to calculate
+- Classical PCA is often computed with an SVD or eigendecomposition
+- These are deterministic for a fixed input matrix
+- Iterative methods are also used in practice
+	- Helpful for very large matrices or when only a few PCs are needed
 - NIPALS (nonlinear iterative partial least squares)
-	- Able to efficiently calculate a few PCs at once
-	- Breaks down for high numbers of variables (large p)
+	- Able to efficiently calculate a few PCs without a full decomposition
+	- Useful when the full SVD would be expensive
+
+---
 
 ### PCA in practice
 
@@ -272,6 +340,7 @@ For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} =
 	- `PCA.fit_transform(X)` fits the model to `X`, then provides the data in principal component space
 	- `PCA.components_` provides the "loadings matrix", or directions of maximum variance
 	- `PCA.explained_variance_` provides the amount of variance explained by each component
+	- `PCA.explained_variance_ratio_` gives the fraction of total variance explained by each PC
 
 ::: {.notes}
 Go over explained variance.
@@ -348,6 +417,31 @@ What if we have data wherein effects always accumulate?
 - Leads to _sparse_ factors
 - The answer you get will always depend on the error metric, starting point, and search method
 
+---
+
+## NMF objective
+
+Find non-negative matrices $\mathbf{W}$ and $\mathbf{H}$ such that
+
+$$
+\mathbf{X} \approx \mathbf{W}\mathbf{H}^\top
+\qquad\text{with}\qquad
+\mathbf{W}_{ij} \ge 0,\ \mathbf{H}_{ij} \ge 0
+$$
+
+Typically, we minimize reconstruction error:
+
+$$
+\min_{\mathbf{W},\mathbf{H}} \left\|\mathbf{X} - \mathbf{W}\mathbf{H}^\top\right\|_F^2
+\qquad
+\text{subject to } \mathbf{W}, \mathbf{H} \ge 0
+$$
+
+::: {.notes}
+- Good place to remind students that this looks like PCA's reconstruction objective, but now with non-negativity constraints.
+- Can mention that other losses are also possible, but squared error is the standard starting point.
+:::
+
 ## Multiplicative updates
 
 - The update rule is multiplicative instead of additive
@@ -360,15 +454,15 @@ What if we have data wherein effects always accumulate?
 
 ### Updating W
 
-$$[W]_{ij} \leftarrow [W]_{ij} \frac{[\color{darkred} X \color{darkblue}{H^T} \color{black}]_{ij}}{[\color{darkred}{WH} \color{darkblue}{H^T} \color{black}]_{ij}}$$
+$$[W]_{ij} \leftarrow [W]_{ij} \frac{[\color{darkred} X \color{darkblue}H \color{black}]_{ij}}{[\color{darkred}W \color{darkblue}{H^T H} \color{black}]_{ij}}$$
 
-Color indicates the [reconstruction of the data]{style="color:darkred;"} and the [projection matrix]{style="color:darkblue;"}.
+Color indicates the [data term]{style="color:darkred;"} and the [factor term]{style="color:darkblue;"}.
 
 ### Updating H
 
-$$[H]_{ij} \leftarrow [H]_{ij} \frac{[\color{darkblue}{W^T} \color{darkred}X \color{black}]_{ij}}{[\color{darkblue}{W^T} \color{darkred}{WH} \color{black}]_{ij}}$$
+$$[H]_{ij} \leftarrow [H]_{ij} \frac{[\color{darkred}{X^T} \color{darkblue}W \color{black}]_{ij}}{[\color{darkred}H \color{darkblue}{W^T W} \color{black}]_{ij}}$$
 
-Color indicates the [reconstruction of the data]{style="color:darkred;"} and the [projection matrix]{style="color:darkblue;"}.
+Color indicates the [data term]{style="color:darkred;"} and the [factor term]{style="color:darkblue;"}.
 
 ## Coordinate descent
 
