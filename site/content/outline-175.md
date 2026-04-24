@@ -46,7 +46,7 @@ title: "Course outline - BE 175"
 - Tuesday: Finish PCA & NMF
 - Thursday: Partial Least Squares Regression ([slides](../lectures/plsr.html), [notes](../notes/plsr.html))
 - Lab: Fitting lab, review material
-  - Due May 7th at 11:59 pm
+  - Due May 8th at 11:59 pm
   - Implementation of [Stone et al.](https://pubmed.ncbi.nlm.nih.gov/11606269/)
 
 ### Week 5, April 27–May 1
