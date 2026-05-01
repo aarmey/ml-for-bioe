@@ -61,8 +61,8 @@ title: "Course outline - BE 175"
 
 <!-- ASM -->
 
-- Tuesday: Dynamical models ([slides](../lectures/dynamics.html), [notes](../notes/dynamics.html))
-- Thursday: Dynamical models continued
+- Tuesday: Finish PLSR, reproducible computational workflows ([slides](../lectures/reproducibility.html), [notes](../notes/reproducibility.html))
+- Thursday: Dynamical models ([slides](../lectures/dynamics.html), [notes](../notes/dynamics.html))  
 - Lab: PCA/PLSR lab
   - Implementation of [Cosgrove et al.](https://pubs.rsc.org/en/Content/ArticleLanding/2010/MB/b926287c)
   - Due May 22nd at 11:59 pm
@@ -71,8 +71,8 @@ title: "Course outline - BE 175"
 
 <!-- ASM -->
 
-- Tuesday: Autodifferentiation ([slides](../lectures/autodifferentiation.html), [notes](../notes/autodifferentiation.html))
-- Thursday: Reproducible computational workflows ([slides](../lectures/reproducibility.html), [notes](../notes/reproducibility.html))
+- Tuesday: Dynamical models continued
+- Thursday: Autodifferentiation ([slides](../lectures/autodifferentiation.html), [notes](../notes/autodifferentiation.html))
 - Lab: Content review
   - Review autodifferentiation
   - Discuss project progress
