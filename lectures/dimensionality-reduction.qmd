@@ -204,7 +204,7 @@ For data table $\mathbf{X}$ with its singular value decomposition, $\mathbf{X} =
 - Consider an example dataset of two variables about words
 	- The number of lines of its dictionary definition
 	- The length of a word
-	- Example from Abidi & Williams, 2010
+	- Example from Abdi & Williams, 2010
 - We obtain $\mathbf{X}$ after applying appropriate centering and normalization
 
 ---

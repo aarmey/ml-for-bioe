@@ -205,7 +205,7 @@ Repeat until convergence
 2. Fix $C$, optimize $\mu$: $$\min_{\mu}\sum_{i=1}^k \sum_{x\in C_i} \lVert x - \mu_i \rVert^2$$
 	- Take partial derivative of $\mu_i$ and set to zero, we have $$\mu_i = \frac{1}{\lVert C_i \rVert} \sum_{x \in C_i} x$$
 
-Kmeans takes an alternating optimization approach. Each step is guaranteed to decrease the objective—thus guaranteed to converge.
+K-means takes an alternating optimization approach. Each step is guaranteed to decrease the objective—thus guaranteed to converge.
 
 ## K-means is (somewhat) sensitive to initialization
 

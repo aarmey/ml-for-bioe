@@ -26,7 +26,7 @@ author: Aaron Meyer
 # Bugs and Testing
 
 - **software reliability**: Probability that a software system will not cause failure under specified conditions.
-	- Measured by uptime, MTTF (mean time till failure), crash data.
+	- Measured by uptime, MTTF (mean time to failure), crash data.
 
 - Bugs are inevitable in any complex software system.
 	- Industry estimates: 10-50 bugs per 1000 lines of code.

@@ -95,7 +95,7 @@ $$ \mathbf{Y} = \mathbf{T}\mathbf{B} + \mathbf{E}_Y $$
 
 ## The core idea of PLSR
 
-What if, instead of choosing components based only on variance in $\mathbf{X}$, we choose latent directions that maximize the **co**variance between scores derived from $\mathbf{X}$ and $\mathbf{Y}$?
+What if, instead of choosing components based only on variance in $\mathbf{X}$, we choose latent directions that maximize the **covariance** between scores derived from $\mathbf{X}$ and $\mathbf{Y}$?
 
 ::: {.notes}
 - Go over definition of covariance.

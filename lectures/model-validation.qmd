@@ -1,5 +1,5 @@
 ---
-title: Does my model work? Crossvalidation, bootstrap, and friends
+title: Does my model work? Cross-validation, bootstrap, and friends
 author: Aaron Meyer
 ---
 
@@ -104,7 +104,7 @@ Table: Divide data into $K$ roughly equal-sized parts ($K = 5$ here). Each row s
 - Compute: $$CV_{(K)} =  \sum^{K}_{k=1} \frac{n_k}{n} MSE_k$$
 	- Where $MSE_k = \sum_{i\in C_k} (y_i - \hat{y}_i)^2/n_k$
 	- $\hat{y}_i$ is the prediction for observation $i$ when its fold was removed from training.
-- Setting $K = n$ yields *leave-one out cross-validation* (LOOCV). LOOCV uses nearly all the data for training, minimizing bias, but the estimates across folds come from nearly-identical training sets and are therefore highly correlated — leading to high variance in the overall error estimate.
+- Setting $K = n$ yields *leave-one-out cross-validation* (LOOCV). LOOCV uses nearly all the data for training, minimizing bias, but the estimates across folds come from nearly-identical training sets and are therefore highly correlated — leading to high variance in the overall error estimate.
 
 ## Auto data revisited
 
@@ -303,7 +303,7 @@ for bootstrapi in range(num_bootstraps):
 # Summary
 
 - Randomization and hiding things are the key to success!
-	- Crossvalidation hides parts of the data at each step, to see how the model can predict it.
+	- Cross-validation hides parts of the data at each step, to see how the model can predict it.
 	- Bootstrap generates "new" data by resampling, to get a distribution of models.
 - With all model evaluation, think about what your model should be "learning", and mess with that.
 - Models that always work, or work unexpectedly well, should be suspicious.

@@ -21,7 +21,7 @@ title: "Course outline - BE 275"
 
 ### Week 2, Oct 7 – 11
 
-- [Lecture 4: Does my model work? Crossvalidation, bootstrap, and friends](../lectures/model-validation.html)
+- [Lecture 4: Does my model work? Cross-validation, bootstrap, and friends](../lectures/model-validation.html)
   - [Example Notebook](../examples/CrossVal-Example.ipynb)
 - Reading: [Points of Significance: Regression Diagnostics](https://www.nature.com/nmeth/journal/v13/n5/abs/nmeth.3854.html)
 - [Lecture 5: Reproducible computational workflows](../lectures/reproducibility.html)

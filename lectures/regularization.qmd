@@ -283,7 +283,7 @@ $$
 
 ### Plot of CV errors and standard error bands
 
-![Cross validation errors from a ridge regression example on spam data.](./figs/regularization/ridge-CV.svg){.nostretch width=600 fig-alt="Plot of cross-validation error versus the regularization parameter lambda for ridge regression on spam data, showing the optimal lambda value."}
+![Cross-validation errors from a ridge regression example on spam data.](./figs/regularization/ridge-CV.svg){.nostretch width=600 fig-alt="Plot of cross-validation error versus the regularization parameter lambda for ridge regression on spam data, showing the optimal lambda value."}
 
 # The LASSO
 

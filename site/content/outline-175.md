@@ -22,7 +22,7 @@ title: "Course outline - BE 175"
 
 - Tuesday: Fitting & Regression ([slides](../lectures/regression.html), [notes](../notes/regression.html))
   - [Example Notebook](../examples/OLS-Example.ipynb)
-- Thursday: Does my model work? Crossvalidation, bootstrap, and friends ([slides](../lectures/model-validation.html), [notes](../notes/model-validation.html))
+- Thursday: Does my model work? Cross-validation, bootstrap, and friends ([slides](../lectures/model-validation.html), [notes](../notes/model-validation.html))
   - [Example Notebook](../examples/CrossVal-Example.ipynb)
 - Lab: Statistics lab
   - Due April 24th at 11:59 pm

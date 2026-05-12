@@ -310,7 +310,7 @@ Go over how to pick an appropriate kernel, and floppiness.
 	- Need to choose a “good” kernel function.
 	- Not generative
 	- Difficult to interpret
-	- Need fully labelled data
+	- Need fully labeled data
 
 ## Other types of kernel methods
 
@@ -338,7 +338,7 @@ sklearn has implementations for a variety of SVM methods:
 		- `sigmoid`: $\tanh(\gamma \langle x,x'\rangle + r)$
 - Alternative implementations
 	- `sklearn.svm.NuSVC`
-		- Additionally provides parameter to control number of support parameters
+		- Additionally provides parameter to control number of support vectors
 	- [`sklearn.svm.LinearSVC`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC)
 		- Only support for linear kernel, with better scaling/options
 		- For example can provide l1 or l2 regularization
@@ -363,5 +363,5 @@ sklearn has implementations for a variety of SVM methods:
 7. How is Y represented within an SVM model?
 8. You use an SVM model with an RBF kernel and a high value for gamma. What does the value of gamma indicate?
 9. When the C parameter is set to be infinite, which of the following is true?
-10. Your colleague is using an SVM with poly kernel and notices that the fitting error improves with ever higher degree polynomials. What is happening here? What would you suggest they do?
+10. Your colleague is using an SVM with polynomial kernel and notices that the fitting error improves with ever higher degree polynomials. What is happening here? What would you suggest they do?
 11. Can an SVM model be used with more than two classes? If so, how?
