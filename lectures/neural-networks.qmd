@@ -3,7 +3,7 @@ title: "Neural Networks"
 author: Aaron Meyer
 ---
 
-# Application
+<!-- # Application
 
 ## Classifying Cells by Deformability
 
@@ -12,8 +12,8 @@ NEED TO ADD A DIFFERENT DEMONSTRATION
 ::: {.notes}
 Masaeli et al. used a neural network to classify cell types from deformability measurements alone—no fluorescent labels. The network learned subtle shape and mechanical signatures that no hand-crafted feature set had captured. This is the motivation for the lab: you'll implement a similar classifier. Keep this application in mind as we develop the tools.
 :::
-
----
+TODO: Find better example.
+--- -->
 
 ### Why can't simpler models handle this?
 
@@ -155,7 +155,7 @@ The choice of activation function matters a lot in practice. ReLU and its varian
 
 - Recall from the autodifferentiation lecture:
   - **Reverse mode**: one forward pass + one backward pass computes the gradient w.r.t. _all_ parameters in $O(1)$ function evaluations
-  - Cost ∝ cost of the forward pass—regardless of how many parameters we have
+  - Cost ∝ cost of the forward pass, regardless of parameter number
 
 - Backpropagation is exactly reverse-mode autodiff applied to a neural network:
   $$\frac{\partial L}{\partial w_{ij}^{(\ell)}} = \frac{\partial L}{\partial a_j^{(\ell)}} \cdot \frac{\partial a_j^{(\ell)}}{\partial z_j^{(\ell)}} \cdot \frac{\partial z_j^{(\ell)}}{\partial w_{ij}^{(\ell)}}$$
@@ -219,7 +219,7 @@ Point out that jax.grad does all the backpropagation automatically. The user jus
   - Stochastic gradient descent (SGD) acts as an implicit regularizer—it finds "flat" minima that generalize better than sharp ones
 
 ::: {.notes}
-This is an active research area. The key empirical observation is that for sufficiently overparameterized models, the loss landscape has very few "bad" local minima—most local minima are near the global minimum. This is not true for small networks.
+This is an active research area. The key empirical observation is that for sufficiently overparameterized models, the loss landscape has very few "bad" local minima. Most local minima are near the global minimum. This is not true for small networks.
 
 The SGD implicit bias toward flat minima is related to the double descent story: SGD finds solutions that are "smooth" in weight space, which tends to generalize well.
 :::
@@ -234,10 +234,12 @@ The SGD implicit bias toward flat minima is related to the double descent story:
   - Training diverges or oscillates
   - Generalization fails badly
 
-- Everything we know about regularization still applies—just adapted to the NN setting
+- Everything we know about regularization still applies, just adapted to the NN setting
 
 ::: {.notes}
-This is the key message of this section. Double descent and UAT explain _why_ overparameterized networks can generalize—but they don't tell you how to _make them_ generalize in practice. That requires the techniques in this section.
+Stop here, ask for ways of making overparameterized networks generalize.
+
+This is the key message of this section. Double descent and UAT explain _why_ overparameterized networks can generalize, but they don't tell you how to _make them_ generalize in practice. That requires the techniques in this section.
 :::
 
 ---
@@ -405,7 +407,7 @@ In practice, you use all of these simultaneously. The specific strengths depend 
 ::: {.notes}
 This is the deepest conceptual point of the lecture. UAT says any function is representable; inductive biases say which function is _easy_ to learn. The history of deep learning is largely a history of discovering the right inductive biases for each domain.
 
-Connect back to regularization: inductive biases are another form of regularization—they constrain the hypothesis space to functions consistent with our domain knowledge.
+Inductive biases are another form of regularization—they constrain the hypothesis space to functions consistent with our domain knowledge.
 :::
 
 ## Convolutional Neural Networks (CNNs)
@@ -421,7 +423,7 @@ $$(\mathbf{W} * \mathbf{x})_{i,j} = \sum_{k,\ell} W_{k,\ell} \cdot x_{i+k,\, j+\
 - Applications in biology: cell morphology, histology, microscopy image analysis
 
 ::: {.notes}
-For cell images like in the Masaeli example, translation equivariance is exactly right: a cell in the top-left corner should be classified the same way as the same cell in the bottom-right corner.
+For many images, translation equivariance is exactly right: a cell in the top-left corner should be classified the same way as the same cell in the bottom-right corner.
 
 Note: convolutional layers are not the same as Fourier transforms, but they share the translation equivariance property.
 :::
