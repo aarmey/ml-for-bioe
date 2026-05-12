@@ -461,7 +461,7 @@ GNNs are arguably the most important architecture for bioengineering application
   - Single-cell transformers: model gene expression programs
 
 ::: {.notes}
-The transformer architecture (Vaswani et al., 2017) was developed for NLP but has since dominated biology. The key insight is that "attention" generalizes to any domain where pairwise relationships matter. AlphaFold2 uses attention over both sequence and predicted pair representations—the inductive biases are about protein geometry (residue distance, angles), not just sequence order.
+The transformer architecture (Vaswani et al., 2017) was developed for NLP but has since dominated biology. The key insight is that "attention" generalizes to any domain where pairwise relationships matter. AlphaFold2 uses attention over both sequence and predicted pair representations. The inductive biases are about protein geometry (residue distance, angles), not just sequence order.
 :::
 
 # Applications in Bioengineering
@@ -475,7 +475,7 @@ The transformer architecture (Vaswani et al., 2017) was developed for NLP but ha
 - With 500 cell lines, regularized linear models often win
 
 ::: {.notes}
-This is an important practical lesson. Neural networks are not automatically better than simpler models. For n=500, the extra capacity of a deep network often leads to overfitting unless extremely well-regularized. The tradeoff shifts as n increases—this is another manifestation of double descent.
+This is an important practical lesson. Neural networks are not automatically better than simpler models. For n=500, the extra capacity of a deep network often leads to overfitting unless extremely well-regularized. The tradeoff shifts as n increases; this is another manifestation of double descent.
 :::
 
 ---
