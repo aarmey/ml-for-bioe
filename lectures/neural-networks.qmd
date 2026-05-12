@@ -7,7 +7,7 @@ author: Aaron Meyer
 
 ## Classifying Cells by Deformability
 
-![ ](./figs/neural-networks/masaeli-title.png){fig-alt="Title of Masaeli et al. 2016 describing real-time label-free cell classification using deformability cytometry."}
+NEED TO ADD A DIFFERENT DEMONSTRATION
 
 ::: {.notes}
 Masaeli et al. used a neural network to classify cell types from deformability measurements alone—no fluorescent labels. The network learned subtle shape and mechanical signatures that no hand-crafted feature set had captured. This is the motivation for the lab: you'll implement a similar classifier. Keep this application in mind as we develop the tools.
@@ -154,7 +154,7 @@ The choice of activation function matters a lot in practice. ReLU and its varian
 ## Backprop Is Reverse-Mode Autodiff
 
 - Recall from the autodifferentiation lecture:
-  - **Reverse mode**: one forward pass + one backward pass computes the gradient w.r.t. *all* parameters in $O(1)$ function evaluations
+  - **Reverse mode**: one forward pass + one backward pass computes the gradient w.r.t. _all_ parameters in $O(1)$ function evaluations
   - Cost ∝ cost of the forward pass—regardless of how many parameters we have
 
 - Backpropagation is exactly reverse-mode autodiff applied to a neural network:
@@ -237,7 +237,7 @@ The SGD implicit bias toward flat minima is related to the double descent story:
 - Everything we know about regularization still applies—just adapted to the NN setting
 
 ::: {.notes}
-This is the key message of this section. Double descent and UAT explain *why* overparameterized networks can generalize—but they don't tell you how to *make them* generalize in practice. That requires the techniques in this section.
+This is the key message of this section. Double descent and UAT explain _why_ overparameterized networks can generalize—but they don't tell you how to _make them_ generalize in practice. That requires the techniques in this section.
 :::
 
 ---
@@ -379,12 +379,12 @@ Batch norm was introduced by Ioffe & Szegedy (2015) and became ubiquitous quickl
 
 ### Summary: regularization toolkit for neural networks
 
-| Method | Mechanism | Analogy |
-|---|---|---|
-| Weight decay | $\ell_2$ penalty on weights | Ridge regression |
-| Dropout | Random neuron silencing | Ensemble averaging |
-| Early stopping | Stop before validation loss rises | Cross-validation |
-| Batch norm | Normalize activations per batch | Conditioning |
+| Method            | Mechanism                          | Analogy                  |
+| ----------------- | ---------------------------------- | ------------------------ |
+| Weight decay      | $\ell_2$ penalty on weights        | Ridge regression         |
+| Dropout           | Random neuron silencing            | Ensemble averaging       |
+| Early stopping    | Stop before validation loss rises  | Cross-validation         |
+| Batch norm        | Normalize activations per batch    | Conditioning             |
 | Data augmentation | Random transforms of training data | Effectively enlarges $n$ |
 
 ::: {.notes}
@@ -396,14 +396,14 @@ In practice, you use all of these simultaneously. The specific strengths depend 
 ## The Key Insight
 
 - A fully connected network is **structure-agnostic**: it treats all inputs symmetrically
-- This is flexible, but expensive: it must *learn* from scratch that nearby pixels are correlated, that molecules are rotation-invariant, that sequences have order
+- This is flexible, but expensive: it must _learn_ from scratch that nearby pixels are correlated, that molecules are rotation-invariant, that sequences have order
 - **Inductive biases** bake known structure into the architecture:
   - Less data needed to learn the relevant function
   - Better generalization on finite datasets
   - Often leads to models that are interpretable in domain terms
 
 ::: {.notes}
-This is the deepest conceptual point of the lecture. UAT says any function is representable; inductive biases say which function is *easy* to learn. The history of deep learning is largely a history of discovering the right inductive biases for each domain.
+This is the deepest conceptual point of the lecture. UAT says any function is representable; inductive biases say which function is _easy_ to learn. The history of deep learning is largely a history of discovering the right inductive biases for each domain.
 
 Connect back to regularization: inductive biases are another form of regularization—they constrain the hypothesis space to functions consistent with our domain knowledge.
 :::
@@ -469,9 +469,10 @@ The transformer architecture (Vaswani et al., 2017) was developed for NLP but ha
 ## Drug Response Prediction (Revisited)
 
 - In the regularization lecture, we used elastic net to predict drug sensitivity from genomic features in the CCLE
-- Neural networks can capture **nonlinear gene–drug interactions** that linear models miss
+- Neural networks can capture **nonlinear gene–drug interactions**
 - With enough data, a deep network often outperforms LASSO/ridge
-- But: neural networks require more data and careful regularization—with 500 cell lines, regularized linear models often win
+- But: neural networks require more data and careful regularization
+- With 500 cell lines, regularized linear models often win
 
 ::: {.notes}
 This is an important practical lesson. Neural networks are not automatically better than simpler models. For n=500, the extra capacity of a deep network often leads to overfitting unless extremely well-regularized. The tradeoff shifts as n increases—this is another manifestation of double descent.
@@ -486,7 +487,8 @@ This is an important practical lesson. Neural networks are not automatically bet
   - Pair representation explicitly encodes residue–residue distances
   - Iterative "recycling" refines structure over multiple passes
 - Training data: ~170,000 experimentally solved structures (PDB)
-- Result: near-experimental accuracy on most proteins—solved a 50-year-old problem
+- Result: Near-experimental accuracy on most proteins
+- Solved a 50-year-old problem
 
 ::: {.notes}
 AlphaFold is the most striking example of what the right inductive biases can achieve. The network has ~93M parameters trained on ~170K structures—roughly 550 parameters per training example. This is highly regularized by bioengineering standards. The key was not just scale, but the right structural biases: triangular attention, equivariant frames, and evolutionary covariation signal.
@@ -498,7 +500,7 @@ Jumper et al., Nature 2021.
 
 ### Cell morphology as a phenotypic readout
 
-- **Cell Painting** (Bray et al., 2016): image cells stained with 6 fluorescent dyes; extract ~1,500 morphological features
+- **Cell Painting** ([Bray et al., 2016](https://pubmed.ncbi.nlm.nih.gov/27560178/)): image cells stained with 6 fluorescent dyes; extract ~1,500 morphological features
 - Neural networks trained on raw images learn features that correlate with:
   - Mechanism of action of compounds
   - Disease phenotype
@@ -513,11 +515,11 @@ This connects directly to the Masaeli et al. paper. The key insight is that cell
 
 ## Further Reading
 
-- LeCun Y., Bengio Y., Hinton G. [Deep learning](https://www.nature.com/articles/nature14539). *Nature*, 2015.
-- Srivastava N. *et al.* [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://jmlr.org/papers/v15/srivastava14a.html). *JMLR*, 2014.
-- Jumper J. *et al.* [Highly accurate protein structure prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2). *Nature*, 2021.
-- Ching T. *et al.* [Opportunities and obstacles for deep learning in biology and medicine](https://doi.org/10.1098/rsif.2017.0387). *J. R. Soc. Interface*, 2018.
-- Masaeli M. *et al.* [Multicolor fluorescence imaging to study cell heterogeneity](https://www.nature.com/articles/srep37863). *Sci. Rep.*, 2016.
+- LeCun Y., Bengio Y., Hinton G. [Deep learning](https://www.nature.com/articles/nature14539). _Nature_, 2015.
+- Srivastava N. _et al._ [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://jmlr.org/papers/v15/srivastava14a.html). _JMLR_, 2014.
+- Jumper J. _et al._ [Highly accurate protein structure prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2). _Nature_, 2021.
+- Ching T. _et al._ [Opportunities and obstacles for deep learning in biology and medicine](https://doi.org/10.1098/rsif.2017.0387). _J. R. Soc. Interface_, 2018.
+- Masaeli M. _et al._ [Multicolor fluorescence imaging to study cell heterogeneity](https://www.nature.com/articles/srep37863). _Sci. Rep._, 2016.
 - sklearn: [Neural network models](https://scikit-learn.org/stable/modules/neural_networks_supervised.html)
 
 ## Review Questions {.smaller}
@@ -526,9 +528,6 @@ This connects directly to the Masaeli et al. paper. The key insight is that cell
 2. Explain how backpropagation is a special case of reverse-mode autodifferentiation. What is computed in the forward pass, and what is computed in the backward pass?
 3. Why is the neural network loss surface non-convex? What practical consequences does this have for training?
 4. A colleague trains a network and observes that training loss continues to decrease while validation loss starts to rise. What is happening, and what would you do?
-5. Weight decay is described as analogous to ridge regression. What is the analogous Bayesian interpretation for each? (Hint: what prior does each correspond to?)
-6. Dropout prevents any single neuron from being relied upon. How is this related to ensemble methods?
-7. What is an inductive bias? Give one example from each of: CNNs, GNNs, and attention mechanisms, and explain what assumption about the data each encodes.
-8. A fully connected network and a CNN are each trained on the same image classification task. The CNN uses far fewer parameters. Under what conditions might the simpler CNN outperform the larger fully connected network?
-9. AlphaFold2 has ~93M parameters trained on ~170K examples. How do you reconcile this with the double descent picture—shouldn't such an overparameterized model need far more data?
-10. For the cell deformability classification problem (Masaeli et al.), why might a CNN be preferred over a fully connected network? What symmetry does it exploit?
+5. What is an inductive bias? Give one example from each of: CNNs, GNNs, and attention mechanisms, and explain what assumption about the data each encodes.
+6. A fully connected network and a CNN are each trained on the same image classification task. The CNN uses far fewer parameters. Under what conditions might the simpler CNN outperform the larger fully connected network?
+7. AlphaFold2 has ~93M parameters trained on ~170K examples. How do you reconcile this with the double descent picture—shouldn't such an overparameterized model need far more data?
