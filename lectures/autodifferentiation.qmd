@@ -3,8 +3,6 @@ title: "Autodifferentiation"
 author: Aaron Meyer
 ---
 
-<!-- TODO: Add post about this being criminally underused. -->
-
 # Optimization and Gradients
 
 ## Optimization in Machine Learning
@@ -51,6 +49,10 @@ author: Aaron Meyer
 3.  **Stability:** Sensitive to noisy functions.
 
 # Autodifferentiation (AD)
+
+## Autodifferentiation Is Criminally Underused
+
+!["Autodiff is criminally underused"](./figs/autodifferentiation/criminal.webp)
 
 ## What is Autodifferentiation?
 
@@ -136,7 +138,29 @@ print(f"Final parameters: {params}")
 print(f"Loss: {rosenbrock(params)}")
 ```
 
-<!-- TODO: Add papers discussion. -->
+# AD Beyond ML: Flexible Scientific Computing
+
+## Early Example: Haunschild et al.
+
+![Haunschild et al. — flexible model exploration with AD](./figs/autodifferentiation/Haunschild.webp)
+
+::: {.notes}
+- An early demonstration of AD applied to flexibly explore different computational models.
+- By making the model differentiable, parameters can be fit without hand-deriving gradients.
+:::
+
+## Their Workflow
+
+![Workflow overview from Haunschild et al.](./figs/autodifferentiation/workflow.webp)
+
+## Current Research: Making More Functions Differentiable
+
+![Research landscape: making functions differentiable for ML](./figs/autodifferentiation/rank.webp)
+
+::: {.notes}
+- A major focus of current research is extending differentiability to operations not traditionally considered smooth (sorting, argmax, rendering, simulation, etc.).
+- This allows these operations to be embedded inside learned pipelines.
+:::
 
 ## Summary
 
