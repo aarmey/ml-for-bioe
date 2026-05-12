@@ -31,7 +31,7 @@ Contrast with logistic regression (linear decision boundary), PCA (linear struct
 ## From Neurons to Networks
 
 - A single **artificial neuron** computes:
-  $$a = \sigma\!\left(\sum_{i} w_i x_i + b\right) = \sigma(\mathbf{w}^\top \mathbf{x} + b)$$
+  $$a = \sigma\left(\sum_{i} w_i x_i + b\right) = \sigma(\mathbf{w}^\top \mathbf{x} + b)$$
   - $\mathbf{x}$: inputs; $\mathbf{w}$: weights; $b$: bias; $\sigma$: **activation function**
 - A **layer** applies this operation to every neuron in parallel
 - A **network** stacks multiple layers: the output of one layer is the input to the next
@@ -104,7 +104,7 @@ ax2.text(0.55, 0.5, r'$\sigma$', ha='center', va='center', fontsize=16, zorder=6
 ax2.annotate('', xy=(0.92, 0.5), xytext=(0.64, 0.5),
              arrowprops=dict(arrowstyle='->', color='gray', lw=1.5))
 ax2.text(0.95, 0.5, '$a$', ha='left', va='center', fontsize=13)
-ax2.text(0.55, 0.3, r'$a = \sigma\!\left(\mathbf{w}^\top\mathbf{x} + b\right)$',
+ax2.text(0.55, 0.3, r'$a = \sigma\left(\mathbf{w}^\top\mathbf{x} + b\right)$',
          ha='center', va='top', fontsize=11)
 
 plt.tight_layout()
@@ -432,7 +432,7 @@ Note: convolutional layers are not the same as Fourier transforms, but they shar
 
 - Designed for data with **relational structure** (graphs, molecules, interaction networks)
 - Update node features by **aggregating information from neighbors**:
-  $$\mathbf{h}_v^{(\ell+1)} = \sigma\!\left(\mathbf{W}^{(\ell)} \cdot \text{AGGREGATE}\!\left(\left\{\mathbf{h}_u^{(\ell)} : u \in \mathcal{N}(v)\right\}\right)\right)$$
+  $$\mathbf{h}_v^{(\ell+1)} = \sigma\left(\mathbf{W}^{(\ell)} \cdot \text{AGGREGATE}\left(\left\{\mathbf{h}_u^{(\ell)} : u \in \mathcal{N}(v)\right\}\right)\right)$$
 - Key inductive biases:
   - Permutation invariance over the node set (molecules have no canonical atom ordering)
   - Local neighborhood aggregation reflects chemical bonding
@@ -451,7 +451,7 @@ GNNs are arguably the most important architecture for bioengineering application
 ### Attention and Transformers
 
 - Rather than fixed local connectivity, **attention** learns which inputs to weight:
-  $$\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right) V$$
+  $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right) V$$
 - Inductive bias: **relational structure is data-dependent**, not hardcoded
 - More flexible than CNNs and GNNs—but requires more data to learn useful structure
 
