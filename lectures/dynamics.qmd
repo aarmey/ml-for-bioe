@@ -932,11 +932,9 @@ plt.show()
 2. What is a phase-space diagram?
 3. What property of ODE models ensures that solutions can never cross in phase space?
 4. What is a Jacobian matrix? How do you calculate it from an ODE system?
-5. What are the eigenvalues and eigenvectors of a matrix?
-6. What is the behavior of an ODE system if its eigenvalues are all positive and real? How about negative and real?
-7. What is the behavior of an ODE system if all its eigenvalues are imaginary and positive? How about imaginary and negative?
-8. What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and negative, the other is imaginary)?
-9. How can you fit an ODE model to a series of measurements over time?
-10. How could you constrain an ODE system so that you only consider parameter values that have oscillation?
-11. Why does gradient descent on an ill-conditioned loss surface behave like a stiff ODE? What do adaptive optimizers like Adam do to address this?
-12. What is the analogue of a bifurcation in the context of optimizer dynamics? What happens at the stability boundary $\eta = 2/h_\text{max}$?
+5. What is the behavior of an ODE system if its eigenvalues are all positive and real? How about negative and real?
+6. What is the behavior of an ODE system if all its eigenvalues are imaginary and positive? How about imaginary and negative?
+7. What does it mean if the eigenvalues of an ODE system give conflicting answers (e.g. one is real and negative, the other is real and positive)?
+8. How can you fit an ODE model to a series of measurements over time?
+9. How could you constrain an ODE system so that you only consider parameter values that have oscillation?
+10. Why does gradient descent on an ill-conditioned loss surface converge slowly? What do adaptive optimizers like Adam do to address this?
