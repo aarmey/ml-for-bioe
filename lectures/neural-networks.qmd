@@ -3,22 +3,18 @@ title: "Neural Networks"
 author: Aaron Meyer
 ---
 
-<!-- # Application
+# Application: Medical Imaging
 
-## Classifying Cells by Deformability
-
-NEED TO ADD A DIFFERENT DEMONSTRATION
+![Model visualization of pneumothorax detection. (a) The model correctly identifies pneumothorax in the right and left upper lungs. (b) The model correctly identifies pneumothorax in the right lower lung. Figure from [Taylor et al., *PLOS Medicine* (2018)](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002686).](figs/nn/pmed.1002686.g003.webp){#fig-pneumothorax}
 
 ::: {.notes}
-Masaeli et al. used a neural network to classify cell types from deformability measurements alone—no fluorescent labels. The network learned subtle shape and mechanical signatures that no hand-crafted feature set had captured. This is the motivation for the lab: you'll implement a similar classifier. Keep this application in mind as we develop the tools.
+Deep learning has revolutionized medical imaging. In this example, a convolutional neural network was trained to detect pneumothorax (collapsed lung) from chest X-rays. The heatmaps (right) show where the model is "looking" to make its decision, which aligns with the radiologist's findings (left). This ability to automatically extract complex features from raw pixels is what makes neural networks so powerful for biological and medical data.
 :::
-TODO: Find better example.
---- -->
 
 ### Why can't simpler models handle this?
 
-- The feature space is **high-dimensional**: images + mechanical signals
-- The relevant structure is **nonlinear**: cell type isn't linearly separable in raw pixel space
+- The feature space is **high-dimensional**: thousands of raw pixel intensities
+- The relevant structure is **nonlinear**: pathological state isn't linearly separable in raw pixel space
 - The "right" features are **unknown a priori**: handcrafted features miss what matters
 - Neural networks learn a hierarchy of features directly from the data
 
@@ -412,6 +408,8 @@ Inductive biases are another form of regularization—they constrain the hypothe
 
 ## Convolutional Neural Networks (CNNs)
 
+![The convolution operation. A filter (or kernel) slides across the input image, computing a weighted sum of the local receptive field at each position to produce an activation map. Image credit: Bill Kromydas.](figs/nn/CNN.png){#fig-cnn}
+
 - Designed for **spatially structured** data (images, 1-D signals)
 - Two key inductive biases:
   1. **Local connectivity**: neurons connect only to nearby inputs—nearby pixels are more related
@@ -432,6 +430,8 @@ Note: convolutional layers are not the same as Fourier transforms, but they shar
 
 ### Graph Neural Networks (GNNs)
 
+![Examples of graph-structured data. Biology is full of relational structure, from molecular bonds and gene regulatory networks to the connectome. Image credit: Rick Merritt.](figs/nn/example-graphs-Jure.jpg){#fig-example-graphs}
+
 - Designed for data with **relational structure** (graphs, molecules, interaction networks)
 - Update node features by **aggregating information from neighbors**:
   $$\mathbf{h}_v^{(\ell+1)} = \sigma\left(\mathbf{W}^{(\ell)} \cdot \text{AGGREGATE}\left(\left\{\mathbf{h}_u^{(\ell)} : u \in \mathcal{N}(v)\right\}\right)\right)$$
@@ -451,6 +451,8 @@ GNNs are arguably the most important architecture for bioengineering application
 ---
 
 ### Attention and Transformers
+
+![The attention mechanism. Input tokens are transformed into Queries ($Q$), Keys ($K$), and Values ($V$). The attention weights are computed by comparing Queries with Keys, then used to take a weighted average of Values. Image credit: Ebrahim Pichka.](figs/nn/attention.png){#fig-attention}
 
 - Rather than fixed local connectivity, **attention** learns which inputs to weight:
   $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right) V$$
@@ -484,6 +486,10 @@ This is an important practical lesson. Neural networks are not automatically bet
 
 ### Protein structure prediction: AlphaFold2
 
+![AlphaFold performance and architecture. (a) Competitive performance on CASP14 targets. (b–d) Examples of high-accuracy predictions (blue) compared to experimental structures (green), including complex domain packing and side-chain placement. (e) The model architecture, integrating MSA and template features through iterative recycling. Figure from [Jumper et al., *Nature* (2021)](https://www.nature.com/articles/s41586-021-03819-2).](figs/nn/alphafold.webp){#fig-alphafold}
+
+::: {.notes}
+
 - **Why it works**: massive structural inductive bias
   - Equivariance to rotation and translation of the protein backbone
   - Pair representation explicitly encodes residue–residue distances
@@ -492,7 +498,6 @@ This is an important practical lesson. Neural networks are not automatically bet
 - Result: Near-experimental accuracy on most proteins
 - Solved a 50-year-old problem
 
-::: {.notes}
 AlphaFold is the most striking example of what the right inductive biases can achieve. The network has ~93M parameters trained on ~170K structures—roughly 550 parameters per training example. This is highly regularized by bioengineering standards. The key was not just scale, but the right structural biases: triangular attention, equivariant frames, and evolutionary covariation signal.
 
 Jumper et al., Nature 2021.
@@ -502,6 +507,10 @@ Jumper et al., Nature 2021.
 
 ### Cell morphology as a phenotypic readout
 
+![Cell Painting workflow. (a) Genetic or chemical perturbations are applied to cells in multi-well plates. (b) Cells are stained and imaged via microscopy. (c) Automated image analysis extracts morphological features. (d) Resulting morphological profiles are used for downstream tasks. Figure from [Bray et al., *Nature Protocols* (2016)](https://pubmed.ncbi.nlm.nih.gov/27560178/).](figs/nn/cell-painting.jpg){#fig-cell-painting}
+
+::: {.notes}
+
 - **Cell Painting** ([Bray et al., 2016](https://pubmed.ncbi.nlm.nih.gov/27560178/)): image cells stained with 6 fluorescent dyes; extract ~1,500 morphological features
 - Neural networks trained on raw images learn features that correlate with:
   - Mechanism of action of compounds
@@ -509,8 +518,7 @@ Jumper et al., Nature 2021.
   - Genetic perturbation identity
 - Architecture: CNN backbone (treats image as spatially structured) + classification head
 
-::: {.notes}
-This connects directly to the Masaeli et al. paper. The key insight is that cell morphology is a rich, high-dimensional phenotype that encodes biological state. Neural networks, especially with CNN inductive biases, can extract this information in ways that hand-crafted features cannot.
+The key insight is that cell morphology is a rich, high-dimensional phenotype that encodes biological state. Neural networks, especially with CNN inductive biases, can extract this information in ways that hand-crafted features cannot.
 :::
 
 # Review
@@ -521,7 +529,6 @@ This connects directly to the Masaeli et al. paper. The key insight is that cell
 - Srivastava N. _et al._ [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://jmlr.org/papers/v15/srivastava14a.html). _JMLR_, 2014.
 - Jumper J. _et al._ [Highly accurate protein structure prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2). _Nature_, 2021.
 - Ching T. _et al._ [Opportunities and obstacles for deep learning in biology and medicine](https://doi.org/10.1098/rsif.2017.0387). _J. R. Soc. Interface_, 2018.
-- Masaeli M. _et al._ [Multicolor fluorescence imaging to study cell heterogeneity](https://www.nature.com/articles/srep37863). _Sci. Rep._, 2016.
 - sklearn: [Neural network models](https://scikit-learn.org/stable/modules/neural_networks_supervised.html)
 
 ## Review Questions {.smaller}
