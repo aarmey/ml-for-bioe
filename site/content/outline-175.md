@@ -81,12 +81,10 @@ title: "Course outline - BE 175"
 
 <!-- ASM, YT away -->
 
-- Tuesday: Double descent ([slides](../lectures/overparameterization.html), [notes](../notes/overparameterization.html))
-- Thursday: Neural networks ([slides](../lectures/neural-networks.html), [notes](../notes/neural-networks.html))
-- Lab: Neural network lab
-  - Review double descent and neural networks
-  - Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863)
-  - Due June 5th at 11:59 pm
+- Tuesday: Finish autodifferentiation
+- Thursday: Double descent ([slides](../lectures/overparameterization.html), [notes](../notes/overparameterization.html))
+- Lab: Content review
+  - Review for exam 2
 
 <!-- Add example notebook? -->
 
@@ -94,9 +92,11 @@ title: "Course outline - BE 175"
 
 <!-- ASM -->
 
-- Tuesday: Finish remaining material / review content
+- Tuesday: Finish Neural networks ([slides](../lectures/neural-networks.html), [notes](../notes/neural-networks.html))
 - Thursday: Exam 2
-- Lab: Feedback/review on projects progress
+- Lab: Neural network lab
+  - Implementation of [Masaeli et al.](https://www.nature.com/articles/srep37863)
+  - Due June 11th at 11:59 pm
 
 ### Week 10, June 1–5 <!-- Setup, ASM away -->
 
