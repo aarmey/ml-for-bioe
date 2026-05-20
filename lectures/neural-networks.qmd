@@ -5,11 +5,15 @@ author: Aaron Meyer
 
 # Application: Medical Imaging
 
+---
+
 ![Model visualization of pneumothorax detection. (a) The model correctly identifies pneumothorax in the right and left upper lungs. (b) The model correctly identifies pneumothorax in the right lower lung. Figure from [Taylor et al., *PLOS Medicine* (2018)](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002686).](figs/nn/pmed.1002686.g003.webp){#fig-pneumothorax}
 
 ::: {.notes}
 Deep learning has revolutionized medical imaging. In this example, a convolutional neural network was trained to detect pneumothorax (collapsed lung) from chest X-rays. The heatmaps (right) show where the model is "looking" to make its decision, which aligns with the radiologist's findings (left). This ability to automatically extract complex features from raw pixels is what makes neural networks so powerful for biological and medical data.
 :::
+
+---
 
 ### Why can't simpler models handle this?
 
@@ -312,7 +316,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 np.random.seed(7)
-fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+fig, axes = plt.subplots(1, 2, figsize=(10, 4))
 layer_sizes = [3, 5, 5, 2]
 layer_x     = [0.12, 0.37, 0.63, 0.88]
 dropped = {(1, 1), (1, 3), (2, 0), (2, 3)}
@@ -410,6 +414,8 @@ Inductive biases are another form of regularization—they constrain the hypothe
 
 ![The convolution operation. A filter (or kernel) slides across the input image, computing a weighted sum of the local receptive field at each position to produce an activation map. Image credit: Bill Kromydas.](figs/nn/CNN.png){#fig-cnn}
 
+---
+
 - Designed for **spatially structured** data (images, 1-D signals)
 - Two key inductive biases:
   1. **Local connectivity**: neurons connect only to nearby inputs—nearby pixels are more related
@@ -432,6 +438,8 @@ Note: convolutional layers are not the same as Fourier transforms, but they shar
 
 ![Examples of graph-structured data. Biology is full of relational structure, from molecular bonds and gene regulatory networks to the connectome. Image credit: Rick Merritt.](figs/nn/example-graphs-Jure.jpg){#fig-example-graphs}
 
+---
+
 - Designed for data with **relational structure** (graphs, molecules, interaction networks)
 - Update node features by **aggregating information from neighbors**:
   $$\mathbf{h}_v^{(\ell+1)} = \sigma\left(\mathbf{W}^{(\ell)} \cdot \text{AGGREGATE}\left(\left\{\mathbf{h}_u^{(\ell)} : u \in \mathcal{N}(v)\right\}\right)\right)$$
@@ -453,6 +461,8 @@ GNNs are arguably the most important architecture for bioengineering application
 ### Attention and Transformers
 
 ![The attention mechanism. Input tokens are transformed into Queries ($Q$), Keys ($K$), and Values ($V$). The attention weights are computed by comparing Queries with Keys, then used to take a weighted average of Values. Image credit: Ebrahim Pichka.](figs/nn/attention.png){#fig-attention}
+
+---
 
 - Rather than fixed local connectivity, **attention** learns which inputs to weight:
   $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right) V$$
